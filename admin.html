@@ -843,12 +843,22 @@
         variants: variants
       };
 
+      // Save to localStorage for instant local preview
+      try {
+        let savedCars = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+        savedCars = savedCars.filter(c => c.id !== carData.id);
+        savedCars.unshift(carData);
+        localStorage.setItem('cmv_custom_cars', JSON.stringify(savedCars));
+      } catch (err) {
+        console.error('Failed to save to local storage', err);
+      }
+
       const outputBox = document.getElementById('outputContainer');
       outputBox.style.display = 'block';
       outputBox.textContent = JSON.stringify(carData, null, 2);
       window.lastGeneratedCar = carData;
 
-      alert(`✅ Success! Data for "${carData.name}" has been generated. Click "Copy JSON" and paste into carData.js!`);
+      alert(`✅ Success! "${carData.name}" is now visible on your website!\n\nTo make it permanent for all visitors globally, click "Copy JSON" and paste into js/carData.js or send the JSON to your assistant.`);
     });
 
     function copyJSON() {

@@ -19,9 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
 });
 
+// Helper to retrieve both built-in dataset and locally added cars
+function getAllCars() {
+  try {
+    const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+    const customIds = new Set(custom.map(c => c.id));
+    const base = CARS.filter(c => !customIds.has(c.id));
+    return [...custom, ...base];
+  } catch (e) {
+    return CARS;
+  }
+}
+
 // Render Car Cards based on active filter
 function renderCars() {
-  const filteredCars = CARS.filter(car => {
+  const allCars = getAllCars();
+  const filteredCars = allCars.filter(car => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'suv') return car.bodyType.toLowerCase().includes('suv');
     if (activeFilter === 'ev') return car.fuelTypes.includes('EV');
@@ -114,7 +127,7 @@ window.selectCity = function(cityId) {
 
 // Open Car Detail Modal Drawer
 window.openCarModal = function(carId) {
-  const car = CARS.find(c => c.id === carId);
+  const car = getAllCars().find(c => c.id === carId);
   if (!car) return;
   currentModalCar = car;
 
