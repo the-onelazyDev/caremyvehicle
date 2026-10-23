@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Care My Vehicle — Every New Car Launch, Variants & Real On-Road Prices</title>
+  <meta name="description" content="India's fastest and 100% spam-free new car launch radar. Explore every model, variant-by-variant breakdown, and transparent city-wise on-road prices.">
+  <meta name="theme-color" content="#2563EB">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Care My Vehicle — Every New Car Launch in India">
+  <meta property="og:description" content="100% Spam-Free: Real On-Road Prices, Value-For-Money Variant Picks & Granular Specs.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoWebSite",
+    "name": "Care My Vehicle",
+    "url": "https://caremyvehicle.in",
+    "description": "Comprehensive guide to all newly launched car models and variants in India with honest on-road prices."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-lockup">
+        <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon">
+        <div>
+          <div class="brand-name">Care My <span>Vehicle</span></div>
+          <div class="brand-tagline">Care Better. Drive Longer.</div>
+        </div>
+      </div>
+
+      <button id="citySelectorBtn" class="city-selector-btn" aria-label="Select City">
+        <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-pill">⚡ 2024–2025 New Car Launches</div>
+    <h1 class="hero-title">Every New Car Launch.<br>Every Variant. 100% Details.</h1>
+    <p class="hero-desc">Zero spam calls. Zero hidden dealer markups. Check exact city on-road prices and value-for-money variant picks instantly.</p>
+
+    <div class="trust-badges">
+      <div class="trust-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>No Mobile Number Required</span>
+      </div>
+      <div class="trust-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>True RTO & Tax Breakdown</span>
+      </div>
+      <div class="trust-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Bharat NCAP Safety Verified</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Filter Tabs (Touch Friendly) -->
+  <nav class="filter-bar" aria-label="Car Categories">
+    <div class="filter-scroll">
+      <button class="filter-btn active" data-filter="all">All Launches</button>
+      <button class="filter-btn" data-filter="suv">SUVs & Coupes</button>
+      <button class="filter-btn" data-filter="ev">EVs & Clean Fuel</button>
+      <button class="filter-btn" data-filter="under-10l">Under ₹10 Lakh</button>
+      <button class="filter-btn" data-filter="10-15l">₹10 – ₹15 Lakh</button>
+      <button class="filter-btn" data-filter="above-15l">₹15 Lakh+</button>
+    </div>
+  </nav>
+
+  <!-- Main Cars Grid -->
+  <main class="main-content">
+    <div id="carsContainer" class="cars-grid">
+      <!-- Injected reactively by app.js -->
+    </div>
+  </main>
+
+  <!-- Car Detail & Variant Bottom Drawer Modal -->
+  <div id="carDetailModal" class="modal-overlay">
+    <div class="modal-sheet">
+      <div id="carModalContent">
+        <!-- Injected reactively by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- City Selection Modal -->
+  <div id="cityModal" class="modal-overlay">
+    <div class="modal-sheet" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 style="font-size:18px; font-weight:800;">Select Your City</h3>
+        <button class="modal-close-btn" onclick="closeModal('cityModal')">&times;</button>
+      </div>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        State RTO taxes and cess vary significantly across states. Select your city to see 100% accurate on-road pricing:
+      </p>
+      <div style="display:grid; gap:8px;">
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('delhi')">📍 Delhi NCR (10% RTO)</button>
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('mumbai')">📍 Mumbai (12% RTO)</button>
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('bengaluru')">📍 Bengaluru (15% RTO)</button>
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('hyderabad')">📍 Hyderabad (14% RTO)</button>
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('pune')">📍 Pune (12% RTO)</button>
+        <button class="filter-btn" style="text-align:left; padding:12px 16px; width:100%; border-radius:12px;" onclick="selectCity('chennai')">📍 Chennai (13% RTO)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer with Full Legal Compliance Disclaimer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="brand-name" style="font-size:22px;">Care My <span>Vehicle</span></div>
+      <p style="font-size:13px; color:var(--text-secondary);">
+        India's modern, zero-spam automotive radar for new car launches, variants, and honest ownership care.
+      </p>
+      
+      <p class="footer-disclaimer">
+        <strong>Legal & Editorial Disclaimer:</strong> Care My Vehicle is an independent automotive research, variant analysis, and consumer education platform. All brand names, model trademarks, logos, and vehicle photographs belong to their respective automotive manufacturers (OEMs) and are utilized here strictly under the doctrine of Fair Dealing (Section 52 of the Indian Copyright Act, 1957) for editorial reporting, review, and public information. Care My Vehicle is not an authorized dealership.
+      </p>
+
+      <div style="font-size:12px; color:var(--text-muted); margin-top:10px;">
+        © 2024–2026 Care My Vehicle. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

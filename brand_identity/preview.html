@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Care My Vehicle — Official Consumer Brand Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #2563EB;
+      --deep-navy: #1E40AF;
+      --coral-red: #EF4444;
+      --sunrise-orange: #F97316;
+      --sky-blue: #BAE6FD;
+      --charcoal: #0F172A;
+      --slate-gray: #64748B;
+      --pure-white: #FFFFFF;
+      --light-bg: #F8FAFC;
+      --border-light: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: var(--light-bg);
+      color: #334155;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 50px;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 25px;
+      background: #FFFFFF;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #EFF6FF;
+      color: var(--primary-blue);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--charcoal);
+      letter-spacing: -1.2px;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      font-size: 17px;
+      color: var(--slate-gray);
+      max-width: 750px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin: 45px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--pure-white);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 25px rgba(15, 23, 42, 0.04);
+    }
+    .card-label {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--slate-gray);
+      margin-bottom: 15px;
+    }
+    .preview-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 20px;
+      border-radius: 16px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+    }
+    .preview-box img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Instagram live simulator */
+    .ig-sim {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 15px;
+      padding: 20px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+    }
+    .ig-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #2563EB;
+      padding: 2px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+      flex-shrink: 0;
+    }
+    .ig-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .ig-info h4 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--charcoal);
+    }
+    .ig-info p {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 4px;
+    }
+    /* Color Palette */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .color-chip {
+      background: var(--pure-white);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .color-block {
+      height: 90px;
+      width: 100%;
+    }
+    .color-meta {
+      padding: 14px;
+    }
+    .color-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--charcoal);
+    }
+    .color-hex {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--slate-gray);
+      margin-top: 2px;
+    }
+    .color-role {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="badge">Official Consumer Brand Identity</span>
+      <h1>Care My Vehicle</h1>
+      <p class="lead">Built with bright, clean, welcoming colors like the world's most trusted automotive portals: CarDekho, Cars24, Spinny, and CarWale.</p>
+    </header>
+
+    <!-- DELIVERABLE 1: INSTAGRAM PROFILE ASSET -->
+    <h2 class="section-title">Instagram Profile Icon (Crisp White Background • 100% Car-Related)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-label">1:1 Square Master (Pure White Background)</div>
+        <div class="preview-box">
+          <img src="instagram_profile_icon.png" alt="Light Car Logo" style="width: 180px; height: 180px; border-radius: 50%;">
+        </div>
+        <p style="font-size: 13px; color: var(--slate-gray); margin-top: 14px;">
+          <strong>File:</strong> <code>brand_identity/instagram_profile_icon.png</code> *(also saved as <code>profile_image.jpg</code>)*.<br>
+          Crisp Pure White background (#FFFFFF) with an electric royal blue car silhouette, sky blue glass tint, and energetic coral-red road curve.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Live Instagram Circular Simulation</div>
+        <div class="ig-sim">
+          <div class="ig-avatar">
+            <img src="instagram_profile_icon.png" alt="Instagram Circle Avatar">
+          </div>
+          <div class="ig-info">
+            <h4>@caremyvehicle</h4>
+            <p><strong>Care My Vehicle | Car Guide & Prices 🚗</strong></p>
+            <p style="font-size: 12px; margin-top: 4px;">🏎️ Every New Car Launch in India 🇮🇳</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--slate-gray); margin-top: 14px;">
+          <strong>Why this works:</strong> Friendly, clean, trustworthy, and bright. Just like opening CarDekho or Cars24, it feels modern and completely consumer-friendly.
+        </p>
+      </div>
+    </div>
+
+    <!-- DELIVERABLE 2: WEBSITE HEADER LOGO -->
+    <h2 class="section-title">Website Header Logo (Transparent Background)</h2>
+    <div class="card">
+      <div class="card-label">Horizontal Header Logo (Light Mode / White Navbar)</div>
+      <div class="preview-box" style="min-height: 140px;">
+        <img src="svg/logo-primary-horizontal-light.svg" alt="Horizontal Logo" style="max-height: 85px;">
+      </div>
+      <p style="font-size: 13px; color: var(--slate-gray); margin-top: 14px;">
+        <strong>File:</strong> <code>svg/logo-primary-horizontal-light.svg</code><br>
+        100% Transparent background. Sits naturally on clean white or light gray website navigation headers.
+      </p>
+    </div>
+
+    <!-- DELIVERABLE 3: COLOR PALETTE -->
+    <h2 class="section-title">Consumer Automotive Color Palette (Light & Bright)</h2>
+    <div class="palette-grid">
+      <div class="color-chip">
+        <div class="color-block" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
+        <div class="color-meta">
+          <div class="color-name">Pure Crisp White</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-role">Clean Foundation (60%)</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="color-block" style="background: #2563EB;"></div>
+        <div class="color-meta">
+          <div class="color-name">Electric Royal Blue</div>
+          <div class="color-hex">#2563EB</div>
+          <div class="color-role">Trust & Primary Brand (25%)</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="color-block" style="background: #EF4444;"></div>
+        <div class="color-meta">
+          <div class="color-name">Sunrise Coral Red</div>
+          <div class="color-hex">#EF4444</div>
+          <div class="color-role">Speed & Energy Accent (10%)</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="color-block" style="background: #BAE6FD;"></div>
+        <div class="color-meta">
+          <div class="color-name">Sky Glass Tint</div>
+          <div class="color-hex">#BAE6FD</div>
+          <div class="color-role">Automotive Glass Detail</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="color-block" style="background: #0F172A;"></div>
+        <div class="color-meta">
+          <div class="color-name">Deep Navy Charcoal</div>
+          <div class="color-hex">#0F172A</div>
+          <div class="color-role">Chassis & Typography</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

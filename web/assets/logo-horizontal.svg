@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 120" width="100%" height="100%">
+  <!-- Transparent Background for light website headers -->
+
+  <!-- Standalone Modern Car Silhouette Symbol (Left) -->
+  <g transform="translate(10, 10) scale(0.24)">
+    <!-- Speed Swoosh -->
+    <path d="M 70 360 C 150 405 350 410 430 330 C 410 370 280 410 120 380 Z" fill="#EF4444"/>
+    <path d="M 110 370 C 200 400 320 390 395 350" stroke="#F97316" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <!-- Car Body -->
+    <path d="M 120 220 C 165 145 225 125 305 125 C 365 125 410 155 445 195 L 425 210 C 385 175 345 158 295 158 C 230 158 175 180 135 220 Z" fill="#2563EB"/>
+    <path d="M 175 200 C 205 168 245 158 295 158 C 340 158 375 172 405 198 L 350 198 C 310 198 250 198 200 200 Z" fill="#BAE6FD"/>
+    <rect x="290" y="160" width="8" height="40" fill="#2563EB" transform="skewX(-20)"/>
+    <path d="M 65 245 C 105 215 165 198 230 198 L 355 198 C 415 198 455 225 485 255 L 470 270 C 435 240 395 225 345 225 L 190 225 C 140 225 95 240 75 270 Z" fill="#1D4ED8"/>
+    <path d="M 45 285 L 125 285 C 135 255 180 255 190 285 L 330 285 C 340 255 385 255 395 285 L 485 285 C 495 285 500 290 495 300 C 475 325 435 335 380 335 L 140 335 C 85 335 50 315 40 300 C 35 290 40 285 45 285 Z" fill="#1E40AF"/>
+
+    <!-- Headlight & Wheels -->
+    <polygon points="50,248 105,240 90,250 48,255" fill="#EF4444"/>
+    <polygon points="49,252 80,246 70,252 48,255" fill="#F59E0B"/>
+    <circle cx="158" cy="285" r="32" fill="#FFFFFF" stroke="#1E40AF" stroke-width="8"/>
+    <circle cx="158" cy="285" r="18" fill="#F8FAFC" stroke="#2563EB" stroke-width="4"/>
+    <circle cx="158" cy="285" r="8" fill="#EF4444"/>
+    <circle cx="362" cy="285" r="32" fill="#FFFFFF" stroke="#1E40AF" stroke-width="8"/>
+    <circle cx="362" cy="285" r="18" fill="#F8FAFC" stroke="#2563EB" stroke-width="4"/>
+    <circle cx="362" cy="285" r="8" fill="#EF4444"/>
+  </g>
+
+  <!-- Typography: Wordmark (Right) -->
+  <g transform="translate(145, 0)">
+    <!-- Primary Name: Care My Vehicle -->
+    <text x="0" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="44" font-weight="900" letter-spacing="-0.8">
+      <tspan fill="#0F172A">Care My </tspan>
+      <tspan fill="#2563EB">Vehicle</tspan>
+    </text>
+
+    <!-- Tagline: CARE BETTER. DRIVE LONGER. -->
+    <text x="2" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#64748B" letter-spacing="3.5">
+      CARE BETTER. DRIVE LONGER.
+    </text>
+  </g>
+</svg>

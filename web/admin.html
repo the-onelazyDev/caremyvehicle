@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care My Vehicle — Admin: Add New Car Launch</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+    .admin-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .admin-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      .form-grid-2 { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text-main);
+      background: #FFFFFF;
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .variant-row {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .btn-add-variant {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: #EFF6FF;
+      color: var(--primary);
+      border: 1px dashed var(--primary);
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .btn-submit {
+      padding: 14px 28px;
+      background: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    }
+    .btn-submit:hover {
+      background: var(--primary-hover);
+    }
+    .btn-danger {
+      padding: 6px 12px;
+      background: #FEE2E2;
+      color: #EF4444;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .output-box {
+      margin-top: 20px;
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 20px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      max-height: 350px;
+      overflow-y: auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-lockup">
+        <img src="assets/logo.png" alt="Logo" class="brand-icon">
+        <div>
+          <div class="brand-name">Care My <span>Vehicle</span></div>
+          <div class="brand-tagline">Admin Dashboard • New Launch Manager</div>
+        </div>
+      </div>
+      <a href="index.html" class="city-selector-btn" style="text-decoration:none;">
+        👁️ View Live Website
+      </a>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <div class="admin-card">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size:22px; font-weight:800; color:var(--text-main);">Add Newly Launched Car</h2>
+          <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
+            Fill in the details below. This will format the car data with variants and ready-to-use JSON.
+          </p>
+        </div>
+      </div>
+
+      <form id="carForm">
+        <!-- 1. Car Core Information -->
+        <h3 style="font-size:16px; font-weight:800; margin-bottom:14px; color:var(--primary);">1. Basic Car Information</h3>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Car Model Name *</label>
+            <input type="text" id="carName" class="form-control" placeholder="e.g. Skoda Kylaq" required>
+          </div>
+          <div class="form-group">
+            <label>Brand / Manufacturer *</label>
+            <input type="text" id="carBrand" class="form-control" placeholder="e.g. Skoda" required>
+          </div>
+          <div class="form-group">
+            <label>Tagline / One-Liner *</label>
+            <input type="text" id="carTagline" class="form-control" placeholder="e.g. German Engineered Sub-4M SUV with 5-Star Safety" required>
+          </div>
+          <div class="form-group">
+            <label>Body Type *</label>
+            <select id="bodyType" class="form-control">
+              <option value="SUV">SUV</option>
+              <option value="Compact SUV">Compact SUV</option>
+              <option value="Sedan">Sedan</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="SUV Coupe">SUV Coupe</option>
+              <option value="EV">Pure Electric (EV)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Price Range Text *</label>
+            <input type="text" id="priceRange" class="form-control" placeholder="e.g. ₹7.89 - ₹14.39 Lakh" required>
+          </div>
+          <div class="form-group">
+            <label>Launch Date / Month *</label>
+            <input type="text" id="launchDate" class="form-control" placeholder="e.g. November 2024" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Safety Rating *</label>
+            <input type="text" id="safetyRating" class="form-control" placeholder="e.g. 5.0 ★ (Bharat NCAP)" required>
+          </div>
+          <div class="form-group">
+            <label>Ground Clearance</label>
+            <input type="text" id="groundClearance" class="form-control" placeholder="e.g. 189 mm">
+          </div>
+          <div class="form-group">
+            <label>Boot Space</label>
+            <input type="text" id="bootSpace" class="form-control" placeholder="e.g. 446 L">
+          </div>
+          <div class="form-group">
+            <label>Waiting Period</label>
+            <input type="text" id="waitingPeriod" class="form-control" placeholder="e.g. 4 - 8 Weeks">
+          </div>
+        </div>
+
+        <!-- 2. Image URL -->
+        <h3 style="font-size:16px; font-weight:800; margin:20px 0 14px; color:var(--primary);">2. Car Photo / Image URL</h3>
+        <div class="form-group">
+          <label>Hero Image URL * (From ImageKit / Cloudflare R2 / Unsplash)</label>
+          <input type="url" id="heroImage" class="form-control" placeholder="https://ik.imagekit.io/caremyvehicle/cars/kylaq/hero.webp" required>
+          <span style="font-size:11px; color:var(--text-muted); margin-top:4px; display:block;">
+            💡 Tip: Upload car photo to ImageKit or Cloudflare R2, then paste the URL here.
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>Short Editorial Summary</label>
+          <textarea id="carSummary" class="form-control" rows="2" placeholder="Brief summary of highlights and USP..."></textarea>
+        </div>
+
+        <!-- 3. Dynamic Variants Builder -->
+        <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">3. Variants & Pricing</h3>
+        <div id="variantsContainer">
+          <!-- Dynamic variant rows will appear here -->
+        </div>
+
+        <button type="button" class="btn-add-variant" onclick="addVariantRow()">
+          + Add Variant Row
+        </button>
+
+        <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; gap:14px; align-items:center;">
+          <button type="submit" class="btn-submit">💾 Save & Generate Car Data</button>
+          <button type="button" class="filter-btn" onclick="copyJSON()">📋 Copy JSON</button>
+        </div>
+      </form>
+
+      <div id="outputContainer" class="output-box"></div>
+    </div>
+  </div>
+
+  <script>
+    let variantCount = 0;
+
+    function addVariantRow(name = '', exShowroom = '', engine = '', fuel = 'Petrol', trans = 'Manual', mileage = '', isVFM = false) {
+      variantCount++;
+      const container = document.getElementById('variantsContainer');
+      const div = document.createElement('div');
+      div.className = 'variant-row';
+      div.id = `variant-${variantCount}`;
+      div.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <strong style="font-size:13px; color:var(--primary);">Variant #${variantCount}</strong>
+          <button type="button" class="btn-danger" onclick="removeVariant(${variantCount})">✕ Remove</button>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Variant Name *</label>
+            <input type="text" class="form-control v-name" value="${name}" placeholder="e.g. Classic 1.0 TSI MT" required>
+          </div>
+          <div class="form-group">
+            <label>Ex-Showroom Price (in ₹ Rupees) *</label>
+            <input type="number" class="form-control v-price" value="${exShowroom}" placeholder="e.g. 789000" required>
+          </div>
+          <div class="form-group">
+            <label>Engine Specs</label>
+            <input type="text" class="form-control v-engine" value="${engine}" placeholder="e.g. 1.0L TSI Turbo (115 bhp)">
+          </div>
+          <div class="form-group">
+            <label>Claimed ARAI Mileage</label>
+            <input type="text" class="form-control v-mileage" value="${mileage}" placeholder="e.g. 19.8 kmpl">
+          </div>
+        </div>
+        <div class="form-grid-2" style="margin-top:6px;">
+          <div class="form-group">
+            <label>Fuel Type</label>
+            <select class="form-control v-fuel">
+              <option value="Petrol" ${fuel === 'Petrol' ? 'selected' : ''}>Petrol</option>
+              <option value="Diesel" ${fuel === 'Diesel' ? 'selected' : ''}>Diesel</option>
+              <option value="EV" ${fuel === 'EV' ? 'selected' : ''}>EV</option>
+              <option value="CNG" ${fuel === 'CNG' ? 'selected' : ''}>CNG</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Transmission</label>
+            <select class="form-control v-trans">
+              <option value="Manual" ${trans === 'Manual' ? 'selected' : ''}>Manual</option>
+              <option value="Automatic" ${trans === 'Automatic' ? 'selected' : ''}>Automatic</option>
+              <option value="AMT" ${trans === 'AMT' ? 'selected' : ''}>AMT</option>
+              <option value="DCT/DCA" ${trans === 'DCT/DCA' ? 'selected' : ''}>DCT / DCA</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:8px;">
+          <label>Key Standard Features (Comma Separated)</label>
+          <input type="text" class="form-control v-features" placeholder="e.g. 6 Airbags, 10-inch Screen, Sunroof">
+        </div>
+        <div style="margin-top:6px;">
+          <label style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; cursor:pointer;">
+            <input type="checkbox" class="v-isvfm" ${isVFM ? 'checked' : ''}>
+            ⭐ Mark as "Value-For-Money (VFM)" Recommended Pick
+          </label>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    function removeVariant(id) {
+      const row = document.getElementById(`variant-${id}`);
+      if (row) row.remove();
+    }
+
+    // Add 2 default variant rows on load
+    document.addEventListener('DOMContentLoaded', () => {
+      addVariantRow('Base Variant MT', '799000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', false);
+      addVariantRow('Mid Variant MT (VFM)', '999000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', true);
+    });
+
+    // Form Submission
+    document.getElementById('carForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const variantRows = document.querySelectorAll('.variant-row');
+      const variants = Array.from(variantRows).map(row => {
+        const featuresRaw = row.querySelector('.v-features').value;
+        const features = featuresRaw ? featuresRaw.split(',').map(s => s.trim()) : ['6 Airbags Standard', 'Reverse Camera'];
+        const isVFM = row.querySelector('.v-isvfm').checked;
+
+        return {
+          name: row.querySelector('.v-name').value,
+          exShowroom: Number(row.querySelector('.v-price').value),
+          fuel: row.querySelector('.v-fuel').value,
+          trans: row.querySelector('.v-trans').value,
+          engine: row.querySelector('.v-engine').value || '1.2L Engine',
+          mileage: row.querySelector('.v-mileage').value || '18.0 kmpl',
+          isVFM: isVFM,
+          vfmBadge: isVFM ? '🏆 BEST VALUE PICK' : undefined,
+          keyFeatures: features
+        };
+      });
+
+      const carData = {
+        id: document.getElementById('carName').value.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        name: document.getElementById('carName').value,
+        brand: document.getElementById('carBrand').value,
+        tagline: document.getElementById('carTagline').value,
+        launchDate: document.getElementById('launchDate').value,
+        bodyType: document.getElementById('bodyType').value,
+        fuelTypes: [...new Set(variants.map(v => v.fuel))],
+        priceRange: document.getElementById('priceRange').value,
+        minPrice: Math.min(...variants.map(v => v.exShowroom)),
+        maxPrice: Math.max(...variants.map(v => v.exShowroom)),
+        safetyRating: document.getElementById('safetyRating').value,
+        groundClearance: document.getElementById('groundClearance').value || '190 mm',
+        bootSpace: document.getElementById('bootSpace').value || '380 L',
+        waitingPeriod: document.getElementById('waitingPeriod').value || '4 - 8 Weeks',
+        heroImage: document.getElementById('heroImage').value,
+        summary: document.getElementById('carSummary').value,
+        variants: variants
+      };
+
+      const outputBox = document.getElementById('outputContainer');
+      outputBox.style.display = 'block';
+      outputBox.textContent = JSON.stringify(carData, null, 2);
+      window.lastGeneratedCar = carData;
+
+      alert(`✅ Success! Data for "${carData.name}" has been generated. Click "Copy JSON" and paste into carData.js or Supabase!`);
+    });
+
+    function copyJSON() {
+      if (!window.lastGeneratedCar) {
+        alert('Please fill the form and click "Save & Generate" first.');
+        return;
+      }
+      navigator.clipboard.writeText(JSON.stringify(window.lastGeneratedCar, null, 2));
+      alert('📋 Car JSON copied to clipboard! Paste it directly into js/carData.js');
+    }
+  </script>
+</body>
+</html>

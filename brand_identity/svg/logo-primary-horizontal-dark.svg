@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 120" width="100%" height="100%">
+  <!-- Transparent Background for dark website headers -->
+
+  <!-- Brand Trust Medallion Symbol (Left) -->
+  <g transform="translate(10, 10) scale(0.20)">
+    <circle cx="250" cy="250" r="220" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+    <circle cx="250" cy="250" r="200" fill="#0B2545" stroke="#CBD5E1" stroke-width="4" stroke-dasharray="8,6"/>
+
+    <polygon points="250,75 256,92 274,92 259,103 265,120 250,110 235,120 241,103 226,92 244,92" fill="#D4AF37"/>
+    <polygon points="195,95 200,108 214,108 203,117 207,130 195,122 183,130 187,117 176,108 190,108" fill="#FFFFFF"/>
+    <polygon points="305,95 310,108 324,108 313,117 317,130 305,122 293,130 297,117 286,108 300,108" fill="#FFFFFF"/>
+
+    <path d="M 120 230 C 160 170 210 150 280 150 C 340 150 375 175 410 210 L 390 225 C 360 195 330 180 280 180 C 230 180 190 195 150 230 Z" fill="#FFFFFF"/>
+    <path d="M 70 260 C 110 230 160 215 220 215 L 350 215 C 410 215 450 240 480 270 L 465 285 C 430 255 390 240 340 240 L 190 240 C 140 240 100 255 80 285 Z" fill="#FFFFFF"/>
+    <path d="M 50 295 L 125 295 C 135 265 175 265 185 295 L 335 295 C 345 265 385 265 395 295 L 485 295 C 495 295 500 300 495 310 C 475 335 435 345 380 345 L 140 345 C 90 345 55 325 45 310 C 40 300 45 295 50 295 Z" fill="#FFFFFF"/>
+
+    <circle cx="155" cy="295" r="28" fill="#0B2545" stroke="#FFFFFF" stroke-width="7"/>
+    <circle cx="155" cy="295" r="10" fill="#D4AF37"/>
+    <circle cx="365" cy="295" r="28" fill="#0B2545" stroke="#FFFFFF" stroke-width="7"/>
+    <circle cx="365" cy="295" r="10" fill="#D4AF37"/>
+    <line x1="30" y1="355" x2="490" y2="355" stroke="#CBD5E1" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography: Wordmark (Right) -->
+  <g transform="translate(135, 0)">
+    <text x="0" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="44" font-weight="900" letter-spacing="-0.8">
+      <tspan fill="#FFFFFF">Care My </tspan>
+      <tspan fill="#38BDF8">Vehicle</tspan>
+    </text>
+
+    <!-- Tagline: CARE BETTER. DRIVE LONGER. -->
+    <text x="2" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#CBD5E1" letter-spacing="3.5">
+      CARE BETTER. DRIVE LONGER.
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1000px;
+      height: 1000px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, sans-serif;
+    }
+    .badge-container {
+      width: 900px;
+      height: 900px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      /* Subtle premium elevation border */
+      border: 12px solid #F1F5F9;
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="badge-container">
+    <svg viewBox="0 0 500 500" width="750" height="750" xmlns="http://www.w3.org/2000/svg">
+      <!-- Dynamic Road Curve / Speed Swoosh (Vibrant Coral Red to Sunrise Orange) -->
+      <path d="M 60 360 C 140 400 360 410 440 330 C 420 370 280 410 120 380 Z" fill="#EF4444"/>
+
+      <!-- Lower Horizon Speed Line -->
+      <path d="M 100 370 C 200 400 320 390 400 350" stroke="#F97316" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+      <!-- Group: Main Car Silhouette (Electric Royal Blue & Pure White) -->
+      <g transform="translate(10, 30)">
+        
+        <!-- Aerodynamic Roofline & Cabin -->
+        <path d="M 120 220 
+                 C 165 145 225 125 305 125 
+                 C 365 125 410 155 445 195 
+                 L 425 210 
+                 C 385 175 345 158 295 158 
+                 C 230 158 175 180 135 220 
+                 Z" 
+              fill="#2563EB"/>
+
+        <!-- Cabin Window Tint (Fresh Sky Blue) -->
+        <path d="M 175 200 
+                 C 205 168 245 158 295 158 
+                 C 340 158 375 172 405 198 
+                 L 350 198 
+                 C 310 198 250 198 200 200 
+                 Z" 
+              fill="#BAE6FD"/>
+        
+        <!-- Window Pillar Divider -->
+        <rect x="290" y="160" width="8" height="40" fill="#2563EB" transform="skewX(-20)"/>
+
+        <!-- Main Car Shoulder & Hood (Bold Electric Blue) -->
+        <path d="M 65 245 
+                 C 105 215 165 198 230 198 
+                 L 355 198 
+                 C 415 198 455 225 485 255 
+                 L 470 270 
+                 C 435 240 395 225 345 225 
+                 L 190 225 
+                 C 140 225 95 240 75 270 
+                 Z" 
+              fill="#1D4ED8"/>
+
+        <!-- Lower Body & Bumpers (Deep Navy / Royal Blue) -->
+        <path d="M 45 285 
+                 L 125 285 
+                 C 135 255 180 255 190 285 
+                 L 330 285 
+                 C 340 255 385 255 395 285 
+                 L 485 285 
+                 C 495 285 500 290 495 300 
+                 C 475 325 435 335 380 335 
+                 L 140 335 
+                 C 85 335 50 315 40 300 
+                 C 35 290 40 285 45 285 Z" 
+              fill="#1E40AF"/>
+
+        <!-- Headlight Signature (Vibrant Sunset Amber/Red Accent) -->
+        <polygon points="50,248 105,240 90,250 48,255" fill="#EF4444"/>
+        <polygon points="49,252 80,246 70,252 48,255" fill="#F59E0B"/>
+
+        <!-- Taillight Accent (Subtle Red Glow) -->
+        <path d="M 470 245 L 485 255 L 475 260 Z" fill="#EF4444"/>
+
+        <!-- Front Wheel (Alloy Rim & Blue Caliper) -->
+        <circle cx="158" cy="285" r="32" fill="#FFFFFF" stroke="#1E40AF" stroke-width="8"/>
+        <circle cx="158" cy="285" r="18" fill="#F8FAFC" stroke="#2563EB" stroke-width="4"/>
+        <circle cx="158" cy="285" r="8" fill="#EF4444"/>
+
+        <!-- Rear Wheel (Alloy Rim & Blue Caliper) -->
+        <circle cx="362" cy="285" r="32" fill="#FFFFFF" stroke="#1E40AF" stroke-width="8"/>
+        <circle cx="362" cy="285" r="18" fill="#F8FAFC" stroke="#2563EB" stroke-width="4"/>
+        <circle cx="362" cy="285" r="8" fill="#EF4444"/>
+
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
