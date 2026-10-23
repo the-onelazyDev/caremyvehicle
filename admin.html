@@ -3,13 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Care My Vehicle — Admin: Add New Car Launch</title>
+  <title>Care My Vehicle — Admin Portal</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    /* Security Gate Styles */
+    .auth-overlay {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%);
+    }
+    .auth-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+      text-align: center;
+      position: relative;
+    }
+    .auth-logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      display: block;
+      object-fit: contain;
+    }
+    .auth-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .auth-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .auth-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: #FEF3C7;
+      color: #92400E;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .password-wrapper {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .password-wrapper input {
+      width: 100%;
+      padding: 12px 42px 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text-main);
+      box-sizing: border-box;
+      transition: var(--transition);
+    }
+    .password-wrapper input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .toggle-pw-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--text-secondary);
+      padding: 4px;
+    }
+    .auth-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+    .auth-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+    }
+    .auth-btn:hover {
+      background: var(--primary-hover);
+    }
+    .auth-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .auth-error {
+      display: none;
+      background: #FEE2E2;
+      color: #DC2626;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .back-home-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-home-link:hover {
+      color: var(--primary);
+    }
+
+    /* Admin Container Styles */
+    #adminApp {
+      display: none;
+    }
     .admin-container {
       max-width: 1000px;
       margin: 30px auto;
@@ -30,6 +168,38 @@
       margin-bottom: 24px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-header-action {
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #FFFFFF;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-header-action:hover {
+      background: #F1F5F9;
+    }
+    .btn-header-logout {
+      background: #FEE2E2;
+      color: #EF4444;
+      border-color: #FECACA;
+    }
+    .btn-header-logout:hover {
+      background: #FCA5A5;
+      color: #B91C1C;
     }
     .form-grid-2 {
       display: grid;
@@ -59,6 +229,7 @@
       color: var(--text-main);
       background: #FFFFFF;
       transition: var(--transition);
+      box-sizing: border-box;
     }
     .form-control:focus {
       outline: none;
@@ -125,129 +296,434 @@
       overflow-y: auto;
       display: none;
     }
+
+    /* Modal for Change Password */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 100%;
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand-lockup">
-        <img src="assets/logo.png" alt="Logo" class="brand-icon">
-        <div>
-          <div class="brand-name">Care My <span>Vehicle</span></div>
-          <div class="brand-tagline">Admin Dashboard • New Launch Manager</div>
-        </div>
-      </div>
-      <a href="index.html" class="city-selector-btn" style="text-decoration:none;">
-        👁️ View Live Website
-      </a>
-    </div>
-  </header>
+  <!-- 1. LOGIN SECURITY GATE (Shown by default until authenticated) -->
+  <div id="loginGate" class="auth-overlay">
+    <div class="auth-card">
+      <img src="assets/logo.png" alt="Care My Vehicle" class="auth-logo">
+      <div class="auth-badge">🔒 Restricted Admin Portal</div>
+      <h1 class="auth-title">Care My Vehicle</h1>
+      <p class="auth-subtitle">
+        Enter your Admin Master Password to access new car launch management.
+      </p>
 
-  <div class="admin-container">
-    <div class="admin-card">
-      <div class="admin-header">
-        <div>
-          <h2 style="font-size:22px; font-weight:800; color:var(--text-main);">Add Newly Launched Car</h2>
-          <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
-            Fill in the details below. This will format the car data with variants and ready-to-use JSON.
-          </p>
-        </div>
-      </div>
+      <div id="authError" class="auth-error"></div>
 
-      <form id="carForm">
-        <!-- 1. Car Core Information -->
-        <h3 style="font-size:16px; font-weight:800; margin-bottom:14px; color:var(--primary);">1. Basic Car Information</h3>
-        <div class="form-grid-2">
-          <div class="form-group">
-            <label>Car Model Name *</label>
-            <input type="text" id="carName" class="form-control" placeholder="e.g. Skoda Kylaq" required>
-          </div>
-          <div class="form-group">
-            <label>Brand / Manufacturer *</label>
-            <input type="text" id="carBrand" class="form-control" placeholder="e.g. Skoda" required>
-          </div>
-          <div class="form-group">
-            <label>Tagline / One-Liner *</label>
-            <input type="text" id="carTagline" class="form-control" placeholder="e.g. German Engineered Sub-4M SUV with 5-Star Safety" required>
-          </div>
-          <div class="form-group">
-            <label>Body Type *</label>
-            <select id="bodyType" class="form-control">
-              <option value="SUV">SUV</option>
-              <option value="Compact SUV">Compact SUV</option>
-              <option value="Sedan">Sedan</option>
-              <option value="Hatchback">Hatchback</option>
-              <option value="SUV Coupe">SUV Coupe</option>
-              <option value="EV">Pure Electric (EV)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Price Range Text *</label>
-            <input type="text" id="priceRange" class="form-control" placeholder="e.g. ₹7.89 - ₹14.39 Lakh" required>
-          </div>
-          <div class="form-group">
-            <label>Launch Date / Month *</label>
-            <input type="text" id="launchDate" class="form-control" placeholder="e.g. November 2024" required>
-          </div>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="password-wrapper">
+          <input 
+            type="password" 
+            id="adminPasswordInput" 
+            placeholder="Enter Admin Password" 
+            autocomplete="current-password"
+            required
+          >
+          <button type="button" class="toggle-pw-btn" onclick="togglePasswordVisibility('adminPasswordInput')">👁️</button>
         </div>
 
-        <div class="form-grid-2">
-          <div class="form-group">
-            <label>Safety Rating *</label>
-            <input type="text" id="safetyRating" class="form-control" placeholder="e.g. 5.0 ★ (Bharat NCAP)" required>
-          </div>
-          <div class="form-group">
-            <label>Ground Clearance</label>
-            <input type="text" id="groundClearance" class="form-control" placeholder="e.g. 189 mm">
-          </div>
-          <div class="form-group">
-            <label>Boot Space</label>
-            <input type="text" id="bootSpace" class="form-control" placeholder="e.g. 446 L">
-          </div>
-          <div class="form-group">
-            <label>Waiting Period</label>
-            <input type="text" id="waitingPeriod" class="form-control" placeholder="e.g. 4 - 8 Weeks">
-          </div>
+        <div class="auth-options">
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox" id="rememberMeCheckbox" checked>
+            <span>Remember on this device</span>
+          </label>
         </div>
 
-        <!-- 2. Image URL -->
-        <h3 style="font-size:16px; font-weight:800; margin:20px 0 14px; color:var(--primary);">2. Car Photo / Image URL</h3>
-        <div class="form-group">
-          <label>Hero Image URL * (From ImageKit / Cloudflare R2 / Unsplash)</label>
-          <input type="url" id="heroImage" class="form-control" placeholder="https://ik.imagekit.io/caremyvehicle/cars/kylaq/hero.webp" required>
-          <span style="font-size:11px; color:var(--text-muted); margin-top:4px; display:block;">
-            💡 Tip: Upload car photo to ImageKit or Cloudflare R2, then paste the URL here.
-          </span>
-        </div>
-
-        <div class="form-group">
-          <label>Short Editorial Summary</label>
-          <textarea id="carSummary" class="form-control" rows="2" placeholder="Brief summary of highlights and USP..."></textarea>
-        </div>
-
-        <!-- 3. Dynamic Variants Builder -->
-        <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">3. Variants & Pricing</h3>
-        <div id="variantsContainer">
-          <!-- Dynamic variant rows will appear here -->
-        </div>
-
-        <button type="button" class="btn-add-variant" onclick="addVariantRow()">
-          + Add Variant Row
+        <button type="submit" id="loginSubmitBtn" class="auth-btn">
+          Unlock Admin Portal →
         </button>
-
-        <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; gap:14px; align-items:center;">
-          <button type="submit" class="btn-submit">💾 Save & Generate Car Data</button>
-          <button type="button" class="filter-btn" onclick="copyJSON()">📋 Copy JSON</button>
-        </div>
       </form>
 
-      <div id="outputContainer" class="output-box"></div>
+      <a href="index.html" class="back-home-link">← Return to Public Website</a>
+    </div>
+  </div>
+
+  <!-- 2. PROTECTED ADMIN APPLICATION (Hidden until authenticated) -->
+  <div id="adminApp">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand-lockup">
+          <img src="assets/logo.png" alt="Logo" class="brand-icon">
+          <div>
+            <div class="brand-name">Care My <span>Vehicle</span></div>
+            <div class="brand-tagline">Admin Dashboard • Authenticated</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" class="btn-header-action">
+            👁️ Live Website
+          </a>
+          <button type="button" class="btn-header-action" onclick="openChangePasswordModal()">
+            🔑 Change Password
+          </button>
+          <button type="button" class="btn-header-action btn-header-logout" onclick="handleLogout()">
+            🚪 Sign Out
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="admin-container">
+      <div class="admin-card">
+        <div class="admin-header">
+          <div>
+            <h2 style="font-size:22px; font-weight:800; color:var(--text-main);">Add Newly Launched Car</h2>
+            <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
+              Fill in the details below. This will format the car data with variants and ready-to-use JSON.
+            </p>
+          </div>
+        </div>
+
+        <form id="carForm">
+          <!-- 1. Car Core Information -->
+          <h3 style="font-size:16px; font-weight:800; margin-bottom:14px; color:var(--primary);">1. Basic Car Information</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Car Model Name *</label>
+              <input type="text" id="carName" class="form-control" placeholder="e.g. Skoda Kylaq" required>
+            </div>
+            <div class="form-group">
+              <label>Brand / Manufacturer *</label>
+              <input type="text" id="carBrand" class="form-control" placeholder="e.g. Skoda" required>
+            </div>
+            <div class="form-group">
+              <label>Tagline / One-Liner *</label>
+              <input type="text" id="carTagline" class="form-control" placeholder="e.g. German Engineered Sub-4M SUV with 5-Star Safety" required>
+            </div>
+            <div class="form-group">
+              <label>Body Type *</label>
+              <select id="bodyType" class="form-control">
+                <option value="SUV">SUV</option>
+                <option value="Compact SUV">Compact SUV</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="SUV Coupe">SUV Coupe</option>
+                <option value="EV">Pure Electric (EV)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Price Range Text *</label>
+              <input type="text" id="priceRange" class="form-control" placeholder="e.g. ₹7.89 - ₹14.39 Lakh" required>
+            </div>
+            <div class="form-group">
+              <label>Launch Date / Month *</label>
+              <input type="text" id="launchDate" class="form-control" placeholder="e.g. November 2024" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Safety Rating *</label>
+              <input type="text" id="safetyRating" class="form-control" placeholder="e.g. 5.0 ★ (Bharat NCAP)" required>
+            </div>
+            <div class="form-group">
+              <label>Ground Clearance</label>
+              <input type="text" id="groundClearance" class="form-control" placeholder="e.g. 189 mm">
+            </div>
+            <div class="form-group">
+              <label>Boot Space</label>
+              <input type="text" id="bootSpace" class="form-control" placeholder="e.g. 446 L">
+            </div>
+            <div class="form-group">
+              <label>Waiting Period</label>
+              <input type="text" id="waitingPeriod" class="form-control" placeholder="e.g. 4 - 8 Weeks">
+            </div>
+          </div>
+
+          <!-- 2. Image URL -->
+          <h3 style="font-size:16px; font-weight:800; margin:20px 0 14px; color:var(--primary);">2. Car Photo / Image URL</h3>
+          <div class="form-group">
+            <label>Hero Image URL * (From ImageKit / Cloudflare R2 / Unsplash)</label>
+            <input type="url" id="heroImage" class="form-control" placeholder="https://ik.imagekit.io/caremyvehicle/cars/kylaq/hero.webp" required>
+            <span style="font-size:11px; color:var(--text-muted); margin-top:4px; display:block;">
+              💡 Tip: Upload car photo to ImageKit or Cloudflare R2, then paste the URL here.
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label>Short Editorial Summary</label>
+            <textarea id="carSummary" class="form-control" rows="2" placeholder="Brief summary of highlights and USP..."></textarea>
+          </div>
+
+          <!-- 3. Dynamic Variants Builder -->
+          <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">3. Variants & Pricing</h3>
+          <div id="variantsContainer">
+            <!-- Dynamic variant rows will appear here -->
+          </div>
+
+          <button type="button" class="btn-add-variant" onclick="addVariantRow()">
+            + Add Variant Row
+          </button>
+
+          <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; gap:14px; align-items:center;">
+            <button type="submit" class="btn-submit">💾 Save & Generate Car Data</button>
+            <button type="button" class="filter-btn" onclick="copyJSON()">📋 Copy JSON</button>
+          </div>
+        </form>
+
+        <div id="outputContainer" class="output-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CHANGE PASSWORD MODAL -->
+  <div id="changePasswordModal" class="modal-backdrop">
+    <div class="modal-card">
+      <h3 style="font-size:18px; font-weight:800; margin-bottom:6px; color:var(--text-main);">Change Admin Password</h3>
+      <p style="font-size:12px; color:var(--text-secondary); margin-bottom:16px;">
+        Update the master password used to access this admin panel.
+      </p>
+
+      <div id="changePwError" class="auth-error" style="display:none;"></div>
+
+      <form onsubmit="handleChangePassword(event)">
+        <div class="form-group">
+          <label>Current Password *</label>
+          <input type="password" id="currentPwInput" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>New Password (Min 6 characters) *</label>
+          <input type="password" id="newPwInput" class="form-control" required minlength="6">
+        </div>
+        <div class="form-group">
+          <label>Confirm New Password *</label>
+          <input type="password" id="confirmPwInput" class="form-control" required minlength="6">
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" class="btn-header-action" onclick="closeChangePasswordModal()">Cancel</button>
+          <button type="submit" class="btn-submit" style="padding:10px 18px; font-size:13px;">Save New Password</button>
+        </div>
+      </form>
     </div>
   </div>
 
   <script>
+    // ==========================================
+    // 🔒 AUTHENTICATION & SECURITY CONTROLLER
+    // ==========================================
+
+    // Default Master SHA-256 Hash for initial password: CMV@Admin2025
+    const DEFAULT_MASTER_HASH = '93363b4598a5db62f2886b509963e4887ca1c4ce88e36213ee5e30de8d1ebd70';
+    const AUTH_SESSION_KEY = 'cmv_admin_authenticated';
+    const CUSTOM_HASH_KEY = 'cmv_custom_admin_hash';
+    const FAILED_ATTEMPTS_KEY = 'cmv_failed_attempts';
+    const LOCKOUT_KEY = 'cmv_lockout_until';
+
+    // Helper: Compute SHA-256 hash using Web Crypto API
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // Helper: Get active expected hash
+    function getExpectedHash() {
+      return localStorage.getItem(CUSTOM_HASH_KEY) || DEFAULT_MASTER_HASH;
+    }
+
+    // Check if user is currently authenticated
+    function checkAuthentication() {
+      const isAuthLocal = localStorage.getItem(AUTH_SESSION_KEY);
+      const isAuthSession = sessionStorage.getItem(AUTH_SESSION_KEY);
+      const expectedHash = getExpectedHash();
+
+      if (isAuthLocal === expectedHash || isAuthSession === expectedHash) {
+        showAdminApp();
+      } else {
+        showLoginGate();
+      }
+    }
+
+    function showAdminApp() {
+      document.getElementById('loginGate').style.display = 'none';
+      document.getElementById('adminApp').style.display = 'block';
+    }
+
+    function showLoginGate() {
+      document.getElementById('loginGate').style.display = 'flex';
+      document.getElementById('adminApp').style.display = 'none';
+      checkLockout();
+    }
+
+    function checkLockout() {
+      const lockoutUntil = Number(localStorage.getItem(LOCKOUT_KEY) || 0);
+      const now = Date.now();
+      const submitBtn = document.getElementById('loginSubmitBtn');
+      const errBox = document.getElementById('authError');
+
+      if (lockoutUntil > now) {
+        const remainingSec = Math.ceil((lockoutUntil - now) / 1000);
+        submitBtn.disabled = true;
+        errBox.style.display = 'block';
+        errBox.textContent = `⛔ Too many failed attempts. Locked for ${remainingSec}s.`;
+        setTimeout(checkLockout, 1000);
+      } else {
+        submitBtn.disabled = false;
+        if (errBox.textContent.includes('Too many failed')) {
+          errBox.style.display = 'none';
+        }
+      }
+    }
+
+    // Handle Login Submit
+    async function handleLogin(e) {
+      e.preventDefault();
+      const input = document.getElementById('adminPasswordInput');
+      const remember = document.getElementById('rememberMeCheckbox').checked;
+      const errBox = document.getElementById('authError');
+      const submitBtn = document.getElementById('loginSubmitBtn');
+
+      const lockoutUntil = Number(localStorage.getItem(LOCKOUT_KEY) || 0);
+      if (lockoutUntil > Date.now()) {
+        checkLockout();
+        return;
+      }
+
+      submitBtn.textContent = 'Verifying...';
+      submitBtn.disabled = true;
+
+      const enteredPassword = input.value;
+      const enteredHash = await sha256(enteredPassword);
+      const expectedHash = getExpectedHash();
+
+      if (enteredHash === expectedHash) {
+        // Successful login
+        localStorage.removeItem(FAILED_ATTEMPTS_KEY);
+        localStorage.removeItem(LOCKOUT_KEY);
+        errBox.style.display = 'none';
+
+        if (remember) {
+          localStorage.setItem(AUTH_SESSION_KEY, enteredHash);
+        } else {
+          sessionStorage.setItem(AUTH_SESSION_KEY, enteredHash);
+        }
+
+        input.value = '';
+        submitBtn.textContent = 'Unlock Admin Portal →';
+        submitBtn.disabled = false;
+        showAdminApp();
+      } else {
+        // Failed attempt
+        let attempts = Number(localStorage.getItem(FAILED_ATTEMPTS_KEY) || 0) + 1;
+        localStorage.setItem(FAILED_ATTEMPTS_KEY, attempts);
+
+        if (attempts >= 5) {
+          // Lock for 60 seconds
+          localStorage.setItem(LOCKOUT_KEY, Date.now() + 60000);
+          localStorage.setItem(FAILED_ATTEMPTS_KEY, 0);
+          checkLockout();
+        } else {
+          errBox.style.display = 'block';
+          errBox.textContent = `❌ Incorrect Password (${5 - attempts} attempts left).`;
+          submitBtn.textContent = 'Unlock Admin Portal →';
+          submitBtn.disabled = false;
+        }
+        input.focus();
+        input.select();
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility(id) {
+      const el = document.getElementById(id);
+      if (el.type === 'password') {
+        el.type = 'text';
+      } else {
+        el.type = 'password';
+      }
+    }
+
+    // Logout
+    function handleLogout() {
+      if (confirm('Are you sure you want to log out of the Admin Portal?')) {
+        localStorage.removeItem(AUTH_SESSION_KEY);
+        sessionStorage.removeItem(AUTH_SESSION_KEY);
+        window.location.reload();
+      }
+    }
+
+    // Change Password Modal Handlers
+    function openChangePasswordModal() {
+      document.getElementById('changePasswordModal').style.display = 'flex';
+      document.getElementById('changePwError').style.display = 'none';
+      document.getElementById('currentPwInput').value = '';
+      document.getElementById('newPwInput').value = '';
+      document.getElementById('confirmPwInput').value = '';
+    }
+
+    function closeChangePasswordModal() {
+      document.getElementById('changePasswordModal').style.display = 'none';
+    }
+
+    async function handleChangePassword(e) {
+      e.preventDefault();
+      const currentPw = document.getElementById('currentPwInput').value;
+      const newPw = document.getElementById('newPwInput').value;
+      const confirmPw = document.getElementById('confirmPwInput').value;
+      const errBox = document.getElementById('changePwError');
+
+      if (newPw !== confirmPw) {
+        errBox.style.display = 'block';
+        errBox.textContent = '❌ New password and confirmation do not match.';
+        return;
+      }
+
+      const currentHash = await sha256(currentPw);
+      const expectedHash = getExpectedHash();
+
+      if (currentHash !== expectedHash) {
+        errBox.style.display = 'block';
+        errBox.textContent = '❌ Current password is incorrect.';
+        return;
+      }
+
+      const newHash = await sha256(newPw);
+      localStorage.setItem(CUSTOM_HASH_KEY, newHash);
+      
+      // Update current session
+      if (localStorage.getItem(AUTH_SESSION_KEY)) {
+        localStorage.setItem(AUTH_SESSION_KEY, newHash);
+      }
+      if (sessionStorage.getItem(AUTH_SESSION_KEY)) {
+        sessionStorage.setItem(AUTH_SESSION_KEY, newHash);
+      }
+
+      alert('✅ Admin Password updated successfully! Keep your new password safe.');
+      closeChangePasswordModal();
+    }
+
+    // Run auth check immediately on page load
+    document.addEventListener('DOMContentLoaded', checkAuthentication);
+
+    // ==========================================
+    // 🚗 CAR BUILDER & FORM MANAGEMENT
+    // ==========================================
     let variantCount = 0;
 
     function addVariantRow(name = '', exShowroom = '', engine = '', fuel = 'Petrol', trans = 'Manual', mileage = '', isVFM = false) {
@@ -318,7 +794,7 @@
       if (row) row.remove();
     }
 
-    // Add 2 default variant rows on load
+    // Initialize 2 sample variants
     document.addEventListener('DOMContentLoaded', () => {
       addVariantRow('Base Variant MT', '799000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', false);
       addVariantRow('Mid Variant MT (VFM)', '999000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', true);
@@ -372,7 +848,7 @@
       outputBox.textContent = JSON.stringify(carData, null, 2);
       window.lastGeneratedCar = carData;
 
-      alert(`✅ Success! Data for "${carData.name}" has been generated. Click "Copy JSON" and paste into carData.js or Supabase!`);
+      alert(`✅ Success! Data for "${carData.name}" has been generated. Click "Copy JSON" and paste into carData.js!`);
     });
 
     function copyJSON() {
