@@ -598,6 +598,163 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-wagon-r',
+    name: 'Maruti Suzuki Wagon R',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s Iconic Tall-Boy with Advanced K-Series Engine, 34.05 km/kg CNG & 360° Studio',
+    launchDate: 'Updated 2024 (Dual Tone & Smart Hybrid)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹5.54 - ₹7.33 Lakh',
+    minPrice: 554500,
+    maxPrice: 733000,
+    safetyRating: 'Dual Airbags, ABS with EBD, ESP with Hill Hold Assist',
+    groundClearance: '165 mm',
+    bootSpace: '341 L (Largest in segment)',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp',
+    summary: 'The Maruti Suzuki Wagon R is India’s beloved tall-boy hatchback offering maximum cabin headroom, unmatched practicality, and a choice of two refined engines: 1.0L K10C (up to 25.19 km/l and 34.05 km/kg on factory S-CNG) and the punchy 1.2L K12N Dual Jet (90 PS). It features dual-tone floating roof styling, 7-inch SmartPlay Studio touchscreen with smartphone navigation, 341L cavernous boot, and 60:40 rear split seats.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360',
+      format: 'webp',
+      defaultColor: 'gallant-red-black-roof',
+      colors: [
+        { id: 'gallant-red-black-roof', name: 'Gallant Red with Black Roof', hex: '#D2232B' },
+        { id: 'poolside-blue', name: 'Poolside Blue', hex: '#1188C5' },
+        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
+        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
+        { id: 'silky-silver', name: 'Silky Silver', hex: '#737373' },
+        { id: 'nutmeg-brown', name: 'Nutmeg Brown', hex: '#54473C' }
+      ]
+    },
+    colors: [
+      { name: 'Gallant Red with Black Roof', hex: '#D2232B', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp' },
+      { name: 'Poolside Blue', hex: '#1188C5', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/poolside-blue/4.webp' },
+      { name: 'Solid White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/solid-white/4.webp' },
+      { name: 'Magma Grey', hex: '#2B2C31', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/magma-grey/4.webp' },
+      { name: 'Silky Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/silky-silver/4.webp' },
+      { name: 'Nutmeg Brown', hex: '#54473C', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/nutmeg-brown/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp' },
+      { label: 'Front Dual-Tone Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/1.webp' },
+      { label: 'Side Tall-Boy Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/7.webp' },
+      { label: 'Rear Vertical Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp' },
+      { title: 'Bold Front Chrome Grille with Sculpted Bumper & Fog Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/1.webp' },
+      { title: 'Iconic Tall-Boy Silhouette with Floating Dual-Tone Roof', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/7.webp' },
+      { title: 'Tall Vertical Tail-lamp Cluster & Wide Rear Chrome Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L K10C Dual Jet (67 PS / 89 Nm) | 1.2L K12N Dual Jet (90 PS / 113 Nm) | 1.0L S-CNG (56.7 PS / 82.1 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3655 mm (L) × 1620 mm (W) × 1675 mm (H)',
+      wheelbase: '2435 mm',
+      fuelTank: '32 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: 'Dual Airbags, ABS with EBD, ESP, Hill Hold Assist, Speed-Sensitive Auto Door Lock'
+    },
+    variants: [
+      {
+        name: 'LXi 1.0L 5MT',
+        exShowroom: 554500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.35 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Airbags', 'ABS with EBD', 'ESP & Hill Hold Assist', 'Front Power Windows', 'Manual AC with Heater']
+      },
+      {
+        name: 'LXi 1.0L S-CNG 5MT',
+        exShowroom: 644500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56.7 PS)',
+        mileage: '34.05 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG VALUE',
+        keyFeatures: ['Factory S-CNG (34.05 km/kg)', 'Dual Interdependent ECUs', 'Front Power Windows', 'ESP with Hill Hold']
+      },
+      {
+        name: 'VXi 1.0L 5MT',
+        exShowroom: 599500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.35 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['SmartPlay Dock Audio with Bluetooth', 'All 4 Power Windows', 'Remote Keyless Entry', 'Electrically Adjustable ORVMs', 'Day/Night IRVM']
+      },
+      {
+        name: 'VXi 1.0L AGS (Automatic)',
+        exShowroom: 654500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '25.19 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', '25.19 km/l Mileage', 'Hill Hold Assist', 'Gear Shift Indicator']
+      },
+      {
+        name: 'VXi 1.0L S-CNG 5MT',
+        exShowroom: 689500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56.7 PS)',
+        mileage: '34.05 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 BEST MILEAGE PICK',
+        keyFeatures: ['Factory S-CNG (34.05 km/kg)', 'All 4 Power Windows', 'Remote Central Locking', 'Rear Parcel Tray']
+      },
+      {
+        name: 'ZXi 1.2L 5MT',
+        exShowroom: 628000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L K12N Dual Jet (90 PS)',
+        mileage: '23.56 km/l',
+        isVFM: false,
+        keyFeatures: ['More Powerful 1.2L 4-Cylinder Engine (90 PS)', 'Steering Mounted Audio Controls', 'Tilt Adjustable Steering', 'Rear Defogger']
+      },
+      {
+        name: 'ZXi 1.2L AGS (Automatic)',
+        exShowroom: 683000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L K12N Dual Jet (90 PS)',
+        mileage: '24.43 km/l',
+        isVFM: false,
+        keyFeatures: ['1.2L 90 PS Engine with AGS Automatic', 'Hill Hold Assist', 'Steering Audio Controls', 'Keyless Entry']
+      },
+      {
+        name: 'ZXi+ 1.2L 5MT',
+        exShowroom: 675500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L K12N Dual Jet (90 PS)',
+        mileage: '23.56 km/l',
+        isVFM: false,
+        keyFeatures: ['7-inch SmartPlay Studio Touchscreen', 'Apple CarPlay & Android Auto', '14-inch Black Alloy Wheels', 'Front Fog Lamps', 'Electrically Retractable ORVMs']
+      },
+      {
+        name: 'ZXi+ 1.2L AGS Dual Tone',
+        exShowroom: 733000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L K12N Dual Jet (90 PS)',
+        mileage: '24.43 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec AGS Automatic with Dual Tone Roof', '14-inch Black Alloys', '7-inch Touchscreen', 'Rear Wiper & Washer']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
