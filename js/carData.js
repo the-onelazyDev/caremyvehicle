@@ -2659,6 +2659,103 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-invicto',
+    name: 'Maruti Suzuki Invicto',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'The League of Extraordinary — 2.0L Intelligent Electric Hybrid, Panoramic Sunroof & Powered Ottoman Seats',
+    launchDate: 'Flagship Launch (Intelligent Electric Hybrid e-CVT)',
+    bodyType: 'MPV',
+    fuelTypes: ['Hybrid'],
+    priceRange: '₹25.31 - ₹29.02 Lakh',
+    minPrice: 2531000,
+    maxPrice: 2902000,
+    safetyRating: '6 Airbags Standard, Electronic Parking Brake with Auto Hold, 360 HD View Camera, All-Wheel Disc Brakes, TPMS, ESP with Hill Start Assist',
+    groundClearance: '185 mm',
+    bootSpace: '239 L (All Rows Up) / 690 L (3rd Row Folded)',
+    waitingPeriod: '4 - 12 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Invicto is NEXA’s ultra-premium flagship hybrid UV. Powered by a potent 2.0L Intelligent Electric Hybrid powertrain producing 186 PS with e-CVT delivering an impressive 23.24 km/l fuel economy, it offers first-class luxury with powered Ottoman captain seats, a panoramic sliding sunroof with mood ambient lighting, 10.1-inch SmartPlay Magnum touchscreen, powered tailgate, and 6 airbags standard.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
+        { id: 'stellar-bronze', name: 'Stellar Bronze', hex: '#BEB2A6' },
+        { id: 'majestic-silver', name: 'Majestic Silver', hex: '#CDD3E0' },
+        { id: 'mystic-white', name: 'Mystic White', hex: '#E5E4E2' },
+        { id: 'magnificent-black', name: 'Magnificent Black', hex: '#000000' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/4.webp' },
+      { name: 'Stellar Bronze', hex: '#BEB2A6', image: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/stellar-bronze/4.webp' },
+      { name: 'Majestic Silver', hex: '#CDD3E0', image: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/majestic-silver/4.webp' },
+      { name: 'Mystic White', hex: '#E5E4E2', image: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/mystic-white/4.webp' },
+      { name: 'Magnificent Black', hex: '#000000', image: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/magnificent-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Imposing Flagship UV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/4.webp' },
+      { label: "NEXA Signature Hexagonal Grille & NEXTre' LED Headlamps", url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/1.webp' },
+      { label: 'Side Profile with 2850mm Extended Wheelbase & 17-inch Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/7.webp' },
+      { label: 'Rear Sculpted Stance with Connected LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Nexa Blue', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/4.webp' },
+      { title: 'Imposing Dual Chrome Front Grille with Distinctive LED DRLs and Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/1.webp' },
+      { title: 'Luxury Stretched UV Silhouette with 17-inch Two-Tone Precision Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/7.webp' },
+      { title: 'Wide Tailgate with Horizontal LED Rear Combination Lamps & Chrome Applique', url: 'https://ik.imagekit.io/2908vvlod/cars/invicto/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '2.0L Intelligent Electric Strong Hybrid Atkinson Cycle Petrol (186 PS combined output)',
+      transmissions: 'e-CVT (Electronically Controlled Continuously Variable Transmission)',
+      dimensions: '4755 mm (L) × 1850 mm (W) × 1795 mm (H)',
+      wheelbase: '2850 mm',
+      fuelTank: '52 Litres',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Brake Assist',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: '6 Airbags Standard across all variants, Electronic Parking Brake with Auto Hold, 360 HD View Camera, TPMS, ESP with Hill Start Assist, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'Zeta+ 2.0L Strong Hybrid 7-Seater e-CVT',
+        exShowroom: 2531000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '2.0L Strong Hybrid (186 PS)',
+        mileage: '23.24 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ BEST VALUE LUXURY HYBRID',
+        keyFeatures: ['2.0L Intelligent Electric Hybrid (23.24 km/l)', '6 Airbags Standard', 'Electronic Parking Brake (EPB) with Auto Hold', '8-inch SmartPlay Touchscreen with CarPlay', '2nd-Row Captain Seats', 'Steering Paddle Shifters', 'All 4 Disc Brakes']
+      },
+      {
+        name: 'Zeta+ 2.0L Strong Hybrid 8-Seater e-CVT',
+        exShowroom: 2536000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '2.0L Strong Hybrid (186 PS)',
+        mileage: '23.24 km/l',
+        isVFM: false,
+        keyFeatures: ['8-Seater Practical Family Layout (60:40 Middle Bench)', '2.0L Strong Hybrid e-CVT', '6 Airbags Standard', 'Electronic Parking Brake', 'Dual-Zone AC']
+      },
+      {
+        name: 'Alpha+ 2.0L Strong Hybrid 7-Seater e-CVT',
+        exShowroom: 2902000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '2.0L Strong Hybrid (186 PS)',
+        mileage: '23.24 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP ULTRA-LUXURY PICK',
+        keyFeatures: ['Panoramic Sliding Sunroof with Mood Lighting', 'Powered Ottoman 2nd-Row Captain Seats with Legrest', 'Front Ventilated Seats', '10.1-inch SmartPlay Magnum Touchscreen', '360 HD View Camera', 'Powered Tailgate with Walk-Away Close', '17-inch Two-Tone Alloys']
+      }
+    ]
+  },
+
 
 
 
