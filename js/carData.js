@@ -296,6 +296,162 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-brezza',
+    name: 'Maruti Suzuki Brezza',
+    brand: 'Maruti Suzuki',
+    tagline: 'City-Bred Compact SUV with Electric Sunroof, Head-Up Display & 360° Studio',
+    launchDate: 'Updated 2024 (Electric Sunroof & 360° View)',
+    bodyType: 'Compact SUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹8.34 - ₹13.98 Lakh',
+    minPrice: 834000,
+    maxPrice: 1398000,
+    safetyRating: 'ESP, Hill Hold Assist, 6 Airbags (Top Variants) & 360° Camera',
+    groundClearance: '198 mm',
+    bootSpace: '328 L',
+    waitingPeriod: '3 - 6 Weeks',
+    heroImage: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp',
+    summary: 'The Maruti Suzuki Brezza is one of India’s highest selling compact SUVs powered by the refined 1.5L K15C Dual Jet Smart Hybrid engine (and factory S-CNG). It features an electric sunroof, 360-degree surround view camera, Head-Up Display (HUD), paddle shifters with 6-speed torque converter automatic, and 9-inch SmartPlay Pro+ infotainment with wireless Apple CarPlay/Android Auto.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'assets/cars/brezza/360',
+      format: 'webp',
+      defaultColor: 'sizzling-red-bluish-black',
+      colors: [
+        { id: 'sizzling-red-bluish-black', name: 'Sizzling Red with Bluish Black', hex: '#990000' },
+        { id: 'lustrous-beige', name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
+        { id: 'magma-gray', name: 'Magma Gray', hex: '#555347' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#A5AFB1' },
+        { id: 'pearl-bluish-black', name: 'Pearl Bluish Black', hex: '#0C0D11' }
+      ]
+    },
+    colors: [
+      { name: 'Sizzling Red with Bluish Black', hex: '#990000', image: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A', image: 'assets/cars/brezza/360/lustrous-beige/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'assets/cars/brezza/360/pearl-arctic-white/4.webp' },
+      { name: 'Magma Gray', hex: '#555347', image: 'assets/cars/brezza/360/magma-gray/4.webp' },
+      { name: 'Splendid Silver', hex: '#A5AFB1', image: 'assets/cars/brezza/360/splendid-silver/4.webp' },
+      { name: 'Pearl Bluish Black', hex: '#0C0D11', image: 'assets/cars/brezza/360/pearl-bluish-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { label: 'Front Grille & Skid Plate', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
+      { label: 'Side Profile & SUV Cladding', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
+      { label: 'Rear Connected LED Stance', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { title: 'Geometric Front Grille with Chrome & Dual LED DRLs', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
+      { title: 'Bold SUV Profile with Precision Cut Alloys & Roof Rails', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
+      { title: 'Rear Aerodynamic Roof Spoiler & Slim LED Taillamps', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15C Dual Jet Smart Hybrid (103 PS / 136.8 Nm) | S-CNG (87.8 PS / 121.5 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 6-Speed Torque Converter AT with Paddle Shifters',
+      dimensions: '3995 mm (L) × 1790 mm (W) × 1685 mm (H)',
+      wheelbase: '2500 mm',
+      fuelTank: '48 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: 'Electronic Stability Program (ESP), Hill Hold Assist, 6 Airbags, 360 View Camera with Dynamic Guidelines'
+    },
+    variants: [
+      {
+        name: 'LXi 1.5L 5MT',
+        exShowroom: 834000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.89 km/l',
+        isVFM: false,
+        keyFeatures: ['ESP & Hill Hold Assist', 'Halogen Projector Headlamps', 'All 4 Power Windows', 'Keyless Entry', 'Rear AC Vents']
+      },
+      {
+        name: 'VXi 1.5L 5MT',
+        exShowroom: 969500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.89 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Touchscreen', 'Automatic Climate Control', 'Rear Defogger', 'Steering Mounted Audio Controls', 'Electrically Folding ORVMs']
+      },
+      {
+        name: 'VXi 1.5L S-CNG 5MT',
+        exShowroom: 1064000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '25.51 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP SUV CNG PICK',
+        keyFeatures: ['Factory S-CNG (25.51 km/kg)', 'Dual Interdependent ECUs', 'Auto Climate Control', '7-inch Touchscreen']
+      },
+      {
+        name: 'VXi 1.5L 6AT (Automatic)',
+        exShowroom: 1109500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.80 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter AT', 'Paddle Shifters', 'Hill Descent Control', 'Cruise Control']
+      },
+      {
+        name: 'ZXi 1.5L 5MT',
+        exShowroom: 1114500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.89 km/l',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof', 'Dual LED Projector Headlamps & DRLs', '16-inch Alloy Wheels', 'Engine Push Start/Stop', 'Rear Wiper & Washer']
+      },
+      {
+        name: 'ZXi 1.5L S-CNG 5MT',
+        exShowroom: 1209500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '25.51 km/kg',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof with S-CNG', '16-inch Alloys', 'Dual LED Projectors', 'Push Button Start']
+      },
+      {
+        name: 'ZXi 1.5L 6AT (Automatic)',
+        exShowroom: 1254500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.80 km/l',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof', '6-Speed AT with Paddle Shifters', 'Cruise Control', '16-inch Alloy Wheels']
+      },
+      {
+        name: 'ZXi+ 1.5L 5MT (Dual Tone)',
+        exShowroom: 1274000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.89 km/l',
+        isVFM: false,
+        keyFeatures: ['360° Surround View Camera', 'Head-Up Display (HUD)', '9-inch SmartPlay Pro+ Touchscreen', 'Arkamys Surround Sound', 'Wireless Charging', '6 Airbags']
+      },
+      {
+        name: 'ZXi+ 1.5L 6AT (Dual Tone)',
+        exShowroom: 1398000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.80 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec 6-Speed AT with Paddle Shifters', '360° Camera', 'Head-Up Display', 'Electric Sunroof', 'Dual Tone Floating Roof']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
