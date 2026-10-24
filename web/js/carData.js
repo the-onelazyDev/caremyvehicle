@@ -1888,6 +1888,168 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-baleno',
+    name: 'Maruti Suzuki Baleno',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'Tech Goes Bold — Head-Up Display, 360 HD View Camera & 30.61 km/kg S-CNG',
+    launchDate: 'Updated 2024 (6 Airbags Standard & SmartPlay Pro+)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.66 - ₹9.88 Lakh',
+    minPrice: 666000,
+    maxPrice: 988000,
+    safetyRating: '6 Airbags (Zeta/Alpha), ESP with Hill Hold Assist, ABS with EBD, ISOFIX Mounts, 360 HD View Camera',
+    groundClearance: '170 mm',
+    bootSpace: '318 L (Petrol) / 55 L Water Equivalent (CNG)',
+    waitingPeriod: '1 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Baleno is India’s bestselling premium hatchback from NEXA. Engineered with a bold sculpted stance, it features segment-first tech including a Head-Up Display (HUD), 360-degree HD surround view camera, 9-inch SmartPlay Pro+ touchscreen with ARKAMYS surround audio, 6 airbags standard on key grades, and class-leading 30.61 km/kg S-CNG efficiency.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#001E5B' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#464D50' },
+        { id: 'arctic-white', name: 'Arctic White', hex: '#F9F9F9' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#303030' },
+        { id: 'opulent-red', name: 'Opulent Red', hex: '#870001' },
+        { id: 'pearl-midnight-black', name: 'Pearl Midnight Black', hex: '#181C28' },
+        { id: 'celestial-teal', name: 'Celestial Teal (Luxe)', hex: '#069494' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#001E5B', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp' },
+      { name: 'Splendid Silver', hex: '#464D50', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/splendid-silver/4.webp' },
+      { name: 'Arctic White', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/arctic-white/4.webp' },
+      { name: 'Grandeur Grey', hex: '#303030', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/grandeur-grey/4.webp' },
+      { name: 'Opulent Red', hex: '#870001', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/opulent-red/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#181C28', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/pearl-midnight-black/4.webp' },
+      { name: 'Celestial Teal (Luxe)', hex: '#069494', image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/celestial-teal/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Liquid Flow Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp' },
+      { label: "NEXA Signature Grille with NEXTre' LED DRLs", url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/1.webp' },
+      { label: 'Side Dynamic Aerodynamic Silhouette & 16-inch Precision Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/7.webp' },
+      { label: 'Rear Sculpted Stance with LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp' },
+      { title: "NEXA Wave Grille with 3-Point NEXTre' LED Daytime Running Lamps", url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/1.webp' },
+      { title: 'Flowing Aerodynamic Side Profile with 16-inch Precision-Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/7.webp' },
+      { title: 'Wide Sculpted Tailgate with Sharp Angular LED Tail Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L K-Series DualJet Dual VVT Petrol (89.73 PS / 113 Nm) | 1.2L S-CNG (77.49 PS / 98.5 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3990 mm (L) × 1745 mm (W) × 1500 mm (H)',
+      wheelbase: '2520 mm',
+      fuelTank: '37 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: '6 Airbags (Zeta/Alpha), ESP with Hill Hold Assist, 360 HD View Camera, Head-Up Display (HUD), Rear Camera, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'Sigma 1.2L 5MT',
+        exShowroom: 666000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.35 km/l',
+        isVFM: false,
+        keyFeatures: ['Automatic Climate Control', 'All 4 Power Windows', 'Dual Front Airbags', 'ESP with Hill Hold Assist', 'Halogen Projector Headlamps', 'Central Locking']
+      },
+      {
+        name: 'Delta 1.2L 5MT',
+        exShowroom: 750000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.35 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Pro Touchscreen', 'Wireless Apple CarPlay & Android Auto', 'Steering Mounted Audio Controls', 'Electrically Foldable ORVMs']
+      },
+      {
+        name: 'Delta 1.2L AGS (Automatic)',
+        exShowroom: 800000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.94 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', '22.94 km/l Segment-Best Auto Mileage', 'ESP & Hill Hold Assist', '7-inch Touchscreen']
+      },
+      {
+        name: 'Delta 1.2L S-CNG 5MT',
+        exShowroom: 840000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L DualJet CNG (77.49 PS)',
+        mileage: '30.61 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG HATCHBACK PICK',
+        keyFeatures: ['Factory S-CNG with 30.61 km/kg Record Mileage', '7-inch Touchscreen with Smartphone Link', 'Automatic Climate Control', 'Steering Controls']
+      },
+      {
+        name: 'Zeta 1.2L 5MT',
+        exShowroom: 843000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.35 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE (6 AIRBAGS)',
+        keyFeatures: ['6 Airbags Standard', 'LED Projector Headlamps with NEXTre DRLs', '16-inch Precision-Cut Alloys', 'Engine Push Start/Stop', 'Rear AC Vents & Fast USB Charger']
+      },
+      {
+        name: 'Zeta 1.2L AGS (Automatic)',
+        exShowroom: 893000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.94 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', '5-Speed AGS Automatic', 'LED Projectors', '16-inch Precision Alloys', 'Push Start/Stop']
+      },
+      {
+        name: 'Zeta 1.2L S-CNG 5MT',
+        exShowroom: 933000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L DualJet CNG (77.49 PS)',
+        mileage: '30.61 km/kg',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard with S-CNG', 'Factory S-CNG (30.61 km/kg)', '16-inch Precision Alloys', 'LED Headlamps & DRLs', 'Rear AC Vents']
+      },
+      {
+        name: 'Alpha 1.2L 5MT',
+        exShowroom: 938000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.35 km/l',
+        isVFM: false,
+        keyFeatures: ['Head-Up Display (Color HUD)', '360-Degree HD Surround Camera', '9-inch SmartPlay Pro+ Screen', 'Surround Sense Audio by ARKAMYS', 'Cruise Control', 'UV Cut Glass']
+      },
+      {
+        name: 'Alpha 1.2L AGS (Automatic)',
+        exShowroom: 988000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L DualJet Dual VVT (89.73 PS)',
+        mileage: '22.94 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Automatic with Head-Up Display', '360 HD Camera', '9-inch Touchscreen with ARKAMYS', '6 Airbags', 'Cruise Control', 'Auto-Dimming IRVM']
+      }
+    ]
+  },
+
 
   {
     id: 'hyundai-grand-i10-nios',
