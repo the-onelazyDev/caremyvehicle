@@ -1194,6 +1194,166 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-ertiga',
+    name: 'Maruti Suzuki Ertiga',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s #1 7-Seater MPV with K15C Smart Hybrid, 26.11 km/kg S-CNG & Paddle Shifters',
+    launchDate: 'Updated 2024 (Smart Hybrid & Dual VVT)',
+    bodyType: 'MUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹8.69 - ₹13.03 Lakh',
+    minPrice: 869000,
+    maxPrice: 1303000,
+    safetyRating: 'Dual Front & Side Airbags, ESP with Hill Hold Assist, ABS with EBD, ISOFIX',
+    groundClearance: '180 mm',
+    bootSpace: '209 L (3-Rows Up) / 550 L (3rd Row Folded) / 803 L (Max Utility)',
+    waitingPeriod: '4 - 12 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp',
+    summary: 'The Maruti Suzuki Ertiga is India’s undisputed bestselling 7-seater MPV, trusted by over a million families. Powered by the refined 1.5L K15C Smart Hybrid Dual VVT engine (103 PS / 136.8 Nm) paired with either a 5-speed manual or a 6-speed automatic with paddle shifters, achieving 20.51 km/l (MT) and 20.30 km/l (AT). Also available with factory S-CNG delivering class-leading 26.11 km/kg economy. Features 7-inch SmartPlay Pro touchscreen, second-row roof-mounted AC with independent blower controls, air-cooled cup holders, and versatile one-touch recline and slide seats.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360',
+      format: 'webp',
+      defaultColor: 'oxford-blue',
+      colors: [
+        { id: 'oxford-blue', name: 'Pearl Metallic Oxford Blue', hex: '#40519C' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
+        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
+        { id: 'auburn-red', name: 'Auburn Red', hex: '#732112' },
+        { id: 'dignity-brown', name: 'Dignity Brown', hex: '#1F1412' },
+        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
+      ]
+    },
+    colors: [
+      { name: 'Pearl Metallic Oxford Blue', hex: '#40519C', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/pearl-arctic-white/4.webp' },
+      { name: 'Splendid Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/splendid-silver/4.webp' },
+      { name: 'Magma Grey', hex: '#2B2C31', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/magma-grey/4.webp' },
+      { name: 'Auburn Red', hex: '#732112', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/auburn-red/4.webp' },
+      { name: 'Dignity Brown', hex: '#1F1412', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/dignity-brown/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/bluish-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp' },
+      { label: 'Front Chrome Wing Grille & Projectors', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/1.webp' },
+      { label: 'Side Elegant 7-Seater Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/7.webp' },
+      { label: 'Rear 3D LED Taillamps with Chrome Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp' },
+      { title: 'Dynamic Chrome Winged Front Grille with Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/1.webp' },
+      { title: 'Spacious 7-Seater Silhouette with Machined Two-Tone Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/7.webp' },
+      { title: '3D Organ-Style LED Tail-lamps with Backdoor Chrome Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15C Smart Hybrid (103 PS / 136.8 Nm) | 1.5L S-CNG (87.8 PS / 121.5 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 6-Speed Automatic (6AT) with Paddle Shifters',
+      dimensions: '4395 mm (L) × 1735 mm (W) × 1690 mm (H)',
+      wheelbase: '2740 mm',
+      fuelTank: '45 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS, EBD & Brake Assist',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam (Rear)',
+      safety: 'Quad Airbags (Front & Side), ESP, Hill Hold Assist, Reverse Camera & Sensors, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'LXi (O) 1.5L 5MT',
+        exShowroom: 869000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.51 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Airbags', 'ESP with Hill Hold Assist', 'Halogen Projector Headlamps', 'All 4 Power Windows', 'Manual AC with Heater']
+      },
+      {
+        name: 'VXi (O) 1.5L 5MT',
+        exShowroom: 983000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.51 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['2nd Row Roof-Mounted AC with Independent Controls', 'SmartPlay Audio with Bluetooth & 4 Speakers', 'Remote Keyless Entry', 'Electrically Foldable ORVMs', 'One-Touch Recline & Slide 2nd Row']
+      },
+      {
+        name: 'VXi (O) 1.5L 6AT (Automatic)',
+        exShowroom: 1123000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.30 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter Automatic', 'Steering Mounted Paddle Shifters', 'Hill Hold Assist', '2nd Row Roof AC']
+      },
+      {
+        name: 'VXi (O) 1.5L S-CNG 5MT',
+        exShowroom: 1078000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '26.11 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG MPV PICK',
+        keyFeatures: ['Factory S-CNG with Class-Leading 26.11 km/kg', 'Dual Interdependent ECUs', '2nd Row Roof AC', 'All 4 Power Windows']
+      },
+      {
+        name: 'ZXi (O) 1.5L 5MT',
+        exShowroom: 1093000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.51 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ MOST POPULAR FAMILY PICK',
+        keyFeatures: ['7-inch SmartPlay Pro Touchscreen', 'Wireless Apple CarPlay & Android Auto', 'Push Button Engine Start/Stop', '15-inch Two-Tone Alloy Wheels', 'Automatic Climate Control']
+      },
+      {
+        name: 'ZXi (O) 1.5L 6AT (Automatic)',
+        exShowroom: 1233000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.30 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed AT with Paddle Shifters', '7-inch Touchscreen', 'Cruise Control', '15-inch Alloys']
+      },
+      {
+        name: 'ZXi (O) 1.5L S-CNG 5MT',
+        exShowroom: 1188000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '26.11 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 TOP-SPEC CNG PICK',
+        keyFeatures: ['High-Feature Factory S-CNG (26.11 km/kg)', '7-inch SmartPlay Pro Touchscreen', 'Push Button Start', '15-inch Alloy Wheels']
+      },
+      {
+        name: 'ZXi+ 1.5L 5MT',
+        exShowroom: 1163000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.51 km/l',
+        isVFM: false,
+        keyFeatures: ['4 Airbags (Front & Side)', 'Cruise Control', 'Leather-Wrapped Flat-Bottom Steering Wheel', 'Automatic Headlamps with Follow-Me-Home', 'Rear Parking Camera']
+      },
+      {
+        name: 'ZXi+ 1.5L 6AT (Automatic)',
+        exShowroom: 1303000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.30 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-of-the-Line 7-Seater Automatic', '4 Airbags', '6-Speed AT with Paddle Shifters', 'Cruise Control', 'Suzuki Connect Telematics']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
