@@ -26,35 +26,35 @@ export const CARS = [
     groundClearance: '160 mm',
     bootSpace: '214 L',
     waitingPeriod: '1 - 3 Weeks',
-    heroImage: 'assets/cars/alto-k10/alto_k10_hero.jpg',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_hero.jpg',
     summary: 'The iconic Alto K10 now comes with standard 6 airbags, Electronic Stability Program (ESP), 7-inch SmartPlay Studio touchscreen with Apple CarPlay/Android Auto, and an ultra-frugal 1.0L Next-Gen K-Series Dual Jet engine delivering up to 33.40 km/kg on CNG.',
     colors: [
-      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'assets/cars/alto-k10/alto_k10_red.jpg' },
-      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'assets/cars/alto-k10/alto_k10_blue.jpg' },
-      { name: 'Solid White', hex: '#F8FAFC', image: 'assets/cars/alto-k10/alto_k10_white.jpg' },
-      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'assets/cars/alto-k10/alto_k10_silver.jpg' },
-      { name: 'Metallic Granite Grey', hex: '#475569', image: 'assets/cars/alto-k10/alto_k10_grey.jpg' },
-      { name: 'Premium Earth Gold', hex: '#D97706', image: 'assets/cars/alto-k10/alto_k10_gold.jpg' },
-      { name: 'Bluish Black', hex: '#0F172A', image: 'assets/cars/alto-k10/alto_k10_black.jpg' }
+      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_red.jpg' },
+      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_blue.jpg' },
+      { name: 'Solid White', hex: '#F8FAFC', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_white.jpg' },
+      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_silver.jpg' },
+      { name: 'Metallic Granite Grey', hex: '#475569', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_grey.jpg' },
+      { name: 'Premium Earth Gold', hex: '#D97706', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_gold.jpg' },
+      { name: 'Bluish Black', hex: '#0F172A', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_black.jpg' }
     ],
     angles: [
-      { label: 'Front 3/4th (Hero)', url: 'assets/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
-      { label: 'Side Profile & Stance', url: 'assets/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
-      { label: 'Lively Cabin & Seating', url: 'assets/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
-      { label: 'Next-Gen K-Series 1.0L Engine', url: 'assets/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
-      { label: '6 Airbags Standard Safety', url: 'assets/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' }
+      { label: 'Front 3/4th (Hero)', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
+      { label: 'Side Profile & Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
+      { label: 'Lively Cabin & Seating', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
+      { label: 'Next-Gen K-Series 1.0L Engine', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
+      { label: '6 Airbags Standard Safety', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' }
     ],
     gallery: [
-      { title: 'Front 3/4th Stance on Highway', url: 'assets/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
-      { title: 'Youthful Profile with Honeycomb Wheel Covers', url: 'assets/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
-      { title: 'Lively & Spacious Dual-Tone Cabin Layout', url: 'assets/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
-      { title: '7-inch SmartPlay Studio Touchscreen with Navigation', url: 'assets/cars/alto-k10/official/interior/smartplay_7inch_touchscreen.jpg' },
-      { title: 'Steering Mounted Audio & Voice Control', url: 'assets/cars/alto-k10/official/interior/steering_mounted_controls.jpg' },
-      { title: 'Digital Speedometer with Dynamic Display', url: 'assets/cars/alto-k10/official/interior/digital_speedometer_display.jpg' },
-      { title: 'Next-Gen K-Series 1.0L Dual Jet, Dual VVT Engine', url: 'assets/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
-      { title: '6 Airbags Standard Deployment Cutaway', url: 'assets/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' },
-      { title: 'Electronic Stability Program (ESP) Demonstration', url: 'assets/cars/alto-k10/official/performance_safety/esp_stability_program.jpg' },
-      { title: 'Chassis Dimensions & Turning Radius Blueprint', url: 'assets/cars/alto-k10/official/specs/chassis_dimensions_blueprint.jpg' }
+      { title: 'Front 3/4th Stance on Highway', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
+      { title: 'Youthful Profile with Honeycomb Wheel Covers', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
+      { title: 'Lively & Spacious Dual-Tone Cabin Layout', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
+      { title: '7-inch SmartPlay Studio Touchscreen with Navigation', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/smartplay_7inch_touchscreen.jpg' },
+      { title: 'Steering Mounted Audio & Voice Control', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/steering_mounted_controls.jpg' },
+      { title: 'Digital Speedometer with Dynamic Display', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/digital_speedometer_display.jpg' },
+      { title: 'Next-Gen K-Series 1.0L Dual Jet, Dual VVT Engine', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
+      { title: '6 Airbags Standard Deployment Cutaway', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' },
+      { title: 'Electronic Stability Program (ESP) Demonstration', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/esp_stability_program.jpg' },
+      { title: 'Chassis Dimensions & Turning Radius Blueprint', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/specs/chassis_dimensions_blueprint.jpg' }
     ],
     specs: {
       engineOptions: '1.0L K10C Dual Jet Dual VVT (67 bhp / 91.1 Nm) | S-CNG (56 bhp / 82.1 Nm)',
@@ -164,11 +164,11 @@ export const CARS = [
     groundClearance: '163 mm',
     bootSpace: '265 L',
     waitingPeriod: '2 - 4 Weeks',
-    heroImage: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp',
     summary: 'The Epic New 4th Generation Swift features the all-new 1.2L 3-cylinder Z-Series Dual Jet engine delivering up to 25.75 km/l (and 32.85 km/kg on S-CNG). It brings standard 6 airbags across every single variant, 9-inch SmartPlay Pro+ touchscreen with wireless CarPlay/Android Auto, Arkamys Surround Sense audio, wireless charging, and cruise control.',
     spin360: {
       totalFrames: 24,
-      folder: 'assets/cars/swift/360',
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/swift/360',
       format: 'webp',
       defaultColor: 'sizzling-red-bluish-black',
       colors: [
@@ -181,24 +181,24 @@ export const CARS = [
       ]
     },
     colors: [
-      { name: 'Sizzling Red with Bluish Black', hex: '#DC2626', image: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
-      { name: 'Luster Blue', hex: '#1F47C2', image: 'assets/cars/swift/360/luster-blue/4.webp' },
-      { name: 'Pearl Arctic White', hex: '#F8FAFC', image: 'assets/cars/swift/360/pearl-arctic-white/4.webp' },
-      { name: 'Magma Grey', hex: '#475569', image: 'assets/cars/swift/360/magma-grey/4.webp' },
-      { name: 'Splendid Silver', hex: '#CBD5E1', image: 'assets/cars/swift/360/splendid-silver/4.webp' },
-      { name: 'Novel Orange', hex: '#B33316', image: 'assets/cars/swift/360/novel-orange/4.webp' }
+      { name: 'Sizzling Red with Bluish Black', hex: '#DC2626', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { name: 'Luster Blue', hex: '#1F47C2', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/luster-blue/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F8FAFC', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/pearl-arctic-white/4.webp' },
+      { name: 'Magma Grey', hex: '#475569', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/magma-grey/4.webp' },
+      { name: 'Splendid Silver', hex: '#CBD5E1', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/splendid-silver/4.webp' },
+      { name: 'Novel Orange', hex: '#B33316', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/novel-orange/4.webp' }
     ],
     angles: [
-      { label: 'Front 3/4th Studio View', url: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
-      { label: 'Front Fascia & Grille', url: 'assets/cars/swift/360/sizzling-red-bluish-black/1.webp' },
-      { label: 'Side Profile & Alloys', url: 'assets/cars/swift/360/sizzling-red-bluish-black/7.webp' },
-      { label: 'Rear Connected LED Taillamps', url: 'assets/cars/swift/360/sizzling-red-bluish-black/13.webp' }
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { label: 'Front Fascia & Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/1.webp' },
+      { label: 'Side Profile & Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/7.webp' },
+      { label: 'Rear Connected LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/13.webp' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter 360° Studio Stance', url: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
-      { title: 'Sporty Glossy Black Grille & DRLs', url: 'assets/cars/swift/360/sizzling-red-bluish-black/1.webp' },
-      { title: 'Side Profile with Dual-Tone Precision Cut Alloys', url: 'assets/cars/swift/360/sizzling-red-bluish-black/7.webp' },
-      { title: 'Rear Aerodynamic Stance & LED Tail-Lamps', url: 'assets/cars/swift/360/sizzling-red-bluish-black/13.webp' }
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { title: 'Sporty Glossy Black Grille & DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/1.webp' },
+      { title: 'Side Profile with Dual-Tone Precision Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/7.webp' },
+      { title: 'Rear Aerodynamic Stance & LED Tail-Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/13.webp' }
     ],
     specs: {
       engineOptions: '1.2L Z12E 3-Cylinder Dual Jet Dual VVT (81.58 PS / 111.7 Nm) | S-CNG (69.75 PS / 101.8 Nm)',
@@ -310,11 +310,11 @@ export const CARS = [
     groundClearance: '198 mm',
     bootSpace: '328 L',
     waitingPeriod: '3 - 6 Weeks',
-    heroImage: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp',
     summary: 'The Maruti Suzuki Brezza is one of India’s highest selling compact SUVs powered by the refined 1.5L K15C Dual Jet Smart Hybrid engine (and factory S-CNG). It features an electric sunroof, 360-degree surround view camera, Head-Up Display (HUD), paddle shifters with 6-speed torque converter automatic, and 9-inch SmartPlay Pro+ infotainment with wireless Apple CarPlay/Android Auto.',
     spin360: {
       totalFrames: 24,
-      folder: 'assets/cars/brezza/360',
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360',
       format: 'webp',
       defaultColor: 'sizzling-red-bluish-black',
       colors: [
@@ -327,24 +327,24 @@ export const CARS = [
       ]
     },
     colors: [
-      { name: 'Sizzling Red with Bluish Black', hex: '#990000', image: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
-      { name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A', image: 'assets/cars/brezza/360/lustrous-beige/4.webp' },
-      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'assets/cars/brezza/360/pearl-arctic-white/4.webp' },
-      { name: 'Magma Gray', hex: '#555347', image: 'assets/cars/brezza/360/magma-gray/4.webp' },
-      { name: 'Splendid Silver', hex: '#A5AFB1', image: 'assets/cars/brezza/360/splendid-silver/4.webp' },
-      { name: 'Pearl Bluish Black', hex: '#0C0D11', image: 'assets/cars/brezza/360/pearl-bluish-black/4.webp' }
+      { name: 'Sizzling Red with Bluish Black', hex: '#990000', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/lustrous-beige/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/pearl-arctic-white/4.webp' },
+      { name: 'Magma Gray', hex: '#555347', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/magma-gray/4.webp' },
+      { name: 'Splendid Silver', hex: '#A5AFB1', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/splendid-silver/4.webp' },
+      { name: 'Pearl Bluish Black', hex: '#0C0D11', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/pearl-bluish-black/4.webp' }
     ],
     angles: [
-      { label: 'Front 3/4th Studio View', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
-      { label: 'Front Grille & Skid Plate', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
-      { label: 'Side Profile & SUV Cladding', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
-      { label: 'Rear Connected LED Stance', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { label: 'Front Grille & Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
+      { label: 'Side Profile & SUV Cladding', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
+      { label: 'Rear Connected LED Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter 360° Studio Stance', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
-      { title: 'Geometric Front Grille with Chrome & Dual LED DRLs', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
-      { title: 'Bold SUV Profile with Precision Cut Alloys & Roof Rails', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
-      { title: 'Rear Aerodynamic Roof Spoiler & Slim LED Taillamps', url: 'assets/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
+      { title: 'Geometric Front Grille with Chrome & Dual LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/1.webp' },
+      { title: 'Bold SUV Profile with Precision Cut Alloys & Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/7.webp' },
+      { title: 'Rear Aerodynamic Roof Spoiler & Slim LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/13.webp' }
     ],
     specs: {
       engineOptions: '1.5L K15C Dual Jet Smart Hybrid (103 PS / 136.8 Nm) | S-CNG (87.8 PS / 121.5 Nm)',
@@ -466,11 +466,11 @@ export const CARS = [
     groundClearance: '165 mm',
     bootSpace: '260 L',
     waitingPeriod: '2 - 4 Weeks',
-    heroImage: 'assets/cars/grand-i10-nios/hero.jpg',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/hero.jpg',
     summary: 'The new Hyundai Grand i10 Nios sets the benchmark in premium compact hatchbacks with standard 6 airbags, 8-inch touchscreen infotainment with Apple CarPlay/Android Auto, wireless phone charger, cruise control, and refined 1.2L Kappa petrol & factory Bi-Fuel CNG engines.',
     spin360: {
       totalFrames: 24,
-      folder: 'assets/cars/grand-i10-nios/360',
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360',
       defaultColor: 'teal-blue',
       colors: [
         { name: 'Teal Blue', hex: '#153854', folderName: 'teal-blue' },
@@ -480,16 +480,16 @@ export const CARS = [
       ]
     },
     colors: [
-      { name: 'Teal Blue', hex: '#153854', image: 'assets/cars/grand-i10-nios/360/teal-blue/4.jpg' },
-      { name: 'Fiery Red', hex: '#9F1414', image: 'assets/cars/grand-i10-nios/360/fiery-red/4.jpg' },
-      { name: 'Typhoon Silver', hex: '#DFE1E3', image: 'assets/cars/grand-i10-nios/360/typhoon-silver/4.jpg' },
-      { name: 'Titan Grey', hex: '#4E5359', image: 'assets/cars/grand-i10-nios/360/titan-grey/4.jpg' }
+      { name: 'Teal Blue', hex: '#153854', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/4.jpg' },
+      { name: 'Fiery Red', hex: '#9F1414', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/fiery-red/4.jpg' },
+      { name: 'Typhoon Silver', hex: '#DFE1E3', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/typhoon-silver/4.jpg' },
+      { name: 'Titan Grey', hex: '#4E5359', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/titan-grey/4.jpg' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter Turntable View', url: 'assets/cars/grand-i10-nios/360/teal-blue/4.jpg' },
-      { title: 'Sporty Painted Honeycomb Grille & DRLs', url: 'assets/cars/grand-i10-nios/360/teal-blue/1.jpg' },
-      { title: 'Side Profile & Two-Tone Alloy Stance', url: 'assets/cars/grand-i10-nios/360/teal-blue/7.jpg' },
-      { title: 'Rear Connected LED Tail-lamp Cluster', url: 'assets/cars/grand-i10-nios/360/teal-blue/13.jpg' }
+      { title: 'Front Three-Quarter Turntable View', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/4.jpg' },
+      { title: 'Sporty Painted Honeycomb Grille & DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/1.jpg' },
+      { title: 'Side Profile & Two-Tone Alloy Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/7.jpg' },
+      { title: 'Rear Connected LED Tail-lamp Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/13.jpg' }
     ],
     specs: {
       engineOptions: '1.2L Kappa Dual VVT Petrol (82 bhp / 114 Nm) | 1.2L Bi-Fuel CNG (68 bhp / 95 Nm)',
