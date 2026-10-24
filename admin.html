@@ -479,6 +479,61 @@
             + Add Variant Row
           </button>
 
+          <!-- 4. Interactive Colors Studio Builder -->
+          <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">4. Official Colors & 360° Palette</h3>
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:12px;">
+            Add paint colors for the interactive color switcher (e.g. Sizzling Red, Luster Blue).
+          </p>
+          <div id="colorsContainer">
+            <!-- Dynamic color rows will appear here -->
+          </div>
+
+          <button type="button" class="btn-add-variant" onclick="addColorRow()">
+            + Add Color Swatch
+          </button>
+
+          <!-- 5. Photo Gallery Builder -->
+          <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">5. High-Resolution Photo Gallery</h3>
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:12px;">
+            Add multiple interior/exterior shots (Dashboard, Rear Seating, Boot Space, Sunroof).
+          </p>
+          <div id="galleryContainer">
+            <!-- Dynamic gallery rows will appear here -->
+          </div>
+
+          <button type="button" class="btn-add-variant" onclick="addGalleryRow()">
+            + Add Gallery Photo
+          </button>
+
+          <!-- 6. Detailed Technical Specifications -->
+          <h3 style="font-size:16px; font-weight:800; margin:24px 0 14px; color:var(--primary);">6. Technical Dimensions & Powertrains</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Engine Powertrains</label>
+              <input type="text" id="specEngine" class="form-control" placeholder="e.g. 1.2L 3-Cyl Z12E Petrol (82 bhp / 112 Nm)">
+            </div>
+            <div class="form-group">
+              <label>Transmissions</label>
+              <input type="text" id="specTrans" class="form-control" placeholder="e.g. 5-Speed Manual (MT) & 5-Speed AMT">
+            </div>
+            <div class="form-group">
+              <label>Dimensions (L × W × H)</label>
+              <input type="text" id="specDim" class="form-control" placeholder="e.g. 3860 mm (L) × 1735 mm (W) × 1520 mm (H)">
+            </div>
+            <div class="form-group">
+              <label>Wheelbase</label>
+              <input type="text" id="specWheelbase" class="form-control" placeholder="e.g. 2450 mm">
+            </div>
+            <div class="form-group">
+              <label>Fuel Tank Capacity</label>
+              <input type="text" id="specFuelTank" class="form-control" placeholder="e.g. 37 Litres">
+            </div>
+            <div class="form-group">
+              <label>Seating Capacity</label>
+              <input type="text" id="specSeating" class="form-control" placeholder="e.g. 5 Passengers">
+            </div>
+          </div>
+
           <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; gap:14px; align-items:center;">
             <button type="submit" class="btn-submit">💾 Save & Generate Car Data</button>
             <button type="button" class="filter-btn" onclick="copyJSON()">📋 Copy JSON</button>
@@ -794,17 +849,99 @@
       if (row) row.remove();
     }
 
-    // Initialize 2 sample variants
+    // ==========================================
+    // 🎨 COLOR SWATCHES BUILDER
+    // ==========================================
+    let colorCount = 0;
+    function addColorRow(name = '', hex = '#2563EB', imgUrl = '') {
+      colorCount++;
+      const container = document.getElementById('colorsContainer');
+      const div = document.createElement('div');
+      div.className = 'variant-row color-row';
+      div.id = `color-row-${colorCount}`;
+      div.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <strong style="font-size:13px; color:var(--primary);">Color #${colorCount}</strong>
+          <button type="button" class="btn-danger" onclick="removeColorRow(${colorCount})">✕ Remove</button>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Color Shade Name *</label>
+            <input type="text" class="form-control c-name" value="${name}" placeholder="e.g. Luster Blue / Sizzling Red" required>
+          </div>
+          <div class="form-group">
+            <label>Color Swatch Picker *</label>
+            <div style="display:flex; gap:10px; align-items:center;">
+              <input type="color" class="c-hex-picker" value="${hex}" style="width:44px; height:40px; padding:0; border:1px solid #CBD5E1; border-radius:8px; cursor:pointer;" onchange="this.nextElementSibling.value = this.value">
+              <input type="text" class="form-control c-hex" value="${hex}" placeholder="#2563EB" style="flex:1;" onchange="this.previousElementSibling.value = this.value">
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:6px;">
+          <label>Car Photo URL in this Color *</label>
+          <input type="url" class="form-control c-image" value="${imgUrl}" placeholder="https://ik.imagekit.io/.../car-blue.webp" required>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    function removeColorRow(id) {
+      const row = document.getElementById(`color-row-${id}`);
+      if (row) row.remove();
+    }
+
+    // ==========================================
+    // 📸 PHOTO GALLERY BUILDER
+    // ==========================================
+    let galleryCount = 0;
+    function addGalleryRow(title = '', imgUrl = '') {
+      galleryCount++;
+      const container = document.getElementById('galleryContainer');
+      const div = document.createElement('div');
+      div.className = 'variant-row gallery-row';
+      div.id = `gallery-row-${galleryCount}`;
+      div.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <strong style="font-size:13px; color:var(--primary);">Photo #${galleryCount}</strong>
+          <button type="button" class="btn-danger" onclick="removeGalleryRow(${galleryCount})">✕ Remove</button>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Photo Caption / Title *</label>
+            <input type="text" class="form-control g-title" value="${title}" placeholder="e.g. Dashboard Cockpit / Boot Space" required>
+          </div>
+          <div class="form-group">
+            <label>High-Res Image URL *</label>
+            <input type="url" class="form-control g-url" value="${imgUrl}" placeholder="https://ik.imagekit.io/.../dashboard.webp" required>
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    function removeGalleryRow(id) {
+      const row = document.getElementById(`gallery-row-${id}`);
+      if (row) row.remove();
+    }
+
+    // Initialize sample variants, colors, and gallery
     document.addEventListener('DOMContentLoaded', () => {
       addVariantRow('Base Variant MT', '799000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', false);
       addVariantRow('Mid Variant MT (VFM)', '999000', '1.0L Turbo (115 bhp)', 'Petrol', 'Manual', '19.5 kmpl', true);
+      
+      addColorRow('Royal Blue', '#2563EB', '');
+      addColorRow('Crimson Red', '#DC2626', '');
+
+      addGalleryRow('Dashboard & 10.25-inch Screen', '');
+      addGalleryRow('Boot Space', '');
     });
 
     // Form Submission
     document.getElementById('carForm').addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const variantRows = document.querySelectorAll('.variant-row');
+      // Variants
+      const variantRows = document.querySelectorAll('.variant-row:not(.color-row):not(.gallery-row)');
       const variants = Array.from(variantRows).map(row => {
         const featuresRaw = row.querySelector('.v-features').value;
         const features = featuresRaw ? featuresRaw.split(',').map(s => s.trim()) : ['6 Airbags Standard', 'Reverse Camera'];
@@ -823,6 +960,33 @@
         };
       });
 
+      // Colors
+      const colorRows = document.querySelectorAll('.color-row');
+      const colors = Array.from(colorRows).map(row => ({
+        name: row.querySelector('.c-name').value,
+        hex: row.querySelector('.c-hex').value,
+        image: row.querySelector('.c-image').value
+      })).filter(c => c.name && c.image);
+
+      // Gallery
+      const galleryRows = document.querySelectorAll('.gallery-row');
+      const gallery = Array.from(galleryRows).map(row => ({
+        title: row.querySelector('.g-title').value,
+        url: row.querySelector('.g-url').value
+      })).filter(g => g.title && g.url);
+
+      // Specs
+      const specs = {
+        engineOptions: document.getElementById('specEngine').value,
+        transmissions: document.getElementById('specTrans').value,
+        dimensions: document.getElementById('specDim').value,
+        wheelbase: document.getElementById('specWheelbase').value,
+        fuelTank: document.getElementById('specFuelTank').value,
+        seatingCapacity: document.getElementById('specSeating').value
+      };
+
+      const heroImg = document.getElementById('heroImage').value;
+
       const carData = {
         id: document.getElementById('carName').value.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
         name: document.getElementById('carName').value,
@@ -838,8 +1002,11 @@
         groundClearance: document.getElementById('groundClearance').value || '190 mm',
         bootSpace: document.getElementById('bootSpace').value || '380 L',
         waitingPeriod: document.getElementById('waitingPeriod').value || '4 - 8 Weeks',
-        heroImage: document.getElementById('heroImage').value,
+        heroImage: heroImg,
         summary: document.getElementById('carSummary').value,
+        colors: colors.length > 0 ? colors : [{ name: 'Primary Shade', hex: '#2563EB', image: heroImg }],
+        gallery: gallery,
+        specs: specs,
         variants: variants
       };
 
@@ -858,7 +1025,7 @@
       outputBox.textContent = JSON.stringify(carData, null, 2);
       window.lastGeneratedCar = carData;
 
-      alert(`✅ Success! "${carData.name}" is now visible on your website!\n\nTo make it permanent for all visitors globally, click "Copy JSON" and paste into js/carData.js or send the JSON to your assistant.`);
+      alert(`✅ Success! "${carData.name}" is now visible on your website with its colors, gallery, and specs!\n\nTo make it permanent for all visitors globally, click "Copy JSON" and paste into js/carData.js or send the JSON to your assistant.`);
     });
 
     function copyJSON() {

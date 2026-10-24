@@ -17,9 +17,10 @@ const carDetailModal = document.getElementById('carDetailModal');
 document.addEventListener('DOMContentLoaded', () => {
   renderCars();
   setupEventListeners();
+  checkDeepLink();
 });
 
-// Helper to retrieve both built-in dataset and locally added cars
+// Helper to retrieve both built-in dataset and locally added custom cars
 function getAllCars() {
   try {
     const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
@@ -28,6 +29,18 @@ function getAllCars() {
     return [...custom, ...base];
   } catch (e) {
     return CARS;
+  }
+}
+
+// Deep Linking for SEO & Social Sharing (?car=id)
+function checkDeepLink() {
+  const params = new URLSearchParams(window.location.search);
+  const carId = params.get('car');
+  if (carId) {
+    const car = getAllCars().find(c => c.id === carId);
+    if (car) {
+      setTimeout(() => window.openCarModal(carId), 150);
+    }
   }
 }
 
@@ -46,6 +59,7 @@ function renderCars() {
 
   carsContainer.innerHTML = filteredCars.map(car => {
     const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
+    const colorCount = car.colors ? car.colors.length : 0;
     
     return `
       <article class="car-card" data-car-id="${car.id}">
@@ -75,13 +89,26 @@ function renderCars() {
             </div>
           </div>
 
+          <!-- Color Swatches Preview on Card -->
+          ${car.colors && car.colors.length > 0 ? `
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; padding:6px 10px; background:#F8FAFC; border-radius:10px; border:1px solid #E2E8F0;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-muted);">🎨 ${colorCount} Colors Available:</span>
+              <div style="display:flex; gap:6px;">
+                ${car.colors.slice(0, 5).map(c => `
+                  <span style="width:14px; height:14px; border-radius:50%; background:${c.hex}; border:1px solid #CBD5E1; display:inline-block;" title="${c.name}"></span>
+                `).join('')}
+                ${colorCount > 5 ? `<span style="font-size:10px; font-weight:800; color:var(--text-muted)">+${colorCount - 5}</span>` : ''}
+              </div>
+            </div>
+          ` : ''}
+
           <div class="card-price-block">
             <div>
               <div class="price-sub">Est. On-Road (${onRoadEstimate.cityName})</div>
               <div class="price-main">${formatLakh(onRoadEstimate.total)} <span style="font-size:12px; font-weight:600; color:var(--text-muted)">onwards</span></div>
             </div>
             <button class="btn-view-variants" onclick="window.openCarModal('${car.id}')">
-              Variants (${car.variants.length}) ➔
+              Explore All ➔
             </button>
           </div>
         </div>
@@ -92,9 +119,8 @@ function renderCars() {
 
 // Setup Event Listeners
 function setupEventListeners() {
-  // Filter Tabs
   filterButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeFilter = btn.dataset.filter;
@@ -102,14 +128,16 @@ function setupEventListeners() {
     });
   });
 
-  // City Selector
   citySelectorBtn.addEventListener('click', () => {
     cityModal.classList.add('active');
   });
 
-  // Close modals on overlay click
   window.closeModal = function(modalId) {
     document.getElementById(modalId).classList.remove('active');
+    if (modalId === 'carDetailModal') {
+      currentModalCar = null;
+      history.pushState(null, '', window.location.pathname);
+    }
   };
 }
 
@@ -125,86 +153,277 @@ window.selectCity = function(cityId) {
   }
 };
 
+// Modal Tab Navigation
+window.switchModalTab = function(tabName) {
+  document.querySelectorAll('.modal-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabName);
+  });
+  document.querySelectorAll('.tab-pane').forEach(pane => {
+    pane.classList.toggle('active', pane.id === `tab-pane-${tabName}`);
+  });
+};
+
+// Interactive Color Switcher Handler
+window.selectCarColor = function(colorIndex) {
+  if (!currentModalCar || !currentModalCar.colors) return;
+  const color = currentModalCar.colors[colorIndex];
+  if (!color) return;
+
+  const displayImg = document.getElementById('colorDisplayImg');
+  const nameBadge = document.getElementById('colorNameBadge');
+  const colorDot = document.getElementById('colorDot');
+
+  displayImg.style.opacity = '0.4';
+  setTimeout(() => {
+    displayImg.src = color.image;
+    displayImg.style.opacity = '1';
+  }, 120);
+
+  if (nameBadge) nameBadge.textContent = color.name;
+  if (colorDot) colorDot.style.backgroundColor = color.hex;
+
+  document.querySelectorAll('.color-swatch-btn').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === colorIndex);
+  });
+};
+
+// Share Car Link
+window.shareCarLink = function(carId) {
+  const shareUrl = `${window.location.origin}${window.location.pathname}?car=${carId}`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(shareUrl);
+    alert(`🔗 Direct Link Copied!\n\n${shareUrl}\n\nShare this on WhatsApp, Twitter, or Instagram to take buyers straight to this car!`);
+  } else {
+    prompt('Copy direct link:', shareUrl);
+  }
+};
+
 // Open Car Detail Modal Drawer
 window.openCarModal = function(carId) {
   const car = getAllCars().find(c => c.id === carId);
   if (!car) return;
   currentModalCar = car;
 
+  // Update URL for SEO & deep linking
+  history.pushState(null, '', `?car=${car.id}`);
+
   const modalBody = document.getElementById('carModalContent');
   const city = CITIES.find(c => c.id === selectedCityId);
+  const colors = car.colors || [];
+  const gallery = car.gallery || [];
+  const specs = car.specs || {};
 
   modalBody.innerHTML = `
     <div class="modal-header">
       <div>
-        <span class="card-brand">${car.brand} • ${car.bodyType}</span>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="card-brand">${car.brand} • ${car.bodyType}</span>
+          <span class="badge-safety" style="position:static; font-size:11px; padding:2px 8px;">🛡️ ${car.safetyRating}</span>
+        </div>
         <h2 style="font-size:24px; font-weight:900; letter-spacing:-0.5px; margin-top:2px;">${car.name}</h2>
         <p style="font-size:13px; color:var(--text-secondary); margin-top:4px;">${car.summary}</p>
       </div>
-      <button class="modal-close-btn" onclick="closeModal('carDetailModal')">&times;</button>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
+          🔗 Share
+        </button>
+        <button class="modal-close-btn" onclick="closeModal('carDetailModal')">&times;</button>
+      </div>
     </div>
 
-    <!-- City Pricing Selector inside modal -->
-    <div style="background:#F1F5F9; border-radius:12px; padding:12px 16px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between;">
-      <span style="font-size:13px; font-weight:700; color:var(--text-secondary)">Pricing for City:</span>
-      <select onchange="window.selectCity(this.value)" style="padding:6px 12px; border-radius:8px; border:1px solid #CBD5E1; font-weight:700; background:#FFF;">
-        ${CITIES.map(c => `<option value="${c.id}" ${c.id === selectedCityId ? 'selected' : ''}>${c.name}</option>`).join('')}
-      </select>
+    <!-- Navigation Tabs -->
+    <div class="modal-nav-tabs">
+      <button class="modal-tab-btn active" data-tab="variants" onclick="switchModalTab('variants')">
+        🏷️ Variants & On-Road Price (${car.variants.length})
+      </button>
+      ${colors.length > 0 ? `
+        <button class="modal-tab-btn" data-tab="colors" onclick="switchModalTab('colors')">
+          🎨 Colors & 360° Studio (${colors.length})
+        </button>
+      ` : ''}
+      ${gallery.length > 0 ? `
+        <button class="modal-tab-btn" data-tab="gallery" onclick="switchModalTab('gallery')">
+          📸 Photo Gallery (${gallery.length})
+        </button>
+      ` : ''}
+      <button class="modal-tab-btn" data-tab="specs" onclick="switchModalTab('specs')">
+        ⚙️ Specs & Dimensions
+      </button>
     </div>
 
-    <h4 style="font-size:15px; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:12px; color:var(--text-muted);">
-      All ${car.variants.length} Variants & On-Road Price Breakdown
-    </h4>
+    <!-- TAB 1: VARIANTS & ON-ROAD PRICES -->
+    <div id="tab-pane-variants" class="tab-pane active">
+      <!-- City Pricing Selector -->
+      <div style="background:#F1F5F9; border-radius:12px; padding:12px 16px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between;">
+        <span style="font-size:13px; font-weight:700; color:var(--text-secondary)">Calculate On-Road Price for City:</span>
+        <select onchange="window.selectCity(this.value)" style="padding:6px 12px; border-radius:8px; border:1px solid #CBD5E1; font-weight:700; background:#FFF; cursor:pointer;">
+          ${CITIES.map(c => `<option value="${c.id}" ${c.id === selectedCityId ? 'selected' : ''}>${c.name}</option>`).join('')}
+        </select>
+      </div>
 
-    <div class="variants-list">
-      ${car.variants.map(v => {
-        const quote = calculateOnRoadPrice(v.exShowroom, selectedCityId);
+      <div class="variants-list">
+        ${car.variants.map(v => {
+          const quote = calculateOnRoadPrice(v.exShowroom, selectedCityId);
 
-        return `
-          <div class="variant-card ${v.isVFM ? 'vfm' : ''}">
-            ${v.isVFM ? `<span class="vfm-chip">${v.vfmBadge}</span>` : ''}
-            
-            <div class="variant-title-row">
-              <div class="variant-name">${v.name}</div>
-              <div class="variant-price">${formatLakh(quote.total)}</div>
-            </div>
-
-            <div style="display:flex; gap:12px; font-size:12px; color:var(--text-secondary); margin-bottom:8px;">
-              <span><strong>Engine:</strong> ${v.engine}</span>
-              <span><strong>Mileage:</strong> ${v.mileage}</span>
-            </div>
-
-            <!-- Itemized Price Transparency Breakdown -->
-            <div style="background:rgba(255,255,255,0.7); border:1px solid var(--border); border-radius:8px; padding:8px 12px; font-size:12px; margin-top:8px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                <span style="color:var(--text-muted)">Ex-Showroom Price:</span>
-                <span>${formatINR(quote.exShowroom)}</span>
+          return `
+            <div class="variant-card ${v.isVFM ? 'vfm' : ''}">
+              ${v.isVFM ? `<span class="vfm-chip">${v.vfmBadge}</span>` : ''}
+              
+              <div class="variant-title-row">
+                <div class="variant-name">${v.name}</div>
+                <div class="variant-price">${formatLakh(quote.total)}</div>
               </div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                <span style="color:var(--text-muted)">State RTO & Road Tax:</span>
-                <span>${formatINR(quote.rto)}</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                <span style="color:var(--text-muted)">Zero-Dep Insurance (Fair Est.):</span>
-                <span>${formatINR(quote.insurance)}</span>
-              </div>
-              ${quote.tcs > 0 ? `
-              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                <span style="color:var(--text-muted)">1% TCS Tax:</span>
-                <span>${formatINR(quote.tcs)}</span>
-              </div>` : ''}
-              <div style="display:flex; justify-content:space-between; margin-top:4px; padding-top:4px; border-top:1px dashed #CBD5E1; font-weight:800; color:var(--primary);">
-                <span>Total On-Road (${city.name}):</span>
-                <span>${formatINR(quote.total)}</span>
-              </div>
-            </div>
 
-            <div class="feature-bullets">
-              ${v.keyFeatures.map(f => `<span class="feat-tag">✓ ${f}</span>`).join('')}
+              <div style="display:flex; gap:12px; font-size:12px; color:var(--text-secondary); margin-bottom:8px;">
+                <span><strong>Engine:</strong> ${v.engine}</span>
+                <span><strong>Mileage:</strong> ${v.mileage}</span>
+                <span><strong>Fuel:</strong> ${v.fuel}</span>
+                <span><strong>Trans:</strong> ${v.trans}</span>
+              </div>
+
+              <!-- Itemized Price Transparency Breakdown -->
+              <div style="background:rgba(255,255,255,0.7); border:1px solid var(--border); border-radius:8px; padding:8px 12px; font-size:12px; margin-top:8px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                  <span style="color:var(--text-muted)">Ex-Showroom Price:</span>
+                  <span>${formatINR(quote.exShowroom)}</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                  <span style="color:var(--text-muted)">State RTO & Road Tax:</span>
+                  <span>${formatINR(quote.rto)}</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                  <span style="color:var(--text-muted)">Zero-Dep Insurance (Fair Est.):</span>
+                  <span>${formatINR(quote.insurance)}</span>
+                </div>
+                ${quote.tcs > 0 ? `
+                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                  <span style="color:var(--text-muted)">1% TCS Tax:</span>
+                  <span>${formatINR(quote.tcs)}</span>
+                </div>` : ''}
+                <div style="display:flex; justify-content:space-between; margin-top:4px; padding-top:4px; border-top:1px dashed #CBD5E1; font-weight:800; color:var(--primary);">
+                  <span>Total On-Road (${city.name}):</span>
+                  <span>${formatINR(quote.total)}</span>
+                </div>
+              </div>
+
+              <div class="feature-bullets">
+                ${v.keyFeatures.map(f => `<span class="feat-tag">✓ ${f}</span>`).join('')}
+              </div>
             </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
+
+    <!-- TAB 2: INTERACTIVE COLOR STUDIO -->
+    ${colors.length > 0 ? `
+      <div id="tab-pane-colors" class="tab-pane">
+        <div class="color-studio">
+          <div class="color-stage">
+            <img id="colorDisplayImg" src="${colors[0].image}" alt="${colors[0].name}" class="color-display-img">
           </div>
-        `;
-      }).join('')}
+
+          <div class="color-name-badge">
+            <span id="colorDot" class="color-dot" style="background-color:${colors[0].hex};"></span>
+            <span id="colorNameBadge">${colors[0].name}</span>
+          </div>
+
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom:14px;">
+            Tap any color swatch below to view ${car.name} in that official shade:
+          </p>
+
+          <div class="color-swatches">
+            ${colors.map((c, idx) => `
+              <button 
+                type="button" 
+                class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
+                style="background-color:${c.hex};" 
+                onclick="window.selectCarColor(${idx})"
+                title="${c.name}"
+                aria-label="${c.name}"
+              ></button>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- TAB 3: PHOTO GALLERY -->
+    ${gallery.length > 0 ? `
+      <div id="tab-pane-gallery" class="tab-pane">
+        <div class="gallery-grid">
+          ${gallery.map(item => `
+            <div class="gallery-card">
+              <img src="${item.url}" alt="${item.title}" loading="lazy">
+              <div class="gallery-caption">${item.title}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- TAB 4: SPECIFICATIONS & DIMENSIONS -->
+    <div id="tab-pane-specs" class="tab-pane">
+      <table class="specs-table">
+        <tbody>
+          <tr>
+            <td class="spec-col-label">Body Type</td>
+            <td class="spec-col-val">${car.bodyType}</td>
+          </tr>
+          <tr>
+            <td class="spec-col-label">Safety Rating</td>
+            <td class="spec-col-val">${car.safetyRating}</td>
+          </tr>
+          <tr>
+            <td class="spec-col-label">Ground Clearance</td>
+            <td class="spec-col-val">${car.groundClearance}</td>
+          </tr>
+          <tr>
+            <td class="spec-col-label">Boot Capacity</td>
+            <td class="spec-col-val">${car.bootSpace}</td>
+          </tr>
+          <tr>
+            <td class="spec-col-label">Waiting Period</td>
+            <td class="spec-col-val">${car.waitingPeriod}</td>
+          </tr>
+          ${specs.engineOptions ? `
+          <tr>
+            <td class="spec-col-label">Engine Powertrains</td>
+            <td class="spec-col-val">${specs.engineOptions}</td>
+          </tr>
+          ` : ''}
+          ${specs.transmissions ? `
+          <tr>
+            <td class="spec-col-label">Transmissions</td>
+            <td class="spec-col-val">${specs.transmissions}</td>
+          </tr>
+          ` : ''}
+          ${specs.dimensions ? `
+          <tr>
+            <td class="spec-col-label">Dimensions (L × W × H)</td>
+            <td class="spec-col-val">${specs.dimensions}</td>
+          </tr>
+          ` : ''}
+          ${specs.wheelbase ? `
+          <tr>
+            <td class="spec-col-label">Wheelbase</td>
+            <td class="spec-col-val">${specs.wheelbase}</td>
+          </tr>
+          ` : ''}
+          ${specs.fuelTank ? `
+          <tr>
+            <td class="spec-col-label">Fuel Tank Capacity</td>
+            <td class="spec-col-val">${specs.fuelTank}</td>
+          </tr>
+          ` : ''}
+          ${specs.seatingCapacity ? `
+          <tr>
+            <td class="spec-col-label">Seating Capacity</td>
+            <td class="spec-col-val">${specs.seatingCapacity}</td>
+          </tr>
+          ` : ''}
+        </tbody>
+      </table>
     </div>
   `;
 

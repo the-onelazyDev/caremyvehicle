@@ -1,5 +1,5 @@
 // Care My Vehicle - Granular Car Launch Dataset
-// Real specifications, all variants, and city-wise RTO pricing
+// Real specifications, all variants, interactive colors, photo galleries, and city-wise RTO pricing
 
 export const CITIES = [
   { id: 'delhi', name: 'Delhi NCR', rtoRate: 0.10, cess: 500, fastag: 500 },
@@ -15,7 +15,7 @@ export const CARS = [
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
-    tagline: '5-Door Lifestyle SUV with Panoramic Skyroof & ADAS',
+    tagline: '5-Door Lifestyle SUV with Panoramic Skyroof & Level 2 ADAS',
     launchDate: 'August 2024',
     bodyType: 'SUV',
     fuelTypes: ['Petrol', 'Diesel'],
@@ -27,7 +27,28 @@ export const CARS = [
     bootSpace: '644 L',
     waitingPeriod: '6 - 16 Weeks',
     heroImage: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80',
-    summary: 'The 5-door Thar Roxx brings family practicality to the iconic off-roader with a stretched 2850mm wheelbase, panoramic roof, and Level 2 ADAS.',
+    summary: 'The 5-door Thar Roxx brings family practicality to the iconic off-roader with a stretched 2850mm wheelbase, panoramic skyroof, dual 10.25-inch screens, and Level 2 ADAS.',
+    colors: [
+      { name: 'Stealth Black', hex: '#1E293B', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Deep Forest Green', hex: '#14532D', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Tango Red', hex: '#B91C1C', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Everest White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Battleship Grey', hex: '#64748B', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+    ],
+    gallery: [
+      { title: 'Front Bold Grille & LED Headlamps', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { title: '10.25-inch Digital Cockpit & Screen', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Panoramic Skyroof', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Massive 644L Boot Capacity', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+    ],
+    specs: {
+      engineOptions: '2.0L mStallion Turbo Petrol (160/175 bhp) | 2.2L mHawk Diesel (150/172 bhp)',
+      transmissions: '6-Speed Manual & 6-Speed Aisin Torque Converter AT',
+      dimensions: '4428 mm (L) × 1870 mm (W) × 1923 mm (H)',
+      wheelbase: '2850 mm',
+      fuelTank: '57 Litres',
+      seatingCapacity: '5 Passengers'
+    },
     variants: [
       {
         name: 'MX1 Petrol MT (RWD)',
@@ -99,6 +120,27 @@ export const CARS = [
     waitingPeriod: '4 - 10 Weeks',
     heroImage: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80',
     summary: 'Striking aerodynamic coupe roofline, class-leading 500-litre boot, voice-assisted panoramic sunroof, and new 1.2L Hyperion Direct Injection turbo engine.',
+    colors: [
+      { name: 'Virtual Sunrise Blue', hex: '#0284C7', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Gold Essence', hex: '#D97706', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Pristine White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Daytona Grey', hex: '#475569', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Flame Red', hex: '#DC2626', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' }
+    ],
+    gallery: [
+      { title: 'Coupe Roofline & Flush Handles', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
+      { title: '12.3-inch Cinematic Screen & Touch AC', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Voice-Assisted Panoramic Sunroof', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Segment-Best 500L Boot', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' }
+    ],
+    specs: {
+      engineOptions: '1.2L Revotron (120 bhp) | 1.2L Hyperion GDi (125 bhp) | 1.5L Kryojet Diesel (118 bhp)',
+      transmissions: '6-Speed Manual & 7-Speed Dual-Clutch (DCA)',
+      dimensions: '4308 mm (L) × 1810 mm (W) × 1630 mm (H)',
+      wheelbase: '2560 mm',
+      fuelTank: '44 Litres',
+      seatingCapacity: '5 Passengers'
+    },
     variants: [
       {
         name: 'Smart 1.2 Petrol MT',
@@ -144,6 +186,88 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-swift-2024',
+    name: 'New Maruti Suzuki Swift',
+    brand: 'Maruti Suzuki',
+    tagline: 'All-New Z-Series Engine with 25.75 kmpl Record Mileage',
+    launchDate: 'May 2024',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.49 - ₹9.64 Lakh',
+    minPrice: 649000,
+    maxPrice: 964000,
+    safetyRating: '6 Airbags Standard Across All Variants',
+    groundClearance: '163 mm',
+    bootSpace: '265 L',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80',
+    summary: '4th generation Swift with completely new Z-Series 3-cylinder engine, standard 6 airbags across all variants, 9-inch SmartPlay Pro+ display, and wireless charging.',
+    colors: [
+      { name: 'Luster Blue', hex: '#2563EB', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Sizzling Red', hex: '#DC2626', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Pearl Arctic White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Magma Grey', hex: '#475569', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Splendid Silver', hex: '#CBD5E1', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+    ],
+    gallery: [
+      { title: 'Front Facia with Piano Black Grille', url: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' },
+      { title: '9-inch SmartPlay Pro+ Touchscreen Cockpit', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Sporty Dual-Tone Diamond Cut Alloys', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { title: '265 Litres Practical Boot Space', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+    ],
+    specs: {
+      engineOptions: '1.2L 3-Cylinder Z12E Petrol (82 bhp / 112 Nm) & S-CNG (69.7 bhp)',
+      transmissions: '5-Speed Manual (MT) & 5-Speed Auto Gear Shift (AMT)',
+      dimensions: '3860 mm (L) × 1735 mm (W) × 1520 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'LXi 1.2 Petrol MT',
+        exShowroom: 649000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E (82 bhp)',
+        mileage: '24.8 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ESP & Hill Hold', 'Remote Central Locking', 'Halogen Projectors']
+      },
+      {
+        name: 'VXi 1.2 Petrol MT',
+        exShowroom: 729000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E (82 bhp)',
+        mileage: '24.8 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 SWEET SPOT PICK',
+        keyFeatures: ['7-inch Touchscreen Infotainment', 'Steering Controls', 'Power Adjustable ORVMs', 'USB A & C Ports']
+      },
+      {
+        name: 'ZXi 1.2 Petrol MT',
+        exShowroom: 829000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E (82 bhp)',
+        mileage: '24.8 kmpl',
+        isVFM: false,
+        keyFeatures: ['LED Projectors & DRLs', 'Wireless Charger', '15-inch Alloys', 'Engine Push Start/Stop']
+      },
+      {
+        name: 'ZXi+ 1.2 Petrol AMT',
+        exShowroom: 964000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E (82 bhp)',
+        mileage: '25.75 kmpl',
+        isVFM: false,
+        keyFeatures: ['9-inch Touchscreen with Arkamys Audio', 'Cruise Control', 'Rear AC Vents', 'Precision Cut Alloys']
+      }
+    ]
+  },
+  {
     id: 'xuv-3xo',
     name: 'Mahindra XUV 3XO',
     brand: 'Mahindra',
@@ -160,6 +284,26 @@ export const CARS = [
     waitingPeriod: '4 - 12 Weeks',
     heroImage: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
     summary: 'Massive upgrade over XUV300 with segment-first skyroof, Level 2 ADAS, 360 camera, electronic parking brake, and ultra-punchy 130 bhp mStallion TGDi engine.',
+    colors: [
+      { name: 'Citrine Yellow', hex: '#EAB308', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Stealth Black', hex: '#0F172A', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Deep Forest', hex: '#166534', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Everest White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+    ],
+    gallery: [
+      { title: 'Futuristic Front Grille & DRLs', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Panoramic Skyroof in Sub-4M Segment', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Twin 10.25-inch Digital Screens', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { title: '364L Deep Boot Space', url: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+    ],
+    specs: {
+      engineOptions: '1.2L Turbo TCMPFi (111 bhp) | 1.2L TGDi Turbo (130 bhp) | 1.5L CRDe Diesel (117 bhp)',
+      transmissions: '6-Speed Manual & 6-Speed Aisin Torque Converter AT',
+      dimensions: '3990 mm (L) × 1821 mm (W) × 1647 mm (H)',
+      wheelbase: '2600 mm',
+      fuelTank: '42 Litres',
+      seatingCapacity: '5 Passengers'
+    },
     variants: [
       {
         name: 'MX1 1.2 Petrol MT',
@@ -195,57 +339,6 @@ export const CARS = [
     ]
   },
   {
-    id: 'maruti-swift-2024',
-    name: 'New Maruti Suzuki Swift',
-    brand: 'Maruti Suzuki',
-    tagline: 'All-New Z-Series Engine with 25.75 kmpl Record Mileage',
-    launchDate: 'June 2024',
-    bodyType: 'Hatchback',
-    fuelTypes: ['Petrol', 'CNG'],
-    priceRange: '₹6.49 - ₹9.64 Lakh',
-    minPrice: 649000,
-    maxPrice: 964000,
-    safetyRating: '6 Airbags Standard',
-    groundClearance: '163 mm',
-    bootSpace: '265 L',
-    waitingPeriod: '2 - 6 Weeks',
-    heroImage: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80',
-    summary: '4th generation Swift with completely new Z-Series 3-cylinder engine, standard 6 airbags across all variants, 9-inch SmartPlay Pro+ display, and wireless charging.',
-    variants: [
-      {
-        name: 'LXi 1.2 Petrol MT',
-        exShowroom: 649000,
-        fuel: 'Petrol',
-        trans: 'Manual',
-        engine: '1.2L Z12E (82 bhp)',
-        mileage: '24.8 kmpl',
-        isVFM: false,
-        keyFeatures: ['6 Airbags Standard', 'ESP & Hill Hold', 'Remote Central Locking', 'Halogen Projectors']
-      },
-      {
-        name: 'VXi 1.2 Petrol MT',
-        exShowroom: 729000,
-        fuel: 'Petrol',
-        trans: 'Manual',
-        engine: '1.2L Z12E (82 bhp)',
-        mileage: '24.8 kmpl',
-        isVFM: true,
-        vfmBadge: '🏆 SWEET SPOT PICK',
-        keyFeatures: ['7-inch Touchscreen Infotainment', 'Steering Controls', 'Power Adjustable ORVMs', 'USB A & C Ports']
-      },
-      {
-        name: 'ZXi+ 1.2 Petrol AMT',
-        exShowroom: 964000,
-        fuel: 'Petrol',
-        trans: 'Automatic',
-        engine: '1.2L Z12E (82 bhp)',
-        mileage: '25.75 kmpl',
-        isVFM: false,
-        keyFeatures: ['9-inch Touchscreen with Arkamys Audio', 'Wireless Phone Charger', 'Rear AC Vents', '15-inch Precision Alloys']
-      }
-    ]
-  },
-  {
     id: 'hyundai-creta-facelift',
     name: 'Hyundai Creta (Facelift)',
     brand: 'Hyundai',
@@ -262,6 +355,27 @@ export const CARS = [
     waitingPeriod: '6 - 18 Weeks',
     heroImage: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80',
     summary: 'The benchmark of the mid-size SUV segment received a radical parametric front grille, continuous horizon LED DRLs, twin 10.25-inch displays, and Level 2 ADAS.',
+    colors: [
+      { name: 'Robust Emerald Pearl', hex: '#064E3B', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Ranger Khaki', hex: '#78716C', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Abyss Black', hex: '#0F172A', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Atlas White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Fiery Red', hex: '#DC2626', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+    ],
+    gallery: [
+      { title: 'Horizon LED Lightbar & Front Grille', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Dual Integrated 10.25-inch Curved Cockpit', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Voice-Controlled Panoramic Sunroof', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { title: 'Generous 433L Boot Space', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+    ],
+    specs: {
+      engineOptions: '1.5L MPi Petrol (115 bhp) | 1.5L Turbo GDi (160 bhp) | 1.5L U2 CRDi Diesel (116 bhp)',
+      transmissions: '6-Speed MT, IVT (CVT), 6-Speed AT, and 7-Speed Dual Clutch (DCT)',
+      dimensions: '4330 mm (L) × 1790 mm (W) × 1635 mm (H)',
+      wheelbase: '2610 mm',
+      fuelTank: '50 Litres',
+      seatingCapacity: '5 Passengers'
+    },
     variants: [
       {
         name: 'E 1.5 Petrol MT',
@@ -302,9 +416,7 @@ export const CARS = [
 export function calculateOnRoadPrice(exShowroom, cityId) {
   const city = CITIES.find(c => c.id === cityId) || CITIES[0];
   const rto = Math.round(exShowroom * city.rtoRate);
-  // Fair insurance calculation (3-yr 3rd party + 1-yr comprehensive zero dep estimate)
   const insurance = Math.round(exShowroom * 0.038);
-  // 1% TCS tax if ex-showroom exceeds 10 Lakhs
   const tcs = exShowroom >= 1000000 ? Math.round(exShowroom * 0.01) : 0;
   const fastagAndCess = city.cess + city.fastag;
   const total = exShowroom + rto + insurance + tcs + fastagAndCess;
