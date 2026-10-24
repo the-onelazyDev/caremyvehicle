@@ -18,20 +18,19 @@ bc = (maxc - b) / np.where(deltac != 0, deltac, 1)
 
 h = np.zeros_like(r)
 mask_r = (r == maxc) & (deltac != 0)
-mask_g = (g == maxc) & (deltac != 0)
-mask_b = (b == maxc) & (deltac != 0)
-
 h[mask_r] = (bc - gc)[mask_r]
-h[mask_g] = (2.0 + rc - bc)[mask_g]
-h[mask_b] = (4.0 + gc - rc)[mask_b]
 h = (h / 6.0) % 1.0
 
-y_coords, x_coords = np.indices(r.shape)
-# Precise bounding box enclosing strictly the car body, excluding sky and road
-car_box = (y_coords >= 65) & (y_coords <= 575) & (x_coords >= 145) & (x_coords <= 1035)
-# Exclude the rear glass, mirrors, headlights, and sky cloud
-paint_mask = car_box & ((h < 0.10) | (h > 0.90)) & (s > 0.28) & (v > 0.18) & (r > g * 1.18)
-paint_mask = paint_mask & ~((y_coords < 125) & (x_coords > 830))
+y, x = np.indices(r.shape)
+car_box = (x >= 155) & (x <= 1035) & (y >= 68) & (y <= 565)
+car_box &= ~((y < 230) & (x < 370))  # sky over hood
+car_box &= ~((y < 78) & (x > 835))   # sky over roof center
+car_box &= ~((y < 130) & (x > 930))  # sky over roof spoiler
+car_box &= ~((y < 180) & (x > 955))  # sky over rear hatch
+car_box &= ~((y < 350) & (x < 210))  # left bridge barrier
+
+# Strict car red paint selector
+paint = car_box & (s > 0.32) & (r > 0.35) & (r > g * 1.35) & (r > b * 1.30) & (r - g > 0.20)
 
 colors = {
     'alto_k10_red.jpg': None,
@@ -42,9 +41,6 @@ colors = {
     'alto_k10_white.jpg': (0.0, 0.02, 1.45),   # Solid White
     'alto_k10_black.jpg': (0.62, 0.20, 0.35)   # Bluish Black
 }
-
-out_dir = 'assets/cars/alto-k10'
-os.makedirs(out_dir, exist_ok=True)
 
 def hsv_to_rgb_np(h_arr, s_arr, v_arr):
     i = np.floor(h_arr * 6.0).astype(int)
@@ -65,22 +61,27 @@ def hsv_to_rgb_np(h_arr, s_arr, v_arr):
         elif idx == 5: rgb[m] = np.stack([v_arr[m], p[m], q[m]], axis=-1)
     return rgb
 
-for fname, params in colors.items():
-    if params is None:
-        im.save(os.path.join(out_dir, fname), quality=92)
-    else:
-        new_h, new_s_mult, new_v_mult = params
-        cur_h = np.copy(h)
-        cur_s = np.copy(s)
-        cur_v = np.copy(v)
+out_dirs = ['assets/cars/alto-k10', 'web/assets/cars/alto-k10']
 
-        if new_h > 0:
-            cur_h[paint_mask] = new_h
-        cur_s[paint_mask] = np.clip(cur_s[paint_mask] * new_s_mult, 0, 1)
-        cur_v[paint_mask] = np.clip(cur_v[paint_mask] * new_v_mult, 0, 1)
+for out_dir in out_dirs:
+    os.makedirs(out_dir, exist_ok=True)
+    for fname, params in colors.items():
+        out_path = os.path.join(out_dir, fname)
+        if params is None:
+            im.save(out_path, quality=92)
+        else:
+            new_h, new_s_mult, new_v_mult = params
+            cur_h = np.copy(h)
+            cur_s = np.copy(s)
+            cur_v = np.copy(v)
 
-        new_rgb = hsv_to_rgb_np(cur_h, cur_s, cur_v)
-        res_arr = np.where(paint_mask[:, :, None], new_rgb, arr)
-        res_im = Image.fromarray(np.clip(res_arr * 255.0, 0, 255).astype(np.uint8))
-        res_im.save(os.path.join(out_dir, fname), quality=92)
-    print('Generated clean color:', fname)
+            if new_h > 0:
+                cur_h[paint] = new_h
+            cur_s[paint] = np.clip(cur_s[paint] * new_s_mult, 0, 1)
+            cur_v[paint] = np.clip(cur_v[paint] * new_v_mult, 0, 1)
+
+            new_rgb = hsv_to_rgb_np(cur_h, cur_s, cur_v)
+            res_arr = np.where(paint[:, :, None], new_rgb, arr)
+            res_im = Image.fromarray(np.clip(res_arr * 255.0, 0, 255).astype(np.uint8))
+            res_im.save(out_path, quality=92)
+        print('Saved clean color:', out_path)
