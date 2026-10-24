@@ -1504,6 +1504,192 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-fronx',
+    name: 'Maruti Suzuki Fronx',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'The Shape of New — Turbo Boosterjet Performance, Coupe-SUV Styling & 360° View',
+    launchDate: 'Updated 2024 (Turbo Boosterjet & Smart Hybrid)',
+    bodyType: 'SUV Coupe',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹7.51 - ₹13.04 Lakh',
+    minPrice: 751500,
+    maxPrice: 1304000,
+    safetyRating: '6 Airbags (Alpha/Zeta), ESP with Hill Hold Assist, ABS with EBD, 360 HD View Camera',
+    groundClearance: '190 mm',
+    bootSpace: '308 L',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Fronx is Nexa’s trendsetting compact coupe-SUV that combines athletic, aerodynamic fastback proportions with SUV toughness. Powered by either the punchy 1.0L K-Series Turbo Boosterjet engine (100.06 PS / 147.6 Nm with Progressive Smart Hybrid and paddle shifters) or the refined 1.2L Dual Jet engine (89.73 PS) available with manual, 5-speed AGS, and factory S-CNG (28.51 km/kg). Highlights include a 9-inch SmartPlay Pro+ touchscreen with wireless Apple CarPlay/Android Auto, Head-Up Display (HUD), 360-degree HD view camera, and 190mm ground clearance.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360',
+      format: 'webp',
+      defaultColor: 'nexa-blue',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
+        { id: 'opulent-red-black-roof', name: 'Opulent Red with Bluish Black Roof', hex: '#AC0F0F' },
+        { id: 'earthen-brown-black-roof', name: 'Earthen Brown with Bluish Black Roof', hex: '#95897B' },
+        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Bluish Black Roof', hex: '#B6BABD' },
+        { id: 'arctic-white', name: 'Arctic White', hex: '#F9F9F9' },
+        { id: 'bluish-black', name: 'Bluish Black', hex: '#171717' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#464848' },
+        { id: 'earthen-brown', name: 'Earthen Brown', hex: '#95897B' },
+        { id: 'opulent-red', name: 'Opulent Red', hex: '#AC0F0F' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#B6BABD' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp' },
+      { name: 'Opulent Red with Bluish Black Roof', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/opulent-red-black-roof/4.webp' },
+      { name: 'Earthen Brown with Bluish Black Roof', hex: '#95897B', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/earthen-brown-black-roof/4.webp' },
+      { name: 'Splendid Silver with Bluish Black Roof', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/splendid-silver-black-roof/4.webp' },
+      { name: 'Arctic White', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/arctic-white/4.webp' },
+      { name: 'Bluish Black', hex: '#171717', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/bluish-black/4.webp' },
+      { name: 'Grandeur Grey', hex: '#464848', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/grandeur-grey/4.webp' },
+      { name: 'Earthen Brown', hex: '#95897B', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/earthen-brown/4.webp' },
+      { name: 'Opulent Red', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/opulent-red/4.webp' },
+      { name: 'Splendid Silver', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/splendid-silver/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Coupe-SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp' },
+      { label: "NEXA Wave Grille & NEXTre' LED DRLs", url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/1.webp' },
+      { label: 'Side Fastback Coupe Aerodynamic Silhouette', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/7.webp' },
+      { label: 'Rear Full-Width Connected LED Lightbar', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp' },
+      { title: "NEXA Signature Grille with Crystal Block LED DRLs and Headlamps", url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/1.webp' },
+      { title: 'Aerodynamic Sloping Fastback Roofline with 16-inch Precision-Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/7.webp' },
+      { title: 'Full-Width Connected Lightguide LED Taillamp Cluster with Sporty Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L K-Series Turbo Boosterjet (100.06 PS / 147.6 Nm) | 1.2L Dual Jet Dual VVT (89.73 PS / 113 Nm) | 1.2L S-CNG (77.5 PS / 98.5 Nm)',
+      transmissions: '5-Speed Manual (5MT), 5-Speed AGS, and 6-Speed Torque Converter AT with Paddle Shifters',
+      dimensions: '3995 mm (L) × 1765 mm (W) × 1550 mm (H)',
+      wheelbase: '2520 mm',
+      fuelTank: '37 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam (Rear)',
+      safety: '6 Airbags (Alpha/Zeta), 360 HD View Camera, ESP with Hill Hold Assist, Head-Up Display (HUD), ISOFIX Child Mounts'
+    },
+    variants: [
+      {
+        name: 'Sigma 1.2L 5MT',
+        exShowroom: 751500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Dual Jet (89.73 PS)',
+        mileage: '21.79 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Airbags', 'ESP with Hill Hold Assist', 'Automatic Climate Control', 'All 4 Power Windows', 'Halogen Projector Headlamps']
+      },
+      {
+        name: 'Sigma 1.2L S-CNG 5MT',
+        exShowroom: 846500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Dual Jet CNG (77.5 PS)',
+        mileage: '28.51 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG CROSSOVER PICK',
+        keyFeatures: ['Factory S-CNG with 28.51 km/kg Economy', 'Automatic Climate Control', 'Dual Airbags', 'ESP & Hill Hold']
+      },
+      {
+        name: 'Delta 1.2L 5MT',
+        exShowroom: 837500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Dual Jet (89.73 PS)',
+        mileage: '21.79 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Pro Touchscreen', 'Wireless Apple CarPlay & Android Auto', 'Steering Mounted Audio Controls', 'Electrically Foldable ORVMs']
+      },
+      {
+        name: 'Delta 1.2L AGS (Automatic)',
+        exShowroom: 887500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Dual Jet (89.73 PS)',
+        mileage: '22.89 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', '22.89 km/l Efficiency', 'Hill Hold Assist', '7-inch Touchscreen']
+      },
+      {
+        name: 'Delta 1.2L S-CNG 5MT',
+        exShowroom: 932500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Dual Jet CNG (77.5 PS)',
+        mileage: '28.51 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 HIGH-VALUE CNG PICK',
+        keyFeatures: ['Factory S-CNG (28.51 km/kg)', '7-inch Touchscreen with Wireless CarPlay', 'Steering Controls', 'Auto Climate Control']
+      },
+      {
+        name: 'Delta+ 1.2L 5MT',
+        exShowroom: 877500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Dual Jet (89.73 PS)',
+        mileage: '21.79 km/l',
+        isVFM: false,
+        keyFeatures: ['Multi-Reflector LED Headlamps', "NEXTre' LED DRLs", '16-inch Painted Alloy Wheels', 'Automatic Headlamps']
+      },
+      {
+        name: 'Delta+ 1.0L Turbo Boosterjet 5MT',
+        exShowroom: 972500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Turbo Boosterjet (100.06 PS)',
+        mileage: '21.5 km/l',
+        isVFM: false,
+        keyFeatures: ['1.0L Turbo Boosterjet 100 PS / 147.6 Nm', 'Multi-Reflector LED Headlamps', '16-inch Alloys', 'Smart Hybrid']
+      },
+      {
+        name: 'Zeta 1.0L Turbo Boosterjet 5MT',
+        exShowroom: 1055500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Turbo Boosterjet (100.06 PS)',
+        mileage: '21.5 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE TURBO',
+        keyFeatures: ['6 Airbags Standard', 'Engine Push Start/Stop', 'Wireless Phone Charger', 'Rear View Camera', 'Paddle Shifters (AT)', 'Connected Car Tech']
+      },
+      {
+        name: 'Zeta 1.0L Turbo 6AT (Automatic)',
+        exShowroom: 1196000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Turbo Boosterjet (100.06 PS)',
+        mileage: '20.01 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter Automatic', 'Steering Mounted Paddle Shifters', '6 Airbags', 'Wireless Charger']
+      },
+      {
+        name: 'Alpha 1.0L Turbo Boosterjet 5MT',
+        exShowroom: 1147500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Turbo Boosterjet (100.06 PS)',
+        mileage: '21.5 km/l',
+        isVFM: false,
+        keyFeatures: ['360-Degree HD Surround Camera', 'Head-Up Display (HUD)', '9-inch SmartPlay Pro+ Display', '16-inch Precision Cut Alloys', 'Cruise Control']
+      },
+      {
+        name: 'Alpha 1.0L Turbo 6AT (Automatic)',
+        exShowroom: 1287500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Turbo Boosterjet (100.06 PS)',
+        mileage: '20.01 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Turbo Automatic with 360 Camera', 'Head-Up Display', 'Paddle Shifters', '9-inch Touchscreen', 'Dual-Tone Available']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
