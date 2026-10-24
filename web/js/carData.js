@@ -12,6 +12,132 @@ export const CITIES = [
 
 export const CARS = [
   {
+    id: 'maruti-alto-k10',
+    name: 'Maruti Suzuki Alto K10',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s Most Accessible Car with 6 Airbags Standard & 33.40 km/kg CNG',
+    launchDate: 'Updated 2024 (6 Airbags Standard)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹3.99 - ₹5.96 Lakh',
+    minPrice: 399000,
+    maxPrice: 596000,
+    safetyRating: '6 Airbags Standard Across All Variants (1st in Segment)',
+    groundClearance: '160 mm',
+    bootSpace: '214 L',
+    waitingPeriod: '1 - 3 Weeks',
+    heroImage: 'assets/cars/alto-k10/alto_k10_hero.jpg',
+    summary: 'The iconic Alto K10 now comes with standard 6 airbags, Electronic Stability Program (ESP), 7-inch SmartPlay Studio touchscreen with Apple CarPlay/Android Auto, and an ultra-frugal 1.0L Next-Gen K-Series Dual Jet engine delivering up to 33.40 km/kg on CNG.',
+    colors: [
+      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' },
+      { name: 'Solid White', hex: '#F8FAFC', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' },
+      { name: 'Metallic Granite Grey', hex: '#475569', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { name: 'Premium Earth Gold', hex: '#D97706', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { name: 'Bluish Black', hex: '#0F172A', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' }
+    ],
+    gallery: [
+      { title: 'Front Honeycomb Grille & Peppy Headlamps', url: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { title: 'Lively & Spacious Dual-Tone Cockpit', url: 'assets/cars/alto-k10/alto_k10_interior.jpg' },
+      { title: '7-inch SmartPlay Studio with Smartphone Navigation', url: 'assets/cars/alto-k10/alto_k10_touchscreen.jpg' },
+      { title: '6 Airbags Standard (1st in Segment Safety Cutaway)', url: 'assets/cars/alto-k10/alto_k10_safety.jpg' },
+      { title: 'Youthful Contemporary Exterior Profile', url: 'assets/cars/alto-k10/alto_k10_exterior.jpg' }
+    ],
+    specs: {
+      engineOptions: '1.0L K10C Dual Jet Dual VVT (67 bhp / 91.1 Nm) | S-CNG (56 bhp / 82.1 Nm)',
+      transmissions: '5-Speed Manual (5MT) & Auto Gear Shift (AGS)',
+      dimensions: '3530 mm (L) × 1490 mm (W) × 1520 mm (H)',
+      wheelbase: '2380 mm',
+      fuelTank: '27 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      seatingCapacity: '5 Persons (Petrol) / 4 Persons (CNG)'
+    },
+    variants: [
+      {
+        name: 'Std(O) 1.0 Petrol MT',
+        exShowroom: 399000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.39 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESP', 'Reverse Parking Sensors', 'High-Speed Alert']
+      },
+      {
+        name: 'LXi(O) 1.0 Petrol MT',
+        exShowroom: 483500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.39 kmpl',
+        isVFM: false,
+        keyFeatures: ['Air Conditioner with Heater', 'Power Steering', 'Body Coloured Bumpers', '6 Airbags Standard']
+      },
+      {
+        name: 'VXi(O) 1.0 Petrol MT',
+        exShowroom: 506000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.39 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BEST VALUE PICK',
+        keyFeatures: ['SmartPlay Dock Audio System', 'Front Power Windows', 'Remote Keyless Entry', 'Central Door Locking', '13-inch Full Wheel Covers']
+      },
+      {
+        name: 'VXi(O) 1.0 Petrol AGS',
+        exShowroom: 556000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.90 kmpl',
+        isVFM: false,
+        keyFeatures: ['Clutchless 5-Speed Auto Gear Shift (AGS)', 'Gear Position Indicator', 'Front Power Windows', 'Keyless Remote']
+      },
+      {
+        name: 'VXi+(O) 1.0 Petrol MT',
+        exShowroom: 535000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.39 kmpl',
+        isVFM: false,
+        keyFeatures: ['17.78 cm (7-inch) Touchscreen SmartPlay Studio', 'Apple CarPlay & Android Auto', 'Steering Mounted Audio Controls', '4 Speakers (1st in Segment)', 'Rear Parcel Tray']
+      },
+      {
+        name: 'VXi+(O) 1.0 Petrol AGS',
+        exShowroom: 585000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C DualJet (67 bhp)',
+        mileage: '24.90 kmpl',
+        isVFM: false,
+        keyFeatures: ['7-inch Touchscreen Infotainment', 'Auto Gear Shift (AGS)', 'Steering Controls', 'Silver Interior Accents']
+      },
+      {
+        name: 'LXi(O) 1.0 S-CNG MT',
+        exShowroom: 573500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56 bhp)',
+        mileage: '33.40 km/kg',
+        isVFM: false,
+        keyFeatures: ['Factory-Fitted S-CNG Kit', '33.40 km/kg Mileage', 'AC & Power Steering', '6 Airbags Standard']
+      },
+      {
+        name: 'VXi(O) 1.0 S-CNG MT',
+        exShowroom: 596000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56 bhp)',
+        mileage: '33.40 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 BEST MILEAGE PICK',
+        keyFeatures: ['Factory S-CNG (33.40 km/kg)', 'SmartPlay Dock Audio', 'Front Power Windows', 'Remote Keyless Entry']
+      }
+    ]
+  },
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
