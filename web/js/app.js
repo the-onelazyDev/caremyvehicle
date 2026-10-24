@@ -173,17 +173,65 @@ window.selectCarColor = function(colorIndex) {
   const nameBadge = document.getElementById('colorNameBadge');
   const colorDot = document.getElementById('colorDot');
 
-  displayImg.style.opacity = '0.4';
-  setTimeout(() => {
-    displayImg.src = color.image;
-    displayImg.style.opacity = '1';
-  }, 120);
+  if (displayImg) {
+    displayImg.style.opacity = '0.3';
+    setTimeout(() => {
+      displayImg.src = color.image;
+      displayImg.style.opacity = '1';
+    }, 100);
+  }
 
   if (nameBadge) nameBadge.textContent = color.name;
-  if (colorDot) colorDot.style.backgroundColor = color.hex;
+  if (colorDot) {
+    colorDot.style.display = 'inline-block';
+    colorDot.style.backgroundColor = color.hex;
+  }
 
   document.querySelectorAll('.color-swatch-btn').forEach((btn, idx) => {
     btn.classList.toggle('active', idx === colorIndex);
+  });
+
+  // Switch angle selector back to exterior (first button)
+  document.querySelectorAll('.angle-btn').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === 0);
+  });
+};
+
+// 360° Studio Angle Selector Handler
+window.selectCarAngle = function(angleIndex) {
+  if (!currentModalCar || !currentModalCar.angles) return;
+  const ang = currentModalCar.angles[angleIndex];
+  if (!ang) return;
+
+  const displayImg = document.getElementById('colorDisplayImg');
+  const nameBadge = document.getElementById('colorNameBadge');
+  const colorDot = document.getElementById('colorDot');
+  
+  if (displayImg) {
+    displayImg.style.opacity = '0.3';
+    setTimeout(() => {
+      // If angle 0 (Exterior Front 3/4th), show the currently active color shade
+      if (angleIndex === 0 && currentModalCar.colors && currentModalCar.colors.length > 0) {
+        const activeSwatch = document.querySelector('.color-swatch-btn.active');
+        const colorIdx = activeSwatch ? parseInt(activeSwatch.getAttribute('data-color-index') || '0') : 0;
+        const col = currentModalCar.colors[colorIdx] || currentModalCar.colors[0];
+        displayImg.src = col.image;
+        if (nameBadge) nameBadge.textContent = col.name;
+        if (colorDot) {
+          colorDot.style.display = 'inline-block';
+          colorDot.style.backgroundColor = col.hex;
+        }
+      } else {
+        displayImg.src = ang.url;
+        if (nameBadge) nameBadge.textContent = ang.label;
+        if (colorDot) colorDot.style.display = 'none';
+      }
+      displayImg.style.opacity = '1';
+    }, 100);
+  }
+
+  document.querySelectorAll('.angle-btn').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === angleIndex);
   });
 };
 
@@ -210,6 +258,7 @@ window.openCarModal = function(carId) {
   const modalBody = document.getElementById('carModalContent');
   const city = CITIES.find(c => c.id === selectedCityId);
   const colors = car.colors || [];
+  const angles = car.angles || [];
   const gallery = car.gallery || [];
   const specs = car.specs || {};
 
@@ -236,7 +285,7 @@ window.openCarModal = function(carId) {
       <button class="modal-tab-btn active" data-tab="variants" onclick="switchModalTab('variants')">
         🏷️ Variants & On-Road Price (${car.variants.length})
       </button>
-      ${colors.length > 0 ? `
+      ${(colors.length > 0 || angles.length > 0) ? `
         <button class="modal-tab-btn" data-tab="colors" onclick="switchModalTab('colors')">
           🎨 Colors & 360° Studio (${colors.length})
         </button>
@@ -315,35 +364,60 @@ window.openCarModal = function(carId) {
       </div>
     </div>
 
-    <!-- TAB 2: INTERACTIVE COLOR STUDIO -->
-    ${colors.length > 0 ? `
+    <!-- TAB 2: INTERACTIVE COLOR STUDIO & 360° VIEWER -->
+    ${(colors.length > 0 || angles.length > 0) ? `
       <div id="tab-pane-colors" class="tab-pane">
         <div class="color-studio">
+          ${angles.length > 0 ? `
+            <!-- 360° / Multi-Angle Selector Toolbar -->
+            <div style="margin-bottom:16px;">
+              <div style="font-size:11px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
+                🔄 360° Multi-Angle Studio View
+              </div>
+              <div class="studio-angle-bar">
+                ${angles.map((ang, aIdx) => `
+                  <button 
+                    type="button" 
+                    class="angle-btn ${aIdx === 0 ? 'active' : ''}" 
+                    onclick="window.selectCarAngle(${aIdx})"
+                  >
+                    ${aIdx === 0 ? '🔄' : aIdx === 1 ? '🚘' : aIdx === 2 ? '🚗' : aIdx === 3 ? '💺' : '🛡️'} ${ang.label}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           <div class="color-stage">
-            <img id="colorDisplayImg" src="${colors[0].image}" alt="${colors[0].name}" class="color-display-img">
+            <img id="colorDisplayImg" src="${colors.length > 0 ? colors[0].image : (angles.length > 0 ? angles[0].url : car.heroImage)}" alt="${car.name}" class="color-display-img">
           </div>
 
           <div class="color-name-badge">
-            <span id="colorDot" class="color-dot" style="background-color:${colors[0].hex};"></span>
-            <span id="colorNameBadge">${colors[0].name}</span>
+            ${colors.length > 0 ? `<span id="colorDot" class="color-dot" style="background-color:${colors[0].hex};"></span>` : ''}
+            <span id="colorNameBadge">${colors.length > 0 ? colors[0].name : (angles.length > 0 ? angles[0].label : car.name)}</span>
           </div>
 
-          <p style="font-size:12px; color:var(--text-muted); margin-bottom:14px;">
-            Tap any color swatch below to view ${car.name} in that official shade:
-          </p>
+          ${colors.length > 0 ? `
+            <div class="colors-section" style="margin-top:4px;">
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+                Tap any color swatch below to view <strong>${car.name}</strong> in that official shade:
+              </p>
 
-          <div class="color-swatches">
-            ${colors.map((c, idx) => `
-              <button 
-                type="button" 
-                class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
-                style="background-color:${c.hex};" 
-                onclick="window.selectCarColor(${idx})"
-                title="${c.name}"
-                aria-label="${c.name}"
-              ></button>
-            `).join('')}
-          </div>
+              <div class="color-swatches">
+                ${colors.map((c, idx) => `
+                  <button 
+                    type="button" 
+                    class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
+                    data-color-index="${idx}"
+                    style="background-color:${c.hex};" 
+                    onclick="window.selectCarColor(${idx})"
+                    title="${c.name}"
+                    aria-label="${c.name}"
+                  ></button>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
         </div>
       </div>
     ` : ''}

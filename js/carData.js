@@ -29,16 +29,24 @@ export const CARS = [
     heroImage: 'assets/cars/alto-k10/alto_k10_hero.jpg',
     summary: 'The iconic Alto K10 now comes with standard 6 airbags, Electronic Stability Program (ESP), 7-inch SmartPlay Studio touchscreen with Apple CarPlay/Android Auto, and an ultra-frugal 1.0L Next-Gen K-Series Dual Jet engine delivering up to 33.40 km/kg on CNG.',
     colors: [
-      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
-      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' },
-      { name: 'Solid White', hex: '#F8FAFC', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
-      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' },
-      { name: 'Metallic Granite Grey', hex: '#475569', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
-      { name: 'Premium Earth Gold', hex: '#D97706', image: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
-      { name: 'Bluish Black', hex: '#0F172A', image: 'assets/cars/alto-k10/alto_k10_exterior.jpg' }
+      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'assets/cars/alto-k10/alto_k10_red.jpg' },
+      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'assets/cars/alto-k10/alto_k10_blue.jpg' },
+      { name: 'Solid White', hex: '#F8FAFC', image: 'assets/cars/alto-k10/alto_k10_white.jpg' },
+      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'assets/cars/alto-k10/alto_k10_silver.jpg' },
+      { name: 'Metallic Granite Grey', hex: '#475569', image: 'assets/cars/alto-k10/alto_k10_grey.jpg' },
+      { name: 'Premium Earth Gold', hex: '#D97706', image: 'assets/cars/alto-k10/alto_k10_gold.jpg' },
+      { name: 'Bluish Black', hex: '#0F172A', image: 'assets/cars/alto-k10/alto_k10_black.jpg' }
+    ],
+    angles: [
+      { label: 'Front 3/4th (Exterior)', url: 'assets/cars/alto-k10/alto_k10_red.jpg' },
+      { label: 'Front Fascia & Grille', url: 'assets/cars/alto-k10/alto_k10_front.jpg' },
+      { label: 'Rear Combination Lamps', url: 'assets/cars/alto-k10/alto_k10_rear.jpg' },
+      { label: 'Spacious Cabin Interior', url: 'assets/cars/alto-k10/alto_k10_interior.jpg' },
+      { label: '6 Airbags Safety Layout', url: 'assets/cars/alto-k10/alto_k10_safety.jpg' }
     ],
     gallery: [
-      { title: 'Front Honeycomb Grille & Peppy Headlamps', url: 'assets/cars/alto-k10/alto_k10_hero.jpg' },
+      { title: 'Front Honeycomb Grille & Peppy Headlamps', url: 'assets/cars/alto-k10/alto_k10_front.jpg' },
+      { title: 'Trendy Rear Combination Lamps & Bumper', url: 'assets/cars/alto-k10/alto_k10_rear.jpg' },
       { title: 'Lively & Spacious Dual-Tone Cockpit', url: 'assets/cars/alto-k10/alto_k10_interior.jpg' },
       { title: '7-inch SmartPlay Studio with Smartphone Navigation', url: 'assets/cars/alto-k10/alto_k10_touchscreen.jpg' },
       { title: '6 Airbags Standard (1st in Segment Safety Cutaway)', url: 'assets/cars/alto-k10/alto_k10_safety.jpg' },
