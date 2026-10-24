@@ -135,6 +135,10 @@ function setupEventListeners() {
   window.closeModal = function(modalId) {
     document.getElementById(modalId).classList.remove('active');
     if (modalId === 'carDetailModal') {
+      if (spinState.autoSpinInterval) {
+        clearInterval(spinState.autoSpinInterval);
+        spinState.autoSpinInterval = null;
+      }
       currentModalCar = null;
       history.pushState(null, '', window.location.pathname);
     }
@@ -161,6 +165,188 @@ window.switchModalTab = function(tabName) {
   document.querySelectorAll('.tab-pane').forEach(pane => {
     pane.classList.toggle('active', pane.id === `tab-pane-${tabName}`);
   });
+
+  if (tabName === 'colors' && currentModalCar && currentModalCar.spin360) {
+    setTimeout(() => {
+      window.initSpin360(currentModalCar.spin360);
+    }, 50);
+  } else if (spinState.autoSpinInterval) {
+    window.toggleAutoSpin();
+  }
+};
+
+// ==========================================================================
+// 360° SPIN TURNTABLE ENGINE (Touch, Mouse Drag, Auto-Spin & Color Sync)
+// ==========================================================================
+let spinState = {
+  active: false,
+  totalFrames: 24,
+  currentFrame: 1,
+  currentColor: 'teal-blue',
+  folder: '',
+  isDragging: false,
+  startX: 0,
+  autoSpinInterval: null,
+  imageCache: {}
+};
+
+window.initSpin360 = function(spinConfig) {
+  if (!spinConfig) return;
+  
+  if (spinState.autoSpinInterval) {
+    clearInterval(spinState.autoSpinInterval);
+    spinState.autoSpinInterval = null;
+  }
+
+  spinState.active = true;
+  spinState.totalFrames = spinConfig.totalFrames || 24;
+  spinState.currentFrame = 1;
+  spinState.folder = spinConfig.folder;
+  spinState.currentColor = spinConfig.defaultColor || spinConfig.colors[0].folderName;
+
+  const canvas = document.getElementById('spin360Canvas');
+  const container = document.getElementById('spin360Container');
+  if (!canvas || !container) return;
+
+  preloadSpinFrames(spinState.currentColor);
+  renderSpinFrame();
+
+  // Pointer drag events (touch + mouse unified)
+  container.onpointerdown = function(e) {
+    spinState.isDragging = true;
+    spinState.startX = e.clientX;
+    container.setPointerCapture(e.pointerId);
+    if (spinState.autoSpinInterval) {
+      window.toggleAutoSpin();
+    }
+  };
+
+  container.onpointermove = function(e) {
+    if (!spinState.isDragging) return;
+    const deltaX = e.clientX - spinState.startX;
+    const sensitivity = 8; // pixels of drag per frame
+    if (Math.abs(deltaX) >= sensitivity) {
+      const frameStep = Math.floor(deltaX / sensitivity);
+      let newFrame = spinState.currentFrame - frameStep;
+      while (newFrame < 1) newFrame += spinState.totalFrames;
+      while (newFrame > spinState.totalFrames) newFrame -= spinState.totalFrames;
+      
+      spinState.currentFrame = newFrame;
+      spinState.startX = e.clientX;
+      renderSpinFrame();
+    }
+  };
+
+  container.onpointerup = function(e) {
+    spinState.isDragging = false;
+    try { container.releasePointerCapture(e.pointerId); } catch(err) {}
+  };
+
+  container.onpointercancel = function() {
+    spinState.isDragging = false;
+  };
+};
+
+function preloadSpinFrames(colorName) {
+  if (!spinState.imageCache[colorName]) {
+    spinState.imageCache[colorName] = {};
+  }
+  for (let i = 1; i <= spinState.totalFrames; i++) {
+    if (!spinState.imageCache[colorName][i]) {
+      const img = new Image();
+      img.src = `${spinState.folder}/${colorName}/${i}.jpg`;
+      img.onload = function() {
+        if (!spinState.imageCache[colorName]) spinState.imageCache[colorName] = {};
+        spinState.imageCache[colorName][i] = img;
+        if (spinState.currentFrame === i && spinState.currentColor === colorName) {
+          renderSpinFrame();
+        }
+      };
+    }
+  }
+}
+
+function renderSpinFrame() {
+  const canvas = document.getElementById('spin360Canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const frame = spinState.currentFrame;
+  const color = spinState.currentColor;
+
+  const cached = spinState.imageCache[color] && spinState.imageCache[color][frame];
+  if (cached && cached.complete) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(cached, 0, 0, canvas.width, canvas.height);
+  } else {
+    const img = new Image();
+    img.src = `${spinState.folder}/${color}/${frame}.jpg`;
+    img.onload = function() {
+      if (!spinState.imageCache[color]) spinState.imageCache[color] = {};
+      spinState.imageCache[color][frame] = img;
+      if (spinState.currentFrame === frame) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      }
+    };
+  }
+
+  const range = document.getElementById('spinRange');
+  if (range) range.value = frame;
+  const angleBadge = document.getElementById('spinAngleBadge');
+  if (angleBadge) {
+    const deg = Math.round(((frame - 1) / spinState.totalFrames) * 360);
+    angleBadge.textContent = `${deg}°`;
+  }
+}
+
+window.setSpinFrame = function(frameNum) {
+  spinState.currentFrame = parseInt(frameNum, 10);
+  renderSpinFrame();
+};
+
+window.selectSpinColor = function(colorFolder, colorIdx) {
+  if (!currentModalCar || !currentModalCar.spin360) return;
+  const colObj = currentModalCar.spin360.colors[colorIdx];
+  if (!colObj) return;
+
+  spinState.currentColor = colorFolder;
+  preloadSpinFrames(colorFolder);
+  renderSpinFrame();
+
+  const nameBadge = document.getElementById('colorNameBadge');
+  const colorDot = document.getElementById('colorDot');
+  if (nameBadge) nameBadge.textContent = colObj.name;
+  if (colorDot) {
+    colorDot.style.display = 'inline-block';
+    colorDot.style.backgroundColor = colObj.hex;
+  }
+
+  document.querySelectorAll('.color-swatch-btn').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === colorIdx);
+  });
+};
+
+window.toggleAutoSpin = function() {
+  const btn = document.getElementById('btnAutoSpin');
+  if (spinState.autoSpinInterval) {
+    clearInterval(spinState.autoSpinInterval);
+    spinState.autoSpinInterval = null;
+    if (btn) {
+      btn.innerHTML = '▶ Auto-Spin';
+      btn.classList.remove('active');
+    }
+  } else {
+    if (btn) {
+      btn.innerHTML = '⏸️ Pause';
+      btn.classList.add('active');
+    }
+    spinState.autoSpinInterval = setInterval(() => {
+      let nextFrame = spinState.currentFrame + 1;
+      if (nextFrame > spinState.totalFrames) nextFrame = 1;
+      spinState.currentFrame = nextFrame;
+      renderSpinFrame();
+    }, 70);
+  }
 };
 
 // Interactive Color Switcher Handler
@@ -259,6 +445,7 @@ window.openCarModal = function(carId) {
   const city = CITIES.find(c => c.id === selectedCityId);
   const colors = car.colors || [];
   const angles = car.angles || [];
+  const spin360 = car.spin360 || null;
   const gallery = car.gallery || [];
   const specs = car.specs || {};
 
@@ -285,9 +472,9 @@ window.openCarModal = function(carId) {
       <button class="modal-tab-btn active" data-tab="variants" onclick="switchModalTab('variants')">
         🏷️ Variants & On-Road Price (${car.variants.length})
       </button>
-      ${(colors.length > 0 || angles.length > 0) ? `
+      ${(spin360 || colors.length > 0 || angles.length > 0) ? `
         <button class="modal-tab-btn" data-tab="colors" onclick="switchModalTab('colors')">
-          🎨 Colors & 360° Studio (${colors.length})
+          🎨 Colors & 360° Studio ${spin360 ? '🔄' : `(${colors.length})`}
         </button>
       ` : ''}
       ${gallery.length > 0 ? `
@@ -365,59 +552,107 @@ window.openCarModal = function(carId) {
     </div>
 
     <!-- TAB 2: INTERACTIVE COLOR STUDIO & 360° VIEWER -->
-    ${(colors.length > 0 || angles.length > 0) ? `
+    ${(spin360 || colors.length > 0 || angles.length > 0) ? `
       <div id="tab-pane-colors" class="tab-pane">
         <div class="color-studio">
-          ${angles.length > 0 ? `
-            <!-- 360° / Multi-Angle Selector Toolbar -->
-            <div style="margin-bottom:16px;">
-              <div style="font-size:11px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
-                🔄 360° Multi-Angle Studio View
+          ${spin360 ? `
+            <!-- 360 Interactive Drag & Spin Turntable -->
+            <div class="spin360-container" id="spin360Container">
+              <div class="spin360-badge">
+                <span>🔄</span>
+                <span>Drag / Swipe to Spin 360°</span>
               </div>
-              <div class="studio-angle-bar">
-                ${angles.map((ang, aIdx) => `
-                  <button 
-                    type="button" 
-                    class="angle-btn ${aIdx === 0 ? 'active' : ''}" 
-                    onclick="window.selectCarAngle(${aIdx})"
-                  >
-                    ${aIdx === 0 ? '🔄' : aIdx === 1 ? '🚘' : aIdx === 2 ? '🚗' : aIdx === 3 ? '💺' : '🛡️'} ${ang.label}
-                  </button>
-                `).join('')}
+              <canvas id="spin360Canvas" width="1056" height="594" class="spin360-canvas"></canvas>
+              <div class="spin360-controls">
+                <button type="button" id="btnAutoSpin" class="spin-ctrl-btn" onclick="window.toggleAutoSpin()">
+                  ▶ Auto-Spin
+                </button>
+                <div style="display:flex; align-items:center; gap:8px; flex:1; max-width:280px;">
+                  <span style="font-size:11px; font-weight:700; color:var(--text-muted);">0°</span>
+                  <input type="range" id="spinRange" min="1" max="${spin360.totalFrames}" value="1" oninput="window.setSpinFrame(this.value)" class="spin-range-slider">
+                  <span style="font-size:11px; font-weight:700; color:var(--text-muted);">360°</span>
+                </div>
+                <span id="spinAngleBadge" style="font-size:12px; font-weight:800; color:var(--text-main); min-width:40px; text-align:right;">0°</span>
               </div>
             </div>
-          ` : ''}
 
-          <div class="color-stage">
-            <img id="colorDisplayImg" src="${colors.length > 0 ? colors[0].image : (angles.length > 0 ? angles[0].url : car.heroImage)}" alt="${car.name}" class="color-display-img">
-          </div>
+            <div class="color-name-badge">
+              <span id="colorDot" class="color-dot" style="background-color:${spin360.colors[0].hex};"></span>
+              <span id="colorNameBadge">${spin360.colors[0].name}</span>
+            </div>
 
-          <div class="color-name-badge">
-            ${colors.length > 0 ? `<span id="colorDot" class="color-dot" style="background-color:${colors[0].hex};"></span>` : ''}
-            <span id="colorNameBadge">${colors.length > 0 ? colors[0].name : (angles.length > 0 ? angles[0].label : car.name)}</span>
-          </div>
-
-          ${colors.length > 0 ? `
             <div class="colors-section" style="margin-top:4px;">
               <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
-                Tap any color swatch below to view <strong>${car.name}</strong> in that official shade:
+                Official Paint Shades (${spin360.colors.length} Available) • Tap to switch shade:
               </p>
 
               <div class="color-swatches">
-                ${colors.map((c, idx) => `
+                ${spin360.colors.map((c, idx) => `
                   <button 
                     type="button" 
                     class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
                     data-color-index="${idx}"
                     style="background-color:${c.hex};" 
-                    onclick="window.selectCarColor(${idx})"
+                    onclick="window.selectSpinColor('${c.folderName}', ${idx})"
                     title="${c.name}"
                     aria-label="${c.name}"
                   ></button>
                 `).join('')}
               </div>
             </div>
-          ` : ''}
+          ` : `
+            <!-- Multi-Angle / Color Fallback for Cars without 360 spin -->
+            ${angles.length > 0 ? `
+              <!-- 360° / Multi-Angle Selector Toolbar -->
+              <div style="margin-bottom:16px;">
+                <div style="font-size:11px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
+                  🔄 360° Multi-Angle Studio View
+                </div>
+                <div class="studio-angle-bar">
+                  ${angles.map((ang, aIdx) => `
+                    <button 
+                      type="button" 
+                      class="angle-btn ${aIdx === 0 ? 'active' : ''}" 
+                      onclick="window.selectCarAngle(${aIdx})"
+                    >
+                      ${aIdx === 0 ? '🔄' : aIdx === 1 ? '🚘' : aIdx === 2 ? '🚗' : aIdx === 3 ? '💺' : '🛡️'} ${ang.label}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="color-stage">
+              <img id="colorDisplayImg" src="${colors.length > 0 ? colors[0].image : (angles.length > 0 ? angles[0].url : car.heroImage)}" alt="${car.name}" class="color-display-img">
+            </div>
+
+            <div class="color-name-badge">
+              ${colors.length > 0 ? `<span id="colorDot" class="color-dot" style="background-color:${colors[0].hex};"></span>` : ''}
+              <span id="colorNameBadge">${colors.length > 0 ? colors[0].name : (angles.length > 0 ? angles[0].label : car.name)}</span>
+            </div>
+
+            ${colors.length > 0 ? `
+              <div class="colors-section" style="margin-top:4px;">
+                <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+                  Tap any color swatch below to view <strong>${car.name}</strong> in that official shade:
+                </p>
+
+                <div class="color-swatches">
+                  ${colors.map((c, idx) => `
+                    <button 
+                      type="button" 
+                      class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
+                      data-color-index="${idx}"
+                      style="background-color:${c.hex};" 
+                      onclick="window.selectCarColor(${idx})"
+                      title="${c.name}"
+                      aria-label="${c.name}"
+                    ></button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          `}
         </div>
       </div>
     ` : ''}

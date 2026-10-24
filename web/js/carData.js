@@ -146,6 +146,119 @@ export const CARS = [
     ]
   },
   {
+    id: 'hyundai-grand-i10-nios',
+    name: 'Hyundai Grand i10 Nios',
+    brand: 'Hyundai',
+    tagline: 'India’s Favorite Premium Hatchback with 6 Airbags Standard & 360° Turntable View',
+    launchDate: 'Updated 2024 (6 Airbags Standard)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹5.92 - ₹8.56 Lakh',
+    minPrice: 592300,
+    maxPrice: 856000,
+    safetyRating: '6 Airbags Standard (ESC & Hill Start Assist)',
+    groundClearance: '165 mm',
+    bootSpace: '260 L',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'assets/cars/grand-i10-nios/hero.jpg',
+    summary: 'The new Hyundai Grand i10 Nios sets the benchmark in premium compact hatchbacks with standard 6 airbags, 8-inch touchscreen infotainment with Apple CarPlay/Android Auto, wireless phone charger, cruise control, and refined 1.2L Kappa petrol & factory Bi-Fuel CNG engines.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'assets/cars/grand-i10-nios/360',
+      defaultColor: 'teal-blue',
+      colors: [
+        { name: 'Teal Blue', hex: '#153854', folderName: 'teal-blue' },
+        { name: 'Fiery Red', hex: '#9F1414', folderName: 'fiery-red' },
+        { name: 'Typhoon Silver', hex: '#DFE1E3', folderName: 'typhoon-silver' },
+        { name: 'Titan Grey', hex: '#4E5359', folderName: 'titan-grey' }
+      ]
+    },
+    colors: [
+      { name: 'Teal Blue', hex: '#153854', image: 'assets/cars/grand-i10-nios/360/teal-blue/4.jpg' },
+      { name: 'Fiery Red', hex: '#9F1414', image: 'assets/cars/grand-i10-nios/360/fiery-red/4.jpg' },
+      { name: 'Typhoon Silver', hex: '#DFE1E3', image: 'assets/cars/grand-i10-nios/360/typhoon-silver/4.jpg' },
+      { name: 'Titan Grey', hex: '#4E5359', image: 'assets/cars/grand-i10-nios/360/titan-grey/4.jpg' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter Turntable View', url: 'assets/cars/grand-i10-nios/360/teal-blue/4.jpg' },
+      { title: 'Sporty Painted Honeycomb Grille & DRLs', url: 'assets/cars/grand-i10-nios/360/teal-blue/1.jpg' },
+      { title: 'Side Profile & Two-Tone Alloy Stance', url: 'assets/cars/grand-i10-nios/360/teal-blue/7.jpg' },
+      { title: 'Rear Connected LED Tail-lamp Cluster', url: 'assets/cars/grand-i10-nios/360/teal-blue/13.jpg' }
+    ],
+    specs: {
+      engineOptions: '1.2L Kappa Dual VVT Petrol (82 bhp / 114 Nm) | 1.2L Bi-Fuel CNG (68 bhp / 95 Nm)',
+      transmissions: '5-Speed Manual (5MT) & Smart Auto AMT',
+      dimensions: '3815 mm (L) × 1680 mm (W) × 1520 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'Era 1.2 Petrol MT',
+        exShowroom: 592300,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (82 bhp)',
+        mileage: '20.7 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Central Locking', 'Front Power Windows']
+      },
+      {
+        name: 'Magna 1.2 Petrol MT',
+        exShowroom: 678000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (82 bhp)',
+        mileage: '20.7 kmpl',
+        isVFM: false,
+        keyFeatures: ['2-DIN Audio with Bluetooth', 'Steering Mounted Controls', 'Rear AC Vents', 'Remote Keyless Entry']
+      },
+      {
+        name: 'Sportz Executive 1.2 Petrol MT',
+        exShowroom: 728000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (82 bhp)',
+        mileage: '20.7 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR PICK',
+        keyFeatures: ['8-inch Touchscreen with Android Auto / Apple CarPlay', 'Reverse Camera & Sensors', 'Cruise Control', '15-inch Dual-Tone Stylised Wheels']
+      },
+      {
+        name: 'Sportz 1.2 Petrol AMT (Auto)',
+        exShowroom: 793000,
+        fuel: 'Petrol',
+        trans: 'AMT Auto',
+        engine: '1.2L Kappa (82 bhp)',
+        mileage: '20.1 kmpl',
+        isVFM: false,
+        keyFeatures: ['Convenient Smart Auto AMT', 'Hill Start Assist Control (HAC)', 'LED DRLs & Projector Headlamps', 'Auto Climate Control (FATC)']
+      },
+      {
+        name: 'Magna 1.2 Bi-Fuel CNG',
+        exShowroom: 768000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (68 bhp)',
+        mileage: '27.0 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 BEST MILEAGE PICK',
+        keyFeatures: ['Factory Fitted CNG with Dual ECU', '27.0 km/kg Fuel Economy', 'Rear AC Vents', 'Micro-Switch for Safe Fueling']
+      },
+      {
+        name: 'Asta 1.2 Petrol MT (Top Spec)',
+        exShowroom: 799000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (82 bhp)',
+        mileage: '20.7 kmpl',
+        isVFM: false,
+        keyFeatures: ['Wireless Phone Charger', 'Smart Key with Push Button Start', '15-inch Diamond Cut Alloys', 'Leather-wrapped Steering Wheel']
+      }
+    ]
+  },
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
