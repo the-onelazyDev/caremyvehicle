@@ -1354,6 +1354,156 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-s-presso',
+    name: 'Maruti Suzuki S-Presso',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s Mini-SUV with Bold Upright Stance, 180mm Ground Clearance & 32.73 km/kg CNG',
+    launchDate: 'Updated 2024 (Next-Gen K-Series Dual Jet)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹4.26 - ₹6.12 Lakh',
+    minPrice: 426500,
+    maxPrice: 611500,
+    safetyRating: 'Dual Airbags Standard, ESP with Hill Hold Assist, ABS with EBD, Reverse Parking Sensors',
+    groundClearance: '180 mm',
+    bootSpace: '270 L',
+    waitingPeriod: '1 - 3 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp',
+    summary: 'The Maruti Suzuki S-Presso is India’s signature mini-SUV that punches above its weight with a bold upright stance, commanding high seating position, and generous 180mm ground clearance. Powered by the efficient 1.0L Next-Gen K-Series Dual Jet Dual VVT engine (67 PS / 89 Nm) with Idle Start-Stop delivering up to 25.30 km/l on AGS automatic and 32.73 km/kg on factory S-CNG. Features a unique circular center console with 7-inch SmartPlay Studio touchscreen with smartphone navigation, dynamic digital speedometer, and high approach and departure angles.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360',
+      format: 'webp',
+      defaultColor: 'sizzle-orange',
+      colors: [
+        { id: 'sizzle-orange', name: 'Solid Sizzle Orange', hex: '#A83C0F' },
+        { id: 'solid-fire-red', name: 'Solid Fire Red', hex: '#8E0D0F' },
+        { id: 'pearl-starry-blue', name: 'Pearl Starry Blue', hex: '#114887' },
+        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
+        { id: 'metallic-silky-silver', name: 'Metallic Silky Silver', hex: '#737373' },
+        { id: 'metallic-granite-grey', name: 'Metallic Granite Grey', hex: '#222526' },
+        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
+      ]
+    },
+    colors: [
+      { name: 'Solid Sizzle Orange', hex: '#A83C0F', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp' },
+      { name: 'Solid Fire Red', hex: '#8E0D0F', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/solid-fire-red/4.webp' },
+      { name: 'Pearl Starry Blue', hex: '#114887', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/pearl-starry-blue/4.webp' },
+      { name: 'Solid White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/solid-white/4.webp' },
+      { name: 'Metallic Silky Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/metallic-silky-silver/4.webp' },
+      { name: 'Metallic Granite Grey', hex: '#222526', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/metallic-granite-grey/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/bluish-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Mini-SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp' },
+      { label: 'Bold Upright Front Grille & High Bonnet', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/1.webp' },
+      { label: 'Side High Ground Clearance Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/7.webp' },
+      { label: 'Rear Squarish Taillamps & Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp' },
+      { title: 'SUV-Inspired Bold Front Fascia with Tooth-Design Chrome Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/1.webp' },
+      { title: 'Commanding High Ground Clearance (180mm) with Rugged Body Cladding', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/7.webp' },
+      { title: 'Upright Rear Profile with Distinctive C-Shaped Taillamps & High Mount Stop Lamp', url: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L K10C Dual Jet Dual VVT (67 PS / 89 Nm) | 1.0L S-CNG (56.7 PS / 82.1 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3565 mm (L) × 1520 mm (W) × 1567 mm (H)',
+      wheelbase: '2380 mm',
+      fuelTank: '27 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam (Rear)',
+      safety: 'Dual Airbags Standard, ESP, Hill Hold Assist, Reverse Parking Sensors, Speed Sensing Auto Door Lock'
+    },
+    variants: [
+      {
+        name: 'Std (O) 1.0L 5MT',
+        exShowroom: 426500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.76 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Airbags Standard', 'ABS with EBD', 'Digital Speedometer Display', 'Reverse Parking Sensors']
+      },
+      {
+        name: 'LXi (O) 1.0L 5MT',
+        exShowroom: 501500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.76 km/l',
+        isVFM: false,
+        keyFeatures: ['Air Conditioning with Heater', 'Power Steering', 'Sun Visor with Ticket Holder']
+      },
+      {
+        name: 'LXi (O) 1.0L S-CNG 5MT',
+        exShowroom: 591500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56.7 PS)',
+        mileage: '32.73 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP MICRO CNG PICK',
+        keyFeatures: ['Factory S-CNG with 32.73 km/kg Mileage', 'Air Conditioning', 'Power Steering', 'Dual Airbags Standard']
+      },
+      {
+        name: 'VXi (O) 1.0L 5MT',
+        exShowroom: 521500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.76 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['Front Power Windows', 'Remote Keyless Entry', 'SmartPlay Dock Audio with Bluetooth', 'Body Coloured Bumpers', '14-inch Steel Wheels']
+      },
+      {
+        name: 'VXi (O) 1.0L AGS (Automatic)',
+        exShowroom: 567500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '25.30 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', '25.30 km/l Economy', 'Hill Hold Assist', 'Front Power Windows']
+      },
+      {
+        name: 'VXi (O) 1.0L S-CNG 5MT',
+        exShowroom: 611500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56.7 PS)',
+        mileage: '32.73 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 TOP-SPEC CNG MICRO SUV',
+        keyFeatures: ['Factory S-CNG with 32.73 km/kg Economy', 'Front Power Windows', 'Remote Central Locking', 'Rear Parcel Tray']
+      },
+      {
+        name: 'VXi+ (O) 1.0L 5MT',
+        exShowroom: 550500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.76 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ FEATURE-PACKED PICK',
+        keyFeatures: ['7-inch SmartPlay Studio Touchscreen', 'Apple CarPlay & Android Auto', 'Steering Mounted Audio Controls', 'Electrically Adjustable ORVMs', 'Front Fog Lamps']
+      },
+      {
+        name: 'VXi+ (O) 1.0L AGS (Automatic)',
+        exShowroom: 596500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '25.30 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Automatic Mini-SUV', '7-inch Touchscreen', 'Steering Audio Controls', 'Hill Hold Assist', '25.30 km/l Certified Economy']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
