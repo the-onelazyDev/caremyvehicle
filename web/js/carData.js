@@ -2346,6 +2346,163 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-ignis',
+    name: 'Maruti Suzuki Ignis',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'The Tough Urban Compact — 180mm High Ground Clearance, 15-inch Black Alloys & SmartPlay Studio',
+    launchDate: 'Updated 2024 (E20 & BS6 Phase 2 Compliant)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹5.84 - ₹8.25 Lakh',
+    minPrice: 584000,
+    maxPrice: 825000,
+    safetyRating: 'Dual Airbags Standard, ABS with EBD, ESP with Hill Hold Assist (AGS), ISOFIX Child Mounts, Rear Parking Camera',
+    groundClearance: '180 mm',
+    bootSpace: '260 L',
+    waitingPeriod: '1 - 3 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Ignis is NEXA’s distinctive urban compact cross-hatch. Built with an imposing mini-SUV stance, generous 180mm ground clearance, tight 4.7m turning radius for effortless city navigation, striking U-shaped chrome grille, all-black 15-inch alloys, and fuel-efficient 1.2L 4-cylinder K-Series engine delivering 20.89 km/l.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#11376A' },
+        { id: 'lucent-orange-black-roof', name: 'Lucent Orange with Black Roof', hex: '#A12B00' },
+        { id: 'nexa-blue-black-roof', name: 'Nexa Blue with Black Roof', hex: '#133870' },
+        { id: 'nexa-blue-silver-roof', name: 'Nexa Blue with Silver Roof', hex: '#133870' },
+        { id: 'lucent-orange', name: 'Lucent Orange', hex: '#A12B00' },
+        { id: 'turquoise-blue', name: 'Turquoise Blue', hex: '#00648F' },
+        { id: 'glistening-grey', name: 'Glistening Grey', hex: '#4A4A4A' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#FFFFFF' },
+        { id: 'silky-silver', name: 'Silky Silver', hex: '#7D7D7D' },
+        { id: 'pearl-midnight-black', name: 'Pearl Midnight Black', hex: '#040720' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#11376A', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/4.webp' },
+      { name: 'Lucent Orange with Black Roof', hex: '#A12B00', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/lucent-orange-black-roof/4.webp' },
+      { name: 'Nexa Blue with Black Roof', hex: '#133870', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue-black-roof/4.webp' },
+      { name: 'Nexa Blue with Silver Roof', hex: '#133870', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue-silver-roof/4.webp' },
+      { name: 'Lucent Orange', hex: '#A12B00', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/lucent-orange/4.webp' },
+      { name: 'Turquoise Blue', hex: '#00648F', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/turquoise-blue/4.webp' },
+      { name: 'Glistening Grey', hex: '#4A4A4A', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/glistening-grey/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#FFFFFF', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/pearl-arctic-white/4.webp' },
+      { name: 'Silky Silver', hex: '#7D7D7D', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/silky-silver/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#040720', image: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/pearl-midnight-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Tough Urban Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/4.webp' },
+      { label: 'Tough Urban Grille & LED Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/1.webp' },
+      { label: 'Side High-Stance Profile & 15-inch All-Black Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/7.webp' },
+      { label: 'Rear Tailgate with C-pillar Slits & Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Nexa Blue', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/4.webp' },
+      { title: 'Chrome U-Shaped Grille with High-Mounted LED Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/1.webp' },
+      { title: 'High Ground Clearance Silhouette with Chunky Wheel Arch Cladding', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/7.webp' },
+      { title: 'Sporty Rear Bumper with Rugged Silver Skid Plate Accent', url: 'https://ik.imagekit.io/2908vvlod/cars/ignis/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L 4-Cylinder K-Series VVT Petrol (83.1 PS / 113 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3700 mm (L) × 1690 mm (W) × 1595 mm (H)',
+      wheelbase: '2435 mm',
+      fuelTank: '32 Litres',
+      brakes: 'Front Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: 'Dual Airbags Standard, ABS with EBD, ESP with Hill Hold Assist (AGS), Rear Camera, ISOFIX Child Mounts'
+    },
+    variants: [
+      {
+        name: 'Sigma 1.2L 5MT',
+        exShowroom: 584000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['180mm High Ground Clearance', 'Dual Front Airbags', 'ABS with EBD', 'Front Power Windows', 'ISOFIX Child Mounts', 'Tilt Steering']
+      },
+      {
+        name: 'Delta 1.2L 5MT',
+        exShowroom: 638000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['2-DIN Audio System with Bluetooth', 'Steering Mounted Controls', 'Keyless Entry', 'Electrically Adjustable ORVMs with Turn Indicators', 'All 4 Power Windows']
+      },
+      {
+        name: 'Delta 1.2L AGS (Automatic)',
+        exShowroom: 688000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', 'Hill Hold Assist', '20.89 km/l City Mileage', 'Audio with Bluetooth', 'Steering Audio Controls']
+      },
+      {
+        name: 'Zeta 1.2L 5MT',
+        exShowroom: 696000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE',
+        keyFeatures: ['7-inch SmartPlay Studio Touchscreen', 'Apple CarPlay & Android Auto', '15-inch All-Black Alloy Wheels', 'Engine Push Button Start', 'Front Fog Lamps']
+      },
+      {
+        name: 'Zeta 1.2L AGS (Automatic)',
+        exShowroom: 746000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['AGS Automatic with 7-inch Touchscreen', '15-inch Black Alloys', 'Push Start', 'Hill Hold Assist', 'Electrically Folding ORVMs']
+      },
+      {
+        name: 'Alpha 1.2L 5MT',
+        exShowroom: 761000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['LED Projector Headlamps with Integrated LED DRLs', 'Reverse Parking Camera', 'Automatic Climate Control', 'Height-Adjustable Driver Seat', 'Puddle Lamps']
+      },
+      {
+        name: 'Alpha 1.2L AGS (Automatic)',
+        exShowroom: 811000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Automatic with LED Projectors', 'Reverse Parking Camera', 'Automatic Climate Control', '7-inch Touchscreen', '15-inch Black Alloys']
+      },
+      {
+        name: 'Alpha 1.2L Dual-Tone (MT / AGS)',
+        exShowroom: 775000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L 4-Cyl Petrol (83.1 PS)',
+        mileage: '20.89 km/l',
+        isVFM: false,
+        keyFeatures: ['Signature Dual-Tone Roof (Lucent Orange or Nexa Blue with Black/Silver Roof)', 'LED Projectors', 'Auto AC', 'Reverse Camera']
+      }
+    ]
+  },
+
 
 
 
