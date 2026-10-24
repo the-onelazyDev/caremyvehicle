@@ -755,6 +755,269 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-dzire',
+    name: 'Maruti Suzuki Dzire',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s #1 Premium Sedan with 5-Star NCAP Safety, Electric Sunroof, 360° Camera & 33.73 km/kg CNG',
+    launchDate: 'All-New 2024-2025 Generation (5-Star Global NCAP)',
+    bodyType: 'Sedan',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.79 - ₹10.14 Lakh',
+    minPrice: 679000,
+    maxPrice: 1014000,
+    safetyRating: '⭐⭐⭐⭐⭐ 5-Star Global NCAP (6 Airbags Standard across all variants)',
+    groundClearance: '163 mm',
+    bootSpace: '382 L',
+    waitingPeriod: '4 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
+    summary: 'The All-New 4th Generation Maruti Suzuki Dzire redefines India’s sedan landscape with a historic 5-Star Global NCAP adult safety rating and 6 airbags standard across every single variant. Engineered on the ultra-rigid Heartect platform and powered by the new 1.2L Z-Series 3-cylinder engine (Z12E) boasting class-leading 24.79 km/l (MT), 25.71 km/l (AGS) and 33.73 km/kg on factory S-CNG. Packed with first-in-segment electric sunroof, 360-degree HD camera, 9-inch SmartPlay Pro+ touchscreen with wireless Apple CarPlay/Android Auto, wireless phone charger, and sculpted European styling.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360',
+      format: 'webp',
+      defaultColor: 'alluring-blue',
+      colors: [
+        { id: 'alluring-blue', name: 'Alluring Blue', hex: '#415159' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
+        { id: 'gallant-red', name: 'Gallant Red', hex: '#D2232B' },
+        { id: 'bluish-black', name: 'Bluish Black', hex: '#141414' },
+        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
+        { id: 'nutmeg-brown', name: 'Nutmeg Brown', hex: '#54473C' }
+      ]
+    },
+    colors: [
+      { name: 'Alluring Blue', hex: '#415159', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/pearl-arctic-white/4.webp' },
+      { name: 'Splendid Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/splendid-silver/4.webp' },
+      { name: 'Gallant Red', hex: '#D2232B', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/gallant-red/4.webp' },
+      { name: 'Bluish Black', hex: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/bluish-black/4.webp' },
+      { name: 'Magma Grey', hex: '#2B2C31', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/magma-grey/4.webp' },
+      { name: 'Nutmeg Brown', hex: '#54473C', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/nutmeg-brown/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp' },
+      { label: 'Front Sculpted Grille & LED Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/1.webp' },
+      { label: 'Side Executive Sedan Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/7.webp' },
+      { label: 'Rear 3D Trinity LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp' },
+      { title: 'Bold Horizontal Chrome Slat Grille with Sharp Bi-LED Crystal Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/1.webp' },
+      { title: 'Aerodynamic Sedan Silhouette with Precision-Cut Dual-Tone Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/7.webp' },
+      { title: 'Sleek Trunk-Lid Integrated Spoiler with Distinctive 3D Trinity LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Z-Series 3-Cyl Dual VVT (81.58 PS / 111.7 Nm) | 1.2L S-CNG (69.75 PS / 101.8 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3995 mm (L) × 1735 mm (W) × 1525 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam (Rear)',
+      safety: '⭐⭐⭐⭐⭐ 5-Star Global NCAP, 6 Airbags Standard, ESP, Hill Hold Assist, TPMS, ISOFIX, 3-Point Belts for All Seats'
+    },
+    variants: [
+      {
+        name: 'LXi 1.2L 5MT',
+        exShowroom: 679000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '24.79 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', '5-Star Global NCAP Safety', 'ESP with Hill Hold Assist', 'LED Crystal Headlamps', 'All 4 Power Windows']
+      },
+      {
+        name: 'VXi 1.2L 5MT',
+        exShowroom: 779000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '24.79 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Touchscreen', 'Wireless Apple CarPlay & Android Auto', 'Rear AC Vents & Rear Fast USB Ports', 'Steering-Mounted Audio Controls', 'Electrically Foldable ORVMs']
+      },
+      {
+        name: 'VXi 1.2L AGS (Automatic)',
+        exShowroom: 829000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '25.71 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', '25.71 km/l Certified Economy', 'Rear AC Vents', 'Hill Hold Assist']
+      },
+      {
+        name: 'VXi 1.2L S-CNG 5MT',
+        exShowroom: 874000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Z12E S-CNG (69.75 PS)',
+        mileage: '33.73 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG SEDAN PICK',
+        keyFeatures: ['Segment-Best 33.73 km/kg Mileage', 'Factory S-CNG with Dual Interdependent ECUs', '7-inch Touchscreen', 'Rear AC Vents']
+      },
+      {
+        name: 'ZXi 1.2L 5MT',
+        exShowroom: 889000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '24.79 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ SEGMENT HIT (SUNROOF)',
+        keyFeatures: ['Single-Pane Electric Sunroof', 'Wireless Phone Charger', '15-inch Precision Cut Alloy Wheels', 'Automatic Climate Control', 'Push Button Engine Start/Stop']
+      },
+      {
+        name: 'ZXi 1.2L AGS (Automatic)',
+        exShowroom: 939000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '25.71 km/l',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof with AGS Automatic', 'Wireless Charger', '15-inch Alloys', 'Cruise Control']
+      },
+      {
+        name: 'ZXi 1.2L S-CNG 5MT',
+        exShowroom: 984000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Z12E S-CNG (69.75 PS)',
+        mileage: '33.73 km/kg',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof + Factory S-CNG', 'Wireless Phone Charger', '15-inch Precision Alloys', 'Push Start/Stop']
+      },
+      {
+        name: 'ZXi+ 1.2L 5MT',
+        exShowroom: 969000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '24.79 km/l',
+        isVFM: false,
+        keyFeatures: ['360-Degree HD Surround View Camera', '9-inch SmartPlay Pro+ Touchscreen', 'Arkamy Surround Sound', 'Electric Sunroof', 'Cruise Control', 'Suzuki Connect Telematics']
+      },
+      {
+        name: 'ZXi+ 1.2L AGS (Automatic)',
+        exShowroom: 1014000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E 3-Cyl (81.58 PS)',
+        mileage: '25.71 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-of-the-Line Automatic Sedan', '360 HD Camera', 'Electric Sunroof', '9-inch SmartPlay Pro+', 'Full LED Lighting Suite']
+      }
+    ]
+  },
+  {
+    id: 'maruti-eeco',
+    name: 'Maruti Suzuki Eeco',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s Most Versatile Multi-Purpose Van with Advanced 1.2L K-Series, 26.78 km/kg CNG & 360° Studio',
+    launchDate: 'Updated 2024 (Advanced K-Series Dual Jet)',
+    bodyType: 'MUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹5.32 - ₹6.58 Lakh',
+    minPrice: 532000,
+    maxPrice: 658000,
+    safetyRating: 'Dual Airbags, ABS with EBD, Reverse Parking Sensors, Child Lock',
+    groundClearance: '160 mm',
+    bootSpace: '540 L (5-Seater) / Massive cargo utility',
+    waitingPeriod: '1 - 3 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp',
+    summary: 'The Maruti Suzuki Eeco is India’s undisputed king of practical family travel and versatile multi-purpose mobility. Powered by the refined 1.2L Advanced K-Series Dual Jet Dual VVT engine (80.76 PS / 104.4 Nm in petrol, 71.65 PS in CNG), the Eeco delivers an impressive 19.71 km/l petrol and 26.78 km/kg on factory S-CNG. Available in spacious 5-seater and 7-seater layouts with powerful air conditioning, digital instrument cluster, flat cabin floor, and huge 540L luggage capacity.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360',
+      format: 'webp',
+      defaultColor: 'brisk-blue',
+      colors: [
+        { id: 'brisk-blue', name: 'Metallic Brisk Blue', hex: '#0D6DC3' },
+        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
+        { id: 'silky-silver', name: 'Metallic Silky Silver', hex: '#737373' },
+        { id: 'glistening-grey', name: 'Metallic Glistening Grey', hex: '#4A4A4A' },
+        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
+      ]
+    },
+    colors: [
+      { name: 'Metallic Brisk Blue', hex: '#0D6DC3', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp' },
+      { name: 'Solid White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/solid-white/4.webp' },
+      { name: 'Metallic Silky Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/silky-silver/4.webp' },
+      { name: 'Metallic Glistening Grey', hex: '#4A4A4A', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/glistening-grey/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/bluish-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp' },
+      { label: 'Front Bold Van Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/1.webp' },
+      { label: 'Side Sliding Door Silhouette', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/7.webp' },
+      { label: 'Rear Wide Tailgate Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp' },
+      { title: 'Modern Clean Front Fascia with Bold Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/1.webp' },
+      { title: 'Practical Sliding Side Doors for Effortless Ingress/Egress', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/7.webp' },
+      { title: 'Cavernous Tailgate Opening for Maximum Cargo Loading', url: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Advanced K-Series Dual Jet Dual VVT (80.76 PS / 104.4 Nm) | S-CNG (71.65 PS / 95 Nm)',
+      transmissions: '5-Speed Manual Transmission (5MT)',
+      dimensions: '3675 mm (L) × 1475 mm (W) × 1825 mm (H)',
+      wheelbase: '2350 mm',
+      fuelTank: '32 Litres (Petrol) / 65 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / 3-Link Rigid Axle (Rear)',
+      safety: 'Dual Airbags, ABS with EBD, Reverse Parking Sensors, Engine Immobilizer, Speed Alert'
+    },
+    variants: [
+      {
+        name: '5-Seater Standard 5MT',
+        exShowroom: 532000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L K-Series Dual Jet (80.76 PS)',
+        mileage: '19.71 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Airbags', 'ABS with EBD', 'Digital Speedometer Cluster', 'Reverse Parking Sensors', 'Integrated Front Headrests']
+      },
+      {
+        name: '7-Seater Standard 5MT',
+        exShowroom: 561000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L K-Series Dual Jet (80.76 PS)',
+        mileage: '19.71 km/l',
+        isVFM: false,
+        keyFeatures: ['7 Seater Seating Layout (2+3+2)', 'Dual Airbags', 'ABS with EBD', 'Speed Alert System', 'Heater']
+      },
+      {
+        name: '5-Seater AC 5MT',
+        exShowroom: 568000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L K-Series Dual Jet (80.76 PS)',
+        mileage: '19.71 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['Powerful Air Conditioning with Cabin Heater', 'Dual Airbags', 'ABS with EBD', 'Sliding Driver Seat', '12V Accessory Socket']
+      },
+      {
+        name: '5-Seater AC S-CNG 5MT',
+        exShowroom: 658000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L K-Series S-CNG (71.65 PS)',
+        mileage: '26.78 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG UTILITY PICK',
+        keyFeatures: ['Factory S-CNG with 26.78 km/kg Economy', 'Factory Air Conditioning', 'Dual Interdependent ECUs', 'Dual Airbags', 'Micro Switch CNG Cut-off']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
