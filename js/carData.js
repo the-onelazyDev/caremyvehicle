@@ -1690,6 +1690,206 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-grand-vitara',
+    name: 'Maruti Suzuki Grand Vitara',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'Rule Every Road — Intelligent Electric Hybrid (27.97 km/l), ALLGRIP AWD & Panoramic Sunroof',
+    launchDate: 'Updated 2024 (Intelligent Electric Hybrid & ALLGRIP AWD)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Hybrid', 'CNG'],
+    priceRange: '₹10.99 - ₹20.09 Lakh',
+    minPrice: 1099000,
+    maxPrice: 2009000,
+    safetyRating: '6 Airbags (Alpha/Zeta), ESP with Hill Hold Assist, Hill Descent Control, All-Wheel Disc Brakes, TPMS, 360 HD View Camera',
+    groundClearance: '210 mm',
+    bootSpace: '373 L (Smart Hybrid / CNG) / 265 L (Strong Hybrid)',
+    waitingPeriod: '2 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Grand Vitara is NEXA’s flagship mid-size premium SUV. Featuring an advanced Intelligent Electric Hybrid system delivering an astonishing 27.97 km/l, ALLGRIP Select AWD capability for rugged terrains, a panoramic sliding sunroof, ventilated seats, Head-Up Display, and factory-fitted S-CNG, it sets the benchmark for efficiency and premium capability.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
+        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Midnight Black Roof', hex: '#B6BABD' },
+        { id: 'opulent-red-black-roof', name: 'Opulent Red with Midnight Black Roof', hex: '#AC0F0F' },
+        { id: 'arctic-white-black-roof', name: 'Arctic White with Midnight Black Roof', hex: '#F9F9F9' },
+        { id: 'arctic-white', name: 'Arctic White', hex: '#F9F9F9' },
+        { id: 'midnight-black', name: 'Midnight Black', hex: '#171717' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#464848' },
+        { id: 'chestnut-brown', name: 'Chestnut Brown', hex: '#35312E' },
+        { id: 'opulent-red', name: 'Opulent Red', hex: '#AC0F0F' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#B6BABD' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp' },
+      { name: 'Splendid Silver with Midnight Black Roof', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/splendid-silver-black-roof/4.webp' },
+      { name: 'Opulent Red with Midnight Black Roof', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/opulent-red-black-roof/4.webp' },
+      { name: 'Arctic White with Midnight Black Roof', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/arctic-white-black-roof/4.webp' },
+      { name: 'Arctic White', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/arctic-white/4.webp' },
+      { name: 'Midnight Black', hex: '#171717', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/midnight-black/4.webp' },
+      { name: 'Grandeur Grey', hex: '#464848', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/grandeur-grey/4.webp' },
+      { name: 'Chestnut Brown', hex: '#35312E', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/chestnut-brown/4.webp' },
+      { name: 'Opulent Red', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/opulent-red/4.webp' },
+      { name: 'Splendid Silver', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/splendid-silver/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Imposing SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp' },
+      { label: "NEXA Crafted Futuristic Grille & NEXTre' LED DRLs", url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/1.webp' },
+      { label: 'Side Profile with 210mm High Ground Clearance & R17 Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/7.webp' },
+      { label: 'Rear Connected Sweeping LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp' },
+      { title: "NEXA Signature Grille with 3-Point NEXTre' LED DRLs", url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/1.webp' },
+      { title: 'Muscular Side Silhouette with 17-inch Precision Cut Dual-Tone Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/7.webp' },
+      { title: 'Full-Width Connected Lightguide LED Taillamp Cluster with Grand Vitara Badging', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L Intelligent Electric Hybrid e-CVT (115.56 PS combined) | 1.5L K15C Smart Hybrid (103.06 PS / 136.8 Nm) | 1.5L S-CNG (87.8 PS / 121.5 Nm)',
+      transmissions: '5-Speed Manual (5MT), 6-Speed Automatic with Paddle Shifters (6AT), and e-CVT (Hybrid)',
+      dimensions: '4345 mm (L) × 1795 mm (W) × 1645 mm (H)',
+      wheelbase: '2600 mm',
+      fuelTank: '45 Litres (Petrol/Hybrid) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Brake Assist',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam with Coil Spring (Rear)',
+      safety: '6 Airbags (Front, Side & Curtain), ESP with Hill Hold Assist, Hill Descent Control, TPMS, 360 HD View Camera, ISOFIX Mounts'
+    },
+    variants: [
+      {
+        name: 'Sigma 1.5L Smart Hybrid 5MT',
+        exShowroom: 1099000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: false,
+        keyFeatures: ['All 4 Disc Brakes', 'ESP with Hill Hold Assist', 'Dual Airbags', 'Automatic Climate Control', 'Push Button Start/Stop', 'Projector Headlamps']
+      },
+      {
+        name: 'Delta 1.5L Smart Hybrid 5MT',
+        exShowroom: 1220000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Pro Touchscreen', 'Wireless Android Auto & Apple CarPlay', 'Reverse Parking Camera', 'Cruise Control', 'Suzuki Connect']
+      },
+      {
+        name: 'Delta 1.5L Smart Hybrid 6AT',
+        exShowroom: 1360000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.58 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter Automatic', 'Paddle Shifters', 'Hill Hold Assist', 'Cruise Control', '7-inch Touchscreen']
+      },
+      {
+        name: 'Delta 1.5L S-CNG 5MT',
+        exShowroom: 1315000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C CNG (87.8 PS)',
+        mileage: '26.60 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP MID-SUV CNG PICK',
+        keyFeatures: ['Factory S-CNG with 26.60 km/kg Economy', '7-inch SmartPlay Pro Display', 'Reverse Camera', 'All 4 Disc Brakes', 'Auto Climate Control']
+      },
+      {
+        name: 'Zeta 1.5L Smart Hybrid 5MT',
+        exShowroom: 1401000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE',
+        keyFeatures: ['6 Airbags Standard', 'Full LED Headlamps & NEXTre DRLs', '9-inch SmartPlay Pro+ Touchscreen', '17-inch Precision Cut Alloys', 'Arkamy Sound System']
+      },
+      {
+        name: 'Zeta 1.5L Smart Hybrid 6AT',
+        exShowroom: 1541000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.58 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Automatic with Paddle Shifters', '6 Airbags', '9-inch SmartPlay Pro+', 'Auto LED Headlamps', '17-inch Alloys']
+      },
+      {
+        name: 'Zeta 1.5L S-CNG 5MT',
+        exShowroom: 1496000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C CNG (87.8 PS)',
+        mileage: '26.60 km/kg',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard with S-CNG', '9-inch SmartPlay Pro+ Screen', 'LED Headlamps & DRLs', '17-inch Precision Cut Alloys']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 5MT',
+        exShowroom: 1551000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: false,
+        keyFeatures: ['Panoramic Sunroof (Dual-Pane Sliding)', '360 HD View Camera', 'Leatherette Upholstery', 'Drive Modes', 'Dual-Tone Roof Option']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 6AT',
+        exShowroom: 1691000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.58 km/l',
+        isVFM: false,
+        keyFeatures: ['Panoramic Sunroof', '6-Speed AT with Paddle Shifters', '360 HD Camera', 'Black & Bordeaux Leatherette Interior']
+      },
+      {
+        name: 'Alpha 1.5L ALLGRIP (AWD) 5MT',
+        exShowroom: 1701000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.38 km/l',
+        isVFM: true,
+        vfmBadge: '🏔️ 4X4 ALLGRIP ADVENTURE',
+        keyFeatures: ['ALLGRIP Select 4WD System', 'Auto, Sport, Snow & Lock Drive Modes', 'Hill Descent Control', 'Panoramic Sunroof', '360 HD Camera']
+      },
+      {
+        name: 'Zeta+ 1.5L Strong Hybrid e-CVT',
+        exShowroom: 1843000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '1.5L Intelligent Electric Hybrid (115.56 PS)',
+        mileage: '27.97 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ HYBRID MILEAGE KING',
+        keyFeatures: ['Intelligent Electric Strong Hybrid (27.97 km/l)', 'Pure EV Driving Mode', 'Head-Up Display (HUD)', 'Wireless Smartphone Charger', '7-inch Digital Driver Display']
+      },
+      {
+        name: 'Alpha+ 1.5L Strong Hybrid e-CVT',
+        exShowroom: 2009000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '1.5L Intelligent Electric Hybrid (115.56 PS)',
+        mileage: '27.97 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Intelligent Electric Hybrid', 'Panoramic Sunroof', 'Front Ventilated Seats', '360 HD View Camera', 'Head-Up Display', 'Premium Black & Champagne Gold Accents']
+      }
+    ]
+  },
+
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
