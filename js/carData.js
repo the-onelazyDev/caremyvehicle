@@ -2179,6 +2179,174 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-xl6',
+    name: 'Maruti Suzuki XL6',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'Time to Indulge — 2nd Row Captain Seats, Front Ventilated Seats & 360 HD Camera',
+    launchDate: 'Updated 2024 (Smart Hybrid & Ventilated Seats)',
+    bodyType: 'MUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹11.61 - ₹14.77 Lakh',
+    minPrice: 1161000,
+    maxPrice: 1477000,
+    safetyRating: '4 Airbags Standard (Dual Front + Side), ESP with Hill Hold Assist, TPMS, 360 HD View Camera, ABS with EBD, ISOFIX',
+    groundClearance: '180 mm',
+    bootSpace: '209 L (All Rows Up) / 510 L (3rd Row Folded)',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki XL6 is NEXA’s premium 6-seater MPV engineered for executive family travel. Featuring individual plush 2nd-row captain seats with one-touch recline and individual armrests, ventilated front seats, 360-degree HD view camera, Tyre Pressure Monitoring System (TPMS), 6-speed automatic with paddle shifters, and certified 26.32 km/kg S-CNG efficiency.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
+        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Midnight Black Roof', hex: '#B6BABD' },
+        { id: 'brave-khaki-black-roof', name: 'Brave Khaki with Midnight Black Roof', hex: '#57490A' },
+        { id: 'opulent-red-black-roof', name: 'Opulent Red with Midnight Black Roof', hex: '#AC0F0F' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#B6BABD' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#464848' },
+        { id: 'arctic-white', name: 'Arctic White', hex: '#F9F9F9' },
+        { id: 'opulent-red', name: 'Opulent Red', hex: '#AC0F0F' },
+        { id: 'brave-khaki', name: 'Brave Khaki', hex: '#57490A' },
+        { id: 'pearl-midnight-black', name: 'Pearl Midnight Black', hex: '#040720' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/4.webp' },
+      { name: 'Splendid Silver with Midnight Black Roof', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/splendid-silver-black-roof/4.webp' },
+      { name: 'Brave Khaki with Midnight Black Roof', hex: '#57490A', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/brave-khaki-black-roof/4.webp' },
+      { name: 'Opulent Red with Midnight Black Roof', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/opulent-red-black-roof/4.webp' },
+      { name: 'Splendid Silver', hex: '#B6BABD', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/splendid-silver/4.webp' },
+      { name: 'Grandeur Grey', hex: '#464848', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/grandeur-grey/4.webp' },
+      { name: 'Arctic White', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/arctic-white/4.webp' },
+      { name: 'Opulent Red', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/opulent-red/4.webp' },
+      { name: 'Brave Khaki', hex: '#57490A', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/brave-khaki/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#040720', image: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/pearl-midnight-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Executive Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/4.webp' },
+      { label: 'NEXA Sweeping Cross-Bar Chrome Grille & Quad LED Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/1.webp' },
+      { label: 'Side Profile with 16-inch Precision Alloys & Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/7.webp' },
+      { label: 'Rear Smoke Grey Connected LED Lightguide Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/4.webp' },
+      { title: 'Bold Chrome Grille Insert with Quad Chamber Full LED Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/1.webp' },
+      { title: 'Aerodynamic Stretched MPV Silhouette with 16-inch Dual-Tone Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/7.webp' },
+      { title: 'Smoke Grey 3D LED Taillamp Cluster with Rear Backdoor Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/xl6/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15C DualJet Dual VVT Smart Hybrid Petrol (103.06 PS / 136.8 Nm) | 1.5L S-CNG (87.83 PS / 121.5 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 6-Speed Automatic with Paddle Shifters (6AT)',
+      dimensions: '4445 mm (L) × 1775 mm (W) × 1755 mm (H)',
+      wheelbase: '2740 mm',
+      fuelTank: '45 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Torsion Beam (Rear)',
+      safety: '4 Airbags Standard (Dual Front + Side), ESP with Hill Hold Assist, TPMS, 360 HD View Camera, ISOFIX Child Mounts'
+    },
+    variants: [
+      {
+        name: 'Zeta 1.5L Smart Hybrid 5MT',
+        exShowroom: 1161000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.97 km/l',
+        isVFM: false,
+        keyFeatures: ['2nd-Row Captain Seats with Armrests', '4 Airbags Standard', 'ESP with Hill Hold Assist', 'Automatic Climate Control', '7-inch SmartPlay Pro Touchscreen', 'Cruise Control', '16-inch Dual-Tone Alloys']
+      },
+      {
+        name: 'Zeta 1.5L S-CNG 5MT',
+        exShowroom: 1256000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C CNG (87.83 PS)',
+        mileage: '26.32 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP 6-SEATER CNG PICK',
+        keyFeatures: ['Factory S-CNG with 26.32 km/kg Economy', '2nd-Row Captain Seats', '4 Airbags Standard', '7-inch Touchscreen with Smartphone Link', 'Automatic Climate Control']
+      },
+      {
+        name: 'Zeta 1.5L Smart Hybrid 6AT',
+        exShowroom: 1301000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.27 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter Automatic', 'Steering Mounted Paddle Shifters', '4 Airbags', 'Cruise Control', 'Hill Hold Assist']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 5MT',
+        exShowroom: 1261000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.97 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['360-Degree HD Surround Camera', 'Leatherette Seat Upholstery', 'Auto Headlamps with Follow-Me-Home', 'UV Cut Glass', 'SmartPlay Pro Display']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 6AT',
+        exShowroom: 1401000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.27 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed AT with Paddle Shifters', '360 HD View Camera', 'Leatherette Seats', 'Auto Headlamps', 'Cruise Control']
+      },
+      {
+        name: 'Alpha+ 1.5L Smart Hybrid 5MT',
+        exShowroom: 1321000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.97 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE (VENTILATED SEATS)',
+        keyFeatures: ['Front Ventilated Seats (Driver & Co-Driver)', 'Tyre Pressure Monitoring System (TPMS)', '360 HD Surround Camera', 'Smoke Grey LED Taillamps', 'Backdoor Spoiler']
+      },
+      {
+        name: 'Alpha+ 1.5L Smart Hybrid 6AT',
+        exShowroom: 1461000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.27 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec 6-Seater Automatic', 'Front Ventilated Seats', '6-Speed AT with Paddle Shifters', '360 HD Camera', 'TPMS', 'Smoke Grey Taillamps']
+      },
+      {
+        name: 'Alpha+ 1.5L Smart Hybrid 5MT Dual-Tone',
+        exShowroom: 1337000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.97 km/l',
+        isVFM: false,
+        keyFeatures: ['Midnight Black Contrast Roof (Silver/Khaki/Red)', 'Front Ventilated Seats', 'TPMS', '360 HD Camera', 'Black ORVMs']
+      },
+      {
+        name: 'Alpha+ 1.5L Smart Hybrid 6AT Dual-Tone',
+        exShowroom: 1477000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.27 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship 6-Seater Automatic Dual-Tone', 'Front Ventilated Seats', '6-Speed AT with Paddle Shifters', 'TPMS', '360 HD View Camera']
+      }
+    ]
+  },
+
 
 
 
