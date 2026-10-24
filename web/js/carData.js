@@ -2049,6 +2049,137 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-jimny',
+    name: 'Maruti Suzuki Jimny',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'Never Turn Back — ALLGRIP PRO 4x4, Heavy-Duty Ladder Frame & 3-Link Rigid Axle',
+    launchDate: '5-Door Generation (ALLGRIP PRO 4x4 Standard)',
+    bodyType: 'Off-Road SUV',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹12.74 - ₹14.95 Lakh',
+    minPrice: 1274000,
+    maxPrice: 1495000,
+    safetyRating: '6 Airbags Standard, Brake LSD (Limited Slip Differential), ESP with Hill Hold & Hill Descent Control, ABS with EBD',
+    groundClearance: '210 mm',
+    bootSpace: '211 L (Expandable to 332 L)',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/4.webp',
+    summary: 'The Maruti Suzuki Jimny 5-Door is a purebred off-roader designed to conquer any terrain. Built on a rigid ladder frame chassis with 3-link rigid axle coil-spring suspension, ALLGRIP PRO 4WD system with low-range transfer gear (4L), 210mm ground clearance, and standard 6 airbags across all variants, it brings authentic 4x4 heritage with everyday usability.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'kinetic-yellow-black-roof',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'kinetic-yellow-black-roof', name: 'Kinetic Yellow with Bluish Black Roof', hex: '#E1ED4D' },
+        { id: 'sizzling-red-black-roof', name: 'Sizzling Red with Bluish Black Roof', hex: '#B21511' },
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
+        { id: 'sizzling-red', name: 'Sizzling Red', hex: '#B21511' },
+        { id: 'bluish-black', name: 'Bluish Black', hex: '#040720' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F9F9F9' },
+        { id: 'granite-grey', name: 'Granite Grey', hex: '#494A4E' }
+      ]
+    },
+    colors: [
+      { name: 'Kinetic Yellow with Bluish Black Roof', hex: '#E1ED4D', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/4.webp' },
+      { name: 'Sizzling Red with Bluish Black Roof', hex: '#B21511', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/sizzling-red-black-roof/4.webp' },
+      { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/nexa-blue/4.webp' },
+      { name: 'Sizzling Red', hex: '#B21511', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/sizzling-red/4.webp' },
+      { name: 'Bluish Black', hex: '#040720', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/bluish-black/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F9F9F9', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/pearl-arctic-white/4.webp' },
+      { name: 'Granite Grey', hex: '#494A4E', image: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/granite-grey/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Upright 4x4 Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/4.webp' },
+      { label: 'Heritage 5-Slot Grille & Round LED Projectors', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/1.webp' },
+      { label: 'Side Profile with 210mm Ground Clearance & 5-Door Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/7.webp' },
+      { label: 'Rear Tailgate-Mounted Spare Wheel & Bumper Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Kinetic Yellow', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/4.webp' },
+      { title: 'Iconic 5-Slot Front Grille with Chrome Accents and Round Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/1.webp' },
+      { title: 'Boxy Utilitarian Body Profile on Rugged Ladder Frame Chassis', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/7.webp' },
+      { title: 'Side-Hinged Rear Tailgate with Full-Size 15-inch Spare Wheel', url: 'https://ik.imagekit.io/2908vvlod/cars/jimny/360/kinetic-yellow-black-roof/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15B 4-Cylinder Petrol Engine (104.8 PS / 134.2 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 4-Speed Automatic (4AT) with Low-Range Gearbox',
+      dimensions: '3985 mm (L) × 1645 mm (W) × 1720 mm (H)',
+      wheelbase: '2590 mm',
+      fuelTank: '40 Litres',
+      brakes: 'Front Disc / Rear Drum with Brake LSD (Limited Slip Differential)',
+      suspension: '3-Link Rigid Axle with Coil Spring (Front & Rear)',
+      safety: '6 Airbags Standard across all trims, ALLGRIP PRO 4WD, Hill Hold Assist, Hill Descent Control, Rear Camera, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'Zeta 1.5L 4WD 5MT',
+        exShowroom: 1274000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.94 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE 4X4 OFF-ROADER',
+        keyFeatures: ['ALLGRIP PRO 4WD with Low-Range Transfer (2H/4H/4L)', '6 Airbags Standard', 'Brake LSD (Limited Slip Differential)', 'Hill Hold & Descent Control', '7-inch SmartPlay Pro Touchscreen', 'Wireless Apple CarPlay & Android Auto']
+      },
+      {
+        name: 'Zeta 1.5L 4WD 4AT',
+        exShowroom: 1384000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.39 km/l',
+        isVFM: false,
+        keyFeatures: ['4-Speed Torque Converter AT with 4WD', '6 Airbags Standard', 'ESP & Hill Hold Control', '7-inch Touchscreen', 'Electric ORVMs']
+      },
+      {
+        name: 'Alpha 1.5L 4WD 5MT',
+        exShowroom: 1369000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.94 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE (TOP SPEC)',
+        keyFeatures: ['9-inch SmartPlay Pro+ Touchscreen with ARKAMYS', 'LED Projector Headlamps with Headlamp Washers', 'Cruise Control', 'Automatic Climate Control', '15-inch Gunmetal Alloy Wheels', 'Dark Green UV Cut Glass']
+      },
+      {
+        name: 'Alpha 1.5L 4WD 4AT',
+        exShowroom: 1479000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.39 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec 4x4 Automatic', 'Headlamp Washers', '9-inch SmartPlay Pro+', 'Cruise Control', 'Auto Climate Control', '15-inch Alloys']
+      },
+      {
+        name: 'Alpha 1.5L 4WD 5MT Dual-Tone',
+        exShowroom: 1385000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.94 km/l',
+        isVFM: false,
+        keyFeatures: ['Signature Dual-Tone Roof (Kinetic Yellow / Sizzling Red with Black Roof)', '9-inch Screen', 'LED Headlamp Washers', 'Cruise Control']
+      },
+      {
+        name: 'Alpha 1.5L 4WD 4AT Dual-Tone',
+        exShowroom: 1495000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Petrol (104.8 PS)',
+        mileage: '16.39 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Dual-Tone 4x4 Automatic', 'Kinetic Yellow with Bluish Black Roof', 'Headlamp Washers', '9-inch SmartPlay Pro+', 'Cruise Control']
+      }
+    ]
+  },
+
 
 
   {
