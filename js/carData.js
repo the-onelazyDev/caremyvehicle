@@ -1018,6 +1018,182 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-victoris',
+    name: 'Maruti Suzuki Victoris',
+    brand: 'Maruti Suzuki',
+    tagline: 'Flagship Mid-Size SUV with Level 2 ADAS, Panoramic Sunroof, ALLGRIP AWD & Strong Hybrid',
+    launchDate: 'New Launch 2025-2026',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Hybrid', 'CNG'],
+    priceRange: '₹10.49 - ₹19.99 Lakh',
+    minPrice: 1049000,
+    maxPrice: 1999000,
+    safetyRating: 'Level 2 ADAS (AEB, Lane Keep, ACC), 6 Airbags Standard, 360 HD View Camera',
+    groundClearance: '210 mm',
+    bootSpace: '373 L',
+    waitingPeriod: '4 - 10 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp',
+    summary: 'The Maruti Suzuki Victoris is the brand’s flagship mid-size SUV engineered with commanding road presence, state-of-the-art Level 2 ADAS autonomous safety, dual-pane panoramic sunroof, and All-Terrain ALLGRIP SELECT AWD. It offers three versatile powertrains: 1.5L K15C Smart Hybrid (petrol MT/AT), 1.5L S-CNG, and the ultra-refined 1.5L Intelligent Strong Hybrid with EV drive mode delivering an astonishing 27.97 km/l. Equipped with a 10.25-inch SmartPlay Pro+ touchscreen, ventilated front seats, head-up display (HUD), and connected car tech.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360',
+      format: 'webp',
+      defaultColor: 'sizzling-red-black-roof',
+      colors: [
+        { id: 'sizzling-red-black-roof', name: 'Sizzling Red with Black Roof', hex: '#A10000' },
+        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Black Roof', hex: '#EDEDF2' },
+        { id: 'celestial-blue-black-roof', name: 'Celestial Blue with Black Roof', hex: '#24475B' },
+        { id: 'arctic-white', name: 'Arctic White', hex: '#F3F3F3' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#2B2C31' },
+        { id: 'celestial-blue', name: 'Celestial Blue', hex: '#24475B' },
+        { id: 'midnight-black', name: 'Midnight Black', hex: '#141414' },
+        { id: 'sizzling-red', name: 'Sizzling Red', hex: '#A10000' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
+        { id: 'brave-khaki', name: 'Brave Khaki', hex: '#233B47' }
+      ]
+    },
+    colors: [
+      { name: 'Sizzling Red with Black Roof', hex: '#A10000', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp' },
+      { name: 'Splendid Silver with Black Roof', hex: '#EDEDF2', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/splendid-silver-black-roof/4.webp' },
+      { name: 'Celestial Blue with Black Roof', hex: '#24475B', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/celestial-blue-black-roof/4.webp' },
+      { name: 'Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/arctic-white/4.webp' },
+      { name: 'Grandeur Grey', hex: '#2B2C31', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/grandeur-grey/4.webp' },
+      { name: 'Celestial Blue', hex: '#24475B', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/celestial-blue/4.webp' },
+      { name: 'Midnight Black', hex: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/midnight-black/4.webp' },
+      { name: 'Sizzling Red', hex: '#A10000', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red/4.webp' },
+      { name: 'Splendid Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/splendid-silver/4.webp' },
+      { name: 'Brave Khaki', hex: '#233B47', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/brave-khaki/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp' },
+      { label: 'Front Dominant Hex Grille & Triple LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/1.webp' },
+      { label: 'Side Muscular SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/7.webp' },
+      { label: 'Rear Connected Horizon LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp' },
+      { title: 'Aggressive Geometric Grille with Next-Gen LED Projectors & ADAS Radar', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/1.webp' },
+      { title: 'Dynamic SUV Stance with High 210mm Ground Clearance & 17-inch Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/7.webp' },
+      { title: 'Signature Connected Horizon LED Lightbar with Skid Plate & Dual Exhaust Accents', url: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15C Smart Hybrid (103 PS / 137 Nm) | 1.5L Strong Hybrid e-CVT (116 PS / 141 Nm) | 1.5L S-CNG (87.8 PS / 121.5 Nm)',
+      transmissions: '5-Speed Manual (5MT), 6-Speed Torque Converter AT with Paddle Shifters, e-CVT (Strong Hybrid)',
+      dimensions: '4345 mm (L) × 1795 mm (W) × 1645 mm (H)',
+      wheelbase: '2600 mm',
+      fuelTank: '45 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Electronic Brake Pre-fill',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam with Coil Spring (Rear)',
+      safety: 'Level 2 ADAS (Autonomous Emergency Braking, Adaptive Cruise Control, Lane Departure Warning), 6 Airbags Standard, 360 HD Camera, ESP, Hill Hold & Hill Descent Control'
+    },
+    variants: [
+      {
+        name: 'LXi 1.5L MT',
+        exShowroom: 1049000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ESP with Hill Hold Assist', 'Dual LED Projector Headlamps', 'All 4 Disc Brakes', 'Keyless Entry & Push Start']
+      },
+      {
+        name: 'LXi 1.5L S-CNG MT',
+        exShowroom: 1149000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '26.6 km/kg',
+        isVFM: false,
+        keyFeatures: ['Factory S-CNG with 26.6 km/kg Mileage', '6 Airbags', 'All 4 Disc Brakes', 'ESP with Hill Hold']
+      },
+      {
+        name: 'VXi 1.5L MT',
+        exShowroom: 1199000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Touchscreen', 'Rear Parking Camera', 'Cruise Control', 'Paddle Shifters (AT)', 'Auto Climate Control']
+      },
+      {
+        name: 'VXi 1.5L AT (6-Speed)',
+        exShowroom: 1349000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.58 km/l',
+        isVFM: false,
+        keyFeatures: ['6-Speed Torque Converter Automatic', 'Steering Paddle Shifters', 'Hill Descent Control']
+      },
+      {
+        name: 'VXi 1.5L S-CNG MT',
+        exShowroom: 1299000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L K15C S-CNG (87.8 PS)',
+        mileage: '26.6 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG MID-SUV PICK',
+        keyFeatures: ['Factory S-CNG with 26.6 km/kg Economy', '7-inch Touchscreen', 'Cruise Control', 'Rear AC Vents']
+      },
+      {
+        name: 'ZXi 1.5L MT',
+        exShowroom: 1389000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ SEGMENT HIT (PANORAMIC SUNROOF)',
+        keyFeatures: ['Dual-Pane Panoramic Sunroof', '9-inch SmartPlay Pro+ Touchscreen', 'Wireless Apple CarPlay & Android Auto', '17-inch Diamond Cut Alloys', 'Full LED Horizon Lightbar']
+      },
+      {
+        name: 'ZXi 1.5L AT (6-Speed)',
+        exShowroom: 1539000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '20.58 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual-Pane Panoramic Sunroof', '6-Speed AT with Paddle Shifters', 'Wireless Charger']
+      },
+      {
+        name: 'ZXi+ 1.5L MT (ADAS)',
+        exShowroom: 1559000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '21.11 km/l',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Suite', '360 HD View Camera', 'Ventilated Front Seats', 'Panoramic Sunroof', 'Head-Up Display (HUD)']
+      },
+      {
+        name: 'ZXi+ 1.5L AT ALLGRIP AWD (4WD)',
+        exShowroom: 1729000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15C Smart Hybrid (103 PS)',
+        mileage: '19.38 km/l',
+        isVFM: false,
+        keyFeatures: ['All-Terrain ALLGRIP SELECT AWD (Auto/Sport/Snow/Lock)', 'Level 2 ADAS', 'Panoramic Sunroof', '360 HD Camera']
+      },
+      {
+        name: 'ZXi+ Strong Hybrid e-CVT',
+        exShowroom: 1999000,
+        fuel: 'Hybrid',
+        trans: 'Automatic',
+        engine: '1.5L Intelligent Strong Hybrid (116 PS)',
+        mileage: '27.97 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 27.97 KM/L MILEAGE KING',
+        keyFeatures: ['Intelligent Strong Hybrid with Pure EV Mode', '27.97 km/l Certified Economy', 'Panoramic Sunroof', 'Ventilated Seats', 'Level 2 ADAS', 'Head-Up Display']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
