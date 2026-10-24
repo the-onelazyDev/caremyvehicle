@@ -452,6 +452,152 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-celerio',
+    name: 'Maruti Suzuki Celerio',
+    brand: 'Maruti Suzuki',
+    tagline: 'India’s Most Fuel-Efficient Petrol Car with 26.68 km/l Mileage & 34.43 km/kg CNG',
+    launchDate: 'All-New 2nd Gen (3D Organic Sculpted Design)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹5.37 - ₹7.09 Lakh',
+    minPrice: 536500,
+    maxPrice: 709500,
+    safetyRating: 'Dual Airbags, ABS with EBD, ESP with Hill Hold Assist',
+    groundClearance: '170 mm',
+    bootSpace: '313 L (Best-in-class luggage capacity)',
+    waitingPeriod: '1 - 3 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp',
+    summary: 'The All-New Celerio is India’s most fuel-efficient petrol hatchback, delivering up to 26.68 km/l with the Next-Gen 1.0L K10C Dual Jet engine with idle start-stop, and an astonishing 34.43 km/kg on factory S-CNG. It features 3D organic sculpted styling, 7-inch SmartPlay Studio touchscreen, keyless entry with push start, 313L large boot, and 15-inch black alloys.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360',
+      format: 'webp',
+      defaultColor: 'solid-fire-red',
+      colors: [
+        { id: 'solid-fire-red', name: 'Solid Fire Red', hex: '#8E0D0F' },
+        { id: 'speedy-blue', name: 'Speedy Blue', hex: '#1F47C2' },
+        { id: 'arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
+        { id: 'glistening-grey', name: 'Glistening Grey', hex: '#4A4A4A' },
+        { id: 'silky-silver', name: 'Silky Silver', hex: '#737373' },
+        { id: 'caffeine-brown', name: 'Caffeine Brown', hex: '#28201D' }
+      ]
+    },
+    colors: [
+      { name: 'Solid Fire Red', hex: '#8E0D0F', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp' },
+      { name: 'Speedy Blue', hex: '#1F47C2', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/speedy-blue/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/arctic-white/4.webp' },
+      { name: 'Glistening Grey', hex: '#4A4A4A', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/glistening-grey/4.webp' },
+      { name: 'Silky Silver', hex: '#737373', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/silky-silver/4.webp' },
+      { name: 'Caffeine Brown', hex: '#28201D', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/caffeine-brown/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp' },
+      { label: 'Radiant Front Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/1.webp' },
+      { label: 'Side Profile & Black Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/7.webp' },
+      { label: 'Rear Tail-lamps & Bumper', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp' },
+      { title: 'Radiant Grille with Chrome Accent & Swept-back Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/1.webp' },
+      { title: 'Flowing Aerodynamic Silhouette with 15-inch Black Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/7.webp' },
+      { title: 'Distinctive Rear Profile with Droplet-Style Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L K10C Next-Gen Dual Jet Dual VVT (67 PS / 89 Nm) | S-CNG (56.7 PS / 82.1 Nm)',
+      transmissions: '5-Speed Manual (5MT) & Auto Gear Shift (AGS)',
+      dimensions: '3695 mm (L) × 1655 mm (W) × 1555 mm (H)',
+      wheelbase: '2435 mm',
+      fuelTank: '32 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: 'Dual Airbags, ABS with EBD, ESP, Hill Hold Assist, Reverse Parking Sensors'
+    },
+    variants: [
+      {
+        name: 'LXi 1.0L 5MT',
+        exShowroom: 536500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '25.24 km/l',
+        isVFM: false,
+        keyFeatures: ['Engine Idle Start-Stop', 'Dual Airbags', 'ABS with EBD', 'Reverse Parking Sensors', 'Manual AC with Heater']
+      },
+      {
+        name: 'VXi 1.0L 5MT',
+        exShowroom: 583500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '25.24 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['All 4 Power Windows', 'Central Locking', 'Body Coloured Door Handles', 'Rear Parcel Shelf', 'Day/Night IRVM']
+      },
+      {
+        name: 'VXi 1.0L AGS (Automatic)',
+        exShowroom: 638500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '26.68 km/l',
+        isVFM: false,
+        keyFeatures: ['Auto Gear Shift (AGS)', '26.68 km/l (India’s Most Fuel-Efficient Petrol)', 'Hill Hold Assist', 'Gear Position Indicator']
+      },
+      {
+        name: 'VXi 1.0L S-CNG 5MT',
+        exShowroom: 673500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.0L K10C S-CNG (56.7 PS)',
+        mileage: '34.43 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ SEGMENT-BEST CNG MILEAGE',
+        keyFeatures: ['Factory S-CNG (34.43 km/kg)', 'Dual Interdependent ECUs', 'Micro-Switch Fuel Lid Cutoff', 'Power Windows']
+      },
+      {
+        name: 'ZXi 1.0L 5MT',
+        exShowroom: 611500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.97 km/l',
+        isVFM: false,
+        keyFeatures: ['SmartPlay Audio with Bluetooth', 'Steering Mounted Audio Controls', 'Tilt Adjustable Steering', 'Rear Defogger', 'Remote Keyless Entry']
+      },
+      {
+        name: 'ZXi 1.0L AGS (Automatic)',
+        exShowroom: 666500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '26.00 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', 'Hill Hold Assist', 'Steering Audio Controls', 'SmartPlay Audio']
+      },
+      {
+        name: 'ZXi+ 1.0L 5MT',
+        exShowroom: 659500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '24.97 km/l',
+        isVFM: false,
+        keyFeatures: ['7-inch SmartPlay Studio Touchscreen', 'Apple CarPlay & Android Auto', 'Engine Push Start/Stop with Smart Key', '15-inch Black Alloy Wheels', 'Electrically Folding ORVMs']
+      },
+      {
+        name: 'ZXi+ 1.0L AGS (Automatic)',
+        exShowroom: 709500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L K10C Dual Jet (67 PS)',
+        mileage: '26.00 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec AGS Automatic', '15-inch Black Alloys', 'Push Button Start', '7-inch Touchscreen', 'Front Fog Lamps']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
