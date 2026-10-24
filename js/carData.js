@@ -150,6 +150,152 @@ export const CARS = [
     ]
   },
   {
+    id: 'maruti-swift',
+    name: 'Maruti Suzuki Swift',
+    brand: 'Maruti Suzuki',
+    tagline: 'The Epic New Swift with All-New Z-Series Engine, 6 Airbags Standard & 360° Studio',
+    launchDate: 'All-New 4th Gen 2024',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.49 - ₹9.64 Lakh',
+    minPrice: 649000,
+    maxPrice: 964500,
+    safetyRating: '6 Airbags Standard Across All Variants, ESP & Hill Hold Assist',
+    groundClearance: '163 mm',
+    bootSpace: '265 L',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp',
+    summary: 'The Epic New 4th Generation Swift features the all-new 1.2L 3-cylinder Z-Series Dual Jet engine delivering up to 25.75 km/l (and 32.85 km/kg on S-CNG). It brings standard 6 airbags across every single variant, 9-inch SmartPlay Pro+ touchscreen with wireless CarPlay/Android Auto, Arkamys Surround Sense audio, wireless charging, and cruise control.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'assets/cars/swift/360',
+      format: 'webp',
+      defaultColor: 'sizzling-red-bluish-black',
+      colors: [
+        { id: 'sizzling-red-bluish-black', name: 'Sizzling Red with Bluish Black', hex: '#DC2626' },
+        { id: 'luster-blue', name: 'Luster Blue', hex: '#1F47C2' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F8FAFC' },
+        { id: 'magma-grey', name: 'Magma Grey', hex: '#475569' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#CBD5E1' },
+        { id: 'novel-orange', name: 'Novel Orange', hex: '#B33316' }
+      ]
+    },
+    colors: [
+      { name: 'Sizzling Red with Bluish Black', hex: '#DC2626', image: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { name: 'Luster Blue', hex: '#1F47C2', image: 'assets/cars/swift/360/luster-blue/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#F8FAFC', image: 'assets/cars/swift/360/pearl-arctic-white/4.webp' },
+      { name: 'Magma Grey', hex: '#475569', image: 'assets/cars/swift/360/magma-grey/4.webp' },
+      { name: 'Splendid Silver', hex: '#CBD5E1', image: 'assets/cars/swift/360/splendid-silver/4.webp' },
+      { name: 'Novel Orange', hex: '#B33316', image: 'assets/cars/swift/360/novel-orange/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { label: 'Front Fascia & Grille', url: 'assets/cars/swift/360/sizzling-red-bluish-black/1.webp' },
+      { label: 'Side Profile & Alloys', url: 'assets/cars/swift/360/sizzling-red-bluish-black/7.webp' },
+      { label: 'Rear Connected LED Taillamps', url: 'assets/cars/swift/360/sizzling-red-bluish-black/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance', url: 'assets/cars/swift/360/sizzling-red-bluish-black/4.webp' },
+      { title: 'Sporty Glossy Black Grille & DRLs', url: 'assets/cars/swift/360/sizzling-red-bluish-black/1.webp' },
+      { title: 'Side Profile with Dual-Tone Precision Cut Alloys', url: 'assets/cars/swift/360/sizzling-red-bluish-black/7.webp' },
+      { title: 'Rear Aerodynamic Stance & LED Tail-Lamps', url: 'assets/cars/swift/360/sizzling-red-bluish-black/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Z12E 3-Cylinder Dual Jet Dual VVT (81.58 PS / 111.7 Nm) | S-CNG (69.75 PS / 101.8 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 5-Speed Auto Gear Shift (AGS)',
+      dimensions: '3860 mm (L) × 1735 mm (W) × 1520 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres (Petrol) / 55 Litres Water Equivalent (CNG)',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam with Coil Spring (Rear)',
+      safety: '6 Airbags Standard, Electronic Stability Program (ESP), Hill Hold Assist, Reverse Camera with Guidelines'
+    },
+    variants: [
+      {
+        name: 'LXi 1.2L 5MT',
+        exShowroom: 649000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '24.80 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Program (ESP)', 'Hill Hold Assist', 'Halogen Projector Headlamps', 'All 4 Power Windows', 'Remote Keyless Entry']
+      },
+      {
+        name: 'VXi 1.2L 5MT',
+        exShowroom: 729500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '24.80 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['7-inch SmartPlay Touchscreen', 'Wireless Android Auto & Apple CarPlay', 'Steering Mounted Audio Controls', 'Electrically Adjustable ORVMs', 'Day/Night IRVM']
+      },
+      {
+        name: 'VXi 1.2L AGS (Automatic)',
+        exShowroom: 779500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '25.75 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed Auto Gear Shift (AGS)', '25.75 km/l Outstanding Fuel Economy', 'Gear Shift Indicator', 'Hill Hold Assist']
+      },
+      {
+        name: 'VXi 1.2L S-CNG 5MT',
+        exShowroom: 819500,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Z12E S-CNG (69.75 PS)',
+        mileage: '32.85 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CNG FUEL ECONOMY',
+        keyFeatures: ['Factory S-CNG (32.85 km/kg)', 'Dual Interdependent ECUs', 'Micro-Switch Fuel Cutoff', '7-inch SmartPlay Screen']
+      },
+      {
+        name: 'ZXi 1.2L 5MT',
+        exShowroom: 829500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '24.80 km/l',
+        isVFM: false,
+        keyFeatures: ['LED Projector Headlamps & DRLs', '15-inch Alloy Wheels', 'Automatic Climate Control', 'Engine Push Start/Stop with Smart Key', 'Wireless Phone Charger']
+      },
+      {
+        name: 'ZXi 1.2L AGS (Automatic)',
+        exShowroom: 879500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '25.75 km/l',
+        isVFM: false,
+        keyFeatures: ['5-Speed AGS Automatic', 'Auto Climate Control', '15-inch Alloys', 'Reverse Parking Camera', 'Rear AC Vents']
+      },
+      {
+        name: 'ZXi+ 1.2L 5MT (Dual Tone)',
+        exShowroom: 899500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '24.80 km/l',
+        isVFM: false,
+        keyFeatures: ['9-inch SmartPlay Pro+ HD Touchscreen', 'Arkamys Surround Sense Audio', 'Cruise Control', 'Precision Cut Two-Tone Alloys', 'Auto-Folding ORVMs']
+      },
+      {
+        name: 'ZXi+ 1.2L AGS Dual Tone',
+        exShowroom: 964500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Z12E Dual Jet (81.6 PS)',
+        mileage: '25.75 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec AGS Automatic', '9-inch Pro+ Display with OTA Updates', 'Arkamys 6-Speaker Audio', 'Cruise Control', 'Dual Tone Roof']
+      }
+    ]
+  },
+  {
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',

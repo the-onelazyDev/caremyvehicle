@@ -202,7 +202,8 @@ window.initSpin360 = function(spinConfig) {
   spinState.totalFrames = spinConfig.totalFrames || 24;
   spinState.currentFrame = 1;
   spinState.folder = spinConfig.folder;
-  spinState.currentColor = spinConfig.defaultColor || spinConfig.colors[0].folderName;
+  spinState.format = spinConfig.format || 'jpg';
+  spinState.currentColor = spinConfig.defaultColor || (spinConfig.colors[0].folderName || spinConfig.colors[0].id);
 
   const canvas = document.getElementById('spin360Canvas');
   const container = document.getElementById('spin360Container');
@@ -251,10 +252,11 @@ function preloadSpinFrames(colorName) {
   if (!spinState.imageCache[colorName]) {
     spinState.imageCache[colorName] = {};
   }
+  const ext = spinState.format || 'jpg';
   for (let i = 1; i <= spinState.totalFrames; i++) {
     if (!spinState.imageCache[colorName][i]) {
       const img = new Image();
-      img.src = `${spinState.folder}/${colorName}/${i}.jpg`;
+      img.src = `${spinState.folder}/${colorName}/${i}.${ext}`;
       img.onload = function() {
         if (!spinState.imageCache[colorName]) spinState.imageCache[colorName] = {};
         spinState.imageCache[colorName][i] = img;
@@ -272,20 +274,36 @@ function renderSpinFrame() {
   const ctx = canvas.getContext('2d');
   const frame = spinState.currentFrame;
   const color = spinState.currentColor;
+  const ext = spinState.format || 'jpg';
+
+  function drawCarImage(img) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Studio ground shadow ellipse for transparent renders
+    ctx.save();
+    ctx.beginPath();
+    const grad = ctx.createRadialGradient(canvas.width / 2, canvas.height * 0.82, 30, canvas.width / 2, canvas.height * 0.82, canvas.width * 0.40);
+    grad.addColorStop(0, 'rgba(0, 0, 0, 0.40)');
+    grad.addColorStop(0.5, 'rgba(0, 0, 0, 0.15)');
+    grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = grad;
+    ctx.ellipse(canvas.width / 2, canvas.height * 0.82, canvas.width * 0.36, canvas.height * 0.08, 0, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.restore();
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  }
 
   const cached = spinState.imageCache[color] && spinState.imageCache[color][frame];
   if (cached && cached.complete) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(cached, 0, 0, canvas.width, canvas.height);
+    drawCarImage(cached);
   } else {
     const img = new Image();
-    img.src = `${spinState.folder}/${color}/${frame}.jpg`;
+    img.src = `${spinState.folder}/${color}/${frame}.${ext}`;
     img.onload = function() {
       if (!spinState.imageCache[color]) spinState.imageCache[color] = {};
       spinState.imageCache[color][frame] = img;
-      if (spinState.currentFrame === frame) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      if (spinState.currentFrame === frame && spinState.currentColor === color) {
+        drawCarImage(img);
       }
     };
   }
@@ -593,7 +611,7 @@ window.openCarModal = function(carId) {
                     class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
                     data-color-index="${idx}"
                     style="background-color:${c.hex};" 
-                    onclick="window.selectSpinColor('${c.folderName}', ${idx})"
+                    onclick="window.selectSpinColor('${c.folderName || c.id}', ${idx})"
                     title="${c.name}"
                     aria-label="${c.name}"
                   ></button>
