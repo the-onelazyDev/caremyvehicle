@@ -2502,6 +2502,164 @@ export const CARS = [
       }
     ]
   },
+  {
+    id: 'maruti-ciaz',
+    name: 'Maruti Suzuki Ciaz',
+    brand: 'Maruti Suzuki (Nexa)',
+    tagline: 'Created to Inspire — Executive Lounge Luxury, Cavernous 510L Boot & Smart Hybrid Efficiency',
+    launchDate: 'Updated 2024 (Smart Hybrid & Dual-Tone Editions)',
+    bodyType: 'Sedan',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹9.40 - ₹12.45 Lakh',
+    minPrice: 940000,
+    maxPrice: 1245000,
+    safetyRating: 'Dual Airbags Standard, ESP with Hill Hold Assist, ABS with EBD, ISOFIX Child Mounts, Reverse Parking Camera',
+    groundClearance: '170 mm',
+    bootSpace: '510 L',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/4.webp',
+    summary: 'The Maruti Suzuki Ciaz is NEXA’s flagship executive sedan. Featuring a generous 2650mm wheelbase delivering best-in-class rear lounge legroom, cavernous 510-litre boot, 1.5L K15B Smart Hybrid petrol engine with dual-battery system, plush leather upholstery, and sharp LED projector headlamps with DRLs, it is tailored for premium chauffeur-driven and self-driven comfort alike.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 24,
+      defaultColor: 'nexa-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#1E2B71' },
+        { id: 'opulent-red-black-roof', name: 'Opulent Red with Black Roof', hex: '#D22735' },
+        { id: 'grandeur-grey-black-roof', name: 'Grandeur Grey with Black Roof', hex: '#6E6C6A' },
+        { id: 'dignity-brown-black-roof', name: 'Pearl Metallic Dignity Brown with Black Roof', hex: '#7E5B4B' },
+        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#9D9796' },
+        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#6E6C6A' },
+        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#DEDEDE' },
+        { id: 'opulent-red', name: 'Opulent Red', hex: '#D22735' },
+        { id: 'dignity-brown', name: 'Pearl Metallic Dignity Brown', hex: '#7E5B4B' },
+        { id: 'pearl-midnight-black', name: 'Pearl Midnight Black', hex: '#212121' }
+      ]
+    },
+    colors: [
+      { name: 'Nexa Blue (Celestial)', hex: '#1E2B71', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/4.webp' },
+      { name: 'Opulent Red with Black Roof', hex: '#D22735', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/opulent-red-black-roof/4.webp' },
+      { name: 'Grandeur Grey with Black Roof', hex: '#6E6C6A', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/grandeur-grey-black-roof/4.webp' },
+      { name: 'Pearl Metallic Dignity Brown with Black Roof', hex: '#7E5B4B', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/dignity-brown-black-roof/4.webp' },
+      { name: 'Splendid Silver', hex: '#9D9796', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/splendid-silver/4.webp' },
+      { name: 'Grandeur Grey', hex: '#6E6C6A', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/grandeur-grey/4.webp' },
+      { name: 'Pearl Arctic White', hex: '#DEDEDE', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/pearl-arctic-white/4.webp' },
+      { name: 'Opulent Red', hex: '#D22735', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/opulent-red/4.webp' },
+      { name: 'Pearl Metallic Dignity Brown', hex: '#7E5B4B', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/dignity-brown/4.webp' },
+      { name: 'Pearl Midnight Black', hex: '#212121', image: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/pearl-midnight-black/4.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Elegant Executive Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/4.webp' },
+      { label: 'Sleek Front Chrome Strip Grille & LED Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/1.webp' },
+      { label: 'Side Elongated Aerodynamic Profile & 16-inch Precision Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/7.webp' },
+      { label: 'Rear Sedan Profile with Split LED Combination Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Nexa Blue', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/4.webp' },
+      { title: 'NEXA Signature Chrome Wave Grille with Sharp LED Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/1.webp' },
+      { title: 'Long 4490mm Aerodynamic Sedan Stance with 16-inch Precision Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/7.webp' },
+      { title: 'Wide Rear Stance with Split Combination Tail Lamps and Chrome Bumper Accents', url: 'https://ik.imagekit.io/2908vvlod/cars/ciaz/360/nexa-blue/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L K15B Smart Hybrid Petrol (104.7 PS / 138 Nm)',
+      transmissions: '5-Speed Manual (5MT) & 4-Speed Automatic (4AT)',
+      dimensions: '4490 mm (L) × 1730 mm (W) × 1485 mm (H)',
+      wheelbase: '2650 mm (Best-in-Class Rear Legroom)',
+      fuelTank: '43 Litres',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Torsion Beam (Rear)',
+      safety: 'Dual Airbags Standard, ESP with Hill Hold Assist, ABS with EBD, ISOFIX Mounts, Rear Camera, Cruise Control'
+    },
+    variants: [
+      {
+        name: 'Sigma 1.5L Smart Hybrid 5MT',
+        exShowroom: 940000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.65 km/l',
+        isVFM: false,
+        keyFeatures: ['Projector Headlamps', 'All 4 Power Windows', 'Smart Hybrid Dual-Battery Tech', 'Rear AC Vents', 'Keyless Entry', 'Dual Airbags & ESP']
+      },
+      {
+        name: 'Delta 1.5L Smart Hybrid 5MT',
+        exShowroom: 1000000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.65 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 BEST VALUE FOR MONEY',
+        keyFeatures: ['15-inch Alloy Wheels', 'Front Fog Lamps', 'Cruise Control', 'Audio System with Steering Controls', 'Automatic Climate Control']
+      },
+      {
+        name: 'Delta 1.5L Smart Hybrid 4AT',
+        exShowroom: 1110000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.04 km/l',
+        isVFM: false,
+        keyFeatures: ['4-Speed Automatic Transmission', 'Hill Hold Assist', 'Cruise Control', '15-inch Alloys', 'Rear AC Vents']
+      },
+      {
+        name: 'Zeta 1.5L Smart Hybrid 5MT',
+        exShowroom: 1040000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.65 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE (EXECUTIVE LUXURY)',
+        keyFeatures: ['LED Projector Headlamps with DRLs', 'LED Fog Lamps', 'Engine Push Button Start', 'Rear Sunshade', 'Auto-Dimming IRVM', 'Reverse Parking Sensors']
+      },
+      {
+        name: 'Zeta 1.5L Smart Hybrid 4AT',
+        exShowroom: 1150000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.04 km/l',
+        isVFM: false,
+        keyFeatures: ['Automatic with LED Projectors', 'Push Start with Smart Key', 'ESP & Hill Hold', 'Rear Sunshade']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 5MT',
+        exShowroom: 1119000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.65 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 TOP-SPEC CHAUFFEUR PICK',
+        keyFeatures: ['Plush Leather Seat Upholstery', '7-inch SmartPlay Studio Touchscreen with Apple CarPlay', '16-inch Precision-Cut Alloys', 'Reverse Parking Camera', 'Birch Blonde Wood Accents']
+      },
+      {
+        name: 'Alpha 1.5L Smart Hybrid 4AT',
+        exShowroom: 1229000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.04 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-Spec Executive Automatic', 'Full Leather Seats', '7-inch Touchscreen with Navigation', '16-inch Precision Alloys', 'Reverse Camera']
+      },
+      {
+        name: 'Alpha 1.5L Dual-Tone (MT / 4AT)',
+        exShowroom: 1135000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L K15B Smart Hybrid (104.7 PS)',
+        mileage: '20.65 km/l',
+        isVFM: false,
+        keyFeatures: ['Midnight Black Contrast Roof (Red/Grey/Brown)', 'Leather Seats', '16-inch Alloys', '7-inch Touchscreen', 'LED Headlamps']
+      }
+    ]
+  },
+
 
 
 
