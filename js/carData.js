@@ -3744,6 +3744,187 @@ export const CARS = [
   },
 
   {
+    id: 'hyundai-verna',
+    name: 'Hyundai Verna',
+    brand: 'Hyundai',
+    tagline: 'Futuristic Fastback Sedan with 160 PS Turbo & 5-Star Global NCAP Safety',
+    launchDate: 'Updated 2025/2026',
+    bodyType: 'Sedan',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹11.00 - ₹17.48 Lakh',
+    minPrice: 1100400,
+    maxPrice: 1747800,
+    safetyRating: '5.0 ★ (Global NCAP Adult & Child Safety) | Level 2 ADAS',
+    groundClearance: '165 mm',
+    bootSpace: '528 L',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp',
+    summary: 'The 6th-generation Hyundai Verna redefines the mid-size sedan segment with its sensational fastback silhouette, parametric jewel grille, and full-width Horizon LED lightbars. Awarded a prestigious 5-Star Global NCAP crash test rating for both adult and child protection, it features Level 2 Hyundai SmartSense ADAS with 17 radar/camera features, segment-leading 160 PS 1.5L Turbo GDi engine, dual integrated 10.25-inch curved screens, Bose 8-speaker audio, and first-in-segment front heated and ventilated seats.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/verna/360',
+      format: 'webp',
+      defaultColor: 'starry-night',
+      colors: [
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'abyss-black', name: 'Abyss Black', hex: '#0D0E10' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
+        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
+        { id: 'tellurian-brown', name: 'Tellurian Brown', hex: '#54483C' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
+        { id: 'classy-blue', name: 'Classy Blue', hex: '#1D3557' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
+        { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/atlas-white/1.webp' },
+      { id: 'abyss-black', name: 'Abyss Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/abyss-black/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/titan-grey/1.webp' },
+      { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/titan-grey-matte/1.webp' },
+      { id: 'tellurian-brown', name: 'Tellurian Brown', hex: '#54483C', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/tellurian-brown/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/fiery-red/1.webp' },
+      { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/typhoon-silver/1.webp' },
+      { id: 'classy-blue', name: 'Classy Blue', hex: '#1D3557', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/classy-blue/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/atlas-white-black-roof/1.webp' },
+      { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/fiery-red-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp' },
+      { label: 'Horizon LED Lightbar & Parametric Jewel Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/5.webp' },
+      { label: 'Fastback Sedan Profile with 2670mm Wheelbase', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/14.webp' },
+      { label: 'Connected H-Signature LED Taillamps & Fastback Rear', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/23.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Starry Night', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp' },
+      { title: 'Unmistakable Horizon LED Position Lamp and Swept Parametric Black Chrome Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/5.webp' },
+      { title: 'Sensuous Fastback Profile with R16 Diamond-Cut Alloys & Satin Chrome Beltline', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/14.webp' },
+      { title: 'Futuristic Rear Design with Connected H-LED Taillamps and Integrated Trunk Wing', url: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/23.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L MPi 4-Cylinder Petrol (115 PS / 144 Nm) | 1.5L Turbo GDi Petrol (160 PS / 253 Nm)',
+      transmissions: '6-Speed Manual (6MT), Intelligent Variable Transmission (IVT), and 7-Speed Dual Clutch (7DCT) with Paddle Shifters',
+      dimensions: '4535 mm (L) × 1765 mm (W) × 1475 mm (H)',
+      wheelbase: '2670 mm (Longest in Segment)',
+      fuelTank: '45 Litres',
+      bootSpace: '528 Litres (Largest in Segment)',
+      brakes: 'All 4 Disc Brakes (Front Ventilated / Rear Solid Disc) with ABS & EBD',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '5-Star Global NCAP Rating, 6 Airbags Standard across all trims, Hyundai SmartSense Level 2 ADAS (17 Autonomous Features), ESC, VSM, Hill-Start Assist, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'EX 1.5L MPi 6MT',
+        exShowroom: 1100400,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '18.6 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Hill Start Assist', 'All 4 Power Windows', 'Height Adjustable Driver Seat', 'Rear Defogger with Timer', 'Tilt Steering']
+      },
+      {
+        name: 'S 1.5L MPi 6MT',
+        exShowroom: 1199500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '18.6 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 HIGH VALUE ENTRY',
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Horizon LED Daytime Running Lamp', 'Connecting LED Taillights', 'Fully Digital Cluster with Color TFT MID', 'Automatic Climate Control', 'Rear AC Vents']
+      },
+      {
+        name: 'SX 1.5L MPi 6MT',
+        exShowroom: 1308400,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '18.6 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR LUXURY PICK',
+        keyFeatures: ['Smart Electric Sunroof', '16-inch Diamond Cut Alloy Wheels', 'Wireless Smartphone Charger', 'Smart Key with Push Button Start', 'Rear View Camera with Guidelines', 'Cornering Lamps & LED Projector Headlamps']
+      },
+      {
+        name: 'SX 1.5L MPi IVT',
+        exShowroom: 1433400,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '19.6 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP CITY AUTOMATIC PICK',
+        keyFeatures: ['Smooth Stepless IVT Automatic', 'Paddle Shifters on Steering', 'Drive Modes (Eco, Normal, Sport)', 'Smart Electric Sunroof', '16-inch Diamond Cut Alloys', 'Cruise Control', 'Wireless Phone Charging']
+      },
+      {
+        name: 'SX(O) 1.5L MPi 6MT',
+        exShowroom: 1475400,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '18.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual 10.25-inch Integrated HD Screens', 'Front Heated & Ventilated Seats', 'Leatherette Upholstery', 'Bose Premium 8-Speaker Sound System with Subwoofer', 'Power Driver Seat', '64-Color Ambient Mood Lighting']
+      },
+      {
+        name: 'SX 1.5L Turbo GDi 6MT',
+        exShowroom: 1493400,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '20.0 km/l',
+        isVFM: true,
+        vfmBadge: '🚀 BEST PERFORMANCE VALUE',
+        keyFeatures: ['Segment-Best 160 PS / 253 Nm Turbo Power', '0-100 km/h in 8.1 Seconds', 'All 4 Disc Brakes with Red Brake Calipers', 'Black Interiors with Sporty Red Accents', 'Black Alloy Wheels', 'Smart Electric Sunroof']
+      },
+      {
+        name: 'SX(O) 1.5L Turbo GDi 6MT (ADAS)',
+        exShowroom: 1608600,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Hyundai SmartSense Level 2 ADAS (17 Features)', 'Forward Collision Warning & Avoidance Assist', 'Lane Keep Assist & Lane Departure Warning', 'Dual 10.25-inch Screens', 'Bose 8-Speaker Audio', 'Ventilated & Heated Front Seats']
+      },
+      {
+        name: 'SX 1.5L Turbo GDi 7DCT',
+        exShowroom: 1618400,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '20.6 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP TURBO DCT PICK',
+        keyFeatures: ['Lightning 7-Speed Dual Clutch Transmission', 'Paddle Shifters on Steering', 'Drive Modes (Eco, Normal, Sport)', 'Red Front Brake Calipers', 'Smart Electric Sunroof', 'Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'SX(O) 1.5L MPi IVT',
+        exShowroom: 1629400,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '19.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Naturally Aspirated Executive Cruiser', 'Hyundai SmartSense Level 2 ADAS', 'Front Heated & Ventilated Seats', 'Bose 8-Speaker Audio', 'Electronic Parking Brake with Auto Hold', 'Smart Trunk Hands-Free Release']
+      },
+      {
+        name: 'SX(O) 1.5L Turbo GDi 7DCT (ADAS)',
+        exShowroom: 1747800,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '20.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Ultimate Flagship Performance Sedan', 'Level 2 ADAS with Smart Cruise Control & Stop & Go', 'Blind-Spot Collision Avoidance Assist', 'Bose 8-Speaker Premium Audio', 'Heated & Ventilated Front Seats', '64-Color Ambient Mood Lighting']
+      }
+    ]
+  },
+
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
