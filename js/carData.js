@@ -3550,7 +3550,7 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp',
     summary: 'The Hyundai Venue establishes itself as India’s definitive tech-driven compact SUV, featuring Level 1 ADAS (Hyundai SmartSense), standard 6 airbags, connected LED lightbars, 8-inch touchscreen infotainment with Blue Link (60+ features), voice-controlled electric sunroof, 4-way power driver seat, and 2-step reclining rear seats. Available with three powertrain choices: 1.2L Kappa Petrol, 1.0L Turbo GDi with 7DCT, and 1.5L U2 CRDi Diesel.',
-    spinViewer360: {
+    spin360: {
       totalFrames: 36,
       folder: 'https://ik.imagekit.io/2908vvlod/cars/venue/360',
       format: 'webp',
@@ -3570,17 +3570,17 @@ export const CARS = [
       ]
     },
     colors: [
-      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/atlas-white.webp' },
-      { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titanium-black-knight.webp' },
-      { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titanium-black.webp' },
-      { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titan-grey.webp' },
-      { id: 'dragon-red', name: 'Dragon Red', hex: '#B51A22', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/dragon-red.webp' },
-      { id: 'hazel-blue', name: 'Hazel Blue', hex: '#3D546B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue.webp' },
-      { id: 'mystic-sapphire', name: 'Mystic Sapphire', hex: '#17233B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/mystic-sapphire.webp' },
-      { id: 'hazel-blue-matte', name: 'Hazel Blue Matte', hex: '#3D4C59', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue-matte.webp' },
-      { id: 'mystic-sapphire-matte', name: 'Mystic Sapphire Matte', hex: '#1C2A3A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/mystic-sapphire-matte.webp' },
-      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F2F4F7 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/atlas-white-black-roof.webp' },
-      { id: 'hazel-blue-black-roof', name: 'Hazel Blue with Titanium Black Roof', hex: 'linear-gradient(135deg, #4A5B6E 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue-black-roof.webp' }
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp' },
+      { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/titanium-black-knight/1.webp' },
+      { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/titanium-black/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/titan-grey/1.webp' },
+      { id: 'dragon-red', name: 'Dragon Red', hex: '#B51A22', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/dragon-red/1.webp' },
+      { id: 'hazel-blue', name: 'Hazel Blue', hex: '#3D546B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/hazel-blue/1.webp' },
+      { id: 'mystic-sapphire', name: 'Mystic Sapphire', hex: '#17233B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/mystic-sapphire/1.webp' },
+      { id: 'hazel-blue-matte', name: 'Hazel Blue Matte', hex: '#3D4C59', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/hazel-blue-matte/1.webp' },
+      { id: 'mystic-sapphire-matte', name: 'Mystic Sapphire Matte', hex: '#1C2A3A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/mystic-sapphire-matte/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F2F4F7 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white-black-roof/1.webp' },
+      { id: 'hazel-blue-black-roof', name: 'Hazel Blue with Titanium Black Roof', hex: 'linear-gradient(135deg, #4A5B6E 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/hazel-blue-black-roof/1.webp' }
     ],
     angles: [
       { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp' },
