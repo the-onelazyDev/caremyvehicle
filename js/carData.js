@@ -2756,11 +2756,232 @@ export const CARS = [
     ]
   },
 
-
-
-
-
-
+  {
+    id: 'hyundai-exter',
+    name: 'Hyundai Exter',
+    brand: 'Hyundai',
+    tagline: 'India’s Feature-Packed Entry SUV with 6 Airbags Standard & Smart Electric Sunroof',
+    launchDate: 'July 2023 (Hy-CNG Duo 2024)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.13 - ₹10.43 Lakh',
+    minPrice: 612800,
+    maxPrice: 1043000,
+    safetyRating: '6 Airbags Standard Across All Variants (Segment 1st)',
+    groundClearance: '185 mm',
+    bootSpace: '391 L (Petrol) / Practical Trunk with Hy-CNG Duo',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp',
+    summary: 'Hyundai Exter sets the benchmark in micro-SUVs with standard 6 airbags, voice-enabled smart electric sunroof, factory-fitted dual-camera dashcam, 8-inch touchscreen infotainment with smartphone connectivity, and revolutionary Hy-CNG Duo dual-cylinder technology providing practical boot space.',
+    spin360: {
+      totalFrames: 24,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/exter/360',
+      format: 'webp',
+      defaultColor: 'ranger-khaki',
+      colors: [
+        { id: 'ranger-khaki', name: 'Ranger Khaki with Abyss Black Roof', hex: '#667669' }
+      ]
+    },
+    colors: [
+      { name: 'Ranger Khaki with Black Roof', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
+      { name: 'Atlas White', hex: '#FFFFFF', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/atlas-white.webp' },
+      { name: 'Ranger Khaki (Monotone)', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki.webp' },
+      { name: 'Titan Grey', hex: '#5E6970', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titan-grey.webp' },
+      { name: 'Starry Night', hex: '#0A1929', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/starry-night.webp' },
+      { name: 'Titanium Black', hex: '#090A0F', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black.webp' },
+      { name: 'Titanium Black Matte', hex: '#231F20', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black-matte.webp' },
+      { name: 'Golden Bronze', hex: '#CFC8C2', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/golden-bronze.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp' },
+      { label: 'Signature Parametric Grille & H-LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/1.webp' },
+      { label: 'Rugged Side Profile with Roof Rails & Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/7.webp' },
+      { label: 'Rear Sculpted Stance & H-Signature Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/13.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Ranger Khaki', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp' },
+      { title: 'Bold Front Fascia with H-LED Daytime Running Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/1.webp' },
+      { title: 'Side Profile with Bridge-type Roof Rails & Distinctive C-Pillar Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/7.webp' },
+      { title: 'Rear Design with Prominent Skid Plate & Connected Tailgate Applique', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/13.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Kappa 4-Cylinder Petrol (83 PS / 114 Nm) | 1.2L Bi-Fuel Hy-CNG Duo (69 PS / 95.2 Nm)',
+      transmissions: '5-Speed Manual (5MT) & Smart Auto AMT with Paddle Shifters',
+      dimensions: '3815 mm (L) × 1710 mm (W) × 1631 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres (Petrol) / 60 Litres Water Equivalent (Dual Cylinder CNG)',
+      brakes: 'Front Disc / Rear Drum with ABS, EBD & Brake Assist',
+      suspension: 'MacPherson Strut (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard across all variants, ESC, VSM, Hill Start Assist Control (HAC), Highline TPMS, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'EX 1.2L Petrol 5MT',
+        exShowroom: 612800,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD', 'Central Locking', 'Digital Cluster with 4.2\" Color TFT MID', 'Front Power Windows', 'Driver Seat Height Adjust']
+      },
+      {
+        name: 'EX (O) 1.2L Petrol 5MT',
+        exShowroom: 648200,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Control (ESC)', 'Vehicle Stability Management (VSM)', 'Hill Start Assist Control (HAC)', 'Rear Parking Sensors']
+      },
+      {
+        name: 'S 1.2L Petrol 5MT',
+        exShowroom: 750000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: false,
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Rear AC Vents', 'Electrically Adjustable ORVMs', 'Steering Mounted Audio Controls', 'H-LED DRLs']
+      },
+      {
+        name: 'S (O)+ 1.2L Petrol 5MT (Sunroof)',
+        exShowroom: 786000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 MOST VALUE FOR MONEY (SUNROOF PICK)',
+        keyFeatures: ['Voice-enabled Smart Electric Sunroof', '8-inch Touchscreen with Navigation', 'Rear AC Vents', 'Highline TPMS', 'LED DRLs', '6 Airbags Standard']
+      },
+      {
+        name: 'S 1.2L Smart Auto AMT',
+        exShowroom: 815000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Smart Auto AMT with Steering Paddle Shifters', '8-inch Touchscreen Infotainment', 'Rear AC Vents', 'Hill Start Assist Control', 'ESC & VSM']
+      },
+      {
+        name: 'S (O)+ Hy-CNG Duo 5MT',
+        exShowroom: 850000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '27.1 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ TOP ECONOMY PICK (DUAL CYLINDER CNG)',
+        keyFeatures: ['Hy-CNG Duo Dual Cylinder Technology', 'Practical Usable Boot Space', 'Voice-enabled Electric Sunroof', '8-inch Touchscreen Infotainment', '6 Airbags Standard']
+      },
+      {
+        name: 'SX 1.2L Petrol 5MT',
+        exShowroom: 823000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: true,
+        vfmBadge: '⭐ CROWD FAVORITE BALANCED PICK',
+        keyFeatures: ['Voice-enabled Electric Sunroof', 'Projector Headlamps', 'Shark Fin Antenna', 'Rear View Camera with Guidelines', '15-inch Dual Tone Styled Wheels', 'Cruise Control']
+      },
+      {
+        name: 'SX 1.2L Smart Auto AMT',
+        exShowroom: 890000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof', 'Steering Mounted Paddle Shifters', 'Automatic Temperature Control (FATC)', 'Cruise Control', 'Rear View Camera']
+      },
+      {
+        name: 'SX Knight 1.2L Petrol 5MT',
+        exShowroom: 838000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Blackout Knight Edition Styling', 'Red Brake Calipers', 'All-Black Interior with Red Accents & Stitching', 'Electric Sunroof', 'Diamond Cut Black Alloys']
+      },
+      {
+        name: 'SX Knight 1.2L Smart Auto AMT',
+        exShowroom: 905000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Knight Edition Black Package', 'Smart Auto AMT with Paddle Shifters', 'Voice Sunroof', 'FATC Auto AC', 'Red Interior Accents']
+      },
+      {
+        name: 'SX Hy-CNG Duo 5MT',
+        exShowroom: 916000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '27.1 km/kg',
+        isVFM: true,
+        vfmBadge: '🌱 PREMIUM ECO PICK (SUNROOF + DUAL CNG)',
+        keyFeatures: ['Hy-CNG Duo Dual Cylinder Tech', 'Voice-enabled Electric Sunroof', 'Rear Camera with Guidelines', 'Projector Headlamps', 'Automatic Climate Control', '6 Airbags']
+      },
+      {
+        name: 'SX (O) 1.2L Petrol 5MT',
+        exShowroom: 887000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: false,
+        keyFeatures: ['15-inch Diamond Cut Alloy Wheels', 'Smart Key with Push Button Start/Stop', 'Wireless Smartphone Charger', 'Leather Wrapped Steering & Gear Knob', 'Auto Headlamps', 'Rear Wiper & Washer']
+      },
+      {
+        name: 'SX (O) 1.2L Smart Auto AMT',
+        exShowroom: 954000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['15-inch Diamond Cut Alloys', 'Smart Auto AMT with Paddle Shifters', 'Wireless Phone Charger', 'Push Button Start', 'Voice Sunroof', 'Automatic Climate Control']
+      },
+      {
+        name: 'SX (O) Connect 1.2L Petrol 5MT',
+        exShowroom: 956000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.4 km/l',
+        isVFM: true,
+        vfmBadge: '👑 TECH FLAGSHIP PICK (DUAL DASHCAM + CONNECTED)',
+        keyFeatures: ['Factory Dual Dashcam (Front & Cabin/Rear Recording)', 'Hyundai Bluelink Connected Car Tech (60+ Features)', 'Ambient Sounds of Nature', '8-inch HD Touchscreen with Navigation', 'OTA Updates', 'Voice Electric Sunroof']
+      },
+      {
+        name: 'SX (O) Connect 1.2L Smart Auto AMT',
+        exShowroom: 1028000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Dashcam Recording System', 'Bluelink Connected Car Tech', 'Paddle Shifters', 'Wireless Charger', 'Diamond Cut Alloys', 'Smart Electric Sunroof']
+      },
+      {
+        name: 'SX (O) Connect Knight 1.2L AMT',
+        exShowroom: 1043000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-of-the-Line Knight Edition Styling', 'Factory Dual Dashcam', 'Bluelink Connected Car Tech', 'Blacked-out Alloys with Red Calipers', 'Paddle Shifters', 'Full 6 Airbag Safety Suite']
+      }
+    ]
+  },
 
   {
     id: 'hyundai-grand-i10-nios',
