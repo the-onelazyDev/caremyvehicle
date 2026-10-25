@@ -3361,6 +3361,179 @@ export const CARS = [
   },
 
   {
+    id: 'hyundai-aura',
+    name: 'Hyundai Aura',
+    brand: 'Hyundai',
+    tagline: 'India’s Most Stylish Compact Sedan with 6 Airbags Standard & 402L Boot',
+    launchDate: 'Updated 2024 (6 Airbags Standard & Corporate Edition)',
+    bodyType: 'Sedan',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.00 - ₹9.05 Lakh',
+    minPrice: 600000,
+    maxPrice: 905000,
+    safetyRating: '6 Airbags Standard Across All Variants (ESC & HAC Standard)',
+    groundClearance: '165 mm',
+    bootSpace: '402 L (Petrol) / Factory Bi-Fuel CNG',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/1.webp',
+    summary: 'The new Hyundai Aura combines contemporary sedan elegance with standard 6 airbags, painted black radiator grille with inverted L-shaped LED DRLs, 8-inch touchscreen with Apple CarPlay/Android Auto, wireless phone charging, cruise control, segment-leading 402L boot space, and frugal 1.2L Kappa petrol & factory Bi-Fuel CNG powertrains.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/aura/360',
+      format: 'webp',
+      defaultColor: 'starry-night',
+      colors: [
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
+        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869' },
+        { id: 'vintage-brown', name: 'Vintage Brown', hex: '#5A4036' }
+      ]
+    },
+    colors: [
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/starry-night.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/atlas-white.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/titan-grey.webp' },
+      { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/typhoon-silver.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/fiery-red.webp' },
+      { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/aqua-teal.webp' },
+      { id: 'vintage-brown', name: 'Vintage Brown', hex: '#5A4036', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/vintage-brown.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/1.webp' },
+      { label: 'Painted Black Radiator Grille & Inverted L-LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/5.webp' },
+      { label: 'Side Sedan Silhouette with R15 Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/14.webp' },
+      { label: 'Sculpted Rear with Z-Shaped LED Taillamps & Lip Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/23.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Starry Night', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/1.webp' },
+      { title: 'Sophisticated Front Fascia with Glossy Black Grille and Integrated DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/5.webp' },
+      { title: 'Aerodynamic Sedan Profile with Chrome Door Handles and Shark Fin Antenna', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/14.webp' },
+      { title: 'Rear Design with Connected Chrome Garnish and Integrated Trunk Lip Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/23.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Kappa 4-Cylinder Petrol (83 PS / 114 Nm) | 1.2L Bi-Fuel CNG (69 PS / 95.2 Nm)',
+      transmissions: '5-Speed Manual (5MT) & Smart Auto AMT',
+      dimensions: '3995 mm (L) × 1680 mm (W) × 1520 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '37 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
+      brakes: 'Front Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard across all variants, Electronic Stability Control (ESC), Hill-Start Assist Control (HAC), Vehicle Stability Management (VSM), Highline TPMS, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'E 1.2L Petrol 5MT',
+        exShowroom: 600000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.5 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Front Power Windows', 'Central Locking', 'Highline TPMS', 'Engine Immobilizer']
+      },
+      {
+        name: 'E 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 690000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '28.0 km/kg',
+        isVFM: true,
+        vfmBadge: '⚡ BUDGET CNG PICK',
+        keyFeatures: ['Factory Bi-Fuel CNG with Dual ECU', '28.0 km/kg Fuel Economy', '6 Airbags Standard', 'Highline TPMS', 'Front Power Windows', 'Micro-Switch for Safe Fueling']
+      },
+      {
+        name: 'S Corporate 1.2L Petrol 5MT',
+        exShowroom: 684000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.5 km/l',
+        isVFM: true,
+        vfmBadge: '🎯 CORPORATE EDITION VALUE PICK',
+        keyFeatures: ['6.75-inch Touchscreen Infotainment', 'Phone Navigation & Bluetooth', 'Dual Tone Gunmetal Styled Wheels', 'Radiator Grille in Glossy Black', 'Driver Seat Height Adjust', 'Rear AC Vents']
+      },
+      {
+        name: 'S 1.2L Petrol 5MT',
+        exShowroom: 691000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.5 km/l',
+        isVFM: false,
+        keyFeatures: ['2-DIN Audio with Bluetooth & USB', 'Steering Mounted Audio Controls', 'Rear AC Vents', 'Remote Keyless Entry', 'LED Daytime Running Lamps', 'Electrically Adjustable ORVMs']
+      },
+      {
+        name: 'SX 1.2L Petrol 5MT',
+        exShowroom: 770000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.5 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR FAMILY PICK',
+        keyFeatures: ['8-inch Touchscreen with Apple CarPlay & Android Auto', 'Cruise Control', 'Rear View Camera with Guidelines', 'Automatic Climate Control (FATC)', '15-inch Dual Tone Styled Wheels', 'Shark Fin Antenna']
+      },
+      {
+        name: 'S 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 782000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '28.0 km/kg',
+        isVFM: true,
+        vfmBadge: '🌱 BEST MILEAGE COMMUTE PICK',
+        keyFeatures: ['Factory Bi-Fuel CNG (28.0 km/kg)', 'Rear AC Vents', 'Steering Mounted Controls', 'Remote Keyless Entry', '6 Airbags Standard', 'Rear Center Armrest with Cup Holders']
+      },
+      {
+        name: 'S Corporate 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 791000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '28.0 km/kg',
+        isVFM: false,
+        keyFeatures: ['Corporate Edition Black Accents', '6.75-inch Touchscreen Screen', '28.0 km/kg CNG Economy', 'Rear AC Vents', 'Highline TPMS', 'Gunmetal Styled Wheels']
+      },
+      {
+        name: 'SX (O) 1.2L Petrol 5MT',
+        exShowroom: 816000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.5 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP LUXURY SEDAN PICK',
+        keyFeatures: ['15-inch Diamond Cut Alloy Wheels', 'Smart Key with Push Button Start/Stop', 'Wireless Smartphone Charger', 'Cooled Glove Box', 'Leather Wrapped Steering Wheel', 'Projector Headlamps', 'Footwell Lighting']
+      },
+      {
+        name: 'SX Plus 1.2L Smart Auto AMT',
+        exShowroom: 835000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Convenient Smart Auto AMT', '8-inch Touchscreen with Apple CarPlay', 'Wireless Phone Charger', 'Rear View Camera', 'Push Button Start with Smart Key', 'FATC Automatic Climate Control']
+      },
+      {
+        name: 'SX 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 860000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '28.0 km/kg',
+        isVFM: true,
+        vfmBadge: '⭐ TOP-SPEC TECH CNG PICK',
+        keyFeatures: ['Top-spec CNG Sedan', '8-inch Touchscreen with Smartphone Mirroring', 'Rear Camera with Display on Screen', 'Automatic Climate Control', '15-inch Dual Tone Wheels', 'Full 6 Airbag Safety Suite']
+      }
+    ]
+  },
+
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
