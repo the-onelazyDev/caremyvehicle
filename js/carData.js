@@ -3175,6 +3175,191 @@ export const CARS = [
       }
     ]
   },
+
+  {
+    id: 'hyundai-i20',
+    name: 'Hyundai i20',
+    brand: 'Hyundai',
+    tagline: 'The Benchmark Premium Hatchback with 6 Airbags Standard & Smart Electric Sunroof',
+    launchDate: '2024 Facelift (6 Airbags Standard)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹6.00 - ₹10.63 Lakh',
+    minPrice: 599700,
+    maxPrice: 1063000,
+    safetyRating: '6 Airbags Standard Across All Variants (ESC & HAC Standard)',
+    groundClearance: '170 mm',
+    bootSpace: '311 L',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp',
+    summary: 'The new Hyundai i20 sets the benchmark in premium hatchbacks with its bold parametric jewel grille, 6 airbags standard, smart electric sunroof, 10.25-inch touchscreen with navigation & Bose premium 7-speaker audio system, wireless smartphone charger, and refined 1.2L Kappa petrol engine paired with 5MT or smooth Intelligent Variable Transmission (IVT).',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/i20/360',
+      format: 'webp',
+      defaultColor: 'starry-night',
+      colors: [
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: '#B71C1C' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
+        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
+        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
+        { id: 'knight-black', name: 'Titanium Black (Knight Edition)', hex: '#151515' }
+      ]
+    },
+    colors: [
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/starry-night.webp' },
+      { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/fiery-red-black-roof.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/atlas-white-black-roof.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/atlas-white.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/fiery-red.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/titan-grey.webp' },
+      { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/titan-grey-matte.webp' },
+      { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/typhoon-silver.webp' },
+      { id: 'knight-black', name: 'Titanium Black (Knight Edition)', hex: '#151515', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/knight-black.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp' },
+      { label: 'Parametric Jewel Front Grille & LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/5.webp' },
+      { label: 'Side Silhouette with R16 Diamond Cut Alloys & Chrome Beltline', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/14.webp' },
+      { label: 'Sculpted Rear with Z-Shaped LED Taillamps & Sporty Diffuser', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/23.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Starry Night', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp' },
+      { title: 'Bold Front Fascia with Parametric Black Grille and Swept-back Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/5.webp' },
+      { title: 'Coupe-Like Roofline with Shark Fin Antenna and Precision 16-inch Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/14.webp' },
+      { title: 'Dynamic Rear Tailgate Design with Distinctive Connected Reflector Bar', url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/23.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Kappa 4-Cylinder Petrol (83 PS / 114.7 Nm 5MT | 88 PS IVT)',
+      transmissions: '5-Speed Manual (5MT) & Intelligent Variable Transmission (IVT Automatic)',
+      dimensions: '3995 mm (L) × 1775 mm (W) × 1505 mm (H)',
+      wheelbase: '2580 mm',
+      fuelTank: '37 Litres',
+      brakes: 'Front Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard across all variants, Electronic Stability Control (ESC), Hill-Start Assist Control (HAC), Vehicle Stability Management (VSM), Highline TPMS, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'Era 1.2L Petrol 5MT',
+        exShowroom: 599700,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Hill-Start Assist Control', 'Central Locking', 'Front Power Windows', 'Highline TPMS']
+      },
+      {
+        name: 'Magna 1.2L Petrol 5MT',
+        exShowroom: 700000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Rear AC Vents', 'Steering Mounted Controls', 'LED DRLs', 'Remote Keyless Entry']
+      },
+      {
+        name: 'Sportz 1.2L Petrol 5MT',
+        exShowroom: 780000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: true,
+        vfmBadge: '🎯 BEST VALUE BALANCED PICK',
+        keyFeatures: ['8-inch Touchscreen with Smartphone Mirroring', 'Cruise Control', 'Rear Camera with Guidelines', 'Automatic Climate Control (FATC)', '16-inch Dual-Tone Stylised Wheels', 'Shark Fin Antenna']
+      },
+      {
+        name: 'Sportz (O) 1.2L Petrol 5MT (Sunroof)',
+        exShowroom: 834000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 MOST POPULAR SUNROOF PICK',
+        keyFeatures: ['Smart Electric Sunroof', 'Wireless Phone Charger', 'Rear Camera with Display on Screen', 'Cruise Control', 'Automatic Climate Control', 'Driver Armrest']
+      },
+      {
+        name: 'Sportz (O) Knight 1.2L 5MT',
+        exShowroom: 843000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['All-Black Knight Exterior Styling', 'Black Alloy Wheels with Red Brake Calipers', 'All-Black Interiors with Brass Accents', 'Smart Electric Sunroof', 'Exclusive Knight Badging']
+      },
+      {
+        name: 'Asta 1.2L Petrol 5MT',
+        exShowroom: 866000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Smart Electric Sunroof', 'LED Headlamps & Z-shaped LED Tail Lamps', '16-inch Diamond Cut Alloy Wheels', 'Smart Key with Push Button Start', 'Puddle Lamps', 'Ambient Lighting']
+      },
+      {
+        name: 'Sportz 1.2L Petrol IVT (Auto)',
+        exShowroom: 881000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa (88 PS)',
+        mileage: '19.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Intelligent Variable Transmission (IVT Auto)', 'Hill-Start Assist Control', '8-inch Touchscreen Infotainment', 'Cruise Control', 'Rear View Camera', 'FATC Auto AC']
+      },
+      {
+        name: 'Asta (O) 1.2L Petrol 5MT',
+        exShowroom: 920000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa (83 PS)',
+        mileage: '20.0 km/l',
+        isVFM: true,
+        vfmBadge: '👑 TECH FLAGSHIP PICK (BOSE AUDIO)',
+        keyFeatures: ['10.25-inch HD Touchscreen with Navigation', 'Bose Premium 7-Speaker Sound System', 'Hyundai Bluelink Connected Car Tech (60+ Features)', 'Smart Electric Sunroof', 'Home-to-Car (H2C) Alexa Integration', 'Voice Recognition']
+      },
+      {
+        name: 'Sportz (O) 1.2L Petrol IVT',
+        exShowroom: 926000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa (88 PS)',
+        mileage: '19.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Smart Electric Sunroof', 'Smooth IVT Automatic', 'Wireless Phone Charger', 'Rear View Camera', 'Cruise Control', 'Full Safety Suite']
+      },
+      {
+        name: 'Asta (O) 1.2L Petrol IVT (Auto Top-End)',
+        exShowroom: 1039000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa (88 PS)',
+        mileage: '19.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-of-the-Line IVT Automatic', '10.25-inch Touchscreen with Navigation', 'Bose 7-Speaker Audio', 'Bluelink Connected Car Suite', 'Electric Sunroof', '16-inch Diamond Cut Alloys']
+      },
+      {
+        name: 'Asta (O) Knight 1.2L IVT',
+        exShowroom: 1048000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa (88 PS)',
+        mileage: '19.6 km/l',
+        isVFM: false,
+        keyFeatures: ['Knight Edition Black Theme', 'Bose Premium Audio', '10.25-inch Navigation Screen', 'Electric Sunroof', 'Black Alloys with Red Front Calipers', 'Smooth IVT Automatic']
+      }
+    ]
+  },
+
   {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
