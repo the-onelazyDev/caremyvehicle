@@ -278,19 +278,30 @@ function renderSpinFrame() {
 
   function drawCarImage(img) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // Studio ground shadow ellipse for transparent renders
+    
+    // Proportional containment & centering for perfect aspect ratio
+    const hRatio = canvas.width / img.width;
+    const vRatio = canvas.height / img.height;
+    const ratio = Math.min(hRatio, vRatio, 1);
+    const drawWidth = img.width * ratio;
+    const drawHeight = img.height * ratio;
+    const drawX = (canvas.width - drawWidth) / 2;
+    const drawY = (canvas.height - drawHeight) / 2;
+
+    // Ground shadow tailored to image position
     ctx.save();
     ctx.beginPath();
-    const grad = ctx.createRadialGradient(canvas.width / 2, canvas.height * 0.82, 30, canvas.width / 2, canvas.height * 0.82, canvas.width * 0.40);
-    grad.addColorStop(0, 'rgba(0, 0, 0, 0.40)');
-    grad.addColorStop(0.5, 'rgba(0, 0, 0, 0.15)');
+    const shadowY = drawY + drawHeight * 0.94;
+    const grad = ctx.createRadialGradient(canvas.width / 2, shadowY, 20, canvas.width / 2, shadowY, drawWidth * 0.40);
+    grad.addColorStop(0, 'rgba(0, 0, 0, 0.35)');
+    grad.addColorStop(0.5, 'rgba(0, 0, 0, 0.12)');
     grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
     ctx.fillStyle = grad;
-    ctx.ellipse(canvas.width / 2, canvas.height * 0.82, canvas.width * 0.36, canvas.height * 0.08, 0, 0, 2 * Math.PI);
+    ctx.ellipse(canvas.width / 2, shadowY, drawWidth * 0.38, drawHeight * 0.08, 0, 0, 2 * Math.PI);
     ctx.fill();
     ctx.restore();
 
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
   }
 
   const cached = spinState.imageCache[color] && spinState.imageCache[color][frame];

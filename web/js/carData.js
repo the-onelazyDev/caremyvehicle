@@ -2771,38 +2771,47 @@ export const CARS = [
     groundClearance: '185 mm',
     bootSpace: '391 L (Petrol) / Practical Trunk with Hy-CNG Duo',
     waitingPeriod: '2 - 4 Weeks',
-    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/1.webp',
     summary: 'Hyundai Exter sets the benchmark in micro-SUVs with standard 6 airbags, voice-enabled smart electric sunroof, factory-fitted dual-camera dashcam, 8-inch touchscreen infotainment with smartphone connectivity, and revolutionary Hy-CNG Duo dual-cylinder technology providing practical boot space.',
     spin360: {
-      totalFrames: 24,
+      totalFrames: 36,
       folder: 'https://ik.imagekit.io/2908vvlod/cars/exter/360',
       format: 'webp',
-      defaultColor: 'ranger-khaki',
+      defaultColor: 'ranger-khaki-black-roof',
       colors: [
-        { id: 'ranger-khaki', name: 'Ranger Khaki with Abyss Black Roof', hex: '#667669' }
+        { id: 'ranger-khaki-black-roof', name: 'Ranger Khaki with Abyss Black Roof', hex: '#60695C' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
+        { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#687163' },
+        { id: 'titan-grey', name: 'Ecotronic Gray', hex: '#565A5C' },
+        { id: 'titan-grey-matte', name: 'Ecotronic Gray Matte', hex: '#5C6062' },
+        { id: 'starry-night', name: 'Starry Night', hex: '#1E2B37' },
+        { id: 'titanium-black', name: 'Titanium Black', hex: '#18181A' },
+        { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#2B2B2D' },
+        { id: 'golden-bronze', name: 'Golden Bronze', hex: '#96806C' }
       ]
     },
     colors: [
-      { id: 'ranger-khaki', name: 'Ranger Khaki with Abyss Black Roof', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
-      { name: 'Atlas White', hex: '#FFFFFF', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/atlas-white.webp' },
-      { name: 'Ranger Khaki (Monotone)', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki.webp' },
-      { name: 'Titan Grey', hex: '#5E6970', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titan-grey.webp' },
-      { name: 'Starry Night', hex: '#0A1929', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/starry-night.webp' },
-      { name: 'Titanium Black', hex: '#090A0F', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black.webp' },
-      { name: 'Titanium Black Matte', hex: '#231F20', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black-matte.webp' },
-      { name: 'Golden Bronze', hex: '#CFC8C2', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/golden-bronze.webp' }
+      { id: 'ranger-khaki-black-roof', name: 'Ranger Khaki with Abyss Black Roof', hex: '#60695C', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/atlas-white.webp' },
+      { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#687163', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki.webp' },
+      { id: 'titan-grey', name: 'Ecotronic Gray', hex: '#565A5C', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titan-grey.webp' },
+      { id: 'titan-grey-matte', name: 'Ecotronic Gray Matte', hex: '#5C6062', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titan-grey-matte.webp' },
+      { id: 'starry-night', name: 'Starry Night', hex: '#1E2B37', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/starry-night.webp' },
+      { id: 'titanium-black', name: 'Titanium Black', hex: '#18181A', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black.webp' },
+      { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#2B2B2D', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titanium-black-matte.webp' },
+      { id: 'golden-bronze', name: 'Golden Bronze', hex: '#96806C', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/golden-bronze.webp' }
     ],
     angles: [
-      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp' },
-      { label: 'Signature Parametric Grille & H-LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/1.webp' },
-      { label: 'Rugged Side Profile with Roof Rails & Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/7.webp' },
-      { label: 'Rear Sculpted Stance & H-Signature Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/13.webp' }
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/1.webp' },
+      { label: 'Signature Parametric Grille & H-LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/5.webp' },
+      { label: 'Rugged Side Profile with Roof Rails & Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/14.webp' },
+      { label: 'Rear Sculpted Stance & H-Signature Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/23.webp' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter 360° Studio Stance in Ranger Khaki', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/4.webp' },
-      { title: 'Bold Front Fascia with H-LED Daytime Running Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/1.webp' },
-      { title: 'Side Profile with Bridge-type Roof Rails & Distinctive C-Pillar Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/7.webp' },
-      { title: 'Rear Design with Prominent Skid Plate & Connected Tailgate Applique', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki/13.webp' }
+      { title: 'Front Three-Quarter 360° Studio Stance in Ranger Khaki', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/1.webp' },
+      { title: 'Bold Front Fascia with H-LED Daytime Running Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/5.webp' },
+      { title: 'Side Profile with Bridge-type Roof Rails & Distinctive C-Pillar Garnish', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/14.webp' },
+      { title: 'Rear Design with Prominent Skid Plate & Connected Tailgate Applique', url: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/23.webp' }
     ],
     specs: {
       engineOptions: '1.2L Kappa 4-Cylinder Petrol (83 PS / 114 Nm) | 1.2L Bi-Fuel Hy-CNG Duo (69 PS / 95.2 Nm)',
