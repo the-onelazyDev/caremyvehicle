@@ -344,6 +344,69 @@ window.selectSpinColor = function(colorFolder, colorIdx) {
   });
 };
 
+window.selectUniversalColor = function(colorIdx) {
+  if (!currentModalCar) return;
+  const colorsList = (currentModalCar.colors && currentModalCar.colors.length > 0)
+    ? currentModalCar.colors
+    : (currentModalCar.spin360 ? currentModalCar.spin360.colors : []);
+  const colObj = colorsList[colorIdx];
+  if (!colObj) return;
+
+  const spinContainer = document.getElementById('spin360Container');
+  const colorStage = document.getElementById('spinColorStage');
+  const displayImg = document.getElementById('spinColorDisplayImg');
+  const nameBadge = document.getElementById('colorNameBadge');
+  const colorDot = document.getElementById('colorDot');
+
+  // Check if this color has a matching 360 spin set
+  let spinMatch = null;
+  let spinMatchIdx = -1;
+  if (currentModalCar.spin360 && currentModalCar.spin360.colors) {
+    const sColors = currentModalCar.spin360.colors;
+    for (let i = 0; i < sColors.length; i++) {
+      const sc = sColors[i];
+      const scKey = (sc.folderName || sc.id || '').toLowerCase();
+      const colKey = (colObj.folderName || colObj.id || '').toLowerCase();
+      if ((scKey && colKey && scKey === colKey) ||
+          (sc.name && colObj.name && sc.name.toLowerCase() === colObj.name.toLowerCase()) ||
+          (sColors.length === colorsList.length && i === colorIdx)) {
+        spinMatch = sc;
+        spinMatchIdx = i;
+        break;
+      }
+    }
+  }
+
+  if (spinMatch && spinContainer) {
+    spinContainer.style.display = 'block';
+    if (colorStage) colorStage.style.display = 'none';
+    window.selectSpinColor(spinMatch.folderName || spinMatch.id, spinMatchIdx);
+  } else if (colorStage && displayImg) {
+    if (spinContainer) spinContainer.style.display = 'none';
+    colorStage.style.display = 'block';
+    displayImg.style.opacity = '0.3';
+    setTimeout(() => {
+      displayImg.src = colObj.image || colObj.url || currentModalCar.heroImage;
+      displayImg.style.opacity = '1';
+    }, 80);
+  }
+
+  if (nameBadge) nameBadge.textContent = colObj.name;
+  if (colorDot) {
+    colorDot.style.display = 'inline-block';
+    colorDot.style.backgroundColor = colObj.hex;
+  }
+
+  document.querySelectorAll('.color-swatch-btn').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === colorIdx);
+  });
+};
+
+window.returnTo360Spin = function() {
+  if (!currentModalCar || !currentModalCar.spin360) return;
+  window.selectUniversalColor(0);
+};
+
 window.toggleAutoSpin = function() {
   const btn = document.getElementById('btnAutoSpin');
   if (spinState.autoSpinInterval) {
@@ -466,6 +529,7 @@ window.openCarModal = function(carId) {
   const spin360 = car.spin360 || null;
   const gallery = car.gallery || [];
   const specs = car.specs || {};
+  const activePalette = (colors.length > 0) ? colors : (spin360 ? spin360.colors : []);
 
   modalBody.innerHTML = `
     <div class="modal-header">
@@ -594,24 +658,34 @@ window.openCarModal = function(carId) {
               </div>
             </div>
 
+            <!-- 2D High-Res Official Shade Stage (shown when a non-360 color is selected) -->
+            <div class="color-stage" id="spinColorStage" style="display:none; text-align:center;">
+              <img id="spinColorDisplayImg" src="" alt="${car.name}" class="color-display-img" style="max-height:480px; width:auto; margin:0 auto; display:block;">
+              <div style="margin-top:10px;">
+                <button type="button" class="city-selector-btn" style="padding:6px 14px; font-size:12px; font-weight:700; cursor:pointer;" onclick="window.returnTo360Spin()">
+                  🔄 Switch back to 360° Spin Studio
+                </button>
+              </div>
+            </div>
+
             <div class="color-name-badge">
-              <span id="colorDot" class="color-dot" style="background-color:${spin360.colors[0].hex};"></span>
-              <span id="colorNameBadge">${spin360.colors[0].name}</span>
+              <span id="colorDot" class="color-dot" style="background-color:${activePalette[0].hex};"></span>
+              <span id="colorNameBadge">${activePalette[0].name}</span>
             </div>
 
             <div class="colors-section" style="margin-top:4px;">
               <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
-                Official Paint Shades (${spin360.colors.length} Available) • Tap to switch shade:
+                Official Paint Shades (${activePalette.length} Available) • Tap to switch shade:
               </p>
 
               <div class="color-swatches">
-                ${spin360.colors.map((c, idx) => `
+                ${activePalette.map((c, idx) => `
                   <button 
                     type="button" 
                     class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
                     data-color-index="${idx}"
                     style="background-color:${c.hex};" 
-                    onclick="window.selectSpinColor('${c.folderName || c.id}', ${idx})"
+                    onclick="window.selectUniversalColor(${idx})"
                     title="${c.name}"
                     aria-label="${c.name}"
                   ></button>

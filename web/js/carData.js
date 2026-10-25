@@ -2783,7 +2783,7 @@ export const CARS = [
       ]
     },
     colors: [
-      { name: 'Ranger Khaki with Black Roof', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
+      { id: 'ranger-khaki', name: 'Ranger Khaki with Abyss Black Roof', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
       { name: 'Atlas White', hex: '#FFFFFF', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/atlas-white.webp' },
       { name: 'Ranger Khaki (Monotone)', hex: '#667669', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki.webp' },
       { name: 'Titan Grey', hex: '#5E6970', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/titan-grey.webp' },
