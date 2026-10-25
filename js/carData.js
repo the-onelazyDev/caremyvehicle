@@ -3925,6 +3925,188 @@ export const CARS = [
   },
 
   {
+    id: 'hyundai-alcazar',
+    name: 'Hyundai Alcazar',
+    brand: 'Hyundai',
+    tagline: 'Intelligent 6 & 7-Seater Premium SUV with Level 2 ADAS & Dual Connected Cockpit',
+    launchDate: 'Updated 2025/2026',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹14.99 - ₹21.55 Lakh',
+    minPrice: 1499000,
+    maxPrice: 2155000,
+    safetyRating: '6 Airbags Standard Across All Variants | Hyundai SmartSense Level 2 ADAS (70+ Features)',
+    groundClearance: '200 mm',
+    bootSpace: '180 L (All Rows Up) / 579 L (3rd Row Folded)',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp',
+    summary: 'The new Hyundai Alcazar facelift elevates family luxury with commanding SUV road presence, signature H-shaped LED daytime running lights, and versatile 6 or 7-passenger configurations. Featuring first-in-segment ventilated seats for both 1st and 2nd row captain chairs, dual 10.25-inch curved cockpit screens, voice-enabled panoramic sunroof, Level 2 ADAS with 70+ safety features, dual wireless phone chargers, and Digital Key with NFC. Powered by a potent 160 PS 1.5L Turbo GDi petrol and a high-efficiency 1.5L U2 CRDi diesel.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360',
+      format: 'webp',
+      defaultColor: 'robust-emerald-matte',
+      colors: [
+        { id: 'robust-emerald-matte', name: 'Robust Emerald Matte', hex: '#1E352F' },
+        { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'abyss-black', name: 'Titanium Black', hex: '#0D0E10' },
+        { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E' },
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
+        { id: 'taiga-brown', name: 'Taiga Brown', hex: '#4A3C31' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'robust-emerald-matte', name: 'Robust Emerald Matte', hex: '#1E352F', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp' },
+      { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-pearl/1.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/atlas-white/1.webp' },
+      { id: 'abyss-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/abyss-black/1.webp' },
+      { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/abyss-black-matte/1.webp' },
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/starry-night/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/titan-grey/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/fiery-red/1.webp' },
+      { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/typhoon-silver/1.webp' },
+      { id: 'taiga-brown', name: 'Taiga Brown', hex: '#4A3C31', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/taiga-brown/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/atlas-white-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp' },
+      { label: 'H-Shaped Horizon LED DRLs & Quad-Beam Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/5.webp' },
+      { label: 'Extended 3-Row SUV Silhouette & Bridge Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/14.webp' },
+      { label: 'Connected H-Signature LED Taillamps & Wide Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/23.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Robust Emerald Matte', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp' },
+      { title: 'Commanding Front Fascia with Dark Chrome Grille and Quad-Beam LED Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/5.webp' },
+      { title: 'Sophisticated 3-Row SUV Silhouette with Diamond-Cut R18 Alloys and Bridge-Type Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/14.webp' },
+      { title: 'Bold Rear Design with Connected Horizon LED Taillamps and Twin-Tip Exhaust', url: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/23.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L Turbo GDi 4-Cylinder Petrol (160 PS / 253 Nm) | 1.5L U2 CRDi Diesel (116 PS / 250 Nm)',
+      transmissions: '6-Speed Manual (6MT), 7-Speed Dual Clutch (7DCT), and 6-Speed Automatic (6AT) with Paddle Shifters',
+      dimensions: '4560 mm (L) × 1800 mm (W) × 1710 mm (H)',
+      wheelbase: '2760 mm (Best in Segment)',
+      fuelTank: '50 Litres',
+      bootSpace: '180 Litres (All Rows Up) / 579 Litres (3rd Row Folded)',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Electronic Parking Brake with Auto Hold',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard across all trims, Level 2 Hyundai SmartSense ADAS (70+ Features), Surround View 360 Camera, ESC, VSM, Hill-Start Assist Control, Downhill Brake Control (DBC), ISOFIX'
+    },
+    variants: [
+      {
+        name: 'Executive 1.5L Turbo 6MT (7-Seater)',
+        exShowroom: 1499000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 ACCESSIBLE 3-ROW TURBO PICK',
+        keyFeatures: ['160 PS Turbocharged Punch', 'All 4 Disc Brakes', '6 Airbags Standard', 'LED Headlamps & DRLs', 'Touchscreen Infotainment', 'Cruise Control', 'Rear AC Vents for All 3 Rows']
+      },
+      {
+        name: 'Executive 1.5L Diesel 6MT (7-Seater)',
+        exShowroom: 1599000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '20.4 km/l',
+        isVFM: true,
+        vfmBadge: '⛽ BEST DIESEL VALUE',
+        keyFeatures: ['Frugal 1.5L CRDi Diesel (20.4 km/l)', 'All 4 Disc Brakes', '6 Airbags Standard', 'ESC & Hill Start Assist', 'Digital Instrument Cluster', '3-Row Seating with One-Touch Tumble']
+      },
+      {
+        name: 'Prestige 1.5L Turbo 6MT (7-Seater)',
+        exShowroom: 1718000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '17.5 km/l',
+        isVFM: false,
+        keyFeatures: ['Voice-Enabled Panoramic Sunroof', 'Dual 10.25-inch Curved Screens', 'Wireless Apple CarPlay & Android Auto', 'Push Button Start with Smart Key', 'Wireless Phone Charger', 'Rear Parking Camera']
+      },
+      {
+        name: 'Prestige 1.5L Diesel 6MT (7-Seater)',
+        exShowroom: 1799000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '20.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Panoramic Sunroof', 'Dual 10.25-inch Panoramic Screens', 'Wireless Phone Charging', 'Automatic Climate Control', '17-inch Diamond Cut Alloys', 'LED Fog Lamps']
+      },
+      {
+        name: 'Platinum 1.5L Turbo 6MT (7-Seater)',
+        exShowroom: 1946000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR LUXURY PICK',
+        keyFeatures: ['Hyundai SmartSense Level 2 ADAS', 'Surround View 360° Camera', 'Bose Premium 8-Speaker Audio', 'Ventilated Front Seats', '8-Way Power Driver Seat with Memory', '18-inch Diamond Cut Alloys']
+      },
+      {
+        name: 'Platinum 1.5L Diesel 6MT (7-Seater)',
+        exShowroom: 2010000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '20.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Highway Suite', 'Surround View 360 Monitor with Blind View', 'Bose Premium Audio', 'Ventilated Front Seats', 'Panoramic Sunroof', 'Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'Platinum 1.5L Turbo 7DCT (7-Seater)',
+        exShowroom: 2091000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.0 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP TURBO AUTOMATIC PICK',
+        keyFeatures: ['Lightning 7-Speed Dual Clutch (DCT)', 'Paddle Shifters & Drive Modes', 'Level 2 ADAS with Smart Cruise Control', 'Front Ventilated Seats', 'Digital Key with NFC', 'Bose 8-Speaker Sound System']
+      },
+      {
+        name: 'Platinum 1.5L Diesel 6AT (7-Seater)',
+        exShowroom: 2140000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '18.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Smooth 6-Speed Torque Converter Auto', 'Full Level 2 ADAS Suite', 'Bose 8-Speaker Audio System', 'Dual 10.25-inch Cockpit Displays', 'Front Ventilated Seats', '360 Camera with Guidelines']
+      },
+      {
+        name: 'Signature 1.5L Turbo 7DCT (6-Seater Captain Seats)',
+        exShowroom: 2155000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.0 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FIRST-CLASS 6-SEATER TURBO',
+        keyFeatures: ['First-in-Segment 2nd Row Ventilated Captain Seats', 'Wing-Type Headrests & Thigh Extensions', 'Dual Wireless Phone Chargers (Row 1 & 2)', 'Flagship Level 2 ADAS Suite', 'Digital Key NFC', 'Bose Audio & Memory Seats']
+      },
+      {
+        name: 'Signature 1.5L Diesel 6AT (6-Seater Captain Seats)',
+        exShowroom: 2155000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '18.1 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FIRST-CLASS 6-SEATER DIESEL',
+        keyFeatures: ['First-in-Segment 2nd Row Ventilated Captain Seats', 'Ultra-Refined 6AT Diesel Powertrain', 'Dual Row Wireless Charging', 'Flagship Level 2 ADAS', 'Surround View 360° Monitor', 'Bose 8-Speaker Audio']
+      }
+    ]
+  },
+
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
