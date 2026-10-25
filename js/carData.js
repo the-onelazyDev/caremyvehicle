@@ -3534,6 +3534,216 @@ export const CARS = [
   },
 
   {
+    id: 'hyundai-venue',
+    name: 'Hyundai Venue',
+    brand: 'Hyundai',
+    tagline: 'Tech Up. Go Beyond. Compact SUV with Level 1 ADAS & Connected Car Tech',
+    launchDate: 'Updated 2025/2026',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹7.94 - ₹13.48 Lakh',
+    minPrice: 794100,
+    maxPrice: 1348000,
+    safetyRating: '6 Airbags Standard Across All Variants | Hyundai SmartSense Level 1 ADAS',
+    groundClearance: '195 mm',
+    bootSpace: '350 L',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp',
+    summary: 'The Hyundai Venue establishes itself as India’s definitive tech-driven compact SUV, featuring Level 1 ADAS (Hyundai SmartSense), standard 6 airbags, connected LED lightbars, 8-inch touchscreen infotainment with Blue Link (60+ features), voice-controlled electric sunroof, 4-way power driver seat, and 2-step reclining rear seats. Available with three powertrain choices: 1.2L Kappa Petrol, 1.0L Turbo GDi with 7DCT, and 1.5L U2 CRDi Diesel.',
+    spinViewer360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/venue/360',
+      format: 'webp',
+      defaultColor: 'atlas-white',
+      colors: [
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A' },
+        { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
+        { id: 'dragon-red', name: 'Dragon Red', hex: '#B51A22' },
+        { id: 'hazel-blue', name: 'Hazel Blue', hex: '#3D546B' },
+        { id: 'mystic-sapphire', name: 'Mystic Sapphire', hex: '#17233B' },
+        { id: 'hazel-blue-matte', name: 'Hazel Blue Matte', hex: '#3D4C59' },
+        { id: 'mystic-sapphire-matte', name: 'Mystic Sapphire Matte', hex: '#1C2A3A' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F2F4F7 60%, #15161A 60%)' },
+        { id: 'hazel-blue-black-roof', name: 'Hazel Blue with Titanium Black Roof', hex: 'linear-gradient(135deg, #4A5B6E 60%, #15161A 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/atlas-white.webp' },
+      { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titanium-black-knight.webp' },
+      { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titanium-black.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/titan-grey.webp' },
+      { id: 'dragon-red', name: 'Dragon Red', hex: '#B51A22', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/dragon-red.webp' },
+      { id: 'hazel-blue', name: 'Hazel Blue', hex: '#3D546B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue.webp' },
+      { id: 'mystic-sapphire', name: 'Mystic Sapphire', hex: '#17233B', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/mystic-sapphire.webp' },
+      { id: 'hazel-blue-matte', name: 'Hazel Blue Matte', hex: '#3D4C59', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue-matte.webp' },
+      { id: 'mystic-sapphire-matte', name: 'Mystic Sapphire Matte', hex: '#1C2A3A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/mystic-sapphire-matte.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F2F4F7 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/atlas-white-black-roof.webp' },
+      { id: 'hazel-blue-black-roof', name: 'Hazel Blue with Titanium Black Roof', hex: 'linear-gradient(135deg, #4A5B6E 60%, #15161A 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/colors/hazel-blue-black-roof.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp' },
+      { label: 'Dark Chrome Parametric Grille & LED Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/5.webp' },
+      { label: 'Side Compact SUV Stance with Roof Rails & Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/14.webp' },
+      { label: 'Rear Connected LED Taillamps & Wide Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/23.webp' }
+    ],
+    gallery: [
+      { title: 'Front Three-Quarter 360° Studio Stance in Atlas White', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp' },
+      { title: 'Bold Front Fascia with Dark Chrome Parametric Grille and LED Projector Headlamps', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/5.webp' },
+      { title: 'Athletic SUV Profile with Bridge-type Roof Rails and R16 Diamond-Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/14.webp' },
+      { title: 'Striking Rear Design with Connected Horizon LED Taillamps and Two-Tone Bumper', url: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/23.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Kappa MPi Petrol (83 PS / 114 Nm) | 1.0L Turbo GDi (120 PS / 172 Nm) | 1.5L U2 CRDi Diesel (116 PS / 250 Nm)',
+      transmissions: '5-Speed Manual (5MT), 6-Speed Manual (6MT), and 7-Speed Dual Clutch (7DCT) with Paddle Shifters',
+      dimensions: '3995 mm (L) × 1770 mm (W) × 1617 mm (H)',
+      wheelbase: '2500 mm',
+      fuelTank: '45 Litres',
+      brakes: 'Front Ventilated Disc / Rear Drum with ABS, EBD & Brake Assist',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle with Coil Spring (Rear)',
+      safety: '6 Airbags Standard across all trims, Level 1 ADAS (Hyundai SmartSense), ESC, VSM, Hill-Start Assist Control (HAC), Rear Camera with dynamic guidelines, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'E 1.2L Petrol 5MT',
+        exShowroom: 794100,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa MPi (83 PS)',
+        mileage: '17.5 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard Across Trims', 'ABS with EBD & ESC', 'Central Locking', 'Front Power Windows', 'Tilt Adjustable Steering', 'Day/Night Rearview Mirror', 'ISOFIX Child Seat Anchors']
+      },
+      {
+        name: 'S 1.2L Petrol 5MT',
+        exShowroom: 910900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa MPi (83 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 HIGH VALUE ENTRY',
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Rear AC Vents', 'Type-C USB Charging Ports', 'Steering Mounted Controls', 'Rear Camera with Guidelines']
+      },
+      {
+        name: 'S(O) 1.2L Petrol 5MT',
+        exShowroom: 989100,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa MPi (83 PS)',
+        mileage: '17.5 km/l',
+        isVFM: false,
+        keyFeatures: ['LED Projector Headlamps', 'Connecting LED Taillamps', 'Fully Digital Cluster with Color TFT MID', 'Drive Modes (Normal/Eco/Sport)', 'Cruise Control', 'Shark Fin Antenna']
+      },
+      {
+        name: 'S(O) Plus 1.2L Petrol 5MT',
+        exShowroom: 1000000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa MPi (83 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '☀️ BEST VALUE SUNROOF',
+        keyFeatures: ['Smart Electric Sunroof', 'LED Projector Headlamps', 'Connecting LED Taillamps', 'Digital Instrument Cluster', 'Cruise Control', 'Rear Defogger with Timer']
+      },
+      {
+        name: 'S(O) 1.0L Turbo 6MT',
+        exShowroom: 1044600,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Turbo GDi (120 PS)',
+        mileage: '18.3 km/l',
+        isVFM: false,
+        keyFeatures: ['120 PS Turbocharged Punch', '6-Speed Smooth Manual Transmission', 'Smart Electric Sunroof', 'LED Headlamps & Lightbar', 'Drive Modes & Traction Control', 'Rear Parking Camera']
+      },
+      {
+        name: 'SX 1.2L Petrol 5MT',
+        exShowroom: 1105900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa MPi (83 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR LUXURY PICK',
+        keyFeatures: ['Smart Electric Sunroof', '16-inch Diamond Cut Alloys', 'Wireless Phone Charger', 'Push Button Start with Smart Key', 'Fully Automatic Temperature Control (FATC)', 'Rear 2-Step Reclining Seats']
+      },
+      {
+        name: 'S(O) 1.0L Turbo 7DCT',
+        exShowroom: 1151400,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Turbo GDi (120 PS)',
+        mileage: '18.1 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP TURBO AUTOMATIC PICK',
+        keyFeatures: ['Lightning-Fast 7-Speed Dual Clutch (DCT)', 'Paddle Shifters on Steering', 'Drive Modes (Eco, Normal, Sport)', 'Smart Electric Sunroof', 'Digital Cluster with Color MID', 'Rear AC Vents']
+      },
+      {
+        name: 'S Plus 1.5L Diesel 6MT',
+        exShowroom: 1070500,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '24.2 km/l',
+        isVFM: true,
+        vfmBadge: '⛽ BEST DIESEL VALUE',
+        keyFeatures: ['Ultra-Frugal 1.5L CRDi Diesel (116 PS / 250 Nm)', 'Smart Electric Sunroof', 'LED Projector Headlamps', 'Digital MID Cluster', 'Standard 6 Airbags', 'Rear Camera with Guidelines']
+      },
+      {
+        name: 'SX 1.5L Diesel 6MT',
+        exShowroom: 1237400,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '24.2 km/l',
+        isVFM: false,
+        keyFeatures: ['High-Torque 250 Nm Diesel Performance', 'Smart Electric Sunroof', '16-inch Diamond Cut Alloys', 'Automatic Climate Control', 'Wireless Phone Charger', '2-Step Rear Reclining Seats']
+      },
+      {
+        name: 'SX(O) 1.0L Turbo 6MT',
+        exShowroom: 1244300,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Turbo GDi (120 PS)',
+        mileage: '18.3 km/l',
+        isVFM: false,
+        keyFeatures: ['Hyundai SmartSense Level 1 ADAS', 'Forward Collision Warning & Assist', 'Lane Keep Assist & Lane Departure Warning', 'Blue Link Connected Car Tech (60+ features)', '4-Way Powered Driver Seat', 'Ambient Sound of Nature']
+      },
+      {
+        name: 'SX(O) 1.0L Turbo 7DCT',
+        exShowroom: 1323300,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Turbo GDi (120 PS)',
+        mileage: '18.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Turbo DCT with Level 1 ADAS', 'Blue Link with Alexa & Smartwatch Connectivity', '4-Way Power Driver Seat', 'Auto-Dimming IRVM with Telematics', 'Cooled Glovebox', 'Leatherette Seating Accents']
+      },
+      {
+        name: 'SX(O) 1.0L Turbo Knight 7DCT',
+        exShowroom: 1348000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Turbo GDi (120 PS)',
+        mileage: '18.1 km/l',
+        isVFM: false,
+        keyFeatures: ['All-Black Knight Edition Theme', 'Brass Accents on Grille, Bumper & Roof Rails', 'Red Brake Calipers', 'Dark Chrome Hyundai Emblem', 'Dual Dashcam with Front & Rear Cameras', 'Full ADAS Safety Suite']
+      },
+      {
+        name: 'SX(O) 1.5L Diesel 6MT',
+        exShowroom: 1319000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '24.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Long-Range Highway Tourer', 'Hyundai SmartSense Level 1 ADAS', 'Blue Link Connected Car Tech', '4-Way Power Driver Seat', 'Smart Electric Sunroof', 'Electrochromic Auto-Dimming Mirror']
+      }
+    ]
+  },
+
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
