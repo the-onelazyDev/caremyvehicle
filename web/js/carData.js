@@ -2996,112 +2996,182 @@ export const CARS = [
     id: 'hyundai-grand-i10-nios',
     name: 'Hyundai Grand i10 Nios',
     brand: 'Hyundai',
-    tagline: 'India’s Favorite Premium Hatchback with 6 Airbags Standard & 360° Turntable View',
-    launchDate: 'Updated 2024 (6 Airbags Standard)',
+    tagline: 'India’s Style-Forward Premium Hatchback with 6 Airbags Standard & 360° Studio',
+    launchDate: '2024 Edition (6 Airbags Standard & Hy-CNG Duo)',
     bodyType: 'Hatchback',
     fuelTypes: ['Petrol', 'CNG'],
-    priceRange: '₹5.92 - ₹8.56 Lakh',
-    minPrice: 592300,
-    maxPrice: 856000,
-    safetyRating: '6 Airbags Standard (ESC & Hill Start Assist)',
+    priceRange: '₹5.98 - ₹8.63 Lakh',
+    minPrice: 598000,
+    maxPrice: 863000,
+    safetyRating: '6 Airbags Standard Across All Variants (Segment Benchmark)',
     groundClearance: '165 mm',
-    bootSpace: '260 L',
+    bootSpace: '260 L (Petrol) / Bi-Fuel Hy-CNG',
     waitingPeriod: '2 - 4 Weeks',
-    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/hero.jpg',
-    summary: 'The new Hyundai Grand i10 Nios sets the benchmark in premium compact hatchbacks with standard 6 airbags, 8-inch touchscreen infotainment with Apple CarPlay/Android Auto, wireless phone charger, cruise control, and refined 1.2L Kappa petrol & factory Bi-Fuel CNG engines.',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/1.webp',
+    summary: 'The new Hyundai Grand i10 Nios redefines urban driving dynamics with standard 6 airbags, painted black radiator grille with Boomerang LED DRLs, 8-inch touchscreen infotainment with Apple CarPlay & Android Auto, wireless phone charging, cruise control, and refined 1.2L Kappa petrol & factory Bi-Fuel Hy-CNG powertrains.',
     spin360: {
-      totalFrames: 24,
+      totalFrames: 36,
       folder: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360',
-      defaultColor: 'teal-blue',
+      format: 'webp',
+      defaultColor: 'aqua-teal-black-roof',
       colors: [
-        { name: 'Teal Blue', hex: '#153854', folderName: 'teal-blue' },
-        { name: 'Fiery Red', hex: '#9F1414', folderName: 'fiery-red' },
-        { name: 'Typhoon Silver', hex: '#DFE1E3', folderName: 'typhoon-silver' },
-        { name: 'Titan Grey', hex: '#4E5359', folderName: 'titan-grey' }
+        { id: 'aqua-teal-black-roof', name: 'Aqua Teal with Abyss Black Roof', hex: '#184F5E' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1' },
+        { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
+        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
+        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' }
       ]
     },
     colors: [
-      { name: 'Teal Blue', hex: '#153854', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/4.jpg' },
-      { name: 'Fiery Red', hex: '#9F1414', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/fiery-red/4.jpg' },
-      { name: 'Typhoon Silver', hex: '#DFE1E3', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/typhoon-silver/4.jpg' },
-      { name: 'Titan Grey', hex: '#4E5359', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/titan-grey/4.jpg' }
+      { id: 'aqua-teal-black-roof', name: 'Aqua Teal with Abyss Black Roof', hex: '#184F5E', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/aqua-teal-black-roof.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/atlas-white-black-roof.webp' },
+      { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/aqua-teal.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/atlas-white.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/fiery-red.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/titan-grey.webp' },
+      { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/titan-grey-matte.webp' },
+      { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/typhoon-silver.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/1.webp' },
+      { label: 'Painted Black Radiator Grille & Boomerang LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/5.webp' },
+      { label: 'Side Profile with R15 Two-Tone Diamond Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/14.webp' },
+      { label: 'Rear Connected LED Taillamps & Shark Fin Antenna', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/23.webp' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter Turntable View', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/4.jpg' },
-      { title: 'Sporty Painted Honeycomb Grille & DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/1.jpg' },
-      { title: 'Side Profile & Two-Tone Alloy Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/7.jpg' },
-      { title: 'Rear Connected LED Tail-lamp Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/teal-blue/13.jpg' }
+      { title: 'Front Three-Quarter 360° Studio Stance in Aqua Teal Dual Tone', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/1.webp' },
+      { title: 'Sporty Front Fascia with Glossy Black Grille and Integrated DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/5.webp' },
+      { title: 'Dynamic Side Silhouette with Shark Fin Antenna and Two-Tone Black Roof', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/14.webp' },
+      { title: 'Rear Design with Connected Tailgate Reflector and Sculpted Bumper', url: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/23.webp' }
     ],
     specs: {
-      engineOptions: '1.2L Kappa Dual VVT Petrol (82 bhp / 114 Nm) | 1.2L Bi-Fuel CNG (68 bhp / 95 Nm)',
+      engineOptions: '1.2L Kappa 4-Cylinder Petrol (83 PS / 113.8 Nm) | 1.2L Bi-Fuel Hy-CNG (69 PS / 95.2 Nm)',
       transmissions: '5-Speed Manual (5MT) & Smart Auto AMT',
       dimensions: '3815 mm (L) × 1680 mm (W) × 1520 mm (H)',
       wheelbase: '2450 mm',
       fuelTank: '37 Litres (Petrol) / 60 Litres Water Equivalent (CNG)',
-      seatingCapacity: '5 Passengers'
+      brakes: 'Front Disc / Rear Drum with ABS & EBD',
+      suspension: 'MacPherson Strut (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard across all variants, Electronic Stability Control (ESC), Hill-Start Assist Control (HAC), Vehicle Stability Management (VSM), Highline TPMS, ISOFIX'
     },
     variants: [
       {
-        name: 'Era 1.2 Petrol MT',
-        exShowroom: 592300,
+        name: 'Era 1.2L Petrol 5MT',
+        exShowroom: 598000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Kappa (82 bhp)',
-        mileage: '20.7 kmpl',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
         isVFM: false,
-        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Central Locking', 'Front Power Windows']
+        keyFeatures: ['6 Airbags Standard', 'ABS with EBD & ESC', 'Central Locking', 'Front Power Windows', 'Highline TPMS', 'Engine Immobilizer']
       },
       {
-        name: 'Magna 1.2 Petrol MT',
-        exShowroom: 678000,
+        name: 'Magna 1.2L Petrol 5MT',
+        exShowroom: 684000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Kappa (82 bhp)',
-        mileage: '20.7 kmpl',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
         isVFM: false,
-        keyFeatures: ['2-DIN Audio with Bluetooth', 'Steering Mounted Controls', 'Rear AC Vents', 'Remote Keyless Entry']
+        keyFeatures: ['2-DIN Audio with Bluetooth & USB', 'Steering Mounted Controls', 'Rear AC Vents', 'Remote Keyless Entry', 'LED DRLs', 'Driver Seat Height Adjust']
       },
       {
-        name: 'Sportz Executive 1.2 Petrol MT',
-        exShowroom: 728000,
+        name: 'Corporate 1.2L Petrol 5MT',
+        exShowroom: 704000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Kappa (82 bhp)',
-        mileage: '20.7 kmpl',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
         isVFM: true,
-        vfmBadge: '🏆 MOST POPULAR PICK',
-        keyFeatures: ['8-inch Touchscreen with Android Auto / Apple CarPlay', 'Reverse Camera & Sensors', 'Cruise Control', '15-inch Dual-Tone Stylised Wheels']
+        vfmBadge: '🎯 CORPORATE EDITION VALUE PICK',
+        keyFeatures: ['6.75-inch Touchscreen with Phone Navigation', 'Dual Tone Gunmetal Styled Wheels', 'Radiator Grille in Glossy Black', 'Driver Seat Height Adjust', 'Rear AC Vents', 'Electrically Adjustable ORVMs']
       },
       {
-        name: 'Sportz 1.2 Petrol AMT (Auto)',
-        exShowroom: 793000,
-        fuel: 'Petrol',
-        trans: 'AMT Auto',
-        engine: '1.2L Kappa (82 bhp)',
-        mileage: '20.1 kmpl',
-        isVFM: false,
-        keyFeatures: ['Convenient Smart Auto AMT', 'Hill Start Assist Control (HAC)', 'LED DRLs & Projector Headlamps', 'Auto Climate Control (FATC)']
-      },
-      {
-        name: 'Magna 1.2 Bi-Fuel CNG',
-        exShowroom: 768000,
+        name: 'Magna 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 775000,
         fuel: 'CNG',
         trans: 'Manual',
-        engine: '1.2L Bi-Fuel CNG (68 bhp)',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
         mileage: '27.0 km/kg',
         isVFM: true,
-        vfmBadge: '🏆 BEST MILEAGE PICK',
-        keyFeatures: ['Factory Fitted CNG with Dual ECU', '27.0 km/kg Fuel Economy', 'Rear AC Vents', 'Micro-Switch for Safe Fueling']
+        vfmBadge: '⚡ TOP COMMUTE MILEAGE PICK',
+        keyFeatures: ['Factory Bi-Fuel CNG System', '27.0 km/kg Fuel Economy', '6 Airbags Standard', 'Rear AC Vents', 'Remote Keyless Entry', 'Steering Mounted Controls']
       },
       {
-        name: 'Asta 1.2 Petrol MT (Top Spec)',
-        exShowroom: 799000,
+        name: 'Corporate 1.2L Smart Auto AMT',
+        exShowroom: 769000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Convenient Smart Auto AMT', '6.75-inch Touchscreen Infotainment', 'Gunmetal Finished Wheels', 'Rear AC Vents', 'Hill-Start Assist Control (HAC)', 'ESC & VSM']
+      },
+      {
+        name: 'Sportz Executive 1.2L Petrol 5MT',
+        exShowroom: 738000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Kappa (82 bhp)',
-        mileage: '20.7 kmpl',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
         isVFM: false,
-        keyFeatures: ['Wireless Phone Charger', 'Smart Key with Push Button Start', '15-inch Diamond Cut Alloys', 'Leather-wrapped Steering Wheel']
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Rear View Camera with Guidelines', 'Automatic Climate Control (FATC)', '15-inch Dual-Tone Stylised Wheels']
+      },
+      {
+        name: 'Sportz 1.2L Petrol 5MT',
+        exShowroom: 748000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 MOST POPULAR FAMILY PICK',
+        keyFeatures: ['8-inch Touchscreen with Smartphone Mirroring', 'Cruise Control', 'Rear Camera with Guidelines', 'Automatic Temperature Control', 'Projector Headlamps', '15-inch Dual Tone Styled Wheels']
+      },
+      {
+        name: 'Sportz 1.2L Smart Auto AMT',
+        exShowroom: 803000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Smart Auto AMT Transmission', 'Hill-Start Assist Control (HAC)', '8-inch Touchscreen with CarPlay', 'Cruise Control', 'FATC Auto AC', 'Reverse Camera']
+      },
+      {
+        name: 'Sportz 1.2L Bi-Fuel CNG 5MT',
+        exShowroom: 833000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel CNG (69 PS)',
+        mileage: '27.0 km/kg',
+        isVFM: true,
+        vfmBadge: '🌱 PREMIUM TECH CNG PICK',
+        keyFeatures: ['Factory Bi-Fuel CNG (27.0 km/kg)', '8-inch Touchscreen with Apple CarPlay & Android Auto', 'Rear View Camera', 'Auto Climate Control', 'Projector Headlamps', '6 Airbags Standard']
+      },
+      {
+        name: 'Asta 1.2L Petrol 5MT',
+        exShowroom: 809000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.7 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP LUXURY PICK',
+        keyFeatures: ['15-inch Diamond Cut Alloy Wheels', 'Smart Key with Push Button Start/Stop', 'Wireless Smartphone Charger', 'Cooled Glove Box', 'Leather Wrapped Steering Wheel', 'Rear Wiper & Washer', 'Projector Headlamps']
+      },
+      {
+        name: 'Asta 1.2L Smart Auto AMT',
+        exShowroom: 863000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Kappa 4-Cyl (83 PS)',
+        mileage: '20.1 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-spec Smart Auto AMT', '15-inch Diamond Cut Alloys', 'Push Button Start with Smart Key', 'Wireless Phone Charger', 'Rear Wiper & Washer', 'Full 6 Airbag Safety Suite']
       }
     ]
   },
