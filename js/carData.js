@@ -4680,6 +4680,141 @@ export const CARS = [
         keyFeatures: ['Dual-Tone Contrast Black Roof & Mirrors', 'Flagship Level 2 ADAS Suite', 'Bose 8-Speaker Sound System', 'Twin-Tip Performance Exhaust', 'Ventilated Front Seats', '360° Camera']
       }
     ]
+  },
+  {
+    id: 'hyundai-tucson',
+    name: 'Hyundai Tucson',
+    brand: 'Hyundai',
+    tagline: 'Flagship Luxury SUV with HTRAC All-Wheel Drive & Level 2 ADAS',
+    launchDate: 'Latest 4th Gen (2025–2026 Model)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹29.02 - ₹36.09 Lakh',
+    minPrice: 2902000,
+    maxPrice: 3609000,
+    safetyRating: '5 Stars (Euro NCAP / Global Safety) | Level 2 Hyundai SmartSense ADAS (19 Features)',
+    groundClearance: '192 mm',
+    bootSpace: '540 Litres',
+    waitingPeriod: '4 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/amazon-grey/1.webp',
+    summary: 'Hyundai’s flagship luxury SUV designed to challenge European luxury crossovers. Built on the extended long-wheelbase (LWB) platform with a commanding 2,755 mm wheelbase, the Tucson features iconic Parametric Jewel hidden LED daytime running lamps seamlessly integrated into a dark chrome grille. Powertrains include a refined Nu 2.0L Petrol with 6-speed AT and a potent 186 PS / 416 Nm R 2.0L VGT Diesel with 8-speed AT and HTRAC All-Wheel Drive featuring Multi-Terrain Modes (Snow, Mud, Sand). Inside, experience dual 10.25-inch floating displays, shift-by-wire push-button transmission controls, voice-enabled smart panoramic sunroof, 8-speaker Bose audio, heated & ventilated memory seats, passenger walk-in device, and comprehensive Level 2 Hyundai SmartSense ADAS.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360',
+      format: 'webp',
+      defaultColor: 'amazon-grey',
+      colors: [
+        { id: 'amazon-grey', name: 'Amazon Grey (Hero Color)', hex: '#4E5452' },
+        { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7' },
+        { id: 'phantom-black', name: 'Abyss Black Pearl', hex: '#0D0E10' },
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
+        { id: 'fiery-red-dual-tone', name: 'Fiery Red with Phantom Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'amazon-grey', name: 'Amazon Grey (Hero Color)', hex: '#4E5452', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/amazon-grey/1.webp' },
+      { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/polar-white/1.webp' },
+      { id: 'phantom-black', name: 'Abyss Black Pearl', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/phantom-black/1.webp' },
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/starry-night/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/fiery-red/1.webp' },
+      { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/polar-white-dual-tone/1.webp' },
+      { id: 'fiery-red-dual-tone', name: 'Fiery Red with Phantom Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/fiery-red-dual-tone/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & Hidden DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/amazon-grey/1.webp' },
+      { label: 'Dark Chrome Parametric Jewel Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-jewel-grille-drl.webp' },
+      { label: 'Parametric Side Dynamic Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-dynamics-exterior.webp' },
+      { label: 'Connecting LED Tail Lamps & Hidden Wiper', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-led-tail-lamps.webp' }
+    ],
+    gallery: [
+      { title: 'Dark Chrome Parametric Jewel Grille with Hidden LED Daytime Running Lights', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-jewel-grille-drl.webp' },
+      { title: 'Dual 10.25-inch Floating Cockpit Screens & Shift-by-Wire Automatic Console', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/luxury-cockpit-dual-screens.webp' },
+      { title: 'Voice-Enabled Smart Panoramic Sunroof & 10-Way Power Ventilated Memory Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/panoramic-sunroof-first-class.webp' },
+      { title: 'Bose Premium 8-Speaker Sound System & Hyundai Bluelink 60+ Connected Features', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/bose-premium-sound-system.webp' },
+      { title: 'Hyundai SmartSense Level 2 ADAS Suite with 19 Radar & Camera Safety Features', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/level-2-adas-smartsense.webp' },
+      { title: 'HTRAC All-Wheel Drive System with Terrain Modes (Snow, Mud, Sand) & R 2.0L Diesel (416 Nm)', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/htrac-all-wheel-drive-modes.webp' },
+      { title: 'Parametric Dynamic Side Character Lines & R18 Diamond-Cut Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-dynamics-exterior.webp' },
+      { title: 'Full-Width Connecting Parametric LED Tail Lamps & Concealed Rear Wiper', url: 'https://ik.imagekit.io/2908vvlod/cars/tucson/gallery/parametric-led-tail-lamps.webp' }
+    ],
+    specs: {
+      engineOptions: 'Nu 2.0L Petrol (156 PS @ 6,200 rpm / 192 Nm @ 4,500 rpm) | R 2.0L VGT Diesel (186 PS @ 4,000 rpm / 416 Nm @ 2,000–2,750 rpm)',
+      transmissions: '6-Speed Automatic (Petrol) & 8-Speed Automatic with Shift-by-Wire (Diesel)',
+      dimensions: '4630 mm (L) × 1865 mm (W) × 1665 mm (H)',
+      wheelbase: '2755 mm (Long Wheelbase LWB Architecture)',
+      fuelTank: '54 Litres',
+      bootSpace: '540 Litres (Expandable with 60:40 Split Fold)',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Electronic Parking Brake (EPB) with Auto Hold',
+      suspension: 'MacPherson Strut (Front) / Multi-Link (Rear) with High-Performance Dampers',
+      safety: '6 Airbags Standard, Level 2 Hyundai SmartSense ADAS (19 Features), Surround View 360° Monitor with Blind View Monitor, ESC, VSM, HAC, DBC, TPMS Highline, All 4 Disc Brakes'
+    },
+    variants: [
+      {
+        name: 'Platinum 2.0L Petrol 6AT',
+        exShowroom: 2902000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L Nu Petrol (156 PS)',
+        mileage: '13.0 km/l',
+        isVFM: true,
+        vfmBadge: '💎 LUXURY ENTRY SWEET SPOT',
+        keyFeatures: ['Nu 2.0L MPI Petrol with 6-Speed AT', 'Dual 10.25-inch Floating Screens', 'Panoramic Sunroof', '6 Airbags Standard & ESP', 'Dual Zone Climate Control', 'Wireless Phone Charging']
+      },
+      {
+        name: 'Signature 2.0L Petrol 6AT',
+        exShowroom: 3152000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L Nu Petrol (156 PS)',
+        mileage: '13.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Full Level 2 Hyundai SmartSense ADAS Suite', 'Bose Premium 8-Speaker Audio System', 'Surround View 360° Monitor & Blind View Monitor', '10-Way Power Driver Seat with Memory', 'Heated & Ventilated Front Seats', 'Hands-Free Smart Power Tailgate']
+      },
+      {
+        name: 'Platinum 2.0L Diesel 8AT',
+        exShowroom: 3155000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L R VGT Diesel (186 PS / 416 Nm)',
+        mileage: '15.4 km/l',
+        isVFM: true,
+        vfmBadge: '🚀 TORQUE MONSTER TOURING SUV',
+        keyFeatures: ['186 PS / 416 Nm R 2.0L Diesel with 8-Speed AT', 'Shift-by-Wire Push-Button Gear Controls', 'Smart Panoramic Sunroof', 'Dual 10.25-inch Floating Cockpit Displays', 'Drive Modes (Eco, Normal, Sport, Smart)', '18-inch Diamond-Cut Alloys']
+      },
+      {
+        name: 'Signature 2.0L Diesel 8AT',
+        exShowroom: 3425000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L R VGT Diesel (186 PS / 416 Nm)',
+        mileage: '15.4 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FIRST-CLASS 2WD DIESEL CRUISER',
+        keyFeatures: ['Full Level 2 Hyundai SmartSense ADAS (19 Features)', 'Bose Premium 8-Speaker Sound System', 'Surround View 360° & Blind View Monitor', 'Heated & Ventilated Power Front Seats with Memory', 'Passenger Walk-In Device', 'Smart Power Tailgate']
+      },
+      {
+        name: 'Signature 2.0L Diesel 8AT 4WD',
+        exShowroom: 3594000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L R VGT Diesel (186 PS / 416 Nm)',
+        mileage: '14.8 km/l',
+        isVFM: true,
+        vfmBadge: '🏔️ ULTIMATE ALL-WEATHER HTRAC 4WD',
+        keyFeatures: ['HTRAC All-Wheel Drive with 4WD Lock Mode', 'Multi-Terrain Modes (Snow, Mud, Sand)', 'Full Level 2 SmartSense ADAS Suite', 'Bose 8-Speaker Audio System', '360° Surround View Monitor', 'Smart Panoramic Sunroof']
+      },
+      {
+        name: 'Signature 2.0L Diesel 8AT 4WD (Dual Tone)',
+        exShowroom: 3609000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L R VGT Diesel (186 PS / 416 Nm)',
+        mileage: '14.8 km/l',
+        isVFM: false,
+        keyFeatures: ['Exclusive Dual-Tone Phantom Black Contrast Roof', 'HTRAC All-Wheel Drive with Terrain Modes', 'Flagship Level 2 SmartSense ADAS Suite', 'Bose 8-Speaker Soundstage', 'Heated & Ventilated Memory Seats', 'Smart Power Tailgate']
+      }
+    ]
   }
 ];
 
