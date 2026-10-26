@@ -4558,6 +4558,128 @@ export const CARS = [
         keyFeatures: ['Smooth 6-Speed Torque Converter Auto', 'Full Level 2 ADAS Suite', 'Bose Premium 8-Speaker Audio', 'Surround View 360° Camera & Blind View', 'Front Ventilated Seats', 'Panoramic Sunroof']
       }
     ]
+  },
+  {
+    id: 'hyundai-creta-n-line',
+    name: 'Hyundai Creta N Line',
+    brand: 'Hyundai',
+    tagline: 'Track-Inspired Performance SUV with 160 PS Turbo GDi, Twin Exhaust & N Line Dynamics',
+    launchDate: 'March 2024 (Latest N Line)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹16.82 - ₹20.49 Lakh',
+    minPrice: 1682300,
+    maxPrice: 2049300,
+    safetyRating: '36 Standard Safety Features | Level 2 Hyundai SmartSense ADAS (19 Features)',
+    groundClearance: '190 mm',
+    bootSpace: '433 Litres',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/shadow-grey/1.webp',
+    summary: 'The track-honed iteration of India’s benchmark SUV engineered for automotive enthusiasts. Featuring an exclusive WRC-inspired front bumper with red aerodynamic accents, signature N Line honeycomb grille, dual twin-tip performance exhaust with tuned sound, firmer damper settings, weighted steering rack, and 18-inch diamond-cut alloys with red brake calipers. Inside, an all-black cockpit with red stitching, metal pedals, dual dashcam, and Level 2 ADAS suite.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360',
+      format: 'webp',
+      defaultColor: 'shadow-grey',
+      colors: [
+        { id: 'shadow-grey', name: 'Shadow Grey (Exclusive N Line)', hex: '#4C5156' },
+        { id: 'thunder-blue', name: 'Thunder Blue (Signature N Line)', hex: '#1B3B8A' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10' },
+        { id: 'abyss-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'shadow-grey', name: 'Shadow Grey (Exclusive N Line)', hex: '#4C5156', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/shadow-grey/1.webp' },
+      { id: 'thunder-blue', name: 'Thunder Blue (Signature N Line)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/thunder-blue/1.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/atlas-white/1.webp' },
+      { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/abyss-black/1.webp' },
+      { id: 'abyss-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/abyss-black-matte/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/titan-grey/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/atlas-white-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/shadow-grey/1.webp' },
+      { label: 'WRC Aerodynamic Bumper & Honeycomb Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/wrc-front-bumper.webp' },
+      { label: 'R18 Diamond-Cut Alloys & Red Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/r18-diamond-cut-alloys.webp' },
+      { label: 'Dual Twin-Tip Sports Exhaust & Rear Diffuser', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/twin-tip-exhaust.webp' }
+    ],
+    gallery: [
+      { title: 'WRC-Inspired Front Bumper with Red Aerodynamic Lip & N Line Honeycomb Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/wrc-front-bumper.webp' },
+      { title: 'All-Black Performance Cabin with Red Contrast Stitching & Ambient Mood Lighting', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/n-cockpit-interior.webp' },
+      { title: '18-inch N Line Diamond-Cut Alloys with Sporty Red Front & Rear Brake Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/r18-diamond-cut-alloys.webp' },
+      { title: 'Dual Twin-Tip Sports Exhaust System with Tuned Exhaust Note & Aerodynamic Rear Diffuser', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/twin-tip-exhaust.webp' },
+      { title: 'Perforated Leather N Steering Wheel, Metal Sports Pedals & Dual 10.25-inch Screens', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/n-steering-and-dash.webp' },
+      { title: 'N-Embossed Leatherette Front Ventilated Sport Seats with Red Piping', url: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/gallery/sport-seats.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L Turbo GDi 4-Cylinder Petrol (160 PS @ 5,500 rpm / 253 Nm @ 1,500–3,500 rpm)',
+      transmissions: '6-Speed Manual (6MT) with N-Embossed Gear Shifter / 7-Speed Dual Clutch (7DCT) with Paddle Shifters',
+      dimensions: '4330 mm (L) × 1790 mm (W) × 1635 mm (H)',
+      wheelbase: '2610 mm',
+      fuelTank: '50 Litres',
+      bootSpace: '433 Litres',
+      brakes: 'All 4 Disc Brakes with Sport Red Calipers, ABS, EBD & Electronic Parking Brake (EPB) with Auto Hold',
+      suspension: 'Firm-Tuned MacPherson Strut (Front) / Coupled Torsion Beam Axle (Rear) with Dynamic Damping',
+      safety: '6 Airbags Standard, Level 2 Hyundai SmartSense ADAS (19 Features), Surround View 360° Monitor with Blind View, Dual Dashcam with Front & Rear Recording, ESC, VSM, HAC, TPMS'
+    },
+    variants: [
+      {
+        name: 'N8 1.5L Turbo 6MT',
+        exShowroom: 1682300,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.0 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 ACCESSIBLE 160 PS MANUAL HOT SUV',
+        keyFeatures: ['160 PS Turbo GDi Engine with 6MT', 'Twin-Tip Sports Exhaust', 'R18 Diamond-Cut N Alloys', 'All-Black N Interior with Red Stitching', 'Dual Dashcam', 'Panoramic Sunroof']
+      },
+      {
+        name: 'N8 1.5L Turbo 7DCT',
+        exShowroom: 1832300,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.2 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP AUTOMATIC N LINE VALUE',
+        keyFeatures: ['7-Speed Dual Clutch with Paddle Shifters', 'Drive & Traction Modes', 'Panoramic Sunroof', 'Dual 10.25-inch Curved Screens', 'Twin Exhaust System', 'Red Brake Calipers']
+      },
+      {
+        name: 'N10 1.5L Turbo 6MT',
+        exShowroom: 1934300,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Hyundai SmartSense Level 2 ADAS Suite', 'Bose Premium 8-Speaker Audio', 'Surround View 360° Camera & Blind View', 'Front Ventilated Sport Seats', '8-Way Power Driver Seat', 'Twin-Tip Sports Exhaust']
+      },
+      {
+        name: 'N10 1.5L Turbo 7DCT',
+        exShowroom: 2034300,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.2 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP N LINE PERFORMANCE',
+        keyFeatures: ['Full Level 2 ADAS Suite with Smart Cruise Control', 'Lightning 7DCT with Launch Control', 'Bose 8-Speaker Audio System', 'Dual Dashcam (Front + Rear)', 'Front Ventilated Seats', 'R18 N Alloys']
+      },
+      {
+        name: 'N10 1.5L Turbo 7DCT (Dual Tone)',
+        exShowroom: 2049300,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual-Tone Contrast Black Roof & Mirrors', 'Flagship Level 2 ADAS Suite', 'Bose 8-Speaker Sound System', 'Twin-Tip Performance Exhaust', 'Ventilated Front Seats', '360° Camera']
+      }
+    ]
   }
 ];
 
