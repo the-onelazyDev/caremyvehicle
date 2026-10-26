@@ -4369,12 +4369,23 @@ export const CARS = [
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
     summary: 'The undisputed king of the mid-size SUV segment redefined in its latest facelift with a commanding parametric black-chrome grille, continuous full-width Horizon LED DRLs, quad-beam LED headlamps, twin 10.25-inch curved cockpit displays, and 70+ advanced connected safety features.',
     spin360: {
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta/360',
       totalFrames: 36,
-      fileExtension: 'webp',
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta/360',
+      format: 'webp',
       defaultColor: 'robust-emerald-pearl',
-      prefix: '',
-      zeroPad: false
+      colors: [
+        { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831' },
+        { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'titan-grey', name: 'Ecotronic Grey', hex: '#545B62' },
+        { id: 'titan-grey-matte', name: 'Ecotronic Grey Matte', hex: '#61666B' },
+        { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#556857' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
+        { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E' },
+        { id: 'king-abyss-black-matte', name: 'King Limited Edition (Black Matte & Red Calipers)', hex: '#141517' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
+      ]
     },
     colors: [
       { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
@@ -4391,15 +4402,21 @@ export const CARS = [
     ],
     angles: [
       { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
-      { label: 'Horizon LED Lightbar & Parametric Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/5.webp' },
-      { label: 'Athletic SUV Profile & Aero R17 Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/14.webp' },
-      { label: 'Connected Horizon LED Taillamps & Wide Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/23.webp' }
+      { label: 'Parametric Radiator Grille & Horizon DRL', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/front-grille.webp' },
+      { label: 'Athletic SUV Silhouette & Diamond-Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/side-profile.webp' },
+      { label: 'Connected Horizon LED Taillamps & Rear Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/rear-taillamps.webp' }
     ],
     gallery: [
-      { title: 'Front Three-Quarter 360° Studio Stance in Robust Emerald Pearl', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
-      { title: 'Commanding Front Fascia with Parametric Black Chrome Grille and Horizon LED Lightbar', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/5.webp' },
-      { title: 'Athletic SUV Silhouette with Diamond-Cut Aero Alloys and Silver Bridge Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/14.webp' },
-      { title: 'Connected LED Horizon Taillamps with Modern Sculpted Tailgate and Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/23.webp' }
+      { title: 'Parametric Black Chrome Radiator Grille & Horizon LED Lightbar', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/front-grille.webp' },
+      { title: 'Dual Integrated 10.25-inch Panoramic Curved Displays & Premium Dashboard', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/cockpit-dashboard.webp' },
+      { title: 'Quad-Beam LED Headlamps with Horizon LED Positioning Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/quad-headlamps.webp' },
+      { title: 'Full HD 10.25-inch Infotainment System with Hyundai Bluelink Connected Car Tech', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/infotainment-cluster.webp' },
+      { title: 'Connected Horizon LED Taillamps with Sculpted Aerodynamic Tailgate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/rear-taillamps.webp' },
+      { title: 'Premium Dual-Tone Leatherette Upholstery with Front Ventilated Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/ventilated-seats.webp' },
+      { title: 'Athletic SUV Silhouette with Aerodynamic Diamond-Cut R17 Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/side-profile.webp' },
+      { title: 'Dual-Zone Automatic Temperature Control with Touch Climate Panel', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/dual-zone-ac.webp' },
+      { title: '64-Color Ambient Interior Mood Lighting & Electrochromic IRVM', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/ambient-lighting.webp' },
+      { title: '17-inch Diamond-Cut Aero Alloy Wheels with Highline Tire Pressure Monitoring', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/gallery/diamond-cut-alloys.webp' }
     ],
     specs: {
       engineOptions: '1.5L MPi Petrol (115 PS / 143.8 Nm) | 1.5L Turbo GDi Petrol (160 PS / 253 Nm) | 1.5L U2 CRDi Diesel (116 PS / 250 Nm)',

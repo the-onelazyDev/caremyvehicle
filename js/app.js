@@ -202,8 +202,11 @@ window.initSpin360 = function(spinConfig) {
   spinState.totalFrames = spinConfig.totalFrames || 24;
   spinState.currentFrame = 1;
   spinState.folder = spinConfig.folder;
-  spinState.format = spinConfig.format || 'jpg';
-  spinState.currentColor = spinConfig.defaultColor || (spinConfig.colors[0].folderName || spinConfig.colors[0].id);
+  spinState.format = spinConfig.format || spinConfig.fileExtension || 'jpg';
+  const cList = (spinConfig.colors && spinConfig.colors.length > 0)
+    ? spinConfig.colors
+    : (currentModalCar && currentModalCar.colors ? currentModalCar.colors : []);
+  spinState.currentColor = spinConfig.defaultColor || (cList.length > 0 ? (cList[0].folderName || cList[0].id) : 'default');
 
   const canvas = document.getElementById('spin360Canvas');
   const container = document.getElementById('spin360Container');
@@ -335,7 +338,7 @@ window.setSpinFrame = function(frameNum) {
 
 window.selectSpinColor = function(colorFolder, colorIdx) {
   if (!currentModalCar || !currentModalCar.spin360) return;
-  const colObj = currentModalCar.spin360.colors[colorIdx];
+  const colObj = (currentModalCar.spin360.colors && currentModalCar.spin360.colors[colorIdx]) || (currentModalCar.colors && currentModalCar.colors[colorIdx]);
   if (!colObj) return;
 
   spinState.currentColor = colorFolder;
@@ -359,7 +362,7 @@ window.selectUniversalColor = function(colorIdx) {
   if (!currentModalCar) return;
   const colorsList = (currentModalCar.colors && currentModalCar.colors.length > 0)
     ? currentModalCar.colors
-    : (currentModalCar.spin360 ? currentModalCar.spin360.colors : []);
+    : (currentModalCar.spin360 ? (currentModalCar.spin360.colors || []) : []);
   const colObj = colorsList[colorIdx];
   if (!colObj) return;
 
@@ -372,8 +375,10 @@ window.selectUniversalColor = function(colorIdx) {
   // Check if this color has a matching 360 spin set
   let spinMatch = null;
   let spinMatchIdx = -1;
-  if (currentModalCar.spin360 && currentModalCar.spin360.colors) {
-    const sColors = currentModalCar.spin360.colors;
+  if (currentModalCar.spin360) {
+    const sColors = (currentModalCar.spin360.colors && currentModalCar.spin360.colors.length > 0)
+      ? currentModalCar.spin360.colors
+      : (currentModalCar.colors || []);
     for (let i = 0; i < sColors.length; i++) {
       const sc = sColors[i];
       const scKey = (sc.folderName || sc.id || '').toLowerCase();
