@@ -5094,6 +5094,140 @@ export const CARS = [
         keyFeatures: ['Extended 84 kWh High-Capacity Battery Pack', 'Upgraded 228.5 PS Output with 350 Nm Instant Torque', 'NVIDIA ccNC Infotainment System', 'Digital Centre Mirror & Dual 12.3-inch Screens', 'Surround View 360° Monitor with Blind View', 'Sliding Universal Island Console', 'R20 Aero Alloy Wheels']
       }
     ]
+  },
+  {
+    id: 'hyundai-venue-n-line',
+    name: 'Hyundai Venue N Line',
+    brand: 'Hyundai',
+    tagline: 'WRC-Inspired Hot Compact SUV with 120 PS Turbo GDi, Sporty Dual Exhaust & Level 2 ADAS',
+    launchDate: 'Latest 2025–2026 Model (With Level 2 SmartSense ADAS)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹10.66 - ₹15.67 Lakh',
+    minPrice: 1066000,
+    maxPrice: 1567000,
+    safetyRating: '5 Stars (Euro NCAP / Bharat NCAP Ready) | Hyundai SmartSense Level 2 ADAS & 6 Airbags',
+    groundClearance: '195 mm',
+    bootSpace: '350 Litres',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue/1.webp',
+    summary: 'The Hyundai Venue N Line brings World Rally Championship (WRC) motorsport pedigree to the compact SUV segment. Powered by a punchy 1.0L Kappa Turbo GDi petrol engine producing 120 PS and 172 Nm of torque, it is paired with either a slick 6-speed manual or an ultra-responsive 7-speed Dual Clutch Transmission (7DCT) equipped with steering-mounted paddle shifters. Engineered for enthusiastic drivers, the Venue N Line features a sport-tuned suspension with firmer damping for razor-sharp handling, weighted steering feedback, all-4 disc brakes with striking red calipers, and a dual twin-tip performance exhaust tuned to deliver an intoxicating acoustic soundtrack. Inside, the race-inspired cabin boasts all-black leatherette upholstery with red contrast stitching, embossed N branding, sunrise red ambient lighting, sporty brushed metal pedals, and a bespoke N-badged steering wheel and gear shifter. In its range-topping N10 trim, it elevates technology with dual 12.3-inch curved panoramic displays running the next-gen NVIDIA ccNC platform, Bose 8-speaker audio, smart aroma diffuser, front ventilated seats, 4-way power driver seat, factory dual dashcam, voice-controlled sunroof, and a comprehensive Level 2 Hyundai SmartSense ADAS suite with Smart Cruise Control Stop & Go, Forward Collision Avoidance, and 360° Surround View Monitor.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360',
+      format: 'webp',
+      defaultColor: 'hazel-blue',
+      colors: [
+        { id: 'hazel-blue', name: 'Thunder Blue (Hazel Blue)', hex: '#1B3B8A' },
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'abyss-black', name: 'Shadow Black (Abyss Black)', hex: '#0D0E10' },
+        { id: 'dragon-red', name: 'Dragon Red', hex: '#B71C1C' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62' },
+        { id: 'hazel-blue-dual-tone', name: 'Thunder Blue with Shadow Black Roof', hex: 'linear-gradient(135deg, #1B3B8A 60%, #0D0E10 60%)' },
+        { id: 'atlas-white-dual-tone', name: 'Atlas White with Shadow Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
+        { id: 'dragon-red-dual-tone', name: 'Dragon Red with Shadow Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'hazel-blue', name: 'Thunder Blue (Hazel Blue)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue/1.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/atlas-white/1.webp' },
+      { id: 'abyss-black', name: 'Shadow Black (Abyss Black)', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/abyss-black/1.webp' },
+      { id: 'dragon-red', name: 'Dragon Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/dragon-red/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/titan-grey/1.webp' },
+      { id: 'hazel-blue-dual-tone', name: 'Thunder Blue with Shadow Black Roof', hex: 'linear-gradient(135deg, #1B3B8A 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue-dual-tone/1.webp' },
+      { id: 'atlas-white-dual-tone', name: 'Atlas White with Shadow Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/atlas-white-dual-tone/1.webp' },
+      { id: 'dragon-red-dual-tone', name: 'Dragon Red with Shadow Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/dragon-red-dual-tone/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Track Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue/1.webp' },
+      { label: 'Dual Twin-Tip Sports Exhaust', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/dual-twin-tip-sports-exhaust.webp' },
+      { label: 'R17 Diamond-Cut Alloys & Red Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/r17-diamond-cut-alloys-red-calipers.webp' },
+      { label: 'Dark Chrome N Grille & Red Splitter', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/dark-chrome-n-grille-red-splitter.webp' }
+    ],
+    gallery: [
+      { title: 'Dual Twin-Tip Sports Exhaust with Tuned Performance Exhaust Note', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/dual-twin-tip-sports-exhaust.webp' },
+      { title: 'Dark Chrome Parametric Grille with Exclusive N Line Emblem & Red Bumper Splitter', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/dark-chrome-n-grille-red-splitter.webp' },
+      { title: 'R17 (215/55 R17) Diamond-Cut Alloy Wheels with N Emblem & All-4 Red Brake Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/r17-diamond-cut-alloys-red-calipers.webp' },
+      { title: 'Perforated Leather 3-Spoke N Steering Wheel with Steering Paddle Shifters', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/leather-n-steering-wheel-paddle-shifters.webp' },
+      { title: 'Sporty All-Black Leatherette Seats with Red Contrast Stitching & Embossed N Branding', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/sporty-black-leatherette-seats-n-branding.webp' },
+      { title: 'Sporty Brushed Metal Pedals for Track-Inspired Driving Ergonomics', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/sporty-brushed-metal-pedals.webp' },
+      { title: 'Hyundai SmartSense Level 2 ADAS with Forward Collision Avoidance, Lane Keep & Driver Attention', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/hyundai-smartsense-level-2-adas.webp' },
+      { title: 'Aerodynamic Wing-Type Rear Spoiler & Connecting Horizon LED Tail Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/gallery/aerodynamic-wing-spoiler-led-tail-lamp.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L Kappa Turbo GDi Petrol (3 Cylinders, 120 PS @ 6000 rpm / 172 Nm @ 1500–4000 rpm)',
+      transmissions: '6-Speed Manual (6MT) & 7-Speed Dual Clutch Transmission (7DCT) with Paddle Shifters',
+      dimensions: '3995 mm (L) × 1800 mm (W) × 1665 mm (H) (with Roof Rails)',
+      wheelbase: '2520 mm',
+      fuelTank: '45 Litres',
+      bootSpace: '350 Litres',
+      brakes: 'All 4 Disc Brakes (Front & Rear Discs with Sporty Red Calipers)',
+      suspension: 'McPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle (Rear) with Sport-Tuned Firm Dampers',
+      safety: '6 Airbags Standard, Hyundai SmartSense Level 2 ADAS (FCA with Junction Turning, BCA, LKA, SCC with Stop & Go), All 4 Discs, Dual Dashcam, 360° Surround View Monitor, ESC, VSM, HAC, TPMS Highline'
+    },
+    variants: [
+      {
+        name: 'N6 1.0L Turbo 6MT',
+        exShowroom: 1066000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.0 km/l',
+        isVFM: false,
+        keyFeatures: ['1.0L Turbo GDi Petrol (120 PS / 172 Nm)', '6-Speed Manual Gearbox', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '26.03 cm (10.25") ccNC Infotainment with Wireless Android Auto & Apple CarPlay', 'R17 Diamond Cut N Alloys', 'Twin Tip Sports Exhaust with Tuned Note', 'Electric Parking Brake with Auto Hold']
+      },
+      {
+        name: 'N6 1.0L Turbo 6MT (Dual Tone)',
+        exShowroom: 1084000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Tone Styling with Shadow Black Roof', '1.0L Turbo GDi (120 PS / 172 Nm)', '6-Speed Manual Gearbox', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '26.03 cm ccNC Infotainment', 'R17 Diamond Cut N Alloys', 'Twin Tip Sports Exhaust']
+      },
+      {
+        name: 'N6 1.0L Turbo 7DCT',
+        exShowroom: 1156000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.3 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 PERFORMANCE VALUE SWEET SPOT',
+        keyFeatures: ['7-Speed Dual Clutch Transmission (7DCT)', 'Steering Wheel Paddle Shifters', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '26.03 cm (10.25") ccNC Infotainment with Wireless Phone Projection', 'R17 Diamond Cut N Alloys', 'Twin Tip Sports Exhaust', 'Electric Parking Brake with Auto Hold']
+      },
+      {
+        name: 'N6 1.0L Turbo 7DCT (Dual Tone)',
+        exShowroom: 1174000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.3 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Tone Finish with Shadow Black Contrast Roof', '7-Speed DCT with Paddle Shifters', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '26.03 cm ccNC Infotainment', 'R17 Diamond Cut N Alloys', 'Twin Tip Performance Exhaust']
+      },
+      {
+        name: 'N10 1.0L Turbo 7DCT',
+        exShowroom: 1549000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.3 km/l',
+        isVFM: false,
+        keyFeatures: ['Full Level 2 Hyundai SmartSense ADAS (FCA-JT, BCA, LKA, SCC with Stop & Go)', 'Dual Curved Panoramic Displays (Dual 12.3-inch ccNC Navigation + Digital Cluster)', 'Bose Premium 8-Speaker Audio System', 'Dual Dashcam', 'Voice-Enabled Smart Electric Sunroof', 'Front Ventilated Seats & 4-Way Power Driver Seat', 'Surround View 360° Monitor & Blind Spot View Monitor', 'Smart Aroma Diffuser & Drive/Traction Modes']
+      },
+      {
+        name: 'N10 1.0L Turbo 7DCT (Dual Tone)',
+        exShowroom: 1567000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '18.3 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Dual Tone Exterior with Shadow Black Roof', 'Full Level 2 Hyundai SmartSense ADAS with Stop & Go', 'Dual Curved Panoramic Displays (Dual 12.3-inch Displays)', 'Bose Premium 8-Speaker Audio System', 'Dual Dashcam & 360° Camera with Blind View Monitor', 'Front Ventilated Seats', 'Voice-Enabled Smart Electric Sunroof', 'Smart Aroma Diffuser']
+      }
+    ]
   }
 ];
 
