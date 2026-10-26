@@ -5008,6 +5008,92 @@ export const CARS = [
         keyFeatures: ['Full Level 2 Pro ADAS with Highway Driving Assist (HDA)', 'Smart Cruise Control with Stop & Go (SCC)', 'NVIDIA ccNC Dual 12.3-inch Curved Screens', 'Bose Premium 8-Speaker Audio System', 'Front Ventilated Power Seats', 'Panoramic Sunroof & 360° Camera']
       }
     ]
+  },
+  {
+    id: 'hyundai-ioniq-5',
+    name: 'Hyundai Ioniq 5',
+    brand: 'Hyundai',
+    tagline: 'World Car of the Year Flagship Electric SUV on 800V E-GMP Architecture with V2L',
+    launchDate: 'Latest 2025–2026 Model (Upgraded 84 kWh Battery)',
+    bodyType: 'SUV',
+    fuelTypes: ['Electric'],
+    priceRange: '₹46.05 - ₹55.70 Lakh',
+    minPrice: 4605000,
+    maxPrice: 5570000,
+    safetyRating: '5 Stars (Euro NCAP) | Hyundai SmartSense Level 2 ADAS (21 Features)',
+    groundClearance: '163 mm',
+    bootSpace: '527 Litres (+ 57L Frunk)',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/gravity-gold-matte/1.webp',
+    summary: 'The internationally acclaimed World Car of the Year, Hyundai IONIQ 5 is built on the revolutionary Electric Global Modular Platform (E-GMP) featuring an ultra-fast 800V charging architecture (10% to 80% charge in just 18 minutes on a 350 kW DC charger). Powered by a permanent magnet synchronous motor delivering rear-wheel-drive dynamics with up to 228.5 PS / 350 Nm and an ARAI-certified range of up to 631 km. The cabin redefines automotive interiors as a customizable Smart Living Space with eco-processed leather, a movable Universal Island sliding console, front relaxation seats with calf support, fixed glass Vision Roof, Vehicle-to-Load (V2L) bidirectional power supply up to 3.6 kW, and Hyundai SmartSense Level 2 ADAS with 21 advanced driver assistance features.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360',
+      format: 'webp',
+      defaultColor: 'gravity-gold-matte',
+      colors: [
+        { id: 'gravity-gold-matte', name: 'Gravity Gold Matte (Hero Color)', hex: '#B59A7A' },
+        { id: 'optic-white', name: 'Optic White', hex: '#F5F6F8' },
+        { id: 'midnight-black-pearl', name: 'Midnight Black Pearl', hex: '#0E1012' },
+        { id: 'titan-grey', name: 'Titan Grey', hex: '#52565A' }
+      ]
+    },
+    colors: [
+      { id: 'gravity-gold-matte', name: 'Gravity Gold Matte (Hero Color)', hex: '#B59A7A', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/gravity-gold-matte/1.webp' },
+      { id: 'optic-white', name: 'Optic White', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/optic-white/1.webp' },
+      { id: 'midnight-black-pearl', name: 'Midnight Black Pearl', hex: '#0E1012', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/midnight-black-pearl/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey', hex: '#52565A', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/titan-grey/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & Parametric Pixels', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/gravity-gold-matte/1.webp' },
+      { label: 'Futuristic Living Space Cabin & Screens', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/futuristic-living-space-cockpit.webp' },
+      { label: 'R20 Parametric Aero Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/r20-parametric-aero-alloy-wheels.webp' },
+      { label: 'Parametric Pixel LED Tail Lights', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/parametric-pixel-led-tail-lights.webp' }
+    ],
+    gallery: [
+      { title: 'Futuristic Living Space Cabin with Sliding Universal Island & Dual 12.3-inch Screens', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/futuristic-living-space-cockpit.webp' },
+      { title: 'Signature Parametric Pixel LED Headlamps with Clamshell Aerodynamic Hood', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/parametric-pixel-led-headlamps.webp' },
+      { title: 'Parametric Pixel LED Tail Lights & Integrated Active Rear Aerodynamic Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/parametric-pixel-led-tail-lights.webp' },
+      { title: '20-inch (255/45 R20) Parametric Pixel Geometric Aero Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/r20-parametric-aero-alloy-wheels.webp' },
+      { title: 'Vehicle-to-Load (V2L) Inside & Outside Power Output (Powers Appliances up to 3.6 kW)', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/vehicle-to-load-v2l-power.webp' },
+      { title: 'Fixed Glass Vision Roof with Power Sunblind & Acoustic Sound Absorption', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/vision-roof-panoramic-glass.webp' },
+      { title: 'Premium Relaxation Front Seats with Power Calf Support & Memory Function', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/relaxation-ventilated-memory-seats.webp' },
+      { title: 'Bose Premium 8-Speaker Audio System with Virtual Engine Sound System (VESS)', url: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/gallery/bose-premium-8-speaker-audio.webp' }
+    ],
+    specs: {
+      engineOptions: 'Rear-Mounted Permanent Magnet Synchronous Motor (PMSM) (228.5 PS / 350 Nm) | 84 kWh Liquid-Cooled Lithium-Ion Battery (631 km ARAI Range)',
+      transmissions: 'Single-Speed Reduction Gear (Automatic) with Column-Mounted Shift-by-Wire & Paddle Shifter Regenerative Braking',
+      dimensions: '4655 mm (L) × 1890 mm (W) × 1625 mm (H)',
+      wheelbase: '3000 mm (Longest Wheelbase in its Class)',
+      fuelTank: '84 kWh High-Voltage Battery (Supports 800V Ultra-Fast DC Charging 10-80% in 18 mins)',
+      bootSpace: '527 Litres (Rear) + 57 Litres (Front Frunk)',
+      brakes: 'All 4 Disc Brakes with Smart Regenerative Braking System (i-Pedal) & EPB with Auto Hold',
+      suspension: 'MacPherson Strut (Front) / Multi-Link (Rear) with High-Frequency Damper Response',
+      safety: '6 Airbags, Level 2 Hyundai SmartSense ADAS (21 Features), Surround View 360° Camera with Blind View Monitor, PCA-R, ESC, VSM, HAC, MCB, TPMS Highline'
+    },
+    variants: [
+      {
+        name: 'Long Range RWD 72.6 kWh',
+        exShowroom: 4605000,
+        fuel: 'Electric',
+        trans: 'Automatic',
+        engine: 'Permanent Magnet Synchronous Motor (217 PS / 350 Nm)',
+        mileage: '631 km/charge',
+        isVFM: true,
+        vfmBadge: '⚡ WORLD CAR OF THE YEAR SWEET SPOT',
+        keyFeatures: ['72.6 kWh Battery (631 km ARAI Range)', '800V Ultra-Fast Charging Architecture (10-80% in 18 min)', 'Full Level 2 Hyundai SmartSense ADAS (21 Features)', 'V2L (Vehicle-to-Load: Inside & Outside up to 3.6 kW)', 'Front Relaxation Seats with Calf Support', 'Vision Panoramic Glass Roof', 'Bose 8-Speaker Sound System']
+      },
+      {
+        name: 'Long Range RWD 84 kWh',
+        exShowroom: 5570000,
+        fuel: 'Electric',
+        trans: 'Automatic',
+        engine: 'High-Output PMSM Motor (228.5 PS / 350 Nm)',
+        mileage: '654 km/charge',
+        isVFM: false,
+        keyFeatures: ['Extended 84 kWh High-Capacity Battery Pack', 'Upgraded 228.5 PS Output with 350 Nm Instant Torque', 'NVIDIA ccNC Infotainment System', 'Digital Centre Mirror & Dual 12.3-inch Screens', 'Surround View 360° Monitor with Blind View', 'Sliding Universal Island Console', 'R20 Aero Alloy Wheels']
+      }
+    ]
   }
 ];
 
