@@ -5228,6 +5228,158 @@ export const CARS = [
         keyFeatures: ['Flagship Dual Tone Exterior with Shadow Black Roof', 'Full Level 2 Hyundai SmartSense ADAS with Stop & Go', 'Dual Curved Panoramic Displays (Dual 12.3-inch Displays)', 'Bose Premium 8-Speaker Audio System', 'Dual Dashcam & 360° Camera with Blind View Monitor', 'Front Ventilated Seats', 'Voice-Enabled Smart Electric Sunroof', 'Smart Aroma Diffuser']
       }
     ]
+  },
+  {
+    id: 'hyundai-i20-n-line',
+    name: 'Hyundai i20 N Line',
+    brand: 'Hyundai',
+    tagline: 'Motorsport-Bred Hot Hatch with 120 PS Turbo GDi, Sporty Twin Exhaust & Stiffened Suspension',
+    launchDate: 'Latest 2025–2026 Model (With 6 Airbags Standard & All 4 Disc Brakes)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹9.99 - ₹12.52 Lakh',
+    minPrice: 999900,
+    maxPrice: 1251900,
+    safetyRating: '3 Stars (Global NCAP) | 6 Airbags Standard, All-4 Disc Brakes, ESC, VSM & HAC',
+    groundClearance: '170 mm',
+    bootSpace: '311 Litres',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/thunder-blue/1.webp',
+    summary: 'The Hyundai i20 N Line brings authentic World Rally Championship (WRC) motorsport excitement to India’s premium hatchback category. Powered by an enthusiastic 1.0L Kappa Turbo GDi petrol engine churning out 120 PS and 172 Nm of peak torque, it offers drivers the choice of an engaging 6-speed manual transmission or a lightning-fast 7-speed Dual Clutch Transmission (7DCT) with steering-mounted paddle shifters. Engineered for purists, the i20 N Line features a motorsport-tuned suspension with 30% stiffer damping for flat, responsive cornering, calibrated heavy-feel steering for sharp directional changes, all-4 disc brakes with striking red front calipers, and a signature twin-tip sports exhaust that barks with a throaty exhaust note. The cockpit is drenched in performance aesthetics with chequered-flag leatherette upholstery, red contrast stitching, red ambient mood lighting, sporty brushed metal pedals, and bespoke 3-spoke N steering wheel and N-embossed gear lever. High-end convenience is fully served by a 26.03 cm (10.25") HD infotainment screen with Apple CarPlay & Android Auto, Bose Premium 7-speaker sound system with subwoofer, voice-enabled smart electric sunroof, wireless charging pad, Bluelink connectivity, and standard 6 airbags.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360',
+      format: 'webp',
+      defaultColor: 'thunder-blue',
+      colors: [
+        { id: 'thunder-blue', name: 'Thunder Blue (Hero Signature Shade)', hex: '#1B3B8A' },
+        { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7' },
+        { id: 'abyss-black', name: 'Abyss Black Pearl', hex: '#0D0E10' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'starry-night', name: 'Starry Night (Midnight Navy Blue)', hex: '#1C2536' },
+        { id: 'titan-grey', name: 'Titan Grey Metallic', hex: '#545B62' },
+        { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'thunder-blue', name: 'Thunder Blue (Hero Signature Shade)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/thunder-blue/1.webp' },
+      { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/polar-white/1.webp' },
+      { id: 'abyss-black', name: 'Abyss Black Pearl', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/abyss-black/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/fiery-red/1.webp' },
+      { id: 'starry-night', name: 'Starry Night (Midnight Navy Blue)', hex: '#1C2536', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/starry-night/1.webp' },
+      { id: 'titan-grey', name: 'Titan Grey Metallic', hex: '#545B62', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/titan-grey/1.webp' },
+      { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/polar-white-dual-tone/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & Chequered Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/thunder-blue/1.webp' },
+      { label: 'Sporty Twin-Tip Exhaust Muffler', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/sporty-twin-tip-muffler-exhaust.webp' },
+      { label: 'R16 Diamond-Cut Alloys & Red Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/r16-diamond-cut-alloys-red-disc-calipers.webp' },
+      { label: 'Perforated N Steering & Paddle Shifters', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/perforated-leather-steering-wheel-paddle-shifters.webp' }
+    ],
+    gallery: [
+      { title: 'Chequered Flag Parametric Front Grille with Distinctive N Line Logo & Athletic Red Lip', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/chequered-flag-front-grille-n-logo.webp' },
+      { title: 'Sporty Twin Tip Muffler Exhaust with Tuned Throaty Performance Note', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/sporty-twin-tip-muffler-exhaust.webp' },
+      { title: 'R16 (195/55 R16) Diamond-Cut Alloy Wheels with N Center Cap & All-4 Red Brake Calipers', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/r16-diamond-cut-alloys-red-disc-calipers.webp' },
+      { title: 'Perforated Leather-Wrapped 3-Spoke N Steering Wheel with Steering Paddle Shifters', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/perforated-leather-steering-wheel-paddle-shifters.webp' },
+      { title: 'Sporty All-Black Cockpit with Sunrise Red Ambient Lighting & Digital TFT Instrument Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/sporty-black-cockpit-red-ambient-light.webp' },
+      { title: 'Chequered Flag Motif Leatherette Sport Seats with Red Contrast Stitching & N Logo', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/chequered-flag-leatherette-seats-n-logo.webp' },
+      { title: 'Sporty Tailgate Spoiler with Aerodynamic Side Wings & Dark Chrome Finish', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/sporty-tailgate-spoiler-side-wings.webp' },
+      { title: 'Z-Shaped Connecting LED Tail Lamps with Dark Chrome Connecting Strip', url: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/gallery/z-shaped-led-tail-lamps-dark-chrome-garnish.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L Kappa Turbo GDi Petrol (3 Cylinders, 998 cc, 120 PS @ 6000 rpm / 172 Nm @ 1500–4000 rpm)',
+      transmissions: '6-Speed Manual Transmission (6MT) & 7-Speed Dual Clutch Transmission (7DCT) with Paddle Shifters',
+      dimensions: '3995 mm (L) × 1775 mm (W) × 1505 mm (H)',
+      wheelbase: '2580 mm (Best-in-Class Cabin Space)',
+      fuelTank: '37 Litres',
+      bootSpace: '311 Litres',
+      brakes: 'All 4 Disc Brakes (Front & Rear Discs with Sporty Red Calipers)',
+      suspension: 'McPherson Strut (Front) / Coupled Torsion Beam Axle with Gas Shock Absorber (Rear) (30% Stiffer Sport Tuning)',
+      safety: '6 Airbags Standard Across All Variants, ESC, VSM, HAC, All 4 Disc Brakes, TPMS Highline, Rear Parking Camera with Dynamic Guidelines, ISOFIX Child Anchors'
+    },
+    variants: [
+      {
+        name: 'N6 1.0L Turbo 6MT',
+        exShowroom: 999900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['1.0L Turbo GDi Petrol (120 PS / 172 Nm)', '6-Speed Manual Gearbox', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '20.32 cm (8") Touchscreen with Wireless Android Auto & Apple CarPlay', 'R16 Diamond Cut N Alloys', 'Twin Tip Sports Muffler Exhaust', 'FATC Automatic Climate Control']
+      },
+      {
+        name: 'N6 1.0L Turbo 6MT (Dual Tone)',
+        exShowroom: 1014900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Tone Finish with Phantom Black Contrast Roof', '1.0L Turbo GDi (120 PS / 172 Nm)', '6-Speed Manual Gearbox', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', '20.32 cm Touchscreen', 'R16 Diamond Cut N Alloys', 'Twin Tip Exhaust']
+      },
+      {
+        name: 'N6 1.0L Turbo 7DCT',
+        exShowroom: 1114900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.2 km/l',
+        isVFM: false,
+        keyFeatures: ['7-Speed Dual Clutch Transmission (7DCT)', 'Steering Wheel Paddle Shifters', 'Drive Modes (Eco, Normal, Sport)', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', 'Smart Electric Sunroof', '20.32 cm Touchscreen', 'R16 Diamond Cut N Alloys']
+      },
+      {
+        name: 'N6 1.0L Turbo 7DCT (Dual Tone)',
+        exShowroom: 1129900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Tone Styling with Phantom Black Roof', '7-Speed DCT with Paddle Shifters', 'All 4 Disc Brakes with Red Calipers', '6 Airbags Standard', 'Smart Electric Sunroof', '20.32 cm Touchscreen', 'R16 Diamond Cut N Alloys']
+      },
+      {
+        name: 'N8 1.0L Turbo 6MT',
+        exShowroom: 1121900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.0 km/l',
+        isVFM: true,
+        vfmBadge: '🏁 ENTHUSIAST HOT HATCH SWEET SPOT',
+        keyFeatures: ['26.03 cm (10.25") HD Touchscreen Infotainment with Navigation', 'Bose Premium 7-Speaker Sound System with Sub-Woofer', 'Voice-Enabled Smart Electric Sunroof', 'Smart Key with Push Button Start', 'Athletic Red Ambient Lighting', 'Wireless Smartphone Charger', 'Hyundai Bluelink Connected Car Tech with OTA Updates', 'All 4 Disc Brakes & 6 Airbags']
+      },
+      {
+        name: 'N8 1.0L Turbo 6MT (Dual Tone)',
+        exShowroom: 1136900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Dual Tone Exterior with Phantom Black Contrast Roof', '26.03 cm (10.25") HD Touchscreen', 'Bose 7-Speaker Premium Sound System', 'Voice-Enabled Sunroof', 'Smart Key Push Button Start', 'Bluelink Connected Car Tech', 'All 4 Disc Brakes & 6 Airbags']
+      },
+      {
+        name: 'N8 1.0L Turbo 7DCT',
+        exShowroom: 1236900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship Hot Hatch with 7-Speed Dual Clutch (7DCT) & Paddle Shifters', 'Drive Modes (Eco, Normal, Sport)', '26.03 cm (10.25") HD Touchscreen with Navigation', 'Bose Premium 7-Speaker Sound System with Sub-Woofer', 'Voice-Enabled Smart Electric Sunroof', 'Smart Key with Push Button Start', 'Wireless Smartphone Charger', 'Bluelink Connected Car Tech']
+      },
+      {
+        name: 'N8 1.0L Turbo 7DCT (Dual Tone)',
+        exShowroom: 1251900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Kappa Turbo GDi (120 PS / 172 Nm)',
+        mileage: '20.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Top-End Dual Tone Finish with Phantom Black Roof', '7-Speed DCT with Steering Paddle Shifters & Drive Modes', '26.03 cm HD Infotainment & Bose 7-Speaker Audio', 'Voice-Enabled Smart Sunroof', 'Wireless Phone Charger', 'Bluelink Connected Car Suite', 'All 4 Disc Brakes & 6 Airbags']
+      }
+    ]
   }
 ];
 
