@@ -5380,6 +5380,154 @@ export const CARS = [
         keyFeatures: ['Top-End Dual Tone Finish with Phantom Black Roof', '7-Speed DCT with Steering Paddle Shifters & Drive Modes', '26.03 cm HD Infotainment & Bose 7-Speaker Audio', 'Voice-Enabled Smart Sunroof', 'Wireless Phone Charger', 'Bluelink Connected Car Suite', 'All 4 Disc Brakes & 6 Airbags']
       }
     ]
+  },
+  {
+    id: 'kia-seltos',
+    name: 'Kia Seltos',
+    brand: 'Kia',
+    tagline: 'Badass Mid-Size SUV with Level 2+ ADAS (28 Features), Dual Panoramic Display & 160 PS Turbo GDi',
+    launchDate: 'Latest 2025–2026 Model (5-Star Bharat NCAP Rated)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹11.25 - ₹21.82 Lakh',
+    minPrice: 1125000,
+    maxPrice: 2182000,
+    safetyRating: '5 Stars (Bharat NCAP - 76.7/81) | Level 2+ ADAS (28 Autonomous Features) & 6 Airbags',
+    groundClearance: '190 mm',
+    bootSpace: '447 Litres (VDA)',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/pewter-olive/1.webp',
+    summary: 'The all-new 2025–2026 Kia Seltos redefines the mid-size SUV benchmark with dominant styling, reinforced K3 platform engineering, and a certified 5-Star Bharat NCAP safety rating (scoring 76.7 out of 81 points). Available with three refined powertrains: the potent Smartstream 1.5L Turbo GDi petrol producing a class-leading 160 PS and 253 Nm paired with a 7-speed Dual Clutch Transmission (7DCT) or 6-speed iMT, a silky 1.5L naturally aspirated petrol with 6MT / Smartstream IVT automatic, and an efficient 1.5L CRDi VGT Diesel producing 116 PS and 250 Nm paired with 6-speed torque converter automatic or 6iMT. The progressive cabin showcases the Command-Centric Trinity Panoramic Display panel (dual seamless 10.25-inch or 12.3-inch displays), a boundless dual-pane panoramic sunroof, immersive Bose Premium 8-speaker audio, 64-color ambient mood lighting, dual-zone FATC with 5-inch digital climate touch control, front ventilated seats with 8-way power adjust and memory/relaxation position, and standard 6 airbags with all-4 disc brakes. Its segment-leading Level 2+ ADAS suite features 28 autonomous safety functions including Forward Collision-Avoidance Assist with Junction Crossing & Turning, Smart Cruise Control with Stop & Go, 360° Surround View Monitor, and Blind View Monitor.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360',
+      format: 'webp',
+      defaultColor: 'pewter-olive',
+      colors: [
+        { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343' },
+        { id: 'frost-blue', name: 'Frost Blue', hex: '#66879B' },
+        { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A' },
+        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
+        { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8' },
+        { id: 'gravity-gray', name: 'Gravity Gray', hex: '#4F5357' },
+        { id: 'magma-red', name: 'Magma Red', hex: '#A8141D' },
+        { id: 'ivory-silver-gloss', name: 'Ivory Silver Gloss', hex: '#8E9297' },
+        { id: 'morning-haze', name: 'Morning Haze', hex: '#86919B' },
+        { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E' }
+      ]
+    },
+    colors: [
+      { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/pewter-olive/1.webp' },
+      { id: 'frost-blue', name: 'Frost Blue', hex: '#66879B', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/frost-blue/1.webp' },
+      { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/imperial-blue/1.webp' },
+      { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/aurora-black-pearl/1.webp' },
+      { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/glacier-white-pearl/1.webp' },
+      { id: 'gravity-gray', name: 'Gravity Gray', hex: '#4F5357', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/gravity-gray/1.webp' },
+      { id: 'magma-red', name: 'Magma Red', hex: '#A8141D', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/magma-red/1.webp' },
+      { id: 'ivory-silver-gloss', name: 'Ivory Silver Gloss', hex: '#8E9297', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/ivory-silver-gloss/1.webp' },
+      { id: 'morning-haze', name: 'Morning Haze', hex: '#86919B', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/morning-haze/1.webp' },
+      { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/matte-graphite/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & Star Map DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/pewter-olive/1.webp' },
+      { label: 'Trinity Dual Panoramic Display', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/command-centric-trinity-panoramic-display.webp' },
+      { label: 'Dual Pane Panoramic Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/boundless-dual-pane-panoramic-sunroof.webp' },
+      { label: 'GT-Line R18 Alloys & Tiger Nose', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/gt-line-r18-crystal-cut-alloys-tiger-nose-grille.webp' }
+    ],
+    gallery: [
+      { title: 'Command-Centric Trinity Panoramic Display Panel with Dual 10.25-inch High-Definition Displays', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/command-centric-trinity-panoramic-display.webp' },
+      { title: 'Boundless Dual-Pane Panoramic Sunroof with One-Touch Electric Voice Operation', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/boundless-dual-pane-panoramic-sunroof.webp' },
+      { title: 'Front Row Ventilated Leatherette Seats with 8-Way Power Adjustment & Memory Relaxation Mode', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/ventilated-front-seats-8-way-power-driver-seat.webp' },
+      { title: 'Immersive Bose Premium Sound System with 8 High-Performance Speakers & Dynamic Speed Compensation', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/bose-premium-8-speaker-sound-system.webp' },
+      { title: '360° Surround View Monitor with Blind View Monitor (BVM) in Instrument Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/360-degree-surround-view-blind-view-monitor.webp' },
+      { title: 'ADAS Level 2+ Intelligence Suite with 28 Autonomous Features including Smart Cruise Control with Stop & Go', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/adas-level-2-plus-smart-cruise-stop-go.webp' },
+      { title: 'Certified 5-Star Bharat NCAP Crash Test Rating (76.7/81 Points) Standard with 6 Airbags', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/5-star-bharat-ncap-safety-rating.webp' },
+      { title: 'GT-Line Exclusive R18 (215/55 R18) Crystal-Cut Alloy Wheels & Glossy Black Tiger Nose Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/seltos/gallery/gt-line-r18-crystal-cut-alloys-tiger-nose-grille.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L Smartstream T-GDi Turbo Petrol (160 PS / 253 Nm) | 1.5L Smartstream MPi Petrol (115 PS / 144 Nm) | 1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+      transmissions: '6-Speed MT, 6-Speed iMT, Smartstream IVT Automatic, 6-Speed Torque Converter AT & 7-Speed Dual Clutch (7DCT)',
+      dimensions: '4460 mm (L) × 1800 mm (W) × 1635 mm (H) (with Roof Rails)',
+      wheelbase: '2690 mm (Best-in-Segment Rear Legroom)',
+      fuelTank: '50 Litres',
+      bootSpace: '447 Litres (VDA Standard)',
+      brakes: 'All 4 Disc Brakes Standard across all variants with Electronic Parking Brake (EPB) & Auto Hold',
+      suspension: 'McPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle with High-Performance Gas Dampers (Rear)',
+      safety: '5 Stars (Bharat NCAP Rated), 6 Airbags Standard, Level 2+ ADAS (28 Autonomous Features with FCA-JC, FCA-JT, SCC Stop & Go), 360° Camera, ESC, VSM, HAC, TPMS Highline'
+    },
+    variants: [
+      {
+        name: 'HTE 1.5L Petrol 6MT',
+        exShowroom: 1125000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream MPi (115 PS / 144 Nm)',
+        mileage: '17.0 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'All 4 Disc Brakes', 'Electronic Stability Control (ESC) & VSM', '10.25-inch Digital Cluster', 'Keyless Entry & Central Locking', 'Halogen Projector Headlamps & Shark Fin Antenna', 'Front & Rear Skid Plates']
+      },
+      {
+        name: 'HTK 1.5L Petrol 6MT',
+        exShowroom: 1342000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream MPi (115 PS / 144 Nm)',
+        mileage: '17.0 km/l',
+        isVFM: false,
+        keyFeatures: ['20.32 cm (8") Touchscreen with Wireless Android Auto & Apple CarPlay', 'R16 Style Wheels', 'Rear View Camera with Dynamic Guidelines', 'Electric Folding Outside Mirrors', 'Push Button Start / Stop with Smart Key', 'Rear Door Sunshade Curtains']
+      },
+      {
+        name: 'HTK+ 1.5L Turbo Petrol 6iMT',
+        exShowroom: 1540000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '17.7 km/l',
+        isVFM: false,
+        keyFeatures: ['160 PS Turbo GDi Engine with Clutchless 6iMT', 'Boundless Dual-Pane Panoramic Sunroof', 'R17 Crystal Cut Alloy Wheels', 'Star Map LED Sweeping Light Guide DRLs', 'Smart Smartphone Wireless Charger', 'Auto Cruise Control & LED Ambient Mood Lighting']
+      },
+      {
+        name: 'HTX 1.5L Petrol IVT (Automatic)',
+        exShowroom: 1692000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Smartstream MPi (115 PS / 144 Nm)',
+        mileage: '17.7 km/l',
+        isVFM: true,
+        vfmBadge: '💎 MID-TRIM LUXURY SWEET SPOT',
+        keyFeatures: ['Smooth Smartstream IVT Automatic with Paddle Shifters', 'Boundless Dual-Pane Panoramic Sunroof', 'Command-Centric Trinity Panoramic Displays (Dual 10.25-inch Screens)', 'Crown Jewel LED Headlamps & Star Map LED Tail Lamps', 'Dual Zone FATC with Touch AC Panel', 'Front Ventilated Seats', '64-Color Ambient Mood Lighting']
+      },
+      {
+        name: 'HTX+ 1.5L Diesel 6AT (Automatic)',
+        exShowroom: 1960000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+        mileage: '19.1 km/l',
+        isVFM: false,
+        keyFeatures: ['1.5L CRDi Diesel with Smooth 6-Speed Torque Converter AT', 'Bose Premium 8-Speaker Sound System', '8-Way Power Driver Seat with Relaxation Position', 'Trinity Panoramic Dual 10.25-inch Curved Displays', 'Front Ventilated Seats', 'Boundless Panoramic Sunroof', 'Kia Connect 2.0 with 85+ Features']
+      },
+      {
+        name: 'GTX+ 1.5L Turbo Petrol 7DCT (GT-Line)',
+        exShowroom: 2135000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '17.9 km/l',
+        isVFM: false,
+        keyFeatures: ['Flagship GT-Line Styling with Glossy Tiger Nose Grille & Dual Exhaust', 'Full Level 2+ ADAS Intelligence (28 Autonomous Features)', 'Smart Cruise Control with Stop & Go (SCC)', '360° Surround View Monitor with Blind View Monitor (BVM)', 'R18 (215/55 R18) Crystal Cut Alloys', 'Windshield Projected Head-Up Display (HUD)', 'Bose 8-Speaker Audio System', 'Dual-Pane Panoramic Sunroof']
+      },
+      {
+        name: 'X-Line 1.5L Turbo Petrol 7DCT (Matte Graphite)',
+        exShowroom: 2182000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '17.9 km/l',
+        isVFM: false,
+        keyFeatures: ['Exclusive Matte Graphite Signature Exterior Paint Finish', 'Splendid Sage Green / Glossy Black Exclusive X-Line Interiors', 'R18 Crystal Cut Glossy Black Alloy Wheels', 'Full Level 2+ ADAS Suite (28 Autonomous Features)', 'Head-Up Display & 360° Surround View Monitor', 'Bose Premium 8-Speaker Audio', 'Boundless Panoramic Sunroof']
+      }
+    ]
   }
 ];
 
