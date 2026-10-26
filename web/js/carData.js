@@ -4815,6 +4815,199 @@ export const CARS = [
         keyFeatures: ['Exclusive Dual-Tone Phantom Black Contrast Roof', 'HTRAC All-Wheel Drive with Terrain Modes', 'Flagship Level 2 SmartSense ADAS Suite', 'Bose 8-Speaker Soundstage', 'Heated & Ventilated Memory Seats', 'Smart Power Tailgate']
       }
     ]
+  },
+  {
+    id: 'hyundai-bayon',
+    name: 'Hyundai Bayon',
+    brand: 'Hyundai',
+    tagline: 'Tech-Forward Urban Crossover SUV with Level 2 Pro ADAS & Dual 12.3-inch Curved Displays',
+    launchDate: 'October 2026 (All-New Launch)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol'],
+    priceRange: '₹9.99 - ₹18.00 Lakh',
+    minPrice: 999900,
+    maxPrice: 1800000,
+    safetyRating: 'Hyundai SmartSense Level 2 Pro ADAS (23 Features) | 6 Airbags Standard',
+    groundClearance: '185 mm',
+    bootSpace: '411 Litres',
+    waitingPeriod: '4 - 10 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white/1.webp',
+    summary: 'The all-new Hyundai BAYON is Hyundai’s latest intelligent urban crossover SUV positioned between the Venue and Creta. Featuring bold crossover proportions with signature arrow-shaped LED daytime running lights, dual LED projector lamps, wide gloss-black parametric grille, and connecting LED tail lamps with an aerodynamic rear spoiler. Inside, the cabin features dual integrated 31.24 cm (12.3-inch) curved panoramic displays accelerated by NVIDIA ccNC architecture with Generative AI voice assistant, voice-controlled smart panoramic sunroof, Bose Premium 8-speaker sound system with subwoofer, ventilated front seats, electric 8-way driver seat, factory-fitted dual dashcam, and Hyundai SmartSense Level 2 Pro ADAS with 23 autonomous safety features including Highway Driving Assist and Navigation-based Smart Cruise Control.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360',
+      format: 'webp',
+      defaultColor: 'atlas-white',
+      colors: [
+        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
+        { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10' },
+        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
+        { id: 'ecotronic-grey', name: 'Ecotronic Grey', hex: '#545B62' },
+        { id: 'golden-bronze', name: 'Golden Bronze', hex: '#8D6942' },
+        { id: 'classy-blue', name: 'Classy Blue', hex: '#1E3A5F' },
+        { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E' },
+        { id: 'classy-blue-matte', name: 'Classy Blue Matte', hex: '#2B3D52' },
+        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
+        { id: 'fiery-red-black-roof', name: 'Fiery Red with Titanium Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
+      ]
+    },
+    colors: [
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white/1.webp' },
+      { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/titanium-black/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/fiery-red/1.webp' },
+      { id: 'ecotronic-grey', name: 'Ecotronic Grey', hex: '#545B62', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/ecotronic-grey/1.webp' },
+      { id: 'golden-bronze', name: 'Golden Bronze', hex: '#8D6942', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/golden-bronze/1.webp' },
+      { id: 'classy-blue', name: 'Classy Blue', hex: '#1E3A5F', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/classy-blue/1.webp' },
+      { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/titanium-black-matte/1.webp' },
+      { id: 'classy-blue-matte', name: 'Classy Blue Matte', hex: '#2B3D52', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/classy-blue-matte/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white-black-roof/1.webp' },
+      { id: 'fiery-red-black-roof', name: 'Fiery Red with Titanium Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/fiery-red-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white/1.webp' },
+      { label: 'Dual 12.3-inch Curved Displays & ccNC', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/dual-12-inch-curved-displays.webp' },
+      { label: 'R17 Diamond-Cut Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/r17-diamond-cut-alloy-wheels.webp' },
+      { label: 'Rear Connecting LED Tail Lamps & Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/connecting-led-tail-lamps-spoiler.webp' }
+    ],
+    gallery: [
+      { title: 'Refined Modern Cabin with Olive Grey Theme & Dual Panoramic Curved Displays', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/bayon-luxury-cockpit-interior.webp' },
+      { title: 'NVIDIA ccNC Accelerated Dual 31.24 cm (12.3-inch) Navigation & Digital Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/dual-12-inch-curved-displays.webp' },
+      { title: 'Signature Arrow-Shaped LED Daytime Running Lights & Wide Parametric Front Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/signature-led-drls-front-grille.webp' },
+      { title: 'R17 (215/55 R17) Diamond-Cut Alloy Wheels & Sculpted Geometric Wheel Arches', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/r17-diamond-cut-alloy-wheels.webp' },
+      { title: 'Hyundai SmartSense Level 2 Pro ADAS with Highway Driving Assist (HDA)', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/highway-driving-assist-adas.webp' },
+      { title: 'Smart Cruise Control with Stop & Go (SCC with S&G) & Lane Following Assist', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/smart-cruise-control-stop-and-go.webp' },
+      { title: 'Factory-Fitted Dual Dashcam with Front & Cabin Road Recording', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/factory-fitted-dual-dashcam.webp' },
+      { title: 'Full-Width Connecting LED Tail Lamps & Aerodynamic Sport Rear Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/bayon/gallery/connecting-led-tail-lamps-spoiler.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L MPi 4-Cylinder Petrol (115 PS @ 6,300 rpm / 143.8 Nm @ 4,500 rpm)',
+      transmissions: '6-Speed Manual (6MT) & Intelligent Variable Transmission (iVT) with Paddle Shifters',
+      dimensions: '4245 mm (L) × 1810 mm (W) × 1605 mm (H)',
+      wheelbase: '2600 mm',
+      fuelTank: '43 Litres',
+      bootSpace: '411 Litres',
+      brakes: 'Front Disc & Rear Disc (HX 8 / HX 10) with ABS, EBD & Electronic Parking Brake (EPB) with Auto Hold',
+      suspension: 'Independent MacPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard, Hyundai SmartSense Level 2 Pro ADAS (23 Features), Surround View 360° Monitor, Blind-Spot View Monitor, Dual Dashcam, ESC, VSM, HAC, TPMS'
+    },
+    variants: [
+      {
+        name: 'HX 2 1.5L 6MT',
+        exShowroom: 999900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 INCREDIBLE SUB-₹10L ENTRY VALUE',
+        keyFeatures: ['1.5L 4-Cylinder Petrol Engine (115 PS)', '6 Airbags Standard & ESC', 'LED Headlamps & LED DRLs', 'Front & Rear Power Windows', 'Manual AC with Rear AC Vents', 'R16 Wheels with Wheel Covers']
+      },
+      {
+        name: 'HX 3 1.5L 6MT',
+        exShowroom: 1090000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ BALANCED TECH PACK',
+        keyFeatures: ['10.25-inch ccNC Touchscreen Infotainment', 'Wireless Apple CarPlay & Android Auto', 'Smart Key with Push Button Start', 'Steering Mounted Controls', 'Rear Parking Camera', 'Electrically Adjustable Mirrors']
+      },
+      {
+        name: 'HX 3+ 1.5L 6MT',
+        exShowroom: 1180000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: false,
+        keyFeatures: ['Electric Sunroof', 'Roof Rails', 'R17 Styled Steel Wheels', 'Rear Defogger with Timer', 'LED Daytime Running Lamps', 'Auto Headlamps']
+      },
+      {
+        name: 'HX 5 1.5L 6MT',
+        exShowroom: 1245000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: true,
+        vfmBadge: '💎 SWEET SPOT MANUAL VALUE',
+        keyFeatures: ['Voice-Controlled Panoramic Sunroof', 'Hyundai Bluelink Connected Car Tech', 'Over-The-Air (C-OTA) Vehicle Updates', 'Fully Automatic Temperature Control (FATC)', 'Wireless Smartphone Charger', 'Cruise Control']
+      },
+      {
+        name: 'HX 5 1.5L iVT',
+        exShowroom: 1385000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '✨ BEST AUTOMATIC PANORAMIC VALUE',
+        keyFeatures: ['Intelligent Variable Transmission (iVT)', 'Steering Paddle Shifters & Drive Modes', 'Voice-Controlled Panoramic Sunroof', 'Bluelink Connected Suite', 'Wireless Phone Charger', 'Rear Disc Brakes']
+      },
+      {
+        name: 'HX 6 1.5L 6MT',
+        exShowroom: 1357000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: false,
+        keyFeatures: ['R17 Diamond-Cut Alloy Wheels', 'Dual LED Projector Headlamps', 'Ambient Mood Lighting', 'Leatherette Wrapped Steering Wheel & Gear Knob', 'Sliding Front Armrest', 'Rear Wiper & Washer']
+      },
+      {
+        name: 'HX 6 1.5L iVT',
+        exShowroom: 1497000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.5 km/l',
+        isVFM: false,
+        keyFeatures: ['Smooth iVT Automatic with Paddle Shifters', 'R17 Diamond-Cut Alloys', 'Voice Panoramic Sunroof', 'Dual LED Projectors', 'Ambient Lighting', 'Automatic Climate Control']
+      },
+      {
+        name: 'HX 8 1.5L 6MT',
+        exShowroom: 1510000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: true,
+        vfmBadge: '🌟 LUXURY COMFORT SWEET SPOT',
+        keyFeatures: ['Front Row Ventilated Seats', '8-Way Power Adjustable Driver Seat', 'Factory-Fitted Dual Dashcam', 'Surround View 360° Monitor', 'Leatherette Seat Upholstery', 'All 4 Disc Brakes']
+      },
+      {
+        name: 'HX 8 1.5L iVT',
+        exShowroom: 1654000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.5 km/l',
+        isVFM: false,
+        keyFeatures: ['Front Ventilated Seats & 8-Way Power Driver Seat', 'Surround View 360° Camera', 'Dual Dashcam', 'Electronic Parking Brake with Auto Hold', 'Voice Panoramic Sunroof', 'R17 Diamond-Cut Alloys']
+      },
+      {
+        name: 'HX 10 1.5L 6MT',
+        exShowroom: 1665000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.8 km/l',
+        isVFM: false,
+        keyFeatures: ['Level 2 Pro ADAS Suite (23 Features)', 'Dual 12.3-inch Curved Displays & ccNC', 'Generative AI Voice Assistant', 'Bose Premium 8-Speaker Audio with Subwoofer', 'Blind-Spot View Monitor', 'Front Ventilated Seats']
+      },
+      {
+        name: 'HX 10 1.5L iVT',
+        exShowroom: 1800000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi Petrol (115 PS)',
+        mileage: '17.5 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP PRO ADAS & NVIDIA ccNC',
+        keyFeatures: ['Full Level 2 Pro ADAS with Highway Driving Assist (HDA)', 'Smart Cruise Control with Stop & Go (SCC)', 'NVIDIA ccNC Dual 12.3-inch Curved Screens', 'Bose Premium 8-Speaker Audio System', 'Front Ventilated Power Seats', 'Panoramic Sunroof & 360° Camera']
+      }
+    ]
   }
 ];
 
