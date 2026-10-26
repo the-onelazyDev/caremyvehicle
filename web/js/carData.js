@@ -4352,74 +4352,193 @@ export const CARS = [
     ]
   },
   {
-    id: 'hyundai-creta-facelift',
+    id: 'hyundai-creta',
     name: 'Hyundai Creta (Facelift)',
     brand: 'Hyundai',
-    tagline: 'India’s #1 Mid-Size SUV with Level 2 ADAS & Dual Curved Screens',
-    launchDate: 'January 2024',
+    tagline: 'India’s Undisputed Benchmark Mid-Size SUV with Level 2 ADAS & Dual Curved Screens',
+    launchDate: 'Updated 2024–2026 (Latest Facelift)',
     bodyType: 'SUV',
     fuelTypes: ['Petrol', 'Diesel'],
-    priceRange: '₹10.99 - ₹20.14 Lakh',
-    minPrice: 1099000,
-    maxPrice: 2014000,
-    safetyRating: '36 Safety Features Standard',
+    priceRange: '₹11.00 - ₹20.15 Lakh',
+    minPrice: 1100000,
+    maxPrice: 2015000,
+    safetyRating: '36 Standard Safety Features | Level 2 Hyundai SmartSense ADAS (19 Features)',
     groundClearance: '190 mm',
-    bootSpace: '433 L',
-    waitingPeriod: '6 - 18 Weeks',
-    heroImage: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80',
-    summary: 'The benchmark of the mid-size SUV segment received a radical parametric front grille, continuous horizon LED DRLs, twin 10.25-inch displays, and Level 2 ADAS.',
+    bootSpace: '433 Litres',
+    waitingPeriod: '4 - 12 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
+    summary: 'The undisputed king of the mid-size SUV segment redefined in its latest facelift with a commanding parametric black-chrome grille, continuous full-width Horizon LED DRLs, quad-beam LED headlamps, twin 10.25-inch curved cockpit displays, and 70+ advanced connected safety features.',
+    spin360: {
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta/360',
+      totalFrames: 36,
+      fileExtension: 'webp',
+      defaultColor: 'robust-emerald-pearl',
+      prefix: '',
+      zeroPad: false
+    },
     colors: [
-      { name: 'Robust Emerald Pearl', hex: '#064E3B', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Ranger Khaki', hex: '#78716C', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Abyss Black', hex: '#0F172A', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Atlas White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Fiery Red', hex: '#DC2626', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+      { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
+      { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/abyss-black/1.webp' },
+      { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/atlas-white/1.webp' },
+      { id: 'titan-grey', name: 'Ecotronic Grey', hex: '#545B62', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/titan-grey/1.webp' },
+      { id: 'titan-grey-matte', name: 'Ecotronic Grey Matte', hex: '#61666B', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/titan-grey-matte/1.webp' },
+      { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#556857', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/ranger-khaki/1.webp' },
+      { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/fiery-red/1.webp' },
+      { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/starry-night/1.webp' },
+      { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/abyss-black-matte/1.webp' },
+      { id: 'king-abyss-black-matte', name: 'King Limited Edition (Black Matte & Red Calipers)', hex: '#141517', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/king-abyss-black-matte/1.webp' },
+      { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/atlas-white-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Dynamic Studio Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
+      { label: 'Horizon LED Lightbar & Parametric Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/5.webp' },
+      { label: 'Athletic SUV Profile & Aero R17 Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/14.webp' },
+      { label: 'Connected Horizon LED Taillamps & Wide Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/23.webp' }
     ],
     gallery: [
-      { title: 'Horizon LED Lightbar & Front Grille', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Dual Integrated 10.25-inch Curved Cockpit', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Voice-Controlled Panoramic Sunroof', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Generous 433L Boot Space', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+      { title: 'Front Three-Quarter 360° Studio Stance in Robust Emerald Pearl', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
+      { title: 'Commanding Front Fascia with Parametric Black Chrome Grille and Horizon LED Lightbar', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/5.webp' },
+      { title: 'Athletic SUV Silhouette with Diamond-Cut Aero Alloys and Silver Bridge Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/14.webp' },
+      { title: 'Connected LED Horizon Taillamps with Modern Sculpted Tailgate and Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/23.webp' }
     ],
     specs: {
-      engineOptions: '1.5L MPi Petrol (115 bhp) | 1.5L Turbo GDi (160 bhp) | 1.5L U2 CRDi Diesel (116 bhp)',
-      transmissions: '6-Speed MT, IVT (CVT), 6-Speed AT, and 7-Speed Dual Clutch (DCT)',
+      engineOptions: '1.5L MPi Petrol (115 PS / 143.8 Nm) | 1.5L Turbo GDi Petrol (160 PS / 253 Nm) | 1.5L U2 CRDi Diesel (116 PS / 250 Nm)',
+      transmissions: '6-Speed Manual (6MT), Intelligent Variable Transmission (IVT), 6-Speed Automatic (6AT), and 7-Speed Dual Clutch (7DCT) with Paddle Shifters',
       dimensions: '4330 mm (L) × 1790 mm (W) × 1635 mm (H)',
       wheelbase: '2610 mm',
       fuelTank: '50 Litres',
-      seatingCapacity: '5 Passengers'
+      bootSpace: '433 Litres',
+      brakes: 'All 4 Disc Brakes with ABS, EBD & Electronic Parking Brake (EPB) with Auto Hold',
+      suspension: 'MacPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle (Rear)',
+      safety: '6 Airbags Standard Across All Trims, Level 2 Hyundai SmartSense ADAS (19 Safety Features), Surround View 360° Monitor with Blind View, ESC, VSM, HAC, TPMS Highline, ISOFIX'
     },
     variants: [
       {
-        name: 'E 1.5 Petrol MT',
-        exShowroom: 1099000,
+        name: 'E 1.5L Petrol 6MT',
+        exShowroom: 1100000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.5L MPi (115 bhp)',
-        mileage: '17.4 kmpl',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.4 km/l',
         isVFM: false,
-        keyFeatures: ['6 Airbags', 'All 4 Disc Brakes', 'Manual AC', 'Tire Pressure Monitor']
+        keyFeatures: ['6 Airbags Standard', 'All 4 Disc Brakes', 'ESC & Hill-Start Assist', 'Manual AC', 'Tire Pressure Monitor (TPMS)', 'Dual-Tone Interior']
       },
       {
-        name: 'S(O) 1.5 Petrol MT',
-        exShowroom: 1432000,
+        name: 'EX 1.5L Petrol 6MT',
+        exShowroom: 1221000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.5L MPi (115 bhp)',
-        mileage: '17.4 kmpl',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.4 km/l',
+        isVFM: false,
+        keyFeatures: ['8-inch Touchscreen Infotainment', 'Wireless Android Auto & Apple CarPlay', 'Steering Mounted Controls', 'Shark Fin Antenna', 'Front & Rear USB-C Ports']
+      },
+      {
+        name: 'S 1.5L Petrol 6MT',
+        exShowroom: 1343000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Horizon LED DRLs', 'Rear Parking Camera with Guidelines', 'Cruise Control', 'Rear Window Sunshades', 'Automatic Headlamps', 'Dual-Tone Styled Wheels']
+      },
+      {
+        name: 'S(O) 1.5L Petrol 6MT',
+        exShowroom: 1436000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.4 km/l',
         isVFM: true,
         vfmBadge: '🏆 MOST POPULAR PICK',
-        keyFeatures: ['Panoramic Sunroof', 'Dual-Zone Climate Control', '17-inch Alloys', 'Electronic Parking Brake']
+        keyFeatures: ['Voice-Enabled Panoramic Sunroof', 'Dual-Zone Automatic Climate Control', '17-inch Diamond-Cut Alloys', 'Electronic Parking Brake (EPB) with Auto Hold', 'Push Button Start']
       },
       {
-        name: 'SX(O) 1.5 Turbo DCT',
-        exShowroom: 2014000,
+        name: 'S(O) 1.5L Petrol IVT',
+        exShowroom: 1586000,
         fuel: 'Petrol',
         trans: 'Automatic',
-        engine: '1.5L Turbo GDi (160 bhp)',
-        mileage: '18.4 kmpl',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.7 km/l',
+        isVFM: true,
+        vfmBadge: '⚡ TOP AUTOMATIC VALUE',
+        keyFeatures: ['Ultra-Smooth IVT Automatic', 'Paddle Shifters & Drive Modes', 'Panoramic Sunroof', 'Dual-Zone AC', 'Electronic Parking Brake', 'Wireless Charger']
+      },
+      {
+        name: 'SX 1.5L Petrol 6MT',
+        exShowroom: 1530000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.4 km/l',
         isVFM: false,
-        keyFeatures: ['Level 2 ADAS (70+ Safety Features)', 'Bose 8-Speaker Audio', 'Ventilated Seats', '360 Camera with Blind View']
+        keyFeatures: ['Dual 10.25-inch Integrated Screens (Infotainment + Cluster)', 'Connected Horizon LED Taillamps', 'Ambient Lighting (64 Colors)', 'Rear Seat Headrest Cushions', 'Smart Key with Remote Engine Start']
+      },
+      {
+        name: 'SX(O) 1.5L Petrol IVT',
+        exShowroom: 1873000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L MPi (115 PS)',
+        mileage: '17.7 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP PETROL LUXURY',
+        keyFeatures: ['Hyundai SmartSense Level 2 ADAS (19 Features)', 'Bose Premium 8-Speaker Audio', 'Surround View 360° Monitor & Blind View', 'Front Ventilated Seats', '8-Way Power Driver Seat']
+      },
+      {
+        name: 'SX(O) 1.5L Turbo 7DCT',
+        exShowroom: 2015000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.4 km/l',
+        isVFM: true,
+        vfmBadge: '🔥 160 PS TURBO PERFORMANCE',
+        keyFeatures: ['160 PS / 253 Nm Turbo GDi Power', 'Lightning 7-Speed Dual Clutch (DCT)', 'Full Level 2 ADAS Highway Suite', 'Bose 8-Speaker Audio System', 'Dual Curved Cockpit', 'Ventilated Front Seats']
+      },
+      {
+        name: 'SX(O) Knight Edition 1.5L Turbo 7DCT',
+        exShowroom: 2030000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Turbo GDi (160 PS)',
+        mileage: '18.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Knight All-Black Aesthetic Package', 'Matte Black Exterior with Red Brake Calipers', 'Dark Chrome Badging & Grille', 'Black Leatherette Seats with Brass Piping', 'Flagship Level 2 ADAS & Bose Audio']
+      },
+      {
+        name: 'E 1.5L Diesel 6MT',
+        exShowroom: 1256000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '21.8 km/l',
+        isVFM: true,
+        vfmBadge: '⛽ BEST DIESEL ECONOMY PICK',
+        keyFeatures: ['Frugal 1.5L Diesel (21.8 km/l)', 'All 4 Disc Brakes', '6 Airbags Standard', 'ESC & Hill-Start Assist Control', 'Full Foldable Rear Seats']
+      },
+      {
+        name: 'S(O) 1.5L Diesel 6MT',
+        exShowroom: 1590000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '21.8 km/l',
+        isVFM: true,
+        vfmBadge: '🏆 BEST DIESEL VALUE',
+        keyFeatures: ['Panoramic Sunroof', 'Dual-Zone Climate Control', '17-inch Diamond-Cut Alloys', 'Electronic Parking Brake', 'Push Button Start']
+      },
+      {
+        name: 'SX(O) 1.5L Diesel 6AT',
+        exShowroom: 2015000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L U2 CRDi Diesel (116 PS)',
+        mileage: '19.1 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FIRST-CLASS DIESEL CRUISER',
+        keyFeatures: ['Smooth 6-Speed Torque Converter Auto', 'Full Level 2 ADAS Suite', 'Bose Premium 8-Speaker Audio', 'Surround View 360° Camera & Blind View', 'Front Ventilated Seats', 'Panoramic Sunroof']
       }
     ]
   }

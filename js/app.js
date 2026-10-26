@@ -37,9 +37,9 @@ function checkDeepLink() {
   const params = new URLSearchParams(window.location.search);
   const carId = params.get('car');
   if (carId) {
-    const car = getAllCars().find(c => c.id === carId);
+    const car = getAllCars().find(c => c.id === carId || (carId === 'hyundai-creta-facelift' && c.id === 'hyundai-creta'));
     if (car) {
-      setTimeout(() => window.openCarModal(carId), 150);
+      setTimeout(() => window.openCarModal(car.id), 150);
     }
   }
 }
