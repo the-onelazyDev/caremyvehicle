@@ -1,0 +1,184 @@
+{
+  "id": "byd-emax-7",
+  "name": "BYD eMAX 7",
+  "brand": "BYD",
+  "tagline": "Your Electric Companion for Long-Range 6 & 7-Seater Family Luxury with 530 km Range & Blade Battery",
+  "launchDate": "2025",
+  "bodyType": "MUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹27.90 - ₹29.90 Lakh",
+  "minPrice": 2790000,
+  "maxPrice": 2990000,
+  "safetyRating": "5.0 ★ (6 Airbags + Level 2 ADAS + Ultra-Safe Blade Battery)",
+  "groundClearance": "170 mm",
+  "bootSpace": "180 Litres (580L with 3rd Row Folded)",
+  "waitingPeriod": "2 - 5 Weeks",
+  "summary": "India's premier three-row electric family MPV, the BYD eMAX 7 is offered in 6-Seater Captain Seat (2+2+2) and 7-Seater (2+3+2) configurations powered by a 71.8 kWh BYD Blade Battery delivering up to 530 km NEDC range and 115 kW DC fast charging (0-80% in 37 mins). Highlights include a 1.42 m² panoramic glass roof with electric sunshade, ventilated & electrically adjustable front seats, a 12.8-inch intelligent rotating touchscreen, Level 2 ADAS, 6 airbags, and Vehicle-to-Load (VTOL) mobile power.",
+  "colors": [
+    {
+      "id": "quartz-blue",
+      "name": "Quartz Blue",
+      "hex": "#273651",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027032845.webp"
+    },
+    {
+      "id": "cosmos-black",
+      "name": "Cosmos Black",
+      "hex": "#1C1F22",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027090625.webp"
+    },
+    {
+      "id": "crystal-white",
+      "name": "Crystal White",
+      "hex": "#C6CED9",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027123541.webp"
+    },
+    {
+      "id": "harbour-grey",
+      "name": "Harbour Grey",
+      "hex": "#57595B",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027175115.webp"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "emax7-hero-stance",
+      "title": "BYD eMAX 7 Long-Range 6 & 7-Seater Electric MPV",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727931787746.webp"
+    },
+    {
+      "id": "emax7-electric-elegance",
+      "title": "Electric Elegance with Dragon Face Design & 2,800 mm Wheelbase",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727931927993.jpg"
+    },
+    {
+      "id": "emax7-crystal-diamond-led",
+      "title": "Crystal Diamond Floating LED Headlamps with Intelligent High Beam",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415596381.webp"
+    },
+    {
+      "id": "emax7-immersive-interiors",
+      "title": "Immersive Black & Brown Dual-Tone Three-Row Cabin",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727932126068.webp"
+    },
+    {
+      "id": "emax7-intelligent-cockpit",
+      "title": "Modern Cockpit with 12.8-inch Rotatable Display & 5-inch LCD Cluster",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415734399.jpg"
+    },
+    {
+      "id": "emax7-panoramic-glass-roof",
+      "title": "1.42 m² Panoramic Glass Roof with Electric Slide Sunshade",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727417335417.jpg"
+    },
+    {
+      "id": "emax7-seating-flexibility",
+      "title": "Flexible 6-Seater Captain & 7-Seater Layouts with 580L Max Boot",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727417535728.jpg"
+    },
+    {
+      "id": "emax7-seamless-connectivity",
+      "title": "Seamless Connectivity with Wireless Charging, NFC Key & Voice Control",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728277872139.webp"
+    },
+    {
+      "id": "emax7-vtol-power",
+      "title": "Vehicle-to-Load (VTOL) Mobile Power Station for Family Adventures",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727418617811.jpg"
+    },
+    {
+      "id": "emax7-150kw-performance",
+      "title": "150 kW (204 PS) & 310 Nm 8-in-1 Electric Powertrain (0-100 km/h in 8.6s)",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415659661.jpg"
+    },
+    {
+      "id": "emax7-blade-battery",
+      "title": "71.8 kWh Ultra-Safe BYD Blade Battery with 530 km NEDC Range",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727418239632.jpg"
+    },
+    {
+      "id": "emax7-adas-safety",
+      "title": "BYD Advanced Driver Assistance System (Level 2 ADAS) & 6 Airbags",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727418402551.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "71.8 kWh Blade Battery + 120 kW (163 PS) / 310 Nm Motor (Comfort — 485 km MIDC Range)",
+      "71.8 kWh Blade Battery + 150 kW (204 PS) / 310 Nm Motor (Superior — 530 km NEDC Range, 0-100 km/h in 8.6s)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic (FWD)"
+    ],
+    "dimensions": "4710 mm L × 1810 mm W × 1690 mm H",
+    "wheelbase": "2800 mm",
+    "fuelTank": "71.8 kWh Blade Battery (115 kW DC Fast Charge: 0-80% in 37 mins)",
+    "seatingCapacity": "6 Seater / 7 Seater"
+  },
+  "variants": [
+    {
+      "name": "Comfort 6-Seater (71.8 kWh)",
+      "exShowroom": 2790000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "71.8 kWh Blade Battery (163 PS)",
+      "mileage": "485 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "71.8 kWh BYD Blade Battery (485 km MIDC Range) & 115 kW DC Fast Charging",
+        "2+2+2 Independent Captain Seats with Black & Brown Synthetic Leather",
+        "12.8-inch Intelligent Rotating Touchscreen, 6 Speakers & NFC Card Key",
+        "6 Airbags, 360° View Monitor, Rear 4 Parking Radars, ESC, EPB & VTOL"
+      ]
+    },
+    {
+      "name": "Comfort 7-Seater (71.8 kWh)",
+      "exShowroom": 2830000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "71.8 kWh Blade Battery (163 PS)",
+      "mileage": "485 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "71.8 kWh BYD Blade Battery (485 km MIDC Range) with 2+3+2 7-Seater Layout",
+        "12.8-inch Rotating Touchscreen with Apple CarPlay, Android Auto & Voice Assistant",
+        "Crystal Diamond Floating LED Headlamps, LED Taillight Bar & R17 Alloy Wheels",
+        "6 Airbags, 360° Camera, TPMS, Cruise Control & Roof-Mounted AC Vents"
+      ]
+    },
+    {
+      "name": "Superior 6-Seater (71.8 kWh ADAS)",
+      "exShowroom": 2930000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "71.8 kWh Blade Battery (204 PS)",
+      "mileage": "530 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Best Luxury Captain-Seat MPV",
+      "keyFeatures": [
+        "150 kW (204 PS) & 310 Nm Motor (0-100 km/h in 8.6s) with 530 km NEDC Range",
+        "Panoramic Glass Roof (1.42 m²) with Electric Sunshade & 2+2+2 Captain Seats",
+        "Level 2 ADAS (ACC, AEB, ICC, BSD, LDA, ELKA, RCTA/B, DOW, PCW)",
+        "Ventilated & Powered Front Seats (6-Way Driver / 4-Way Passenger), Power Tailgate & Wireless Charger"
+      ]
+    },
+    {
+      "name": "Superior 7-Seater (71.8 kWh ADAS)",
+      "exShowroom": 2990000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "71.8 kWh Blade Battery (204 PS)",
+      "mileage": "530 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Top 7-Seater Family Flagship",
+      "keyFeatures": [
+        "150 kW (204 PS) & 310 Nm Motor with 530 km NEDC Range & 2+3+2 7-Seater Cabin",
+        "Panoramic Glass Roof with Electric Sunshade, Roof Rails & Power Tailgate",
+        "Full Level 2 ADAS Suite + 6 Airbags + 360° View Monitor",
+        "Ventilated & Powered Front Seats, Wireless Phone Charger & PM2.5 Filtration System"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "id": "byd-seal",
+  "name": "BYD Seal",
+  "brand": "BYD",
+  "tagline": "Ocean Aesthetics Electric Sports Sedan with 530 PS AWD, 0–100 km/h in 3.8s, 650 km Range & Cell-to-Body Technology",
+  "launchDate": "2025 (MY2025 with DiSus-C)",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹41.50 - ₹53.65 Lakh",
+  "minPrice": 4150000,
+  "maxPrice": 5365000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags + CTB Technology)",
+  "groundClearance": "149 mm",
+  "bootSpace": "400 Litres + 53L Frunk",
+  "waitingPeriod": "3 - 6 Weeks",
+  "summary": "Engineered on BYD's upgraded e-Platform 3.0 with world-first Cell-to-Body (CTB) technology (40,500 Nm/deg torsional rigidity) and a 0.219 Cd drag coefficient, the MY2025 BYD Seal electric sports sedan offers 61.44 kWh RWD (510 km), 82.56 kWh Extended Range RWD (650 km), and 82.56 kWh Dual-Motor AWD Performance (530 PS, 670 Nm, 0-100 km/h in 3.8s with BYD DiSus-C intelligent damping & iTAC torque control), paired with 9 airbags, Level 2 ADAS, a silver-plated panoramic glass roof with electric sunshade, 15.6-inch rotating screen, and 12-speaker DYNAUDIO sound.",
+  "colors": [
+    {
+      "id": "atlantis-gray",
+      "name": "Atlantis Gray",
+      "hex": "#273651",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686908572.png"
+    },
+    {
+      "id": "cosmos-black",
+      "name": "Cosmos Black",
+      "hex": "#1C1F22",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686969487.png"
+    },
+    {
+      "id": "aurora-white",
+      "name": "Aurora White",
+      "hex": "#C6CED9",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687034645.png"
+    },
+    {
+      "id": "shark-gray",
+      "name": "Shark Gray",
+      "hex": "#57595B",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687079351.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "seal-fastback-low-slung",
+      "title": "Fastback & Low-Slung Ocean Aesthetics (0.219 Cd Drag Coefficient)",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741685631524.jpg"
+    },
+    {
+      "id": "seal-double-u-led-headlights",
+      "title": "Double-U Floating LED Headlights & Glistening Ripple DRLs",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741685741900.jpg"
+    },
+    {
+      "id": "seal-boundless-led-taillight",
+      "title": "Boundless Water-Drop Matrix LED Tail Light Bar",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741685795928.jpg"
+    },
+    {
+      "id": "seal-19-inch-blade-wheels",
+      "title": "19-inch Precision Blade Aerodynamic Alloy Wheels",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741685814315.jpg"
+    },
+    {
+      "id": "seal-luxurious-sport-interior",
+      "title": "Luxurious Suedette & Quilted Leather Ocean Aesthetics Cabin",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719478851179.webp"
+    },
+    {
+      "id": "seal-bolstered-sports-seats",
+      "title": "Bolstered Sports Seats with Ventilation, Heating, Lumbar & Memory",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479056381.webp"
+    },
+    {
+      "id": "seal-silver-plated-panoramic-roof",
+      "title": "1.9 m² Silver-Plated Panoramic Glass Roof with Electric Sunshade",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741677748653.jpg"
+    },
+    {
+      "id": "seal-intelligent-cockpit",
+      "title": "15.6-inch Rotating Screen, 10.25-inch LCD Cockpit, W-HUD & 12-Speaker DYNAUDIO",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479868621.webp"
+    },
+    {
+      "id": "seal-vtol-mobile-power",
+      "title": "Vehicle-to-Load (VTOL) Mobile Power Station",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719474726639.webp"
+    },
+    {
+      "id": "seal-cell-to-body-ctb",
+      "title": "Upgraded e-Platform 3.0 with Cell-to-Body (CTB) Technology",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741685907241.jpg"
+    },
+    {
+      "id": "seal-body-safety-9-airbags",
+      "title": "5-Star Euro NCAP Body Safety with 9 Airbags & Double Wishbone Suspension",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719481545760.webp"
+    },
+    {
+      "id": "seal-disus-c-itac-handling",
+      "title": "50:50 Axle Load Ratio with BYD DiSus-C & iTAC Torque Control",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719481557762.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "61.44 kWh Blade Battery RWD (150 kW / 204 PS, 310 Nm, 0-100 km/h in 7.5s, 510 km NEDC)",
+      "82.56 kWh Blade Battery RWD (230 kW / 313 PS, 360 Nm, 0-100 km/h in 5.9s, 650 km NEDC)",
+      "82.56 kWh Blade Battery AWD (390 kW / 530 PS, 670 Nm, 0-100 km/h in 3.8s, 580 km NEDC)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic (RWD / Dual-Motor AWD with iTAC)"
+    ],
+    "dimensions": "4800 mm L × 1875 mm W × 1460 mm H",
+    "wheelbase": "2920 mm",
+    "fuelTank": "61.44 kWh / 82.56 kWh Blade Battery (Up to 150 kW DC Fast Charge)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Dynamic (61.44 kWh RWD)",
+      "exShowroom": 4150000,
+      "fuel": "Electric",
+      "trans": "Automatic (RWD)",
+      "engine": "61.44 kWh RWD (204 PS)",
+      "mileage": "510 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "61.44 kWh Blade Battery with Cell-to-Body (CTB) Technology & 510 km NEDC Range",
+        "150 kW (204 PS) & 310 Nm Rear-Wheel Drive (0-100 km/h in 7.5s) & 110 kW DC Charging",
+        "9 Airbags, Full Level 2 ADAS Suite, 360° Camera & Double Wishbone Front Suspension",
+        "15.6-inch Rotating Screen, 12-Speaker DYNAUDIO, Ventilated & Heated Front Seats & Electric Sunshade"
+      ]
+    },
+    {
+      "name": "Premium (82.56 kWh Extended Range RWD)",
+      "exShowroom": 4620000,
+      "fuel": "Electric",
+      "trans": "Automatic (RWD)",
+      "engine": "82.56 kWh RWD (313 PS)",
+      "mileage": "650 km/charge",
+      "isVFM": true,
+      "vfmBadge": "650 km Range Sweet Spot",
+      "keyFeatures": [
+        "82.56 kWh Blade Battery with 650 km NEDC Range & 150 kW Ultra-Fast DC Charging",
+        "230 kW (313 PS) & 360 Nm Rear-Wheel Drive (0-100 km/h in 5.9 Seconds)",
+        "Genuine Leather Bolstered Sports Seats, Windshield Head-Up Display (W-HUD) & 19-inch Blade Alloys",
+        "Frequency Selective Damping (FSD) Front & Rear Shock Absorbers, Driver Lumbar & Memory"
+      ]
+    },
+    {
+      "name": "Performance (82.56 kWh Dual-Motor AWD)",
+      "exShowroom": 5365000,
+      "fuel": "Electric",
+      "trans": "Automatic (AWD)",
+      "engine": "82.56 kWh AWD (530 PS)",
+      "mileage": "580 km/charge",
+      "isVFM": true,
+      "vfmBadge": "530 PS / 3.8s Supercar Slayer",
+      "keyFeatures": [
+        "390 kW (530 PS) & 670 Nm Dual-Motor AWD — 0 to 100 km/h in 3.8 Seconds",
+        "BYD DiSus-C Intelligent Damping Body Control + iTAC Torque Adaption Control",
+        "Colored Fixed Front Brake Calipers with Ventilated & Drilled Performance Discs",
+        "82.56 kWh Blade Battery (580 km Range), 9 Airbags, W-HUD, 12-Speaker DYNAUDIO & Level 2 ADAS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "byd-sealion-7",
+  "name": "BYD Sealion 7",
+  "brand": "BYD",
+  "tagline": "Pure Performance eSUV with 530 PS Dual-Motor AWD, 0–100 km/h in 4.5s, 11 Airbags & Nappa Leather Luxury",
+  "launchDate": "2025 (Includes New Dynamic Trim)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹41.90 - ₹55.90 Lakh",
+  "minPrice": 4190000,
+  "maxPrice": 5590000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 11 Airbags + CTB Architecture)",
+  "groundClearance": "178 mm",
+  "bootSpace": "500 Litres + 58L Frunk",
+  "waitingPeriod": "4 - 8 Weeks",
+  "summary": "BYD India's flagship Pure Performance eSUV, the BYD Sealion 7 combines Ocean Series fastback SUV design with Cell-to-Body (CTB) Blade Battery architecture, an industry-leading 11 airbags standard across all variants, Level 2 ADAS, Double Wishbone front & Multi-Link rear suspension with FSD dampers, a 15.6-inch rotating screen, 50W wireless charger, panoramic glass roof with electric sunshade, Nappa leather ventilated seats with driver power leg rest, 12-speaker DYNAUDIO, and up to 530 PS / 690 Nm AWD performance (0-100 km/h in 4.5s).",
+  "colors": [
+    {
+      "id": "atlantis-gray",
+      "name": "Atlantis Gray",
+      "hex": "#273651",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737014896975.png"
+    },
+    {
+      "id": "cosmos-black",
+      "name": "Cosmos Black",
+      "hex": "#1C1F22",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015048828.png"
+    },
+    {
+      "id": "aurora-white",
+      "name": "Aurora White",
+      "hex": "#C6CED9",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015147811.png"
+    },
+    {
+      "id": "shark-gray",
+      "name": "Shark Gray",
+      "hex": "#57595B",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737525327022.webp"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "sealion7-pure-performance-esuv",
+      "title": "BYD Sealion 7 Pure Performance Fastback eSUV",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211142031.webp"
+    },
+    {
+      "id": "sealion7-ocean-design-language",
+      "title": "Ocean Series Design Language with Double-U Floating LED Headlamps",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1791879004552.jpeg"
+    },
+    {
+      "id": "sealion7-sculpted-rear-taillight",
+      "title": "Sculpted Fastback Rear with Water-Drop Matrix LED Tail Bar",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211177425.webp"
+    },
+    {
+      "id": "sealion7-electrifying-power",
+      "title": "Electrifying 530 PS & 690 Nm AWD Performance (0–100 km/h in 4.5s)",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1736935299911.webp"
+    },
+    {
+      "id": "sealion7-immersive-cockpit",
+      "title": "Immersive Floating Cockpit with 15.6-inch Rotating Screen & W-HUD",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211242344.jpeg"
+    },
+    {
+      "id": "sealion7-spacious-lounge-cabin",
+      "title": "2,930 mm Wheelbase Lounge Cabin with 500L Boot + 58L Frunk",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1791793721633.jpg"
+    },
+    {
+      "id": "sealion7-nappa-leather-seats",
+      "title": "Quilted Nappa Leather Seats with Ventilation & Power Leg Rest",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211322577.jpeg"
+    },
+    {
+      "id": "sealion7-panoramic-glass-roof",
+      "title": "Panoramic Glass Roof with One-Touch Electric Sunshade",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1791793836786.jpg"
+    },
+    {
+      "id": "sealion7-dynaudio-12-speakers",
+      "title": "DYNAUDIO 12-Speaker Concert Sound System",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1791793773009.jpg"
+    },
+    {
+      "id": "sealion7-nfc-card-key",
+      "title": "Smart NFC Card Key & Hands-Free Power Tailgate",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737017723069.jpg"
+    },
+    {
+      "id": "sealion7-vtol-power",
+      "title": "Vehicle-to-Load (VTOL) Bi-Directional Power on Demand",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1736961236902.webp"
+    },
+    {
+      "id": "sealion7-ctb-11-airbags",
+      "title": "Cell-to-Body (CTB) Architecture, Blade Battery & 11 Airbags",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737174616140.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "71.8 kWh Blade Battery RWD (170 kW / 231 PS, 380 Nm, 0-100 km/h in 7.3s, 520 km NEDC)",
+      "82.56 kWh Blade Battery RWD (230 kW / 313 PS, 380 Nm, 0-100 km/h in 6.7s, 567 km NEDC)",
+      "82.56 kWh Blade Battery AWD (390 kW / 530 PS, 690 Nm, 0-100 km/h in 4.5s, 542 km NEDC)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic (RWD / Dual-Motor AWD with iTAC)"
+    ],
+    "dimensions": "4830 mm L × 1925 mm W × 1620 mm H",
+    "wheelbase": "2930 mm",
+    "fuelTank": "71.8 kWh / 82.56 kWh Blade Battery (Up to 150 kW DC / 11 kW AC)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Dynamic (71.8 kWh RWD)",
+      "exShowroom": 4190000,
+      "fuel": "Electric",
+      "trans": "Automatic (RWD)",
+      "engine": "71.8 kWh RWD (231 PS)",
+      "mileage": "520 km/charge",
+      "isVFM": true,
+      "vfmBadge": "New ₹41.90L Entry Luxury eSUV",
+      "keyFeatures": [
+        "71.8 kWh BYD Blade Battery (520 km NEDC Range) & 170 kW (231 PS) / 380 Nm RWD (0-100 in 7.3s)",
+        "11 Airbags Standard + Full Level 2 ADAS Suite & 360° Surround Camera",
+        "15.6-inch Rotating Touchscreen, 10.25-inch LCD Cluster, 10 Speakers & 50W Wireless Charger",
+        "Panoramic Glass Roof with Electric Sunshade, Ventilated Front Seats & FSD Shock Absorbers"
+      ]
+    },
+    {
+      "name": "Premium (82.56 kWh RWD)",
+      "exShowroom": 4990000,
+      "fuel": "Electric",
+      "trans": "Automatic (RWD)",
+      "engine": "82.56 kWh RWD (313 PS)",
+      "mileage": "567 km/charge",
+      "isVFM": true,
+      "vfmBadge": "567 km Range & Nappa Luxury",
+      "keyFeatures": [
+        "82.56 kWh BYD Blade Battery (567 km NEDC Range) with 150 kW DC & 11 kW AC Charging",
+        "230 kW (313 PS) & 380 Nm RWD Motor (0-100 km/h in 6.7 Seconds)",
+        "Quilted Nappa Leather Seats with Driver Power Leg Rest, 4-Way Lumbar & Position Memory",
+        "12-Speaker DYNAUDIO, Windshield Head-Up Display (W-HUD) & Hands-Free Power Tailgate"
+      ]
+    },
+    {
+      "name": "Premium (Rich Tan & Black Interior) (82.56 kWh RWD)",
+      "exShowroom": 5060000,
+      "fuel": "Electric",
+      "trans": "Automatic (RWD)",
+      "engine": "82.56 kWh RWD (313 PS)",
+      "mileage": "567 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Bespoke Rich Tan & Black Dual-Tone Quilted Nappa Leather Cabin",
+        "82.56 kWh Blade Battery (567 km Range) & 230 kW (313 PS) RWD Motor",
+        "12-Speaker DYNAUDIO, W-HUD, Hands-Free Tailgate, 11 Airbags & Level 2 ADAS"
+      ]
+    },
+    {
+      "name": "Performance (82.56 kWh Dual-Motor AWD)",
+      "exShowroom": 5590000,
+      "fuel": "Electric",
+      "trans": "Automatic (AWD)",
+      "engine": "82.56 kWh AWD (530 PS)",
+      "mileage": "542 km/charge",
+      "isVFM": true,
+      "vfmBadge": "530 PS AWD Flagship eSUV",
+      "keyFeatures": [
+        "390 kW (530 PS) & 690 Nm Dual-Motor AWD — 0 to 100 km/h in 4.5 Seconds",
+        "20-inch Wave Swing Alloy Wheels with Michelin 245/45 R20 Tyres & Colored Fixed Calipers",
+        "iTAC Intelligent Torque Adaption Control + FSD Frequency Selective Damping",
+        "82.56 kWh Blade Battery (542 km Range), 11 Airbags, Nappa Leather, W-HUD & 12-Speaker DYNAUDIO"
+      ]
+    }
+  ]
+}

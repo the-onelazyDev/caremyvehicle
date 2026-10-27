@@ -1,0 +1,169 @@
+{
+  "id": "byd-atto-3",
+  "name": "BYD Atto 3",
+  "brand": "BYD",
+  "tagline": "India's First Sporty Born E-SUV on e-Platform 3.0 with Ultra-Safe Blade Battery, 521 km Range & 12.8\" Rotating Screen",
+  "launchDate": "2025 (MY2025 New Range)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹24.99 - ₹34.49 Lakh",
+  "minPrice": 2499000,
+  "maxPrice": 3449000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star – 91% Adult, 89% Child)",
+  "groundClearance": "175 mm",
+  "bootSpace": "440 Litres (1340L Max)",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "Built on BYD's dedicated Born EV e-Platform 3.0 with an ultra-safe nail-penetration-tested LFP Blade Battery and 8-in-1 electric powertrain (150 kW / 204 PS, 310 Nm), the BYD Atto 3 offers 49.92 kWh (468 km ARAI) and 60.48 kWh (521 km ARAI) battery options, a 5-Star Euro NCAP rating with up to 7 airbags and Level 2 ADAS, a 12.8-inch intelligent rotating touchscreen, panoramic sunroof, ventilated front seats, 8-speaker Dirac HD audio, and 3.3 kW Vehicle-to-Load (VTOL) power supply.",
+  "colors": [
+    {
+      "id": "atlantis-grey",
+      "name": "Atlantis Grey",
+      "hex": "#273651",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1789966913654.png"
+    },
+    {
+      "id": "cosmos-black",
+      "name": "Cosmos Black",
+      "hex": "#1E2024",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293630918.png"
+    },
+    {
+      "id": "ski-white",
+      "name": "Ski White",
+      "hex": "#E9E9EA",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293694047.png"
+    },
+    {
+      "id": "harbour-grey",
+      "name": "Harbour Grey",
+      "hex": "#5E636D",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293669310.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "atto3-born-esuv-stance",
+      "title": "India's First Sporty Born E-SUV on BYD e-Platform 3.0",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773298324744.webp"
+    },
+    {
+      "id": "atto3-aerodynamic-profile",
+      "title": "0.29 Cd Aerodynamic Profile with Ripple D-Pillar & 18-inch Sport Alloys",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773298341393.webp"
+    },
+    {
+      "id": "atto3-crystal-led-headlights",
+      "title": "Crystal LED Combination Headlights with One-Piece LED DRL Strip",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1720419151907.webp"
+    },
+    {
+      "id": "atto3-led-taillight-strip",
+      "title": "Full-Width One-Piece Through LED Taillight Strip",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773298377313.webp"
+    },
+    {
+      "id": "atto3-rhythmic-interior",
+      "title": "Rhythmic Fitness-Inspired Cockpit with Muscular Streamline Console",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689301693.jpg"
+    },
+    {
+      "id": "atto3-ventilated-sport-seats",
+      "title": "Sporty Vegan Leather Cabin with Ventilated & Power-Adjustable Front Seats",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689340227.jpg"
+    },
+    {
+      "id": "atto3-panoramic-sunroof",
+      "title": "1,261 mm Panoramic Sunroof with Electric Slide & Anti-Pinch",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689373128.jpg"
+    },
+    {
+      "id": "atto3-rotating-touchscreen",
+      "title": "12.8-inch (32.5 cm) Adaptive Rotating Touchscreen with Apple CarPlay & Android Auto",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1720514024106.webp"
+    },
+    {
+      "id": "atto3-360-holographic-camera",
+      "title": "360° Holographic Transparent Imaging System",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1720514274104.webp"
+    },
+    {
+      "id": "atto3-vtol-mobile-power",
+      "title": "Vehicle-to-Load (VTOL) 3.3 kW Mobile Power Station",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773298478897.webp"
+    },
+    {
+      "id": "atto3-7-airbags-safety",
+      "title": "5-Star Euro NCAP Safety with 7 Airbags & Ultra-Safe Blade Battery",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1720512912670.jpg"
+    },
+    {
+      "id": "atto3-level2-adas",
+      "title": "BYD Intelligent Driving System (Level 2 ADAS Suite)",
+      "sourceUrl": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1720512954975.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "49.92 kWh BYD Blade Battery + 150 kW (204 PS) / 310 Nm PMSM Motor (468 km ARAI Range, 0-100 km/h in 7.9s)",
+      "60.48 kWh BYD Blade Battery + 150 kW (204 PS) / 310 Nm PMSM Motor (521 km ARAI Range, 0-100 km/h in 7.3s)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic (8-in-1 Electric Powertrain)"
+    ],
+    "dimensions": "4455 mm L × 1875 mm W × 1615 mm H",
+    "wheelbase": "2720 mm",
+    "fuelTank": "49.92 kWh / 60.48 kWh Blade Battery (0-80% in 50 mins DC)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Dynamic (49.92 kWh)",
+      "exShowroom": 2499000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "49.92 kWh Blade Battery (204 PS)",
+      "mileage": "468 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Sub-25L Born EV Value Pick",
+      "keyFeatures": [
+        "49.92 kWh BYD Blade Battery (468 km ARAI / 410 km NEDC Range) & 70 kW DC Fast Charging",
+        "150 kW (204 PS) & 310 Nm Motor, Panoramic Sunroof & 12.8-inch Rotating Touchscreen",
+        "6 Airbags, 360° Holographic Camera, NFC Card Key, Wireless Charger & VTOL Function",
+        "6-Way Power Driver Seat, 4-Way Power Passenger Seat & R17 Alloy Wheels"
+      ]
+    },
+    {
+      "name": "Premium (60.48 kWh)",
+      "exShowroom": 3035000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "60.48 kWh Blade Battery (204 PS)",
+      "mileage": "521 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Best 521 km Long-Range Pick",
+      "keyFeatures": [
+        "60.48 kWh BYD Blade Battery (521 km ARAI / 480 km NEDC Range) & 80 kW DC Fast Charging",
+        "Faster 0-100 km/h in 7.3 Seconds & R18 Sporty Alloy Wheels (215/55 R18)",
+        "One-Touch Open/Close Electric Tailgate & Multi-Color Gradient Ambient Lighting",
+        "Panoramic Sunroof, 12.8-inch Rotating Display, 360° Camera & Low-Voltage LFP Battery"
+      ]
+    },
+    {
+      "name": "Superior (60.48 kWh ADAS)",
+      "exShowroom": 3449000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "60.48 kWh Blade Battery (204 PS)",
+      "mileage": "521 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "BYD Intelligent Driving System (Level 2 ADAS: ACC Stop & Go, AEB, LKA, LDW, BSD, RCTA/B, DOW)",
+        "7 Airbags (incl. Driver Far-Side Airbag) & Adaptive Front Lighting (AFL)",
+        "Ventilated Front Seats (Driver + Co-Driver) & Dirac HD Sound 8-Speaker Audio",
+        "Music-Rhythm Interactive Multi-Color Ambient Lighting & 521 km ARAI Range"
+      ]
+    }
+  ]
+}
