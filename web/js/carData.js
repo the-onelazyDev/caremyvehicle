@@ -4365,6 +4365,172 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-punch',
+    name: 'Tata Punch',
+    brand: 'Tata',
+    tagline: 'India’s #1 Highest-Selling Car with 5-Star Bharat NCAP, Voice Sunroof & Dual-Cylinder iCNG',
+    launchDate: 'Updated 2025 (Persona Lineup with 10.25" Screen)',
+    bodyType: 'Micro-SUV',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹6.13 - ₹10.20 Lakh',
+    minPrice: 612900,
+    maxPrice: 1020000,
+    safetyRating: '5.0 ★ (Bharat NCAP & Global NCAP)',
+    groundClearance: '187 mm',
+    bootSpace: '366 L',
+    waitingPeriod: '3 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/cyantific/1.webp',
+    summary: 'The Tata Punch is India’s undisputed #1 highest-selling passenger vehicle, pioneering the micro-SUV segment with authentic rugged SUV stance, class-leading 187 mm ground clearance, 5-Star Global & Bharat NCAP crash safety on the ALFA-ARC architecture, voice-assisted electric sunroof, 10.25-inch high-definition floating infotainment screen with wireless Android Auto & Apple CarPlay, 17.78 cm digital driver display, 8-speaker Harman acoustic audio, wireless charging, and responsive 1.2L Revotron petrol engine available with 5-speed manual, smart AMT with Traction Pro, or industry-leading twin-cylinder iCNG technology.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'cyantific',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/punch/360'
+    },
+    colors: [
+      { id: 'cyantific', name: 'Cyantific Blue with White Roof (Signature Hero Shade)', hex: '#0096D6', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/cyantific/1.webp' },
+      { id: 'coorg-clouds', name: 'Coorg Clouds with Black Roof (Earthy Sage Grey)', hex: '#7A8582', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/coorg-clouds/1.webp' },
+      { id: 'caramel', name: 'Caramel with White Roof (Golden Sunset Brown)', hex: '#A36B3D', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/caramel/1.webp' },
+      { id: 'daytona-grey', name: 'Daytona Grey with Black Roof', hex: '#4A5056', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/daytona-grey/1.webp' },
+      { id: 'pristine-white', name: 'Pristine White with Black Roof', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/pristine-white/1.webp' },
+      { id: 'bengal-rogue', name: 'Bengal Rouge with White Roof (Calypso Red)', hex: '#C8232B', image: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/bengal-rogue/1.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero Micro-SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/360/cyantific/1.webp' },
+      { label: 'Ultra-View Twin Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/ultra-view-twin-digital-cockpit.webp' },
+      { label: 'Galaxy Ambient Interior', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/galaxy-ambient-lighting-cabin.webp' },
+      { label: 'Connected LED Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/connected-led-taillamps.webp' }
+    ],
+    gallery: [
+      { title: 'Bold Micro-SUV Exterior Stance with 3D Front Grille and Rugged Bull Guard Lower Bumper', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/3d-front-grille-bull-guard-bumper.webp' },
+      { title: 'End-to-End Connected High-Mount LED Taillamps with Signature Tri-Arrow Light Guide', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/connected-led-taillamps.webp' },
+      { title: 'Sporty Flat-Bottom D-Cut Steering Wheel with Audio, Voice Command & Cruise Control Switches', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/d-cut-steering-wheel-with-controls.webp' },
+      { title: 'Ultra-View Twin Digital Cockpit with 10.25-inch High-Definition Floating Infotainment Display', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/ultra-view-twin-digital-cockpit.webp' },
+      { title: 'Atmospheric Galaxy Ambient Interior Mood Lighting expanding Cockpit Sophistication', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/galaxy-ambient-lighting-cabin.webp' },
+      { title: 'Dual-Tone Contrast White/Black Roof with Aerodynamic Integrated Functional Roof Rails', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/contrast-white-roof-stylish-roof-rails.webp' },
+      { title: '17.78 cm High-Definition Full Color Digital Supervision Driver Information Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/17-78cm-hd-digital-instrument-cluster.webp' },
+      { title: 'Fast Qi Wireless Smartphone Charging Console with Smart Active Cooling Ventilation', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/wireless-smartphone-charger-qi-support.webp' },
+      { title: 'Premium 8-Speaker Harman Acoustic Sound Suite (4 Full-Range Speakers + 4 Tweeters)', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/harman-acoustic-sound-system.webp' },
+      { title: 'Commanding High Seating Posture with Height-Adjustable Driver Seat & Front Center Armrest', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/high-commanding-driver-seating.webp' },
+      { title: 'ClimaTouch Fully Automatic Temperature Control System with Xpress Cool Functionality', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/clima-touch-automatic-climate-control.webp' },
+      { title: 'Blind View Monitor with Reverse Parking Camera and Dynamic Steering Guidelines', url: 'https://ik.imagekit.io/2908vvlod/cars/punch/gallery/blind-view-monitor-parking-assist.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Revotron 3-Cylinder Petrol (88 PS / 115 Nm) | 1.2L iCNG Twin-Cylinder (73.5 PS / 103 Nm)',
+      transmissions: '5-Speed Manual | 5-Speed Smart AMT Automatic with Traction Pro',
+      dimensions: '3827 mm (L) × 1742 mm (W) × 1615 mm (H)',
+      wheelbase: '2445 mm',
+      fuelTank: '37 Litres (Petrol) | 60 Litres Water Equivalent (Dual CNG Tanks)',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'Pure 1.2 Petrol MT',
+        exShowroom: 612900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: false,
+        keyFeatures: ['Dual Front Airbags', 'ABS with EBD & CSC', 'Front Power Windows', '90-Degree Opening Doors']
+      },
+      {
+        name: 'Pure (O) 1.2 Petrol MT',
+        exShowroom: 649900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: false,
+        keyFeatures: ['Central Remote Locking', 'Electrically Adjustable ORVMs', 'All 4 Power Windows', 'Wheel Covers']
+      },
+      {
+        name: 'Adventure 1.2 Petrol MT',
+        exShowroom: 700000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: false,
+        keyFeatures: ['8.89 cm Infotainment Display', '4 Speakers with Steering Controls', 'Anti-Glare Rear View Mirror', 'Full Wheel Covers']
+      },
+      {
+        name: 'Adventure Rhythm 1.2 Petrol MT',
+        exShowroom: 735000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BUDGET VALUE PICK',
+        keyFeatures: ['17.78 cm Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'Reverse Parking Camera', '2 Tweeters Audio Tuning']
+      },
+      {
+        name: 'Adventure 1.2 Petrol AMT',
+        exShowroom: 760000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '18.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['5-Speed Smart AMT Automatic', 'Traction Pro Mode for Slippery Roads', 'Drive Modes (City / Eco)', 'Creep Function']
+      },
+      {
+        name: 'Adventure iCNG Twin-Cylinder MT',
+        exShowroom: 795000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Dual-Cylinder iCNG (73.5 PS)',
+        mileage: '26.99 km/kg',
+        isVFM: true,
+        vfmBadge: '⛽ HIGH EFFICIENCY CNG PICK',
+        keyFeatures: ['Patented Dual-Cylinder Technology', 'Direct CNG Start Function', 'Single Advanced ECU', 'Usable Boot Space with Luggage Floor']
+      },
+      {
+        name: 'Accomplished 1.2 Petrol MT',
+        exShowroom: 785000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: false,
+        keyFeatures: ['Push Button Start/Stop', 'Cruise Control', 'Front Fog Lamps', 'Height-Adjustable Driver Seat & LED Taillamps']
+      },
+      {
+        name: 'Accomplished Dazzle Sunroof 1.2 MT',
+        exShowroom: 880000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '20.09 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER TECH PICK',
+        keyFeatures: ['Voice-Assisted Electric Sunroof', '10.25-inch Floating HD Touchscreen', '16-inch Diamond Cut Alloys', 'Auto Headlamps & Rain Wipers']
+      },
+      {
+        name: 'Accomplished Dazzle Sunroof 1.2 AMT',
+        exShowroom: 940000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '18.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['Smart AMT Automatic with Traction Pro', 'Voice-Assisted Sunroof', 'Wireless Android Auto & Apple CarPlay', 'Wireless Phone Charger']
+      },
+      {
+        name: 'Creative Flagship Sunroof 1.2 AMT',
+        exShowroom: 1020000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (88 PS)',
+        mileage: '18.80 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 TOP-END FLAGSHIP',
+        keyFeatures: ['Connected Car Tech (iRA)', 'Leatherette Steering & Gear Shift', 'Cooled Glove Box & Express Cool', 'Blind View Monitor with 360° Cam']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
