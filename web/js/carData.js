@@ -8791,6 +8791,1002 @@ export const CARS = [
               ]
           }
       ]
+  },
+  {
+      "id": "honda-elevate",
+      "name": "Honda Elevate",
+      "brand": "Honda",
+      "tagline": "Bold Urban Freestyler SUV with Class-Leading 220 mm Ground Clearance & Honda SENSING ADAS",
+      "launchDate": "2025 Model Year",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹11.69 - ₹16.73 Lakh",
+      "minPrice": 1169000,
+      "maxPrice": 1673000,
+      "safetyRating": "5.0 ★ (JNCAP 5-Star / 6 Airbags Standard)",
+      "groundClearance": "220 mm",
+      "bootSpace": "458 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/obsidian-blue-pearl.webp",
+      "summary": "The Honda Elevate brings bullet-proof 1.5L i-VTEC refinement, segment-highest 220 mm ground clearance, massive 458L boot space, 6 airbags standard across all variants, and Honda SENSING Level-2 ADAS.",
+      "colors": [
+          {
+              "id": "obsidian-blue-pearl",
+              "name": "Obsidian Blue Pearl",
+              "hex": "#424F83",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/obsidian-blue-pearl.webp"
+          },
+          {
+              "id": "radiant-red-metallic",
+              "name": "Radiant Red Metallic",
+              "hex": "#ED121B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/radiant-red-metallic.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "lunar-silver-metallic",
+              "name": "Lunar Silver Metallic",
+              "hex": "#AFAFAE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/lunar-silver-metallic.webp"
+          },
+          {
+              "id": "meteoroid-gray-metallic",
+              "name": "Meteoroid Gray Metallic",
+              "hex": "#535C61",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/meteoroid-gray-metallic.webp"
+          },
+          {
+              "id": "platinum-white-pearl-with-crystal-black-pearl-roof",
+              "name": "Platinum White Pearl with Crystal Black Pearl Roof",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/platinum-white-pearl-with-crystal-black-pearl-roof.webp"
+          },
+          {
+              "id": "radiant-red-metallic-with-crystal-black-pearl-roof",
+              "name": "Radiant Red Metallic with Crystal Black Pearl Roof",
+              "hex": "#ED121B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/radiant-red-metallic-with-crystal-black-pearl-roof.webp"
+          },
+          {
+              "id": "crystal-black-pearl",
+              "name": "Crystal Black Pearl",
+              "hex": "#000000",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/crystal-black-pearl.webp"
+          },
+          {
+              "id": "nordic-forest-pearl-with-crystal-black-pearl-roof",
+              "name": "Nordic Forest Pearl with Crystal Black Pearl Roof",
+              "hex": "#3A645F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/nordic-forest-pearl-with-crystal-black-pearl-roof.webp"
+          },
+          {
+              "id": "nordic-forest-pearl",
+              "name": "Nordic Forest Pearl",
+              "hex": "#3A645F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/colors/nordic-forest-pearl.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front-quarter-action",
+              "title": "Bold Urban Freestyler Front Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/front-quarter-action.webp"
+          },
+          {
+              "id": "signature-black-edition",
+              "title": "Elevate Signature Black Edition",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/signature-black-edition.webp"
+          },
+          {
+              "id": "dynamic-side-profile",
+              "title": "Commanding SUV Profile in Motion",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/dynamic-side-profile.webp"
+          },
+          {
+              "id": "highway-cruising",
+              "title": "Elevated Road Presence & Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/highway-cruising.webp"
+          },
+          {
+              "id": "bold-front-grille",
+              "title": "Bold Chrome & Gloss Front Grille",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/bold-front-grille.webp"
+          },
+          {
+              "id": "led-projector-headlamps",
+              "title": "Full LED Projector Headlamps with DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/led-projector-headlamps.webp"
+          },
+          {
+              "id": "diamond-cut-alloys",
+              "title": "R17 Dual-Tone Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/diamond-cut-alloys.webp"
+          },
+          {
+              "id": "distinctive-led-taillamps",
+              "title": "Distinctive Dual-LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/distinctive-led-taillamps.webp"
+          },
+          {
+              "id": "dashboard-cockpit",
+              "title": "10.25-inch HD Touchscreen & Premium Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/dashboard-cockpit.webp"
+          },
+          {
+              "id": "electric-sunroof",
+              "title": "One-Touch Electric Sunroof with Pinch Guard",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/electric-sunroof.webp"
+          },
+          {
+              "id": "boot-space-458l",
+              "title": "Class-Leading 458L Luggage Boot Space",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/boot-space-458l.webp"
+          },
+          {
+              "id": "honda-sensing-adas",
+              "title": "Honda SENSING Level-2 ADAS Suite & 6 Airbags",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/gallery/honda-sensing-adas.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.5L i-VTEC DOHC Petrol (121 PS @ 6600 rpm, 145 Nm @ 4300 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission (MT)",
+              "7-Speed CVT Automatic with Paddle Shifters"
+          ],
+          "dimensions": "4312 mm L × 1790 mm W × 1650 mm H",
+          "wheelbase": "2650 mm",
+          "fuelTank": "40 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "SV 1.5 Petrol 6MT",
+              "exShowroom": 1169000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "15.31 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags Standard Across All Variants",
+                  "LED Projector Headlamps with LED DRLs & LED Tail Lamps",
+                  "Push Button Start/Stop with Smart Keyless Entry",
+                  "Automatic Climate Control with Rear AC Vents",
+                  "Vehicle Stability Assist (VSA) & Hill Start Assist"
+              ]
+          },
+          {
+              "name": "V 1.5 Petrol 6MT",
+              "exShowroom": 1285000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "15.31 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Value Manual SUV",
+              "keyFeatures": [
+                  "8-inch Touchscreen Infotainment with Wireless Apple CarPlay & Android Auto",
+                  "Multi-Angle Rear View Camera with Guidelines",
+                  "Honda Connect with 5-Year Free Subscription",
+                  "Steering Mounted Audio, Voice & Hands-Free Controls",
+                  "4 Speakers Audio System & Styled R16 Covers"
+              ]
+          },
+          {
+              "name": "V 1.5 Petrol CVT Automatic",
+              "exShowroom": 1395000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "16.92 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Steering Paddle Shifters",
+                  "Remote Engine Start via Smart Key",
+                  "8-inch Wireless Smartphone Infotainment Display",
+                  "6 Airbags, VSA, Agile Handling Assist & Hill Start Assist",
+                  "Fully Automatic Climate Control with Max Cool Mode"
+              ]
+          },
+          {
+              "name": "VX 1.5 Petrol 6MT",
+              "exShowroom": 1410000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "15.31 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Feature-Rich Trim",
+              "keyFeatures": [
+                  "One-Touch Electric Sunroof with Pinch Guard",
+                  "R17 Dual-Tone Diamond-Cut Alloy Wheels",
+                  "LaneWatch Blind-Spot Camera & 7-inch TFT Meter Cluster",
+                  "Wireless Smartphone Charger & 6-Speaker Surround Audio",
+                  "LED Projector Fog Lamps & Roof Rails"
+              ]
+          },
+          {
+              "name": "VX 1.5 Petrol CVT Automatic",
+              "exShowroom": 1520000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "16.92 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Paddle Shifters & Remote Start",
+                  "Electric Sunroof & R17 Diamond-Cut Alloy Wheels",
+                  "Honda LaneWatch Camera & Wireless Phone Charger",
+                  "7-inch HD Full-Color TFT Driver Display",
+                  "Auto-Folding ORVMs & Rear Wiper/Washer"
+              ]
+          },
+          {
+              "name": "ZX 1.5 Petrol 6MT (ADAS)",
+              "exShowroom": 1541000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "15.31 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+                  "10.25-inch HD Freestanding Touchscreen with 8 Speakers",
+                  "Dual-Tone Brown & Black Leatherette Upholstery",
+                  "Auto-Dimming Frameless IRVM & Chrome Door Handles",
+                  "6 Airbags, LaneWatch Camera & Electric Sunroof"
+              ]
+          },
+          {
+              "name": "ZX 1.5 Petrol CVT Automatic (ADAS)",
+              "exShowroom": 1653000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "16.92 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Honda SENSING ADAS with Low-Speed Follow & Lead Car Departure Notification",
+                  "7-Speed CVT Automatic with Paddle Shifters",
+                  "10.25-inch HD Touchscreen & 8-Speaker Premium Sound",
+                  "Plush Brown Leatherette Seats & Soft-Touch Dashboard",
+                  "Electric Sunroof, R17 Diamond-Cut Alloys & Dual-Tone Option"
+              ]
+          },
+          {
+              "name": "ZX Black Edition 1.5 CVT Automatic (ADAS)",
+              "exShowroom": 1673000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "16.92 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All-Black R17 Alloy Wheels & Gloss Black Exterior Accents",
+                  "All-Black Leatherette Cabin with Contrast Stitching & 7-Color Ambient Lighting",
+                  "Honda SENSING Level-2 ADAS Suite & LaneWatch Camera",
+                  "10.25-inch HD Infotainment with Wireless CarPlay/Android Auto",
+                  "Special Signature Black Edition Badging"
+              ]
+          }
+      ],
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/honda-elevate/360",
+          "format": "webp",
+          "defaultColor": "obsidian-blue-pearl",
+          "colors": [
+              {
+                  "id": "obsidian-blue-pearl",
+                  "name": "Obsidian Blue Pearl",
+                  "hex": "#424F83"
+              }
+          ]
+      }
+  },
+  {
+      "id": "honda-city",
+      "name": "Honda City",
+      "brand": "Honda",
+      "tagline": "India's Benchmark Executive Sedan with 1.5L i-VTEC & Standard Honda SENSING ADAS",
+      "launchDate": "2025 Model Year",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹12.08 - ₹16.35 Lakh",
+      "minPrice": 1208000,
+      "maxPrice": 1635000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star / 6 Airbags Standard)",
+      "groundClearance": "165 mm",
+      "bootSpace": "506 Litres",
+      "waitingPeriod": "2 - 3 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp",
+      "summary": "The 5th-Generation Honda City remains India's most iconic executive sedan, pairing its legendary 121 PS 1.5L i-VTEC DOHC engine with Honda SENSING ADAS across V, VX, and ZX trims, 6 airbags standard, and rear-seat executive comfort.",
+      "colors": [
+          {
+              "id": "obsidian-blue-pearl",
+              "name": "Obsidian Blue Pearl",
+              "hex": "#424F83",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp"
+          },
+          {
+              "id": "radiant-red-metallic",
+              "name": "Radiant Red Metallic",
+              "hex": "#ED121B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/radiant-red-metallic.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "crystal-black-pearl",
+              "name": "Crystal Black Pearl",
+              "hex": "#000000",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/crystal-black-pearl.webp"
+          },
+          {
+              "id": "meteoroid-gray-metallic",
+              "name": "Meteoroid Gray Metallic",
+              "hex": "#535C61",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/meteoroid-gray-metallic.webp"
+          },
+          {
+              "id": "lunar-silver-metallic",
+              "name": "Lunar Silver Metallic",
+              "hex": "#AFAFAE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/lunar-silver-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "exterior-front-stance",
+              "title": "5th-Gen Honda City Iconic Sedan Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/exterior-front-stance.webp"
+          },
+          {
+              "id": "rear-quarter-action",
+              "title": "Sculpted Aerodynamic Fastback Profile",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/rear-quarter-action.webp"
+          },
+          {
+              "id": "sporty-front-grille",
+              "title": "New Sporty Honeycomb Front Grille & Fascia",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/sporty-front-grille.webp"
+          },
+          {
+              "id": "full-led-headlamps",
+              "title": "9-Array Full LED Headlamps with DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/full-led-headlamps.webp"
+          },
+          {
+              "id": "r16-diamond-alloys",
+              "title": "R16 Dual-Tone Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/r16-diamond-alloys.webp"
+          },
+          {
+              "id": "z-shaped-led-taillamps",
+              "title": "Z-Shaped 3D Wrap-Around LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/z-shaped-led-taillamps.webp"
+          },
+          {
+              "id": "two-tone-luxury-cabin",
+              "title": "Two-Tone Beige & Black Leather Upholstery",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/two-tone-luxury-cabin.webp"
+          },
+          {
+              "id": "electric-sunroof",
+              "title": "One-Touch Electric Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/electric-sunroof.webp"
+          },
+          {
+              "id": "ambient-lighting-cabin",
+              "title": "Front Door & Footwell Ambient Lighting",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/ambient-lighting-cabin.webp"
+          },
+          {
+              "id": "boot-space-506l",
+              "title": "Massive 506-Litre Illuminated Trunk",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/boot-space-506l.webp"
+          },
+          {
+              "id": "ivtec-engine",
+              "title": "High-Revving 1.5L i-VTEC DOHC Engine (121 PS)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/ivtec-engine.webp"
+          },
+          {
+              "id": "six-airbags-safety",
+              "title": "6 Airbags Standard & ACE Body Structure",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city/gallery/six-airbags-safety.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.5L i-VTEC DOHC Petrol (121 PS @ 6600 rpm, 145 Nm @ 4300 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission (MT)",
+              "7-Speed CVT Automatic with Paddle Shifters"
+          ],
+          "dimensions": "4583 mm L × 1748 mm W × 1489 mm H",
+          "wheelbase": "2600 mm",
+          "fuelTank": "40 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "SV 1.5 Petrol 6MT",
+              "exShowroom": 1208000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "17.8 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags Standard Across All Variants",
+                  "8-inch Touchscreen with Wireless Apple CarPlay & Android Auto",
+                  "Projector Headlamps with Integrated LED DRLs & Z-Shaped LED Tail Lamps",
+                  "Push Button Start with Smart Key & Automatic Climate Control",
+                  "Multi-Angle Rear Camera, VSA, Agile Handling Assist & TPMS"
+              ]
+          },
+          {
+              "name": "V 1.5 Petrol 6MT (ADAS)",
+              "exShowroom": 1296000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "17.8 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Affordable ADAS Sedan",
+              "keyFeatures": [
+                  "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+                  "R15 Silver Alloy Wheels & Next-Gen Honda Connect with Alexa",
+                  "Wireless Smartphone Charger & Walkaway Auto Lock",
+                  "8-inch Infotainment with Wireless CarPlay/Android Auto",
+                  "6 Airbags, Hill Start Assist & Rear AC Vents"
+              ]
+          },
+          {
+              "name": "V 1.5 Petrol CVT Automatic (ADAS)",
+              "exShowroom": 1421000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "18.4 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Automatic Executive Value",
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Steering Paddle Shifters",
+                  "Honda SENSING Level-2 ADAS with Low-Speed Follow",
+                  "Remote Engine Start via Smart Key",
+                  "Wireless Phone Charger & 8-inch Wireless Infotainment",
+                  "6 Airbags, VSA & Multi-Angle Rear Camera"
+              ]
+          },
+          {
+              "name": "VX 1.5 Petrol 6MT (ADAS)",
+              "exShowroom": 1403000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "17.8 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "One-Touch Electric Sunroof with Pinch Guard",
+                  "Honda LaneWatch Blind-Spot Camera & 8-Speaker Premium Sound",
+                  "R15 Diamond-Cut Multi-Spoke Alloy Wheels",
+                  "Honda SENSING Level-2 ADAS & Auto Headlamps",
+                  "7-inch Full-Color TFT Driver Display"
+              ]
+          },
+          {
+              "name": "VX 1.5 Petrol CVT Automatic (ADAS)",
+              "exShowroom": 1528000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "18.4 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+                  "Electric Sunroof, LaneWatch Camera & 8-Speaker Audio",
+                  "Honda SENSING Level-2 ADAS Suite",
+                  "Wireless Charger & R15 Diamond-Cut Alloys",
+                  "6 Airbags & Rear Reading Lamps"
+              ]
+          },
+          {
+              "name": "ZX 1.5 Petrol 6MT (ADAS)",
+              "exShowroom": 1510000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "17.8 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "9-Array Full LED Headlamps & LED Front Fog Lamps",
+                  "R16 Dual-Tone Diamond-Cut Alloy Wheels",
+                  "Plush Ivory & Black Perforated Leather Upholstery",
+                  "Rear Sunshade, Ambient Lighting & Auto Rain-Sensing Wipers",
+                  "All 4 Power Windows One-Touch Auto Up/Down with Remote Operation"
+              ]
+          },
+          {
+              "name": "ZX 1.5 Petrol CVT Automatic (ADAS)",
+              "exShowroom": 1635000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L i-VTEC (121 PS)",
+              "mileage": "18.4 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Flagship 7-Speed CVT Automatic with Honda SENSING ADAS",
+                  "Full LED 9-Array Headlamps & R16 Diamond-Cut Alloy Wheels",
+                  "Genuine Leather Seats, Soft-Touch Instrument Panel & Rear Sunshade",
+                  "Electric Sunroof, LaneWatch Camera & 8-Speaker Surround Sound",
+                  "Remote Engine Start & Auto-Folding ORVMs"
+              ]
+          }
+      ],
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/honda-city/360",
+          "format": "webp",
+          "defaultColor": "obsidian-blue-pearl",
+          "colors": [
+              {
+                  "id": "obsidian-blue-pearl",
+                  "name": "Obsidian Blue Pearl",
+                  "hex": "#424F83"
+              }
+          ]
+      }
+  },
+  {
+      "id": "honda-city-ehev",
+      "name": "Honda City e:HEV",
+      "brand": "Honda",
+      "tagline": "India's Only Self-Charging Strong Hybrid Sedan with 27.13 kmpl & 253 Nm Electric Torque",
+      "launchDate": "2025 Model Year",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Hybrid"
+      ],
+      "priceRange": "₹19.10 - ₹20.75 Lakh",
+      "minPrice": 1910000,
+      "maxPrice": 2075000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star / 6 Airbags + ADAS)",
+      "groundClearance": "165 mm",
+      "bootSpace": "410 Litres",
+      "waitingPeriod": "3 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/obsidian-blue-pearl.webp",
+      "summary": "The Honda City e:HEV features Honda's intelligent two-motor e-CVT strong hybrid powertrain delivering 126 PS combined output, instant 253 Nm electric motor torque, an astonishing 27.13 kmpl mileage, all-4 disc brakes, electronic parking brake, and standard Honda SENSING ADAS.",
+      "colors": [
+          {
+              "id": "obsidian-blue-pearl",
+              "name": "Obsidian Blue Pearl",
+              "hex": "#424F83",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/obsidian-blue-pearl.webp"
+          },
+          {
+              "id": "radiant-red-metallic",
+              "name": "Radiant Red Metallic",
+              "hex": "#ED121B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/radiant-red-metallic.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "crystal-black-pearl",
+              "name": "Crystal Black Pearl",
+              "hex": "#000000",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/crystal-black-pearl.webp"
+          },
+          {
+              "id": "meteoroid-gray-metallic",
+              "name": "Meteoroid Gray Metallic",
+              "hex": "#535C61",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/meteoroid-gray-metallic.webp"
+          },
+          {
+              "id": "lunar-silver-metallic",
+              "name": "Lunar Silver Metallic",
+              "hex": "#AFAFAE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/colors/lunar-silver-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ehev-xray-powertrain",
+              "title": "Atkinson-Cycle Strong Hybrid e:HEV Architecture",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/ehev-xray-powertrain.webp"
+          },
+          {
+              "id": "ehev-exterior-front",
+              "title": "City e:HEV Signature Blue H-Mark & Carbon Diffuser",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/ehev-exterior-front.webp"
+          },
+          {
+              "id": "ehev-aerodynamic-profile",
+              "title": "Trunk Lip Spoiler & R16 Diamond-Cut Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/ehev-aerodynamic-profile.webp"
+          },
+          {
+              "id": "full-led-headlamps",
+              "title": "9-Array Full LED Headlamps with DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/full-led-headlamps.webp"
+          },
+          {
+              "id": "r16-diamond-alloys",
+              "title": "R16 Dual-Tone Diamond-Cut Alloy Wheels & All-4 Disc Brakes",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/r16-diamond-alloys.webp"
+          },
+          {
+              "id": "z-shaped-led-taillamps",
+              "title": "Z-Shaped 3D Wrap-Around LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/z-shaped-led-taillamps.webp"
+          },
+          {
+              "id": "ivory-leather-cabin",
+              "title": "Two-Tone Ivory & Black Luxury Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/ivory-leather-cabin.webp"
+          },
+          {
+              "id": "electric-sunroof",
+              "title": "One-Touch Electric Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/electric-sunroof.webp"
+          },
+          {
+              "id": "lanewatch-camera",
+              "title": "Honda LaneWatch Blind-Spot Camera",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/lanewatch-camera.webp"
+          },
+          {
+              "id": "multi-angle-camera",
+              "title": "Multi-Angle Rear View Camera",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/multi-angle-camera.webp"
+          },
+          {
+              "id": "pm25-air-filter",
+              "title": "Cabin PM 2.5 Air Purifying Filter & Max Cool AC",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/pm25-air-filter.webp"
+          },
+          {
+              "id": "six-airbags-safety",
+              "title": "6 Airbags & Honda SENSING Level-2 ADAS",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/gallery/six-airbags-safety.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.5L Atkinson-Cycle i-VTEC + Dual Electric Motor Strong Hybrid (126 PS Combined, 253 Nm Electric Motor Torque)"
+          ],
+          "transmissions": [
+              "e-CVT (Electronic Continuously Variable Transmission) with Deceleration Paddle Selectors"
+          ],
+          "dimensions": "4583 mm L × 1748 mm W × 1489 mm H",
+          "wheelbase": "2600 mm",
+          "fuelTank": "40 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "V e:HEV Strong Hybrid e-CVT (ADAS)",
+              "exShowroom": 1910000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "1.5L Strong Hybrid (126 PS / 253 Nm)",
+              "mileage": "27.13 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Two-Motor Strong Hybrid System with EV, Hybrid & Engine Drive Modes",
+                  "Honda SENSING Level-2 ADAS & All-4 Wheel Disc Brakes",
+                  "Electronic Parking Brake (EPB) with Auto Brake Hold",
+                  "8-inch Wireless CarPlay/Android Auto & 7-inch HD Hybrid Power Flow Meter",
+                  "6 Airbags, Regenerating Deceleration Selectors & Smart Key Remote Start"
+              ]
+          },
+          {
+              "name": "ZX e:HEV Strong Hybrid e-CVT (ADAS)",
+              "exShowroom": 2075000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "1.5L Strong Hybrid (126 PS / 253 Nm)",
+              "mileage": "27.13 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Flagship Hybrid Luxury Sedan",
+              "keyFeatures": [
+                  "9-Array Full LED Headlamps, Z-Shaped 3D LED Tail Lamps & Trunk Lip Spoiler",
+                  "One-Touch Electric Sunroof & R16 Dual-Tone Diamond-Cut Alloy Wheels",
+                  "Two-Tone Ivory & Black Leather Upholstery with Ambient Lighting",
+                  "Honda LaneWatch Camera, Wireless Phone Charger & 8-Speaker Surround Audio",
+                  "Honda Connect with Smartwatch & Alexa Integration"
+              ]
+          }
+      ],
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/honda-city-ehev/360",
+          "format": "webp",
+          "defaultColor": "obsidian-blue-pearl",
+          "colors": [
+              {
+                  "id": "obsidian-blue-pearl",
+                  "name": "Obsidian Blue Pearl",
+                  "hex": "#424F83"
+              }
+          ]
+      }
+  },
+  {
+      "id": "honda-amaze",
+      "name": "Honda Amaze",
+      "brand": "Honda",
+      "tagline": "All-New 3rd-Gen Compact Sedan with 5-Star Bharat NCAP Safety & India's Most Affordable ADAS",
+      "launchDate": "December 2024 (3rd Gen)",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹8.10 - ₹11.20 Lakh",
+      "minPrice": 810000,
+      "maxPrice": 1120000,
+      "safetyRating": "5.0 ★ (Bharat NCAP 5-Star / 6 Airbags Standard)",
+      "groundClearance": "172 mm",
+      "bootSpace": "416 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/obsidian-blue-pearl.webp",
+      "summary": "The All-New 3rd-Generation Honda Amaze sets a new benchmark in compact sedans with a 5-Star Bharat NCAP safety rating, 6 airbags standard across all variants, segment-first Honda SENSING Level-2 ADAS, 416L boot space, rear AC vents, and 1.2L i-VTEC refinement.",
+      "colors": [
+          {
+              "id": "obsidian-blue-pearl",
+              "name": "Obsidian Blue Pearl",
+              "hex": "#424F83",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/obsidian-blue-pearl.webp"
+          },
+          {
+              "id": "lunar-silver-metallic",
+              "name": "Lunar Silver Metallic",
+              "hex": "#AFAFAE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/lunar-silver-metallic.webp"
+          },
+          {
+              "id": "meteoroid-grey-metallic",
+              "name": "Meteoroid Grey Metallic",
+              "hex": "#535C61",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/meteoroid-grey-metallic.webp"
+          },
+          {
+              "id": "golden-brown-metallic",
+              "name": "Golden Brown Metallic",
+              "hex": "#977B70",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/golden-brown-metallic.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "radiant-red-metallic",
+              "name": "Radiant Red Metallic",
+              "hex": "#ED121B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/radiant-red-metallic.webp"
+          },
+          {
+              "id": "crystal-black-pearl",
+              "name": "Crystal Black Pearl",
+              "hex": "#000000",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/colors/crystal-black-pearl.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front-grille-design",
+              "title": "Bold Honeycomb Grille & Solid Wing Face",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/front-grille-design.webp"
+          },
+          {
+              "id": "led-projector-headlamps",
+              "title": "Bi-Projector LED Headlamps with Integrated DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/led-projector-headlamps.webp"
+          },
+          {
+              "id": "led-wing-taillamps",
+              "title": "Signature Wing-Shaped LED Rear Combination Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/led-wing-taillamps.webp"
+          },
+          {
+              "id": "r15-diamond-alloys",
+              "title": "R15 Dual-Tone Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/r15-diamond-alloys.webp"
+          },
+          {
+              "id": "led-fog-lamps",
+              "title": "Sleek LED Projector Fog Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/led-fog-lamps.webp"
+          },
+          {
+              "id": "floating-infotainment",
+              "title": "8-inch Floating HD Touchscreen with Wireless CarPlay",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/floating-infotainment.webp"
+          },
+          {
+              "id": "tft-instrument-cluster",
+              "title": "7-inch HD Full-Color TFT Driver Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/tft-instrument-cluster.webp"
+          },
+          {
+              "id": "wireless-charger",
+              "title": "15W Wireless Smartphone Charger",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/wireless-charger.webp"
+          },
+          {
+              "id": "rear-ac-vents",
+              "title": "Segment-Added Rear AC Vents & spacious Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/rear-ac-vents.webp"
+          },
+          {
+              "id": "boot-space-416l",
+              "title": "Class-Leading 416-Litre Luggage Trunk",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/boot-space-416l.webp"
+          },
+          {
+              "id": "lanewatch-adas",
+              "title": "Honda SENSING Level-2 ADAS & LaneWatch Camera",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/lanewatch-adas.webp"
+          },
+          {
+              "id": "six-airbags-bncap",
+              "title": "5-Star Bharat NCAP Safety & 6 Airbags Standard",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/gallery/six-airbags-bncap.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.2L i-VTEC 4-Cylinder Petrol (90 PS @ 6000 rpm, 110 Nm @ 4800 rpm)"
+          ],
+          "transmissions": [
+              "5-Speed Manual Transmission (MT)",
+              "7-Speed CVT Automatic with Paddle Shifters"
+          ],
+          "dimensions": "3995 mm L × 1733 mm W × 1500 mm H",
+          "wheelbase": "2470 mm",
+          "fuelTank": "35 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "V 1.2 Petrol 5MT",
+              "exShowroom": 810000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "18.65 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags, VSA, Hill Start Assist & ESC Standard",
+                  "LED Projector Headlamps with Integrated LED DRLs & Wing LED Tail Lamps",
+                  "8-inch Floating Touchscreen with Wireless Apple CarPlay & Android Auto",
+                  "7-inch HD Full-Color TFT Driver Display & 4 Speakers",
+                  "All 4 Power Windows, Rear Parking Sensors & Keyless Entry"
+              ]
+          },
+          {
+              "name": "V 1.2 Petrol CVT Automatic",
+              "exShowroom": 935000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "19.46 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Steering Paddle Shifters",
+                  "LED Projector Headlamps & 8-inch Wireless Touchscreen",
+                  "7-inch TFT Meter Cluster & Steering Audio Controls",
+                  "6 Airbags, VSA, Agile Handling Assist & Hill Start Assist",
+                  "Rear Armrest with Cup Holders & 416L Boot"
+              ]
+          },
+          {
+              "name": "VX 1.2 Petrol 5MT",
+              "exShowroom": 920000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "18.65 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Value Family Sedan",
+              "keyFeatures": [
+                  "Honda LaneWatch Blind-Spot Camera & Multi-Angle Rear Camera",
+                  "Fully Automatic Climate Control with Rear AC Vents & PM 2.5 Filter",
+                  "15W Wireless Smartphone Charger & Push Button Start/Stop",
+                  "R15 Silver Alloy Wheels & LED Projector Fog Lamps",
+                  "6-Speaker Surround Audio & Honda Connect with 5-Year Subscription"
+              ]
+          },
+          {
+              "name": "VX 1.2 Petrol CVT Automatic",
+              "exShowroom": 1000000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "19.46 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Automatic Trim",
+              "keyFeatures": [
+                  "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+                  "Honda LaneWatch Camera, Rear View Camera & Wireless Charger",
+                  "Automatic Climate Control with Rear AC Vents",
+                  "R15 Alloy Wheels, LED Fog Lamps & Auto Headlamps",
+                  "6 Airbags & Walkaway Auto Lock"
+              ]
+          },
+          {
+              "name": "ZX 1.2 Petrol 5MT (ADAS)",
+              "exShowroom": 999900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "18.65 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+                  "R15 Dual-Tone Diamond-Cut Alloy Wheels",
+                  "Honda LaneWatch Camera, Multi-Angle Rear Camera & 6 Airbags",
+                  "8-inch Wireless Touchscreen, Wireless Charger & Rear AC Vents",
+                  "India's Most Affordable ADAS-Equipped Car under ₹10 Lakh"
+              ]
+          },
+          {
+              "name": "ZX 1.2 Petrol CVT Automatic (ADAS)",
+              "exShowroom": 1120000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.2L i-VTEC (90 PS)",
+              "mileage": "19.46 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Honda SENSING Level-2 ADAS with Adaptive Cruise & Lane Keeping",
+                  "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+                  "R15 Dual-Tone Diamond-Cut Alloy Wheels & Chrome Outer Door Handles",
+                  "Honda LaneWatch Camera, Wireless Charger & 6-Speaker Sound",
+                  "5-Star Bharat NCAP Safety with 6 Airbags Standard"
+              ]
+          }
+      ],
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/honda-amaze/360",
+          "format": "webp",
+          "defaultColor": "obsidian-blue-pearl",
+          "colors": [
+              {
+                  "id": "obsidian-blue-pearl",
+                  "name": "Obsidian Blue Pearl",
+                  "hex": "#424F83"
+              }
+          ]
+      }
   }
 ];
 

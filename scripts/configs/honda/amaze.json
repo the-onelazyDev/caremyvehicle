@@ -1,0 +1,289 @@
+{
+  "id": "honda-amaze",
+  "name": "Honda Amaze",
+  "brand": "Honda",
+  "tagline": "All-New 3rd-Gen Compact Sedan with 5-Star Bharat NCAP Safety & India's Most Affordable ADAS",
+  "launchDate": "December 2024 (3rd Gen)",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹8.10 - ₹11.20 Lakh",
+  "minPrice": 810000,
+  "maxPrice": 1120000,
+  "safetyRating": "5.0 ★ (Bharat NCAP 5-Star / 6 Airbags Standard)",
+  "groundClearance": "172 mm",
+  "bootSpace": "416 Litres",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "The All-New 3rd-Generation Honda Amaze sets a new benchmark in compact sedans with a 5-Star Bharat NCAP safety rating, 6 airbags standard across all variants, segment-first Honda SENSING Level-2 ADAS, 416L boot space, rear AC vents, and 1.2L i-VTEC refinement.",
+  "spin360": {
+    "totalFrames": 36,
+    "defaultColor": "obsidian-blue-pearl",
+    "defaultColorName": "Obsidian Blue Pearl",
+    "defaultColorHex": "#424F83",
+    "sourceUrls": [
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00008.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00010.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00012.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00014.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00016.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00018.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00020.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00022.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00024.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00026.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00028.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00030.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00032.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00034.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00036.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00038.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00040.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00042.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00044.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00046.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00048.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00050.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00052.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00054.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00056.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00058.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00060.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00062.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00064.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00066.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00068.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00070.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00000.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00002.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00004.png",
+      "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00006.png"
+    ],
+    "colors": [
+      {
+        "id": "obsidian-blue-pearl",
+        "name": "Obsidian Blue Pearl",
+        "hex": "#424F83"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "obsidian-blue-pearl",
+      "name": "Obsidian Blue Pearl",
+      "hex": "#424F83",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00009_chooseCar.png"
+    },
+    {
+      "id": "lunar-silver-metallic",
+      "name": "Lunar Silver Metallic",
+      "hex": "#AFAFAE",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_LUNAR_SILVER_METALLIC_V-3__00009 1_chooseCar.png"
+    },
+    {
+      "id": "meteoroid-grey-metallic",
+      "name": "Meteoroid Grey Metallic",
+      "hex": "#535C61",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_METEROID_GREY_METALLIC_V-3__00009_chooseCar.png"
+    },
+    {
+      "id": "golden-brown-metallic",
+      "name": "Golden Brown Metallic",
+      "hex": "#977B70",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360__GOLDEN_BROWN_METALLIC_V-4_p1_00009_chooseCar.png"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_PEARL_WHITE_V-3__00009_chooseCar.png"
+    },
+    {
+      "id": "radiant-red-metallic",
+      "name": "Radiant Red Metallic",
+      "hex": "#ED121B",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_RED_V-3__00009_chooseCar.png"
+    },
+    {
+      "id": "crystal-black-pearl",
+      "name": "Crystal Black Pearl",
+      "hex": "#000000",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/amaze/exterior/crystal_black_pearl/amaze_black_360_desk_00009_new.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "front-grille-design",
+      "title": "Bold Honeycomb Grille & Solid Wing Face",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/exterior/AR_AD_SEP_24_HONDA_AMAZE_FRONT_&_GRILLE_4K_02_new.jpg"
+    },
+    {
+      "id": "led-projector-headlamps",
+      "title": "Bi-Projector LED Headlamps with Integrated DRLs",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/exterior/AR-AM-HONDA-NEW-AMAZE-FRONT-LIGHT-SHOT-2024-V3_new.jpg"
+    },
+    {
+      "id": "led-wing-taillamps",
+      "title": "Signature Wing-Shaped LED Rear Combination Lamps",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/exterior/AR-AM-HONDA-NEW-AMAZE-REAR-LIGHT-SHOT-2024-V4_new.jpg"
+    },
+    {
+      "id": "r15-diamond-alloys",
+      "title": "R15 Dual-Tone Diamond-Cut Alloy Wheels",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/exterior/AR-AM-HONDA-NEW-AMAZE-ALLOY-WHEEL-SHOT-2024-V2_new.jpg"
+    },
+    {
+      "id": "led-fog-lamps",
+      "title": "Sleek LED Projector Fog Lamps",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/exterior/AR-AM-HONDA-NEW-AMAZE-FOG-LAMP-SHOT-2024-V2_new.jpg"
+    },
+    {
+      "id": "floating-infotainment",
+      "title": "8-inch Floating HD Touchscreen with Wireless CarPlay",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/cluster-and-infotainment/AR-AM-HONDA-NEW-AMAZE-Display-AVNT-SHOT-2024-V2_new.jpg"
+    },
+    {
+      "id": "tft-instrument-cluster",
+      "title": "7-inch HD Full-Color TFT Driver Display",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/cluster-and-infotainment/AR-AM-HONDA-NEW-AMAZE-INSTRUMENT-CLUSTER-SHOT-2024-v2_new1.jpg"
+    },
+    {
+      "id": "wireless-charger",
+      "title": "15W Wireless Smartphone Charger",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/cluster-and-infotainment/AR_AB_AMAZE_WIRELESS_CHARGER_02_new.jpg"
+    },
+    {
+      "id": "rear-ac-vents",
+      "title": "Segment-Added Rear AC Vents & spacious Cabin",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/Convenience/AR_AD_SEP_24_HONDA_AMAZE_REAR_AC_VENT_3K_02_new.jpg"
+    },
+    {
+      "id": "boot-space-416l",
+      "title": "Class-Leading 416-Litre Luggage Trunk",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/design/newAmaze/utilities/AR-AM-HONDA-AMAZE-Boot-open-with-luggage-SHOT-2024-v2_new.jpg"
+    },
+    {
+      "id": "lanewatch-adas",
+      "title": "Honda SENSING Level-2 ADAS & LaneWatch Camera",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/reasonToChoose/newAmaze/AR_AB_AMAZE_LANEWATCH_04_new12.png"
+    },
+    {
+      "id": "six-airbags-bncap",
+      "title": "5-Star Bharat NCAP Safety & 6 Airbags Standard",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/technology/newAmaze/AR_AD_SEP_24_HONDA_AMAZE_VISUAL_6_AIRBAGS_CUT_CAR_6K_02_new.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.2L i-VTEC 4-Cylinder Petrol (90 PS @ 6000 rpm, 110 Nm @ 4800 rpm)"
+    ],
+    "transmissions": [
+      "5-Speed Manual Transmission (MT)",
+      "7-Speed CVT Automatic with Paddle Shifters"
+    ],
+    "dimensions": "3995 mm L × 1733 mm W × 1500 mm H",
+    "wheelbase": "2470 mm",
+    "fuelTank": "35 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "V 1.2 Petrol 5MT",
+      "exShowroom": 810000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "18.65 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags, VSA, Hill Start Assist & ESC Standard",
+        "LED Projector Headlamps with Integrated LED DRLs & Wing LED Tail Lamps",
+        "8-inch Floating Touchscreen with Wireless Apple CarPlay & Android Auto",
+        "7-inch HD Full-Color TFT Driver Display & 4 Speakers",
+        "All 4 Power Windows, Rear Parking Sensors & Keyless Entry"
+      ]
+    },
+    {
+      "name": "V 1.2 Petrol CVT Automatic",
+      "exShowroom": 935000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "19.46 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Steering Paddle Shifters",
+        "LED Projector Headlamps & 8-inch Wireless Touchscreen",
+        "7-inch TFT Meter Cluster & Steering Audio Controls",
+        "6 Airbags, VSA, Agile Handling Assist & Hill Start Assist",
+        "Rear Armrest with Cup Holders & 416L Boot"
+      ]
+    },
+    {
+      "name": "VX 1.2 Petrol 5MT",
+      "exShowroom": 920000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "18.65 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Value Family Sedan",
+      "keyFeatures": [
+        "Honda LaneWatch Blind-Spot Camera & Multi-Angle Rear Camera",
+        "Fully Automatic Climate Control with Rear AC Vents & PM 2.5 Filter",
+        "15W Wireless Smartphone Charger & Push Button Start/Stop",
+        "R15 Silver Alloy Wheels & LED Projector Fog Lamps",
+        "6-Speaker Surround Audio & Honda Connect with 5-Year Subscription"
+      ]
+    },
+    {
+      "name": "VX 1.2 Petrol CVT Automatic",
+      "exShowroom": 1000000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "19.46 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Automatic Trim",
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+        "Honda LaneWatch Camera, Rear View Camera & Wireless Charger",
+        "Automatic Climate Control with Rear AC Vents",
+        "R15 Alloy Wheels, LED Fog Lamps & Auto Headlamps",
+        "6 Airbags & Walkaway Auto Lock"
+      ]
+    },
+    {
+      "name": "ZX 1.2 Petrol 5MT (ADAS)",
+      "exShowroom": 999900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "18.65 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+        "R15 Dual-Tone Diamond-Cut Alloy Wheels",
+        "Honda LaneWatch Camera, Multi-Angle Rear Camera & 6 Airbags",
+        "8-inch Wireless Touchscreen, Wireless Charger & Rear AC Vents",
+        "India's Most Affordable ADAS-Equipped Car under ₹10 Lakh"
+      ]
+    },
+    {
+      "name": "ZX 1.2 Petrol CVT Automatic (ADAS)",
+      "exShowroom": 1120000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.2L i-VTEC (90 PS)",
+      "mileage": "19.46 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Honda SENSING Level-2 ADAS with Adaptive Cruise & Lane Keeping",
+        "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+        "R15 Dual-Tone Diamond-Cut Alloy Wheels & Chrome Outer Door Handles",
+        "Honda LaneWatch Camera, Wireless Charger & 6-Speaker Sound",
+        "5-Star Bharat NCAP Safety with 6 Airbags Standard"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "id": "honda-elevate",
+  "name": "Honda Elevate",
+  "brand": "Honda",
+  "tagline": "Bold Urban Freestyler SUV with Class-Leading 220 mm Ground Clearance & Honda SENSING ADAS",
+  "launchDate": "2025 Model Year",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹11.69 - ₹16.73 Lakh",
+  "minPrice": 1169000,
+  "maxPrice": 1673000,
+  "safetyRating": "5.0 ★ (JNCAP 5-Star / 6 Airbags Standard)",
+  "groundClearance": "220 mm",
+  "bootSpace": "458 Litres",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "The Honda Elevate brings bullet-proof 1.5L i-VTEC refinement, segment-highest 220 mm ground clearance, massive 458L boot space, 6 airbags standard across all variants, and Honda SENSING Level-2 ADAS.",
+  "spin360": {
+    "totalFrames": 36,
+    "defaultColor": "obsidian-blue-pearl",
+    "defaultColorName": "Obsidian Blue Pearl",
+    "defaultColorHex": "#424F83",
+    "sourceUrls": [
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_00.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_01.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_02.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_03.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_04.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_05.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_06.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_07.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_08.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_09.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_10.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_11.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_12.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_13.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_14.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_15.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_16.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_17.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_18.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_19.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_20.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_21.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_22.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_23.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_24.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_25.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_26.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_27.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_28.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_29.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_30.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_31.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_32.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_33.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_34.png",
+      "https://www.hondacarindia.com/web-data/models/2026/NewElevate/exterior/obsidian_blue_pearl/Elevate_360_D_36_Obsidian_Blue_Pearl_v2_35.png"
+    ],
+    "colors": [
+      {
+        "id": "obsidian-blue-pearl",
+        "name": "Obsidian Blue Pearl",
+        "hex": "#424F83"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "obsidian-blue-pearl",
+      "name": "Obsidian Blue Pearl",
+      "hex": "#424F83",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Obsidian_Blue_Pearl_00_new1.png"
+    },
+    {
+      "id": "radiant-red-metallic",
+      "name": "Radiant Red Metallic",
+      "hex": "#ED121B",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Radiant_Red_Metallic_00_new1.png"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Platinum_White_Pearl_00_new1.png"
+    },
+    {
+      "id": "lunar-silver-metallic",
+      "name": "Lunar Silver Metallic",
+      "hex": "#AFAFAE",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Lunar_Silver_Metallic_00_new1.png"
+    },
+    {
+      "id": "meteoroid-gray-metallic",
+      "name": "Meteoroid Gray Metallic",
+      "hex": "#535C61",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Meteoroid_Gray_Metallic_00_new1.png"
+    },
+    {
+      "id": "platinum-white-pearl-with-crystal-black-pearl-roof",
+      "name": "Platinum White Pearl with Crystal Black Pearl Roof",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Platinum_White_Pearl_Dual_00_new1.png"
+    },
+    {
+      "id": "radiant-red-metallic-with-crystal-black-pearl-roof",
+      "name": "Radiant Red Metallic with Crystal Black Pearl Roof",
+      "hex": "#ED121B",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Radiant_Red_Metallic_Dual_00_new1.png"
+    },
+    {
+      "id": "crystal-black-pearl",
+      "name": "Crystal Black Pearl",
+      "hex": "#000000",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Crystal_Black_Pearl_00_new1.png"
+    },
+    {
+      "id": "nordic-forest-pearl-with-crystal-black-pearl-roof",
+      "name": "Nordic Forest Pearl with Crystal Black Pearl Roof",
+      "hex": "#3A645F",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Nordic_Forest_Pearl_Dual_00_new1.png"
+    },
+    {
+      "id": "nordic-forest-pearl",
+      "name": "Nordic Forest Pearl",
+      "hex": "#3A645F",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/NewElevate/BookingImage/Elevate_Book_EMI_D_Nordic Forest Pearl_00_new1.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "front-quarter-action",
+      "title": "Bold Urban Freestyler Front Stance",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/gallery/AR_SN_HONDA_ELEVATE_KV02_V5_Desktop_27Aug25.jpg"
+    },
+    {
+      "id": "signature-black-edition",
+      "title": "Elevate Signature Black Edition",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/gallery/AR_AB_ELEVATE_KV1_BLACK_EDITION_EXTENDED_07_Desktop_27Aug25.jpg"
+    },
+    {
+      "id": "dynamic-side-profile",
+      "title": "Commanding SUV Profile in Motion",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/gallery/AR_SN_HONDA_ELEVATE_KV06_V6_Desktop_27Aug25.jpg"
+    },
+    {
+      "id": "highway-cruising",
+      "title": "Elevated Road Presence & Stance",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/gallery/Ar_Vk_Honda_Elevate_KV-04_Shot_V9_Desktop_27Aug25.jpg"
+    },
+    {
+      "id": "bold-front-grille",
+      "title": "Bold Chrome & Gloss Front Grille",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Design/AR_SN_HONDA_ELEVATE_FRONT-GRILL_V3_DESKTOP.jpg"
+    },
+    {
+      "id": "led-projector-headlamps",
+      "title": "Full LED Projector Headlamps with DRLs",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Design/AR_SN_HONA_ELEVATE_LED-PROJECTOR-HEADLAMP_V2_DESKTOP.jpg"
+    },
+    {
+      "id": "diamond-cut-alloys",
+      "title": "R17 Dual-Tone Diamond-Cut Alloy Wheels",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Design/AR_BP_HONDA_ELEVATE_ALLOY_03_DESKTOP.jpg"
+    },
+    {
+      "id": "distinctive-led-taillamps",
+      "title": "Distinctive Dual-LED Tail Lamps",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Design/AR_AD_HONDA_ELEVATE_DISTINCTIVE_REAR_DESIGN_03_TIFF_01_DESKTOP.jpg"
+    },
+    {
+      "id": "dashboard-cockpit",
+      "title": "10.25-inch HD Touchscreen & Premium Cockpit",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/AR-AM-Honda-NEW-Elevate-FESTIVE--NEW--GRILL-INTERIOR-DASHBOARD-SHOT-2025-V3_2Sept25.jpg"
+    },
+    {
+      "id": "electric-sunroof",
+      "title": "One-Touch Electric Sunroof with Pinch Guard",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/elevate/Design/Convenience/conv_sunroof_desk.jpg"
+    },
+    {
+      "id": "boot-space-458l",
+      "title": "Class-Leading 458L Luggage Boot Space",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Design/AR_AD_HONDA_ELEVATE_BOOT_OPEN_03_TIFF_01_DESKTOP.jpg"
+    },
+    {
+      "id": "honda-sensing-adas",
+      "title": "Honda SENSING Level-2 ADAS Suite & 6 Airbags",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/elevate/Technology2025/Honda-Sense_Desktop.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.5L i-VTEC DOHC Petrol (121 PS @ 6600 rpm, 145 Nm @ 4300 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission (MT)",
+      "7-Speed CVT Automatic with Paddle Shifters"
+    ],
+    "dimensions": "4312 mm L × 1790 mm W × 1650 mm H",
+    "wheelbase": "2650 mm",
+    "fuelTank": "40 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "SV 1.5 Petrol 6MT",
+      "exShowroom": 1169000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "15.31 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags Standard Across All Variants",
+        "LED Projector Headlamps with LED DRLs & LED Tail Lamps",
+        "Push Button Start/Stop with Smart Keyless Entry",
+        "Automatic Climate Control with Rear AC Vents",
+        "Vehicle Stability Assist (VSA) & Hill Start Assist"
+      ]
+    },
+    {
+      "name": "V 1.5 Petrol 6MT",
+      "exShowroom": 1285000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "15.31 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Value Manual SUV",
+      "keyFeatures": [
+        "8-inch Touchscreen Infotainment with Wireless Apple CarPlay & Android Auto",
+        "Multi-Angle Rear View Camera with Guidelines",
+        "Honda Connect with 5-Year Free Subscription",
+        "Steering Mounted Audio, Voice & Hands-Free Controls",
+        "4 Speakers Audio System & Styled R16 Covers"
+      ]
+    },
+    {
+      "name": "V 1.5 Petrol CVT Automatic",
+      "exShowroom": 1395000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "16.92 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Steering Paddle Shifters",
+        "Remote Engine Start via Smart Key",
+        "8-inch Wireless Smartphone Infotainment Display",
+        "6 Airbags, VSA, Agile Handling Assist & Hill Start Assist",
+        "Fully Automatic Climate Control with Max Cool Mode"
+      ]
+    },
+    {
+      "name": "VX 1.5 Petrol 6MT",
+      "exShowroom": 1410000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "15.31 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Feature-Rich Trim",
+      "keyFeatures": [
+        "One-Touch Electric Sunroof with Pinch Guard",
+        "R17 Dual-Tone Diamond-Cut Alloy Wheels",
+        "LaneWatch Blind-Spot Camera & 7-inch TFT Meter Cluster",
+        "Wireless Smartphone Charger & 6-Speaker Surround Audio",
+        "LED Projector Fog Lamps & Roof Rails"
+      ]
+    },
+    {
+      "name": "VX 1.5 Petrol CVT Automatic",
+      "exShowroom": 1520000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "16.92 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Paddle Shifters & Remote Start",
+        "Electric Sunroof & R17 Diamond-Cut Alloy Wheels",
+        "Honda LaneWatch Camera & Wireless Phone Charger",
+        "7-inch HD Full-Color TFT Driver Display",
+        "Auto-Folding ORVMs & Rear Wiper/Washer"
+      ]
+    },
+    {
+      "name": "ZX 1.5 Petrol 6MT (ADAS)",
+      "exShowroom": 1541000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "15.31 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+        "10.25-inch HD Freestanding Touchscreen with 8 Speakers",
+        "Dual-Tone Brown & Black Leatherette Upholstery",
+        "Auto-Dimming Frameless IRVM & Chrome Door Handles",
+        "6 Airbags, LaneWatch Camera & Electric Sunroof"
+      ]
+    },
+    {
+      "name": "ZX 1.5 Petrol CVT Automatic (ADAS)",
+      "exShowroom": 1653000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "16.92 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Honda SENSING ADAS with Low-Speed Follow & Lead Car Departure Notification",
+        "7-Speed CVT Automatic with Paddle Shifters",
+        "10.25-inch HD Touchscreen & 8-Speaker Premium Sound",
+        "Plush Brown Leatherette Seats & Soft-Touch Dashboard",
+        "Electric Sunroof, R17 Diamond-Cut Alloys & Dual-Tone Option"
+      ]
+    },
+    {
+      "name": "ZX Black Edition 1.5 CVT Automatic (ADAS)",
+      "exShowroom": 1673000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "16.92 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "All-Black R17 Alloy Wheels & Gloss Black Exterior Accents",
+        "All-Black Leatherette Cabin with Contrast Stitching & 7-Color Ambient Lighting",
+        "Honda SENSING Level-2 ADAS Suite & LaneWatch Camera",
+        "10.25-inch HD Infotainment with Wireless CarPlay/Android Auto",
+        "Special Signature Black Edition Badging"
+      ]
+    }
+  ]
+}

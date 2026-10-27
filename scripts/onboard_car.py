@@ -27,6 +27,7 @@ HTTP_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 def fetch_bytes(url, max_retries=3, timeout=15):
     """Fetch binary data from URL with retries."""
+    url = url.replace(" ", "%20")
     for attempt in range(max_retries):
         try:
             req = urllib.request.Request(url, headers=HTTP_HEADERS)
@@ -98,17 +99,22 @@ def process_spin360(car_slug, spin_config, dry_run=False):
     if not spin_config:
         return None
 
-    total_frames = spin_config.get("totalFrames", 36)
+    source_urls = spin_config.get("sourceUrls")
     source_url_template = spin_config.get("sourceUrlTemplate")
+    total_frames = len(source_urls) if source_urls else spin_config.get("totalFrames", 36)
     default_color_slug = spin_config.get("defaultColor", "default")
     folder = f"/cars/{car_slug}/360/{default_color_slug}"
 
     print(f"\n[360 SPINS] Processing {total_frames} frames for {car_slug} ({default_color_slug})...")
     
     tasks = []
-    for frame in range(1, total_frames + 1):
-        url = source_url_template.replace("{frame}", str(frame))
-        tasks.append((frame, url))
+    if source_urls:
+        for idx, url in enumerate(source_urls, start=1):
+            tasks.append((idx, url.replace(" ", "%20")))
+    else:
+        for frame in range(1, total_frames + 1):
+            url = source_url_template.replace("{frame}", str(frame)).replace(" ", "%20")
+            tasks.append((frame, url))
 
     uploaded_count = 0
 

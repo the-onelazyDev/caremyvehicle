@@ -1,0 +1,217 @@
+{
+  "id": "honda-city-ehev",
+  "name": "Honda City e:HEV",
+  "brand": "Honda",
+  "tagline": "India's Only Self-Charging Strong Hybrid Sedan with 27.13 kmpl & 253 Nm Electric Torque",
+  "launchDate": "2025 Model Year",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Hybrid"
+  ],
+  "priceRange": "₹19.10 - ₹20.75 Lakh",
+  "minPrice": 1910000,
+  "maxPrice": 2075000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star / 6 Airbags + ADAS)",
+  "groundClearance": "165 mm",
+  "bootSpace": "410 Litres",
+  "waitingPeriod": "3 - 4 Weeks",
+  "summary": "The Honda City e:HEV features Honda's intelligent two-motor e-CVT strong hybrid powertrain delivering 126 PS combined output, instant 253 Nm electric motor torque, an astonishing 27.13 kmpl mileage, all-4 disc brakes, electronic parking brake, and standard Honda SENSING ADAS.",
+  "spin360": {
+    "totalFrames": 36,
+    "defaultColor": "obsidian-blue-pearl",
+    "defaultColorName": "Obsidian Blue Pearl",
+    "defaultColorHex": "#424F83",
+    "sourceUrls": [
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_00.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_01.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_02.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_03.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_04.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_05.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_06.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_07.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_08.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_09.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_10.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_11.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_12.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_13.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_14.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_15.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_16.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_17.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_18.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_19.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_20.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_21.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_22.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_23.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_24.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_25.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_26.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_27.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_28.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_29.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_30.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_31.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_32.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_33.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_34.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_35.jpg"
+    ],
+    "colors": [
+      {
+        "id": "obsidian-blue-pearl",
+        "name": "Obsidian Blue Pearl",
+        "hex": "#424F83"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "obsidian-blue-pearl",
+      "name": "Obsidian Blue Pearl",
+      "hex": "#424F83",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_BLUE_01_desk_01.jpg"
+    },
+    {
+      "id": "radiant-red-metallic",
+      "name": "Radiant Red Metallic",
+      "hex": "#ED121B",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_RED_01_desk_01.jpg"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_WHITE_01_desk_01.jpg"
+    },
+    {
+      "id": "crystal-black-pearl",
+      "name": "Crystal Black Pearl",
+      "hex": "#000000",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_BLACK_01_desk_01_new.jpg"
+    },
+    {
+      "id": "meteoroid-gray-metallic",
+      "name": "Meteoroid Gray Metallic",
+      "hex": "#535C61",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_GREY_01_desk_01.jpg"
+    },
+    {
+      "id": "lunar-silver-metallic",
+      "name": "Lunar Silver Metallic",
+      "hex": "#AFAFAE",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_SILVER_01_desk_01.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "ehev-xray-powertrain",
+      "title": "Atkinson-Cycle Strong Hybrid e:HEV Architecture",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/technology/eHEV/ehev_xray.jpg"
+    },
+    {
+      "id": "ehev-exterior-front",
+      "title": "City e:HEV Signature Blue H-Mark & Carbon Diffuser",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Gallery/Desktop1.jpg"
+    },
+    {
+      "id": "ehev-aerodynamic-profile",
+      "title": "Trunk Lip Spoiler & R16 Diamond-Cut Alloys",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Gallery/Desktop3.jpg"
+    },
+    {
+      "id": "full-led-headlamps",
+      "title": "9-Array Full LED Headlamps with DRLs",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/Full-LED-Headlamps--(1st-in-segment).jpg"
+    },
+    {
+      "id": "r16-diamond-alloys",
+      "title": "R16 Dual-Tone Diamond-Cut Alloy Wheels & All-4 Disc Brakes",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/R16-Diamond-Cut-Alloy-Wheels.jpg"
+    },
+    {
+      "id": "z-shaped-led-taillamps",
+      "title": "Z-Shaped 3D Wrap-Around LED Tail Lamps",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/Z--shaped-3D-wrap-around-LED-tail-lamp.jpg"
+    },
+    {
+      "id": "ivory-leather-cabin",
+      "title": "Two-Tone Ivory & Black Luxury Cabin",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Design/Interior/desi_int_seat_desk.jpg"
+    },
+    {
+      "id": "electric-sunroof",
+      "title": "One-Touch Electric Sunroof",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Design/Convenience/desi_conv_sunroof_desk.jpg"
+    },
+    {
+      "id": "lanewatch-camera",
+      "title": "Honda LaneWatch Blind-Spot Camera",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Technology/Safety/Lane-watch.jpg"
+    },
+    {
+      "id": "multi-angle-camera",
+      "title": "Multi-Angle Rear View Camera",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/technology/city5th/safety/Multi-Angle-Rear-Camera.jpg"
+    },
+    {
+      "id": "pm25-air-filter",
+      "title": "Cabin PM 2.5 Air Purifying Filter & Max Cool AC",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Design/Convenience/desi_conv_airfilter_desk.jpg"
+    },
+    {
+      "id": "six-airbags-safety",
+      "title": "6 Airbags & Honda SENSING Level-2 ADAS",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Technology/tech_safety_airbag_desk.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.5L Atkinson-Cycle i-VTEC + Dual Electric Motor Strong Hybrid (126 PS Combined, 253 Nm Electric Motor Torque)"
+    ],
+    "transmissions": [
+      "e-CVT (Electronic Continuously Variable Transmission) with Deceleration Paddle Selectors"
+    ],
+    "dimensions": "4583 mm L × 1748 mm W × 1489 mm H",
+    "wheelbase": "2600 mm",
+    "fuelTank": "40 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "V e:HEV Strong Hybrid e-CVT (ADAS)",
+      "exShowroom": 1910000,
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "engine": "1.5L Strong Hybrid (126 PS / 253 Nm)",
+      "mileage": "27.13 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Two-Motor Strong Hybrid System with EV, Hybrid & Engine Drive Modes",
+        "Honda SENSING Level-2 ADAS & All-4 Wheel Disc Brakes",
+        "Electronic Parking Brake (EPB) with Auto Brake Hold",
+        "8-inch Wireless CarPlay/Android Auto & 7-inch HD Hybrid Power Flow Meter",
+        "6 Airbags, Regenerating Deceleration Selectors & Smart Key Remote Start"
+      ]
+    },
+    {
+      "name": "ZX e:HEV Strong Hybrid e-CVT (ADAS)",
+      "exShowroom": 2075000,
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "engine": "1.5L Strong Hybrid (126 PS / 253 Nm)",
+      "mileage": "27.13 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Flagship Hybrid Luxury Sedan",
+      "keyFeatures": [
+        "9-Array Full LED Headlamps, Z-Shaped 3D LED Tail Lamps & Trunk Lip Spoiler",
+        "One-Touch Electric Sunroof & R16 Dual-Tone Diamond-Cut Alloy Wheels",
+        "Two-Tone Ivory & Black Leather Upholstery with Ambient Lighting",
+        "Honda LaneWatch Camera, Wireless Phone Charger & 8-Speaker Surround Audio",
+        "Honda Connect with Smartwatch & Alexa Integration"
+      ]
+    }
+  ]
+}

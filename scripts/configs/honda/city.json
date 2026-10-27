@@ -1,0 +1,299 @@
+{
+  "id": "honda-city",
+  "name": "Honda City",
+  "brand": "Honda",
+  "tagline": "India's Benchmark Executive Sedan with 1.5L i-VTEC & Standard Honda SENSING ADAS",
+  "launchDate": "2025 Model Year",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹12.08 - ₹16.35 Lakh",
+  "minPrice": 1208000,
+  "maxPrice": 1635000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star / 6 Airbags Standard)",
+  "groundClearance": "165 mm",
+  "bootSpace": "506 Litres",
+  "waitingPeriod": "2 - 3 Weeks",
+  "summary": "The 5th-Generation Honda City remains India's most iconic executive sedan, pairing its legendary 121 PS 1.5L i-VTEC DOHC engine with Honda SENSING ADAS across V, VX, and ZX trims, 6 airbags standard, and rear-seat executive comfort.",
+  "spin360": {
+    "totalFrames": 36,
+    "defaultColor": "obsidian-blue-pearl",
+    "defaultColorName": "Obsidian Blue Pearl",
+    "defaultColorHex": "#424F83",
+    "sourceUrls": [
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_00.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_01.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_02.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_03.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_04.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_05.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_06.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_07.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_08.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_09.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_10.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_11.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_12.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_13.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_14.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_15.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_16.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_17.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_18.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_19.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_20.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_21.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_22.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_23.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_24.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_25.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_26.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_27.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_28.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_29.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_30.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_31.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_32.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_33.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_34.jpg",
+      "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_35.jpg"
+    ],
+    "colors": [
+      {
+        "id": "obsidian-blue-pearl",
+        "name": "Obsidian Blue Pearl",
+        "hex": "#424F83"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "obsidian-blue-pearl",
+      "name": "Obsidian Blue Pearl",
+      "hex": "#424F83",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_BLUE_01_desk_01.jpg"
+    },
+    {
+      "id": "radiant-red-metallic",
+      "name": "Radiant Red Metallic",
+      "hex": "#ED121B",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_RED_01_desk_01.jpg"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_WHITE_01_desk_01.jpg"
+    },
+    {
+      "id": "crystal-black-pearl",
+      "name": "Crystal Black Pearl",
+      "hex": "#000000",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_BLACK_01_desk_01_new.jpg"
+    },
+    {
+      "id": "meteoroid-gray-metallic",
+      "name": "Meteoroid Gray Metallic",
+      "hex": "#535C61",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_GREY_01_desk_01.jpg"
+    },
+    {
+      "id": "lunar-silver-metallic",
+      "name": "Lunar Silver Metallic",
+      "hex": "#AFAFAE",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/BookingImage/Desktop/CITY_EHEV_SILVER_01_desk_01.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "exterior-front-stance",
+      "title": "5th-Gen Honda City Iconic Sedan Stance",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Gallery/Desktop1.jpg"
+    },
+    {
+      "id": "rear-quarter-action",
+      "title": "Sculpted Aerodynamic Fastback Profile",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Gallery/Desktop3.jpg"
+    },
+    {
+      "id": "sporty-front-grille",
+      "title": "New Sporty Honeycomb Front Grille & Fascia",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/New-Front-Design.jpg"
+    },
+    {
+      "id": "full-led-headlamps",
+      "title": "9-Array Full LED Headlamps with DRLs",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/Full-LED-Headlamps--(1st-in-segment).jpg"
+    },
+    {
+      "id": "r16-diamond-alloys",
+      "title": "R16 Dual-Tone Diamond-Cut Alloy Wheels",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/R16-Diamond-Cut-Alloy-Wheels.jpg"
+    },
+    {
+      "id": "z-shaped-led-taillamps",
+      "title": "Z-Shaped 3D Wrap-Around LED Tail Lamps",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Exterior/Z--shaped-3D-wrap-around-LED-tail-lamp.jpg"
+    },
+    {
+      "id": "two-tone-luxury-cabin",
+      "title": "Two-Tone Beige & Black Leather Upholstery",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Design/Interior/desi_int_seat_desk.jpg"
+    },
+    {
+      "id": "electric-sunroof",
+      "title": "One-Touch Electric Sunroof",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Design/Convenience/desi_conv_sunroof_desk.jpg"
+    },
+    {
+      "id": "ambient-lighting-cabin",
+      "title": "Front Door & Footwell Ambient Lighting",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Interior/Ambient-Light-(Front-Door-Inner-Handles-_-Front-Door-Pockets).jpg"
+    },
+    {
+      "id": "boot-space-506l",
+      "title": "Massive 506-Litre Illuminated Trunk",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2023/city5thGen/Design/Utilities/Illuminated-cargo-room-(506-Litres).jpg"
+    },
+    {
+      "id": "ivtec-engine",
+      "title": "High-Revving 1.5L i-VTEC DOHC Engine (121 PS)",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2025/city5thGen/Technology/Engine/city-engine-desktop.jpg"
+    },
+    {
+      "id": "six-airbags-safety",
+      "title": "6 Airbags Standard & ACE Body Structure",
+      "sourceUrl": "https://www.hondacarindia.com/web-data/models/2024/city5thGen/Technology/tech_safety_airbag_desk.jpg"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.5L i-VTEC DOHC Petrol (121 PS @ 6600 rpm, 145 Nm @ 4300 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission (MT)",
+      "7-Speed CVT Automatic with Paddle Shifters"
+    ],
+    "dimensions": "4583 mm L × 1748 mm W × 1489 mm H",
+    "wheelbase": "2600 mm",
+    "fuelTank": "40 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "SV 1.5 Petrol 6MT",
+      "exShowroom": 1208000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "17.8 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags Standard Across All Variants",
+        "8-inch Touchscreen with Wireless Apple CarPlay & Android Auto",
+        "Projector Headlamps with Integrated LED DRLs & Z-Shaped LED Tail Lamps",
+        "Push Button Start with Smart Key & Automatic Climate Control",
+        "Multi-Angle Rear Camera, VSA, Agile Handling Assist & TPMS"
+      ]
+    },
+    {
+      "name": "V 1.5 Petrol 6MT (ADAS)",
+      "exShowroom": 1296000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "17.8 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Affordable ADAS Sedan",
+      "keyFeatures": [
+        "Honda SENSING Level-2 ADAS (CMBS, Adaptive Cruise, Lane Keep Assist)",
+        "R15 Silver Alloy Wheels & Next-Gen Honda Connect with Alexa",
+        "Wireless Smartphone Charger & Walkaway Auto Lock",
+        "8-inch Infotainment with Wireless CarPlay/Android Auto",
+        "6 Airbags, Hill Start Assist & Rear AC Vents"
+      ]
+    },
+    {
+      "name": "V 1.5 Petrol CVT Automatic (ADAS)",
+      "exShowroom": 1421000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "18.4 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Automatic Executive Value",
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Steering Paddle Shifters",
+        "Honda SENSING Level-2 ADAS with Low-Speed Follow",
+        "Remote Engine Start via Smart Key",
+        "Wireless Phone Charger & 8-inch Wireless Infotainment",
+        "6 Airbags, VSA & Multi-Angle Rear Camera"
+      ]
+    },
+    {
+      "name": "VX 1.5 Petrol 6MT (ADAS)",
+      "exShowroom": 1403000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "17.8 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "One-Touch Electric Sunroof with Pinch Guard",
+        "Honda LaneWatch Blind-Spot Camera & 8-Speaker Premium Sound",
+        "R15 Diamond-Cut Multi-Spoke Alloy Wheels",
+        "Honda SENSING Level-2 ADAS & Auto Headlamps",
+        "7-inch Full-Color TFT Driver Display"
+      ]
+    },
+    {
+      "name": "VX 1.5 Petrol CVT Automatic (ADAS)",
+      "exShowroom": 1528000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "18.4 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "7-Speed CVT Automatic with Paddle Shifters & Remote Engine Start",
+        "Electric Sunroof, LaneWatch Camera & 8-Speaker Audio",
+        "Honda SENSING Level-2 ADAS Suite",
+        "Wireless Charger & R15 Diamond-Cut Alloys",
+        "6 Airbags & Rear Reading Lamps"
+      ]
+    },
+    {
+      "name": "ZX 1.5 Petrol 6MT (ADAS)",
+      "exShowroom": 1510000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "17.8 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "9-Array Full LED Headlamps & LED Front Fog Lamps",
+        "R16 Dual-Tone Diamond-Cut Alloy Wheels",
+        "Plush Ivory & Black Perforated Leather Upholstery",
+        "Rear Sunshade, Ambient Lighting & Auto Rain-Sensing Wipers",
+        "All 4 Power Windows One-Touch Auto Up/Down with Remote Operation"
+      ]
+    },
+    {
+      "name": "ZX 1.5 Petrol CVT Automatic (ADAS)",
+      "exShowroom": 1635000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L i-VTEC (121 PS)",
+      "mileage": "18.4 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Flagship 7-Speed CVT Automatic with Honda SENSING ADAS",
+        "Full LED 9-Array Headlamps & R16 Diamond-Cut Alloy Wheels",
+        "Genuine Leather Seats, Soft-Touch Instrument Panel & Rear Sunshade",
+        "Electric Sunroof, LaneWatch Camera & 8-Speaker Surround Sound",
+        "Remote Engine Start & Auto-Folding ORVMs"
+      ]
+    }
+  ]
+}
