@@ -1,0 +1,274 @@
+{
+  "id": "toyota-fortuner",
+  "name": "Toyota Fortuner",
+  "brand": "Toyota",
+  "tagline": "India's Undisputed Full-Size SUV King with 500 Nm Torque & Real 4x4",
+  "launchDate": "Updated 2024 (Leader Edition & 48V Hybrid)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Diesel",
+    "Petrol"
+  ],
+  "priceRange": "₹33.43 - ₹50.46 Lakh",
+  "minPrice": 3343000,
+  "maxPrice": 5046000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 34.03/36, Child 43.38/49)",
+  "groundClearance": "225 mm",
+  "bootSpace": "296 L (Expandable to 715 L)",
+  "waitingPeriod": "1 - 3 Months",
+  "summary": "The Toyota Fortuner is India's reigning full-size 7-seater SUV, celebrated for legendary reliability, heavy-duty body-on-frame chassis, and formidable 4x4 off-road capabilities. Powered by a brawny 2.8L D-4D diesel generating 201 bhp and an immense 500 Nm of torque, it features an electronic drive control (High/Low range), auto limited-slip differential (LSD), ventilated leather seats, 11-speaker JBL audio, and active traction control.",
+  "spin360": {
+    "totalFrames": 36,
+    "sourceUrlTemplate": "https://imgd.aeplcdn.com/1056x594/cw/360/toyota/1309/7725/closed-door/ffffff/{frame}.jpg",
+    "defaultColor": "super-white",
+    "defaultColorName": "Super White",
+    "defaultColorHex": "#FFFFFF",
+    "colors": [
+      {
+        "id": "super-white",
+        "name": "Super White",
+        "hex": "#FFFFFF"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "super-white",
+      "name": "Super White",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/ofqknta_1500711.jpg"
+    },
+    {
+      "id": "sparkling-black-crystal-shine",
+      "name": "Sparkling Black Crystal Shine",
+      "hex": "#202022",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/89nknta_1500707.jpg"
+    },
+    {
+      "id": "attitude-black",
+      "name": "Attitude Black",
+      "hex": "#0A0A0A",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/qv5knta_1500713.jpg"
+    },
+    {
+      "id": "avant-garde-bronze",
+      "name": "Avant-Garde Bronze Metallic",
+      "hex": "#BFB3A7",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/bbtknta_1500715.jpg"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#E0E0DA",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/jovknta_1500719.jpg"
+    },
+    {
+      "id": "silver-metallic",
+      "name": "Silver Metallic",
+      "hex": "#CED4E1",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/edalnta_1500721.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "front_dominant_stance",
+      "title": "Commanding Road Presence & Dynamic Stance",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-28.png?isig=0&q=80"
+    },
+    {
+      "id": "bold_front_grille",
+      "title": "Aggressive Front Grille with Bi-Beam LED Headlamps",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-front-view-10.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "side_profile",
+      "title": "Muscular 4.79m Profile with 18-inch Alloy Wheels",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-right-side-view-3.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "rear_sculpted_stance",
+      "title": "Aerodynamic Rear Spoiler & Sleek LED Taillamps",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-rear-view-7.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "front_quarter_stance",
+      "title": "High Approach Angle & Tough Skid Plates",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-left-front-three-quarter-2.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "dashboard_cockpit",
+      "title": "All-Black Premium Leather Dashboard Cockpit",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-dashboard.avif?isig=0&q=80"
+    },
+    {
+      "id": "steering_wheel_controls",
+      "title": "Leather-Wrapped Multi-Function Steering Wheel",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-steering-wheel.avif?isig=0&q=80"
+    },
+    {
+      "id": "instrument_cluster",
+      "title": "Optitron Meter with Color TFT Multi-Info Display",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-instrument-cluster.avif?isig=0&q=80"
+    },
+    {
+      "id": "infotainment_touchscreen",
+      "title": "8.0-inch Smart Touchscreen with Apple CarPlay & Android Auto",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-infotainment-system.avif?isig=0&q=80"
+    },
+    {
+      "id": "gear_shifter_console",
+      "title": "Sequential 6-Speed Automatic & 4x4 Selector Dials",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-gear-shifter-gear-shifter-stalk.avif?isig=0&q=80"
+    },
+    {
+      "id": "bootspace_folded_seats",
+      "title": "Spacious Cargo Deck with Space-Up 3rd Row Seats",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-bootspace-rear-seat-folded.avif?isig=0&q=80"
+    },
+    {
+      "id": "all_terrain_profile",
+      "title": "225 mm Ground Clearance for High Water Wading",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-left-side-view-9.jpeg?isig=0&q=80"
+    }
+  ],
+  "specs": {
+    "engineOptions": "2.8L 4-Cyl D-4D Turbo Diesel (201 bhp / 500 Nm) | 2.7L Petrol (164 bhp / 245 Nm)",
+    "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
+    "dimensions": "4795 mm (L) × 1855 mm (W) × 1835 mm (H)",
+    "wheelbase": "2745 mm",
+    "fuelTank": "80 Litres",
+    "seatingCapacity": "7-Seater (Three Rows with Recline)"
+  },
+  "variants": [
+    {
+      "name": "4x2 2.7 Petrol 5-Speed Manual",
+      "exShowroom": 3343000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "2.7L Dual VVT-i (164 bhp)",
+      "mileage": "10.30 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Bi-Beam LED Headlamps with LED DRLs",
+        "7 Airbags Standard Across All Variants",
+        "Vehicle Stability Control with Brake Assist",
+        "Hill Start Assist Control (HAC)",
+        "Leather-Wrapped Steering Wheel"
+      ]
+    },
+    {
+      "name": "4x2 2.7 Petrol 6-Speed Automatic",
+      "exShowroom": 3476000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "2.7L Dual VVT-i (164 bhp)",
+      "mileage": "10.01 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Paddle Shifters",
+        "Sequential Shift with Sport Mode",
+        "Cruise Control",
+        "8-inch Touchscreen Infotainment",
+        "Front Ventilated Seats"
+      ]
+    },
+    {
+      "name": "4x2 2.8 Diesel 6-Speed Manual",
+      "exShowroom": 3540000,
+      "fuel": "Diesel",
+      "trans": "Manual",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.40 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "201 bhp Brawny Diesel Power",
+        "iMT (Intelligent Manual Transmission)",
+        "Drive Modes (Eco, Normal, Sport)",
+        "Auto Limited Slip Differential (Auto-LSD)",
+        "Electrically Powered Tailgate with Height Memory"
+      ]
+    },
+    {
+      "name": "4x2 2.8 Diesel 6-Speed Automatic",
+      "exShowroom": 3761000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "14.28 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST VALUE 4x2 PICK",
+      "keyFeatures": [
+        "Massive 500 Nm Peak Torque",
+        "Sequential Automatic with Paddle Shifters",
+        "Ventilated Front Seats (Driver & Co-Driver)",
+        "18-inch Super Chrome Alloy Wheels",
+        "Dual-Zone Automatic Climate Control"
+      ]
+    },
+    {
+      "name": "Leader Edition 2.8 Diesel 4x2 Automatic",
+      "exShowroom": 3872000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "14.28 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual-Tone Exterior Styling & Black Alloys",
+        "Front & Rear Bumper Spoilers",
+        "Wireless Phone Charger",
+        "Tyre Pressure Monitoring System (TPMS)",
+        "500 Nm Torque"
+      ]
+    },
+    {
+      "name": "4x4 2.8 Diesel 6-Speed Manual",
+      "exShowroom": 3935000,
+      "fuel": "Diesel",
+      "trans": "Manual",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.00 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electronic 4x4 Shift-On-The-Fly (High/Low Range)",
+        "Downhill Assist Control (DAC)",
+        "Active Traction Control (A-TRC)",
+        "Lockable Differential System",
+        "iMT 6-Speed"
+      ]
+    },
+    {
+      "name": "4x4 2.8 Diesel 6-Speed Automatic",
+      "exShowroom": 4198000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.80 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST 4x4 TOURING PICK",
+      "keyFeatures": [
+        "Electronic 4x4 with High & Low Range Transfer Case",
+        "11-Speaker JBL Premium Audio with Subwoofer",
+        "Downhill Assist Control (DAC)",
+        "Active Traction Control (A-TRC)",
+        "500 Nm Heavy-Duty Torque"
+      ]
+    },
+    {
+      "name": "GR-S 4x4 2.8 Diesel Automatic",
+      "exShowroom": 5046000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.60 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Gazoo Racing (GR) Tuned Suspension Setup",
+        "GR Aero Package & Red Brake Calipers",
+        "Alcantara & Leather Seats with GR Stitching",
+        "GR Engine Start/Stop Button & Steering Badge",
+        "11-Speaker JBL Audio System"
+      ]
+    }
+  ]
+}

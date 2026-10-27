@@ -1,0 +1,179 @@
+{
+  "id": "toyota-camry",
+  "name": "Toyota Camry",
+  "brand": "Toyota",
+  "tagline": "The Pinnacle of Hybrid Luxury Sedans with 218 bhp & Rear Reclining Seats",
+  "launchDate": "Updated 2024 (Sprint Edition & Elegant Hybrid)",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Hybrid",
+    "Petrol"
+  ],
+  "priceRange": "₹48.69 - ₹48.89 Lakh",
+  "minPrice": 4869000,
+  "maxPrice": 4889000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 35.31/36, Child 44.44/49)",
+  "groundClearance": "160 mm",
+  "bootSpace": "524 L",
+  "waitingPeriod": "1 - 2 Months",
+  "summary": "The Toyota Camry represents the pinnacle of executive luxury sedans in India, built on the TNGA-K platform with unmatched quietness and ride comfort. Powered by a 2.5L 4-Cylinder Dynamic Force engine with self-charging Hybrid Synergy Drive producing 218 bhp combined, it features power-reclining rear seats, 3-zone climate control with capacitive touch armrest, 9-speaker JBL audio, ventilated seats, and 9 SRS airbags standard.",
+  "spin360": {
+    "totalFrames": 36,
+    "sourceUrlTemplate": "https://imgd.aeplcdn.com/1056x594/cw/360/toyota/3107/19013/closed-door/464e4f/{frame}.jpg",
+    "defaultColor": "cement-grey",
+    "defaultColorName": "Cement Grey",
+    "defaultColorHex": "#464E4F",
+    "colors": [
+      {
+        "id": "cement-grey",
+        "name": "Cement Grey",
+        "hex": "#464E4F"
+      }
+    ]
+  },
+  "colors": [
+    {
+      "id": "cement-grey",
+      "name": "Cement Grey",
+      "hex": "#464E4F",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/9u6cp9b_1800109.jpg"
+    },
+    {
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#E7E9E8",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/48kcp9b_1800103.jpg"
+    },
+    {
+      "id": "attitude-black",
+      "name": "Attitude Black",
+      "hex": "#040503",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/b9ncp9b_1800107.jpg"
+    },
+    {
+      "id": "emotional-red",
+      "name": "Emotional Red",
+      "hex": "#CB4847",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/tx7cp9b_1800105.jpg"
+    },
+    {
+      "id": "dark-blue",
+      "name": "Dark Blue Mica",
+      "hex": "#242F54",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/9v8cp9b_1800101.jpg"
+    },
+    {
+      "id": "precious-metal",
+      "name": "Precious Metal Metallic",
+      "hex": "#6D767E",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/dqhcp9b_1800099.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "front_executive_stance",
+      "title": "Low & Wide Aerodynamic Executive Stance",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-right-front-three-quarter-15.png?isig=0&q=80"
+    },
+    {
+      "id": "wide_lower_grille",
+      "title": "Sleek Upper Grille & Bold Horizontal Lower Intake",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-front-view.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "side_profile_sedan",
+      "title": "4.88m Sweeping Silhouette with 18-inch Dark Alloys",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-right-side-view-11.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "rear_sculpted_led",
+      "title": "Sculpted Trunk Lid & Compact LED Combination Lamps",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-rear-view.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "rear_three_quarter",
+      "title": "Dual Exhaust Tips & Sporty Diffuser Accents",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "luxury_y_shaped_cockpit",
+      "title": "Driver-Focused Y-Shaped Center Console Cockpit",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-interior-dashboard.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "steering_controls",
+      "title": "Leather Steering with Tilt/Telescopic Memory & Paddle Shifters",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-interior-steering-wheel.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "instrument_cluster",
+      "title": "7-inch Color TFT Multi-Information Cluster",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-interior-instrument-cluster-4.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "smart_start_button",
+      "title": "Smart Push-Button Ignition with EV Drive Mode Select",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-interior-engine-start-button.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "left_side_profile",
+      "title": "Acoustic Glass Windows for Benchmark NVH Insulation",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-left-side-view.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "left_front_profile",
+      "title": "Bi-Beam LED Projector Headlamps with 3-Layer DRLs",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-left-front-three-quarter-16.jpeg?isig=0&q=80"
+    },
+    {
+      "id": "left_rear_profile",
+      "title": "Large 524-Litre Trunk with Wide Boot Opening",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/192443/camry-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+    }
+  ],
+  "specs": {
+    "engineOptions": "2.5L 4-Cylinder Dynamic Force Petrol + Permanent Magnet Synchronous Motor (218 bhp combined / 221 Nm)",
+    "transmissions": "Electronically Controlled Continuously Variable Transmission (e-CVT)",
+    "dimensions": "4885 mm (L) × 1840 mm (W) × 1445 mm (H)",
+    "wheelbase": "2825 mm",
+    "fuelTank": "50 Litres",
+    "seatingCapacity": "5 Persons (Power Reclining Rear Seats)"
+  },
+  "variants": [
+    {
+      "name": "Elegant Hybrid 2.5 e-CVT",
+      "exShowroom": 4869000,
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
+      "mileage": "19.10 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST EXECUTIVE LUXURY PICK",
+      "keyFeatures": [
+        "Self-Charging Strong Hybrid Powertrain (218 bhp)",
+        "Rear Power-Reclining Seats with Armrest Touch Controls",
+        "9-Speaker JBL Premium Audio with Clari-Fi",
+        "3-Zone Independent Automatic Climate Control",
+        "10-Way Power-Adjustable Ventilated Front Seats with Memory",
+        "9 SRS Airbags Standard",
+        "Head-Up Display (10-inch HUD)"
+      ]
+    },
+    {
+      "name": "Sprint Edition Hybrid 2.5 e-CVT Dual Tone",
+      "exShowroom": 4869000,
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
+      "mileage": "19.10 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Contrast Matte Black Roof & Mirror Caps",
+        "18-inch Dark Metallic Alloy Wheels",
+        "Sporty Black Interior Theme",
+        "Paddle Shifters with Drive Modes (Eco, Normal, Sport)",
+        "9 SRS Airbags & TPMS"
+      ]
+    }
+  ]
+}

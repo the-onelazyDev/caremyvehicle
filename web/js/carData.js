@@ -8381,6 +8381,950 @@ export const CARS = [
           }
       ]
   },
+  {
+      "id": "toyota-fortuner",
+      "name": "Toyota Fortuner",
+      "brand": "Toyota",
+      "tagline": "India's Undisputed Full-Size SUV King with 500 Nm Torque & Real 4x4",
+      "launchDate": "Updated 2024 (Leader Edition & 48V Hybrid)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Diesel",
+          "Petrol"
+      ],
+      "priceRange": "₹33.43 - ₹50.46 Lakh",
+      "minPrice": 3343000,
+      "maxPrice": 5046000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 34.03/36, Child 43.38/49)",
+      "groundClearance": "225 mm",
+      "bootSpace": "296 L (Expandable to 715 L)",
+      "waitingPeriod": "1 - 3 Months",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/super-white.webp",
+      "summary": "The Toyota Fortuner is India's reigning full-size 7-seater SUV, celebrated for legendary reliability, heavy-duty body-on-frame chassis, and formidable 4x4 off-road capabilities. Powered by a brawny 2.8L D-4D diesel generating 201 bhp and an immense 500 Nm of torque, it features an electronic drive control (High/Low range), auto limited-slip differential (LSD), ventilated leather seats, 11-speaker JBL audio, and active traction control.",
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/360",
+          "format": "webp",
+          "defaultColor": "super-white",
+          "colors": [
+              {
+                  "id": "super-white",
+                  "name": "Super White",
+                  "hex": "#FFFFFF"
+              }
+          ]
+      },
+      "colors": [
+          {
+              "id": "super-white",
+              "name": "Super White",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/super-white.webp"
+          },
+          {
+              "id": "sparkling-black-crystal-shine",
+              "name": "Sparkling Black Crystal Shine",
+              "hex": "#202022",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/sparkling-black-crystal-shine.webp"
+          },
+          {
+              "id": "attitude-black",
+              "name": "Attitude Black",
+              "hex": "#0A0A0A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/attitude-black.webp"
+          },
+          {
+              "id": "avant-garde-bronze",
+              "name": "Avant-Garde Bronze Metallic",
+              "hex": "#BFB3A7",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/avant-garde-bronze.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#E0E0DA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "silver-metallic",
+              "name": "Silver Metallic",
+              "hex": "#CED4E1",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/silver-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front_dominant_stance",
+              "title": "Commanding Road Presence & Dynamic Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/front_dominant_stance.webp"
+          },
+          {
+              "id": "bold_front_grille",
+              "title": "Aggressive Front Grille with Bi-Beam LED Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bold_front_grille.webp"
+          },
+          {
+              "id": "side_profile",
+              "title": "Muscular 4.79m Profile with 18-inch Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/side_profile.webp"
+          },
+          {
+              "id": "rear_sculpted_stance",
+              "title": "Aerodynamic Rear Spoiler & Sleek LED Taillamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/rear_sculpted_stance.webp"
+          },
+          {
+              "id": "front_quarter_stance",
+              "title": "High Approach Angle & Tough Skid Plates",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/front_quarter_stance.webp"
+          },
+          {
+              "id": "dashboard_cockpit",
+              "title": "All-Black Premium Leather Dashboard Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/dashboard_cockpit.webp"
+          },
+          {
+              "id": "steering_wheel_controls",
+              "title": "Leather-Wrapped Multi-Function Steering Wheel",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/steering_wheel_controls.webp"
+          },
+          {
+              "id": "instrument_cluster",
+              "title": "Optitron Meter with Color TFT Multi-Info Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/instrument_cluster.webp"
+          },
+          {
+              "id": "infotainment_touchscreen",
+              "title": "8.0-inch Smart Touchscreen with Apple CarPlay & Android Auto",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/infotainment_touchscreen.webp"
+          },
+          {
+              "id": "gear_shifter_console",
+              "title": "Sequential 6-Speed Automatic & 4x4 Selector Dials",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gear_shifter_console.webp"
+          },
+          {
+              "id": "bootspace_folded_seats",
+              "title": "Spacious Cargo Deck with Space-Up 3rd Row Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bootspace_folded_seats.webp"
+          },
+          {
+              "id": "all_terrain_profile",
+              "title": "225 mm Ground Clearance for High Water Wading",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/all_terrain_profile.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": "2.8L 4-Cyl D-4D Turbo Diesel (201 bhp / 500 Nm) | 2.7L Petrol (164 bhp / 245 Nm)",
+          "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
+          "dimensions": "4795 mm (L) × 1855 mm (W) × 1835 mm (H)",
+          "wheelbase": "2745 mm",
+          "fuelTank": "80 Litres",
+          "seatingCapacity": "7-Seater (Three Rows with Recline)"
+      },
+      "variants": [
+          {
+              "name": "4x2 2.7 Petrol 5-Speed Manual",
+              "exShowroom": 3343000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "2.7L Dual VVT-i (164 bhp)",
+              "mileage": "10.30 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Bi-Beam LED Headlamps with LED DRLs",
+                  "7 Airbags Standard Across All Variants",
+                  "Vehicle Stability Control with Brake Assist",
+                  "Hill Start Assist Control (HAC)",
+                  "Leather-Wrapped Steering Wheel"
+              ]
+          },
+          {
+              "name": "4x2 2.7 Petrol 6-Speed Automatic",
+              "exShowroom": 3476000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "2.7L Dual VVT-i (164 bhp)",
+              "mileage": "10.01 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Paddle Shifters",
+                  "Sequential Shift with Sport Mode",
+                  "Cruise Control",
+                  "8-inch Touchscreen Infotainment",
+                  "Front Ventilated Seats"
+              ]
+          },
+          {
+              "name": "4x2 2.8 Diesel 6-Speed Manual",
+              "exShowroom": 3540000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+              "mileage": "14.40 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "201 bhp Brawny Diesel Power",
+                  "iMT (Intelligent Manual Transmission)",
+                  "Drive Modes (Eco, Normal, Sport)",
+                  "Auto Limited Slip Differential (Auto-LSD)",
+                  "Electrically Powered Tailgate with Height Memory"
+              ]
+          },
+          {
+              "name": "4x2 2.8 Diesel 6-Speed Automatic",
+              "exShowroom": 3761000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+              "mileage": "14.28 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST VALUE 4x2 PICK",
+              "keyFeatures": [
+                  "Massive 500 Nm Peak Torque",
+                  "Sequential Automatic with Paddle Shifters",
+                  "Ventilated Front Seats (Driver & Co-Driver)",
+                  "18-inch Super Chrome Alloy Wheels",
+                  "Dual-Zone Automatic Climate Control"
+              ]
+          },
+          {
+              "name": "Leader Edition 2.8 Diesel 4x2 Automatic",
+              "exShowroom": 3872000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+              "mileage": "14.28 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Dual-Tone Exterior Styling & Black Alloys",
+                  "Front & Rear Bumper Spoilers",
+                  "Wireless Phone Charger",
+                  "Tyre Pressure Monitoring System (TPMS)",
+                  "500 Nm Torque"
+              ]
+          },
+          {
+              "name": "4x4 2.8 Diesel 6-Speed Manual",
+              "exShowroom": 3935000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+              "mileage": "14.00 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electronic 4x4 Shift-On-The-Fly (High/Low Range)",
+                  "Downhill Assist Control (DAC)",
+                  "Active Traction Control (A-TRC)",
+                  "Lockable Differential System",
+                  "iMT 6-Speed"
+              ]
+          },
+          {
+              "name": "4x4 2.8 Diesel 6-Speed Automatic",
+              "exShowroom": 4198000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+              "mileage": "13.80 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST 4x4 TOURING PICK",
+              "keyFeatures": [
+                  "Electronic 4x4 with High & Low Range Transfer Case",
+                  "11-Speaker JBL Premium Audio with Subwoofer",
+                  "Downhill Assist Control (DAC)",
+                  "Active Traction Control (A-TRC)",
+                  "500 Nm Heavy-Duty Torque"
+              ]
+          },
+          {
+              "name": "GR-S 4x4 2.8 Diesel Automatic",
+              "exShowroom": 5046000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+              "mileage": "13.60 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Gazoo Racing (GR) Tuned Suspension Setup",
+                  "GR Aero Package & Red Brake Calipers",
+                  "Alcantara & Leather Seats with GR Stitching",
+                  "GR Engine Start/Stop Button & Steering Badge",
+                  "11-Speaker JBL Audio System"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "toyota-hyryder",
+      "name": "Toyota Urban Cruiser Hyryder",
+      "brand": "Toyota",
+      "tagline": "India's High-Mileage Compact SUV with Strong Hybrid & AWD Capability",
+      "launchDate": "Updated 2024 (Aero Black Edition & Dual-Tone)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Hybrid",
+          "Petrol",
+          "CNG"
+      ],
+      "priceRange": "₹11.31 - ₹20.19 Lakh",
+      "minPrice": 1131000,
+      "maxPrice": 2019000,
+      "safetyRating": "4.0 ★ (Global NCAP Expected 4-Star Safety)",
+      "groundClearance": "210 mm",
+      "bootSpace": "373 L (Hybrid: 265 L)",
+      "waitingPeriod": "1 - 3 Months",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/speedy-blue.webp",
+      "summary": "The Toyota Urban Cruiser Hyryder brings self-charging strong hybrid technology to the compact SUV segment. Delivering an astounding ARAI mileage of 27.97 kmpl, it features an all-wheel-drive (AWD) NeoDrive petrol option, a dual-pane panoramic sunroof, Head-Up Display (HUD), ventilated front seats, and a 9-inch Smart Play Cast touchscreen with 360-degree camera.",
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/360",
+          "format": "webp",
+          "defaultColor": "speedy-blue",
+          "colors": [
+              {
+                  "id": "speedy-blue",
+                  "name": "Speedy Blue with Midnight Black Roof",
+                  "hex": "#3F79A4"
+              }
+          ]
+      },
+      "colors": [
+          {
+              "id": "speedy-blue",
+              "name": "Speedy Blue Dual Tone",
+              "hex": "#3F79A4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/speedy-blue.webp"
+          },
+          {
+              "id": "cafe-white",
+              "name": "Cafe White",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cafe-white.webp"
+          },
+          {
+              "id": "gaming-grey",
+              "name": "Gaming Grey",
+              "hex": "#636363",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/gaming-grey.webp"
+          },
+          {
+              "id": "sportin-red",
+              "name": "Sportin Red Dual Tone",
+              "hex": "#CD2229",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/sportin-red.webp"
+          },
+          {
+              "id": "midnight-black",
+              "name": "Midnight Black",
+              "hex": "#050606",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/midnight-black.webp"
+          },
+          {
+              "id": "cave-black",
+              "name": "Cave Black",
+              "hex": "#867860",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cave-black.webp"
+          },
+          {
+              "id": "enticing-silver",
+              "name": "Enticing Silver Dual Tone",
+              "hex": "#B3B4B5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/enticing-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front_dynamic_stance",
+              "title": "Urban SUV Front Dynamic Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/front_dynamic_stance.webp"
+          },
+          {
+              "id": "crystal_acrylic_grille",
+              "title": "Crystal Acrylic Grille with Twin LED DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/crystal_acrylic_grille.webp"
+          },
+          {
+              "id": "side_profile_stance",
+              "title": "Bold 4.36m SUV Profile with 17-inch Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/side_profile_stance.webp"
+          },
+          {
+              "id": "rear_led_c_lamps",
+              "title": "Sleek Split LED C-Shape Taillamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/rear_led_c_lamps.webp"
+          },
+          {
+              "id": "left_quarter_profile",
+              "title": "Sporty Dual-Tone Black Roofline",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/left_quarter_profile.webp"
+          },
+          {
+              "id": "dual_tone_cockpit",
+              "title": "Black and Brown Leatherette Soft-Touch Dashboard",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/dual_tone_cockpit.webp"
+          },
+          {
+              "id": "touchscreen_smart_play",
+              "title": "9-inch Smart Play Cast Infotainment with Wireless CarPlay",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/touchscreen_smart_play.webp"
+          },
+          {
+              "id": "digital_driver_display",
+              "title": "7-inch Full Digital Color Instrument Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/digital_driver_display.webp"
+          },
+          {
+              "id": "steering_controls",
+              "title": "Leather Steering Wheel with Cruise & Audio Controls",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/steering_controls.webp"
+          },
+          {
+              "id": "panoramic_sunroof",
+              "title": "Dual-Pane Sliding Panoramic Glass Roof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/panoramic_sunroof.webp"
+          },
+          {
+              "id": "gear_shifter_console",
+              "title": "e-CVT Drive Selector with EV Mode & Drive Mode Dials",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/gear_shifter_console.webp"
+          },
+          {
+              "id": "high_ground_clearance",
+              "title": "210 mm Ground Clearance for High Obstacle Clearence",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/high_ground_clearance.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": "1.5L Strong Hybrid e-CVT (114 bhp / 27.97 kmpl) | 1.5L K15C NeoDrive Petrol (102 bhp) | 1.5L Factory CNG (26.6 km/kg)",
+          "transmissions": "e-CVT Automatic (Hybrid), 5-Speed Manual & 6-Speed Torque Converter AT",
+          "dimensions": "4365 mm (L) × 1795 mm (W) × 1645 mm (H)",
+          "wheelbase": "2600 mm",
+          "fuelTank": "45 Litres (CNG: 55L Water Equivalent)",
+          "seatingCapacity": "5 Persons"
+      },
+      "variants": [
+          {
+              "name": "E 1.5 NeoDrive Petrol Manual",
+              "exShowroom": 1131000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L K15C DualJet (102 bhp)",
+              "mileage": "21.12 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Vehicle Stability Control (VSC)",
+                  "Hill Hold Assist",
+                  "All 4 Disc Brakes",
+                  "Keyless Smart Entry with Push Start",
+                  "Auto Climate Control"
+              ]
+          },
+          {
+              "name": "S 1.5 NeoDrive Petrol Manual",
+              "exShowroom": 1282000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L K15C DualJet (102 bhp)",
+              "mileage": "21.12 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7-inch Smart Play Cast Touchscreen",
+                  "Android Auto & Apple CarPlay",
+                  "Rear Parking Camera",
+                  "Cruise Control",
+                  "Steering Mounted Audio Controls"
+              ]
+          },
+          {
+              "name": "S 1.5 Factory CNG Manual",
+              "exShowroom": 1371000,
+              "fuel": "CNG",
+              "trans": "Manual",
+              "engine": "1.5L K15C S-CNG (87 bhp)",
+              "mileage": "26.60 km/kg",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST CNG SUV PICK",
+              "keyFeatures": [
+                  "Factory-Fitted CNG Kit (26.60 km/kg)",
+                  "7-inch Touchscreen Audio",
+                  "Rear Camera & Cruise Control",
+                  "Projector Headlamps",
+                  "LED DRLs"
+              ]
+          },
+          {
+              "name": "S 1.5 NeoDrive Petrol 6-Speed AT",
+              "exShowroom": 1417000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L K15C DualJet (102 bhp)",
+              "mileage": "20.58 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Paddle Shifters",
+                  "6-Speed Torque Converter AT",
+                  "Cruise Control",
+                  "Smart Play Touchscreen",
+                  "ESP & Hill Hold"
+              ]
+          },
+          {
+              "name": "G 1.5 NeoDrive Petrol Manual",
+              "exShowroom": 1487000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L K15C DualJet (102 bhp)",
+              "mileage": "21.12 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST PETROL VFM PICK",
+              "keyFeatures": [
+                  "Full LED Headlamps",
+                  "17-inch Alloy Wheels",
+                  "9-inch Touchscreen Infotainment",
+                  "6 Airbags Standard",
+                  "Auto-Folding ORVMs"
+              ]
+          },
+          {
+              "name": "S Strong Hybrid 1.5 e-CVT",
+              "exShowroom": 1718000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+              "mileage": "27.97 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 MOST AFFORDABLE HYBRID",
+              "keyFeatures": [
+                  "Self-Charging Strong Hybrid (27.97 kmpl)",
+                  "Pure EV Drive Mode",
+                  "7-inch Digital Driver Display",
+                  "Auto Electric Parking Brake",
+                  "e-CVT Transmission"
+              ]
+          },
+          {
+              "name": "G Strong Hybrid 1.5 e-CVT",
+              "exShowroom": 1924000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+              "mileage": "27.97 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Dual-Pane Panoramic Sunroof",
+                  "Head-Up Display (HUD)",
+                  "Wireless Phone Charger",
+                  "6 Airbags Standard",
+                  "9-inch Smart Play Infotainment"
+              ]
+          },
+          {
+              "name": "V Strong Hybrid 1.5 e-CVT Dual Tone",
+              "exShowroom": 2019000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+              "mileage": "27.97 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Front Ventilated Leatherette Seats",
+                  "360-Degree Panoramic View Camera",
+                  "Dual-Tone Contrast Black Roof",
+                  "Premium Arkamys Surround Sound",
+                  "Tyre Pressure Monitor (TPMS)"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "toyota-hilux",
+      "name": "Toyota Hilux",
+      "brand": "Toyota",
+      "tagline": "The Legendary Unstoppable 4x4 Adventure Lifestyle Pickup",
+      "launchDate": "2024 (Updated 4x4 & 4x2 Lineup)",
+      "bodyType": "Pickup Truck",
+      "fuelTypes": [
+          "Diesel"
+      ],
+      "priceRange": "₹31.99 - ₹36.89 Lakh",
+      "minPrice": 3199000,
+      "maxPrice": 3689000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 32.93/36, Child 44.09/49)",
+      "groundClearance": "216 mm",
+      "bootSpace": "435 L Flat Deck (470 kg payload)",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/sulphur-metallic.webp",
+      "summary": "The Toyota Hilux is the world's benchmark for extreme-durability lifestyle utility. Built on the heavy-duty IMV platform with a rigid ladder-frame chassis, it pairs a potent 2.8L D-4D turbo diesel producing 201 bhp and 500 Nm of torque with electronic 4x4, rear diff-lock, active traction control (A-TRC), 700 mm water wading capability, and a versatile double-cab cargo deck.",
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/360",
+          "format": "webp",
+          "defaultColor": "sulphur-metallic",
+          "colors": [
+              {
+                  "id": "sulphur-metallic",
+                  "name": "Sulphur Metallic",
+                  "hex": "#D1A041"
+              }
+          ]
+      },
+      "colors": [
+          {
+              "id": "sulphur-metallic",
+              "name": "Sulphur Metallic",
+              "hex": "#D1A041",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/sulphur-metallic.webp"
+          },
+          {
+              "id": "platinum-pearl-white",
+              "name": "Platinum Pearl White Metallic",
+              "hex": "#DDDDDA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/platinum-pearl-white.webp"
+          },
+          {
+              "id": "attitude-black",
+              "name": "Attitude Black",
+              "hex": "#08070C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/attitude-black.webp"
+          },
+          {
+              "id": "ash",
+              "name": "Ash Grey",
+              "hex": "#929799",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/ash.webp"
+          },
+          {
+              "id": "emotional-red",
+              "name": "Emotional Red",
+              "hex": "#7C0C0E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/emotional-red.webp"
+          },
+          {
+              "id": "super-white",
+              "name": "Super White",
+              "hex": "#EAEAEA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/super-white.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front_dominant_stance",
+              "title": "Rugged Adventure Stance & High Deck Profile",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/front_dominant_stance.webp"
+          },
+          {
+              "id": "front_hexagonal_grille",
+              "title": "Aggressive Bold Front Grille with Chrome Surrounds",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/front_hexagonal_grille.webp"
+          },
+          {
+              "id": "side_pickup_profile",
+              "title": "Double-Cab 5.32m Long Body with Heavy-Duty Cargo Deck",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/side_pickup_profile.webp"
+          },
+          {
+              "id": "rear_cargo_bed",
+              "title": "Heavy-Duty Flatbed Tailgate with Integrated Step",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_cargo_bed.webp"
+          },
+          {
+              "id": "all_terrain_stance",
+              "title": "High Wading Depth & 29-Degree Approach Angle",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/all_terrain_stance.webp"
+          },
+          {
+              "id": "premium_cabin_dashboard",
+              "title": "All-Black Executive Cabin with Brushed Metallic Highlights",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/premium_cabin_dashboard.webp"
+          },
+          {
+              "id": "touchscreen_system",
+              "title": "8.0-inch Smart Touchscreen Infotainment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/touchscreen_system.webp"
+          },
+          {
+              "id": "instrument_dials",
+              "title": "Twin-Dial Analogue Cluster with TFT MID Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/instrument_dials.webp"
+          },
+          {
+              "id": "steering_controls",
+              "title": "Leather Steering with Cruise Control & MID Selectors",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/steering_controls.webp"
+          },
+          {
+              "id": "rear_three_quarter",
+              "title": "Heavy-Duty 18-inch Precision Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_three_quarter.webp"
+          },
+          {
+              "id": "rear_deck_utility",
+              "title": "Weather-Proof Lined Bed Liner for Expeditions",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_deck_utility.webp"
+          },
+          {
+              "id": "side_stance_clearance",
+              "title": "High 216 mm Ground Clearance with 700 mm Water Wading",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/side_stance_clearance.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": "2.8L 4-Cylinder D-4D Turbo Diesel (201 bhp / 500 Nm)",
+          "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
+          "dimensions": "5325 mm (L) × 1855 mm (W) × 1815 mm (H)",
+          "wheelbase": "3085 mm",
+          "fuelTank": "80 Litres",
+          "seatingCapacity": "5 Persons (Double Cab Configuration)"
+      },
+      "variants": [
+          {
+              "name": "Standard (GX) 4x2 2.8 Diesel Automatic",
+              "exShowroom": 3199000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
+              "mileage": "13.80 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "201 bhp & 500 Nm Diesel Engine",
+                  "7 Airbags Standard",
+                  "8-inch Touchscreen with Apple CarPlay/Android Auto",
+                  "Vehicle Stability Control (VSC) & HAC",
+                  "17-inch Alloy Wheels"
+              ]
+          },
+          {
+              "name": "Standard (GX) 4x4 2.8 Diesel Manual",
+              "exShowroom": 3040000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
+              "mileage": "14.20 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST VALUE 4x4 OFF-ROADER",
+              "keyFeatures": [
+                  "Shift-on-the-Fly 4x4 (High / Low Range)",
+                  "Rear Differential Lock (e-Locker)",
+                  "Active Traction Control (A-TRC)",
+                  "Downhill Assist Control (DAC)",
+                  "7 Airbags Standard"
+              ]
+          },
+          {
+              "name": "High (VX) 4x4 2.8 Diesel Manual",
+              "exShowroom": 3715000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
+              "mileage": "14.20 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Dual-Zone Automatic Climate Control",
+                  "Full LED Headlamps with DRLs",
+                  "8-Way Power-Adjustable Driver Seat",
+                  "18-inch Precision Alloy Wheels",
+                  "Soft-Touch Leather Upholstery"
+              ]
+          },
+          {
+              "name": "High (VX) 4x4 2.8 Diesel Automatic",
+              "exShowroom": 3669000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
+              "mileage": "13.60 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 TOP OVERLANDING PICK",
+              "keyFeatures": [
+                  "6-Speed Sequential Automatic with 500 Nm Torque",
+                  "Electronic 4WD Transfer Case with Low Range",
+                  "Front & Rear Parking Sensors",
+                  "Dual-Zone Auto AC",
+                  "Electrochromic Inside Rear-View Mirror"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "toyota-camry",
+      "name": "Toyota Camry",
+      "brand": "Toyota",
+      "tagline": "The Pinnacle of Hybrid Luxury Sedans with 218 bhp & Rear Reclining Seats",
+      "launchDate": "Updated 2024 (Sprint Edition & Elegant Hybrid)",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Hybrid",
+          "Petrol"
+      ],
+      "priceRange": "₹48.69 - ₹48.89 Lakh",
+      "minPrice": 4869000,
+      "maxPrice": 4889000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 35.31/36, Child 44.44/49)",
+      "groundClearance": "160 mm",
+      "bootSpace": "524 L",
+      "waitingPeriod": "1 - 2 Months",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/cement-grey.webp",
+      "summary": "The Toyota Camry represents the pinnacle of executive luxury sedans in India, built on the TNGA-K platform with unmatched quietness and ride comfort. Powered by a 2.5L 4-Cylinder Dynamic Force engine with self-charging Hybrid Synergy Drive producing 218 bhp combined, it features power-reclining rear seats, 3-zone climate control with capacitive touch armrest, 9-speaker JBL audio, ventilated seats, and 9 SRS airbags standard.",
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/360",
+          "format": "webp",
+          "defaultColor": "cement-grey",
+          "colors": [
+              {
+                  "id": "cement-grey",
+                  "name": "Cement Grey",
+                  "hex": "#464E4F"
+              }
+          ]
+      },
+      "colors": [
+          {
+              "id": "cement-grey",
+              "name": "Cement Grey",
+              "hex": "#464E4F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/cement-grey.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#E7E9E8",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "attitude-black",
+              "name": "Attitude Black",
+              "hex": "#040503",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/attitude-black.webp"
+          },
+          {
+              "id": "emotional-red",
+              "name": "Emotional Red",
+              "hex": "#CB4847",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/emotional-red.webp"
+          },
+          {
+              "id": "dark-blue",
+              "name": "Dark Blue Mica",
+              "hex": "#242F54",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/dark-blue.webp"
+          },
+          {
+              "id": "precious-metal",
+              "name": "Precious Metal Metallic",
+              "hex": "#6D767E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/precious-metal.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front_executive_stance",
+              "title": "Low & Wide Aerodynamic Executive Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/front_executive_stance.webp"
+          },
+          {
+              "id": "wide_lower_grille",
+              "title": "Sleek Upper Grille & Bold Horizontal Lower Intake",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/wide_lower_grille.webp"
+          },
+          {
+              "id": "side_profile_sedan",
+              "title": "4.88m Sweeping Silhouette with 18-inch Dark Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/side_profile_sedan.webp"
+          },
+          {
+              "id": "rear_sculpted_led",
+              "title": "Sculpted Trunk Lid & Compact LED Combination Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear_sculpted_led.webp"
+          },
+          {
+              "id": "rear_three_quarter",
+              "title": "Dual Exhaust Tips & Sporty Diffuser Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear_three_quarter.webp"
+          },
+          {
+              "id": "luxury_y_shaped_cockpit",
+              "title": "Driver-Focused Y-Shaped Center Console Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/luxury_y_shaped_cockpit.webp"
+          },
+          {
+              "id": "steering_controls",
+              "title": "Leather Steering with Tilt/Telescopic Memory & Paddle Shifters",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/steering_controls.webp"
+          },
+          {
+              "id": "instrument_cluster",
+              "title": "7-inch Color TFT Multi-Information Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/instrument_cluster.webp"
+          },
+          {
+              "id": "smart_start_button",
+              "title": "Smart Push-Button Ignition with EV Drive Mode Select",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/smart_start_button.webp"
+          },
+          {
+              "id": "left_side_profile",
+              "title": "Acoustic Glass Windows for Benchmark NVH Insulation",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_side_profile.webp"
+          },
+          {
+              "id": "left_front_profile",
+              "title": "Bi-Beam LED Projector Headlamps with 3-Layer DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_front_profile.webp"
+          },
+          {
+              "id": "left_rear_profile",
+              "title": "Large 524-Litre Trunk with Wide Boot Opening",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_rear_profile.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": "2.5L 4-Cylinder Dynamic Force Petrol + Permanent Magnet Synchronous Motor (218 bhp combined / 221 Nm)",
+          "transmissions": "Electronically Controlled Continuously Variable Transmission (e-CVT)",
+          "dimensions": "4885 mm (L) × 1840 mm (W) × 1445 mm (H)",
+          "wheelbase": "2825 mm",
+          "fuelTank": "50 Litres",
+          "seatingCapacity": "5 Persons (Power Reclining Rear Seats)"
+      },
+      "variants": [
+          {
+              "name": "Elegant Hybrid 2.5 e-CVT",
+              "exShowroom": 4869000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
+              "mileage": "19.10 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST EXECUTIVE LUXURY PICK",
+              "keyFeatures": [
+                  "Self-Charging Strong Hybrid Powertrain (218 bhp)",
+                  "Rear Power-Reclining Seats with Armrest Touch Controls",
+                  "9-Speaker JBL Premium Audio with Clari-Fi",
+                  "3-Zone Independent Automatic Climate Control",
+                  "10-Way Power-Adjustable Ventilated Front Seats with Memory",
+                  "9 SRS Airbags Standard",
+                  "Head-Up Display (10-inch HUD)"
+              ]
+          },
+          {
+              "name": "Sprint Edition Hybrid 2.5 e-CVT Dual Tone",
+              "exShowroom": 4869000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
+              "mileage": "19.10 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Contrast Matte Black Roof & Mirror Caps",
+                  "18-inch Dark Metallic Alloy Wheels",
+                  "Sporty Black Interior Theme",
+                  "Paddle Shifters with Drive Modes (Eco, Normal, Sport)",
+                  "9 SRS Airbags & TPMS"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price
