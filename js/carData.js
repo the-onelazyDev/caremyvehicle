@@ -4385,6 +4385,192 @@ export const CARS = [
     ]
   },
   {
+    id: 'mahindra-xuv700',
+    name: 'Mahindra XUV700',
+    brand: 'Mahindra',
+    tagline: 'Flagship Tech Monocoque SUV with 5-Star Global NCAP, Level 2 ADAS & 200 PS mStallion Power',
+    launchDate: 'Updated 2025 (AX Series Lineup)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹13.99 - ₹26.99 Lakh',
+    minPrice: 1399000,
+    maxPrice: 2699000,
+    safetyRating: '5.0 ★ (Global NCAP 5-Star Rating & Safer Choice Award)',
+    groundClearance: '200 mm',
+    bootSpace: '450 L (3rd Row Folded)',
+    waitingPeriod: '4 - 10 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp',
+    summary: 'The Mahindra XUV700 stands as India’s benchmark premium monocoque luxury SUV, combining authentic performance, world-class safety, and high-tech connectivity. Awarded 5 Stars and the coveted "Safer Choice" accolade by Global NCAP, it is propelled by explosive class-leading engines: a 2.0L mStallion Turbo Petrol churning out 200 PS and 380 Nm, or a 2.2L mHawk Turbo Diesel pumping out up to 185 PS and 450 Nm with an available intelligent All-Wheel Drive (AWD) system. Its sci-fi cabin features an expansive coast-to-coast 31.2 cm triple screen digital cockpit, custom-tuned 12-speaker Sony 3D spatial surround sound with roof-mounted acoustic drivers, an ultra-wide panoramic skyroof, flush smart door handles with approach unlock, 6-way powered memory seats with executive boss mode, and Level 2 ADAS with Adaptive Cruise Control and Auto Emergency Braking.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'desert-myst',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/360'
+    },
+    colors: [
+      { id: 'ruby-velvet', name: 'Ruby Velvet (Deep Metallic Crimson Red)', hex: '#781D2A', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp' },
+      { id: 'everest-white', name: 'Everest White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/everest-white.webp' },
+      { id: 'midnight-black', name: 'Midnight Black', hex: '#111827', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/midnight-black.webp' },
+      { id: 'galaxy-grey', name: 'Galaxy Grey', hex: '#525860', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/galaxy-grey.webp' },
+      { id: 'nebula-blue', name: 'Nebula Blue', hex: '#1E3A5F', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/nebula-blue.webp' },
+      { id: 'desert-myst', name: 'Desert Myst (Earthy Khaki Metallic)', hex: '#9A9690', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/desert-myst.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero 3/4 Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/360/desert-myst/1.webp' },
+      { label: 'Triple Screen Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp' },
+      { label: 'Panoramic Skyroof', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp' },
+      { label: 'Side Profile Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/360/desert-myst/10.webp' }
+    ],
+    gallery: [
+      { title: 'Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp' },
+      { title: '540-Degree Surround View Camera with Integrated Blind View Monitor & Video Recording', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/surround_camera.webp' },
+      { title: '6-Way Powered Driver & Co-Driver Seats with Memory Presets & 4-Way Executive Boss Mode', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/co_driver_boss_mode.webp' },
+      { title: 'Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/approach_unlock.webp' },
+      { title: 'Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp' },
+      { title: 'Plush Dual-Tone White & Black Perforated Leatherette Upholstery with French Twin-Stitching', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/leather_interior.webp' },
+      { title: '18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/alloy_wheels.webp' },
+      { title: 'Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/piano_black_grille.webp' },
+      { title: 'Sony 12-Speaker 3D Immersive Spatial Audio System with Custom Equalizers & Roof Drivers', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sony_3d_audio.webp' },
+      { title: 'Adrenox Connected Car Intelligence with 70+ Connected Features & Built-in Amazon Alexa', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/adrenox_intelligence.webp' },
+      { title: 'Acoustic Cabin Engineering with High-Fidelity Custom Equalizer Presets & Sound Staging', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sixteen_speaker_surround.webp' },
+      { title: 'Global NCAP 5-Star Adult Safety Rating with Special Safer Choice Accolade (7 Airbags)', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/five_star_safety_rating.webp' }
+    ],
+    specs: {
+      engineOptions: '2.0L mStallion Turbo Petrol (200 PS / 380 Nm) | 2.2L mHawk Turbo Diesel (155/185 PS, up to 450 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed AISIN Torque Converter Automatic | All-Wheel Drive (AWD)',
+      dimensions: '4695 mm (L) × 1890 mm (W) × 1755 mm (H)',
+      wheelbase: '2750 mm',
+      fuelTank: '60 Litres',
+      seatingCapacity: '5, 6, or 7 Passengers (Captain / Bench Options)'
+    },
+    variants: [
+      {
+        name: 'MX 2.0 Petrol MT (5S)',
+        exShowroom: 1399000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '13.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['200 PS mStallion Petrol Engine', '20.32 cm Infotainment System', 'Android Auto Connectivity', 'Smart Door Handles & ISOFIX']
+      },
+      {
+        name: 'MX 2.2 Diesel MT (5S)',
+        exShowroom: 1459000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (155 PS / 360 Nm)',
+        mileage: '16.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['155 PS mHawk Diesel', 'Electronic Stability Program (ESP)', '17.78 cm Cluster Display', 'Rear AC Vents']
+      },
+      {
+        name: 'AX3 2.0 Petrol MT (5S)',
+        exShowroom: 1639000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '13.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Dual 26.03 cm HD Superscreen Displays', 'Wireless Android Auto & Apple CarPlay', 'Built-in Amazon Alexa', 'LED Daytime Running Lamps']
+      },
+      {
+        name: 'AX3 2.2 Diesel MT (7S)',
+        exShowroom: 1799000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (185 PS / 420 Nm)',
+        mileage: '16.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Output 185 PS Diesel', '7-Seater Configuration with One-Touch Tumble', 'Dual HD Screens', 'Amazon Alexa Built-in']
+      },
+      {
+        name: 'AX5 Select 2.0 Petrol MT (7S)',
+        exShowroom: 1729000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '13.00 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BUDGET SKYROOF VALUE PICK',
+        keyFeatures: ['Panoramic Skyroof with Acoustic Tint', 'Dual 26.03 cm Screens with Adrenox', 'Push Button Start/Stop', 'Curtain Airbags Covering All 3 Rows']
+      },
+      {
+        name: 'AX5 2.2 Diesel MT (7S)',
+        exShowroom: 1919000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (185 PS / 420 Nm)',
+        mileage: '16.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Panoramic Skyroof', '17-inch Diamond-Cut Alloy Wheels', 'Curtain Airbags Across Rows', 'Sequential LED Indicators']
+      },
+      {
+        name: 'AX5 2.2 Diesel AT (7S)',
+        exShowroom: 2079000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (185 PS / 450 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER AUTOMATIC PICK',
+        keyFeatures: ['Smooth 6-Speed AISIN AT (450 Nm Torque)', 'Panoramic Skyroof', 'Drive Modes (Zip, Zap, Zoom)', 'Electronic Stability Program & Hill Descent']
+      },
+      {
+        name: 'AX7 2.0 Petrol AT (7S)',
+        exShowroom: 2199000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L mStallion Turbo (200 PS / 380 Nm)',
+        mileage: '12.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Level 2 Advanced ADAS Suite', 'Dual-Zone FATC with Air Purifier', '18-inch Diamond-Cut Alloys', 'Leatherette Dashboard & Seats']
+      },
+      {
+        name: 'AX7 2.2 Diesel MT (7S)',
+        exShowroom: 2139000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (185 PS / 420 Nm)',
+        mileage: '16.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Safety Functions', 'Adaptive Cruise Control & Lane Keep Assist', 'Auto Emergency Braking', 'Memory Driver Seat with Welcome Retract']
+      },
+      {
+        name: 'AX7 2.2 Diesel AT (7S)',
+        exShowroom: 2299000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (185 PS / 450 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['6-Speed Automatic with 450 Nm Torque', 'Level 2 ADAS Suite with Smart Pilot Assist', '6-Way Powered Memory Driver Seat', 'Intelli-Control Rotary Dial']
+      },
+      {
+        name: 'AX7L 2.2 Diesel AT (7S)',
+        exShowroom: 2549000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (185 PS / 450 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 LUXURY TECH SUITE',
+        keyFeatures: ['Sony 12-Speaker 3D Audio System', '540-Degree Surround Camera with DVR', 'Blind View Monitor', 'Electronic Parking Brake with Auto Hold & Knee Airbag']
+      },
+      {
+        name: 'AX7L 6S Captain Seats Diesel AT AWD',
+        exShowroom: 2699000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (185 PS / 450 Nm)',
+        mileage: '14.00 kmpl',
+        isVFM: false,
+        vfmBadge: '🛡️ FLAGSHIP AWD 6-SEATER',
+        keyFeatures: ['Intelligent All-Wheel Drive (AWD)', 'Executive 2nd Row Captain Seats', 'Sony 12-Speaker 3D Audio with Roof Speakers', 'Ventilated Front Seats & Wireless Charging']
+      }
+    ]
+  },
+  {
     id: 'tata-nexon',
     name: 'Tata Nexon',
     brand: 'Tata',
