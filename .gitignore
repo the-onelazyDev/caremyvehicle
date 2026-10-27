@@ -1,3 +1,17 @@
 node_modules/
 .DS_Store
 *.log
+
+# Temporary car image processing folders (assets are hosted exclusively on ImageKit)
+assets/cars/
+web/assets/cars/
+upload_to_imagekit/
+
+# Temporary test scripts, pdf brochures, and graphql dumps
+test_*.py
+test_*.webp
+test_*.png
+test_*.jpg
+*.graphql.json
+*.pdf
+scratch/
