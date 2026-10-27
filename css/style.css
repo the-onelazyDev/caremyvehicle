@@ -464,18 +464,19 @@ a {
   background: #FFFFFF;
   width: 100%;
   max-width: 680px;
-  max-height: 90vh;
+  max-height: 92vh;
   border-radius: 24px 24px 0 0;
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
-  padding: 24px;
+  padding: 16px 20px;
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (min-width: 768px) {
   .modal-sheet {
     border-radius: 24px;
-    max-height: 85vh;
+    max-height: 88vh;
+    padding: 18px 24px;
   }
 }
 
@@ -484,14 +485,7 @@ a {
   to { transform: translateY(0); }
 }
 
-.modal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-}
+/* .modal-header styled below */
 
 .modal-close-btn {
   background: #F1F5F9;
@@ -695,13 +689,13 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 4px 12px;
   background: #0F172A;
   color: #FFFFFF;
   border-radius: var(--radius-full);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .color-dot {
@@ -968,31 +962,31 @@ a {
 /* Sticky Modal Header & Navigation Tabs */
 .modal-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: -24px;
+  top: -18px;
   background: #FFFFFF;
-  z-index: 40;
-  padding-top: 4px;
+  z-index: 50;
+  padding-top: 2px;
 }
 
 .modal-nav-tabs {
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 8px;
-  padding-top: 4px;
-  margin-bottom: 16px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--border);
   scrollbar-width: none;
   position: sticky;
-  top: 54px;
+  top: 48px;
   background: #FFFFFF;
-  z-index: 35;
+  z-index: 45;
 }
 
 /* Unified 360 Spin & 2D Studio Stage */
@@ -1000,10 +994,10 @@ a {
   position: relative;
   background: radial-gradient(circle at center, #FFFFFF 0%, #F1F5F9 100%);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
   touch-action: none;
   cursor: grab;
   user-select: none;
@@ -1015,16 +1009,16 @@ a {
 
 .spin360-canvas {
   width: 100%;
-  height: 340px;
-  max-height: 340px;
+  height: 290px;
+  max-height: 290px;
   display: block;
   object-fit: contain;
 }
 
 .spin2d-stage {
   width: 100%;
-  height: 340px;
-  max-height: 340px;
+  height: 290px;
+  max-height: 290px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1035,20 +1029,20 @@ a {
 
 .spin2d-img {
   max-width: 90%;
-  max-height: 300px;
+  max-height: 260px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.09));
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
   transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .spin-return-pill {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
   background: var(--primary);
   color: #FFFFFF;
   border: none;
@@ -1073,10 +1067,10 @@ a {
 @media (max-width: 640px) {
   .spin360-canvas,
   .spin2d-stage {
-    height: 270px;
-    max-height: 270px;
+    height: 230px;
+    max-height: 230px;
   }
   .spin2d-img {
-    max-height: 240px;
+    max-height: 210px;
   }
 }

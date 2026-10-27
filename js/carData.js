@@ -26,35 +26,39 @@ export const CARS = [
     groundClearance: '160 mm',
     bootSpace: '214 L',
     waitingPeriod: '1 - 3 Weeks',
-    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_hero.jpg',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp',
     summary: 'The iconic Alto K10 now comes with standard 6 airbags, Electronic Stability Program (ESP), 7-inch SmartPlay Studio touchscreen with Apple CarPlay/Android Auto, and an ultra-frugal 1.0L Next-Gen K-Series Dual Jet engine delivering up to 33.40 km/kg on CNG.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/360',
+      format: 'webp',
+      defaultColor: 'sizzling-red',
+      colors: [
+        { id: 'sizzling-red', name: 'Metallic Sizzling Red', hex: '#E62924' }
+      ]
+    },
     colors: [
-      { name: 'Metallic Sizzling Red', hex: '#DC2626', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_red.jpg' },
-      { name: 'Metallic Speedy Blue', hex: '#2563EB', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_blue.jpg' },
-      { name: 'Solid White', hex: '#F8FAFC', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_white.jpg' },
-      { name: 'Metallic Silky Silver', hex: '#CBD5E1', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_silver.jpg' },
-      { name: 'Metallic Granite Grey', hex: '#475569', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_grey.jpg' },
-      { name: 'Premium Earth Gold', hex: '#D97706', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_gold.jpg' },
-      { name: 'Bluish Black', hex: '#0F172A', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/alto_k10_black.jpg' }
-    ],
-    angles: [
-      { label: 'Front 3/4th (Hero)', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
-      { label: 'Side Profile & Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
-      { label: 'Lively Cabin & Seating', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
-      { label: 'Next-Gen K-Series 1.0L Engine', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
-      { label: '6 Airbags Standard Safety', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' }
+      { id: 'sizzling-red', name: 'Metallic Sizzling Red', hex: '#E62924', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp' },
+      { id: 'speedy-blue', name: 'Metallic Speedy Blue', hex: '#1E40AF', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/speedy-blue.webp' },
+      { id: 'earth-gold', name: 'Premium Earth Gold', hex: '#B45309', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/earth-gold.webp' },
+      { id: 'solid-white', name: 'Solid White', hex: '#F8FAFC', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/solid-white.webp' },
+      { id: 'silky-silver', name: 'Metallic Silky Silver', hex: '#94A3B8', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/silky-silver.webp' },
+      { id: 'granite-grey', name: 'Metallic Granite Grey', hex: '#475569', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/granite-grey.webp' },
+      { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#0F172A', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/bluish-black.webp' }
     ],
     gallery: [
-      { title: 'Front 3/4th Stance on Highway', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_front_three_quarter.jpg' },
-      { title: 'Youthful Profile with Honeycomb Wheel Covers', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/exterior/hero_side_profile.jpg' },
-      { title: 'Lively & Spacious Dual-Tone Cabin Layout', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/lively_cabin_seating.jpg' },
-      { title: '7-inch SmartPlay Studio Touchscreen with Navigation', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/smartplay_7inch_touchscreen.jpg' },
-      { title: 'Steering Mounted Audio & Voice Control', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/steering_mounted_controls.jpg' },
-      { title: 'Digital Speedometer with Dynamic Display', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/interior/digital_speedometer_display.jpg' },
-      { title: 'Next-Gen K-Series 1.0L Dual Jet, Dual VVT Engine', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/kseries_dualjet_1_0l_engine.jpg' },
-      { title: '6 Airbags Standard Deployment Cutaway', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/six_airbags_standard.jpg' },
-      { title: 'Electronic Stability Program (ESP) Demonstration', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/performance_safety/esp_stability_program.jpg' },
-      { title: 'Chassis Dimensions & Turning Radius Blueprint', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/official/specs/chassis_dimensions_blueprint.jpg' }
+      { id: 'front_dynamic_stance', title: 'Front Dynamic Highway Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_dynamic_stance.webp' },
+      { id: 'honeycomb_front_grille', title: 'Honeycomb Front Grille Design', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/honeycomb_front_grille.webp' },
+      { id: 'halogen_headlamps', title: 'Sweptback Halogen Headlamp Setup', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/halogen_headlamps.webp' },
+      { id: 'side_compact_profile', title: 'Agile & Compact City Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/side_compact_profile.webp' },
+      { id: 'rear_tail_lamps', title: 'Contemporary Rear Combination Lamps', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_tail_lamps.webp' },
+      { id: 'compact_rear_design', title: 'Sculpted Rear Bumper & Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/compact_rear_design.webp' },
+      { id: 'dashboard_cockpit', title: 'Driver-Centric Digital Dashboard Layout', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/dashboard_cockpit.webp' },
+      { id: 'smartplay_touchscreen', title: '7-inch SmartPlay Studio Infotainment', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/smartplay_touchscreen.webp' },
+      { id: 'digital_instrument_cluster', title: 'Digital Speedometer & Trip Computer', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/digital_instrument_cluster.webp' },
+      { id: 'steering_controls', title: 'Steering-Mounted Audio & Calling Controls', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/steering_controls.webp' },
+      { id: 'front_cabin_seats', title: 'Front Ergonomic Bucket Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_cabin_seats.webp' },
+      { id: 'rear_cabin_seating', title: 'Comfortable Rear Passenger Seating', url: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_cabin_seating.webp' }
     ],
     specs: {
       engineOptions: '1.0L K10C Dual Jet Dual VVT (67 bhp / 91.1 Nm) | S-CNG (56 bhp / 82.1 Nm)',

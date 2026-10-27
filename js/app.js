@@ -729,7 +729,7 @@ window.openCarModal = function(carId) {
             </div>
 
             <div class="colors-section" style="margin-top:4px;">
-              <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">
                 Official Paint Shades (${activePalette.length} Available) • Tap to switch shade:
               </p>
 
@@ -780,7 +780,7 @@ window.openCarModal = function(carId) {
 
             ${colors.length > 0 ? `
               <div class="colors-section" style="margin-top:4px;">
-                <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+                <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">
                   Tap any color swatch below to view <strong>${car.name}</strong> in that official shade:
                 </p>
 
