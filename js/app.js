@@ -582,7 +582,12 @@ window.openCarModal = function(carId) {
         <p style="font-size:12px; color:var(--text-muted); margin-top:2px; margin-bottom:0; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${car.tagline || car.summary}</p>
       </div>
       <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
-        <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
+        ${car.virtualShowroom ? `
+        <a href="${car.virtualShowroom}" target="_blank" rel="noopener noreferrer" class="city-selector-btn" style="padding:6px 12px; font-size:12px; text-decoration:none; background:#FFF1F2; color:#E11D48; border-color:#FECDD3; font-weight:700; display:inline-flex; align-items:center; gap:4px;" title="Launch Official Toyota 3D Virtual Showroom">
+          🌐 3D Showroom ↗
+        </a>
+      ` : ''}
+      <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
           🔗 Share
         </button>
         <button class="modal-close-btn" onclick="closeModal('carDetailModal')" title="Close">&times;</button>
@@ -800,6 +805,20 @@ window.openCarModal = function(carId) {
               </div>
             ` : ''}
           `}
+${car.virtualShowroom ? `
+          <div style="margin-top:16px; padding:12px 16px; background:linear-gradient(135deg, #FFF1F2 0%, #FFFFFF 100%); border:1.5px solid #FECDD3; border-radius:12px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="font-size:22px;">🌐</span>
+              <div>
+                <div style="font-size:13px; font-weight:800; color:#881337;">Toyota Official 3D Virtual Showroom</div>
+                <div style="font-size:11px; color:#9F1239; margin-top:1px;">Explore 360° exterior, cockpit interior & accessories in full WebGL 3D directly on Toyota Bharat</div>
+              </div>
+            </div>
+            <a href="${car.virtualShowroom}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; background:#E11D48; color:#FFFFFF; font-weight:800; font-size:12px; padding:8px 14px; border-radius:8px; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(225,29,72,0.25);">
+              Launch 3D ↗
+            </a>
+          </div>
+        ` : ''}
         </div>
       </div>
     ` : ''}

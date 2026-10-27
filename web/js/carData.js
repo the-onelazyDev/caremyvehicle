@@ -7654,6 +7654,7 @@ export const CARS = [
       "waitingPeriod": "3 - 6 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp",
       "summary": "The Toyota Innova Hycross is India's most advanced luxury MPV built on the TNGA monocoque platform. Featuring a 5th-generation self-charging strong hybrid electric powertrain delivering an astonishing 21.1 km/l efficiency, it offers powered Ottoman captain lounge seats, a massive panoramic sunroof, ADAS Level 2 safety suite (Toyota Safety Sense), and 10.1-inch floating touchscreen with 9-speaker JBL audio.",
+        "virtualShowroom": "https://www.toyotabharat.com/virtual-showroom/innova.html",
       "colors": [
           {
               "id": "platinum-white-pearl",
@@ -7847,6 +7848,7 @@ export const CARS = [
       "waitingPeriod": "1 - 3 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp",
       "summary": "The Toyota Fortuner is India's reigning full-size 7-seater SUV, celebrated for legendary reliability, heavy-duty body-on-frame chassis, and formidable 4x4 off-road capabilities. Powered by a brawny 2.8L D-4D diesel generating 201 bhp and an immense 500 Nm of torque, it features an electronic drive control (High/Low range), auto limited-slip differential (LSD), ventilated leather seats, 11-speaker JBL audio, and active traction control.",
+        "virtualShowroom": "https://www.toyotabharat.com/virtual-showroom/fortuner.html",
       "colors": [
           {
               "id": "platinum-white-pearl",
@@ -8041,6 +8043,7 @@ export const CARS = [
       "waitingPeriod": "1 - 3 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cafe-white.webp",
       "summary": "The Toyota Urban Cruiser Hyryder is a category-redefining midsize SUV that debuted segment-first Self-Charging Strong Hybrid Electric tech with an astonishing 27.97 km/l fuel efficiency, as well as an exclusive AllGrip Select AWD system for true multi-terrain confidence. Engineered with modern Japanese aesthetics, it comes with panoramic sunroof, head-up display, wireless smartphone charging, and ventilated seats.",
+        "virtualShowroom": "https://www.toyotabharat.com/virtual-showroom/urbancruiserhyryder.html",
       "colors": [
           {
               "id": "cafe-white",
@@ -8239,6 +8242,7 @@ export const CARS = [
       "waitingPeriod": "1 - 2 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/emotional-red.webp",
       "summary": "The Toyota Hilux is the globally acclaimed benchmark for lifestyle 4x4 pickup trucks, renowned for conquering polar ice caps, volcanoes, and desert rallies. Armed with a 2.8L Four-Cylinder Turbo Diesel pushing 201 bhp and an immense 500 Nm of torque, it boasts shift-on-the-fly 4WD, electronic locking rear differential, active traction control, 700 mm water wading capability, and heavy-duty steel cargo bed.",
+        "virtualShowroom": "https://www.toyotabharat.com/virtual-showroom/hilux.html",
       "colors": [
           {
               "id": "emotional-red",
@@ -8396,6 +8400,7 @@ export const CARS = [
       "waitingPeriod": "1 - 2 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white.webp",
       "summary": "The Toyota Camry Hybrid is the epitome of world-class executive luxury and green engineering. Featuring Toyota's legendary 4th generation 2.5L self-charging strong hybrid electric powertrain generating 218 PS combined power, it delivers up to 19.1 km/l efficiency. The cabin provides opulent rear reclining seats with armrest touchscreen capacitive controls, 9-speaker JBL premium acoustics, electronic moonroof, 9 SRS airbags, and HUD.",
+        "virtualShowroom": "https://www.toyotabharat.com/virtual-showroom/camry.html",
       "colors": [
           {
               "id": "platinum-white",
