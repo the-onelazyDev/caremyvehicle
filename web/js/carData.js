@@ -5901,6 +5901,88 @@ export const CARS = [
         keyFeatures: ['2nd-Row Powered VIP Relaxation Seats with Powered Ottoman Leg Support, Heating & Ventilation', '12-Speaker BOSE Premium Concert Sound System', '11-inch Advanced Head-Up Display (HUD)', 'Level 2+ ADAS with 23 Autonomous Features', '360-Degree Surround View Monitor with Blind View Monitor (BVM)', '18-inch Diamond Cut Alloy Wheels', 'R18 Spare Wheel', '64-Color Ambient Lighting & Tuscan & Umber 2-Tone Leatherette Interiors']
       }
     ]
+  },
+  {
+    id: 'kia-ev9',
+    name: 'Kia EV9',
+    brand: 'Kia',
+    tagline: 'The World\'s Most Inspiring Electric — Flagship 3-Row Electric SUV with 99.8 kWh Battery, 384 PS AWD, 561 km Range & Level 2+ ADAS',
+    launchDate: 'October 2024 (Global Electric Flagship)',
+    bodyType: 'SUV',
+    fuelTypes: ['Electric'],
+    priceRange: '₹1.30 Crore',
+    minPrice: 12990000,
+    maxPrice: 12990000,
+    safetyRating: 'Standard 10 Airbags, Level 2+ ADAS with 27 Autonomous Features, 5-Star Euro NCAP, All 4 Disc Brakes, 360° Camera with Blind View Monitor',
+    groundClearance: '198 mm',
+    bootSpace: '333 L (All 3 Rows Up), Expandable to 828 L (3rd Row Folded) / 2318 L (Flat Floor) + 52 L Frunk',
+    waitingPeriod: '8 - 12 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/ocean-blue/1.webp',
+    summary: 'The All-New Kia EV9 is Kia’s flagship full-size electric SUV built on the dedicated Electric-Global Modular Platform (E-GMP) with 800V ultra-fast charging architecture. Packing a massive 99.8 kWh battery delivering 561 km ARAI certified range, twin high-powered motors producing 384 PS and 700 Nm of torque with AWD, 0-100 km/h in 5.3 seconds, 1st & 2nd row powered relaxation lounge seats with ottoman leg support and massage, Trinity panoramic cockpit with 14-speaker Meridian audio, dual sunroofs, and comprehensive Level 2+ ADAS with 27 autonomous safety features.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 36,
+      defaultColor: 'ocean-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'ocean-blue', name: 'Ocean Blue (Hero Signature Shade)', hex: '#173B6C' },
+        { id: 'snow-white-pearl', name: 'Snow White Pearl', hex: '#F5F6F8' },
+        { id: 'panthera-metal', name: 'Panthera Metal', hex: '#4B4E54' },
+        { id: 'pebble-gray', name: 'Pebble Gray', hex: '#7B8189' },
+        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0E0F11' }
+      ]
+    },
+    colors: [
+      { id: 'ocean-blue', name: 'Ocean Blue (Hero Signature Shade)', hex: '#173B6C', image: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/ocean-blue/1.webp' },
+      { id: 'snow-white-pearl', name: 'Snow White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/snow-white-pearl/1.webp' },
+      { id: 'panthera-metal', name: 'Panthera Metal', hex: '#4B4E54', image: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/panthera-metal/1.webp' },
+      { id: 'pebble-gray', name: 'Pebble Gray', hex: '#7B8189', image: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/pebble-gray/1.webp' },
+      { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0E0F11', image: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/aurora-black-pearl/1.webp' }
+    ],
+    angles: [
+      { label: 'GT-Line Electric Flagship Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp' },
+      { label: 'Trinity Panoramic Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp' },
+      { label: 'VIP Lounge Massage Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp' },
+      { label: 'Dual Electric Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp' }
+    ],
+    gallery: [
+      { title: 'All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille & Starmap DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp' },
+      { title: 'Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps & Dynamic Welcome Sequence', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/digital-pattern-lighting-grille-ice-cube-led-headlamps.webp' },
+      { title: 'Trinity Panoramic Display Cockpit (12.3" Digital Cluster + 5" Climate Control Display + 12.3" HD Navigation)', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp' },
+      { title: '2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support & Massage Function', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp' },
+      { title: 'Dual Electric Sunroofs (Front Tilt & Slide, Rear Panoramic Glass) providing Open-Sky Luxury', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp' },
+      { title: '800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/ultra-fast-350kw-dc-fast-charging-24-minutes.webp' },
+      { title: '14-Speaker Meridian Premium Concert Sound System with Active Sound Design & Surround Acoustics', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/meridian-14-speaker-premium-concert-sound-system.webp' },
+      { title: 'Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View & Blind View Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/level-2-plus-adas-with-27-autonomous-features-360-cam.webp' }
+    ],
+    specs: {
+      battery: '99.8 kWh High-Energy Lithium-Ion Battery (800V E-GMP Dedicated Architecture)',
+      range: '561 km (ARAI MIDC-Full Certified Range)',
+      motors: 'Dual Electric Motors AWD (282.6 kW / 384.2 PS & 700 Nm Torque, 0-100 km/h in 5.3s)',
+      charging: '350 kW DC Fast Charging (10% to 80% in 24 minutes) | 11 kW AC Home Wallbox Charger',
+      dimensions: '5015 mm (L) × 1980 mm (W) × 1780 mm (H with Roof Rails)',
+      wheelbase: '3100 mm (Longest Executive Wheelbase in Class)',
+      groundClearance: '198 mm',
+      bootSpace: '333 Litres (All 3 Rows Up), Expandable to 828 Litres (3rd Row Folded) / 2318 Litres (Flat Floor) + 52 Litres Front Frunk',
+      brakes: 'Front & Rear All 4 Disc Brakes with Multi-Collision Braking (MCB) & Electronic Parking Brake with Auto Hold',
+      suspension: 'McPherson Strut (Front) / Independent Multi-Link with Self-Leveling Damper (Rear)',
+      safety: 'Level 2+ ADAS (27 Autonomous Features: FCA Junction Crossing, Evasive Steering, Blind Spot Avoidance, Smart Cruise Machine Learning, Safe Exit, 360° Camera), 10 Airbags Standard, 5-Star Euro NCAP'
+    },
+    variants: [
+      {
+        name: 'GT-Line AWD 99.8 kWh (6-Seater VIP Lounge)',
+        exShowroom: 12990000,
+        fuel: 'Electric',
+        trans: 'Automatic',
+        engine: 'Dual Electric Motors (384 PS / 700 Nm AWD)',
+        mileage: '561 km/charge (ARAI)',
+        isVFM: true,
+        vfmBadge: '⚡ FLAGSHIP ALL-ELECTRIC LUXURY LOUNGE',
+        keyFeatures: ['99.8 kWh Lithium-Ion Battery with 561 km Range', 'Dual Motor AWD (384 PS / 700 Nm, 0-100 km/h in 5.3s)', '10 Airbags Standard & 5-Star Safety Architecture', 'Level 2+ ADAS with 27 Autonomous Features', '1st & 2nd Row Relaxation Seats with Ottoman Leg Support & Massage', 'Trinity Panoramic Display (12.3" Cluster + 5" HVAC + 12.3" Nav)', '14-Speaker Meridian Concert Sound System', '800V Ultra-Fast DC Charging (10-80% in 24 Mins) & Vehicle-to-Load (V2L)']
+      }
+    ]
   }
 ];
 
