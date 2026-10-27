@@ -5817,6 +5817,90 @@ export const CARS = [
         keyFeatures: ['Smooth 6-Speed Torque Converter Automatic with Paddle Shifters', 'Luxury 2nd-Row Captain Seats with Sliding & Reclining', 'Front Ventilated Seats', 'Bose Premium 8-Speaker Sound System', 'Electric SkyLight Sunroof', 'Dual Camera Dashcam', '6 Airbags & All-4 Disc Brakes']
       }
     ]
+  },
+  {
+    id: 'kia-carnival',
+    name: 'Kia Carnival',
+    brand: 'Kia',
+    tagline: 'Extravagance Reborn — 4th Gen Ultra-Luxury Limousine with Powered VIP Lounge Relaxation Seats, Dual Curved 12.3" Displays & Level 2+ ADAS',
+    launchDate: 'October 2024 (4th Gen Facelift KA4)',
+    bodyType: 'MUV',
+    fuelTypes: ['Diesel'],
+    priceRange: '₹63.90 - ₹68.90 Lakh',
+    minPrice: 6390000,
+    maxPrice: 6890000,
+    safetyRating: 'Standard 8 Airbags, Level 2+ ADAS with 23 Autonomous Features, All 4 Disc Brakes, 360° Surround View & Blind View Monitor, ESC with HAC',
+    groundClearance: '180 mm',
+    bootSpace: '627 L (expandable to 2785 L with 3rd row sinking flat)',
+    waitingPeriod: '8 - 12 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/carnival/360/glacier-white-pearl/1.webp',
+    summary: 'The All-New 4th Generation Kia Carnival Limousine redefines ultra-luxury multi-purpose transportation in India. Powered by a refined 2.2L Smartstream CRDi VGT Diesel engine producing 193 PS and 441 Nm through a smooth 8-speed automatic with Shift-by-Wire dial, it boasts 2nd-row VIP Lounge Relaxation Powered Captain Seats with ottoman leg support, ventilation and heating, dual 12.3-inch curved panoramic cockpit, dual electric sunroofs, 12-speaker Bose audio, smart electric sliding doors, and comprehensive Level 2+ ADAS with 23 autonomous safety functions.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 36,
+      defaultColor: 'glacier-white-pearl',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/carnival/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8' },
+        { id: 'fusion-black', name: 'Fusion Black', hex: '#0B0C0E' }
+      ]
+    },
+    colors: [
+      { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/carnival/360/glacier-white-pearl/1.webp' },
+      { id: 'fusion-black', name: 'Fusion Black', hex: '#0B0C0E', image: 'https://ik.imagekit.io/2908vvlod/cars/carnival/360/fusion-black/1.webp' }
+    ],
+    angles: [
+      { label: 'All-New Limousine Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/all-new-kia-carnival-limousine-front-stance.webp' },
+      { label: 'VIP Lounge Relaxation Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/second-row-powered-vip-relaxation-seats.webp' },
+      { label: 'Dual Curved 12.3" Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/dual-curved-12-3-inch-panoramic-displays.webp' },
+      { label: 'Wide Dual Electric Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/wide-electric-dual-sunroof.webp' }
+    ],
+    gallery: [
+      { title: 'All-New Kia Carnival Limousine Exterior Stance with Ice Cube LED Projection Headlamps & Starmap DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/all-new-kia-carnival-limousine-front-stance.webp' },
+      { title: '2nd-Row Powered VIP Lounge Relaxation Seats with Powered Ottoman Leg Support, Heating & Ventilation', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/second-row-powered-vip-relaxation-seats.webp' },
+      { title: 'Dual 12.3-inch Curved Panoramic Displays with Navigation, Wireless Android Auto & Apple CarPlay Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/dual-curved-12-3-inch-panoramic-displays.webp' },
+      { title: 'Wide Dual Electric Sunroofs providing Panaromic Sky Views for Front & Rear Passengers', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/wide-electric-dual-sunroof.webp' },
+      { title: '12-Speaker BOSE Premium Concert Sound System with Dynamic Speed Compensation', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/bose-12-speaker-premium-sound-system.webp' },
+      { title: 'Smart One-Touch Power Sliding Doors & Gesture-Controlled Smart Power Tailgate', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/smart-power-sliding-doors-tailgate.webp' },
+      { title: 'ADAS Level 2+ with 23 Autonomous Safety Features & 360-Degree Surround View Monitor with Blind View Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/level-2-adas-360-surround-view-monitor.webp' },
+      { title: 'Standard 8 Airbags Architecture, All-Wheel Disc Brakes, ESC with VSM & Hill Assist Control', url: 'https://ik.imagekit.io/2908vvlod/cars/carnival/gallery/standard-8-airbags-all-wheel-disc-brakes.webp' }
+    ],
+    specs: {
+      engineOptions: '2.2L Smartstream CRDi VGT Diesel (193 PS [142 kW] @ 3800 rpm / 441 Nm [45 kgf·m] @ 1750-2750 rpm)',
+      transmissions: '8-Speed Sportsmatic Automatic (8AT) with Dial-Type Shift-by-Wire & Paddle Shifters',
+      dimensions: '5155 mm (L) × 1995 mm (W) × 1775 mm (H with Roof Rails)',
+      wheelbase: '3090 mm (Grand Limousine Executive Wheelbase)',
+      fuelTank: '72 Litres',
+      bootSpace: '627 Litres (All 3 Rows Up), Expandable to 2785 Litres (3rd Row Flat Sinking Seats)',
+      brakes: 'Front & Rear All 4 Ventilated/Solid Disc Brakes with ABS, EBD & Electronic Parking Brake with Auto Hold',
+      suspension: 'McPherson Strut with Coil Springs (Front) / Independent Multi-Link with Stabilizer Bar (Rear)',
+      safety: 'Level 2+ ADAS (23 Autonomous Features: FCA Junction Turning, Blind Spot Avoidance, Smart Cruise Stop&Go, Lane Keep, Safe Exit, Rear Cross-Traffic), 8 Airbags Standard, 360° Camera, TPMS, ESC, VSM'
+    },
+    variants: [
+      {
+        name: 'Limousine 2.2L Diesel 8AT (7-Seater)',
+        exShowroom: 6390000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L Smartstream CRDi Diesel (193 PS / 441 Nm)',
+        mileage: '14.85 km/l',
+        isVFM: false,
+        keyFeatures: ['Standard 8 Airbags', 'Dual Electric Sunroofs', 'Dual 12.3-inch Panoramic Curved Displays', '8-Speed Automatic with Shift-by-Wire Dial', 'Smart Power Sliding Doors & Power Tailgate', '3-Zone Fully Automatic Climate Control', 'Level 2 ADAS with Autonomous Braking & Lane Follow Assist', 'All 4 Disc Brakes & Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'Limousine Plus 2.2L Diesel 8AT (7-Seater VIP Lounge)',
+        exShowroom: 6890000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L Smartstream CRDi Diesel (193 PS / 441 Nm)',
+        mileage: '14.85 km/l',
+        isVFM: true,
+        vfmBadge: '👑 FIRST-CLASS VIP EXECUTIVE LIMOUSINE',
+        keyFeatures: ['2nd-Row Powered VIP Relaxation Seats with Powered Ottoman Leg Support, Heating & Ventilation', '12-Speaker BOSE Premium Concert Sound System', '11-inch Advanced Head-Up Display (HUD)', 'Level 2+ ADAS with 23 Autonomous Features', '360-Degree Surround View Monitor with Blind View Monitor (BVM)', '18-inch Diamond Cut Alloy Wheels', 'R18 Spare Wheel', '64-Color Ambient Lighting & Tuscan & Umber 2-Tone Leatherette Interiors']
+      }
+    ]
   }
 ];
 

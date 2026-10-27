@@ -5,17 +5,16 @@
 
 ## 🚗 The 3-Step Routine Whenever a Car Launches
 
-```
-Step 1: Download Photos from Official Press Releases
+Step 1: Download Photos & 360 VR from Official Portals
                          │
                          ▼
-Step 2: Upload to ImageKit / Cloudflare R2 (Copy Image Link)
+Step 2: Upload to ImageKit Free Tier (Pure White Studio Composite)
                          │
                          ▼
-Step 3: Open admin.html, Fill Form, Click "Save"
+Step 3: Update carData.js & Deploy (Live On Website Instantly! 🎉)
                          │
                          ▼
-         [Live On Website Instantly! 🎉]
+Step 4: Mandatory Live Website Quality Check (360° Spin, Gallery & Details)
 ```
 
 ---
@@ -72,6 +71,16 @@ You don't need to write code. We built a dedicated **Visual Admin Form** right i
    - Click **"Copy JSON"**.
    - Paste into [`d:\caremyvehicle\web\js\carData.js`](file:///d:/caremyvehicle/web/js/carData.js).
    - Refresh your website ➔ Your new car is **LIVE with city-wise on-road prices calculated automatically!**
+
+---
+
+## 🔍 Step 4: Mandatory Live Website Quality Check
+
+After every car import, you must open the live website and verify:
+1. **360° Studio Look**: Ensure the turntable spins smoothly, frame 1 starts at the hero front 3/4th angle, and background is pure white `#FFFFFF` with realistic contact shadow.
+2. **Color Switching**: Click all color swatches to ensure each shade switches seamlessly without broken images.
+3. **High-Definition Gallery**: Ensure all 8 gallery pictures load in crystal-clear definition with no blurriness or layout shift.
+4. **Details & Pricing**: Confirm variants, ex-showroom prices, specs, and on-road calculations look accurate and premium.
 
 ---
 
