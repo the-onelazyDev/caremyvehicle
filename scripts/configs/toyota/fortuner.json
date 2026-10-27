@@ -118,75 +118,143 @@
     }
   ],
   "specs": {
-    "engine": "2755 cc 4-Cylinder D-4D Turbo Diesel / 2694 cc Petrol",
-    "power": "201 bhp @ 3400 rpm (Diesel) / 164 bhp (Petrol)",
-    "torque": "500 Nm @ 1600-2800 rpm (AT) / 420 Nm (MT)",
-    "transmission": "6-Speed Automatic / 6-Speed Manual with iMT",
-    "drivetrain": "4x4 with High/Low Range & Auto LSD / 4x2 RWD",
-    "mileage": "14.4 kmpl (Diesel MT) / 10.3 kmpl (Petrol)",
-    "fuelTank": "80 Litres",
-    "dimensions": "4795 mm L x 1855 mm W x 1835 mm H",
+    "engineOptions": "2.8L 4-Cyl D-4D Turbo Diesel (201 bhp / 500 Nm) | 2.7L Petrol (164 bhp / 245 Nm)",
+    "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
+    "dimensions": "4795 mm (L) × 1855 mm (W) × 1835 mm (H)",
     "wheelbase": "2745 mm",
-    "brakes": "Ventilated Discs Front & Rear",
-    "suspension": "Double Wishbone Front / 4-Link with Coil Spring Rear",
-    "seating": "7 Seater (2+3+2)"
+    "fuelTank": "80 Litres",
+    "seatingCapacity": "7-Seater (Three Rows with Recline)"
   },
   "variants": [
     {
-      "name": "4x2 2.7 Petrol MT",
-      "price": 3343000,
+      "name": "4x2 2.7 Petrol 5-Speed Manual",
+      "exShowroom": 3343000,
       "fuel": "Petrol",
-      "transmission": "Manual",
-      "features": "LED DRLs, 8\" Touchscreen, Android Auto/Apple CarPlay, 7 Airbags, Cruise Control, Leatherette Seats"
+      "trans": "Manual",
+      "engine": "2.7L Dual VVT-i (164 bhp)",
+      "mileage": "10.30 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Bi-Beam LED Headlamps with LED DRLs",
+        "7 Airbags Standard Across All Variants",
+        "Vehicle Stability Control with Brake Assist",
+        "Hill Start Assist Control (HAC)",
+        "Leather-Wrapped Steering Wheel"
+      ]
     },
     {
-      "name": "4x2 2.7 Petrol AT",
-      "price": 3502000,
+      "name": "4x2 2.7 Petrol 6-Speed Automatic",
+      "exShowroom": 3476000,
       "fuel": "Petrol",
-      "transmission": "Automatic",
-      "features": "Paddle Shifters, Drive Modes, 8\" Touchscreen, Push Button Start, 7 Airbags, 17\" Alloys"
+      "trans": "Automatic",
+      "engine": "2.7L Dual VVT-i (164 bhp)",
+      "mileage": "10.01 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Paddle Shifters",
+        "Sequential Shift with Sport Mode",
+        "Cruise Control",
+        "8-inch Touchscreen Infotainment",
+        "Front Ventilated Seats"
+      ]
     },
     {
-      "name": "4x2 2.8 Diesel MT",
-      "price": 3593000,
+      "name": "4x2 2.8 Diesel 6-Speed Manual",
+      "exShowroom": 3540000,
       "fuel": "Diesel",
-      "transmission": "Manual",
-      "features": "201 bhp 2.8L Diesel, 420 Nm Torque, iMT Technology, VSC, Hill Assist, Ventilated Seats"
+      "trans": "Manual",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.40 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "201 bhp Brawny Diesel Power",
+        "iMT (Intelligent Manual Transmission)",
+        "Drive Modes (Eco, Normal, Sport)",
+        "Auto Limited Slip Differential (Auto-LSD)",
+        "Electrically Powered Tailgate with Height Memory"
+      ]
     },
     {
-      "name": "4x2 2.8 Diesel AT",
-      "price": 3821000,
+      "name": "4x2 2.8 Diesel 6-Speed Automatic",
+      "exShowroom": 3761000,
       "fuel": "Diesel",
-      "transmission": "Automatic",
-      "features": "500 Nm Torque, 6-Speed AT with Paddle Shifters, 11-Speaker JBL Audio, Powered Front Seats"
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "14.28 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST VALUE 4x2 PICK",
+      "keyFeatures": [
+        "Massive 500 Nm Peak Torque",
+        "Sequential Automatic with Paddle Shifters",
+        "Ventilated Front Seats (Driver & Co-Driver)",
+        "18-inch Super Chrome Alloy Wheels",
+        "Dual-Zone Automatic Climate Control"
+      ]
     },
     {
-      "name": "Leader Edition 4x2 Diesel AT",
-      "price": 3950000,
+      "name": "Leader Edition 2.8 Diesel 4x2 Automatic",
+      "exShowroom": 3872000,
       "fuel": "Diesel",
-      "transmission": "Automatic",
-      "features": "Dual-Tone Contrast Roof, Black Aero Package, Auto Folding Mirrors, TPMS, Wireless Charger"
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "14.28 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual-Tone Exterior Styling & Black Alloys",
+        "Front & Rear Bumper Spoilers",
+        "Wireless Phone Charger",
+        "Tyre Pressure Monitoring System (TPMS)",
+        "500 Nm Torque"
+      ]
     },
     {
-      "name": "4x4 2.8 Diesel MT",
-      "price": 4003000,
+      "name": "4x4 2.8 Diesel 6-Speed Manual",
+      "exShowroom": 3935000,
       "fuel": "Diesel",
-      "transmission": "Manual",
-      "features": "Shift-on-the-Fly 4WD, Low/High Transfer Case, Downhill Assist Control (DAC), Auto LSD, 18\" Machine Alloys"
+      "trans": "Manual",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.00 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electronic 4x4 Shift-On-The-Fly (High/Low Range)",
+        "Downhill Assist Control (DAC)",
+        "Active Traction Control (A-TRC)",
+        "Lockable Differential System",
+        "iMT 6-Speed"
+      ]
     },
     {
-      "name": "4x4 2.8 Diesel AT",
-      "price": 4232000,
+      "name": "4x4 2.8 Diesel 6-Speed Automatic",
+      "exShowroom": 4198000,
       "fuel": "Diesel",
-      "transmission": "Automatic",
-      "features": "Top Spec 4x4, 500 Nm Torque, Electronic Diff Lock, 11 JBL Speakers with Subwoofer, Ventilated Seats"
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.80 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST 4x4 TOURING PICK",
+      "keyFeatures": [
+        "Electronic 4x4 with High & Low Range Transfer Case",
+        "11-Speaker JBL Premium Audio with Subwoofer",
+        "Downhill Assist Control (DAC)",
+        "Active Traction Control (A-TRC)",
+        "500 Nm Heavy-Duty Torque"
+      ]
     },
     {
-      "name": "GR-S (Gazoo Racing Sport) 4x4 AT",
-      "price": 5046000,
+      "name": "GR-S 4x4 2.8 Diesel Automatic",
+      "exShowroom": 5046000,
       "fuel": "Diesel",
-      "transmission": "Automatic",
-      "features": "GR Suspension Tuning, GR Aerodynamic Bodykit, All-Black Cabin with Red Stitching, Aluminum Pedals, GR Badging"
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.60 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Gazoo Racing (GR) Tuned Suspension Setup",
+        "GR Aero Package & Red Brake Calipers",
+        "Alcantara & Leather Seats with GR Stitching",
+        "GR Engine Start/Stop Button & Steering Badge",
+        "11-Speaker JBL Audio System"
+      ]
     }
   ]
 }

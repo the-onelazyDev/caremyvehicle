@@ -2,20 +2,20 @@
   "id": "toyota-hilux",
   "name": "Toyota Hilux",
   "brand": "Toyota",
-  "tagline": "The World's Most Legendary Lifestyle 4x4 Off-Road Pickup Truck",
-  "launchDate": "2023 (Updated 2024 Black Edition)",
+  "tagline": "The Legendary Unstoppable 4x4 Adventure Lifestyle Pickup",
+  "launchDate": "2024 (Updated 4x4 & 4x2 Lineup)",
   "bodyType": "Pickup Truck",
   "fuelTypes": [
     "Diesel"
   ],
-  "priceRange": "₹30.40 - ₹37.90 Lakh",
-  "minPrice": 3040000,
-  "maxPrice": 3790000,
-  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star Off-Road Crash Protection)",
+  "priceRange": "₹31.99 - ₹36.89 Lakh",
+  "minPrice": 3199000,
+  "maxPrice": 3689000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 32.93/36, Child 44.09/49)",
   "groundClearance": "216 mm",
-  "bootSpace": "435 kg Deck Payload (Water wading 700 mm)",
-  "waitingPeriod": "1 - 2 Months",
-  "summary": "The Toyota Hilux is the globally acclaimed benchmark for lifestyle 4x4 pickup trucks, renowned for conquering polar ice caps, volcanoes, and desert rallies. Armed with a 2.8L Four-Cylinder Turbo Diesel pushing 201 bhp and an immense 500 Nm of torque, it boasts shift-on-the-fly 4WD, electronic locking rear differential, active traction control, 700 mm water wading capability, and heavy-duty steel cargo bed.",
+  "bootSpace": "435 L Flat Deck (470 kg payload)",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "The Toyota Hilux is the world's benchmark for extreme-durability lifestyle utility. Built on the heavy-duty IMV platform with a rigid ladder-frame chassis, it pairs a potent 2.8L D-4D turbo diesel producing 201 bhp and 500 Nm of torque with electronic 4x4, rear diff-lock, active traction control (A-TRC), 700 mm water wading capability, and a versatile double-cab cargo deck.",
   "colors": [
     {
       "id": "emotional-red",
@@ -117,40 +117,79 @@
     }
   ],
   "specs": {
-    "engine": "2755 cc 4-Cylinder D-4D Turbocharged Diesel",
-    "power": "201 bhp @ 3400 rpm",
-    "torque": "500 Nm @ 1600-2800 rpm (AT) / 420 Nm (MT)",
-    "transmission": "6-Speed Automatic / 6-Speed Manual with iMT",
-    "drivetrain": "Shift-on-the-fly 4WD with Electronic Diff Lock",
-    "mileage": "13.0 km/l",
-    "fuelTank": "80 Litres",
-    "dimensions": "5325 mm L x 1855 mm W x 1815 mm H",
+    "engineOptions": "2.8L 4-Cylinder D-4D Turbo Diesel (201 bhp / 500 Nm)",
+    "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
+    "dimensions": "5325 mm (L) × 1855 mm (W) × 1815 mm (H)",
     "wheelbase": "3085 mm",
-    "brakes": "Ventilated Discs Front / Leading-Trailing Drum Rear",
-    "suspension": "Double Wishbone Front / Leaf Spring Heavy-Duty Rear",
-    "seating": "5 Seater (Double Cab)"
+    "fuelTank": "80 Litres",
+    "seatingCapacity": "5 Persons (Double Cab Configuration)"
   },
   "variants": [
     {
-      "name": "4x4 STD MT",
-      "price": 3040000,
+      "name": "Standard (GX) 4x2 2.8 Diesel Automatic",
+      "exShowroom": 3199000,
       "fuel": "Diesel",
-      "transmission": "Manual",
-      "features": "Heavy-Duty 4WD with Low Range, Halogen Headlamps, 8\" Touchscreen, 7 Airbags, Auto LSD"
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.80 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "201 bhp & 500 Nm Diesel Engine",
+        "7 Airbags Standard",
+        "8-inch Touchscreen with Apple CarPlay/Android Auto",
+        "Vehicle Stability Control (VSC) & HAC",
+        "17-inch Alloy Wheels"
+      ]
     },
     {
-      "name": "4x4 High MT",
-      "price": 3715000,
+      "name": "Standard (GX) 4x4 2.8 Diesel Manual",
+      "exShowroom": 3040000,
       "fuel": "Diesel",
-      "transmission": "Manual",
-      "features": "LED Headlamps with DRLs, 18\" Machine Alloys, Leather Seats, 8-Way Powered Driver Seat, Dual-Zone AC"
+      "trans": "Manual",
+      "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.20 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST VALUE 4x4 OFF-ROADER",
+      "keyFeatures": [
+        "Shift-on-the-Fly 4x4 (High / Low Range)",
+        "Rear Differential Lock (e-Locker)",
+        "Active Traction Control (A-TRC)",
+        "Downhill Assist Control (DAC)",
+        "7 Airbags Standard"
+      ]
     },
     {
-      "name": "4x4 High AT",
-      "price": 3790000,
+      "name": "High (VX) 4x4 2.8 Diesel Manual",
+      "exShowroom": 3715000,
       "fuel": "Diesel",
-      "transmission": "Automatic",
-      "features": "500 Nm Torque, 6-Speed AT with Sequential Shift, Downhill Assist Control (DAC), Cruise Control"
+      "trans": "Manual",
+      "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
+      "mileage": "14.20 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual-Zone Automatic Climate Control",
+        "Full LED Headlamps with DRLs",
+        "8-Way Power-Adjustable Driver Seat",
+        "18-inch Precision Alloy Wheels",
+        "Soft-Touch Leather Upholstery"
+      ]
+    },
+    {
+      "name": "High (VX) 4x4 2.8 Diesel Automatic",
+      "exShowroom": 3669000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
+      "mileage": "13.60 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 TOP OVERLANDING PICK",
+      "keyFeatures": [
+        "6-Speed Sequential Automatic with 500 Nm Torque",
+        "Electronic 4WD Transfer Case with Low Range",
+        "Front & Rear Parking Sensors",
+        "Dual-Zone Auto AC",
+        "Electrochromic Inside Rear-View Mirror"
+      ]
     }
   ]
 }

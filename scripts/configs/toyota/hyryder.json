@@ -2,22 +2,22 @@
   "id": "toyota-hyryder",
   "name": "Toyota Urban Cruiser Hyryder",
   "brand": "Toyota",
-  "tagline": "India's First Mid-Size Hybrid SUV with AWD & 27.97 kmpl High-Mileage Leadership",
-  "launchDate": "2023 (Updated 2024 Dual-Tone Editions)",
+  "tagline": "India's High-Mileage Compact SUV with Strong Hybrid & AWD Capability",
+  "launchDate": "Updated 2024 (Aero Black Edition & Dual-Tone)",
   "bodyType": "SUV",
   "fuelTypes": [
     "Hybrid",
     "Petrol",
     "CNG"
   ],
-  "priceRange": "₹11.14 - ₹20.19 Lakh",
-  "minPrice": 1114000,
+  "priceRange": "₹11.31 - ₹20.19 Lakh",
+  "minPrice": 1131000,
   "maxPrice": 2019000,
-  "safetyRating": "4.0 ★ (Global NCAP 4-Star Safety Package)",
+  "safetyRating": "4.0 ★ (Global NCAP Expected 4-Star Safety)",
   "groundClearance": "210 mm",
-  "bootSpace": "373 L (Hybrid 255 L)",
+  "bootSpace": "373 L (Hybrid: 265 L)",
   "waitingPeriod": "1 - 3 Months",
-  "summary": "The Toyota Urban Cruiser Hyryder is a category-redefining midsize SUV that debuted segment-first Self-Charging Strong Hybrid Electric tech with an astonishing 27.97 km/l fuel efficiency, as well as an exclusive AllGrip Select AWD system for true multi-terrain confidence. Engineered with modern Japanese aesthetics, it comes with panoramic sunroof, head-up display, wireless smartphone charging, and ventilated seats.",
+  "summary": "The Toyota Urban Cruiser Hyryder brings self-charging strong hybrid technology to the compact SUV segment. Delivering an astounding ARAI mileage of 27.97 kmpl, it features an all-wheel-drive (AWD) NeoDrive petrol option, a dual-pane panoramic sunroof, Head-Up Display (HUD), ventilated front seats, and a 9-inch Smart Play Cast touchscreen with 360-degree camera.",
   "colors": [
     {
       "id": "cafe-white",
@@ -125,75 +125,144 @@
     }
   ],
   "specs": {
-    "engine": "1490 cc 3-Cylinder Hybrid / 1462 cc 4-Cylinder Neo Drive Petrol",
-    "power": "114 bhp combined (Hybrid) / 102 bhp (Neo Drive)",
-    "torque": "122 Nm Engine + 141 Nm Motor (Hybrid) / 137 Nm (Neo Drive)",
-    "transmission": "e-CVT (Hybrid) / 5-Speed Manual & 6-Speed Automatic (Neo Drive)",
-    "drivetrain": "FWD / AllGrip Select AWD",
-    "mileage": "27.97 km/l (Hybrid) / 21.12 km/l (Petrol MT) / 26.6 km/kg (CNG)",
-    "fuelTank": "45 Litres / 55L CNG Cylinder",
-    "dimensions": "4365 mm L x 1795 mm W x 1645 mm H",
+    "engineOptions": "1.5L Strong Hybrid e-CVT (114 bhp / 27.97 kmpl) | 1.5L K15C NeoDrive Petrol (102 bhp) | 1.5L Factory CNG (26.6 km/kg)",
+    "transmissions": "e-CVT Automatic (Hybrid), 5-Speed Manual & 6-Speed Torque Converter AT",
+    "dimensions": "4365 mm (L) × 1795 mm (W) × 1645 mm (H)",
     "wheelbase": "2600 mm",
-    "brakes": "Discs Front & Rear",
-    "suspension": "MacPherson Strut Front / Torsion Beam Rear",
-    "seating": "5 Seater"
+    "fuelTank": "45 Litres (CNG: 55L Water Equivalent)",
+    "seatingCapacity": "5 Persons"
   },
   "variants": [
     {
-      "name": "E 1.5 Neo Drive MT",
-      "price": 1114000,
+      "name": "E 1.5 NeoDrive Petrol Manual",
+      "exShowroom": 1131000,
       "fuel": "Petrol",
-      "transmission": "Manual",
-      "features": "Projector Headlamps with LED DRLs, Dual Airbags, ESP, Hill Hold Assist, All 4 Power Windows"
+      "trans": "Manual",
+      "engine": "1.5L K15C DualJet (102 bhp)",
+      "mileage": "21.12 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Vehicle Stability Control (VSC)",
+        "Hill Hold Assist",
+        "All 4 Disc Brakes",
+        "Keyless Smart Entry with Push Start",
+        "Auto Climate Control"
+      ]
     },
     {
-      "name": "S 1.5 Neo Drive MT",
-      "price": 1281000,
+      "name": "S 1.5 NeoDrive Petrol Manual",
+      "exShowroom": 1282000,
       "fuel": "Petrol",
-      "transmission": "Manual",
-      "features": "7\" Touchscreen, Android Auto/Apple CarPlay, Steering Controls, Cruise Control, Reverse Camera"
+      "trans": "Manual",
+      "engine": "1.5L K15C DualJet (102 bhp)",
+      "mileage": "21.12 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "7-inch Smart Play Cast Touchscreen",
+        "Android Auto & Apple CarPlay",
+        "Rear Parking Camera",
+        "Cruise Control",
+        "Steering Mounted Audio Controls"
+      ]
     },
     {
-      "name": "S 1.5 Neo Drive AT",
-      "price": 1401000,
-      "fuel": "Petrol",
-      "transmission": "Automatic",
-      "features": "6-Speed Torque Converter AT, Paddle Shifters, Hill Descent Control, Toyota i-Connect"
+      "name": "S 1.5 Factory CNG Manual",
+      "exShowroom": 1371000,
+      "fuel": "CNG",
+      "trans": "Manual",
+      "engine": "1.5L K15C S-CNG (87 bhp)",
+      "mileage": "26.60 km/kg",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST CNG SUV PICK",
+      "keyFeatures": [
+        "Factory-Fitted CNG Kit (26.60 km/kg)",
+        "7-inch Touchscreen Audio",
+        "Rear Camera & Cruise Control",
+        "Projector Headlamps",
+        "LED DRLs"
+      ]
     },
     {
-      "name": "G 1.5 Neo Drive MT",
-      "price": 1449000,
+      "name": "S 1.5 NeoDrive Petrol 6-Speed AT",
+      "exShowroom": 1417000,
       "fuel": "Petrol",
-      "transmission": "Manual",
-      "features": "Full LED Headlamps, 9\" Smart Play Cast Touchscreen, 6 Airbags, 17\" Alloys, Auto Folding ORVMs"
+      "trans": "Automatic",
+      "engine": "1.5L K15C DualJet (102 bhp)",
+      "mileage": "20.58 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Paddle Shifters",
+        "6-Speed Torque Converter AT",
+        "Cruise Control",
+        "Smart Play Touchscreen",
+        "ESP & Hill Hold"
+      ]
     },
     {
-      "name": "G 1.5 Neo Drive AT",
-      "price": 1569000,
+      "name": "G 1.5 NeoDrive Petrol Manual",
+      "exShowroom": 1487000,
       "fuel": "Petrol",
-      "transmission": "Automatic",
-      "features": "Panoramic Sunroof, Wireless Charging, 9\" Touchscreen, Paddle Shifters, 6 Airbags"
+      "trans": "Manual",
+      "engine": "1.5L K15C DualJet (102 bhp)",
+      "mileage": "21.12 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 BEST PETROL VFM PICK",
+      "keyFeatures": [
+        "Full LED Headlamps",
+        "17-inch Alloy Wheels",
+        "9-inch Touchscreen Infotainment",
+        "6 Airbags Standard",
+        "Auto-Folding ORVMs"
+      ]
     },
     {
-      "name": "V 1.5 Neo Drive AllGrip AWD MT",
-      "price": 1754000,
-      "fuel": "Petrol",
-      "transmission": "Manual",
-      "features": "AllGrip Select Mechanical 4WD (Auto/Sport/Snow/Lock modes), Panoramic Sunroof, 360 Camera, 6 Airbags"
-    },
-    {
-      "name": "S Hybrid 1.5 e-CVT",
-      "price": 1666000,
+      "name": "S Strong Hybrid 1.5 e-CVT",
+      "exShowroom": 1718000,
       "fuel": "Hybrid",
-      "transmission": "Automatic",
-      "features": "Self-Charging Strong Hybrid Powertrain, 27.97 km/l, Pure EV Drive Mode, 7\" Digital Driver Display"
+      "trans": "Automatic",
+      "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+      "mileage": "27.97 kmpl",
+      "isVFM": true,
+      "vfmBadge": "🏆 MOST AFFORDABLE HYBRID",
+      "keyFeatures": [
+        "Self-Charging Strong Hybrid (27.97 kmpl)",
+        "Pure EV Drive Mode",
+        "7-inch Digital Driver Display",
+        "Auto Electric Parking Brake",
+        "e-CVT Transmission"
+      ]
     },
     {
-      "name": "V Hybrid 1.5 e-CVT",
-      "price": 2019000,
+      "name": "G Strong Hybrid 1.5 e-CVT",
+      "exShowroom": 1924000,
       "fuel": "Hybrid",
-      "transmission": "Automatic",
-      "features": "Panoramic Sunroof, Ventilated Leather Seats, Head-Up Display, 360 Panoramic Camera, Arkamys Audio"
+      "trans": "Automatic",
+      "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+      "mileage": "27.97 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual-Pane Panoramic Sunroof",
+        "Head-Up Display (HUD)",
+        "Wireless Phone Charger",
+        "6 Airbags Standard",
+        "9-inch Smart Play Infotainment"
+      ]
+    },
+    {
+      "name": "V Strong Hybrid 1.5 e-CVT Dual Tone",
+      "exShowroom": 2019000,
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
+      "mileage": "27.97 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Front Ventilated Leatherette Seats",
+        "360-Degree Panoramic View Camera",
+        "Dual-Tone Contrast Black Roof",
+        "Premium Arkamys Surround Sound",
+        "Tyre Pressure Monitor (TPMS)"
+      ]
     }
   ]
 }
