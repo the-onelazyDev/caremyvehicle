@@ -4280,91 +4280,187 @@ export const CARS = [
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
-    tagline: '5-Door Lifestyle SUV with Panoramic Skyroof & Level 2 ADAS',
-    launchDate: 'August 2024',
+    tagline: '5-Door True Ladder-Frame Adventure SUV with Panoramic Skyroof, Level 2 ADAS, 4XPLOR & 5-Star Bharat NCAP',
+    launchDate: 'August 2024 (Updated 2025 Lineup)',
     bodyType: 'SUV',
     fuelTypes: ['Petrol', 'Diesel'],
     priceRange: '₹12.99 - ₹22.49 Lakh',
     minPrice: 1299000,
     maxPrice: 2249000,
-    safetyRating: '5.0 ★ (Bharat NCAP)',
+    safetyRating: '5.0 ★ (Bharat NCAP 5-Star Safety Rating - Adult 31.05/32, Child 45/49)',
     groundClearance: '215 mm',
-    bootSpace: '644 L',
+    bootSpace: '644 L (Massive Extended Rear Cargo Trunk)',
     waitingPeriod: '6 - 16 Weeks',
-    heroImage: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80',
-    summary: 'The 5-door Thar Roxx brings family practicality to the iconic off-roader with a stretched 2850mm wheelbase, panoramic skyroof, dual 10.25-inch screens, and Level 2 ADAS.',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp',
+    summary: 'The Mahindra Thar Roxx revolutionizes the iconic off-roader into an all-in-one luxury 5-door adventure SUV without compromising authentic trail-blazing capability. Built on an advanced stiffened hydroformed ladder-frame platform with Penta-Link rear suspension featuring Watts linkage, it was awarded an exceptional 5-Star Safety Rating by Bharat NCAP. Propelled by explosive class-leading engines: a 2.0L mStallion TGDi Turbo Petrol (up to 177 PS / 380 Nm) or a 2.2L mHawk Turbo Diesel (up to 175 PS / 370 Nm) paired with a 6-speed manual or 6-speed AISIN torque converter automatic, available in both Rear-Wheel Drive (RWD) and true 4x4 with 4XPLOR terrain management (Snow, Sand, Mud), electronic locking differential, and crawl smart assist. The upscale 5-seater cabin boasts segment-first amenities including an expansive panoramic skyroof, dual 26.03 cm (10.25-inch) HD screens with Adrenox, Level 2 ADAS with 10 active safety functions, 3-stage front seat ventilation, a 9-speaker Harman Kardon QuantumLogic sound system with 540-degree surround view camera, and a cavernous 644L boot capacity.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'stealth-black',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/360'
+    },
     colors: [
-      { name: 'Stealth Black', hex: '#1E293B', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Deep Forest Green', hex: '#14532D', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Tango Red', hex: '#B91C1C', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Everest White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Battleship Grey', hex: '#64748B', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+      { id: 'stealth-black', name: 'Stealth Black', hex: '#110C0A', bg: '#110C0A', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp' },
+      { id: 'tango-red', name: 'Tango Red', hex: '#C20D0E', bg: '#C20D0E', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/tango-red.webp' },
+      { id: 'everest-white', name: 'Everest White', hex: '#FBFBFB', bg: '#FBFBFB', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/everest-white.webp' },
+      { id: 'deep-forest', name: 'Deep Forest Green', hex: '#141414', bg: '#141414', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/deep-forest.webp' },
+      { id: 'nebula-blue', name: 'Nebula Blue', hex: '#101D28', bg: '#101D28', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/nebula-blue.webp' },
+      { id: 'battleship-grey', name: 'Battleship Grey', hex: '#3F4754', bg: '#3F4754', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/battleship-grey.webp' },
+      { id: 'burnt-sienna', name: 'Burnt Sienna', hex: '#331F16', bg: '#331F16', image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/burnt-sienna.webp' }
+    ],
+    multiAngle: [
+      { label: 'Front 3/4 Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/360/stealth-black/1.webp' },
+      { label: 'Side Profile Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/360/stealth-black/10.webp' },
+      { label: 'Rear 3/4 Road View', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/360/stealth-black/19.webp' },
+      { label: 'Direct Front Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/360/stealth-black/28.webp' }
     ],
     gallery: [
-      { title: 'Front Bold Grille & LED Headlamps', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { title: '10.25-inch Digital Cockpit & Screen', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Panoramic Skyroof', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Massive 644L Boot Capacity', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+      { title: 'Dual-Tone Ivory & Dark Adventure Cockpit Dashboard with Soft-Touch Leatherette Stitching', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/dashboard.webp' },
+      { title: 'Segment-Largest Panoramic Skyroof with Acoustic Glazing & One-Touch Electric Sunblind', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/panoramic_skyroof.webp' },
+      { title: '26.03 cm (10.25-inch) HD Floating Touchscreen with Adrenox Connected Intelligence & Wireless CarPlay', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/touchscreen_infotainment.webp' },
+      { title: '26.03 cm (10.25-inch) Full-Color Digital Driver Display with Turn-by-Turn ADAS Navigation', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/digital_cluster.webp' },
+      { title: 'Perforated Premium Leatherette Seats with 3-Stage Active Front Seat Cooling Ventilation', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/ventilated_seats.webp' },
+      { title: 'Harman Kardon 9-Speaker QuantumLogic Surround Sound System with Subwoofer', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/harman_kardon_speakers.webp' },
+      { title: 'Level 2 Advanced Driver Assistance System (ADAS) with Adaptive Cruise Control & Auto Emergency Braking', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/adas_front_camera.webp' },
+      { title: '540-Degree Surround View Camera System with Transparent Hood & Blind View Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/surround_camera_360.webp' },
+      { title: '19-inch Diamond-Cut Precision Alloy Wheels with All-Terrain Performance Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/alloy_wheels.webp' },
+      { title: 'Signature Tailgate-Mounted Full-Size 19-inch Spare Alloy Wheel with High-Mount Brake Lamp', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/tailgate_spare_wheel.webp' },
+      { title: 'Painted Double-Decker 6-Slot Vertical Front Grille with Retro Bi-LED Projectors', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/vertical_slat_grille.webp' },
+      { title: 'Massive 644 Litres Extended Family Luggage Trunk with 60:40 Split Rear Folding Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/gallery/open_trunk.webp' }
     ],
     specs: {
-      engineOptions: '2.0L mStallion Turbo Petrol (160/175 bhp) | 2.2L mHawk Diesel (150/172 bhp)',
-      transmissions: '6-Speed Manual & 6-Speed Aisin Torque Converter AT',
+      engineOptions: '2.0L mStallion TGDi Turbo Petrol (162/177 PS, up to 380 Nm) | 2.2L mHawk Turbo Diesel (152/175 PS, up to 370 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed AISIN Torque Converter Automatic | 4XPLOR 4WD with Electronic Locking Rear Diff & Crawl Smart',
       dimensions: '4428 mm (L) × 1870 mm (W) × 1923 mm (H)',
       wheelbase: '2850 mm',
       fuelTank: '57 Litres',
-      seatingCapacity: '5 Passengers'
+      seatingCapacity: '5 Passengers (Comfort Bench with Rear AC & Armrest)'
     },
     variants: [
       {
-        name: 'MX1 Petrol MT (RWD)',
+        name: 'MX1 2.0 Petrol MT (RWD)',
         exShowroom: 1299000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '2.0L Turbo (160 bhp)',
-        mileage: '12.4 kmpl',
+        engine: '2.0L mStallion Turbo (162 PS / 330 Nm)',
+        mileage: '12.40 kmpl',
         isVFM: false,
-        keyFeatures: ['6 Airbags Standard', '10.25-inch Touchscreen', 'ESC & All 4 Disc Brakes', 'Rear AC Vents']
+        keyFeatures: ['6 Airbags Standard Across Trims', '26.03 cm (10.25") Touchscreen Infotainment', 'All 4 Disc Brakes & Electronic Stability Program (ESP)', 'Rear AC Vents & LED Projector Headlamps']
       },
       {
-        name: 'MX3 Petrol AT (RWD)',
+        name: 'MX1 2.2 Diesel MT (RWD)',
+        exShowroom: 1399000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '15.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Torque 152 PS mHawk Diesel', '6 Airbags & ISOFIX Child Mounts', 'Push Button Start/Stop', 'Rear Parking Sensors & Electronic Power Steering']
+      },
+      {
+        name: 'MX3 2.0 Petrol AT (RWD)',
         exShowroom: 1499000,
         fuel: 'Petrol',
         trans: 'Automatic',
-        engine: '2.0L Turbo (175 bhp)',
-        mileage: '11.8 kmpl',
-        isVFM: false,
-        keyFeatures: ['Smooth 6-Speed AT', 'Drive & Terrain Modes', 'Reverse Camera', 'Wireless Android Auto/CarPlay']
+        engine: '2.0L mStallion Turbo (177 PS / 380 Nm)',
+        mileage: '11.80 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BUDGET PETROL AT PICK',
+        keyFeatures: ['Smooth 6-Speed AISIN Automatic', 'High-Output 177 PS / 380 Nm Petrol', 'Wireless Android Auto & Apple CarPlay', 'Reverse Parking Camera & Drive Modes (Zip, Zoom)']
       },
       {
-        name: 'MX5 Diesel MT (RWD)',
+        name: 'MX3 2.2 Diesel MT (RWD)',
+        exShowroom: 1599000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '15.20 kmpl',
+        isVFM: false,
+        keyFeatures: ['Rear View Camera with Dynamic Guidelines', 'Cruise Control', 'Terrain Modes (Snow, Sand, Mud)', 'Wireless Smartphone Charger']
+      },
+      {
+        name: 'MX5 2.2 Diesel MT (RWD)',
         exShowroom: 1699000,
         fuel: 'Diesel',
         trans: 'Manual',
-        engine: '2.2L mHawk (150 bhp)',
-        mileage: '15.2 kmpl',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '15.20 kmpl',
         isVFM: true,
-        vfmBadge: '🏆 BEST VALUE PICK',
-        keyFeatures: ['Panoramic Skyroof', '18-inch Diamond Cut Alloys', 'LED Projectors & DRLs', 'Leatherette Seats']
+        vfmBadge: '🏆 BEST VALUE PANORAMIC PICK',
+        keyFeatures: ['Single-Pane Sunroof', '18-inch Diamond-Cut Precision Alloys', 'LED DRLs & Bi-LED Projector Headlamps', 'Leatherette Seats & Acoustic Glass']
       },
       {
-        name: 'AX5L Diesel AT (RWD)',
+        name: 'MX5 2.2 Diesel MT (4x4)',
+        exShowroom: 1879000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🧗 PURIST 4X4 ADVENTURE VALUE',
+        keyFeatures: ['4XPLOR 4WD System with Low Range', 'Electronic Locking Rear Differential (e-BLD)', 'Crawl Smart Assist & Intelli-Turn Assist', 'Terrain Modes & 18-inch Alloys']
+      },
+      {
+        name: 'AX3L 2.2 Diesel MT (RWD)',
+        exShowroom: 1699000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '15.20 kmpl',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Suite with 10 Functions', 'Dual 26.03 cm HD Digital Superscreens', 'Electronic Parking Brake (EPB) with Auto Hold', 'Connected Vehicle Tech with Alexa']
+      },
+      {
+        name: 'AX5L 2.2 Diesel AT (RWD)',
         exShowroom: 1899000,
         fuel: 'Diesel',
         trans: 'Automatic',
-        engine: '2.2L mHawk (172 bhp)',
-        mileage: '14.8 kmpl',
-        isVFM: false,
-        keyFeatures: ['Level 2 ADAS Suite', 'Electronic Parking Brake', 'Auto AC', 'Connected Car Tech']
+        engine: '2.2L mHawk Diesel (175 PS / 370 Nm)',
+        mileage: '14.80 kmpl',
+        isVFM: true,
+        vfmBadge: '⚡ ADAS LEVEL 2 AUTOMATIC',
+        keyFeatures: ['6-Speed Automatic with 175 PS High-Output Diesel', 'Level 2 ADAS Suite with Adaptive Cruise Control', 'Smart Pilot Assist & Lane Keep Assist', 'Electronic Parking Brake with Auto Hold']
       },
       {
-        name: 'AX7L Diesel AT 4x4',
+        name: 'AX7L 2.0 Petrol AT (RWD)',
+        exShowroom: 1999000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L mStallion Turbo (177 PS / 380 Nm)',
+        mileage: '11.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['Panoramic Skyroof with Dual Glass Panes', '19-inch Diamond-Cut Precision Alloys', 'Harman Kardon 9-Speaker QuantumLogic Audio', 'Ventilated Front Seats & 6-Way Powered Driver Seat']
+      },
+      {
+        name: 'AX7L 2.2 Diesel AT (RWD)',
+        exShowroom: 2049000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 370 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['175 PS High-Output Diesel with 6-Speed AT', 'Panoramic Skyroof', '540-Degree Surround Camera with Transparent Hood', 'Harman Kardon 9-Speaker Audio with Subwoofer']
+      },
+      {
+        name: 'AX7L 2.2 Diesel MT (4x4)',
+        exShowroom: 2099000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (152 PS / 330 Nm)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['4XPLOR 4WD with Electronic Locking Rear Diff', 'Panoramic Skyroof & 19-inch Alloys', 'Ventilated Front Seats & Level 2 ADAS', 'Harman Kardon QuantumLogic Audio']
+      },
+      {
+        name: 'AX7L 2.2 Diesel AT (4x4)',
         exShowroom: 2249000,
         fuel: 'Diesel',
         trans: 'Automatic',
-        engine: '2.2L mHawk (172 bhp)',
-        mileage: '13.5 kmpl',
-        isVFM: false,
-        keyFeatures: ['4WD with Electronic Diff Lock', 'Ventilated Front Seats', 'Harman Kardon 9-Speaker Audio', '360° Surround Camera']
+        engine: '2.2L mHawk Diesel (175 PS / 370 Nm)',
+        mileage: '13.50 kmpl',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP 4X4 LUXURY ROXX',
+        keyFeatures: ['Top-Spec 4XPLOR 4WD with 6-Speed Automatic (175 PS / 370 Nm)', 'Expansive Panoramic Skyroof', 'Level 2 ADAS Suite with Smart Pilot Assist', 'Harman Kardon 9-Speaker Audio, 540° Camera & Ventilated Seats']
       }
     ]
   },
