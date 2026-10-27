@@ -5676,6 +5676,147 @@ export const CARS = [
         keyFeatures: ['Exclusive Matte Graphite Signature Exterior Paint', 'Splendid Sage Green Leatherette Interiors with Contrast Stitching', 'Glossy Black Front Grille & Dark Metallic Accents', 'Full Level 1 ADAS Safety Suite (10 Autonomous Features)', 'Bose Premium 7-Speaker Sound System', '360° Surround View Camera & Blind View Monitor', 'All 4 Disc Brakes & 16-inch Crystal Cut Glossy Black Alloys']
       }
     ]
+  },
+  {
+    id: 'kia-carens',
+    name: 'Kia Carens',
+    brand: 'Kia',
+    tagline: 'From a Different World. Premium 3-Row Family RV with Standard 6 Airbags & Robust 15 Safety Suite',
+    launchDate: 'Latest 2025–2026 Model (Bi-Fuel CNG & Turbo GDi Editions)',
+    bodyType: 'MPV',
+    fuelTypes: ['Petrol', 'Diesel', 'CNG'],
+    priceRange: '₹10.52 - ₹19.99 Lakh',
+    minPrice: 1052000,
+    maxPrice: 1999000,
+    safetyRating: 'Robust 15 Standard Hi-Safety Package | Standard 6 Airbags & All 4 Disc Brakes',
+    groundClearance: '195 mm',
+    bootSpace: '216 Litres (expandable to 645 Litres)',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/imperial-blue/1.webp',
+    summary: 'The Kia Carens redefines three-row family mobility as a progressive Recreational Vehicle (RV), merging the boldness of an SUV with the spacious versatility of an MPV. Standard with the Robust 15 Hi-Safety Package across every single variant—including 6 Airbags, All-Wheel Disc Brakes, ESC, VSM, HAC, Downhill Brake Control (DBC), and Highline TPMS. Power comes from four refined powertrain options: an energetic 1.5L Turbo GDi petrol (160 PS / 253 Nm) with 7DCT or 6iMT, a dependable 1.5L Smartstream naturally aspirated petrol (115 PS / 144 Nm) with 6MT, a punchy 1.5L CRDi VGT Diesel (116 PS / 250 Nm) with 6MT, 6iMT or 6-speed torque converter automatic, and a factory-fitted Bi-Fuel 1.5L CNG option delivering exceptional fuel efficiency. The lavish cabin offers 6-seater (Captain Seats) or 7-seater configurations, world-first One-Touch Easy Electric 2nd-Row Tumble, roof-flushed diffused AC vents for all three rows, 10.25-inch HD Touchscreen with Kia Connect, Bose 8-Speaker Audio, ventilated front seats, and SkyLight electric sunroof.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/carens/360',
+      format: 'webp',
+      defaultColor: 'imperial-blue',
+      colors: [
+        { id: 'imperial-blue', name: 'Imperial Blue (Signature Hero Shade)', hex: '#1C2E4A' },
+        { id: 'pewter-olive', name: 'Pewter Olive', hex: '#4E5343' },
+        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
+        { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357' },
+        { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA' },
+        { id: 'clear-white', name: 'Clear White', hex: '#F5F6F8' }
+      ]
+    },
+    colors: [
+      { id: 'imperial-blue', name: 'Imperial Blue (Signature Hero Shade)', hex: '#1C2E4A', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/imperial-blue/1.webp' },
+      { id: 'pewter-olive', name: 'Pewter Olive', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/pewter-olive/1.webp' },
+      { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/aurora-black-pearl/1.webp' },
+      { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/gravity-grey/1.webp' },
+      { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/sparkling-silver/1.webp' },
+      { id: 'clear-white', name: 'Clear White', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/clear-white/1.webp' }
+    ],
+    angles: [
+      { label: 'Crown Jewel LED & Star Map DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/crown-jewel-led-headlamps-star-map-drls.webp' },
+      { label: 'Dual-Camera Dashcam & Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/dual-camera-dashcam-touchscreen-cockpit.webp' },
+      { label: 'R16 Crystal-Cut Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/r16-dual-tone-crystal-cut-alloy-wheels.webp' },
+      { label: 'Diffused Roof AC Vents (All Rows)', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/roof-flushed-diffused-ac-vents-all-rows.webp' }
+    ],
+    gallery: [
+      { title: 'Crown Jewel LED Headlamps with Star Map LED Daytime Running Lights & Sleek Grille Accent', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/crown-jewel-led-headlamps-star-map-drls.webp' },
+      { title: 'Digital Radiator Grille with Signature Silver Décor Pattern & Aerodynamic Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/digital-radiator-grille-silver-decor.webp' },
+      { title: 'R16 (205/65 R16) Dual Tone Crystal-Cut Alloy Wheels with Dynamic Spoke Geometry', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/r16-dual-tone-crystal-cut-alloy-wheels.webp' },
+      { title: 'Hi-Tech Cockpit with 10.25-inch HD Touchscreen Infotainment & Factory Dual-Camera Dashcam', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/dual-camera-dashcam-touchscreen-cockpit.webp' },
+      { title: 'Roof-Flushed Diffused AC Vents across 2nd & 3rd Rows with 4-Stage Independent Blower Controls', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/roof-flushed-diffused-ac-vents-all-rows.webp' },
+      { title: 'Standard 6 Airbags & Robust 15 Hi-Safety Architecture across Every Variant', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/standard-6-airbags-robust-15-safety-package.webp' },
+      { title: 'All-Wheel Disc Brakes Standard with Electronic Stability Control (ESC) & Hill-Start Assist (HAC)', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/all-wheel-disc-brakes-esc-vsm-hac.webp' },
+      { title: 'Sporty Rear Bumper Garnish with Chrome Diamond Knurling Pattern & Distinctive Skid Plate', url: 'https://ik.imagekit.io/2908vvlod/cars/carens/gallery/sporty-rear-bumper-diamond-knurling-garnish.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L Smartstream T-GDi Turbo Petrol (160 PS / 253 Nm) | 1.5L Smartstream MPi Petrol (115 PS / 144 Nm) | 1.5L CRDi VGT Diesel (116 PS / 250 Nm) | 1.5L Bi-Fuel CNG',
+      transmissions: '6-Speed Manual, Smartstream 6iMT (Clutchless), 6-Speed Advance AT & 7-Speed Dual Clutch (7DCT)',
+      dimensions: '4540 mm (L) × 1800 mm (W) × 1708 mm (H) (with Roof Rails)',
+      wheelbase: '2780 mm (Longest Wheelbase in Segment with Maximum 3-Row Legroom)',
+      fuelTank: '45 Litres (Petrol/Diesel) | 60 Litres Water Equiv (CNG)',
+      bootSpace: '216 Litres (all rows up), expandable to 645 Litres (3rd row flat folded)',
+      brakes: 'All 4 Disc Brakes Standard across all variants with ABS, BAS, ESC, VSM & HAC',
+      suspension: 'McPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle with Coil Spring (Rear)',
+      safety: 'Robust 15 Hi-Safety Package: 6 Airbags Standard, ESC, VSM, BAS, HAC, DBC, Highline TPMS, All 4 Disc Brakes, ISOFIX Child Anchors, Rear Parking Sensors'
+    },
+    variants: [
+      {
+        name: 'Premium (O) 1.5L Petrol 6MT (7-Seater)',
+        exShowroom: 1111900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream MPi (115 PS / 144 Nm)',
+        mileage: '15.7 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard Across All Variants', 'All 4 Disc Brakes Standard', 'Electronic Stability Control (ESC) & VSM', '20.32 cm (8") Touchscreen with Wireless Apple CarPlay & Android Auto', '2nd Row One-Touch Easy Electric Tumble', 'Roof-Flushed 2nd & 3rd Row Diffused AC Vents', 'Rear Door Sunshade Curtains']
+      },
+      {
+        name: 'Premium (O) 1.5L Bi-Fuel CNG 6MT (7-Seater)',
+        exShowroom: 1211800,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.5L Smartstream Bi-Fuel CNG (Petrol: 115 PS / CNG: 96 PS)',
+        mileage: '24.5 km/kg',
+        isVFM: true,
+        vfmBadge: '🌿 ULTRA-LOW RUNNING COST 3-ROW MPV',
+        keyFeatures: ['Factory-Fitted Bi-Fuel CNG with Dedicated Micro-Switch & Dual ECUs', '31.7 cm Digital Cluster with CNG Level & Range Indicator', 'Standard 6 Airbags & All 4 Disc Brakes', '20.32 cm Touchscreen with Wireless Phone Projection', '2nd Row One-Touch Electric Tumble', 'Roof Flushed AC Vents across all rows', 'Rear Door Sunshade Curtains']
+      },
+      {
+        name: 'Prestige (O) 1.5L Turbo Petrol 6iMT (7-Seater)',
+        exShowroom: 1335000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '16.5 km/l',
+        isVFM: false,
+        keyFeatures: ['160 PS Turbo GDi Engine with Clutchless 6-Speed iMT', 'Electric SkyLight Sunroof', 'Shark Fin Antenna & LED Tail Lamps', 'Smart Key with Remote Engine Start & Push Button Start', 'Rear View Camera with Dynamic Guidelines', 'All-4 Disc Brakes & 6 Airbags']
+      },
+      {
+        name: 'Prestige Plus 1.5L Diesel 6MT (7-Seater)',
+        exShowroom: 1475000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+        mileage: '18.4 km/l',
+        isVFM: true,
+        vfmBadge: '💎 HIGH-TORQUE LONG-DISTANCE SWEET SPOT',
+        keyFeatures: ['116 PS / 250 Nm CRDi Diesel with 6-Speed Manual', 'R16 Crystal-Cut Dual Tone Alloys', 'Fully Automatic Temperature Control (FATC)', 'Electric SkyLight Sunroof', 'Auto Cruise Control', 'Full Digital Instrument Cluster', 'Standard 6 Airbags & All-4 Disc Brakes']
+      },
+      {
+        name: 'Luxury 1.5L Turbo Petrol 6iMT (7-Seater)',
+        exShowroom: 1680000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '16.5 km/l',
+        isVFM: false,
+        keyFeatures: ['10.25-inch HD Touchscreen Infotainment with Kia Connect Suite', 'Crown Jewel LED Headlamps & Star Map LED DRLs', '64-Color Ambient Mood Lighting', 'Smart Pure Air Purifier with Virus Protection', 'Telescopic Steering Adjust', 'Leatherette Upholstery']
+      },
+      {
+        name: 'Luxury Plus 1.5L Turbo Petrol 7DCT (6-Seater / 7-Seater)',
+        exShowroom: 1895000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.5L Smartstream T-GDi Turbo (160 PS / 253 Nm)',
+        mileage: '16.5 km/l',
+        isVFM: false,
+        keyFeatures: ['7-Speed Dual Clutch Automatic (7DCT) with Paddle Shifters', 'Front Ventilated Seats', 'Bose Premium 8-Speaker Audio System', 'Wireless Smartphone Charger with Cooling Function', 'Drive Modes (Eco, Normal, Sport)', 'Factory-Fitted Dual-Camera Dashcam', 'Electric SkyLight Sunroof']
+      },
+      {
+        name: 'Luxury Plus 1.5L Diesel 6AT (6-Seater Captain Seats)',
+        exShowroom: 1945000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+        mileage: '18.4 km/l',
+        isVFM: false,
+        keyFeatures: ['Smooth 6-Speed Torque Converter Automatic with Paddle Shifters', 'Luxury 2nd-Row Captain Seats with Sliding & Reclining', 'Front Ventilated Seats', 'Bose Premium 8-Speaker Sound System', 'Electric SkyLight Sunroof', 'Dual Camera Dashcam', '6 Airbags & All-4 Disc Brakes']
+      }
+    ]
   }
 ];
 
