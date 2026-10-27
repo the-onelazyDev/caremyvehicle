@@ -5897,85 +5897,292 @@ export const CARS = [
       }
     ]
   },
-  {
+{
     id: 'tata-curvv',
-    name: 'Tata Curvv (ICE & EV)',
+    name: 'Tata Curvv',
     brand: 'Tata',
-    tagline: 'India’s First Mass-Market SUV Coupe with Flush Door Handles',
-    launchDate: 'September 2024',
+    tagline: 'India’s First Aerodynamic SUV Coupe with 5-Star Bharat NCAP, Flush Door Handles & Gesture Tailgate',
+    launchDate: 'September 2024 (2025 Lineup)',
     bodyType: 'SUV Coupe',
-    fuelTypes: ['Petrol', 'Diesel', 'EV'],
-    priceRange: '₹9.99 - ₹18.99 Lakh',
-    minPrice: 999000,
-    maxPrice: 1899000,
-    safetyRating: '5.0 ★ (Bharat NCAP)',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹10.00 - ₹19.00 Lakh',
+    minPrice: 999990,
+    maxPrice: 1899990,
+    safetyRating: '5.0 ★ (Bharat NCAP 5-Star - Adult 30.81/32, Child 44.83/49)',
     groundClearance: '208 mm',
-    bootSpace: '500 L',
-    waitingPeriod: '4 - 10 Weeks',
-    heroImage: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80',
-    summary: 'Striking aerodynamic coupe roofline, class-leading 500-litre boot, voice-assisted panoramic sunroof, and new 1.2L Hyperion Direct Injection turbo engine.',
+    bootSpace: '500 L (Expandable to 973 L)',
+    waitingPeriod: '4 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence.webp',
+    summary: 'The Tata Curvv is India’s breakthrough mass-market SUV Coupe, melding the commanding elevated stance of a rugged SUV with the aerodynamic sloping silhouette of a luxury coupe. Awarded a full 5-Star Bharat NCAP safety rating (scoring 30.81/32 for Adult and 44.83/49 for Child safety), it debuts cutting-edge technology including capacitive flush door handles with approach auto-deploy, voice-assisted panoramic glass sunroof with ambient mood lighting, a powered tailgate with hands-free gesture activation, and dual high-definition curved cockpit displays (12.3-inch Cinematic Infotainment by HARMAN with 9-speaker JBL acoustic sound system + 10.25-inch reconfigurable digital instrument cluster). Powertrain options include the brand-new 1.2L Hyperion Direct Injection Turbo Petrol (125 PS / 225 Nm), the refined 1.2L Revotron Turbo Petrol (120 PS / 170 Nm), and the high-torque 1.5L Kryojet Diesel (118 PS / 260 Nm), paired with either a 6-speed manual or an advanced wet-clutch 7-speed dual-clutch automatic (DCA) featuring paddle shifters.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/curvv/360',
+      format: 'webp',
+      defaultColor: 'gold-essence',
+      colors: [
+        { id: 'gold-essence', name: 'Gold Essence', hex: '#B9A593' }
+      ]
+    },
     colors: [
-      { name: 'Virtual Sunrise Blue', hex: '#0284C7', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Gold Essence', hex: '#D97706', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Pristine White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Daytona Grey', hex: '#475569', image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Flame Red', hex: '#DC2626', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' }
+      { id: 'gold-essence', name: 'Gold Essence Metallic', hex: '#B9A593', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence.webp' },
+      { id: 'glossy-carbon-black', name: 'Glossy Carbon Black', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/glossy-carbon-black.webp' },
+      { id: 'opera-blue', name: 'Opera Blue Dual Tone', hex: '#27367A', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/opera-blue.webp' },
+      { id: 'pristine-white', name: 'Pristine White Dual Tone', hex: '#ECEDEF', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/pristine-white.webp' },
+      { id: 'pure-grey', name: 'Pure Grey Dual Tone', hex: '#AAABB0', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/pure-grey.webp' },
+      { id: 'nitro-crimson', name: 'Nitro Crimson Dual Tone', hex: '#5C121E', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/nitro-crimson.webp' },
+      { id: 'flame-red', name: 'Flame Red', hex: '#E91309', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp' }
     ],
     gallery: [
-      { title: 'Coupe Roofline & Flush Handles', url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' },
-      { title: '12.3-inch Cinematic Screen & Touch AC', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Voice-Assisted Panoramic Sunroof', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Segment-Best 500L Boot', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' }
+      { title: 'Front Three-Quarter Coupe Dynamic Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/front_three_quarter.webp' },
+      { title: 'Rear Sloping Coupe Profile & Full-Width LED Tail Bar', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/rear_three_quarter.webp' },
+      { title: 'Aerodynamic Side Silhouette & High Ground Clearance', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/side_coupe_profile.webp' },
+      { title: 'Dual High-Definition Curved Digital Cockpit Dashboard', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/dashboard_cockpit.webp' },
+      { title: '12.3-inch Cinematic Touchscreen Infotainment by HARMAN', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/infotainment_touchscreen.webp' },
+      { title: 'Expansive Voice-Assisted Panoramic Glass Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/panoramic_sunroof.webp' },
+      { title: 'Ventilated Front Leatherette Executive Bucket Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/front_ventilated_seats.webp' },
+      { title: 'Rear Executive Cabin Comfort with Reclining Backrests', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/rear_executive_seats.webp' },
+      { title: 'Segment-Leading 500-Litre Deep Luggage Cargo Bay', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/spacious_500l_boot.webp' },
+      { title: 'Capacitive Smart Flush Door Handles with Welcome Light', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/flush_smart_door_handles.webp' },
+      { title: 'Bi-LED Projector Headlamps with Sequential Turn Signals', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/bi_led_projector_headlamps.webp' },
+      { title: '18-inch Aerodynamic Diamond-Cut Precision Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/gallery/aerodynamic_alloy_wheels.webp' }
     ],
     specs: {
-      engineOptions: '1.2L Revotron (120 bhp) | 1.2L Hyperion GDi (125 bhp) | 1.5L Kryojet Diesel (118 bhp)',
-      transmissions: '6-Speed Manual & 7-Speed Dual-Clutch (DCA)',
-      dimensions: '4308 mm (L) × 1810 mm (W) × 1630 mm (H)',
-      wheelbase: '2560 mm',
+      engineOptions: '1.2L Revotron Turbo (120 PS) | 1.2L Hyperion GDi Turbo (125 PS) | 1.5L Kryojet Diesel (118 PS)',
+      transmissions: '6-Speed Manual & 7-Speed Dual-Clutch Automatic (DCA) with Paddle Shifters',
+      dimensions: '4,308 mm (L) × 1,810 mm (W) × 1,630 mm (H)',
+      wheelbase: '2,560 mm',
+      groundClearance: '208 mm',
       fuelTank: '44 Litres',
-      seatingCapacity: '5 Passengers'
+      bootSpace: '500 Litres',
+      seatingCapacity: '5 Passengers',
+      turningRadius: '5.3 Metres'
     },
     variants: [
       {
         name: 'Smart 1.2 Petrol MT',
-        exShowroom: 999000,
+        exShowroom: 999990,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Revotron (120 bhp)',
-        mileage: '16.8 kmpl',
+        engine: '1.2L Revotron Turbo (120 PS)',
+        mileage: '18.1 kmpl',
         isVFM: false,
-        keyFeatures: ['6 Airbags', 'LED Headlamps & DRLs', 'Flush Door Handles', 'Drive Modes']
+        keyFeatures: ['6 Airbags Standard', 'LED Headlamps & Horizon DRLs', 'Capacitive Flush Door Handles', 'Electronic Stability Program (ESP)']
       },
       {
         name: 'Pure+ 1.2 Petrol MT',
-        exShowroom: 1099000,
+        exShowroom: 1179990,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Revotron (120 bhp)',
-        mileage: '16.8 kmpl',
+        engine: '1.2L Revotron Turbo (120 PS)',
+        mileage: '18.1 kmpl',
         isVFM: true,
-        vfmBadge: '🏆 BUDGET VALUE PICK',
-        keyFeatures: ['7-inch Touchscreen', 'Steering Mounted Controls', 'Reverse Camera', 'Wheel Covers & Roof Rails']
+        vfmBadge: '🏆 BEST VALUE MANUAL PICK',
+        keyFeatures: ['7-inch HARMAN Touchscreen with Wireless Carplay/Android Auto', 'Cruise Control', 'Reverse Camera with Dynamic Guidelines', 'Shark Fin Antenna & 16-inch Wheels']
       },
       {
-        name: 'Creative+ S 1.2 Turbo DCA',
-        exShowroom: 1399000,
+        name: 'Pure+ 1.2 Petrol DCA',
+        exShowroom: 1229990,
         fuel: 'Petrol',
         trans: 'Automatic',
-        engine: '1.2L Hyperion Direct Injection (125 bhp)',
-        mileage: '15.4 kmpl',
+        engine: '1.2L Revotron Turbo (120 PS)',
+        mileage: '17.2 kmpl',
         isVFM: false,
-        keyFeatures: ['Panoramic Sunroof', '10.25-inch Screen', 'Dual-Clutch DCA Transmission', 'Sequential LED Indicators']
+        keyFeatures: ['7-Speed Wet Dual-Clutch Automatic (DCA)', 'E-Shifter with Paddle Shifters', 'Hill Start & Descent Assist', 'Front Sliding Armrest']
       },
       {
-        name: 'Accomplished+ A Diesel DCA',
-        exShowroom: 1899000,
+        name: 'Pure+ 1.5 Diesel MT',
+        exShowroom: 1309990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L Kryojet Turbo Diesel (118 PS / 260 Nm)',
+        mileage: '22.4 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Torque Kryojet Diesel Engine', 'Multi-Drive Modes (Eco, City, Sport)', 'Rear AC Vents', 'Touch Air Conditioner Panel']
+      },
+      {
+        name: 'Creative+ 1.2 Petrol MT',
+        exShowroom: 1290990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Turbo (120 PS)',
+        mileage: '18.1 kmpl',
+        isVFM: false,
+        keyFeatures: ['10.25-inch High-Definition Cinematic Touchscreen', 'Voice-Assisted Panoramic Sunroof', '17-inch Diamond-Cut Alloy Wheels', 'Sequential Front & Rear LED Indicators']
+      },
+      {
+        name: 'Creative+ S 1.2 Petrol DCA',
+        exShowroom: 1420990,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Turbo (120 PS)',
+        mileage: '17.2 kmpl',
+        isVFM: true,
+        vfmBadge: '⭐ RECOMMENDED DCA AUTOMATIC',
+        keyFeatures: ['Panoramic Sunroof with Mood Lighting', '7-Speed Dual-Clutch DCA', '10.25-inch HARMAN Infotainment', '360° Surround View Camera with Blind View Monitor']
+      },
+      {
+        name: 'Creative+ 1.5 Diesel DCA',
+        exShowroom: 1445990,
         fuel: 'Diesel',
         trans: 'Automatic',
-        engine: '1.5L Kryojet (118 bhp)',
-        mileage: '20.5 kmpl',
+        engine: '1.5L Kryojet Turbo Diesel (118 PS)',
+        mileage: '21.5 kmpl',
         isVFM: false,
-        keyFeatures: ['Level 2 ADAS (19 Features)', 'Powered Tailgate with Gesture', 'Ventilated Seats', 'JBL 9-Speaker Audio']
+        keyFeatures: ['Segment-Exclusive Diesel DCA Automatic', 'Paddle Shifters', 'Panoramic Glass Sunroof', 'Auto Headlamps & Rain-Sensing Wipers']
+      },
+      {
+        name: 'Accomplished+ 1.2 Hyperion GDi DCA',
+        exShowroom: 1849990,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Hyperion Direct Injection Turbo (125 PS / 225 Nm)',
+        mileage: '16.8 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Performance Hyperion GDi Turbo Engine', 'Level 2 ADAS (20 Safety Features)', 'Gesture Powered Smart Tailgate', 'JBL 9-Speaker Acoustic Audio with Subwoofer']
+      },
+      {
+        name: 'Accomplished+ A 1.5 Diesel DCA',
+        exShowroom: 1899990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L Kryojet Diesel (118 PS)',
+        mileage: '21.5 kmpl',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Suite with Adaptive Cruise Control', 'Ventilated Front Executive Seats', '6-Way Power Driver Seat', 'Electronic Parking Brake with Auto Hold']
+      }
+    ]
+  },
+  {
+    id: 'tata-curvv-ev',
+    name: 'Tata Curvv EV',
+    brand: 'Tata',
+    tagline: 'India’s Premier Electric SUV Coupe with up to 585 km Range, 70 kW Ultra-Fast DC Charging & 5-Star Bharat NCAP',
+    launchDate: 'August 2024 (2025 Lineup)',
+    bodyType: 'Electric SUV Coupe',
+    fuelTypes: ['EV'],
+    priceRange: '₹17.49 - ₹21.99 Lakh',
+    minPrice: 1749000,
+    maxPrice: 2199000,
+    safetyRating: '5.0 ★ (Bharat NCAP 5-Star - Adult 30.81/32, Child 44.83/49)',
+    groundClearance: '190 mm',
+    bootSpace: '500 L + 35 L Front Frunk (535 L Total)',
+    waitingPeriod: '3 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
+    summary: 'The Tata Curvv EV spearheads India’s electric design renaissance as an aerodynamic luxury SUV Coupe built on Tata’s Acti.ev pure electric platform. Certified with a 5-Star Bharat NCAP crash safety score, the Curvv EV is offered in two liquid-cooled IP67 high-energy battery options: 45 kWh delivering 502 km certified range and a flagship 55 kWh pack delivering an astonishing 585 km single-charge driving range. Equipped with a permanent magnet synchronous motor generating up to 167 PS (123 kW) and instantaneous 215 Nm torque, propelling it from 0 to 100 km/h in just 8.6 seconds. Ultra-fast 70 kW DC charging replenishes 10% to 80% battery in 40 minutes, adding 150 km of driving range in 15 minutes. Advanced V2V (Vehicle-to-Vehicle) and V2L (Vehicle-to-Load 3.3 kW) charging technology transforms the vehicle into a mobile power bank.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/360',
+      format: 'webp',
+      defaultColor: 'pure-grey',
+      colors: [
+        { id: 'pure-grey', name: 'Pure Grey', hex: '#696A73' }
+      ]
+    },
+    colors: [
+      { id: 'pure-grey', name: 'Pure Grey Dual Tone', hex: '#696A73', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp' },
+      { id: 'empowered-oxide', name: 'Empowered Oxide Dual Tone', hex: '#BBBCB5', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp' },
+      { id: 'pristine-white', name: 'Pristine White Dual Tone', hex: '#BDBDBD', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pristine-white.webp' },
+      { id: 'virtual-sunrise', name: 'Virtual Sunrise with Black Roof', hex: '#494E74', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/virtual-sunrise.webp' },
+      { id: 'nitro-crimson', name: 'Nitro Crimson Dual Tone', hex: '#4D0F17', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/nitro-crimson.webp' },
+      { id: 'carbon-black', name: 'Carbon Black Edition', hex: '#0D0D0B', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/carbon-black.webp' }
+    ],
+    gallery: [
+      { title: 'Aerodynamic Closed Front Fascia with Continuous Horizon DRL', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_front_aerodynamic_face.webp' },
+      { title: 'Striking Aerodynamic Coupe Profile with Low Drag Coefficient', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_side_profile_coupe.webp' },
+      { title: 'Connected Full-Width LED Tail Bar with Welcome Animation', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_rear_connected_taillamp.webp' },
+      { title: 'Motorized Front Smart Charging Port with Charge Status Bar', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_charging_port_front.webp' },
+      { title: 'Digital Cockpit with Dual High-Resolution Displays', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_digital_cockpit_screens.webp' },
+      { title: '12.3-inch Cinematic HARMAN Touchscreen with In-Car Arcade', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_touchscreen_cinematic.webp' },
+      { title: 'Voice-Assisted Panoramic Glass Skyroof with Ambient Mood Light', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_panoramic_skyroof.webp' },
+      { title: 'Ventilated Front Leatherette Seats with 6-Way Power Adjustment', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_front_ventilated_seats.webp' },
+      { title: 'Rear Cabin Comfort with 2-Stage Recline & Armrest', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_rear_cabin_comfort.webp' },
+      { title: '500-Litre Boot Capacity with Powered Tailgate & Gesture Control', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_luggage_bay_500l.webp' },
+      { title: 'Aerodynamic Flush Door Handles with Approach Auto-Deploy', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_flush_handles.webp' },
+      { title: '18-inch Aero Diamond-Cut Precision Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/gallery/ev_aero_alloy_wheels.webp' }
+    ],
+    specs: {
+      engineOptions: 'Permanent Magnet Synchronous Motor (150 PS on 45 kWh / 167 PS on 55 kWh) | 215 Nm Instant Torque',
+      transmissions: 'Single-Speed Direct-Drive e-Transmission with Multi-Mode Regenerative Braking',
+      dimensions: '4,310 mm (L) × 1,810 mm (W) × 1,637 mm (H)',
+      wheelbase: '2,560 mm',
+      groundClearance: '190 mm',
+      fuelTank: 'Electric (45 kWh & 55 kWh Liquid-Cooled IP67 Lithium-Ion Batteries)',
+      bootSpace: '500 Litres + 35 Litres Frunk (535 L Total)',
+      seatingCapacity: '5 Passengers',
+      turningRadius: '5.3 Metres'
+    },
+    variants: [
+      {
+        name: 'Creative 45 (45 kWh)',
+        exShowroom: 1749000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (150 PS / 215 Nm)',
+        mileage: '502 km / charge (MIDC)',
+        isVFM: false,
+        keyFeatures: ['45 kWh Liquid-Cooled IP67 Battery', '502 km Certified Range', '10.25-inch HARMAN Touchscreen', '6 Airbags & Full ESP Suite']
+      },
+      {
+        name: 'Accomplished 45 (45 kWh)',
+        exShowroom: 1849000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (150 PS / 215 Nm)',
+        mileage: '502 km / charge (MIDC)',
+        isVFM: true,
+        vfmBadge: '🏆 BEST VALUE 45 kWh EV',
+        keyFeatures: ['Panoramic Sunroof with Ambient Mood Light', '17-inch Aero Alloy Wheels', 'Multi-Mode Regenerative Braking with Paddles', 'Horizon LED DRL with Welcome & Goodbye Sequences']
+      },
+      {
+        name: 'Accomplished+ S 45 (45 kWh)',
+        exShowroom: 1929000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (150 PS / 215 Nm)',
+        mileage: '502 km / charge (MIDC)',
+        isVFM: false,
+        keyFeatures: ['JBL Premium Audio System', '360° Surround Camera with 3D Blind View Monitor', 'Electronic Parking Brake with Auto Hold', 'Sequential LED Indicators']
+      },
+      {
+        name: 'Accomplished 55 (55 kWh)',
+        exShowroom: 1925000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (167 PS / 215 Nm)',
+        mileage: '585 km / charge (MIDC)',
+        isVFM: true,
+        vfmBadge: '⭐ LONGEST RANGE VALUE PICK',
+        keyFeatures: ['Long-Range 55 kWh Battery (585 km Range)', '167 PS Power (0-100 km/h in 8.6s)', '70 kW Fast DC Charging (10-80% in 40 mins)', 'V2L & V2V Mobile Power Bank Capability']
+      },
+      {
+        name: 'Accomplished+ S 55 (55 kWh)',
+        exShowroom: 1999000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (167 PS / 215 Nm)',
+        mileage: '585 km / charge (MIDC)',
+        isVFM: false,
+        keyFeatures: ['12.3-inch Cinematic Infotainment Screen by HARMAN', 'Panoramic Glass Sunroof', 'Ventilated Front Seats', 'Wireless Smartphone Charger & Smart Air Purifier']
+      },
+      {
+        name: 'Empowered+ 55 (55 kWh)',
+        exShowroom: 2125000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (167 PS / 215 Nm)',
+        mileage: '585 km / charge (MIDC)',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS (Adaptive Cruise Control, Lane Keep Assist, AEB)', 'Powered Tailgate with Gesture Control', 'JBL 9-Speaker Audio with Subwoofer', '18-inch Diamond-Cut Aero Alloys']
+      },
+      {
+        name: 'Empowered+ A 55 Dark Edition',
+        exShowroom: 2199000,
+        fuel: 'EV',
+        trans: 'Automatic',
+        engine: 'Electric Motor (167 PS / 215 Nm)',
+        mileage: '585 km / charge (MIDC)',
+        isVFM: false,
+        keyFeatures: ['Exclusive Oberon Black Exterior & Dark Cabin Theme', 'Level 2 ADAS Suite with Stop & Go', '6-Way Power Driver Seat with Memory', 'Arcade.ev In-Car Gaming and Video Streaming Suite']
       }
     ]
   },
@@ -5983,70 +6190,186 @@ export const CARS = [
     id: 'xuv-3xo',
     name: 'Mahindra XUV 3XO',
     brand: 'Mahindra',
-    tagline: 'Segment-First Panoramic Sunroof & Level 2 ADAS under 15L',
-    launchDate: 'May 2024',
+    tagline: 'Segment-Disrupting Compact SUV with Panoramic Skyroof, Dual-Zone AC, Level 2 ADAS & 130 PS TGDi Turbo',
+    launchDate: 'May 2024 (2025 Lineup)',
     bodyType: 'Compact SUV',
     fuelTypes: ['Petrol', 'Diesel'],
-    priceRange: '₹7.49 - ₹15.49 Lakh',
-    minPrice: 749000,
+    priceRange: '₹7.79 - ₹15.49 Lakh',
+    minPrice: 779000,
     maxPrice: 1549000,
-    safetyRating: '5.0 ★ (Global NCAP)',
+    safetyRating: '5.0 ★ (Engineered for 5-Star Bharat NCAP Standards with 6 Airbags & 4 Disc Brakes Standard)',
     groundClearance: '201 mm',
-    bootSpace: '364 L',
-    waitingPeriod: '4 - 12 Weeks',
-    heroImage: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
-    summary: 'Massive upgrade over XUV300 with segment-first skyroof, Level 2 ADAS, 360 camera, electronic parking brake, and ultra-punchy 130 bhp mStallion TGDi engine.',
+    bootSpace: '364 L (Deep Luggage Bay)',
+    waitingPeriod: '4 - 10 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/citrine-yellow.webp',
+    summary: 'The Mahindra XUV 3XO thoroughly disrupts India’s sub-4 metre compact SUV category by democratizing luxury features previously reserved for vehicles twice its price. It introduces the segment’s first and largest Panoramic Skyroof, full Level 2 ADAS (featuring radar and camera systems with 10 proactive safety features like adaptive cruise control with stop-and-go, lane keep assist, and autonomous emergency braking), 360-degree surround-view camera with blind view monitor, and segment-exclusive dual-zone automatic climate control. Engine prowess is class-leading: 1.2L mStallion TGDi Turbo Petrol churning out 130 PS and 230 Nm (fastest in segment: 0-60 km/h in 4.5s), 1.2L TCMPFi Turbo Petrol (111 PS / 200 Nm), and 1.5L CRDe Turbo Diesel (117 PS / 300 Nm). Transmission choices include a smooth 6-speed manual and a world-renowned AISIN 6-speed torque converter automatic.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/360',
+      format: 'webp',
+      defaultColor: 'citrine-yellow',
+      colors: [
+        { id: 'citrine-yellow', name: 'Citrine Yellow', hex: '#DDCD3D' }
+      ]
+    },
     colors: [
-      { name: 'Citrine Yellow', hex: '#EAB308', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Stealth Black', hex: '#0F172A', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Deep Forest', hex: '#166534', image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Everest White', hex: '#F8FAFC', image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80' }
+      { id: 'citrine-yellow', name: 'Citrine Yellow Metallic', hex: '#DDCD3D', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/citrine-yellow.webp' },
+      { id: 'dune-beige', name: 'Dune Beige', hex: '#9D987B', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/dune-beige.webp' },
+      { id: 'everest-white', name: 'Everest White', hex: '#E7E5E5', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/everest-white.webp' },
+      { id: 'stealth-black', name: 'Stealth Black', hex: '#191A18', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/stealth-black.webp' },
+      { id: 'deep-forest', name: 'Deep Forest', hex: '#282C29', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/deep-forest.webp' },
+      { id: 'nebula-blue', name: 'Nebula Blue', hex: '#002038', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/nebula-blue.webp' },
+      { id: 'tango-red', name: 'Tango Red Dual Tone', hex: '#E20021', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/tango-red.webp' },
+      { id: 'galaxy-grey', name: 'Galaxy Grey', hex: '#666A72', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/galaxy-grey.webp' },
+      { id: 'jeans-blue', name: 'Jeans Blue Premium', hex: '#041120', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/jeans-blue.webp' }
     ],
     gallery: [
-      { title: 'Futuristic Front Grille & DRLs', url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Panoramic Skyroof in Sub-4M Segment', url: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
-      { title: 'Twin 10.25-inch Digital Screens', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80' },
-      { title: '364L Deep Boot Space', url: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80' }
+      { title: 'Commanding Front Fascia with Piano Black Grille & LED DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/commanding_front_fascia.webp' },
+      { title: 'Infinity Full-Width Connected LED Tail Lamp System', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/infinity_led_tail_lamp.webp' },
+      { title: 'Bold Muscular Rear Stance & Skid Plates', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/bold_rear_stance.webp' },
+      { title: 'Segment-First Expansive Panoramic Skyroof', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/skyroof_panoramic_sunroof.webp' },
+      { title: 'Dual 10.25-inch High-Definition Cockpit Displays', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/dual_10_25_inch_screens.webp' },
+      { title: 'Adrenox Connected Touchscreen Infotainment System', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/adrenox_infotainment.webp' },
+      { title: 'Ergonomic Front Bucket Seats with Dual-Tone Leatherette', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/front_ergonomic_seats.webp' },
+      { title: 'Spacious Rear Passenger Cabin with Armrest & Cup Holders', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/rear_seat_comfort_armrest.webp' },
+      { title: 'Deep 364-Litre Luggage Bay with 60:40 Split Fold Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/deep_364l_luggage_bay.webp' },
+      { title: 'Level 2 ADAS Radar & Camera Sensor Suite', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/level_2_adas_radar.webp' },
+      { title: '17-inch Diamond-Cut Precision Dual-Tone Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/diamond_cut_alloy_wheels.webp' },
+      { title: 'Harman Kardon 7-Speaker Premium Acoustic Audio System', url: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/gallery/harman_kardon_premium_audio.webp' }
     ],
     specs: {
-      engineOptions: '1.2L Turbo TCMPFi (111 bhp) | 1.2L TGDi Turbo (130 bhp) | 1.5L CRDe Diesel (117 bhp)',
-      transmissions: '6-Speed Manual & 6-Speed Aisin Torque Converter AT',
-      dimensions: '3990 mm (L) × 1821 mm (W) × 1647 mm (H)',
-      wheelbase: '2600 mm',
+      engineOptions: '1.2L TCMPFi Turbo (111 PS) | 1.2L mStallion TGDi Turbo (130 PS) | 1.5L CRDe Turbo Diesel (117 PS)',
+      transmissions: '6-Speed Manual & 6-Speed AISIN Torque Converter Automatic & 6-Speed AutoSHIFT+',
+      dimensions: '3,990 mm (L) × 1,821 mm (W) × 1,647 mm (H)',
+      wheelbase: '2,600 mm (Segment Largest)',
+      groundClearance: '201 mm',
       fuelTank: '42 Litres',
-      seatingCapacity: '5 Passengers'
+      bootSpace: '364 Litres',
+      seatingCapacity: '5 Passengers',
+      turningRadius: '5.1 Metres'
     },
     variants: [
       {
         name: 'MX1 1.2 Petrol MT',
-        exShowroom: 749000,
+        exShowroom: 779000,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Turbo (111 bhp)',
+        engine: '1.2L Turbo TCMPFi (111 PS / 200 Nm)',
         mileage: '18.89 kmpl',
         isVFM: false,
-        keyFeatures: ['6 Airbags Standard', 'ESC & All 4 Discs', 'Power Windows All 4', 'LED DRLs']
+        keyFeatures: ['6 Airbags Standard Across All Variants', 'All 4 Disc Brakes with ABS + EBD + ESP', 'Front & Rear Power Windows', 'Halogen Projector Headlamps & LED Indicators']
+      },
+      {
+        name: 'MX2 Pro 1.2 Petrol MT',
+        exShowroom: 899000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo TCMPFi (111 PS / 200 Nm)',
+        mileage: '18.89 kmpl',
+        isVFM: false,
+        keyFeatures: ['Single-Pane Electric Sunroof', '10.25-inch Touchscreen Infotainment', '4 Speakers', 'Steering-Mounted Audio Controls']
+      },
+      {
+        name: 'MX2 Diesel 1.5 MT',
+        exShowroom: 936000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L CRDe Turbo Diesel (117 PS / 300 Nm)',
+        mileage: '20.6 kmpl',
+        isVFM: false,
+        keyFeatures: ['Punchy 300 Nm Torque Diesel Engine', '6 Airbags', 'All 4 Disc Brakes', 'Electronic Stability Program (ESP)']
+      },
+      {
+        name: 'MX3 Pro 1.2 Petrol MT',
+        exShowroom: 999000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo TCMPFi (111 PS / 200 Nm)',
+        mileage: '18.89 kmpl',
+        isVFM: false,
+        keyFeatures: ['Single-Pane Sunroof', 'Wireless Android Auto & Apple CarPlay', 'Full LED Projector Headlamps & Infinity LED Tail Lamp', 'Rear Camera with Guidelines']
       },
       {
         name: 'AX5 1.2 Petrol MT',
-        exShowroom: 1069000,
+        exShowroom: 999900,
         fuel: 'Petrol',
         trans: 'Manual',
-        engine: '1.2L Turbo (111 bhp)',
+        engine: '1.2L Turbo TCMPFi (111 PS / 200 Nm)',
         mileage: '18.89 kmpl',
         isVFM: true,
-        vfmBadge: '🏆 BEST VALUE PICK',
-        keyFeatures: ['Single-Pane Sunroof', 'Twin 10.25-inch Screens', 'Dual-Zone Climate Control', '16-inch Diamond Alloys']
+        vfmBadge: '🏆 BEST VALUE ALL-ROUND PICK',
+        keyFeatures: ['Dual-Zone Fully Automatic Temperature Control (FATC)', 'Twin 10.25-inch Screens (Infotainment + Digital Cluster)', '16-inch Diamond-Cut Alloy Wheels', 'Electric Sunroof & Wireless Phone Charger']
       },
       {
-        name: 'AX7L TGDi AT',
-        exShowroom: 1549000,
+        name: 'AX5 1.2 Petrol AT (TC)',
+        exShowroom: 1188000,
         fuel: 'Petrol',
         trans: 'Automatic',
-        engine: '1.2L Direct Injection (130 bhp)',
+        engine: '1.2L Turbo TCMPFi (111 PS / 200 Nm)',
+        mileage: '17.96 kmpl',
+        isVFM: true,
+        vfmBadge: '⭐ RECOMMENDED AUTOMATIC PICK',
+        keyFeatures: ['6-Speed AISIN Torque Converter Automatic', 'Dual-Zone Climate Control', 'Adrenox Connect with 80+ Connected Features', 'Electric Sunroof & Rear AC Vents']
+      },
+      {
+        name: 'AX5 1.5 Diesel MT',
+        exShowroom: 1139500,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L CRDe Turbo Diesel (117 PS / 300 Nm)',
+        mileage: '20.6 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Efficiency 300 Nm Diesel Engine', 'Twin 10.25-inch Screens', 'Dual-Zone Climate Control', 'R16 Diamond Alloys & Cruise Control']
+      },
+      {
+        name: 'AX5L 1.2 TGDi MT',
+        exShowroom: 1202500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L mStallion TGDi Direct Injection Turbo (130 PS / 230 Nm)',
+        mileage: '18.2 kmpl',
+        isVFM: false,
+        keyFeatures: ['130 PS Direct-Injection Turbo Engine (0-60 in 4.5s)', 'Level 2 ADAS (10 Proactive Safety Features)', '360° Surround View Camera with Blind View Monitor', 'Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'AX5L 1.2 TGDi AT (TC)',
+        exShowroom: 1327500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L mStallion TGDi Direct Injection Turbo (130 PS / 230 Nm)',
         mileage: '17.96 kmpl',
         isVFM: false,
-        keyFeatures: ['Panoramic Skyroof', 'Level 2 ADAS Suite', 'Harman Kardon Audio', '360° Camera & Blind View']
+        keyFeatures: ['Segment-Fastest TGDi Engine with 6-Speed AISIN AT', 'Level 2 ADAS Suite', '360° Surround View Camera', 'Auto-Dimming IRVM & Electronic Parking Brake']
+      },
+      {
+        name: 'AX7 1.2 TGDi MT Dual Tone',
+        exShowroom: 1219500,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L mStallion TGDi Turbo (130 PS / 230 Nm)',
+        mileage: '18.2 kmpl',
+        isVFM: false,
+        keyFeatures: ['Expansive Panoramic Skyroof (Largest in Sub-4M Segment)', 'Harman Kardon 7-Speaker Premium Audio with Subwoofer', '17-inch Diamond-Cut Alloy Wheels', 'Leatherette Upholstery & Soft-Touch Dashboard']
+      },
+      {
+        name: 'AX7L 1.2 TGDi AT Dual Tone',
+        exShowroom: 1503500,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L mStallion TGDi Turbo (130 PS / 230 Nm)',
+        mileage: '17.96 kmpl',
+        isVFM: false,
+        keyFeatures: ['Panoramic Skyroof + Level 2 ADAS Flagship Combo', '6-Speed AISIN AT', 'Harman Kardon Premium Sound System', '360° Camera & Front Parking Sensors']
+      },
+      {
+        name: 'AX7L 1.5 Diesel MT Dual Tone',
+        exShowroom: 1407500,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L CRDe Turbo Diesel (117 PS / 300 Nm)',
+        mileage: '20.6 kmpl',
+        isVFM: false,
+        keyFeatures: ['Flagship Panoramic Skyroof with 300 Nm Diesel Torque', 'Harman Kardon Premium Audio', 'Level 2 ADAS Suite', '17-inch Diamond-Cut Alloys & Dual-Tone Finish']
       }
     ]
   },
