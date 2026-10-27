@@ -4697,6 +4697,173 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-safari',
+    name: 'Tata Safari',
+    brand: 'Tata',
+    tagline: 'Flagship 6 & 7-Seater Luxury SUV with Land Rover-Derived OMEGARC Architecture, 5-Star Bharat NCAP & Level 2+ ADAS',
+    launchDate: 'Updated 2025 (Facelift Persona Lineup)',
+    bodyType: 'SUV',
+    fuelTypes: ['Diesel'],
+    priceRange: '₹15.49 - ₹27.34 Lakh',
+    minPrice: 1549990,
+    maxPrice: 2734000,
+    safetyRating: '5.0 ★ (Highest Bharat NCAP Crash Score: 30.08/32 Adult, 44.5/49 Child)',
+    groundClearance: '205 mm',
+    bootSpace: '420 L (3rd Row Folded) / 68 L (All Rows Up)',
+    waitingPeriod: '4 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/cosmic-gold/1.webp',
+    summary: 'The Tata Safari is Tata Motors’ flagship 6 and 7-seater luxury SUV, engineered on the legendary Land Rover D8-derived OMEGARC architecture and crowned with the highest safety rating in Indian history (5-Star Bharat NCAP). Powered by the potent 2.0L Kryotec Turbo Diesel engine producing 170 PS and 350 Nm, it offers a 6-speed manual or a 6-speed torque converter automatic with JLR-inspired e-shifter and paddle shifters. The opulent cabin boasts ventilated 1st & 2nd row captain seats with winged comfort headrests, a 36.9 cm (12.3-inch) Harman Neo QLED cinematic touchscreen, a 26.03 cm configurable digital driver cockpit with full navigation display, 10-speaker JBL audio with subwoofer and Dolby Atmos, voice-assisted panoramic sunroof with ambient mood lighting, gesture-controlled powered tailgate, bejewelled terrain response selector, and Level 2+ ADAS with 12 autonomous collision-mitigation features.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'cosmic-gold',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/safari/360'
+    },
+    colors: [
+      { id: 'cosmic-gold', name: 'Cosmic Gold Dual Tone (Signature Hero Shade)', hex: '#CAAC7C', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/cosmic-gold/1.webp' },
+      { id: 'frost-white', name: 'Stellar Frost Dual Tone (Pearl White)', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/frost-white/1.webp' },
+      { id: 'galactic-sapphire', name: 'Galactic Sapphire Dual Tone (Deep Royal Blue)', hex: '#172F5E', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/galactic-sapphire/1.webp' },
+      { id: 'stardust-ash', name: 'Stardust Ash Dual Tone (Smoky Grey)', hex: '#38393B', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/stardust-ash/1.webp' },
+      { id: 'supernova-copper', name: 'Supernova Copper Dual Tone (Burnt Sunset)', hex: '#CA7F6A', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/supernova-copper/1.webp' },
+      { id: 'lunar-slate', name: 'Lunar Slate Dual Tone (Pebble Grey)', hex: '#8A8B8F', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/lunar-slate/1.webp' },
+      { id: 'oberon-black', name: 'Oberon Black (Dark Edition)', hex: '#1A1D20', image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/oberon-black/1.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero Flagship Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/cosmic-gold/1.webp' },
+      { label: 'Cinematic Neo QLED Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/infotainment.webp' },
+      { label: 'Ventilated Captain Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/ventilated_seats.webp' },
+      { label: 'Panoramic Sky Lounge', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/panoramic_sunroof.webp' }
+    ],
+    gallery: [
+      { title: '36.9 cm (12.3-inch) Cinematic Harman Neo QLED Touchscreen Infotainment with Wireless Smartphone Mirroring', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/infotainment.webp' },
+      { title: '26.03 cm (10.25-inch) High-Definition Digital Instrument Cluster with Full Screen Navigation Map View', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/digital_cluster.webp' },
+      { title: 'Ventilated 1st and 2nd Row Executive Captain Seats with Winged Headrests and Multi-Stage Cooling', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/ventilated_seats.webp' },
+      { title: 'Bejewelled Rotary Terrain Response Selector with Integrated Digital Color Display Modes (Normal, Rough, Wet)', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/terrain_response.webp' },
+      { title: 'Voice-Assisted Panoramic Sky Lounge Sunroof with Multi-Color Ambient Mood Lighting Strips', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/panoramic_sunroof.webp' },
+      { title: 'JLR-Inspired Command E-Shifter with Ergonomic Shift-by-Wire Technology and Steering Paddle Shifters', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/e_shifter.webp' },
+      { title: 'Advanced Level 2+ ADAS Safety Suite with 12 Autonomous Driver Assistance Features and Adaptive Cruise', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/adas_safety.webp' },
+      { title: 'Connected Full-Width Signature LED Taillamps with Dynamic Welcome and Goodbye Animation Sequences', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/led_tail_lamps.webp' },
+      { title: 'Bi-LED Projector Headlamps with End-to-End Daytime Running Lamps and Sequential Turn Indicators', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/bi_led_headlamps.webp' },
+      { title: '10 JBL Audiophile Sound System with Dedicated Subwoofer and Harman Acoustic Optimization', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/jbl_audio.webp' },
+      { title: 'Smart Gesture-Controlled Hands-Free Electric Tailgate with Obstacle Detection Anti-Pinch', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/smart_tailgate.webp' },
+      { title: 'Luxurious 3rd Row Theater Seating with Dedicated Blower AC Controls, Cup Holders and Fast USB Ports', url: 'https://ik.imagekit.io/2908vvlod/cars/safari/gallery/third_row_seats.webp' }
+    ],
+    specs: {
+      engineOptions: '2.0L Kryotec Turbocharged Diesel Engine (170 PS / 350 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed Torque Converter Automatic with E-Shifter & Paddle Shifters',
+      dimensions: '4668 mm (L) × 1894 mm (W) × 1795 mm (H)',
+      wheelbase: '2741 mm',
+      fuelTank: '50 Litres',
+      seatingCapacity: '6 or 7 Passengers (Captain / Bench Options)'
+    },
+    variants: [
+      {
+        name: 'Smart 2.0 Diesel 6MT (7S)',
+        exShowroom: 1549990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.30 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Program (ESP) with Hill Hold', 'All-4 Disc Brakes', 'Tilt & Telescopic Steering with Illuminated Logo']
+      },
+      {
+        name: 'Pure 2.0 Diesel 6MT (7S)',
+        exShowroom: 1699990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.30 kmpl',
+        isVFM: false,
+        keyFeatures: ['10.25-inch High-Definition Digital Cluster', '26.03 cm Touchscreen Infotainment', 'Reverse Parking Camera', 'Electrically Adjustable ORVMs']
+      },
+      {
+        name: 'Pure+ 2.0 Diesel 6MT (7S)',
+        exShowroom: 1749990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.30 kmpl',
+        isVFM: false,
+        keyFeatures: ['Wireless Android Auto & Apple CarPlay', 'Cruise Control', '17-inch Alloy Wheels', 'Shark Fin Antenna']
+      },
+      {
+        name: 'Pure+ S Sunroof 2.0 Diesel 6MT (7S)',
+        exShowroom: 1849990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.30 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BUDGET VALUE PICK',
+        keyFeatures: ['Voice-Assisted Panoramic Sunroof with Mood Lighting', 'Rain Sensing Wipers', 'Auto Headlamps', 'Multi Drive Modes (Eco, City, Sport)']
+      },
+      {
+        name: 'Adventure 2.0 Diesel 6MT (7S)',
+        exShowroom: 1999990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.30 kmpl',
+        isVFM: false,
+        keyFeatures: ['18-inch Diamond Cut Alloys', 'Terrain Response Modes (Normal, Rough, Wet)', 'Push Button Start/Stop', 'Leatherette Upholstery']
+      },
+      {
+        name: 'Adventure+ 2.0 Diesel 6AT (7S)',
+        exShowroom: 2249990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER AUTOMATIC PICK',
+        keyFeatures: ['6-Speed Automatic with JLR E-Shifter & Paddle Shifters', '360° 3D Surround View Camera', 'Blind View Monitor', 'Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'Adventure+ A (ADAS) 2.0 Diesel 6AT (7S)',
+        exShowroom: 2349990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🛡️ ADAS TECH VALUE PICK',
+        keyFeatures: ['Level 2+ ADAS Safety Suite with 12 Radar Features', 'Adaptive Cruise Control with Stop & Go', 'Autonomous Emergency Braking', 'Rear Cross Traffic Alert']
+      },
+      {
+        name: 'Accomplished 2.0 Diesel 6AT (7S)',
+        exShowroom: 2509990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['36.9 cm Harman Neo QLED Touchscreen', 'Ventilated 1st Row Seats', 'Voice-Assisted Dual-Zone Automatic Climate Control', '10-Speaker JBL Audio System']
+      },
+      {
+        name: 'Accomplished+ 6S Captain Seats 2.0 Diesel 6AT',
+        exShowroom: 2669990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 6-SEATER LUXURY FLAGSHIP',
+        keyFeatures: ['Ventilated 2nd Row Captain Seats with Winged Headrests', 'Gesture Powered Tailgate', '7 Airbags (Knee Airbag)', 'Emergency Call & Breakdown Assistance']
+      },
+      {
+        name: 'Accomplished+ Dark Edition 6S 2.0 Diesel 6AT',
+        exShowroom: 2734000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['Exclusive Oberon Black Finish with R19 Blackstone Alloys', 'Carnelian Red & Piano Black Dark Theme Interior', 'Top-End Level 2+ ADAS Suite & JBL 10-Speaker Acoustic Audio']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
