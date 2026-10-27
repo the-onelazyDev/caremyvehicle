@@ -1,0 +1,150 @@
+{
+  "id": "vw-tiguan-r-line",
+  "name": "Volkswagen Tiguan R-Line",
+  "brand": "Volkswagen",
+  "tagline": "All-New German CBU Performance SUV with 204 PS 2.0L TSI 4MOTION, DCC Pro, 38.1 cm Display & 21 Level-2 ADAS Features",
+  "launchDate": "2025 (All-New Tiguan R-Line)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹47.11 Lakh",
+  "minPrice": 4711013,
+  "maxPrice": 4711013,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags + 21 Level-2 ADAS)",
+  "groundClearance": "191 mm",
+  "bootSpace": "652 Litres",
+  "waitingPeriod": "3 - 6 Weeks",
+  "summary": "Imported as a full German CBU on the MQB evo platform, the all-new Volkswagen Tiguan R-Line delivers 204 PS & 320 Nm from its 2.0L TSI EVO engine paired with a 7-speed DSG and 4MOTION all-wheel drive, Dynamic Chassis Control (DCC Pro) with two-valve adaptive dampers, R-Line sport seats with pneumatic massage, a massive 38.1 cm (15-inch) infotainment screen, Head-Up Display, 19-inch Coventry diamond-turned alloys, and 9 airbags with 21 Level-2 ADAS features.",
+  "colors": [
+    {
+      "id": "cipressino-green-metallic",
+      "name": "Cipressino Green Metallic",
+      "hex": "#414944",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguna-R-Line-Cipressino-Green-Metallic-Limbo.png"
+    },
+    {
+      "id": "persimmon-red-metallic",
+      "name": "Persimmon Red Metallic",
+      "hex": "#9E2B25",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguan-R-Line-Persimmon-Red-Metallic-Limbo.png"
+    },
+    {
+      "id": "nightshade-blue-metallic",
+      "name": "Nightshade Blue Metallic",
+      "hex": "#15568A",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguan-R-line-Nightshade-Blue-Metallic-Limbo.png"
+    },
+    {
+      "id": "oryx-white-pearl",
+      "name": "Oryx White Mother of Pearl Effect",
+      "hex": "#F2F4F5",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguan-R-Line-Oryx-White-Mother-of-Pearl-Limbo.png"
+    },
+    {
+      "id": "oyster-silver-metallic",
+      "name": "Oyster Silver Metallic",
+      "hex": "#A1AEB6",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguan-R-Line-Oyster-Silver-Metallic-Limbo.png"
+    },
+    {
+      "id": "grenadilla-black-metallic",
+      "name": "Grenadilla Black Metallic",
+      "hex": "#23252A",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tiguan-R-Line-Grenadilla-Black-Metallic-Limbo-New.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "tiguan-r-line-hero",
+      "title": "All-New Volkswagen Tiguan R-Line German Performance SUV",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/tiguan-r-line-banner-image?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "sporty-r-theme-design",
+      "title": "Signature R-Line Bumpers, Glossy Black Grille & Aerodynamic Stance",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/sporty-r-theme?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTgwMCZoZWk9ODAwJmFsaWduPTAuMDAsMC4wMCZiZmM9b2ZmJjk1MWI="
+    },
+    {
+      "id": "illuminated-light-bands",
+      "title": "IQ.LIGHT HD Matrix Headlamps with Illuminated Front & Rear Light Bands",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/light-bands-with-lightlamps?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTc1MiZoZWk9NzUyJmFsaWduPTAuMDAsMC4wMCZiZmM9b2ZmJmJmMmI="
+    },
+    {
+      "id": "coventry-19-inch-alloys",
+      "title": "R19 Coventry Diamond-Turned Alloy Wheels",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/alloy-wheels-1?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTgwMCZoZWk9ODAwJmFsaWduPTAuMDAsMC4wMCZiZmM9b2ZmJjk1MWI="
+    },
+    {
+      "id": "infotainment-381cm-display",
+      "title": "Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment-system-4?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+      "id": "digital-cockpit-pro",
+      "title": "26.04 cm Digital Cockpit Pro & Windshield Head-Up Display (HUD)",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/digital-cock-pit-cover-image?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+      "id": "ambient-lighting-30-color",
+      "title": "30-Colour Customizable R-Line Dashboard & Door Ambient Lighting",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/ambient-lighting-cover-images?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+      "id": "r-line-massage-sport-seats",
+      "title": "R-Line ErgoActive Sport Seats with Pneumatic Massage & Lumbar Support",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/massage-seat?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    },
+    {
+      "id": "panoramic-sunroof-tiguan",
+      "title": "Expansive Tilting & Sliding Panoramic Glass Sunroof",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-panaromic?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    },
+    {
+      "id": "dcc-pro-driving-modes",
+      "title": "DCC Pro Adaptive Chassis Control & Driving Experience Control Dial",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/dcc-driving-mode-selection?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    },
+    {
+      "id": "level2-adas-21-features",
+      "title": "21 Level-2 ADAS Autonomous Driving Assistance Features",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/21-level-2adas-image?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    },
+    {
+      "id": "nine-airbags-euro-ncap",
+      "title": "9 Airbags Standard & 5-Star Euro NCAP Safety Architecture",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/9-air-bags-standard?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "2.0L TSI EVO Turbo Petrol (204 PS @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+    ],
+    "transmissions": [
+      "7-Speed DSG Dual-Clutch Automatic with 4MOTION All-Wheel Drive & DCC Pro"
+    ],
+    "dimensions": "4539 mm L × 1859 mm W × 1656 mm H",
+    "wheelbase": "2680 mm",
+    "fuelTank": "55 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "R-Line 2.0L TSI 4MOTION DSG (CBU)",
+      "exShowroom": 4711013,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4MOTION)",
+      "engine": "2.0L TSI EVO (204 PS)",
+      "mileage": "12.58 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Fully-Loaded German CBU Flagship",
+      "keyFeatures": [
+        "204 PS / 320 Nm 2.0L TSI EVO with 7-Speed DSG, 4MOTION AWD & DCC Pro Adaptive Suspension",
+        "9 Airbags, 21 Level-2 ADAS Features, Park Assist Plus & 5-Star Euro NCAP Rating",
+        "Massive 38.1 cm (15-inch) Infotainment, 26.04 cm Digital Cockpit Pro & Head-Up Display",
+        "R-Line Sport Seats with Pneumatic 10-Chamber Massage, 3-Zone Climatronic AC & 30-Color Ambient Lighting",
+        "R19 Coventry Diamond-Turned Alloys, Illuminated Front/Rear Light Bands & Panoramic Sunroof"
+      ]
+    }
+  ]
+}

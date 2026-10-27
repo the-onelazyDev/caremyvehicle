@@ -1,0 +1,270 @@
+{
+  "id": "vw-virtus",
+  "name": "Volkswagen Virtus",
+  "brand": "Volkswagen",
+  "tagline": "India's #1 Selling 5-Star Global NCAP Performance Sedan with 150 PS 1.5L TSI EVO DSG, 521L Boot & Electric Ventilated Seats",
+  "launchDate": "2025 (Virtus Chrome & GT Plus Sport)",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹10.71 - ₹19.20 Lakh",
+  "minPrice": 1070900,
+  "maxPrice": 1919900,
+  "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+  "groundClearance": "179 mm",
+  "bootSpace": "521 Litres",
+  "waitingPeriod": "2 - 5 Weeks",
+  "summary": "The Volkswagen Virtus is India's highest-selling premium mid-size sedan, pairing razor-sharp German driving dynamics and a 5-Star Global NCAP safety rating with a 4561 mm fastback silhouette, 179 mm ground clearance, 521-litre boot space, electric sunroof, 6-way power-adjustable ventilated front seats, subwoofer audio, and a choice between the 115 PS 1.0L TSI and the 150 PS 1.5L TSI EVO with 7-speed DSG in Chrome or blacked-out GT Plus Sport personas.",
+  "colors": [
+    {
+      "id": "wild-cherry-red",
+      "name": "Wild Cherry Red Metallic",
+      "hex": "#8C1F24",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Wild-Cherry-Red.png"
+    },
+    {
+      "id": "lava-blue",
+      "name": "Lava Blue Metallic",
+      "hex": "#0474B0",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Lava-Blue.png"
+    },
+    {
+      "id": "rising-blue",
+      "name": "Rising Blue Metallic",
+      "hex": "#15568A",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Rising-Blue.png"
+    },
+    {
+      "id": "avocado-pearl",
+      "name": "Avocado Pearl (Anniversary Edition)",
+      "hex": "#4A4A45",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/virtus-avacadopearl-colour-image.png"
+    },
+    {
+      "id": "carbon-steel-grey-matte",
+      "name": "Carbon Steel Grey Matte",
+      "hex": "#36383C",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Carbon-Steel-Grey-Matte.png"
+    },
+    {
+      "id": "deep-black-pearl",
+      "name": "Deep Black Pearl",
+      "hex": "#101010",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Deep-Black-Pearl.png"
+    },
+    {
+      "id": "carbon-steel-grey",
+      "name": "Carbon Steel Grey Metallic",
+      "hex": "#485054",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Carbon-Steel-Grey.png"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F2F5EE",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Candy-white.png"
+    },
+    {
+      "id": "reflex-silver",
+      "name": "Reflex Silver Metallic",
+      "hex": "#A6ABAA",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Virtus-Sport-Reflex-Silver.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "virtus-gt-plus-sport-hero",
+      "title": "Volkswagen Virtus GT Plus Sport with Glossy Black Spoiler & Alloys",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-gt-sport-intro?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xMjgwJmJmYz1vZmYmNzU0YQ=="
+    },
+    {
+      "id": "virtus-chrome-hero",
+      "title": "Volkswagen Virtus Chrome Edition Executive Sedan Profile",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-hero-banner?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "virtus-gt-line-exterior",
+      "title": "Virtus GT Line 1.0L TSI with Dark Chrome & Black Styling Pack",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-gt-line-intro?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xMjgwJmJmYz1vZmYmNzU0YQ=="
+    },
+    {
+      "id": "sharp-shoulder-line",
+      "title": "Timeless German Fastback Silhouette & Sharp Double Character Line",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-sharp-shoulder-line?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "exterior-gt-badging",
+      "title": "Signature GT Grille Badging, Red Brake Calipers & R16 Razor Black Alloys",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/exterior-layer-image?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTU0MCZoZWk9NTQwJmFsaWduPTAuMDAsMC4wMCZiZmM9b2ZmJmRjNWQ="
+    },
+    {
+      "id": "virtus-endurance-record",
+      "title": "NATRAX 24-Hour Endurance Record Holder – Proven German Engineering",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-endurance-1920x1080-2?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0yODgwJmJmYz1vZmYmOGNiYg=="
+    },
+    {
+      "id": "gt-sport-interior-cabin",
+      "title": "All-Black GT Sport Cabin with Red Ambient Lighting & Aluminium Pedals",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/interior-image?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "electric-ventilated-leather-seats",
+      "title": "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-leather-seats?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "dsg-7speed-transmission",
+      "title": "Lightning-Fast 7-Speed DSG Dual-Clutch Automatic with Paddle Shifters",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-7-speed-dsg?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "wireless-charging-infotainment",
+      "title": "25.65 cm VW Play Touchscreen & Wireless Smartphone Charging",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-wireless-charging?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "climatronic-touch-ac",
+      "title": "Smart Touch Climatronic Auto AC & 20.32 cm Digital Cockpit",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-ac?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "six-airbags-5star-gncap",
+      "title": "5-Star Global NCAP Safety with 6 Airbags & 40+ Safety Features",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-airbags?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+      "1.5L TSI EVO Turbo Petrol with Active Cylinder Management (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission",
+      "6-Speed Torque Converter Automatic (1.0L TSI)",
+      "7-Speed DSG Dual-Clutch Automatic (1.5L TSI EVO)"
+    ],
+    "dimensions": "4561 mm L × 1752 mm W × 1507 mm H",
+    "wheelbase": "2651 mm",
+    "fuelTank": "45 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Comfortline 1.0L TSI MT",
+      "exShowroom": 1070900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.80 kmpl",
+      "isVFM": true,
+      "vfmBadge": "5-Star German Sedan Entry",
+      "keyFeatures": [
+        "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety Standard",
+        "LED Headlamps with DRLs, 179 mm Ground Clearance & 521L Boot",
+        "17.78 cm Touchscreen with Apple CarPlay/Android Auto & 8 Speakers"
+      ]
+    },
+    {
+      "name": "Highline 1.0L TSI MT",
+      "exShowroom": 1350900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.80 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "25.65 cm (10.1-inch) VW Play Touchscreen with Wireless App-Connect",
+        "R16 Razor Alloy Wheels, Rear View Camera, Cruise Control & Wireless Charger",
+        "Smart Touch Climatronic Auto AC & Cornering Front Fog Lamps"
+      ]
+    },
+    {
+      "name": "Highline Plus 1.0L TSI MT",
+      "exShowroom": 1390900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.80 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof, 20.32 cm Digital Cockpit & KESSY Keyless Entry",
+        "Auto Headlamps, Rain-Sensing Wipers & Auto-Dimming IRVM"
+      ]
+    },
+    {
+      "name": "GT Line 1.0L TSI MT",
+      "exShowroom": 1434900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.80 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Blacked-Out Sedan",
+      "keyFeatures": [
+        "Blacked-Out R16 Razor Alloys, Dark Chrome Grille, Glossy Black Spoiler & ORVMs",
+        "Electric Sunroof, Red Ambient Cabin Lighting & Aluminium Pedals",
+        "25.65 cm VW Play Touchscreen + 20.32 cm Digital Cockpit"
+      ]
+    },
+    {
+      "name": "GT Line 1.0L TSI AT",
+      "exShowroom": 1524900,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.67 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Automatic Value Pick",
+      "keyFeatures": [
+        "6-Speed Torque Converter Automatic with Steering Paddle Shifters",
+        "Blacked-Out GT Line Exterior Package + Electric Sunroof",
+        "6 Airbags, Hill Hold Control & Wireless App-Connect"
+      ]
+    },
+    {
+      "name": "Topline 1.0L TSI AT",
+      "exShowroom": 1634900,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.67 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+        "Electric Sunroof, Amplifier + Subwoofer Sound System & Footwell Lighting",
+        "R16 Diamond-Cut Razor Alloys & Chrome Exterior Package"
+      ]
+    },
+    {
+      "name": "GT Plus Chrome 1.5L TSI DSG",
+      "exShowroom": 1884900,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "19.62 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-Speed DSG",
+        "Electric Ventilated Front Leatherette Seats, Sunroof & Subwoofer Audio",
+        "Chrome Wing Grille, R16 Diamond-Cut Alloys & Red GT Badging"
+      ]
+    },
+    {
+      "name": "GT Plus Sport 1.5L TSI DSG",
+      "exShowroom": 1919900,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "19.62 kmpl",
+      "isVFM": true,
+      "vfmBadge": "150 PS Enthusiast Icon",
+      "keyFeatures": [
+        "150 PS 1.5L TSI EVO + 7-Speed DSG + Red Front Brake Calipers",
+        "Deep Black Roof, Glossy Black Rear Spoiler & R16 Glossy Black Razor Alloys",
+        "All-Black Leatherette Cabin with Red Stitching, Electric Ventilation & Subwoofer",
+        "5-Star Global NCAP Safety with 6 Airbags"
+      ]
+    }
+  ]
+}

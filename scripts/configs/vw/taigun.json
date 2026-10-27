@@ -1,0 +1,286 @@
+{
+  "id": "vw-taigun",
+  "name": "Volkswagen Taigun",
+  "brand": "Volkswagen",
+  "tagline": "5-Star Global NCAP German-Engineered SUV with 1.0L & 1.5L TSI EVO, Panoramic Sunroof, Illuminated Logo & 8-Speed AT",
+  "launchDate": "2026 (The New Taigun)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹11.00 - ₹19.47 Lakh",
+  "minPrice": 1099900,
+  "maxPrice": 1946900,
+  "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+  "groundClearance": "188 mm",
+  "bootSpace": "385 Litres",
+  "waitingPeriod": "2 - 5 Weeks",
+  "summary": "Built on the German MQB-A0-IN platform with a 5-Star Global NCAP safety rating for both adult and child occupants, the new Volkswagen Taigun features an illuminated front & rear VW crest with infinite LED tail lamps, a panoramic sunroof, an all-new 8-speed automatic transmission on the 1.0L TSI, the exhilarating 150 PS 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-speed DSG, and 6-way electrically adjustable ventilated front seats with subwoofer audio.",
+  "colors": [
+    {
+      "id": "wild-cherry-red-metallic",
+      "name": "Wild Cherry Red Metallic",
+      "hex": "#8C1F24",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/wild-cherry-red-metallic-taigun.png"
+    },
+    {
+      "id": "lava-blue-metallic",
+      "name": "Lava Blue Metallic",
+      "hex": "#0474B0",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/lava-blue-metallic-taigun.png"
+    },
+    {
+      "id": "avocado-pearl-effect",
+      "name": "Avocado Pearl Effect",
+      "hex": "#4A4A45",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/avacado-pearl-effect-taigun.png"
+    },
+    {
+      "id": "carbon-steel-grey-matte",
+      "name": "Carbon Steel Grey Matte",
+      "hex": "#36383C",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/carbon-steel-grey-matte-taigun.png"
+    },
+    {
+      "id": "deep-black-pearl",
+      "name": "Deep Black Pearl",
+      "hex": "#101010",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/deep-black-pearl-taigun.png"
+    },
+    {
+      "id": "carbon-steel-grey-metallic",
+      "name": "Carbon Steel Grey Metallic",
+      "hex": "#485054",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/carbon-steel-grey-metallic-taigun.png"
+    },
+    {
+      "id": "steel-grey",
+      "name": "Steel Grey",
+      "hex": "#A0A4A8",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/steel-grey-taigun.png"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F2F5EE",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/candy-white-taigun.png"
+    },
+    {
+      "id": "reflex-silver-metallic",
+      "name": "Reflex Silver Metallic",
+      "hex": "#A6ABAA",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/reflex-silver-metallic-taigun.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "new-taigun-hero-banner",
+      "title": "The New Volkswagen Taigun German-Engineered SUV",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section1?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "sculpted-bonnet-exterior",
+      "title": "Sculpted Bonnet, Sharper Lines & IQ.LIGHT LED Matrix Headlamps",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section2?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE2MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmYzg4ZA=="
+    },
+    {
+      "id": "tsi-evo-performance",
+      "title": "1.0L TSI & 1.5L TSI EVO Turbocharged Engines with 8-Speed AT & 7-Speed DSG",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section3?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "leatherette-ventilated-seats",
+      "title": "Electric & Ventilated Front Leatherette Seats with Contrast Piping",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section4?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "panoramic-sunroof-taigun",
+      "title": "Expansive Panoramic Sunroof in the New Taigun",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section5?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "illuminated-vw-logo-taillights",
+      "title": "First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section6?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "digital-cockpit-cabin",
+      "title": "20.32 cm Digital Cockpit & 25.65 cm VW Play Touchscreen Infotainment",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section7?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "taigun-road-presence",
+      "title": "Commanding SUV Stance with 188 mm Ground Clearance",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section8?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "gt-plus-sport-trim",
+      "title": "Taigun GT Plus Sport 1.5L TSI DSG with Blacked-Out Alloys & Red Calipers",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/gt-plus-sport-3?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0"
+    },
+    {
+      "id": "gt-plus-chrome-trim",
+      "title": "Taigun GT Plus Chrome 1.5L TSI DSG with R17 Manila Alloy Wheels",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/gt-plus-chrome?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0"
+    },
+    {
+      "id": "gt-line-trim",
+      "title": "Taigun GT Line 1.0L TSI with Dark Chrome & Glossy Black Accents",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/gt-Line-mtat?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0"
+    },
+    {
+      "id": "topline-trim",
+      "title": "Taigun Topline 1.0L TSI with Chrome Grille & Crystalline LED DRLs",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/topline-sg-mtat?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+      "1.5L TSI EVO Turbo Petrol with Active Cylinder Management (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission",
+      "8-Speed Torque Converter Automatic (1.0L TSI)",
+      "7-Speed DSG Dual-Clutch Automatic (1.5L TSI EVO)"
+    ],
+    "dimensions": "4221 mm L × 1760 mm W × 1612 mm H",
+    "wheelbase": "2651 mm",
+    "fuelTank": "50 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Comfortline 1.0L TSI MT",
+      "exShowroom": 1099900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.87 kmpl",
+      "isVFM": true,
+      "vfmBadge": "5-Star German Safety Entry",
+      "keyFeatures": [
+        "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Adult & Child Rating",
+        "LED Headlamps with DRLs & Infinity Connected LED Tail Lamps",
+        "17.78 cm Touchscreen Infotainment with Apple CarPlay & Android Auto",
+        "20.32 cm Digital Cockpit & All-4 Power Windows"
+      ]
+    },
+    {
+      "name": "Highline 1.0L TSI MT",
+      "exShowroom": 1299900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.87 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "25.65 cm (10.1-inch) VW Play Touchscreen with Wireless App-Connect",
+        "R16 Belmont Alloy Wheels, Rear View Camera & Wireless Phone Charger",
+        "Climatronic Automatic AC with Touch Control & Rear Wiper/Defogger"
+      ]
+    },
+    {
+      "name": "Highline 1.0L TSI AT",
+      "exShowroom": 1409900,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.15 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+        "25.65 cm VW Play Touchscreen, Cruise Control & Hill Hold Control",
+        "R16 Alloy Wheels, Auto Headlamps & Rain-Sensing Wipers"
+      ]
+    },
+    {
+      "name": "Highline Plus 1.0L TSI MT",
+      "exShowroom": 1441900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.87 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof, KESSY Keyless Entry & Push-Button Start",
+        "20.32 cm Digital Cockpit, Auto-Dimming IRVM & Smart Touch Climatronic AC",
+        "6 Airbags & 40+ Safety Features"
+      ]
+    },
+    {
+      "name": "GT Line 1.0L TSI MT",
+      "exShowroom": 1471900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.87 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Blacked-Out Trim",
+      "keyFeatures": [
+        "Dark Chrome Grille, R17 Black Cassino Alloy Wheels & Black Roof Rails",
+        "Electric Sunroof, Red Ambient Cabin Lighting & Aluminium Pedals",
+        "IQ.LIGHT LED Headlamps, 25.65 cm VW Play Screen & 20.32 cm Digital Cockpit"
+      ]
+    },
+    {
+      "name": "GT Line 1.0L TSI AT",
+      "exShowroom": 1586900,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.15 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Automatic All-Rounder",
+      "keyFeatures": [
+        "8-Speed Automatic with Paddle Shifters + Blacked-Out GT Line Styling",
+        "Electric Sunroof, R17 Black Cassino Alloys & IQ.LIGHT LED Headlamps",
+        "Wireless Apple CarPlay/Android Auto, Wireless Charger & 6 Airbags"
+      ]
+    },
+    {
+      "name": "Topline 1.0L TSI AT",
+      "exShowroom": 1737900,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.15 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+        "Panoramic Sunroof, Illuminated VW Logo & Amplifier + Subwoofer Audio",
+        "R17 Cassino Diamond-Cut Alloys & Footwell Illumination"
+      ]
+    },
+    {
+      "name": "GT Plus Chrome 1.5L TSI DSG",
+      "exShowroom": 1916900,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "18.61 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-Speed DSG",
+        "Panoramic Sunroof, Electric Ventilated Front Seats & Subwoofer Sound System",
+        "R17 Manila Alloy Wheels, Rich Chrome Exterior Accents & Illuminated VW Crest"
+      ]
+    },
+    {
+      "name": "GT Plus Sport 1.5L TSI DSG",
+      "exShowroom": 1946900,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "18.61 kmpl",
+      "isVFM": true,
+      "vfmBadge": "150 PS Enthusiast Flagship",
+      "keyFeatures": [
+        "150 PS 1.5L TSI EVO + 7-Speed DSG + Red Front Brake Calipers",
+        "Carbon Steel Grey Roof, Glossy Black Grille & R17 Black Cassino Alloys",
+        "Black Leatherette Seats with Red Stitching, GT Embroidery & Electric Ventilation",
+        "Panoramic Sunroof, Illuminated VW Logo & 5-Star Global NCAP Safety"
+      ]
+    }
+  ]
+}

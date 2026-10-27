@@ -1,0 +1,171 @@
+{
+  "id": "vw-tayron",
+  "name": "Volkswagen Tayron",
+  "brand": "Volkswagen",
+  "tagline": "All-New 7-Seater Luxury 4MOTION SUV with 204 PS 2.0L TSI, 38.1 cm Display, IQ.LIGHT HD Matrix & 9 Airbags",
+  "launchDate": "2026 (All-New Tayron)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹41.99 - ₹47.74 Lakh",
+  "minPrice": 4199000,
+  "maxPrice": 4774000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags + Level-2 ADAS)",
+  "groundClearance": "195 mm",
+  "bootSpace": "345 Litres (1,905L Expanded)",
+  "waitingPeriod": "3 - 6 Weeks",
+  "summary": "The all-new Volkswagen Tayron is Volkswagen India's flagship 3-row 7-seater luxury SUV, powered by a 204 PS / 320 Nm 2.0L TSI EVO engine paired with a 7-speed DSG and 4MOTION all-wheel drive. Available in Life and R-Line trims, it features illuminated front and rear VW crests, IQ.LIGHT HD Matrix headlamps, a 38.1 cm (15-inch) infotainment screen, 30-colour ambient lighting, ventilated & massaging front seats, a panoramic sunroof, and 9 airbags.",
+  "colors": [
+    {
+      "id": "ultraviolet-metallic",
+      "name": "Ultraviolet Metallic",
+      "hex": "#322F5E",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/Tayron-R-line-Ultraviolet-Metallic-Limbo2.png"
+    },
+    {
+      "id": "cipressino-green-metallic",
+      "name": "Cipressino Green Metallic",
+      "hex": "#535640",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/cipressino_green_metallic_tayron_limbo2.png"
+    },
+    {
+      "id": "nightshade-blue-metallic",
+      "name": "Nightshade Blue Metallic",
+      "hex": "#15568A",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/nightshade_blue_metallic_tayron_limbo2.png"
+    },
+    {
+      "id": "oryx-white-pearl",
+      "name": "Oryx White Pearl Effect",
+      "hex": "#F2F4F5",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/orxy_white_pearl_effect_tayron_limbo2.png"
+    },
+    {
+      "id": "dolphin-grey-metallic",
+      "name": "Dolphin Grey Metallic",
+      "hex": "#5E6269",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/dolphin_grey_metallic_tayron_limbo2.png"
+    },
+    {
+      "id": "oyster-silver",
+      "name": "Oyster Silver Metallic",
+      "hex": "#A1AEB6",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/oyster_silver_tayron_limbo2.png"
+    },
+    {
+      "id": "grenadilla-black-metallic",
+      "name": "Grenadilla Black Metallic",
+      "hex": "#23252A",
+      "sourceUrl": "https://www.volkswagen.co.in/app/site/online-booking/assets/images/modelColors/grenadilla_black _metallic_tayron_limbo2.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "tayron-r-line-hero",
+      "title": "All-New Volkswagen Tayron R-Line 7-Seater Luxury SUV",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/tayron-r-line-home-desktop-banner?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+    },
+    {
+      "id": "tayron-life-banner",
+      "title": "Volkswagen Tayron Life 7-Seater 2.0L TSI 4MOTION",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/new-home-page-desktop-banner?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "tayron-r-line-stance",
+      "title": "Tayron R-Line Sporty Front Bumper & Aerodynamic Design",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/section-Image-1?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+    },
+    {
+      "id": "illuminated-vw-emblem",
+      "title": "Illuminated Front & Rear Volkswagen Crest with Connected LED Light Bar",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/illum-logo?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "iq-light-hd-matrix",
+      "title": "IQ.LIGHT HD Matrix LED Headlamps with Dynamic Light Assist",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/iq-feature?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "r19-diamond-alloys",
+      "title": "Sculpted Diamond-Cut Alloy Wheels & All-Wheel Disc Brakes",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/alloy-wheels-2?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "infotainment-381cm-tayron",
+      "title": "38.1 cm (15-inch) Touchscreen Infotainment & Digital Cockpit Pro",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment_system?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "ergoactive-massage-seats",
+      "title": "Ventilated ErgoActive Front Seats with Pneumatic 10-Point Massage",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/seats-main-new?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "ambient-lighting-tayron",
+      "title": "30-Colour Customizable Illuminated Dashboard & Door Trim",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/ambient-lighting-3?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "panoramic-sunroof-tayron",
+      "title": "Expansive Panoramic Sunroof Spanning Across Three Rows",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-11?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "bootspace-1905l-flexible",
+      "title": "345-Litre Boot Space Expandable up to 1,905 Litres",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/bootspace-main?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+      "id": "adas-park-assist-plus",
+      "title": "Level-2 ADAS Suite, Park Assist Plus & 4MOTION All-Wheel Drive",
+      "sourceUrl": "https://assets.volkswagen.com/is/image/volkswagenag/driver-assistance-systems-main?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "2.0L TSI EVO Turbo Petrol (204 PS @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+    ],
+    "transmissions": [
+      "7-Speed DSG Dual-Clutch Automatic with 4MOTION All-Wheel Drive"
+    ],
+    "dimensions": "4792 mm L × 1852 mm W × 1660 mm H",
+    "wheelbase": "2791 mm",
+    "fuelTank": "58 Litres",
+    "seatingCapacity": "7 Seater"
+  },
+  "variants": [
+    {
+      "name": "Life 2.0L TSI 4MOTION DSG (7-Seater)",
+      "exShowroom": 4199000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4MOTION)",
+      "engine": "2.0L TSI EVO (204 PS)",
+      "mileage": "13.20 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best-Value German 7-Seater 4x4",
+      "keyFeatures": [
+        "204 PS / 320 Nm 2.0L TSI EVO with 7-Speed DSG & 4MOTION All-Wheel Drive",
+        "9 Airbags, Level-2 ADAS, Park Assist Plus & 360° Area View Camera",
+        "32.7 cm Infotainment Screen, 26.04 cm Digital Cockpit Pro & 3-Zone Climatronic AC",
+        "Panoramic Sunroof, Illuminated Front/Rear VW Logos & Electric Tailgate"
+      ]
+    },
+    {
+      "name": "R-Line 2.0L TSI 4MOTION DSG (7-Seater)",
+      "exShowroom": 4774000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4MOTION)",
+      "engine": "2.0L TSI EVO (204 PS)",
+      "mileage": "13.20 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Flagship 7-Seater R-Line",
+      "keyFeatures": [
+        "Signature R-Line Exterior Styling, R19 Coventry Alloy Wheels & IQ.LIGHT HD Matrix Headlamps",
+        "Massive 38.1 cm (15-inch) Infotainment Display, Head-Up Display & Harman Kardon Sound",
+        "ErgoActive Front Seats with 10-Chamber Pneumatic Massage, Ventilation & Memory",
+        "DCC Pro Adaptive Chassis Control, 30-Color Ambient Lighting & 9 Airbags"
+      ]
+    }
+  ]
+}

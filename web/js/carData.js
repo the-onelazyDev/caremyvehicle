@@ -12075,6 +12075,887 @@ export const CARS = [
           }
       ]
   },
+  {
+      "id": "vw-taigun",
+      "name": "Volkswagen Taigun",
+      "brand": "Volkswagen",
+      "tagline": "5-Star Global NCAP German-Engineered SUV with 1.0L & 1.5L TSI EVO, Panoramic Sunroof, Illuminated Logo & 8-Speed AT",
+      "launchDate": "2026 (The New Taigun)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹11.00 - ₹19.47 Lakh",
+      "minPrice": 1099900,
+      "maxPrice": 1946900,
+      "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+      "groundClearance": "188 mm",
+      "bootSpace": "385 Litres",
+      "waitingPeriod": "2 - 5 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/wild-cherry-red-metallic.webp",
+      "summary": "Built on the German MQB-A0-IN platform with a 5-Star Global NCAP safety rating for both adult and child occupants, the new Volkswagen Taigun features an illuminated front & rear VW crest with infinite LED tail lamps, a panoramic sunroof, an all-new 8-speed automatic transmission on the 1.0L TSI, the exhilarating 150 PS 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-speed DSG, and 6-way electrically adjustable ventilated front seats with subwoofer audio.",
+      "colors": [
+          {
+              "id": "wild-cherry-red-metallic",
+              "name": "Wild Cherry Red Metallic",
+              "hex": "#8C1F24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/wild-cherry-red-metallic.webp"
+          },
+          {
+              "id": "lava-blue-metallic",
+              "name": "Lava Blue Metallic",
+              "hex": "#0474B0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/lava-blue-metallic.webp"
+          },
+          {
+              "id": "avocado-pearl-effect",
+              "name": "Avocado Pearl Effect",
+              "hex": "#4A4A45",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/avocado-pearl-effect.webp"
+          },
+          {
+              "id": "carbon-steel-grey-matte",
+              "name": "Carbon Steel Grey Matte",
+              "hex": "#36383C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/carbon-steel-grey-matte.webp"
+          },
+          {
+              "id": "deep-black-pearl",
+              "name": "Deep Black Pearl",
+              "hex": "#101010",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/deep-black-pearl.webp"
+          },
+          {
+              "id": "carbon-steel-grey-metallic",
+              "name": "Carbon Steel Grey Metallic",
+              "hex": "#485054",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/carbon-steel-grey-metallic.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#A0A4A8",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/steel-grey.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F2F5EE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/candy-white.webp"
+          },
+          {
+              "id": "reflex-silver-metallic",
+              "name": "Reflex Silver Metallic",
+              "hex": "#A6ABAA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/reflex-silver-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "new-taigun-hero-banner",
+              "title": "The New Volkswagen Taigun German-Engineered SUV",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/new-taigun-hero-banner.webp"
+          },
+          {
+              "id": "sculpted-bonnet-exterior",
+              "title": "Sculpted Bonnet, Sharper Lines & IQ.LIGHT LED Matrix Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/sculpted-bonnet-exterior.webp"
+          },
+          {
+              "id": "tsi-evo-performance",
+              "title": "1.0L TSI & 1.5L TSI EVO Turbocharged Engines with 8-Speed AT & 7-Speed DSG",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/tsi-evo-performance.webp"
+          },
+          {
+              "id": "leatherette-ventilated-seats",
+              "title": "Electric & Ventilated Front Leatherette Seats with Contrast Piping",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/leatherette-ventilated-seats.webp"
+          },
+          {
+              "id": "panoramic-sunroof-taigun",
+              "title": "Expansive Panoramic Sunroof in the New Taigun",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/panoramic-sunroof-taigun.webp"
+          },
+          {
+              "id": "illuminated-vw-logo-taillights",
+              "title": "First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/illuminated-vw-logo-taillights.webp"
+          },
+          {
+              "id": "digital-cockpit-cabin",
+              "title": "20.32 cm Digital Cockpit & 25.65 cm VW Play Touchscreen Infotainment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/digital-cockpit-cabin.webp"
+          },
+          {
+              "id": "taigun-road-presence",
+              "title": "Commanding SUV Stance with 188 mm Ground Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/taigun-road-presence.webp"
+          },
+          {
+              "id": "gt-plus-sport-trim",
+              "title": "Taigun GT Plus Sport 1.5L TSI DSG with Blacked-Out Alloys & Red Calipers",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-sport-trim.webp"
+          },
+          {
+              "id": "gt-plus-chrome-trim",
+              "title": "Taigun GT Plus Chrome 1.5L TSI DSG with R17 Manila Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-chrome-trim.webp"
+          },
+          {
+              "id": "gt-line-trim",
+              "title": "Taigun GT Line 1.0L TSI with Dark Chrome & Glossy Black Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-line-trim.webp"
+          },
+          {
+              "id": "topline-trim",
+              "title": "Taigun Topline 1.0L TSI with Chrome Grille & Crystalline LED DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/topline-trim.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+              "1.5L TSI EVO Turbo Petrol with Active Cylinder Management (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission",
+              "8-Speed Torque Converter Automatic (1.0L TSI)",
+              "7-Speed DSG Dual-Clutch Automatic (1.5L TSI EVO)"
+          ],
+          "dimensions": "4221 mm L × 1760 mm W × 1612 mm H",
+          "wheelbase": "2651 mm",
+          "fuelTank": "50 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Comfortline 1.0L TSI MT",
+              "exShowroom": 1099900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.87 kmpl",
+              "isVFM": true,
+              "vfmBadge": "5-Star German Safety Entry",
+              "keyFeatures": [
+                  "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Adult & Child Rating",
+                  "LED Headlamps with DRLs & Infinity Connected LED Tail Lamps",
+                  "17.78 cm Touchscreen Infotainment with Apple CarPlay & Android Auto",
+                  "20.32 cm Digital Cockpit & All-4 Power Windows"
+              ]
+          },
+          {
+              "name": "Highline 1.0L TSI MT",
+              "exShowroom": 1299900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.87 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "25.65 cm (10.1-inch) VW Play Touchscreen with Wireless App-Connect",
+                  "R16 Belmont Alloy Wheels, Rear View Camera & Wireless Phone Charger",
+                  "Climatronic Automatic AC with Touch Control & Rear Wiper/Defogger"
+              ]
+          },
+          {
+              "name": "Highline 1.0L TSI AT",
+              "exShowroom": 1409900,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.15 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+                  "25.65 cm VW Play Touchscreen, Cruise Control & Hill Hold Control",
+                  "R16 Alloy Wheels, Auto Headlamps & Rain-Sensing Wipers"
+              ]
+          },
+          {
+              "name": "Highline Plus 1.0L TSI MT",
+              "exShowroom": 1441900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.87 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof, KESSY Keyless Entry & Push-Button Start",
+                  "20.32 cm Digital Cockpit, Auto-Dimming IRVM & Smart Touch Climatronic AC",
+                  "6 Airbags & 40+ Safety Features"
+              ]
+          },
+          {
+              "name": "GT Line 1.0L TSI MT",
+              "exShowroom": 1471900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.87 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Blacked-Out Trim",
+              "keyFeatures": [
+                  "Dark Chrome Grille, R17 Black Cassino Alloy Wheels & Black Roof Rails",
+                  "Electric Sunroof, Red Ambient Cabin Lighting & Aluminium Pedals",
+                  "IQ.LIGHT LED Headlamps, 25.65 cm VW Play Screen & 20.32 cm Digital Cockpit"
+              ]
+          },
+          {
+              "name": "GT Line 1.0L TSI AT",
+              "exShowroom": 1586900,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.15 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Automatic All-Rounder",
+              "keyFeatures": [
+                  "8-Speed Automatic with Paddle Shifters + Blacked-Out GT Line Styling",
+                  "Electric Sunroof, R17 Black Cassino Alloys & IQ.LIGHT LED Headlamps",
+                  "Wireless Apple CarPlay/Android Auto, Wireless Charger & 6 Airbags"
+              ]
+          },
+          {
+              "name": "Topline 1.0L TSI AT",
+              "exShowroom": 1737900,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.15 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+                  "Panoramic Sunroof, Illuminated VW Logo & Amplifier + Subwoofer Audio",
+                  "R17 Cassino Diamond-Cut Alloys & Footwell Illumination"
+              ]
+          },
+          {
+              "name": "GT Plus Chrome 1.5L TSI DSG",
+              "exShowroom": 1916900,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "18.61 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-Speed DSG",
+                  "Panoramic Sunroof, Electric Ventilated Front Seats & Subwoofer Sound System",
+                  "R17 Manila Alloy Wheels, Rich Chrome Exterior Accents & Illuminated VW Crest"
+              ]
+          },
+          {
+              "name": "GT Plus Sport 1.5L TSI DSG",
+              "exShowroom": 1946900,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "18.61 kmpl",
+              "isVFM": true,
+              "vfmBadge": "150 PS Enthusiast Flagship",
+              "keyFeatures": [
+                  "150 PS 1.5L TSI EVO + 7-Speed DSG + Red Front Brake Calipers",
+                  "Carbon Steel Grey Roof, Glossy Black Grille & R17 Black Cassino Alloys",
+                  "Black Leatherette Seats with Red Stitching, GT Embroidery & Electric Ventilation",
+                  "Panoramic Sunroof, Illuminated VW Logo & 5-Star Global NCAP Safety"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "vw-virtus",
+      "name": "Volkswagen Virtus",
+      "brand": "Volkswagen",
+      "tagline": "India's #1 Selling 5-Star Global NCAP Performance Sedan with 150 PS 1.5L TSI EVO DSG, 521L Boot & Electric Ventilated Seats",
+      "launchDate": "2025 (Virtus Chrome & GT Plus Sport)",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹10.71 - ₹19.20 Lakh",
+      "minPrice": 1070900,
+      "maxPrice": 1919900,
+      "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+      "groundClearance": "179 mm",
+      "bootSpace": "521 Litres",
+      "waitingPeriod": "2 - 5 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/wild-cherry-red.webp",
+      "summary": "The Volkswagen Virtus is India's highest-selling premium mid-size sedan, pairing razor-sharp German driving dynamics and a 5-Star Global NCAP safety rating with a 4561 mm fastback silhouette, 179 mm ground clearance, 521-litre boot space, electric sunroof, 6-way power-adjustable ventilated front seats, subwoofer audio, and a choice between the 115 PS 1.0L TSI and the 150 PS 1.5L TSI EVO with 7-speed DSG in Chrome or blacked-out GT Plus Sport personas.",
+      "colors": [
+          {
+              "id": "wild-cherry-red",
+              "name": "Wild Cherry Red Metallic",
+              "hex": "#8C1F24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/wild-cherry-red.webp"
+          },
+          {
+              "id": "lava-blue",
+              "name": "Lava Blue Metallic",
+              "hex": "#0474B0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/lava-blue.webp"
+          },
+          {
+              "id": "rising-blue",
+              "name": "Rising Blue Metallic",
+              "hex": "#15568A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/rising-blue.webp"
+          },
+          {
+              "id": "avocado-pearl",
+              "name": "Avocado Pearl (Anniversary Edition)",
+              "hex": "#4A4A45",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/avocado-pearl.webp"
+          },
+          {
+              "id": "carbon-steel-grey-matte",
+              "name": "Carbon Steel Grey Matte",
+              "hex": "#36383C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/carbon-steel-grey-matte.webp"
+          },
+          {
+              "id": "deep-black-pearl",
+              "name": "Deep Black Pearl",
+              "hex": "#101010",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/deep-black-pearl.webp"
+          },
+          {
+              "id": "carbon-steel-grey",
+              "name": "Carbon Steel Grey Metallic",
+              "hex": "#485054",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/carbon-steel-grey.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F2F5EE",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/candy-white.webp"
+          },
+          {
+              "id": "reflex-silver",
+              "name": "Reflex Silver Metallic",
+              "hex": "#A6ABAA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/colors/reflex-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "virtus-gt-plus-sport-hero",
+              "title": "Volkswagen Virtus GT Plus Sport with Glossy Black Spoiler & Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/virtus-gt-plus-sport-hero.webp"
+          },
+          {
+              "id": "virtus-chrome-hero",
+              "title": "Volkswagen Virtus Chrome Edition Executive Sedan Profile",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/virtus-chrome-hero.webp"
+          },
+          {
+              "id": "virtus-gt-line-exterior",
+              "title": "Virtus GT Line 1.0L TSI with Dark Chrome & Black Styling Pack",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/virtus-gt-line-exterior.webp"
+          },
+          {
+              "id": "sharp-shoulder-line",
+              "title": "Timeless German Fastback Silhouette & Sharp Double Character Line",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/sharp-shoulder-line.webp"
+          },
+          {
+              "id": "exterior-gt-badging",
+              "title": "Signature GT Grille Badging, Red Brake Calipers & R16 Razor Black Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/exterior-gt-badging.webp"
+          },
+          {
+              "id": "virtus-endurance-record",
+              "title": "NATRAX 24-Hour Endurance Record Holder – Proven German Engineering",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/virtus-endurance-record.webp"
+          },
+          {
+              "id": "gt-sport-interior-cabin",
+              "title": "All-Black GT Sport Cabin with Red Ambient Lighting & Aluminium Pedals",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/gt-sport-interior-cabin.webp"
+          },
+          {
+              "id": "electric-ventilated-leather-seats",
+              "title": "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/electric-ventilated-leather-seats.webp"
+          },
+          {
+              "id": "dsg-7speed-transmission",
+              "title": "Lightning-Fast 7-Speed DSG Dual-Clutch Automatic with Paddle Shifters",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/dsg-7speed-transmission.webp"
+          },
+          {
+              "id": "wireless-charging-infotainment",
+              "title": "25.65 cm VW Play Touchscreen & Wireless Smartphone Charging",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/wireless-charging-infotainment.webp"
+          },
+          {
+              "id": "climatronic-touch-ac",
+              "title": "Smart Touch Climatronic Auto AC & 20.32 cm Digital Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/climatronic-touch-ac.webp"
+          },
+          {
+              "id": "six-airbags-5star-gncap",
+              "title": "5-Star Global NCAP Safety with 6 Airbags & 40+ Safety Features",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-virtus/gallery/six-airbags-5star-gncap.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+              "1.5L TSI EVO Turbo Petrol with Active Cylinder Management (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission",
+              "6-Speed Torque Converter Automatic (1.0L TSI)",
+              "7-Speed DSG Dual-Clutch Automatic (1.5L TSI EVO)"
+          ],
+          "dimensions": "4561 mm L × 1752 mm W × 1507 mm H",
+          "wheelbase": "2651 mm",
+          "fuelTank": "45 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Comfortline 1.0L TSI MT",
+              "exShowroom": 1070900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.80 kmpl",
+              "isVFM": true,
+              "vfmBadge": "5-Star German Sedan Entry",
+              "keyFeatures": [
+                  "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety Standard",
+                  "LED Headlamps with DRLs, 179 mm Ground Clearance & 521L Boot",
+                  "17.78 cm Touchscreen with Apple CarPlay/Android Auto & 8 Speakers"
+              ]
+          },
+          {
+              "name": "Highline 1.0L TSI MT",
+              "exShowroom": 1350900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.80 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "25.65 cm (10.1-inch) VW Play Touchscreen with Wireless App-Connect",
+                  "R16 Razor Alloy Wheels, Rear View Camera, Cruise Control & Wireless Charger",
+                  "Smart Touch Climatronic Auto AC & Cornering Front Fog Lamps"
+              ]
+          },
+          {
+              "name": "Highline Plus 1.0L TSI MT",
+              "exShowroom": 1390900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.80 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof, 20.32 cm Digital Cockpit & KESSY Keyless Entry",
+                  "Auto Headlamps, Rain-Sensing Wipers & Auto-Dimming IRVM"
+              ]
+          },
+          {
+              "name": "GT Line 1.0L TSI MT",
+              "exShowroom": 1434900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.80 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Blacked-Out Sedan",
+              "keyFeatures": [
+                  "Blacked-Out R16 Razor Alloys, Dark Chrome Grille, Glossy Black Spoiler & ORVMs",
+                  "Electric Sunroof, Red Ambient Cabin Lighting & Aluminium Pedals",
+                  "25.65 cm VW Play Touchscreen + 20.32 cm Digital Cockpit"
+              ]
+          },
+          {
+              "name": "GT Line 1.0L TSI AT",
+              "exShowroom": 1524900,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.67 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Automatic Value Pick",
+              "keyFeatures": [
+                  "6-Speed Torque Converter Automatic with Steering Paddle Shifters",
+                  "Blacked-Out GT Line Exterior Package + Electric Sunroof",
+                  "6 Airbags, Hill Hold Control & Wireless App-Connect"
+              ]
+          },
+          {
+              "name": "Topline 1.0L TSI AT",
+              "exShowroom": 1634900,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.67 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+                  "Electric Sunroof, Amplifier + Subwoofer Sound System & Footwell Lighting",
+                  "R16 Diamond-Cut Razor Alloys & Chrome Exterior Package"
+              ]
+          },
+          {
+              "name": "GT Plus Chrome 1.5L TSI DSG",
+              "exShowroom": 1884900,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "19.62 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Management (ACT) & 7-Speed DSG",
+                  "Electric Ventilated Front Leatherette Seats, Sunroof & Subwoofer Audio",
+                  "Chrome Wing Grille, R16 Diamond-Cut Alloys & Red GT Badging"
+              ]
+          },
+          {
+              "name": "GT Plus Sport 1.5L TSI DSG",
+              "exShowroom": 1919900,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "19.62 kmpl",
+              "isVFM": true,
+              "vfmBadge": "150 PS Enthusiast Icon",
+              "keyFeatures": [
+                  "150 PS 1.5L TSI EVO + 7-Speed DSG + Red Front Brake Calipers",
+                  "Deep Black Roof, Glossy Black Rear Spoiler & R16 Glossy Black Razor Alloys",
+                  "All-Black Leatherette Cabin with Red Stitching, Electric Ventilation & Subwoofer",
+                  "5-Star Global NCAP Safety with 6 Airbags"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "vw-tiguan-r-line",
+      "name": "Volkswagen Tiguan R-Line",
+      "brand": "Volkswagen",
+      "tagline": "All-New German CBU Performance SUV with 204 PS 2.0L TSI 4MOTION, DCC Pro, 38.1 cm Display & 21 Level-2 ADAS Features",
+      "launchDate": "2025 (All-New Tiguan R-Line)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹47.11 Lakh",
+      "minPrice": 4711013,
+      "maxPrice": 4711013,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags + 21 Level-2 ADAS)",
+      "groundClearance": "191 mm",
+      "bootSpace": "652 Litres",
+      "waitingPeriod": "3 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/cipressino-green-metallic.webp",
+      "summary": "Imported as a full German CBU on the MQB evo platform, the all-new Volkswagen Tiguan R-Line delivers 204 PS & 320 Nm from its 2.0L TSI EVO engine paired with a 7-speed DSG and 4MOTION all-wheel drive, Dynamic Chassis Control (DCC Pro) with two-valve adaptive dampers, R-Line sport seats with pneumatic massage, a massive 38.1 cm (15-inch) infotainment screen, Head-Up Display, 19-inch Coventry diamond-turned alloys, and 9 airbags with 21 Level-2 ADAS features.",
+      "colors": [
+          {
+              "id": "cipressino-green-metallic",
+              "name": "Cipressino Green Metallic",
+              "hex": "#414944",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/cipressino-green-metallic.webp"
+          },
+          {
+              "id": "persimmon-red-metallic",
+              "name": "Persimmon Red Metallic",
+              "hex": "#9E2B25",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/persimmon-red-metallic.webp"
+          },
+          {
+              "id": "nightshade-blue-metallic",
+              "name": "Nightshade Blue Metallic",
+              "hex": "#15568A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/nightshade-blue-metallic.webp"
+          },
+          {
+              "id": "oryx-white-pearl",
+              "name": "Oryx White Mother of Pearl Effect",
+              "hex": "#F2F4F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/oryx-white-pearl.webp"
+          },
+          {
+              "id": "oyster-silver-metallic",
+              "name": "Oyster Silver Metallic",
+              "hex": "#A1AEB6",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/oyster-silver-metallic.webp"
+          },
+          {
+              "id": "grenadilla-black-metallic",
+              "name": "Grenadilla Black Metallic",
+              "hex": "#23252A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/grenadilla-black-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "tiguan-r-line-hero",
+              "title": "All-New Volkswagen Tiguan R-Line German Performance SUV",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/tiguan-r-line-hero.webp"
+          },
+          {
+              "id": "sporty-r-theme-design",
+              "title": "Signature R-Line Bumpers, Glossy Black Grille & Aerodynamic Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/sporty-r-theme-design.webp"
+          },
+          {
+              "id": "illuminated-light-bands",
+              "title": "IQ.LIGHT HD Matrix Headlamps with Illuminated Front & Rear Light Bands",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/illuminated-light-bands.webp"
+          },
+          {
+              "id": "coventry-19-inch-alloys",
+              "title": "R19 Coventry Diamond-Turned Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/coventry-19-inch-alloys.webp"
+          },
+          {
+              "id": "infotainment-381cm-display",
+              "title": "Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/infotainment-381cm-display.webp"
+          },
+          {
+              "id": "digital-cockpit-pro",
+              "title": "26.04 cm Digital Cockpit Pro & Windshield Head-Up Display (HUD)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/digital-cockpit-pro.webp"
+          },
+          {
+              "id": "ambient-lighting-30-color",
+              "title": "30-Colour Customizable R-Line Dashboard & Door Ambient Lighting",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/ambient-lighting-30-color.webp"
+          },
+          {
+              "id": "r-line-massage-sport-seats",
+              "title": "R-Line ErgoActive Sport Seats with Pneumatic Massage & Lumbar Support",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/r-line-massage-sport-seats.webp"
+          },
+          {
+              "id": "panoramic-sunroof-tiguan",
+              "title": "Expansive Tilting & Sliding Panoramic Glass Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/panoramic-sunroof-tiguan.webp"
+          },
+          {
+              "id": "dcc-pro-driving-modes",
+              "title": "DCC Pro Adaptive Chassis Control & Driving Experience Control Dial",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/dcc-pro-driving-modes.webp"
+          },
+          {
+              "id": "level2-adas-21-features",
+              "title": "21 Level-2 ADAS Autonomous Driving Assistance Features",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/level2-adas-21-features.webp"
+          },
+          {
+              "id": "nine-airbags-euro-ncap",
+              "title": "9 Airbags Standard & 5-Star Euro NCAP Safety Architecture",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/nine-airbags-euro-ncap.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "2.0L TSI EVO Turbo Petrol (204 PS @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+          ],
+          "transmissions": [
+              "7-Speed DSG Dual-Clutch Automatic with 4MOTION All-Wheel Drive & DCC Pro"
+          ],
+          "dimensions": "4539 mm L × 1859 mm W × 1656 mm H",
+          "wheelbase": "2680 mm",
+          "fuelTank": "55 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "R-Line 2.0L TSI 4MOTION DSG (CBU)",
+              "exShowroom": 4711013,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4MOTION)",
+              "engine": "2.0L TSI EVO (204 PS)",
+              "mileage": "12.58 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Fully-Loaded German CBU Flagship",
+              "keyFeatures": [
+                  "204 PS / 320 Nm 2.0L TSI EVO with 7-Speed DSG, 4MOTION AWD & DCC Pro Adaptive Suspension",
+                  "9 Airbags, 21 Level-2 ADAS Features, Park Assist Plus & 5-Star Euro NCAP Rating",
+                  "Massive 38.1 cm (15-inch) Infotainment, 26.04 cm Digital Cockpit Pro & Head-Up Display",
+                  "R-Line Sport Seats with Pneumatic 10-Chamber Massage, 3-Zone Climatronic AC & 30-Color Ambient Lighting",
+                  "R19 Coventry Diamond-Turned Alloys, Illuminated Front/Rear Light Bands & Panoramic Sunroof"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "vw-tayron",
+      "name": "Volkswagen Tayron",
+      "brand": "Volkswagen",
+      "tagline": "All-New 7-Seater Luxury 4MOTION SUV with 204 PS 2.0L TSI, 38.1 cm Display, IQ.LIGHT HD Matrix & 9 Airbags",
+      "launchDate": "2026 (All-New Tayron)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹41.99 - ₹47.74 Lakh",
+      "minPrice": 4199000,
+      "maxPrice": 4774000,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags + Level-2 ADAS)",
+      "groundClearance": "195 mm",
+      "bootSpace": "345 Litres (1,905L Expanded)",
+      "waitingPeriod": "3 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/ultraviolet-metallic.webp",
+      "summary": "The all-new Volkswagen Tayron is Volkswagen India's flagship 3-row 7-seater luxury SUV, powered by a 204 PS / 320 Nm 2.0L TSI EVO engine paired with a 7-speed DSG and 4MOTION all-wheel drive. Available in Life and R-Line trims, it features illuminated front and rear VW crests, IQ.LIGHT HD Matrix headlamps, a 38.1 cm (15-inch) infotainment screen, 30-colour ambient lighting, ventilated & massaging front seats, a panoramic sunroof, and 9 airbags.",
+      "colors": [
+          {
+              "id": "ultraviolet-metallic",
+              "name": "Ultraviolet Metallic",
+              "hex": "#322F5E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/ultraviolet-metallic.webp"
+          },
+          {
+              "id": "cipressino-green-metallic",
+              "name": "Cipressino Green Metallic",
+              "hex": "#535640",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/cipressino-green-metallic.webp"
+          },
+          {
+              "id": "nightshade-blue-metallic",
+              "name": "Nightshade Blue Metallic",
+              "hex": "#15568A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/nightshade-blue-metallic.webp"
+          },
+          {
+              "id": "oryx-white-pearl",
+              "name": "Oryx White Pearl Effect",
+              "hex": "#F2F4F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/oryx-white-pearl.webp"
+          },
+          {
+              "id": "dolphin-grey-metallic",
+              "name": "Dolphin Grey Metallic",
+              "hex": "#5E6269",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/dolphin-grey-metallic.webp"
+          },
+          {
+              "id": "oyster-silver",
+              "name": "Oyster Silver Metallic",
+              "hex": "#A1AEB6",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/oyster-silver.webp"
+          },
+          {
+              "id": "grenadilla-black-metallic",
+              "name": "Grenadilla Black Metallic",
+              "hex": "#23252A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/colors/grenadilla-black-metallic.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "tayron-r-line-hero",
+              "title": "All-New Volkswagen Tayron R-Line 7-Seater Luxury SUV",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/tayron-r-line-hero.webp"
+          },
+          {
+              "id": "tayron-life-banner",
+              "title": "Volkswagen Tayron Life 7-Seater 2.0L TSI 4MOTION",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/tayron-life-banner.webp"
+          },
+          {
+              "id": "tayron-r-line-stance",
+              "title": "Tayron R-Line Sporty Front Bumper & Aerodynamic Design",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/tayron-r-line-stance.webp"
+          },
+          {
+              "id": "illuminated-vw-emblem",
+              "title": "Illuminated Front & Rear Volkswagen Crest with Connected LED Light Bar",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/illuminated-vw-emblem.webp"
+          },
+          {
+              "id": "iq-light-hd-matrix",
+              "title": "IQ.LIGHT HD Matrix LED Headlamps with Dynamic Light Assist",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/iq-light-hd-matrix.webp"
+          },
+          {
+              "id": "r19-diamond-alloys",
+              "title": "Sculpted Diamond-Cut Alloy Wheels & All-Wheel Disc Brakes",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/r19-diamond-alloys.webp"
+          },
+          {
+              "id": "infotainment-381cm-tayron",
+              "title": "38.1 cm (15-inch) Touchscreen Infotainment & Digital Cockpit Pro",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/infotainment-381cm-tayron.webp"
+          },
+          {
+              "id": "ergoactive-massage-seats",
+              "title": "Ventilated ErgoActive Front Seats with Pneumatic 10-Point Massage",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/ergoactive-massage-seats.webp"
+          },
+          {
+              "id": "ambient-lighting-tayron",
+              "title": "30-Colour Customizable Illuminated Dashboard & Door Trim",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/ambient-lighting-tayron.webp"
+          },
+          {
+              "id": "panoramic-sunroof-tayron",
+              "title": "Expansive Panoramic Sunroof Spanning Across Three Rows",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/panoramic-sunroof-tayron.webp"
+          },
+          {
+              "id": "bootspace-1905l-flexible",
+              "title": "345-Litre Boot Space Expandable up to 1,905 Litres",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/bootspace-1905l-flexible.webp"
+          },
+          {
+              "id": "adas-park-assist-plus",
+              "title": "Level-2 ADAS Suite, Park Assist Plus & 4MOTION All-Wheel Drive",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/vw-tayron/gallery/adas-park-assist-plus.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "2.0L TSI EVO Turbo Petrol (204 PS @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+          ],
+          "transmissions": [
+              "7-Speed DSG Dual-Clutch Automatic with 4MOTION All-Wheel Drive"
+          ],
+          "dimensions": "4792 mm L × 1852 mm W × 1660 mm H",
+          "wheelbase": "2791 mm",
+          "fuelTank": "58 Litres",
+          "seatingCapacity": "7 Seater"
+      },
+      "variants": [
+          {
+              "name": "Life 2.0L TSI 4MOTION DSG (7-Seater)",
+              "exShowroom": 4199000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4MOTION)",
+              "engine": "2.0L TSI EVO (204 PS)",
+              "mileage": "13.20 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best-Value German 7-Seater 4x4",
+              "keyFeatures": [
+                  "204 PS / 320 Nm 2.0L TSI EVO with 7-Speed DSG & 4MOTION All-Wheel Drive",
+                  "9 Airbags, Level-2 ADAS, Park Assist Plus & 360° Area View Camera",
+                  "32.7 cm Infotainment Screen, 26.04 cm Digital Cockpit Pro & 3-Zone Climatronic AC",
+                  "Panoramic Sunroof, Illuminated Front/Rear VW Logos & Electric Tailgate"
+              ]
+          },
+          {
+              "name": "R-Line 2.0L TSI 4MOTION DSG (7-Seater)",
+              "exShowroom": 4774000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4MOTION)",
+              "engine": "2.0L TSI EVO (204 PS)",
+              "mileage": "13.20 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Flagship 7-Seater R-Line",
+              "keyFeatures": [
+                  "Signature R-Line Exterior Styling, R19 Coventry Alloy Wheels & IQ.LIGHT HD Matrix Headlamps",
+                  "Massive 38.1 cm (15-inch) Infotainment Display, Head-Up Display & Harman Kardon Sound",
+                  "ErgoActive Front Seats with 10-Chamber Pneumatic Massage, Ventilation & Memory",
+                  "DCC Pro Adaptive Chassis Control, 30-Color Ambient Lighting & 9 Airbags"
+              ]
+          }
+      ]
+  }
 ];
 
 // Helper to calculate exact city on-road price
