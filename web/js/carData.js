@@ -5983,6 +5983,98 @@ export const CARS = [
         keyFeatures: ['99.8 kWh Lithium-Ion Battery with 561 km Range', 'Dual Motor AWD (384 PS / 700 Nm, 0-100 km/h in 5.3s)', '10 Airbags Standard & 5-Star Safety Architecture', 'Level 2+ ADAS with 27 Autonomous Features', '1st & 2nd Row Relaxation Seats with Ottoman Leg Support & Massage', 'Trinity Panoramic Display (12.3" Cluster + 5" HVAC + 12.3" Nav)', '14-Speaker Meridian Concert Sound System', '800V Ultra-Fast DC Charging (10-80% in 24 Mins) & Vehicle-to-Load (V2L)']
       }
     ]
+  },
+  {
+    id: 'kia-ev6',
+    name: 'Kia EV6',
+    brand: 'Kia',
+    tagline: 'The Electric Superstar — High-Performance Electric Crossover with 84 kWh Battery, 325 PS AWD, 663 km Range & 800V Ultra-Fast Charging',
+    launchDate: 'Updated 2025 (Long-Range 84 kWh Facelift)',
+    bodyType: 'Crossover',
+    fuelTypes: ['Electric'],
+    priceRange: '₹60.95 - ₹65.95 Lakh',
+    minPrice: 6095000,
+    maxPrice: 6595000,
+    safetyRating: 'Standard 8 Airbags, Level 2 ADAS 2.0 with 25 Autonomous Features, 5-Star Euro NCAP, All 4 Disc Brakes, 360° Surround View Monitor',
+    groundClearance: '178 mm',
+    bootSpace: '520 L (expandable to 1300 L) + 20 L Front Frunk',
+    waitingPeriod: '6 - 10 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/yacht-blue/1.webp',
+    summary: 'The Kia EV6 is a flagship high-performance electric crossover built on the dedicated Electric-Global Modular Platform (E-GMP) with 800V ultra-fast architecture. Featuring an upgraded 84 kWh high-density battery providing 663 km certified range, dual motors producing 325 PS and 605 Nm torque with AWD delivering 0-100 km/h in 5.3s, 10% to 80% charging in just 18 minutes via 350 kW DC charger, dual 12.3-inch curved panoramic display cockpit, 14-speaker Meridian audio, premium relaxation front seats with zero-gravity recline, and Level 2 ADAS 2.0 with 25 safety functions.',
+    threeSixty: {
+      type: 'image-sequence',
+      provider: 'imagekit',
+      totalFrames: 36,
+      defaultColor: 'yacht-blue',
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360',
+      fileNamePattern: '{frame}.webp',
+      colors: [
+        { id: 'yacht-blue', name: 'Yacht Blue (Hero Signature Sport Shade)', hex: '#13264D' },
+        { id: 'snow-white-pearl', name: 'Snow White Pearl', hex: '#F5F6F8' },
+        { id: 'wolf-grey', name: 'Wolf Grey', hex: '#7D838A' },
+        { id: 'runway-red', name: 'Runway Red', hex: '#9C1C24' },
+        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0E0F11' }
+      ]
+    },
+    colors: [
+      { id: 'yacht-blue', name: 'Yacht Blue (Hero Signature Sport Shade)', hex: '#13264D', image: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/yacht-blue/1.webp' },
+      { id: 'snow-white-pearl', name: 'Snow White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/snow-white-pearl/1.webp' },
+      { id: 'wolf-grey', name: 'Wolf Grey', hex: '#7D838A', image: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/wolf-grey/1.webp' },
+      { id: 'runway-red', name: 'Runway Red', hex: '#9C1C24', image: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/runway-red/1.webp' },
+      { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0E0F11', image: 'https://ik.imagekit.io/2908vvlod/cars/ev6/360/aurora-black-pearl/1.webp' }
+    ],
+    angles: [
+      { label: 'Electric Superstar Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/all-new-kia-ev6-electric-superstar-exterior-stance.webp' },
+      { label: 'Dual Panoramic Curved Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/dual-12-3-inch-panoramic-curved-display-cockpit.webp' },
+      { label: 'Zero-Gravity Relaxation Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/driver-passenger-premium-relaxation-comfort-seats.webp' },
+      { label: 'Wide Tilt & Slide Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/wide-electric-sunroof-with-tilt-and-slide.webp' }
+    ],
+    gallery: [
+      { title: 'All-New Kia EV6 Electric Superstar Exterior Stance with Dual LED Headlamps & Connected Light Bar', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/all-new-kia-ev6-electric-superstar-exterior-stance.webp' },
+      { title: 'Dual LED Headlamps with Adaptive Driving Beam & Star Map Connected Daytime Running Lights', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/dual-led-headlamps-adaptive-driving-beam.webp' },
+      { title: 'Dual 12.3-inch Panoramic Curved Displays (CCNC Navigation & Digital Supervision Cluster)', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/dual-12-3-inch-panoramic-curved-display-cockpit.webp' },
+      { title: 'Driver and Front Passenger Zero-Gravity Premium Relaxation Seats with Ventilation & Heating', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/driver-passenger-premium-relaxation-comfort-seats.webp' },
+      { title: 'Wide Electric Sunroof with Tilt and Sliding Functionality expanding Cabin Airy Ambiance', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/wide-electric-sunroof-with-tilt-and-slide.webp' },
+      { title: '800V Ultra-Fast DC Architecture (10% to 80% Charging in just 18 minutes with 350 kW Charger)', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/ultra-fast-800v-dc-charging-18-minutes.webp' },
+      { title: '14-Speaker Meridian Premium Concert Sound System with Active Sound Design (ASD)', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/meridian-premium-14-speaker-sound-system.webp' },
+      { title: 'Level 2 ADAS 2.0 Suite with 25 Autonomous Safety Functions, 360° Camera & Blind View Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/ev6/gallery/level-2-adas-2-0-with-25-autonomous-safety-features.webp' }
+    ],
+    specs: {
+      battery: '84 kWh Upgraded High-Density Lithium-Ion Battery Pack (800V E-GMP Architecture)',
+      range: '663 km (ARAI MIDC-Full Certified Range)',
+      motors: 'Dual Permanent Magnet Synchronous Motors (325 PS / 605 Nm AWD, 0-100 km/h in 5.3s) | Single Motor RWD (229 PS / 350 Nm)',
+      charging: '350 kW DC Ultra-Fast Charging (10% to 80% in 18 minutes) | 11 kW AC Wallbox (0-100% in 7h 20m)',
+      dimensions: '4695 mm (L) × 1890 mm (W) × 1570 mm (H)',
+      wheelbase: '2900 mm (Long EV Architecture Wheelbase with Flat Floor Cabin)',
+      groundClearance: '178 mm',
+      bootSpace: '520 Litres, Expandable to 1300 Litres (60:40 Rear Remote Folding) + 20 Litres Front Frunk (AWD)',
+      brakes: 'Front & Rear All 4 Disc Brakes with Multi-Collision Brake Assist (MCBA) & EPB with Auto Hold',
+      suspension: 'McPherson Strut (Front) / Multi-Link Independent Suspension (Rear)',
+      safety: 'Level 2 ADAS 2.0 (25 Autonomous Features: FCA 2.0 Junction Crossing & Evasive Steering, Blind Spot Avoidance, Smart Cruise Stop&Go, Safe Exit Assist, 360° Camera), 8 Airbags Standard, 5-Star Euro NCAP'
+    },
+    variants: [
+      {
+        name: 'GT-Line RWD 84 kWh Single Motor',
+        exShowroom: 6095000,
+        fuel: 'Electric',
+        trans: 'Automatic',
+        engine: 'Single Electric Motor RWD (229 PS / 350 Nm)',
+        mileage: '663 km/charge (ARAI)',
+        isVFM: false,
+        keyFeatures: ['84 kWh Lithium-Ion Battery with 663 km Certified Range', 'Rear Wheel Drive (RWD) with 229 PS / 350 Nm', 'Dual 12.3-inch Panoramic Curved Displays', 'Driver & Passenger Premium Relaxation Seats', 'Wide Sunroof with Tilt & Slide', 'Standard 8 Airbags & 5-Star Euro NCAP Safety', 'Level 2 ADAS with Smart Cruise & Lane Follow Assist', '800V Ultra-Fast DC Charging (10-80% in 18 Mins) & V2L']
+      },
+      {
+        name: 'GT-Line AWD 84 kWh Dual Motor',
+        exShowroom: 6595000,
+        fuel: 'Electric',
+        trans: 'Automatic',
+        engine: 'Dual Electric Motors AWD (325 PS / 605 Nm)',
+        mileage: '663 km/charge (ARAI)',
+        isVFM: true,
+        vfmBadge: '⚡ HIGH-PERFORMANCE 325 PS ELECTRIC SUPERSTAR',
+        keyFeatures: ['Dual Motor All Wheel Drive (325 PS / 605 Nm, 0-100 km/h in 5.3s)', '84 kWh Lithium-Ion Battery (663 km ARAI Range)', '14-Speaker Meridian Premium Concert Sound System with Active Sound Design', 'Augmented Reality Head-Up Display (AR HUD)', '360-Degree Surround View Monitor with Blind View Monitor (BVM)', 'Level 2 ADAS 2.0 with 25 Autonomous Features', 'Smart Power Tailgate with Hands-Free Access', 'Vehicle-to-Load (V2L - 3.5 kW) and Vehicle-to-Vehicle (V2V) Support']
+      }
+    ]
   }
 ];
 
