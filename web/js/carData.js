@@ -4107,6 +4107,176 @@ export const CARS = [
   },
 
   {
+    id: 'mahindra-thar',
+    name: 'Mahindra Thar',
+    brand: 'Mahindra',
+    tagline: 'Iconic 4x4 Off-Roader with Shift-on-the-Fly 4WD, Convertible/Hardtop Freedom & 226 mm Ground Clearance',
+    launchDate: 'Updated 2025 (4x4 & RWD Lineup)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹11.35 - ₹17.60 Lakh',
+    minPrice: 1134900,
+    maxPrice: 1760000,
+    safetyRating: '4.0 ★ (Global NCAP 4-Star Adult & Child Safety Rating)',
+    groundClearance: '226 mm',
+    bootSpace: '200 L (Expandable with 50:50 Split-Fold Rear Seats)',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/stealth-black.webp',
+    summary: 'The Mahindra Thar 3-Door is India’s definitive off-road cultural icon, engineering uncompromised go-anywhere capability with modern everyday drivability. Built on a heavy-duty ladder-frame chassis with roll-over mitigation and awarded a proven 4-Star Global NCAP safety rating, the Thar is powered by robust powertrains: a 2.0L mStallion TGDi Turbo Petrol (150 PS / 320 Nm) and a 2.2L mHawk Turbo Diesel (130 PS / 300 Nm), alongside an ultra-accessible 1.5L D117 CRDe Diesel (117 PS / 300 Nm) in Rear-Wheel Drive (RWD) configuration. Transmission choices include a 6-speed manual and a 6-speed AISIN torque converter automatic. Equipped with true 4x4 hardware—including a mechanical shift-on-the-fly transfer case with low range (4L & 4H), mechanical locking rear differential (MLD), brake locking differentials, 41.8° approach and 36.8° departure angles, 226 mm ground clearance, and an unyielding 650 mm water wading capability. Inside, the wash-friendly adventure cabin features IP54 water-resistant switches, removable doors, 17.78 cm touchscreen with adventure telemetry gauges, roof-mounted acoustic speakers, and both Hardtop and Convertible open-air choices.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'battleship-grey',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/thar/360'
+    },
+    colors: [
+      { id: 'stealth-black', name: 'Stealth Black', hex: '#14202E', bg: '#14202E', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/stealth-black.webp' },
+      { id: 'battleship-grey', name: 'Battleship Grey', hex: '#4C596E', bg: '#4C596E', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/battleship-grey.webp' },
+      { id: 'everest-white', name: 'Everest White', hex: '#FEFEFE', bg: '#FEFEFE', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/everest-white.webp' },
+      { id: 'tango-red', name: 'Tango Red (Red Rage)', hex: '#C20D0E', bg: '#C20D0E', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/tango-red.webp' },
+      { id: 'artemis-silver', name: 'Artemis Silver', hex: '#303841', bg: '#303841', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/artemis-silver.webp' },
+      { id: 'jeans-blue', name: 'Jeans Blue', hex: '#394E65', bg: '#394E65', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/jeans-blue.webp' },
+      { id: 'galaxy-grey', name: 'Galaxy Grey', hex: '#424851', bg: '#424851', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/galaxy-grey.webp' },
+      { id: 'deep-forest', name: 'Deep Forest Green', hex: '#363A30', bg: '#363A30', image: 'https://ik.imagekit.io/2908vvlod/cars/thar/colors/deep-forest.webp' }
+    ],
+    multiAngle: [
+      { label: 'Front 3/4 Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/360/battleship-grey/1.webp' },
+      { label: 'Side Profile Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/360/battleship-grey/10.webp' },
+      { label: 'Rear 3/4 Road View', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/360/battleship-grey/19.webp' },
+      { label: 'Direct Front Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/360/battleship-grey/28.webp' }
+    ],
+    gallery: [
+      { title: 'All-Black Washable Adventure Cockpit Dashboard with IP54 Splash-Resistant Switches', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/dashboard.webp' },
+      { title: 'Shift-on-the-Fly 4x4 Manual Transfer Case with 4L Low-Range & Locking Differential', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/manual_4x4_transfer_case.webp' },
+      { title: '17.78 cm Touchscreen Infotainment with Real-Time Adventure Statistics & Roll/Pitch Gauges', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/adventure_touchscreen.webp' },
+      { title: 'Rugged Dual-Dial Instrument Cluster with Multi-Information Off-Road Display', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/instrument_cluster.webp' },
+      { title: '18-inch Deep-Silver All-Terrain Alloy Wheels with High-Profile Off-Road Tyres', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/all_terrain_alloys.webp' },
+      { title: 'Signature Tailgate-Mounted Full-Size Spare Wheel with High-Mount Brake Lamp', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/tailgate_spare_wheel.webp' },
+      { title: 'Iconic 7-Slat Vertical Adventure Front Grille with Composite Off-Road Bumper', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/vertical_slat_grille.webp' },
+      { title: 'Retro Circular Headlamps with Daytime Running Lamps and Flared Arch Indicators', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/circular_retro_headlamps.webp' },
+      { title: 'Sporty Contoured Front Bucket Seats with Height & Lumbar Adjustment', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/front_bucket_seats.webp' },
+      { title: 'Rear Parking Assist Camera with Dynamic Guidelines & Rugged Ultrasonic Sensors', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/reverse_parking_camera.webp' },
+      { title: 'Removable Door Panels with Roll-Cage Integrated Speakers and Heavy-Duty Grab Handles', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/adventure_door_panel.webp' },
+      { title: 'High-Clearance (226 mm) 4x4 Ladder-Frame Stance with 650 mm Water Wading Depth', url: 'https://ik.imagekit.io/2908vvlod/cars/thar/gallery/water_wading_stance.webp' }
+    ],
+    specs: {
+      engineOptions: '1.5L D117 CRDe Diesel (117 PS / 300 Nm) | 2.0L mStallion Turbo Petrol (150 PS / 320 Nm) | 2.2L mHawk Diesel (130 PS / 300 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed AISIN Torque Converter Automatic | True 4x4 with 4L/4H Transfer Case',
+      dimensions: '3985 mm (L) × 1820 mm (W) × 1920 mm (H)',
+      wheelbase: '2450 mm',
+      fuelTank: '57 Litres',
+      seatingCapacity: '4 Passengers (Forward-Facing Rear Seats)'
+    },
+    variants: [
+      {
+        name: 'AX (O) 1.5 Diesel MT RWD (Hardtop)',
+        exShowroom: 1134900,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L D117 CRDe Diesel (117 PS / 300 Nm)',
+        mileage: '15.20 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 HIGHWAY & CITY ADVENTURE VALUE',
+        keyFeatures: ['Rear-Wheel Drive (RWD) Efficiency', 'Factory Fitted Molded Hardtop', 'Electronic Stability Program (ESP)', 'Roll Cage & Dual Airbags']
+      },
+      {
+        name: 'LX 1.5 Diesel MT RWD (Hardtop)',
+        exShowroom: 1285000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L D117 CRDe Diesel (117 PS / 300 Nm)',
+        mileage: '15.20 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BESTSELLER RWD HARDTOP',
+        keyFeatures: ['18-inch Deep-Silver Alloy Wheels', '17.78 cm Touchscreen with Android Auto & Apple CarPlay', 'Cruise Control', 'Molded Hardtop with Rear Defogger']
+      },
+      {
+        name: 'LX 2.0 Petrol AT RWD (Hardtop)',
+        exShowroom: 1409900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L mStallion Turbo Petrol (150 PS / 320 Nm)',
+        mileage: '12.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['Smooth 6-Speed AISIN Automatic', '150 PS mStallion Power', '18-inch Alloys', 'Touchscreen Infotainment & Cruise Control']
+      },
+      {
+        name: 'AX (O) 2.2 Diesel MT 4WD (Convertible Top)',
+        exShowroom: 1485000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (130 PS / 300 Nm)',
+        mileage: '14.00 kmpl',
+        isVFM: true,
+        vfmBadge: '🧗 PURIST 4X4 OFF-ROAD PICK',
+        keyFeatures: ['Manual Shift-on-the-Fly 4WD with 4L/4H Transfer Case', 'Mechanical Locking Rear Differential (MLD)', 'Monochrome Steel Wheels', 'Open-Air Convertible Soft Top']
+      },
+      {
+        name: 'LX 2.0 Petrol MT 4WD (Hardtop)',
+        exShowroom: 1540000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo Petrol (150 PS / 320 Nm)',
+        mileage: '12.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['True 4x4 with Shift-on-the-Fly Low Range', '150 PS mStallion Petrol', '18-inch Alloy Wheels', 'IP54 Splash-Resistant Switches']
+      },
+      {
+        name: 'LX 2.2 Diesel MT 4WD (Hardtop)',
+        exShowroom: 1609000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (130 PS / 300 Nm)',
+        mileage: '14.00 kmpl',
+        isVFM: true,
+        vfmBadge: '🛡️ ICONIC DIESEL 4X4 HARDTOP',
+        keyFeatures: ['Torquey 2.2L mHawk (300 Nm)', 'Manual 4x4 with Electric Brake Locking Differential (BLD)', '18-inch All-Terrain Alloys', 'Molded Acoustic Hardtop']
+      },
+      {
+        name: 'LX 2.0 Petrol AT 4WD (Convertible Top)',
+        exShowroom: 1665000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L mStallion Turbo Petrol (150 PS / 320 Nm)',
+        mileage: '11.80 kmpl',
+        isVFM: true,
+        vfmBadge: '☀️ OPEN-AIR ADVENTURE CONVERTIBLE',
+        keyFeatures: ['Open-Top Convertible Canvas Roof', '6-Speed Torque Converter AT with 4x4', 'Adventure Telemetry with Pitch & Roll Gauges', 'Roll-Over Mitigation with Roll Cage']
+      },
+      {
+        name: 'LX 2.0 Petrol AT 4WD (Hardtop)',
+        exShowroom: 1700000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '2.0L mStallion Turbo Petrol (150 PS / 320 Nm)',
+        mileage: '11.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['6-Speed Automatic with 4x4 Transfer Case', 'Factory Molded Hardtop', 'Hill Hold & Hill Descent Control', 'Roof-Mounted Speakers']
+      },
+      {
+        name: 'LX 2.2 Diesel AT 4WD (Convertible Top)',
+        exShowroom: 1715000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (130 PS / 300 Nm)',
+        mileage: '13.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Convertible Open Top', '2.2L mHawk Diesel with 6-Speed AT', 'Mechanical Locking Differential', 'Tyre Pressure Monitoring System (TPMS)']
+      },
+      {
+        name: 'LX 2.2 Diesel AT 4WD (Hardtop)',
+        exShowroom: 1760000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (130 PS / 300 Nm)',
+        mileage: '13.00 kmpl',
+        isVFM: true,
+        vfmBadge: '👑 FLAGSHIP TOURER 4X4 DIESEL AT',
+        keyFeatures: ['Top-Spec 4WD 6-Speed Automatic', 'Molded Hardtop with Sound Deadening', 'Electronic Brake Locking & Mechanical Locking Rear Diff', '18-inch Alloys with All-Terrain Capability']
+      }
+    ]
+  },
+  {
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx',
     brand: 'Mahindra',
