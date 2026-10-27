@@ -1,0 +1,234 @@
+{
+  "id": "mg-astor",
+  "name": "MG Astor",
+  "brand": "MG Motor",
+  "tagline": "India's Most Tech-Loaded Compact SUV with Personal AI Assistant, Panoramic Skyroof & Level-2 ADAS",
+  "launchDate": "2025 Model Year",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹9.99 - ₹17.90 Lakh",
+  "minPrice": 999000,
+  "maxPrice": 1790000,
+  "safetyRating": "5.0 ★ (6 Airbags + 14 Autonomous Level-2 ADAS Features)",
+  "groundClearance": "180 mm",
+  "bootSpace": "448 Litres",
+  "waitingPeriod": "2 - 3 Weeks",
+  "summary": "The MG Astor stands out in the mid-size SUV segment with its Bold Celestial Grille, Full LED Hawkeye Headlamps, plush Sangria Red or Ivory soft-touch cabin, Front Ventilated Seats, Panoramic Skyroof, 80+ i-SMART 2.0 features, and 14 Autonomous Level-2 ADAS functions.",
+  "colors": [
+    {
+      "id": "glaze-red",
+      "name": "Glaze Red",
+      "hex": "#B51E28",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0338?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "havana-grey",
+      "name": "Havana Grey",
+      "hex": "#4E5358",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0339?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "aurora-silver",
+      "name": "Aurora Silver",
+      "hex": "#A5ABB0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0340?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0341?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "starry-black",
+      "name": "Starry Black",
+      "hex": "#181A1E",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0342?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "candy-white-black-roof",
+      "name": "Candy White with Starry Black Roof",
+      "hex": "#E2E5E9",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0343?wid=1200&fmt=png-alpha"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "celestial-grille",
+      "title": "Bold Celestial Electroplated Front Grille",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-308?wid=1200&qlt=90"
+    },
+    {
+      "id": "hawkeye-led-headlamps",
+      "title": "Full LED Hawkeye Projector Headlamps",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-309?wid=1200&qlt=90"
+    },
+    {
+      "id": "turbine-machined-alloys",
+      "title": "R17 Turbine-Inspired Machined Alloy Wheels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-310?wid=1200&qlt=90"
+    },
+    {
+      "id": "led-tail-lamps",
+      "title": "Sculpted LED Tail Lamps & Rear Bumper",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-311?wid=1200&qlt=90"
+    },
+    {
+      "id": "sangria-red-interior",
+      "title": "Dual-Tone Sangria Red Leather-Layered Cabin",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-313?wid=1200&qlt=90"
+    },
+    {
+      "id": "panoramic-skyroof",
+      "title": "Expansive Dual-Pane Panoramic Skyroof",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-322?wid=1200&qlt=90"
+    },
+    {
+      "id": "hd-touchscreen-10inch",
+      "title": "10.1-inch HD Infotainment with Wireless CarPlay",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-316?wid=1200&qlt=90"
+    },
+    {
+      "id": "digital-cluster",
+      "title": "7-inch Full Digital Embedded LCD Cluster",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-314?wid=1200&qlt=90"
+    },
+    {
+      "id": "power-driver-seat",
+      "title": "6-Way Power Adjustable & Front Ventilated Seats",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-324?wid=1200&qlt=90"
+    },
+    {
+      "id": "steering-modes",
+      "title": "3-Mode Electronic Power Steering (Urban, Normal, Dynamic)",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-321?wid=1200&qlt=90"
+    },
+    {
+      "id": "digital-bluetooth-key",
+      "title": "Digital Key with Bluetooth Sharing & i-SMART 2.0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0345?wid=1200&qlt=90"
+    },
+    {
+      "id": "level2-adas-radar",
+      "title": "14 Autonomous Level-2 ADAS Safety Functions",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-302?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.5L VTi-TECH Naturally Aspirated Petrol (110 PS @ 6000 rpm, 144 Nm @ 4400 rpm)",
+      "1.3L 220 TURBO Petrol (140 PS @ 5600 rpm, 220 Nm @ 3600 rpm)"
+    ],
+    "transmissions": [
+      "5-Speed Manual Transmission (1.5L Petrol)",
+      "8-Speed CVT Automatic (1.5L Petrol)",
+      "6-Speed Torque Converter Automatic (1.3L Turbo)"
+    ],
+    "dimensions": "4323 mm L × 1809 mm W × 1650 mm H",
+    "wheelbase": "2585 mm",
+    "fuelTank": "48 Litres (1.5L) / 45 Litres (1.3L Turbo)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Sprint 1.5 Petrol 5MT",
+      "exShowroom": 999000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L VTi-TECH (110 PS)",
+      "mileage": "15.43 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Full LED Hawkeye Headlamps with LED DRLs & LED Tail Lamps",
+        "10.1-inch HD Touchscreen with Android Auto & Apple CarPlay",
+        "Soft-Touch Dashboard with Dual-Tone Ivory Interior",
+        "All-4 Disc Brakes, ESP, Traction Control, Hill Hold & Hill Descent Control",
+        "Automatic Climate Control with Rear AC Vents & PM 2.5 Filter"
+      ]
+    },
+    {
+      "name": "Shine 1.5 Petrol 5MT",
+      "exShowroom": 1170000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L VTi-TECH (110 PS)",
+      "mileage": "15.43 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Expansive Panoramic Skyroof",
+        "R17 Silver Alloy Wheels & Push Button Start/Stop with Smart Key",
+        "Rear View Camera, Cruise Control & Front Fog Lamps with Cornering Assist",
+        "Leather-Layered Steering Wheel with 3 Steering Modes",
+        "6 Speakers & Cooled Glovebox"
+      ]
+    },
+    {
+      "name": "Select 1.5 Petrol 5MT",
+      "exShowroom": 1299000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L VTi-TECH (110 PS)",
+      "mileage": "15.43 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Value Panoramic SUV",
+      "keyFeatures": [
+        "6 Airbags & 7-inch Full Digital LCD Instrument Cluster",
+        "80+ i-SMART 2.0 Connected Features with Wireless CarPlay/Android Auto",
+        "Wireless Smartphone Charger & Digital Bluetooth Key",
+        "Panoramic Skyroof & Auto Headlamps with Rain-Sensing Wipers",
+        "24x7 Live Assistant & Jio Voice Recognition"
+      ]
+    },
+    {
+      "name": "Select 1.5 Petrol CVT Automatic",
+      "exShowroom": 1410000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L VTi-TECH (110 PS)",
+      "mileage": "14.85 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Automatic Trim",
+      "keyFeatures": [
+        "8-Speed Smooth CVT Automatic with Electronic Parking Brake & Auto Hold",
+        "Panoramic Skyroof, 6 Airbags & 10.1-inch Wireless Touchscreen",
+        "Wireless Phone Charger, 7-inch Digital Cluster & Digital Key",
+        "R17 Alloy Wheels, Heated ORVMs & Roof Rails",
+        "Plush Dual-Tone Ivory Perforated Leatherette Seats"
+      ]
+    },
+    {
+      "name": "Sharp Pro 1.5 Petrol CVT Automatic",
+      "exShowroom": 1610000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L VTi-TECH (110 PS)",
+      "mileage": "14.85 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Front Ventilated Seats & 6-Way Power Adjustable Driver Seat",
+        "360° Around View HD Camera & Blind Spot Detection / Rear Cross Traffic Alert",
+        "R17 Dual-Tone Turbine-Inspired Machined Alloy Wheels",
+        "Auto-Dimming IRVM & Tire Pressure Monitoring System (TPMS)",
+        "Panoramic Skyroof, 6 Airbags & Wireless Charger"
+      ]
+    },
+    {
+      "name": "Savvy Pro 1.3 Turbo 6AT (ADAS)",
+      "exShowroom": 1790000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.3L 220 Turbo (140 PS / 220 Nm)",
+      "mileage": "14.34 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "140 PS / 220 Nm 1.3L Turbo Engine with 6-Speed Torque Converter Automatic",
+        "14 Autonomous Level-2 ADAS Features (Adaptive Cruise, Lane Keep, AEB)",
+        "Exclusive Dual-Tone Sangria Red Interior Theme",
+        "Front Ventilated Seats, Panoramic Skyroof & 360° HD Camera",
+        "Red Front Brake Calipers & R17 Black Machined Alloys"
+      ]
+    }
+  ]
+}

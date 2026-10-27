@@ -1,0 +1,206 @@
+{
+  "id": "mg-windsor-ev",
+  "name": "MG Windsor EV",
+  "brand": "MG Motor",
+  "tagline": "India's #1 Selling Intelligent CUV with 135° Aero-Lounge Seats, 15.6-inch GrandView Display & Up to 449 km Range",
+  "launchDate": "2025 (Windsor & Windsor Pro)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹14.00 - ₹18.10 Lakh",
+  "minPrice": 1400000,
+  "maxPrice": 1810000,
+  "safetyRating": "5.0 ★ (6 Airbags Standard + Level-2 ADAS on Pro)",
+  "groundClearance": "186 mm",
+  "bootSpace": "604 Litres",
+  "waitingPeriod": "3 - 6 Weeks",
+  "summary": "The JSW MG Windsor EV redefines electric mobility in India with business-class 135° reclining Aero-Lounge rear seats, a massive 2700 mm wheelbase, segment-largest 604L boot space, Infinity View Glass Roof, 15.6-inch GrandView Touch Display, and available 38 kWh (332 km) or 52.9 kWh Pro (449 km) Prismatic LFP battery packs.",
+  "colors": [
+    {
+      "id": "turquoise-green",
+      "name": "Turquoise Green",
+      "hex": "#436B6D",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-086?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-087?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "starburst-black",
+      "name": "Starburst Black",
+      "hex": "#1B1D21",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-088?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "clay-beige",
+      "name": "Clay Beige",
+      "hex": "#C8BCA8",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-090?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "celadon-blue",
+      "name": "Celadon Blue",
+      "hex": "#3B5971",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-129?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "glaze-red",
+      "name": "Glaze Red",
+      "hex": "#B51E28",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-128?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "aurora-silver",
+      "name": "Aurora Silver",
+      "hex": "#9EA4AA",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-130?wid=1200&fmt=png-alpha"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "aeroglide-design",
+      "title": "Futuristic AeroGlide CUV Exterior Design",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-025?wid=1200&qlt=90"
+    },
+    {
+      "id": "r18-diamond-alloys",
+      "title": "R18 Dual-Tone Diamond-Cut Alloy Wheels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-029?wid=1200&qlt=90"
+    },
+    {
+      "id": "illuminated-mg-logo",
+      "title": "Illuminated Front MG Crest & StarStreak Horizon LED",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-026?wid=1200&qlt=90"
+    },
+    {
+      "id": "flush-door-handles",
+      "title": "Aerodynamic Smart Flush Door Handles",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-027?wid=1200&qlt=90"
+    },
+    {
+      "id": "smartflow-led-taillamps",
+      "title": "SmartFlow Connected LED Tail Light Bar",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-028?wid=1200&qlt=90"
+    },
+    {
+      "id": "infinity-glass-roof",
+      "title": "Expansive Infinity View Glass Roof",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-023?wid=1200&qlt=90"
+    },
+    {
+      "id": "grandview-touch-display",
+      "title": "15.6-inch GrandView Touch Infotainment Display",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-038?wid=1200&qlt=90"
+    },
+    {
+      "id": "aero-lounge-seats",
+      "title": "135° Reclining Business-Class Aero-Lounge Seats",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-039?wid=1200&qlt=90"
+    },
+    {
+      "id": "dual-tone-ivory-interior",
+      "title": "Dual-Tone Ivory & Rose Gold Luxury Cabin",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-022?wid=1200&qlt=90"
+    },
+    {
+      "id": "infinity-9-speaker-audio",
+      "title": "9-Speaker Infinity Surround Sound System",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-053?wid=1200&qlt=90"
+    },
+    {
+      "id": "boot-space-604l",
+      "title": "Segment-Largest 604-Litre Luggage Boot",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-034?wid=1200&qlt=90"
+    },
+    {
+      "id": "level2-adas-safety",
+      "title": "Level-2 ADAS Suite, 360° Camera & 6 Airbags",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-131?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "38 kWh LFP Battery + PMSM Motor (136 PS, 200 Nm, 332 km Certified Range)",
+      "52.9 kWh LFP Battery (Windsor Pro) + PMSM Motor (136 PS, 200 Nm, 449 km Certified Range)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic Electric Drive (4 Drive Modes: Eco+, Eco, Normal, Sport)"
+    ],
+    "dimensions": "4295 mm L × 1850 mm W × 1677 mm H",
+    "wheelbase": "2700 mm",
+    "fuelTank": "38 kWh / 52.9 kWh (IP67 Rated)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Excite 38 kWh (Full Battery Purchase)",
+      "exShowroom": 1400000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "38 kWh Electric (136 PS)",
+      "mileage": "332 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags, All-4 Disc Brakes, ESP & Electronic Parking Brake Standard",
+        "135° Reclining Aero-Lounge Rear Seats (60:40 Split)",
+        "10.1-inch Touchscreen with Wireless Apple CarPlay & Android Auto",
+        "LED Projector Headlamps, StarStreak LED DRLs & Smart Flush Handles",
+        "Also available under BaaS at ₹9.99 Lakh + ₹3.9/km"
+      ]
+    },
+    {
+      "name": "Exclusive 38 kWh",
+      "exShowroom": 1500000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "38 kWh Electric (136 PS)",
+      "mileage": "332 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Tech-Loaded Trim",
+      "keyFeatures": [
+        "Massive 15.6-inch GrandView Touch Display with Jio App Store",
+        "360° HD Surround View Camera & R18 Diamond-Cut Alloy Wheels",
+        "9-Speaker Infinity Audio System with Subwoofer",
+        "6-Way Power Adjustable Driver Seat & Black Leatherette Quilted Seats",
+        "80+ i-SMART Connected Features, Digital Key & Wireless Charger"
+      ]
+    },
+    {
+      "name": "Essence 38 kWh",
+      "exShowroom": 1615000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "38 kWh Electric (136 PS)",
+      "mileage": "332 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Expansive Infinity View Glass Roof with Electric Sunshade",
+        "Front Ventilated Seats & 256-Color Ambient Cabin Lighting",
+        "PM 2.5 Air Filter & 7.4 kW AC Fast Home Charger Included",
+        "15.6-inch GrandView Display, 360° Camera & 9-Speaker Infinity Sound",
+        "Lifetime Battery Warranty for First Owner"
+      ]
+    },
+    {
+      "name": "Essence Pro 52.9 kWh (ADAS + V2L)",
+      "exShowroom": 1810000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "52.9 kWh Electric (136 PS)",
+      "mileage": "449 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Long-Range 449 km Flagship",
+      "keyFeatures": [
+        "Larger 52.9 kWh Prismatic Battery with 449 km Certified Range & 60 kW DC Fast Charging",
+        "Level-2 ADAS Suite (12 Autonomous Safety Features incl. Adaptive Cruise & AEB)",
+        "Dual-Tone Ivory & Rose Gold Interior Theme & Powered Tailgate",
+        "Vehicle-to-Load (V2L) & Vehicle-to-Vehicle (V2V) Bi-Directional Charging",
+        "Infinity View Glass Roof, Ventilated Seats & 9-Speaker Infinity Audio"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "id": "mg-zs-ev",
+  "name": "MG ZS EV",
+  "brand": "MG Motor",
+  "tagline": "Pure Electric Family SUV with 50.3 kWh Battery, 461 km Range, 176 PS Power & Level-2 ADAS",
+  "launchDate": "2025 Model Year",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹18.98 - ₹25.75 Lakh",
+  "minPrice": 1898000,
+  "maxPrice": 2575000,
+  "safetyRating": "5.0 ★ (Euro NCAP / ASNCAP 5-Star + 6 Airbags + Level-2 ADAS)",
+  "groundClearance": "177 mm",
+  "bootSpace": "448 Litres",
+  "waitingPeriod": "2 - 3 Weeks",
+  "summary": "The MG ZS EV delivers exhilarating 176 PS pure electric performance (0-100 km/h in 8.5 seconds) paired with a 50.3 kWh IP69K-rated battery offering 461 km certified range, Dual-Pane Panoramic Skyroof, 360° HD camera, 75+ i-SMART features, and 17 Autonomous Level-2 ADAS functions.",
+  "colors": [
+    {
+      "id": "glaze-red",
+      "name": "Glaze Red",
+      "hex": "#B51E28",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0319?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "aurora-silver",
+      "name": "Aurora Silver",
+      "hex": "#7D8389",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0320?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "starry-black",
+      "name": "Starry Black",
+      "hex": "#181A1E",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0318?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0321?wid=1200&fmt=png-alpha"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "electric-front-grille",
+      "title": "Body-Colored Aerodynamic EV Grille & Charging Port",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0305?wid=1200&qlt=90"
+    },
+    {
+      "id": "hawkeye-led-headlamps",
+      "title": "Full LED Hawkeye Headlamps with DRLs",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0261?wid=1200&qlt=90"
+    },
+    {
+      "id": "tomahawk-alloy-wheels",
+      "title": "R17 Tomahawk Hub Design Alloy Wheels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0262?wid=1200&qlt=90"
+    },
+    {
+      "id": "led-tail-lamps",
+      "title": "Signature LED Tail Lamps",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0263?wid=1200&qlt=90"
+    },
+    {
+      "id": "panoramic-skyroof",
+      "title": "Dual-Pane Panoramic Skyroof",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0290?wid=1200&qlt=90"
+    },
+    {
+      "id": "dark-grey-interiors",
+      "title": "Plush Dual-Tone Dark Grey & Ivory Cabin",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0265?wid=1200&qlt=90"
+    },
+    {
+      "id": "hd-touchscreen-10inch",
+      "title": "10.1-inch HD Touchscreen with Wireless CarPlay",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0307?wid=1200&qlt=90"
+    },
+    {
+      "id": "digital-cluster",
+      "title": "7-inch Full Digital LCD Driver Cluster",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0267?wid=1200&qlt=90"
+    },
+    {
+      "id": "rotary-drive-dial",
+      "title": "Rotary Gear Selector, 3 Drive Modes & 3 KERS Levels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0288?wid=1200&qlt=90"
+    },
+    {
+      "id": "six-airbags-safety",
+      "title": "6 Airbags Standard & 5-Star Safety Architecture",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0303?wid=1200&qlt=90"
+    },
+    {
+      "id": "360-around-view-camera",
+      "title": "360° Around View HD Camera",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0304?wid=1200&qlt=90"
+    },
+    {
+      "id": "level2-adas-suite",
+      "title": "17 Autonomous Level-2 ADAS Features",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0292?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "50.3 kWh Prismatic Li-Ion Battery (IP69K + ASIL-D) + PMSM Motor (176 PS, 280 Nm, 461 km Range)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic Electric Drive (3 Drive Modes + 3 KERS Regeneration Levels)"
+    ],
+    "dimensions": "4323 mm L × 1809 mm W × 1649 mm H",
+    "wheelbase": "2585 mm",
+    "fuelTank": "50.3 kWh (50 kW DC Fast Charge: 0-80% in 60 Mins)",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Executive 50.3 kWh",
+      "exShowroom": 1898000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "50.3 kWh Electric (176 PS)",
+      "mileage": "461 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Full 50.3 kWh Battery with 461 km Range & 176 PS Motor",
+        "6 Airbags, All-4 Disc Brakes, ESP, Hill Hold & Hill Descent Control",
+        "Full LED Hawkeye Headlamps, LED Tail Lamps & R17 Tomahawk Alloy Wheels",
+        "10.1-inch HD Touchscreen with Wireless Apple CarPlay & Android Auto",
+        "7-inch Digital Cluster, Rear View Camera & Push Button Start"
+      ]
+    },
+    {
+      "name": "Excite Pro 50.3 kWh",
+      "exShowroom": 1998000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "50.3 kWh Electric (176 PS)",
+      "mileage": "461 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Best Value Panoramic EV SUV",
+      "keyFeatures": [
+        "Dual-Pane Panoramic Skyroof",
+        "75+ i-SMART Connected Car Features with Digital Bluetooth Key",
+        "10.1-inch Wireless Touchscreen & 6-Speaker Audio System",
+        "Electronic Parking Brake with Auto Hold & 3 Steering Modes",
+        "6 Airbags & Rear AC Vents"
+      ]
+    },
+    {
+      "name": "Exclusive Plus 50.3 kWh",
+      "exShowroom": 2425000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "50.3 kWh Electric (176 PS)",
+      "mileage": "461 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "360° Around View HD Camera & Blind Spot Detection / Rear Cross Traffic Alert",
+        "6-Way Power Adjustable Driver Seat & Wireless Phone Charger",
+        "Dual-Pane Panoramic Skyroof & PM 2.5 Air Filter",
+        "Power-Folding Heated ORVMs & Auto Headlamps with Rain-Sensing Wipers",
+        "Optional Dual-Tone Ivory Interior Theme"
+      ]
+    },
+    {
+      "name": "Essence 50.3 kWh (ADAS)",
+      "exShowroom": 2575000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "50.3 kWh Electric (176 PS)",
+      "mileage": "461 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "17 Autonomous Level-2 ADAS Features (Traffic Jam Assist, Adaptive Cruise, Lane Keep)",
+        "Dual-Pane Panoramic Skyroof, 360° HD Camera & 6 Airbags",
+        "50.3 kWh Battery with 461 km Range & 7.4 kW AC Home Fast Charger",
+        "Wireless Charger, 6-Way Power Seat & Digital Bluetooth Key",
+        "MG e-Shield 8-Year / 1.5 Lakh km Battery Warranty"
+      ]
+    }
+  ]
+}

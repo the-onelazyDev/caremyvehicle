@@ -1,0 +1,187 @@
+{
+  "id": "mg-majestor",
+  "name": "MG Majestor (Gloster Next-Gen)",
+  "brand": "MG Motor",
+  "tagline": "India's Tallest, Widest & Longest D+ Flagship 4x4 SUV with M-Hub 10 Off-Road Modes, Triple Diff-Locks & JBL Studio 12 Audio",
+  "launchDate": "2025-2026 Flagship",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Diesel"
+  ],
+  "priceRange": "₹39.99 - ₹45.99 Lakh",
+  "minPrice": 3999000,
+  "maxPrice": 4599000,
+  "safetyRating": "5.0 ★ (High-Tensile Ladder Frame + 6 Airbags + Level-2 ADAS)",
+  "groundClearance": "219 mm (810 mm Water Wading)",
+  "bootSpace": "343 Litres (Up to 1350L 3rd Row Folded)",
+  "waitingPeriod": "4 - 6 Weeks",
+  "summary": "The MG Majestor (succeeding the Gloster as India's largest D+ SUV) combines a 216 PS 2.0L Twin-Turbo Diesel engine and 8-Speed ZF Automatic with M-Hub 4x4 terrain management (10 Off-Road Modes, M-Crawl, Front/Center/Rear Differential Locks, 810 mm water wading) and the M-Lounge luxury cabin featuring Multi-Mode Massage & Ventiluxe seats, Galaxy View Panoramic Roof, and 12-Speaker JBL Studio Sound.",
+  "colors": [
+    {
+      "id": "metal-black",
+      "name": "Metal Black",
+      "hex": "#181A1D",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/majestor-metal-black?wid=1400&qlt=90"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#F2F3F5",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/majestor-pearl-white?wid=1400&qlt=90"
+    },
+    {
+      "id": "concrete-grey",
+      "name": "Concrete Grey",
+      "hex": "#8B9095",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/majestor-concrete-grey?wid=1400&qlt=90"
+    },
+    {
+      "id": "metal-ash",
+      "name": "Metal Ash",
+      "hex": "#54585C",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/majestor-metal-ash?wid=1400&qlt=90"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "mosaic-matrix-grille",
+      "title": "Commanding Mosaic Matrix Front Grille",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcaseexterior-img-003?wid=1200&qlt=90"
+    },
+    {
+      "id": "dragon-eye-drls",
+      "title": "Dragon Eye LED DRLs with Tri-Beam Headlights",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcaseexterior-img-005?wid=1200&qlt=90"
+    },
+    {
+      "id": "dual-shade-alloys",
+      "title": "R19 Dual-Shade Machined Alloy Wheels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcaseexterior-img-002?wid=1200&qlt=90"
+    },
+    {
+      "id": "connected-tail-lamps",
+      "title": "Full-Width Connected LED Tail Lamps & Twin Exhausts",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcaseexterior-img-004?wid=1200&qlt=90"
+    },
+    {
+      "id": "mlounge-galaxy-roof",
+      "title": "M-Lounge Cabin with Galaxy View Panoramic Roof",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mlounge-img-002?wid=1200&qlt=90"
+    },
+    {
+      "id": "massage-ventiluxe-seats",
+      "title": "Multi-Mode Massage & Ventiluxe Heated/Cooled Seats",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mlounge-img-003?wid=1200&qlt=90"
+    },
+    {
+      "id": "jbl-studio-12-sound",
+      "title": "JBL Studio 12-Speaker Surround Audio System",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mlounge-img-004?wid=1200&qlt=90"
+    },
+    {
+      "id": "ambient-lighting-64",
+      "title": "64-Color Rhythmic Ambient Cabin Lighting",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mlounge-img-005?wid=1200&qlt=90"
+    },
+    {
+      "id": "dual-wireless-charging",
+      "title": "Dual 50W Wireless Chargers & Column Gear Shifter",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasetech-img-004?wid=1200&qlt=90"
+    },
+    {
+      "id": "digital-cockpit-screens",
+      "title": "Dual 12.3-inch HD Screens with i-SMART 2.0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasetech-img-002?wid=1200&qlt=90"
+    },
+    {
+      "id": "ladder-frame-chassis",
+      "title": "High-Tensile Ladder-Frame Chassis & Triple Diff-Locks",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasesafety-img-002?wid=1200&qlt=90"
+    },
+    {
+      "id": "level2-adas-360-cam",
+      "title": "Level-2 ADAS Suite & 360° HD Off-Road Camera",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasesafety-img-008?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "2.0L Twin-Turbocharged Diesel (216 PS @ 4000 rpm, 478.5 Nm @ 1500-2400 rpm)"
+    ],
+    "transmissions": [
+      "8-Speed ZF Torque Converter Automatic with Column Shifter (4x2 & M-Hub 4x4 with 10 Modes)"
+    ],
+    "dimensions": "5046 mm L × 2016 mm W × 1876 mm H",
+    "wheelbase": "2950 mm",
+    "fuelTank": "75 Litres",
+    "seatingCapacity": "6 Seater (Captain) & 7 Seater"
+  },
+  "variants": [
+    {
+      "name": "Savvy 4x2 7-Seater 2.0 Twin-Turbo AT",
+      "exShowroom": 3999000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+      "mileage": "13.92 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "India's Largest D+ SUV (5046 mm Length, 2950 mm Wheelbase)",
+        "Dual 12.3-inch M-Lounge Displays with i-SMART 2.0 (75+ Features)",
+        "Galaxy View Panoramic Sunroof & 12-Way Powered Front Seats",
+        "Level-2 ADAS (Lane Keep, Adaptive Cruise, AEB) & 360° HD Camera",
+        "JBL Studio 12-Speaker Audio, Dual Wireless Chargers & 6 Airbags"
+      ]
+    },
+    {
+      "name": "Savvy 4x2 6-Seater (Captain) 2.0 Twin-Turbo AT",
+      "exShowroom": 4049000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+      "mileage": "13.92 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Ultimate Chauffeur Luxury SUV",
+      "keyFeatures": [
+        "2nd-Row Luxury Captain Seats with Individual Armrests",
+        "Multi-Mode Massage & Ventiluxe Heated/Ventilated Front Seats",
+        "64-Color Ambient Lighting, 3-Zone Automatic Climate Control & PM 2.5 Purifier",
+        "Galaxy View Panoramic Roof & Hands-Free Powered Tailgate",
+        "Level-2 ADAS & JBL Studio 12-Speaker Surround Sound"
+      ]
+    },
+    {
+      "name": "Savvy 4x4 7-Seater 2.0 Twin-Turbo AT (M-Hub)",
+      "exShowroom": 4549000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+      "mileage": "12.35 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Flagship 4x4 Off-Road King",
+      "keyFeatures": [
+        "M-Hub 4x4 System with 10 Off-Road Modes (Rock, Sand, Mud, Snow, Normal)",
+        "Front, Center & Rear Differential Locks + M-Crawl Low-Speed Off-Road Cruise",
+        "810 mm Water Wading Capacity & High-Tensile Ladder-Frame Chassis",
+        "Multi-Mode Massage & Ventiluxe Seats, JBL Studio 12 Audio & Galaxy Roof",
+        "Autonomous Level-2 ADAS & 360° Transparent Chassis View Camera"
+      ]
+    },
+    {
+      "name": "Savvy 4x4 6-Seater (Captain) 2.0 Twin-Turbo AT (M-Hub)",
+      "exShowroom": 4599000,
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+      "mileage": "12.35 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6-Seater Executive Captain Chairs + Full M-Hub 4x4 Hardware",
+        "Triple Differential Locks, M-Crawl & 10 Terrain Modes",
+        "Multi-Mode Massage Seats, 64-Color Ambient Lighting & JBL Studio 12 Sound",
+        "Dual 12.3-inch Screens, Dual Wireless Chargers & Column Shifter",
+        "Level-2 ADAS, 6 Airbags & Roll Movement Intervention"
+      ]
+    }
+  ]
+}

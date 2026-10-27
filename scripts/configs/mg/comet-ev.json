@@ -1,0 +1,225 @@
+{
+  "id": "mg-comet-ev",
+  "name": "MG Comet EV",
+  "brand": "MG Motor",
+  "tagline": "India's Smartest Urban Electric Car with Twin 10.25-inch Floating Screens & 4.2m Turning Radius",
+  "launchDate": "2025 Model Year",
+  "bodyType": "Hatchback",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "₹7.00 - ₹9.84 Lakh",
+  "minPrice": 700000,
+  "maxPrice": 984000,
+  "safetyRating": "4.0 ★ (17 Hot-Stamped Steel Panels + IP67 Battery + All-4 Disc Brakes)",
+  "groundClearance": "165 mm",
+  "bootSpace": "350 Litres (Rear Seats Folded)",
+  "waitingPeriod": "1 - 2 Weeks",
+  "summary": "The MG Comet EV is purpose-built for effortless city commuting with an ultra-tight 4.2-metre turning radius, twin 10.25-inch integrated floating widescreens, Wireless Apple CarPlay & Android Auto, 55+ i-SMART connected features, 230 km certified range, and 7.4 kW AC fast charging.",
+  "colors": [
+    {
+      "id": "apple-green-starry-black",
+      "name": "Apple Green with Starry Black Roof",
+      "hex": "#82B91E",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0191?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "candy-white-starry-black",
+      "name": "Candy White with Starry Black Roof",
+      "hex": "#ECEEF0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0193?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "aurora-silver",
+      "name": "Aurora Silver",
+      "hex": "#A5ABB0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0192?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F7F8FA",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0194?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "starry-black",
+      "name": "Starry Black",
+      "hex": "#181A1E",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0190?wid=1200&fmt=png-alpha"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "floating-widescreen",
+      "title": "Twin 10.25-inch Integrated Floating Widescreen Displays",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0163?wid=1200&qlt=90"
+    },
+    {
+      "id": "wireless-carplay",
+      "title": "Wireless Apple CarPlay & Android Auto",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-083?wid=1200&qlt=90"
+    },
+    {
+      "id": "leather-steering-controls",
+      "title": "iPod-Inspired Steering Wheel Controls",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0164?wid=1200&qlt=90"
+    },
+    {
+      "id": "two-door-four-seater",
+      "title": "Smart 2-Door 4-Seater Layout with One-Touch Tumble",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0165?wid=1200&qlt=90"
+    },
+    {
+      "id": "space-grey-cabin",
+      "title": "Airy Space Grey Cabin & Ergonomic Seating",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0183?wid=1200&qlt=90"
+    },
+    {
+      "id": "city-range-230km",
+      "title": "230 km Certified Range & Ultra-Agile 4.2m Turning Radius",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0184?wid=1200&qlt=90"
+    },
+    {
+      "id": "ip67-prismatic-battery",
+      "title": "17.3 kWh IP67-Rated Prismatic Li-Ion Battery",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-081?wid=1200&qlt=90"
+    },
+    {
+      "id": "high-strength-body",
+      "title": "High-Strength Body with 17 Hot-Stamped Steel Panels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0182?wid=1200&qlt=90"
+    },
+    {
+      "id": "serenity-lush-pack",
+      "title": "Serenity Lush Custom Interior Styling Pack",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-135?wid=1200&qlt=90"
+    },
+    {
+      "id": "sundowner-lush-pack",
+      "title": "Sundowner Lush Custom Theme Pack",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-136?wid=1200&qlt=90"
+    },
+    {
+      "id": "night-cafe-edition",
+      "title": "Night Cafe Signature Graphic Edition",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0148?wid=1200&qlt=90"
+    },
+    {
+      "id": "space-sticker-edition",
+      "title": "Space Explorer Custom Graphic Edition",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0143?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "17.3 kWh Prismatic LFP Battery + PMSM Rear Motor (42 PS, 110 Nm, 230 km Certified Range)"
+    ],
+    "transmissions": [
+      "Single-Speed Automatic Electric Drive (Eco, Normal, Sport Modes)"
+    ],
+    "dimensions": "2974 mm L × 1505 mm W × 1640 mm H",
+    "wheelbase": "2010 mm",
+    "fuelTank": "17.3 kWh (3.3 kW & 7.4 kW AC Fast Charging)",
+    "seatingCapacity": "4 Seater"
+  },
+  "variants": [
+    {
+      "name": "Executive 17.3 kWh",
+      "exShowroom": 700000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual Front Airbags, ABS + EBD, Rear Parking Sensors & TPMS",
+        "7-inch Digital Instrument Cluster & LED Turn Indicators",
+        "50:50 Split Folding Rear Seats & Remote Central Locking",
+        "Illuminated MG Logo & Follow-Me-Home Headlamps",
+        "Also available under BaaS at ₹4.99 Lakh + ₹2.5/km"
+      ]
+    },
+    {
+      "name": "Excite 17.3 kWh (3.3 kW)",
+      "exShowroom": 808000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Best Value Twin-Screen EV",
+      "keyFeatures": [
+        "Twin 10.25-inch Floating Widescreen Infotainment & Digital Cluster",
+        "Wireless Apple CarPlay & Android Auto",
+        "Full LED Headlamps, LED Tail Lamps & Connecting Horizon Front/Rear Light Bars",
+        "55+ i-SMART Connected Car Features with 100+ Voice Commands",
+        "Leather-Wrapped Steering Wheel & Power Windows"
+      ]
+    },
+    {
+      "name": "Excite FC 17.3 kWh (7.4 kW Fast Charge)",
+      "exShowroom": 858000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "7.4 kW AC Fast Charger Support (0-100% in just 3.5 Hours)",
+        "All-4 Wheel Disc Brakes, Electronic Stability Control (ESC) & Hill Hold Control",
+        "Electronic Parking Brake (EPB) & Power-Folding ORVMs",
+        "Twin 10.25-inch Floating Screens with Wireless CarPlay/Android Auto",
+        "Creep Mode for Effortless Bumper-to-Bumper Traffic"
+      ]
+    },
+    {
+      "name": "Exclusive 17.3 kWh",
+      "exShowroom": 910000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Digital Key with Bluetooth Sharing & Smart Start System (No Start Button Needed)",
+        "Rear Parking Camera with Dynamic Guidelines",
+        "Electronic Parking Brake, ESC, Hill Hold & All-4 Disc Brakes",
+        "Tilt-Adjustable Steering & Dual-Tone Roof Options",
+        "Twin 10.25-inch Widescreens & 55+ Connected Features"
+      ]
+    },
+    {
+      "name": "Exclusive FC 17.3 kWh (7.4 kW Fast Charge)",
+      "exShowroom": 960000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": true,
+      "vfmBadge": "Top Fast-Charge Urban EV",
+      "keyFeatures": [
+        "7.4 kW AC Fast Charging (0-100% in 3.5 Hours)",
+        "All-4 Disc Brakes, ESC, Hill Hold & Electronic Parking Brake",
+        "Digital Bluetooth Key, Rear View Camera & Twin 10.25-inch Displays",
+        "Power-Folding ORVMs & Dual-Tone Apple Green / Candy White Options",
+        "Lowest Running Cost (< ₹0.75/km)"
+      ]
+    },
+    {
+      "name": "Blackstorm Edition 17.3 kWh FC",
+      "exShowroom": 984000,
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "engine": "17.3 kWh Electric (42 PS)",
+      "mileage": "230 km/charge",
+      "isVFM": false,
+      "keyFeatures": [
+        "Starry Black Exterior with Starlight Red Accents & Blackstorm Badging",
+        "Leatherette Seats with Blackstorm Red Embroidery & 4 Speakers",
+        "7.4 kW Fast Charging, All-4 Disc Brakes, ESC & Electronic Parking Brake",
+        "Twin 10.25-inch Floating Screens & Digital Key Sharing",
+        "Rear View Camera & Dark Chrome Styling Elements"
+      ]
+    }
+  ]
+}

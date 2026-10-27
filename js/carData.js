@@ -9787,7 +9787,1295 @@ export const CARS = [
               }
           ]
       }
-  }
+  },
+  {
+      "id": "mg-windsor-ev",
+      "name": "MG Windsor EV",
+      "brand": "MG Motor",
+      "tagline": "India's #1 Selling Intelligent CUV with 135° Aero-Lounge Seats, 15.6-inch GrandView Display & Up to 449 km Range",
+      "launchDate": "2025 (Windsor & Windsor Pro)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Electric"
+      ],
+      "priceRange": "₹14.00 - ₹18.10 Lakh",
+      "minPrice": 1400000,
+      "maxPrice": 1810000,
+      "safetyRating": "5.0 ★ (6 Airbags Standard + Level-2 ADAS on Pro)",
+      "groundClearance": "186 mm",
+      "bootSpace": "604 Litres",
+      "waitingPeriod": "3 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp",
+      "summary": "The JSW MG Windsor EV redefines electric mobility in India with business-class 135° reclining Aero-Lounge rear seats, a massive 2700 mm wheelbase, segment-largest 604L boot space, Infinity View Glass Roof, 15.6-inch GrandView Touch Display, and available 38 kWh (332 km) or 52.9 kWh Pro (449 km) Prismatic LFP battery packs.",
+      "colors": [
+          {
+              "id": "turquoise-green",
+              "name": "Turquoise Green",
+              "hex": "#436B6D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#F4F5F7",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/pearl-white.webp"
+          },
+          {
+              "id": "starburst-black",
+              "name": "Starburst Black",
+              "hex": "#1B1D21",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp"
+          },
+          {
+              "id": "clay-beige",
+              "name": "Clay Beige",
+              "hex": "#C8BCA8",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/clay-beige.webp"
+          },
+          {
+              "id": "celadon-blue",
+              "name": "Celadon Blue",
+              "hex": "#3B5971",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/celadon-blue.webp"
+          },
+          {
+              "id": "glaze-red",
+              "name": "Glaze Red",
+              "hex": "#B51E28",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/glaze-red.webp"
+          },
+          {
+              "id": "aurora-silver",
+              "name": "Aurora Silver",
+              "hex": "#9EA4AA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/aurora-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "aeroglide-design",
+              "title": "Futuristic AeroGlide CUV Exterior Design",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/aeroglide-design.webp"
+          },
+          {
+              "id": "r18-diamond-alloys",
+              "title": "R18 Dual-Tone Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/r18-diamond-alloys.webp"
+          },
+          {
+              "id": "illuminated-mg-logo",
+              "title": "Illuminated Front MG Crest & StarStreak Horizon LED",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/illuminated-mg-logo.webp"
+          },
+          {
+              "id": "flush-door-handles",
+              "title": "Aerodynamic Smart Flush Door Handles",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/flush-door-handles.webp"
+          },
+          {
+              "id": "smartflow-led-taillamps",
+              "title": "SmartFlow Connected LED Tail Light Bar",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/smartflow-led-taillamps.webp"
+          },
+          {
+              "id": "infinity-glass-roof",
+              "title": "Expansive Infinity View Glass Roof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/infinity-glass-roof.webp"
+          },
+          {
+              "id": "grandview-touch-display",
+              "title": "15.6-inch GrandView Touch Infotainment Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/grandview-touch-display.webp"
+          },
+          {
+              "id": "aero-lounge-seats",
+              "title": "135° Reclining Business-Class Aero-Lounge Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/aero-lounge-seats.webp"
+          },
+          {
+              "id": "dual-tone-ivory-interior",
+              "title": "Dual-Tone Ivory & Rose Gold Luxury Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/dual-tone-ivory-interior.webp"
+          },
+          {
+              "id": "infinity-9-speaker-audio",
+              "title": "9-Speaker Infinity Surround Sound System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/infinity-9-speaker-audio.webp"
+          },
+          {
+              "id": "boot-space-604l",
+              "title": "Segment-Largest 604-Litre Luggage Boot",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/boot-space-604l.webp"
+          },
+          {
+              "id": "level2-adas-safety",
+              "title": "Level-2 ADAS Suite, 360° Camera & 6 Airbags",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/gallery/level2-adas-safety.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "38 kWh LFP Battery + PMSM Motor (136 PS, 200 Nm, 332 km Certified Range)",
+              "52.9 kWh LFP Battery (Windsor Pro) + PMSM Motor (136 PS, 200 Nm, 449 km Certified Range)"
+          ],
+          "transmissions": [
+              "Single-Speed Automatic Electric Drive (4 Drive Modes: Eco+, Eco, Normal, Sport)"
+          ],
+          "dimensions": "4295 mm L × 1850 mm W × 1677 mm H",
+          "wheelbase": "2700 mm",
+          "fuelTank": "38 kWh / 52.9 kWh (IP67 Rated)",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Excite 38 kWh (Full Battery Purchase)",
+              "exShowroom": 1400000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "38 kWh Electric (136 PS)",
+              "mileage": "332 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags, All-4 Disc Brakes, ESP & Electronic Parking Brake Standard",
+                  "135° Reclining Aero-Lounge Rear Seats (60:40 Split)",
+                  "10.1-inch Touchscreen with Wireless Apple CarPlay & Android Auto",
+                  "LED Projector Headlamps, StarStreak LED DRLs & Smart Flush Handles",
+                  "Also available under BaaS at ₹9.99 Lakh + ₹3.9/km"
+              ]
+          },
+          {
+              "name": "Exclusive 38 kWh",
+              "exShowroom": 1500000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "38 kWh Electric (136 PS)",
+              "mileage": "332 km/charge",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Tech-Loaded Trim",
+              "keyFeatures": [
+                  "Massive 15.6-inch GrandView Touch Display with Jio App Store",
+                  "360° HD Surround View Camera & R18 Diamond-Cut Alloy Wheels",
+                  "9-Speaker Infinity Audio System with Subwoofer",
+                  "6-Way Power Adjustable Driver Seat & Black Leatherette Quilted Seats",
+                  "80+ i-SMART Connected Features, Digital Key & Wireless Charger"
+              ]
+          },
+          {
+              "name": "Essence 38 kWh",
+              "exShowroom": 1615000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "38 kWh Electric (136 PS)",
+              "mileage": "332 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Expansive Infinity View Glass Roof with Electric Sunshade",
+                  "Front Ventilated Seats & 256-Color Ambient Cabin Lighting",
+                  "PM 2.5 Air Filter & 7.4 kW AC Fast Home Charger Included",
+                  "15.6-inch GrandView Display, 360° Camera & 9-Speaker Infinity Sound",
+                  "Lifetime Battery Warranty for First Owner"
+              ]
+          },
+          {
+              "name": "Essence Pro 52.9 kWh (ADAS + V2L)",
+              "exShowroom": 1810000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "52.9 kWh Electric (136 PS)",
+              "mileage": "449 km/charge",
+              "isVFM": true,
+              "vfmBadge": "Long-Range 449 km Flagship",
+              "keyFeatures": [
+                  "Larger 52.9 kWh Prismatic Battery with 449 km Certified Range & 60 kW DC Fast Charging",
+                  "Level-2 ADAS Suite (12 Autonomous Safety Features incl. Adaptive Cruise & AEB)",
+                  "Dual-Tone Ivory & Rose Gold Interior Theme & Powered Tailgate",
+                  "Vehicle-to-Load (V2L) & Vehicle-to-Vehicle (V2V) Bi-Directional Charging",
+                  "Infinity View Glass Roof, Ventilated Seats & 9-Speaker Infinity Audio"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "mg-hector",
+      "name": "MG Hector",
+      "brand": "MG Motor",
+      "tagline": "India's First Internet SUV with 14-inch HD Portrait Infotainment, Dual-Pane Panoramic Sunroof & Level-2 ADAS",
+      "launchDate": "2025 Model Year",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol",
+          "Diesel"
+      ],
+      "priceRange": "₹13.99 - ₹22.89 Lakh",
+      "minPrice": 1399000,
+      "maxPrice": 2289000,
+      "safetyRating": "5.0 ★ (6 Airbags + Level-2 ADAS 11 Features)",
+      "groundClearance": "192 mm",
+      "bootSpace": "587 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/celadon-blue.webp",
+      "summary": "The bold MG Hector commands the road with its Argyle-inspired Aura-Hex Diamond Mesh Grille, India's largest 14-inch HD Portrait Touchscreen with i-SWIPE gesture control, Dual-Pane Panoramic Sunroof, Infinity by Harman audio, and Traffic Jam Assist Level-2 ADAS.",
+      "colors": [
+          {
+              "id": "celadon-blue",
+              "name": "Celadon Blue",
+              "hex": "#2B4663",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/celadon-blue.webp"
+          },
+          {
+              "id": "aurora-silver",
+              "name": "Aurora Silver",
+              "hex": "#A5ABB0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/aurora-silver.webp"
+          },
+          {
+              "id": "glaze-red",
+              "name": "Glaze Red",
+              "hex": "#B51E28",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/glaze-red.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#F4F5F7",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/pearl-white.webp"
+          },
+          {
+              "id": "starry-black",
+              "name": "Starry Black",
+              "hex": "#181A1E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/colors/starry-black.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "aura-hex-grille",
+              "title": "Commanding Aura-Hex Diamond Mesh Grille",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/aura-hex-grille.webp"
+          },
+          {
+              "id": "aura-bolt-alloys",
+              "title": "R18 Dual-Tone Aura Bolt Machined Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/aura-bolt-alloys.webp"
+          },
+          {
+              "id": "led-connected-taillights",
+              "title": "LED Connected Blade Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/led-connected-taillights.webp"
+          },
+          {
+              "id": "aura-sculpt-bumpers",
+              "title": "Muscular Aura Sculpt Front & Rear Bumpers",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/aura-sculpt-bumpers.webp"
+          },
+          {
+              "id": "14-inch-portrait-screen",
+              "title": "India's Largest 14-inch HD Portrait Infotainment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/14-inch-portrait-screen.webp"
+          },
+          {
+              "id": "panoramic-sunroof",
+              "title": "Massive Dual-Pane Panoramic Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/panoramic-sunroof.webp"
+          },
+          {
+              "id": "ice-grey-interiors",
+              "title": "Dual-Tone Ice Grey & Black Luxury Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/ice-grey-interiors.webp"
+          },
+          {
+              "id": "digital-cluster",
+              "title": "7-inch Full Digital LCD Instrument Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/digital-cluster.webp"
+          },
+          {
+              "id": "infinity-harman-audio",
+              "title": "Infinity by Harman Premium Surround Sound",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/infinity-harman-audio.webp"
+          },
+          {
+              "id": "front-ventilated-seats",
+              "title": "Front Ventilated Seats & Wireless Charger",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/front-ventilated-seats.webp"
+          },
+          {
+              "id": "powered-tailgate",
+              "title": "Smart Auto-Powered Tailgate & 587L Boot",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/powered-tailgate.webp"
+          },
+          {
+              "id": "level2-adas-suite",
+              "title": "Autonomous Level-2 ADAS with Traffic Jam Assist",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-hector/gallery/level2-adas-suite.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.5L Turbocharged Intercooled Petrol (143 PS @ 5000 rpm, 250 Nm @ 1600-3600 rpm)",
+              "2.0L Turbocharged Diesel (170 PS @ 3750 rpm, 350 Nm @ 1750-2500 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission (Petrol & Diesel)",
+              "8-Speed CVT Automatic (Petrol)"
+          ],
+          "dimensions": "4699 mm L × 1835 mm W × 1760 mm H",
+          "wheelbase": "2750 mm",
+          "fuelTank": "60 Litres",
+          "seatingCapacity": "5 Seater (6 & 7 Seater Available in Hector Plus)"
+      },
+      "variants": [
+          {
+              "name": "Style 1.5 Turbo Petrol 6MT",
+              "exShowroom": 1399000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L Turbo Petrol (143 PS)",
+              "mileage": "13.79 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All-4 Disc Brakes, ESP, Traction Control & Hill Hold Standard",
+                  "Projector Headlamps with LED DRLs & Floating Turn Indicators",
+                  "7-inch Touchscreen with Android Auto & Apple CarPlay",
+                  "Rear AC Vents, 60:40 Split Reclining Rear Seats & 587L Boot",
+                  "Remote Keyless Entry & Cooled Glovebox"
+              ]
+          },
+          {
+              "name": "Shine Pro 1.5 Turbo Petrol 6MT",
+              "exShowroom": 1600000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L Turbo Petrol (143 PS)",
+              "mileage": "13.79 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Single-Pane Electric Sunroof & 14-inch HD Portrait Touchscreen",
+                  "Wireless Apple CarPlay/Android Auto & Wireless Smartphone Charger",
+                  "LED Projector Headlamps & Connected LED Blade Tail Lamps",
+                  "7-inch Full Digital Cluster, Push Button Start & Cruise Control",
+                  "R17 Dual-Tone Machined Alloy Wheels"
+              ]
+          },
+          {
+              "name": "Select Pro 1.5 Turbo Petrol CVT Automatic",
+              "exShowroom": 1870000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L Turbo Petrol (143 PS)",
+              "mileage": "12.34 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Value Panoramic Automatic",
+              "keyFeatures": [
+                  "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Infotainment",
+                  "8-Speed Smooth CVT Automatic with Eco, Normal & Sport Modes",
+                  "R18 Dual-Tone Machined Alloy Wheels & 8-Color Ambient Lighting",
+                  "75+ i-SMART Connected Car Features with 100+ Voice Commands",
+                  "Digital Bluetooth Key Sharing & PM 2.5 Air Filter"
+              ]
+          },
+          {
+              "name": "Sharp Pro 1.5 Turbo Petrol CVT Automatic",
+              "exShowroom": 2080000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L Turbo Petrol (143 PS)",
+              "mileage": "12.34 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Luxury Trim",
+              "keyFeatures": [
+                  "6 Airbags, 360° HD Surround View Camera & Electronic Parking Brake",
+                  "Front Ventilated Seats, 6-Way Power Driver & 4-Way Power Co-Driver Seat",
+                  "Infinity by Harman 8-Speaker Sound System with Subwoofer & Amplifier",
+                  "Smart Auto-Powered Tailgate & Dual-Tone Ice Grey Perforated Leatherette",
+                  "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Display"
+              ]
+          },
+          {
+              "name": "Sharp Pro 2.0 Turbo Diesel 6MT",
+              "exShowroom": 2150000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.0L Turbo Diesel (170 PS / 350 Nm)",
+              "mileage": "15.58 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Punchy 2.0L Turbo Diesel (170 PS, 350 Nm) with 6-Speed Manual",
+                  "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Touchscreen",
+                  "Front Ventilated Seats, Infinity by Harman Audio & Powered Tailgate",
+                  "6 Airbags, 360° Camera & Blind Spot Detection",
+                  "R18 Dual-Tone Alloys & Digital Bluetooth Car Key"
+              ]
+          },
+          {
+              "name": "Savvy Pro 1.5 Turbo Petrol CVT (ADAS)",
+              "exShowroom": 2250000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L Turbo Petrol (143 PS)",
+              "mileage": "12.34 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Autonomous Level-2 ADAS (11 Features incl. Traffic Jam Assist & Adaptive Cruise)",
+                  "Intelligent Headlamp Control, Lane Keep Assist & Automatic Emergency Braking",
+                  "14-inch HD Portrait Infotainment, Dual-Pane Panoramic Sunroof & Infinity Audio",
+                  "Front Ventilated Seats, Powered Tailgate & 360° HD Camera",
+                  "Flagship Connected SUV Experience"
+              ]
+          },
+          {
+              "name": "Blackstorm 2.0 Turbo Diesel 6MT",
+              "exShowroom": 2289000,
+              "fuel": "Diesel",
+              "trans": "Manual",
+              "engine": "2.0L Turbo Diesel (170 PS / 350 Nm)",
+              "mileage": "15.58 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Starry Black Exterior with Dark Chrome Argyle Grille & Red Brake Calipers",
+                  "All-Black Leatherette Cabin with Gunmetal Accents & Blackstorm Embossing",
+                  "14-inch HD Portrait Touchscreen, Panoramic Sunroof & Infinity Audio",
+                  "Front Ventilated Seats, Powered Tailgate & 360° HD Camera",
+                  "6 Airbags & R18 Gloss Black Alloy Wheels with Red Inserts"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "mg-astor",
+      "name": "MG Astor",
+      "brand": "MG Motor",
+      "tagline": "India's Most Tech-Loaded Compact SUV with Personal AI Assistant, Panoramic Skyroof & Level-2 ADAS",
+      "launchDate": "2025 Model Year",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹9.99 - ₹17.90 Lakh",
+      "minPrice": 999000,
+      "maxPrice": 1790000,
+      "safetyRating": "5.0 ★ (6 Airbags + 14 Autonomous Level-2 ADAS Features)",
+      "groundClearance": "180 mm",
+      "bootSpace": "448 Litres",
+      "waitingPeriod": "2 - 3 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/glaze-red.webp",
+      "summary": "The MG Astor stands out in the mid-size SUV segment with its Bold Celestial Grille, Full LED Hawkeye Headlamps, plush Sangria Red or Ivory soft-touch cabin, Front Ventilated Seats, Panoramic Skyroof, 80+ i-SMART 2.0 features, and 14 Autonomous Level-2 ADAS functions.",
+      "colors": [
+          {
+              "id": "glaze-red",
+              "name": "Glaze Red",
+              "hex": "#B51E28",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/glaze-red.webp"
+          },
+          {
+              "id": "havana-grey",
+              "name": "Havana Grey",
+              "hex": "#4E5358",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/havana-grey.webp"
+          },
+          {
+              "id": "aurora-silver",
+              "name": "Aurora Silver",
+              "hex": "#A5ABB0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/aurora-silver.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F4F5F7",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/candy-white.webp"
+          },
+          {
+              "id": "starry-black",
+              "name": "Starry Black",
+              "hex": "#181A1E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/starry-black.webp"
+          },
+          {
+              "id": "candy-white-black-roof",
+              "name": "Candy White with Starry Black Roof",
+              "hex": "#E2E5E9",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/colors/candy-white-black-roof.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "celestial-grille",
+              "title": "Bold Celestial Electroplated Front Grille",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/celestial-grille.webp"
+          },
+          {
+              "id": "hawkeye-led-headlamps",
+              "title": "Full LED Hawkeye Projector Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/hawkeye-led-headlamps.webp"
+          },
+          {
+              "id": "turbine-machined-alloys",
+              "title": "R17 Turbine-Inspired Machined Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/turbine-machined-alloys.webp"
+          },
+          {
+              "id": "led-tail-lamps",
+              "title": "Sculpted LED Tail Lamps & Rear Bumper",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/led-tail-lamps.webp"
+          },
+          {
+              "id": "sangria-red-interior",
+              "title": "Dual-Tone Sangria Red Leather-Layered Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/sangria-red-interior.webp"
+          },
+          {
+              "id": "panoramic-skyroof",
+              "title": "Expansive Dual-Pane Panoramic Skyroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/panoramic-skyroof.webp"
+          },
+          {
+              "id": "hd-touchscreen-10inch",
+              "title": "10.1-inch HD Infotainment with Wireless CarPlay",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/hd-touchscreen-10inch.webp"
+          },
+          {
+              "id": "digital-cluster",
+              "title": "7-inch Full Digital Embedded LCD Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/digital-cluster.webp"
+          },
+          {
+              "id": "power-driver-seat",
+              "title": "6-Way Power Adjustable & Front Ventilated Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/power-driver-seat.webp"
+          },
+          {
+              "id": "steering-modes",
+              "title": "3-Mode Electronic Power Steering (Urban, Normal, Dynamic)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/steering-modes.webp"
+          },
+          {
+              "id": "digital-bluetooth-key",
+              "title": "Digital Key with Bluetooth Sharing & i-SMART 2.0",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/digital-bluetooth-key.webp"
+          },
+          {
+              "id": "level2-adas-radar",
+              "title": "14 Autonomous Level-2 ADAS Safety Functions",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-astor/gallery/level2-adas-radar.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.5L VTi-TECH Naturally Aspirated Petrol (110 PS @ 6000 rpm, 144 Nm @ 4400 rpm)",
+              "1.3L 220 TURBO Petrol (140 PS @ 5600 rpm, 220 Nm @ 3600 rpm)"
+          ],
+          "transmissions": [
+              "5-Speed Manual Transmission (1.5L Petrol)",
+              "8-Speed CVT Automatic (1.5L Petrol)",
+              "6-Speed Torque Converter Automatic (1.3L Turbo)"
+          ],
+          "dimensions": "4323 mm L × 1809 mm W × 1650 mm H",
+          "wheelbase": "2585 mm",
+          "fuelTank": "48 Litres (1.5L) / 45 Litres (1.3L Turbo)",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Sprint 1.5 Petrol 5MT",
+              "exShowroom": 999000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L VTi-TECH (110 PS)",
+              "mileage": "15.43 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Full LED Hawkeye Headlamps with LED DRLs & LED Tail Lamps",
+                  "10.1-inch HD Touchscreen with Android Auto & Apple CarPlay",
+                  "Soft-Touch Dashboard with Dual-Tone Ivory Interior",
+                  "All-4 Disc Brakes, ESP, Traction Control, Hill Hold & Hill Descent Control",
+                  "Automatic Climate Control with Rear AC Vents & PM 2.5 Filter"
+              ]
+          },
+          {
+              "name": "Shine 1.5 Petrol 5MT",
+              "exShowroom": 1170000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L VTi-TECH (110 PS)",
+              "mileage": "15.43 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Expansive Panoramic Skyroof",
+                  "R17 Silver Alloy Wheels & Push Button Start/Stop with Smart Key",
+                  "Rear View Camera, Cruise Control & Front Fog Lamps with Cornering Assist",
+                  "Leather-Layered Steering Wheel with 3 Steering Modes",
+                  "6 Speakers & Cooled Glovebox"
+              ]
+          },
+          {
+              "name": "Select 1.5 Petrol 5MT",
+              "exShowroom": 1299000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.5L VTi-TECH (110 PS)",
+              "mileage": "15.43 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Value Panoramic SUV",
+              "keyFeatures": [
+                  "6 Airbags & 7-inch Full Digital LCD Instrument Cluster",
+                  "80+ i-SMART 2.0 Connected Features with Wireless CarPlay/Android Auto",
+                  "Wireless Smartphone Charger & Digital Bluetooth Key",
+                  "Panoramic Skyroof & Auto Headlamps with Rain-Sensing Wipers",
+                  "24x7 Live Assistant & Jio Voice Recognition"
+              ]
+          },
+          {
+              "name": "Select 1.5 Petrol CVT Automatic",
+              "exShowroom": 1410000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L VTi-TECH (110 PS)",
+              "mileage": "14.85 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Automatic Trim",
+              "keyFeatures": [
+                  "8-Speed Smooth CVT Automatic with Electronic Parking Brake & Auto Hold",
+                  "Panoramic Skyroof, 6 Airbags & 10.1-inch Wireless Touchscreen",
+                  "Wireless Phone Charger, 7-inch Digital Cluster & Digital Key",
+                  "R17 Alloy Wheels, Heated ORVMs & Roof Rails",
+                  "Plush Dual-Tone Ivory Perforated Leatherette Seats"
+              ]
+          },
+          {
+              "name": "Sharp Pro 1.5 Petrol CVT Automatic",
+              "exShowroom": 1610000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.5L VTi-TECH (110 PS)",
+              "mileage": "14.85 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Front Ventilated Seats & 6-Way Power Adjustable Driver Seat",
+                  "360° Around View HD Camera & Blind Spot Detection / Rear Cross Traffic Alert",
+                  "R17 Dual-Tone Turbine-Inspired Machined Alloy Wheels",
+                  "Auto-Dimming IRVM & Tire Pressure Monitoring System (TPMS)",
+                  "Panoramic Skyroof, 6 Airbags & Wireless Charger"
+              ]
+          },
+          {
+              "name": "Savvy Pro 1.3 Turbo 6AT (ADAS)",
+              "exShowroom": 1790000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.3L 220 Turbo (140 PS / 220 Nm)",
+              "mileage": "14.34 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "140 PS / 220 Nm 1.3L Turbo Engine with 6-Speed Torque Converter Automatic",
+                  "14 Autonomous Level-2 ADAS Features (Adaptive Cruise, Lane Keep, AEB)",
+                  "Exclusive Dual-Tone Sangria Red Interior Theme",
+                  "Front Ventilated Seats, Panoramic Skyroof & 360° HD Camera",
+                  "Red Front Brake Calipers & R17 Black Machined Alloys"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "mg-comet-ev",
+      "name": "MG Comet EV",
+      "brand": "MG Motor",
+      "tagline": "India's Smartest Urban Electric Car with Twin 10.25-inch Floating Screens & 4.2m Turning Radius",
+      "launchDate": "2025 Model Year",
+      "bodyType": "Hatchback",
+      "fuelTypes": [
+          "Electric"
+      ],
+      "priceRange": "₹7.00 - ₹9.84 Lakh",
+      "minPrice": 700000,
+      "maxPrice": 984000,
+      "safetyRating": "4.0 ★ (17 Hot-Stamped Steel Panels + IP67 Battery + All-4 Disc Brakes)",
+      "groundClearance": "165 mm",
+      "bootSpace": "350 Litres (Rear Seats Folded)",
+      "waitingPeriod": "1 - 2 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/apple-green-starry-black.webp",
+      "summary": "The MG Comet EV is purpose-built for effortless city commuting with an ultra-tight 4.2-metre turning radius, twin 10.25-inch integrated floating widescreens, Wireless Apple CarPlay & Android Auto, 55+ i-SMART connected features, 230 km certified range, and 7.4 kW AC fast charging.",
+      "colors": [
+          {
+              "id": "apple-green-starry-black",
+              "name": "Apple Green with Starry Black Roof",
+              "hex": "#82B91E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/apple-green-starry-black.webp"
+          },
+          {
+              "id": "candy-white-starry-black",
+              "name": "Candy White with Starry Black Roof",
+              "hex": "#ECEEF0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/candy-white-starry-black.webp"
+          },
+          {
+              "id": "aurora-silver",
+              "name": "Aurora Silver",
+              "hex": "#A5ABB0",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/aurora-silver.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F7F8FA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/candy-white.webp"
+          },
+          {
+              "id": "starry-black",
+              "name": "Starry Black",
+              "hex": "#181A1E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/starry-black.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "floating-widescreen",
+              "title": "Twin 10.25-inch Integrated Floating Widescreen Displays",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/floating-widescreen.webp"
+          },
+          {
+              "id": "wireless-carplay",
+              "title": "Wireless Apple CarPlay & Android Auto",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/wireless-carplay.webp"
+          },
+          {
+              "id": "leather-steering-controls",
+              "title": "iPod-Inspired Steering Wheel Controls",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/leather-steering-controls.webp"
+          },
+          {
+              "id": "two-door-four-seater",
+              "title": "Smart 2-Door 4-Seater Layout with One-Touch Tumble",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/two-door-four-seater.webp"
+          },
+          {
+              "id": "space-grey-cabin",
+              "title": "Airy Space Grey Cabin & Ergonomic Seating",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-grey-cabin.webp"
+          },
+          {
+              "id": "city-range-230km",
+              "title": "230 km Certified Range & Ultra-Agile 4.2m Turning Radius",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/city-range-230km.webp"
+          },
+          {
+              "id": "ip67-prismatic-battery",
+              "title": "17.3 kWh IP67-Rated Prismatic Li-Ion Battery",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/ip67-prismatic-battery.webp"
+          },
+          {
+              "id": "high-strength-body",
+              "title": "High-Strength Body with 17 Hot-Stamped Steel Panels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/high-strength-body.webp"
+          },
+          {
+              "id": "serenity-lush-pack",
+              "title": "Serenity Lush Custom Interior Styling Pack",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/serenity-lush-pack.webp"
+          },
+          {
+              "id": "sundowner-lush-pack",
+              "title": "Sundowner Lush Custom Theme Pack",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/sundowner-lush-pack.webp"
+          },
+          {
+              "id": "night-cafe-edition",
+              "title": "Night Cafe Signature Graphic Edition",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/night-cafe-edition.webp"
+          },
+          {
+              "id": "space-sticker-edition",
+              "title": "Space Explorer Custom Graphic Edition",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-sticker-edition.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "17.3 kWh Prismatic LFP Battery + PMSM Rear Motor (42 PS, 110 Nm, 230 km Certified Range)"
+          ],
+          "transmissions": [
+              "Single-Speed Automatic Electric Drive (Eco, Normal, Sport Modes)"
+          ],
+          "dimensions": "2974 mm L × 1505 mm W × 1640 mm H",
+          "wheelbase": "2010 mm",
+          "fuelTank": "17.3 kWh (3.3 kW & 7.4 kW AC Fast Charging)",
+          "seatingCapacity": "4 Seater"
+      },
+      "variants": [
+          {
+              "name": "Executive 17.3 kWh",
+              "exShowroom": 700000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Dual Front Airbags, ABS + EBD, Rear Parking Sensors & TPMS",
+                  "7-inch Digital Instrument Cluster & LED Turn Indicators",
+                  "50:50 Split Folding Rear Seats & Remote Central Locking",
+                  "Illuminated MG Logo & Follow-Me-Home Headlamps",
+                  "Also available under BaaS at ₹4.99 Lakh + ₹2.5/km"
+              ]
+          },
+          {
+              "name": "Excite 17.3 kWh (3.3 kW)",
+              "exShowroom": 808000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": true,
+              "vfmBadge": "Best Value Twin-Screen EV",
+              "keyFeatures": [
+                  "Twin 10.25-inch Floating Widescreen Infotainment & Digital Cluster",
+                  "Wireless Apple CarPlay & Android Auto",
+                  "Full LED Headlamps, LED Tail Lamps & Connecting Horizon Front/Rear Light Bars",
+                  "55+ i-SMART Connected Car Features with 100+ Voice Commands",
+                  "Leather-Wrapped Steering Wheel & Power Windows"
+              ]
+          },
+          {
+              "name": "Excite FC 17.3 kWh (7.4 kW Fast Charge)",
+              "exShowroom": 858000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "7.4 kW AC Fast Charger Support (0-100% in just 3.5 Hours)",
+                  "All-4 Wheel Disc Brakes, Electronic Stability Control (ESC) & Hill Hold Control",
+                  "Electronic Parking Brake (EPB) & Power-Folding ORVMs",
+                  "Twin 10.25-inch Floating Screens with Wireless CarPlay/Android Auto",
+                  "Creep Mode for Effortless Bumper-to-Bumper Traffic"
+              ]
+          },
+          {
+              "name": "Exclusive 17.3 kWh",
+              "exShowroom": 910000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Digital Key with Bluetooth Sharing & Smart Start System (No Start Button Needed)",
+                  "Rear Parking Camera with Dynamic Guidelines",
+                  "Electronic Parking Brake, ESC, Hill Hold & All-4 Disc Brakes",
+                  "Tilt-Adjustable Steering & Dual-Tone Roof Options",
+                  "Twin 10.25-inch Widescreens & 55+ Connected Features"
+              ]
+          },
+          {
+              "name": "Exclusive FC 17.3 kWh (7.4 kW Fast Charge)",
+              "exShowroom": 960000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": true,
+              "vfmBadge": "Top Fast-Charge Urban EV",
+              "keyFeatures": [
+                  "7.4 kW AC Fast Charging (0-100% in 3.5 Hours)",
+                  "All-4 Disc Brakes, ESC, Hill Hold & Electronic Parking Brake",
+                  "Digital Bluetooth Key, Rear View Camera & Twin 10.25-inch Displays",
+                  "Power-Folding ORVMs & Dual-Tone Apple Green / Candy White Options",
+                  "Lowest Running Cost (< ₹0.75/km)"
+              ]
+          },
+          {
+              "name": "Blackstorm Edition 17.3 kWh FC",
+              "exShowroom": 984000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "17.3 kWh Electric (42 PS)",
+              "mileage": "230 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Starry Black Exterior with Starlight Red Accents & Blackstorm Badging",
+                  "Leatherette Seats with Blackstorm Red Embroidery & 4 Speakers",
+                  "7.4 kW Fast Charging, All-4 Disc Brakes, ESC & Electronic Parking Brake",
+                  "Twin 10.25-inch Floating Screens & Digital Key Sharing",
+                  "Rear View Camera & Dark Chrome Styling Elements"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "mg-zs-ev",
+      "name": "MG ZS EV",
+      "brand": "MG Motor",
+      "tagline": "Pure Electric Family SUV with 50.3 kWh Battery, 461 km Range, 176 PS Power & Level-2 ADAS",
+      "launchDate": "2025 Model Year",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Electric"
+      ],
+      "priceRange": "₹18.98 - ₹25.75 Lakh",
+      "minPrice": 1898000,
+      "maxPrice": 2575000,
+      "safetyRating": "5.0 ★ (Euro NCAP / ASNCAP 5-Star + 6 Airbags + Level-2 ADAS)",
+      "groundClearance": "177 mm",
+      "bootSpace": "448 Litres",
+      "waitingPeriod": "2 - 3 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/colors/glaze-red.webp",
+      "summary": "The MG ZS EV delivers exhilarating 176 PS pure electric performance (0-100 km/h in 8.5 seconds) paired with a 50.3 kWh IP69K-rated battery offering 461 km certified range, Dual-Pane Panoramic Skyroof, 360° HD camera, 75+ i-SMART features, and 17 Autonomous Level-2 ADAS functions.",
+      "colors": [
+          {
+              "id": "glaze-red",
+              "name": "Glaze Red",
+              "hex": "#B51E28",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/colors/glaze-red.webp"
+          },
+          {
+              "id": "aurora-silver",
+              "name": "Aurora Silver",
+              "hex": "#7D8389",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/colors/aurora-silver.webp"
+          },
+          {
+              "id": "starry-black",
+              "name": "Starry Black",
+              "hex": "#181A1E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/colors/starry-black.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F4F5F7",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/colors/candy-white.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "electric-front-grille",
+              "title": "Body-Colored Aerodynamic EV Grille & Charging Port",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/electric-front-grille.webp"
+          },
+          {
+              "id": "hawkeye-led-headlamps",
+              "title": "Full LED Hawkeye Headlamps with DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/hawkeye-led-headlamps.webp"
+          },
+          {
+              "id": "tomahawk-alloy-wheels",
+              "title": "R17 Tomahawk Hub Design Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/tomahawk-alloy-wheels.webp"
+          },
+          {
+              "id": "led-tail-lamps",
+              "title": "Signature LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/led-tail-lamps.webp"
+          },
+          {
+              "id": "panoramic-skyroof",
+              "title": "Dual-Pane Panoramic Skyroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/panoramic-skyroof.webp"
+          },
+          {
+              "id": "dark-grey-interiors",
+              "title": "Plush Dual-Tone Dark Grey & Ivory Cabin",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/dark-grey-interiors.webp"
+          },
+          {
+              "id": "hd-touchscreen-10inch",
+              "title": "10.1-inch HD Touchscreen with Wireless CarPlay",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/hd-touchscreen-10inch.webp"
+          },
+          {
+              "id": "digital-cluster",
+              "title": "7-inch Full Digital LCD Driver Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/digital-cluster.webp"
+          },
+          {
+              "id": "rotary-drive-dial",
+              "title": "Rotary Gear Selector, 3 Drive Modes & 3 KERS Levels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/rotary-drive-dial.webp"
+          },
+          {
+              "id": "six-airbags-safety",
+              "title": "6 Airbags Standard & 5-Star Safety Architecture",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/six-airbags-safety.webp"
+          },
+          {
+              "id": "360-around-view-camera",
+              "title": "360° Around View HD Camera",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/360-around-view-camera.webp"
+          },
+          {
+              "id": "level2-adas-suite",
+              "title": "17 Autonomous Level-2 ADAS Features",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-zs-ev/gallery/level2-adas-suite.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "50.3 kWh Prismatic Li-Ion Battery (IP69K + ASIL-D) + PMSM Motor (176 PS, 280 Nm, 461 km Range)"
+          ],
+          "transmissions": [
+              "Single-Speed Automatic Electric Drive (3 Drive Modes + 3 KERS Regeneration Levels)"
+          ],
+          "dimensions": "4323 mm L × 1809 mm W × 1649 mm H",
+          "wheelbase": "2585 mm",
+          "fuelTank": "50.3 kWh (50 kW DC Fast Charge: 0-80% in 60 Mins)",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Executive 50.3 kWh",
+              "exShowroom": 1898000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "50.3 kWh Electric (176 PS)",
+              "mileage": "461 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Full 50.3 kWh Battery with 461 km Range & 176 PS Motor",
+                  "6 Airbags, All-4 Disc Brakes, ESP, Hill Hold & Hill Descent Control",
+                  "Full LED Hawkeye Headlamps, LED Tail Lamps & R17 Tomahawk Alloy Wheels",
+                  "10.1-inch HD Touchscreen with Wireless Apple CarPlay & Android Auto",
+                  "7-inch Digital Cluster, Rear View Camera & Push Button Start"
+              ]
+          },
+          {
+              "name": "Excite Pro 50.3 kWh",
+              "exShowroom": 1998000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "50.3 kWh Electric (176 PS)",
+              "mileage": "461 km/charge",
+              "isVFM": true,
+              "vfmBadge": "Best Value Panoramic EV SUV",
+              "keyFeatures": [
+                  "Dual-Pane Panoramic Skyroof",
+                  "75+ i-SMART Connected Car Features with Digital Bluetooth Key",
+                  "10.1-inch Wireless Touchscreen & 6-Speaker Audio System",
+                  "Electronic Parking Brake with Auto Hold & 3 Steering Modes",
+                  "6 Airbags & Rear AC Vents"
+              ]
+          },
+          {
+              "name": "Exclusive Plus 50.3 kWh",
+              "exShowroom": 2425000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "50.3 kWh Electric (176 PS)",
+              "mileage": "461 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "360° Around View HD Camera & Blind Spot Detection / Rear Cross Traffic Alert",
+                  "6-Way Power Adjustable Driver Seat & Wireless Phone Charger",
+                  "Dual-Pane Panoramic Skyroof & PM 2.5 Air Filter",
+                  "Power-Folding Heated ORVMs & Auto Headlamps with Rain-Sensing Wipers",
+                  "Optional Dual-Tone Ivory Interior Theme"
+              ]
+          },
+          {
+              "name": "Essence 50.3 kWh (ADAS)",
+              "exShowroom": 2575000,
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "engine": "50.3 kWh Electric (176 PS)",
+              "mileage": "461 km/charge",
+              "isVFM": false,
+              "keyFeatures": [
+                  "17 Autonomous Level-2 ADAS Features (Traffic Jam Assist, Adaptive Cruise, Lane Keep)",
+                  "Dual-Pane Panoramic Skyroof, 360° HD Camera & 6 Airbags",
+                  "50.3 kWh Battery with 461 km Range & 7.4 kW AC Home Fast Charger",
+                  "Wireless Charger, 6-Way Power Seat & Digital Bluetooth Key",
+                  "MG e-Shield 8-Year / 1.5 Lakh km Battery Warranty"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "mg-majestor",
+      "name": "MG Majestor (Gloster Next-Gen)",
+      "brand": "MG Motor",
+      "tagline": "India's Tallest, Widest & Longest D+ Flagship 4x4 SUV with M-Hub 10 Off-Road Modes, Triple Diff-Locks & JBL Studio 12 Audio",
+      "launchDate": "2025-2026 Flagship",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Diesel"
+      ],
+      "priceRange": "₹39.99 - ₹45.99 Lakh",
+      "minPrice": 3999000,
+      "maxPrice": 4599000,
+      "safetyRating": "5.0 ★ (High-Tensile Ladder Frame + 6 Airbags + Level-2 ADAS)",
+      "groundClearance": "219 mm (810 mm Water Wading)",
+      "bootSpace": "343 Litres (Up to 1350L 3rd Row Folded)",
+      "waitingPeriod": "4 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/metal-black.webp",
+      "summary": "The MG Majestor (succeeding the Gloster as India's largest D+ SUV) combines a 216 PS 2.0L Twin-Turbo Diesel engine and 8-Speed ZF Automatic with M-Hub 4x4 terrain management (10 Off-Road Modes, M-Crawl, Front/Center/Rear Differential Locks, 810 mm water wading) and the M-Lounge luxury cabin featuring Multi-Mode Massage & Ventiluxe seats, Galaxy View Panoramic Roof, and 12-Speaker JBL Studio Sound.",
+      "colors": [
+          {
+              "id": "metal-black",
+              "name": "Metal Black",
+              "hex": "#181A1D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/metal-black.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#F2F3F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/pearl-white.webp"
+          },
+          {
+              "id": "concrete-grey",
+              "name": "Concrete Grey",
+              "hex": "#8B9095",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/concrete-grey.webp"
+          },
+          {
+              "id": "metal-ash",
+              "name": "Metal Ash",
+              "hex": "#54585C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/metal-ash.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "mosaic-matrix-grille",
+              "title": "Commanding Mosaic Matrix Front Grille",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mosaic-matrix-grille.webp"
+          },
+          {
+              "id": "dragon-eye-drls",
+              "title": "Dragon Eye LED DRLs with Tri-Beam Headlights",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dragon-eye-drls.webp"
+          },
+          {
+              "id": "dual-shade-alloys",
+              "title": "R19 Dual-Shade Machined Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-shade-alloys.webp"
+          },
+          {
+              "id": "connected-tail-lamps",
+              "title": "Full-Width Connected LED Tail Lamps & Twin Exhausts",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/connected-tail-lamps.webp"
+          },
+          {
+              "id": "mlounge-galaxy-roof",
+              "title": "M-Lounge Cabin with Galaxy View Panoramic Roof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mlounge-galaxy-roof.webp"
+          },
+          {
+              "id": "massage-ventiluxe-seats",
+              "title": "Multi-Mode Massage & Ventiluxe Heated/Cooled Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/massage-ventiluxe-seats.webp"
+          },
+          {
+              "id": "jbl-studio-12-sound",
+              "title": "JBL Studio 12-Speaker Surround Audio System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/jbl-studio-12-sound.webp"
+          },
+          {
+              "id": "ambient-lighting-64",
+              "title": "64-Color Rhythmic Ambient Cabin Lighting",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ambient-lighting-64.webp"
+          },
+          {
+              "id": "dual-wireless-charging",
+              "title": "Dual 50W Wireless Chargers & Column Gear Shifter",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-wireless-charging.webp"
+          },
+          {
+              "id": "digital-cockpit-screens",
+              "title": "Dual 12.3-inch HD Screens with i-SMART 2.0",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/digital-cockpit-screens.webp"
+          },
+          {
+              "id": "ladder-frame-chassis",
+              "title": "High-Tensile Ladder-Frame Chassis & Triple Diff-Locks",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ladder-frame-chassis.webp"
+          },
+          {
+              "id": "level2-adas-360-cam",
+              "title": "Level-2 ADAS Suite & 360° HD Off-Road Camera",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/level2-adas-360-cam.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "2.0L Twin-Turbocharged Diesel (216 PS @ 4000 rpm, 478.5 Nm @ 1500-2400 rpm)"
+          ],
+          "transmissions": [
+              "8-Speed ZF Torque Converter Automatic with Column Shifter (4x2 & M-Hub 4x4 with 10 Modes)"
+          ],
+          "dimensions": "5046 mm L × 2016 mm W × 1876 mm H",
+          "wheelbase": "2950 mm",
+          "fuelTank": "75 Litres",
+          "seatingCapacity": "6 Seater (Captain) & 7 Seater"
+      },
+      "variants": [
+          {
+              "name": "Savvy 4x2 7-Seater 2.0 Twin-Turbo AT",
+              "exShowroom": 3999000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+              "mileage": "13.92 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "India's Largest D+ SUV (5046 mm Length, 2950 mm Wheelbase)",
+                  "Dual 12.3-inch M-Lounge Displays with i-SMART 2.0 (75+ Features)",
+                  "Galaxy View Panoramic Sunroof & 12-Way Powered Front Seats",
+                  "Level-2 ADAS (Lane Keep, Adaptive Cruise, AEB) & 360° HD Camera",
+                  "JBL Studio 12-Speaker Audio, Dual Wireless Chargers & 6 Airbags"
+              ]
+          },
+          {
+              "name": "Savvy 4x2 6-Seater (Captain) 2.0 Twin-Turbo AT",
+              "exShowroom": 4049000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+              "mileage": "13.92 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Ultimate Chauffeur Luxury SUV",
+              "keyFeatures": [
+                  "2nd-Row Luxury Captain Seats with Individual Armrests",
+                  "Multi-Mode Massage & Ventiluxe Heated/Ventilated Front Seats",
+                  "64-Color Ambient Lighting, 3-Zone Automatic Climate Control & PM 2.5 Purifier",
+                  "Galaxy View Panoramic Roof & Hands-Free Powered Tailgate",
+                  "Level-2 ADAS & JBL Studio 12-Speaker Surround Sound"
+              ]
+          },
+          {
+              "name": "Savvy 4x4 7-Seater 2.0 Twin-Turbo AT (M-Hub)",
+              "exShowroom": 4549000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+              "mileage": "12.35 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Flagship 4x4 Off-Road King",
+              "keyFeatures": [
+                  "M-Hub 4x4 System with 10 Off-Road Modes (Rock, Sand, Mud, Snow, Normal)",
+                  "Front, Center & Rear Differential Locks + M-Crawl Low-Speed Off-Road Cruise",
+                  "810 mm Water Wading Capacity & High-Tensile Ladder-Frame Chassis",
+                  "Multi-Mode Massage & Ventiluxe Seats, JBL Studio 12 Audio & Galaxy Roof",
+                  "Autonomous Level-2 ADAS & 360° Transparent Chassis View Camera"
+              ]
+          },
+          {
+              "name": "Savvy 4x4 6-Seater (Captain) 2.0 Twin-Turbo AT (M-Hub)",
+              "exShowroom": 4599000,
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "engine": "2.0L Twin-Turbo Diesel (216 PS / 478.5 Nm)",
+              "mileage": "12.35 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6-Seater Executive Captain Chairs + Full M-Hub 4x4 Hardware",
+                  "Triple Differential Locks, M-Crawl & 10 Terrain Modes",
+                  "Multi-Mode Massage Seats, 64-Color Ambient Lighting & JBL Studio 12 Sound",
+                  "Dual 12.3-inch Screens, Dual Wireless Chargers & Column Shifter",
+                  "Level-2 ADAS, 6 Airbags & Roll Movement Intervention"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price

@@ -1,0 +1,244 @@
+{
+  "id": "mg-hector",
+  "name": "MG Hector",
+  "brand": "MG Motor",
+  "tagline": "India's First Internet SUV with 14-inch HD Portrait Infotainment, Dual-Pane Panoramic Sunroof & Level-2 ADAS",
+  "launchDate": "2025 Model Year",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol",
+    "Diesel"
+  ],
+  "priceRange": "₹13.99 - ₹22.89 Lakh",
+  "minPrice": 1399000,
+  "maxPrice": 2289000,
+  "safetyRating": "5.0 ★ (6 Airbags + Level-2 ADAS 11 Features)",
+  "groundClearance": "192 mm",
+  "bootSpace": "587 Litres",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "The bold MG Hector commands the road with its Argyle-inspired Aura-Hex Diamond Mesh Grille, India's largest 14-inch HD Portrait Touchscreen with i-SWIPE gesture control, Dual-Pane Panoramic Sunroof, Infinity by Harman audio, and Traffic Jam Assist Level-2 ADAS.",
+  "colors": [
+    {
+      "id": "celadon-blue",
+      "name": "Celadon Blue",
+      "hex": "#2B4663",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0001?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "aurora-silver",
+      "name": "Aurora Silver",
+      "hex": "#A5ABB0",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0002?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "glaze-red",
+      "name": "Glaze Red",
+      "hex": "#B51E28",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0003?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0004?wid=1200&fmt=png-alpha"
+    },
+    {
+      "id": "starry-black",
+      "name": "Starry Black",
+      "hex": "#181A1E",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0005?wid=1200&fmt=png-alpha"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "aura-hex-grille",
+      "title": "Commanding Aura-Hex Diamond Mesh Grille",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-ext-0001?wid=1200&qlt=90"
+    },
+    {
+      "id": "aura-bolt-alloys",
+      "title": "R18 Dual-Tone Aura Bolt Machined Alloy Wheels",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-ext-0006?wid=1200&qlt=90"
+    },
+    {
+      "id": "led-connected-taillights",
+      "title": "LED Connected Blade Tail Lamps",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-ext-0002?wid=1200&qlt=90"
+    },
+    {
+      "id": "aura-sculpt-bumpers",
+      "title": "Muscular Aura Sculpt Front & Rear Bumpers",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-ext-0004?wid=1200&qlt=90"
+    },
+    {
+      "id": "14-inch-portrait-screen",
+      "title": "India's Largest 14-inch HD Portrait Infotainment",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0005?wid=1200&qlt=90"
+    },
+    {
+      "id": "panoramic-sunroof",
+      "title": "Massive Dual-Pane Panoramic Sunroof",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0003?wid=1200&qlt=90"
+    },
+    {
+      "id": "ice-grey-interiors",
+      "title": "Dual-Tone Ice Grey & Black Luxury Cabin",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0012?wid=1200&qlt=90"
+    },
+    {
+      "id": "digital-cluster",
+      "title": "7-inch Full Digital LCD Instrument Cluster",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0006?wid=1200&qlt=90"
+    },
+    {
+      "id": "infinity-harman-audio",
+      "title": "Infinity by Harman Premium Surround Sound",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0001?wid=1200&qlt=90"
+    },
+    {
+      "id": "front-ventilated-seats",
+      "title": "Front Ventilated Seats & Wireless Charger",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-com-0001?wid=1200&qlt=90"
+    },
+    {
+      "id": "powered-tailgate",
+      "title": "Smart Auto-Powered Tailgate & 587L Boot",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-com-0004?wid=1200&qlt=90"
+    },
+    {
+      "id": "level2-adas-suite",
+      "title": "Autonomous Level-2 ADAS with Traffic Jam Assist",
+      "sourceUrl": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-ads-0004?wid=1200&qlt=90"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.5L Turbocharged Intercooled Petrol (143 PS @ 5000 rpm, 250 Nm @ 1600-3600 rpm)",
+      "2.0L Turbocharged Diesel (170 PS @ 3750 rpm, 350 Nm @ 1750-2500 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission (Petrol & Diesel)",
+      "8-Speed CVT Automatic (Petrol)"
+    ],
+    "dimensions": "4699 mm L × 1835 mm W × 1760 mm H",
+    "wheelbase": "2750 mm",
+    "fuelTank": "60 Litres",
+    "seatingCapacity": "5 Seater (6 & 7 Seater Available in Hector Plus)"
+  },
+  "variants": [
+    {
+      "name": "Style 1.5 Turbo Petrol 6MT",
+      "exShowroom": 1399000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L Turbo Petrol (143 PS)",
+      "mileage": "13.79 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "All-4 Disc Brakes, ESP, Traction Control & Hill Hold Standard",
+        "Projector Headlamps with LED DRLs & Floating Turn Indicators",
+        "7-inch Touchscreen with Android Auto & Apple CarPlay",
+        "Rear AC Vents, 60:40 Split Reclining Rear Seats & 587L Boot",
+        "Remote Keyless Entry & Cooled Glovebox"
+      ]
+    },
+    {
+      "name": "Shine Pro 1.5 Turbo Petrol 6MT",
+      "exShowroom": 1600000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.5L Turbo Petrol (143 PS)",
+      "mileage": "13.79 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Single-Pane Electric Sunroof & 14-inch HD Portrait Touchscreen",
+        "Wireless Apple CarPlay/Android Auto & Wireless Smartphone Charger",
+        "LED Projector Headlamps & Connected LED Blade Tail Lamps",
+        "7-inch Full Digital Cluster, Push Button Start & Cruise Control",
+        "R17 Dual-Tone Machined Alloy Wheels"
+      ]
+    },
+    {
+      "name": "Select Pro 1.5 Turbo Petrol CVT Automatic",
+      "exShowroom": 1870000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L Turbo Petrol (143 PS)",
+      "mileage": "12.34 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Value Panoramic Automatic",
+      "keyFeatures": [
+        "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Infotainment",
+        "8-Speed Smooth CVT Automatic with Eco, Normal & Sport Modes",
+        "R18 Dual-Tone Machined Alloy Wheels & 8-Color Ambient Lighting",
+        "75+ i-SMART Connected Car Features with 100+ Voice Commands",
+        "Digital Bluetooth Key Sharing & PM 2.5 Air Filter"
+      ]
+    },
+    {
+      "name": "Sharp Pro 1.5 Turbo Petrol CVT Automatic",
+      "exShowroom": 2080000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L Turbo Petrol (143 PS)",
+      "mileage": "12.34 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Luxury Trim",
+      "keyFeatures": [
+        "6 Airbags, 360° HD Surround View Camera & Electronic Parking Brake",
+        "Front Ventilated Seats, 6-Way Power Driver & 4-Way Power Co-Driver Seat",
+        "Infinity by Harman 8-Speaker Sound System with Subwoofer & Amplifier",
+        "Smart Auto-Powered Tailgate & Dual-Tone Ice Grey Perforated Leatherette",
+        "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Display"
+      ]
+    },
+    {
+      "name": "Sharp Pro 2.0 Turbo Diesel 6MT",
+      "exShowroom": 2150000,
+      "fuel": "Diesel",
+      "trans": "Manual",
+      "engine": "2.0L Turbo Diesel (170 PS / 350 Nm)",
+      "mileage": "15.58 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Punchy 2.0L Turbo Diesel (170 PS, 350 Nm) with 6-Speed Manual",
+        "Dual-Pane Panoramic Sunroof & 14-inch HD Portrait Touchscreen",
+        "Front Ventilated Seats, Infinity by Harman Audio & Powered Tailgate",
+        "6 Airbags, 360° Camera & Blind Spot Detection",
+        "R18 Dual-Tone Alloys & Digital Bluetooth Car Key"
+      ]
+    },
+    {
+      "name": "Savvy Pro 1.5 Turbo Petrol CVT (ADAS)",
+      "exShowroom": 2250000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.5L Turbo Petrol (143 PS)",
+      "mileage": "12.34 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Autonomous Level-2 ADAS (11 Features incl. Traffic Jam Assist & Adaptive Cruise)",
+        "Intelligent Headlamp Control, Lane Keep Assist & Automatic Emergency Braking",
+        "14-inch HD Portrait Infotainment, Dual-Pane Panoramic Sunroof & Infinity Audio",
+        "Front Ventilated Seats, Powered Tailgate & 360° HD Camera",
+        "Flagship Connected SUV Experience"
+      ]
+    },
+    {
+      "name": "Blackstorm 2.0 Turbo Diesel 6MT",
+      "exShowroom": 2289000,
+      "fuel": "Diesel",
+      "trans": "Manual",
+      "engine": "2.0L Turbo Diesel (170 PS / 350 Nm)",
+      "mileage": "15.58 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Starry Black Exterior with Dark Chrome Argyle Grille & Red Brake Calipers",
+        "All-Black Leatherette Cabin with Gunmetal Accents & Blackstorm Embossing",
+        "14-inch HD Portrait Touchscreen, Panoramic Sunroof & Infinity Audio",
+        "Front Ventilated Seats, Powered Tailgate & 360° HD Camera",
+        "6 Airbags & R18 Gloss Black Alloy Wheels with Red Inserts"
+      ]
+    }
+  ]
+}
