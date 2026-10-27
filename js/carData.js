@@ -4199,6 +4199,172 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-nexon',
+    name: 'Tata Nexon',
+    brand: 'Tata',
+    tagline: 'India’s #1 Bestselling Compact SUV with 5-Star Bharat NCAP, Voice-Assisted Sunroof & 7-Speed DCA',
+    launchDate: 'Updated 2025 (Facelift Persona Lineup)',
+    bodyType: 'Compact SUV',
+    fuelTypes: ['Petrol', 'Diesel', 'CNG'],
+    priceRange: '₹7.99 - ₹15.50 Lakh',
+    minPrice: 799990,
+    maxPrice: 1549990,
+    safetyRating: '5.0 ★ (Bharat NCAP & Global NCAP)',
+    groundClearance: '208 mm',
+    bootSpace: '382 L',
+    waitingPeriod: '3 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/ocean-blue/1.webp',
+    summary: 'The Tata Nexon is India’s undisputed bestselling compact SUV, celebrated for its iconic futuristic design, 5-Star Bharat NCAP safety rating with 6 airbags standard, class-leading 208 mm ground clearance, dual 10.25-inch high-definition digital screens with wireless smartphone mirroring, 9-speaker JBL acoustic sound system with subwoofer, voice-assisted panoramic-style electric sunroof, connected X-Factor full-width LED taillamps, and advanced powertrain choices including 1.2L Turbo Petrol with quick-shifting 7-speed DCA and 1.5L Revotorq Diesel.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'ocean-blue',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360'
+    },
+    colors: [
+      { id: 'ocean-blue', name: 'Ocean Blue with White Roof (Signature Hero Shade)', hex: '#0090A8', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/ocean-blue/1.webp' },
+      { id: 'grassland-beige', name: 'Grassland Beige with White Roof', hex: '#B5A586', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/grassland-beige/1.webp' },
+      { id: 'pure-grey', name: 'Pure Grey with Black Roof', hex: '#7C838A', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/pure-grey/1.webp' },
+      { id: 'royal-blue', name: 'Royal Blue with Black Roof', hex: '#1D3D72', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/royal-blue/1.webp' },
+      { id: 'daytona-grey', name: 'Daytona Grey with Black Roof', hex: '#4A5056', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/daytona-grey/1.webp' },
+      { id: 'calgary-white', name: 'Calgary White / Pristine White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/calgary-white/1.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero Exterior Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/ocean-blue/1.webp' },
+      { label: '10.25" Floating Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/10-25-inch-floating-infotainment-touchscreen.webp' },
+      { label: 'Voice-Assisted Sunroof', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/voice-assisted-electric-sunroof.webp' },
+      { label: 'Connected X-Factor Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/x-factor-connected-led-taillamps.webp' }
+    ],
+    gallery: [
+      { title: 'Bi-Function Full-LED Headlamps with Sequential Daytime Running Lights and Welcome Animation', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/sequential-led-drls-bi-function-headlamps.webp' },
+      { title: 'Connected Full-Width X-Factor LED Taillamps with Dynamic Signature Graphic', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/x-factor-connected-led-taillamps.webp' },
+      { title: 'Next-Gen 2-Spoke Flat-Bottom Steering Wheel with Glass-Finish Illuminated Tata Logo', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/illuminated-logo-two-spoke-steering-wheel.webp' },
+      { title: 'Voice-Assisted Electric Sunroof with One-Touch Tilt and Slide Control', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/voice-assisted-electric-sunroof.webp' },
+      { title: '10.25-inch Floating Ultra-HD Infotainment Screen with Wireless Android Auto & Apple CarPlay', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/10-25-inch-floating-infotainment-touchscreen.webp' },
+      { title: '9-Speaker JBL Concert Sound System with Dedicated Subwoofer and AudioWorX Tuning', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/jbl-9-speaker-premium-sound-system.webp' },
+      { title: 'Smart Voice Control Assistant supporting Native Commands, Alexa and Navigation Shortcuts', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/smart-voice-assistant-alexa-car-controls.webp' },
+      { title: '360-Degree High-Definition Surround View Camera System with 3D Bird-Eye Perspective', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/360-degree-high-definition-surround-view-camera.webp' },
+      { title: 'Blind View Monitor with Live Side Feed streamed directly onto 10.25-inch Digital Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/blind-view-monitor-digital-cluster.webp' },
+      { title: 'Fortified High-Strength Steel Safety Cabin with 6 Airbags & Electronic Stability Program Standard', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/fortified-safety-cage-6-airbags-standard.webp' },
+      { title: '7-Speed Dual-Clutch Automatic (DCA) Transmission with Monostable E-Shifter & Paddle Shifters', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/7-speed-dual-clutch-automatic-dca-eshifter.webp' },
+      { title: 'Class-Leading 382-Litre Practical Boot Capacity with 60:40 Rear Foldable Split Seats', url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/gallery/spacious-382-litre-boot-space.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Turbocharged Revotron Petrol (120 PS / 170 Nm) | 1.5L Turbocharged Revotorq Diesel (115 PS / 260 Nm)',
+      transmissions: '5-Speed Manual | 6-Speed Manual | 6-Speed AMT | 7-Speed Dual-Clutch DCA',
+      dimensions: '3995 mm (L) × 1804 mm (W) × 1620 mm (H)',
+      wheelbase: '2498 mm',
+      fuelTank: '44 Litres',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'Smart 1.2 Petrol 5MT',
+        exShowroom: 799990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.44 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Program (ESP)', 'LED Headlamps & DRLs', 'Multi Drive Modes (Eco, City, Sport)']
+      },
+      {
+        name: 'Smart+ 1.2 Petrol 5MT',
+        exShowroom: 889990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.44 kmpl',
+        isVFM: false,
+        keyFeatures: ['7-inch Touchscreen Infotainment', 'Apple CarPlay & Android Auto', 'All 4 Power Windows', 'Steering Mounted Audio Controls']
+      },
+      {
+        name: 'Pure 1.2 Petrol 6MT',
+        exShowroom: 979990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.44 kmpl',
+        isVFM: false,
+        keyFeatures: ['Bi-Function LED Headlamps', 'Connected X-Factor LED Taillamp', 'Rear AC Vents', 'Touch AC Control Panel']
+      },
+      {
+        name: 'Pure S 1.2 Petrol 6MT',
+        exShowroom: 1029990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.44 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BUDGET VALUE PICK',
+        keyFeatures: ['Voice-Assisted Electric Sunroof', 'Auto Headlamps', 'Rain-Sensing Wipers', 'Roof Rails & Shark Fin Antenna']
+      },
+      {
+        name: 'Creative 1.2 Petrol 6MT',
+        exShowroom: 1109990,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.44 kmpl',
+        isVFM: false,
+        keyFeatures: ['10.25-inch High-Definition Touchscreen', 'Wireless Android Auto & Apple CarPlay', '16-inch Diamond Cut Alloy Wheels', 'Reverse Camera & TPMS']
+      },
+      {
+        name: 'Creative+ S 1.2 Turbo DCA',
+        exShowroom: 1319990,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.01 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER TECH PICK',
+        keyFeatures: ['7-Speed Dual-Clutch Automatic (DCA)', 'Voice-Assisted Electric Sunroof', '360° High-Definition Camera System', 'Blind View Monitor & E-Shifter']
+      },
+      {
+        name: 'Pure 1.5 Diesel 6MT',
+        exShowroom: 1109990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L Turbo Revotorq (115 PS / 260 Nm)',
+        mileage: '23.23 kmpl',
+        isVFM: true,
+        vfmBadge: '⛽ HIGH MILEAGE DIESEL VALUE',
+        keyFeatures: ['High-Torque 260 Nm Diesel Engine', '23.23 kmpl ARAI Mileage', '6 Airbags & ESP', 'Connected X-Factor LED Taillamps']
+      },
+      {
+        name: 'Creative 1.5 Diesel 6AMT',
+        exShowroom: 1289990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L Turbo Revotorq (115 PS / 260 Nm)',
+        mileage: '24.08 kmpl',
+        isVFM: false,
+        keyFeatures: ['6-Speed Smart AMT Automatic', '10.25-inch Touchscreen Infotainment', 'Paddle Shifters', 'Automatic Climate Control']
+      },
+      {
+        name: 'Fearless+ S 1.2 Turbo DCA',
+        exShowroom: 1479990,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Turbo Revotron (120 PS)',
+        mileage: '17.01 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 FLAGSHIP TOP SPEC',
+        keyFeatures: ['Ventilated Leatherette Front Seats', '9-Speaker JBL Audio with Subwoofer', '10.25-inch Digital Instrument Cluster with Full Navigation', 'Air Purifier with AQI Display']
+      },
+      {
+        name: 'Fearless+ S 1.5 Diesel AMT',
+        exShowroom: 1549990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L Turbo Revotorq (115 PS / 260 Nm)',
+        mileage: '24.08 kmpl',
+        isVFM: false,
+        keyFeatures: ['Flagship Top-End Diesel Automatic', 'Ventilated Front Seats', 'Sequential LED Indicators', 'JBL Sound System & 360° Camera']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
