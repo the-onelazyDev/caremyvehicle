@@ -260,22 +260,26 @@ def inject_car_into_codebase(car_slug, js_obj_str, dry_run=False):
         # Format JS string nicely
         indented_js = "  " + js_obj_str.replace("\n", "\n  ")
 
-        target_marker = f"id: '{car_slug}'"
-        target_marker_double = f'id: "{car_slug}"'
+        patterns = [
+            f'"id": "{car_slug}"',
+            f"'id': '{car_slug}'",
+            f"id: '{car_slug}'",
+            f'id: "{car_slug}"'
+        ]
+        target_idx = -1
+        for pat in patterns:
+            pos = content.find(pat)
+            if pos != -1:
+                target_idx = pos
+                break
 
-        if target_marker in content or target_marker_double in content:
+        if target_idx != -1:
             print(f"  [REPLACE] Updating existing '{car_slug}' in {p}...")
-            # Find bounds of existing object
-            idx = content.find(target_marker)
-            if idx == -1:
-                idx = content.find(target_marker_double)
-            obj_start = content.rfind("  {\n", 0, idx)
-            # Find matching close brace
-            # Scan forward to next car object or closing array
-            next_obj = content.find("\n  {\n", idx)
-            array_end = content.find("\n];", idx)
+            obj_start = content.rfind("  {\n", 0, target_idx)
+            next_obj = content.find("\n  {\n", target_idx)
+            array_end = content.find("\n];", target_idx)
             if next_obj != -1 and next_obj < array_end:
-                obj_end = next_obj + 1  # preserve newline
+                obj_end = next_obj + 1
                 new_content = content[:obj_start] + indented_js + ",\n" + content[obj_end:]
             else:
                 obj_end = array_end

@@ -8399,7 +8399,7 @@ export const CARS = [
       "groundClearance": "225 mm",
       "bootSpace": "296 L (Expandable to 715 L)",
       "waitingPeriod": "1 - 3 Months",
-      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/super-white.webp",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp",
       "summary": "The Toyota Fortuner is India's reigning full-size 7-seater SUV, celebrated for legendary reliability, heavy-duty body-on-frame chassis, and formidable 4x4 off-road capabilities. Powered by a brawny 2.8L D-4D diesel generating 201 bhp and an immense 500 Nm of torque, it features an electronic drive control (High/Low range), auto limited-slip differential (LSD), ventilated leather seats, 11-speaker JBL audio, and active traction control.",
       "spin360": {
           "totalFrames": 36,
@@ -8416,16 +8416,22 @@ export const CARS = [
       },
       "colors": [
           {
-              "id": "super-white",
-              "name": "Super White",
-              "hex": "#FFFFFF",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/super-white.webp"
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#E0E0DA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp"
           },
           {
               "id": "sparkling-black-crystal-shine",
               "name": "Sparkling Black Crystal Shine",
               "hex": "#202022",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/sparkling-black-crystal-shine.webp"
+          },
+          {
+              "id": "super-white",
+              "name": "Super White",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/super-white.webp"
           },
           {
               "id": "attitude-black",
@@ -8440,12 +8446,6 @@ export const CARS = [
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/avant-garde-bronze.webp"
           },
           {
-              "id": "platinum-white-pearl",
-              "name": "Platinum White Pearl",
-              "hex": "#E0E0DA",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp"
-          },
-          {
               "id": "silver-metallic",
               "name": "Silver Metallic",
               "hex": "#CED4E1",
@@ -8454,64 +8454,64 @@ export const CARS = [
       ],
       "gallery": [
           {
-              "id": "front_dominant_stance",
-              "title": "Commanding Road Presence & Dynamic Stance",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/front_dominant_stance.webp"
+              "id": "gr_banner_front",
+              "title": "Aggressive GR Sport Front Stance & Aerodynamic Silhouette",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_front.webp"
           },
           {
-              "id": "bold_front_grille",
-              "title": "Aggressive Front Grille with Bi-Beam LED Headlamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bold_front_grille.webp"
+              "id": "gr_banner_exterior",
+              "title": "Dynamic 4.79m Profile with Precision 18-inch Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_exterior.webp"
           },
           {
-              "id": "side_profile",
-              "title": "Muscular 4.79m Profile with 18-inch Alloy Wheels",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/side_profile.webp"
+              "id": "gr_banner_rear",
+              "title": "Sculpted Rear Design with Roof Spoiler & LED Taillamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_rear.webp"
           },
           {
-              "id": "rear_sculpted_stance",
-              "title": "Aerodynamic Rear Spoiler & Sleek LED Taillamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/rear_sculpted_stance.webp"
+              "id": "gr_banner_interior",
+              "title": "Driver-Focused All-Black Cockpit & Premium Leather Upholstery",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_interior.webp"
           },
           {
-              "id": "front_quarter_stance",
-              "title": "High Approach Angle & Tough Skid Plates",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/front_quarter_stance.webp"
+              "id": "gr_banner_lifestyle",
+              "title": "Unrivalled All-Terrain & Expedition Touring Capability",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_lifestyle.webp"
           },
           {
-              "id": "dashboard_cockpit",
-              "title": "All-Black Premium Leather Dashboard Cockpit",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/dashboard_cockpit.webp"
+              "id": "bi_beam_led_headlamps",
+              "title": "Bi-Beam LED Projector Headlamps with Integrated LED DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bi_beam_led_headlamps.webp"
           },
           {
-              "id": "steering_wheel_controls",
-              "title": "Leather-Wrapped Multi-Function Steering Wheel",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/steering_wheel_controls.webp"
+              "id": "led_rear_combination_lamps",
+              "title": "Aero-Fin Designed LED Rear Combination Taillamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/led_rear_combination_lamps.webp"
           },
           {
-              "id": "instrument_cluster",
-              "title": "Optitron Meter with Color TFT Multi-Info Display",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/instrument_cluster.webp"
+              "id": "catamaran_front_bumper",
+              "title": "Muscular Catamaran-Style Front Bumper & Tough Skid Plates",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/catamaran_front_bumper.webp"
           },
           {
-              "id": "infotainment_touchscreen",
-              "title": "8.0-inch Smart Touchscreen with Apple CarPlay & Android Auto",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/infotainment_touchscreen.webp"
+              "id": "ventilated_front_seats",
+              "title": "Front Row Ventilated Perforated Leather Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/ventilated_front_seats.webp"
           },
           {
-              "id": "gear_shifter_console",
-              "title": "Sequential 6-Speed Automatic & 4x4 Selector Dials",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gear_shifter_console.webp"
+              "id": "smart_touchscreen_audio",
+              "title": "8.0-inch Smart Touchscreen Infotainment with Apple CarPlay & Android Auto",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/smart_touchscreen_audio.webp"
           },
           {
-              "id": "bootspace_folded_seats",
-              "title": "Spacious Cargo Deck with Space-Up 3rd Row Seats",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bootspace_folded_seats.webp"
+              "id": "optitron_meter_cluster",
+              "title": "Optitron Meter Cluster with 4.2-inch TFT Multi-Information Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/optitron_meter_cluster.webp"
           },
           {
-              "id": "all_terrain_profile",
-              "title": "225 mm Ground Clearance for High Water Wading",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/all_terrain_profile.webp"
+              "id": "jbl_11_speaker_audio",
+              "title": "11-Speaker JBL Premium Audio System with Subwoofer",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/jbl_11_speaker_audio.webp"
           }
       ],
       "specs": {

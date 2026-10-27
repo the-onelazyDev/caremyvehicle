@@ -33,102 +33,102 @@
   },
   "colors": [
     {
-      "id": "super-white",
-      "name": "Super White",
-      "hex": "#FFFFFF",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/ofqknta_1500711.jpg"
+      "id": "platinum-white-pearl",
+      "name": "Platinum White Pearl",
+      "hex": "#E0E0DA",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-001.webp"
     },
     {
       "id": "sparkling-black-crystal-shine",
       "name": "Sparkling Black Crystal Shine",
       "hex": "#202022",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/89nknta_1500707.jpg"
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp"
+    },
+    {
+      "id": "super-white",
+      "name": "Super White",
+      "hex": "#FFFFFF",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-03.webp"
     },
     {
       "id": "attitude-black",
       "name": "Attitude Black",
       "hex": "#0A0A0A",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/qv5knta_1500713.jpg"
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-04.webp"
     },
     {
       "id": "avant-garde-bronze",
       "name": "Avant-Garde Bronze Metallic",
       "hex": "#BFB3A7",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/bbtknta_1500715.jpg"
-    },
-    {
-      "id": "platinum-white-pearl",
-      "name": "Platinum White Pearl",
-      "hex": "#E0E0DA",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/jovknta_1500719.jpg"
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-05.webp"
     },
     {
       "id": "silver-metallic",
       "name": "Silver Metallic",
       "hex": "#CED4E1",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/edalnta_1500721.jpg"
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-06.webp"
     }
   ],
   "gallery": [
     {
-      "id": "front_dominant_stance",
-      "title": "Commanding Road Presence & Dynamic Stance",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-28.png?isig=0&q=80"
+      "id": "gr_banner_front",
+      "title": "Aggressive GR Sport Front Stance & Aerodynamic Silhouette",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/gr-banner-front-1200x648.webp"
     },
     {
-      "id": "bold_front_grille",
-      "title": "Aggressive Front Grille with Bi-Beam LED Headlamps",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-front-view-10.jpeg?isig=0&q=80"
+      "id": "gr_banner_exterior",
+      "title": "Dynamic 4.79m Profile with Precision 18-inch Alloys",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/gr-banner-exterior-1200x648.webp"
     },
     {
-      "id": "side_profile",
-      "title": "Muscular 4.79m Profile with 18-inch Alloy Wheels",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-right-side-view-3.jpeg?isig=0&q=80"
+      "id": "gr_banner_rear",
+      "title": "Sculpted Rear Design with Roof Spoiler & LED Taillamps",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/gr-banner-rear-1200x648.webp"
     },
     {
-      "id": "rear_sculpted_stance",
-      "title": "Aerodynamic Rear Spoiler & Sleek LED Taillamps",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-rear-view-7.jpeg?isig=0&q=80"
+      "id": "gr_banner_interior",
+      "title": "Driver-Focused All-Black Cockpit & Premium Leather Upholstery",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/gr-banner-interior-1200x648.webp"
     },
     {
-      "id": "front_quarter_stance",
-      "title": "High Approach Angle & Tough Skid Plates",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-left-front-three-quarter-2.jpeg?isig=0&q=80"
+      "id": "gr_banner_lifestyle",
+      "title": "Unrivalled All-Terrain & Expedition Touring Capability",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/gr-banner-lifestyle-1200x648.webp"
     },
     {
-      "id": "dashboard_cockpit",
-      "title": "All-Black Premium Leather Dashboard Cockpit",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-dashboard.avif?isig=0&q=80"
+      "id": "bi_beam_led_headlamps",
+      "title": "Bi-Beam LED Projector Headlamps with Integrated LED DRLs",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-exterior-feature01.webp"
     },
     {
-      "id": "steering_wheel_controls",
-      "title": "Leather-Wrapped Multi-Function Steering Wheel",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-steering-wheel.avif?isig=0&q=80"
+      "id": "led_rear_combination_lamps",
+      "title": "Aero-Fin Designed LED Rear Combination Taillamps",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-exterior-feature02.webp"
     },
     {
-      "id": "instrument_cluster",
-      "title": "Optitron Meter with Color TFT Multi-Info Display",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-instrument-cluster.avif?isig=0&q=80"
+      "id": "catamaran_front_bumper",
+      "title": "Muscular Catamaran-Style Front Bumper & Tough Skid Plates",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-exterior-feature04.webp"
     },
     {
-      "id": "infotainment_touchscreen",
-      "title": "8.0-inch Smart Touchscreen with Apple CarPlay & Android Auto",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-infotainment-system.avif?isig=0&q=80"
+      "id": "ventilated_front_seats",
+      "title": "Front Row Ventilated Perforated Leather Seats",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature01.webp"
     },
     {
-      "id": "gear_shifter_console",
-      "title": "Sequential 6-Speed Automatic & 4x4 Selector Dials",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-gear-shifter-gear-shifter-stalk.avif?isig=0&q=80"
+      "id": "smart_touchscreen_audio",
+      "title": "8.0-inch Smart Touchscreen Infotainment with Apple CarPlay & Android Auto",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature02.webp"
     },
     {
-      "id": "bootspace_folded_seats",
-      "title": "Spacious Cargo Deck with Space-Up 3rd Row Seats",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-interior-bootspace-rear-seat-folded.avif?isig=0&q=80"
+      "id": "optitron_meter_cluster",
+      "title": "Optitron Meter Cluster with 4.2-inch TFT Multi-Information Display",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature03.webp"
     },
     {
-      "id": "all_terrain_profile",
-      "title": "225 mm Ground Clearance for High Water Wading",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44709/fortuner-exterior-left-side-view-9.jpeg?isig=0&q=80"
+      "id": "jbl_11_speaker_audio",
+      "title": "11-Speaker JBL Premium Audio System with Subwoofer",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature04.webp"
     }
   ],
   "specs": {
