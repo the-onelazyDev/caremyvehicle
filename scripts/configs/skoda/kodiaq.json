@@ -1,0 +1,177 @@
+{
+  "id": "skoda-kodiaq",
+  "name": "Škoda Kodiaq",
+  "brand": "Skoda",
+  "tagline": "All-New 2nd-Gen 4x4 Flagship European Luxury SUV with 204 PS 2.0L TSI, Smart Dials, 32.77 cm Screen & 9 Airbags",
+  "launchDate": "2025 (All-New 2nd Gen)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹46.89 - ₹48.69 Lakh",
+  "minPrice": 4689000,
+  "maxPrice": 4869000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags Standard)",
+  "groundClearance": "190 mm",
+  "bootSpace": "281 Litres (910L 5-Seat Mode)",
+  "waitingPeriod": "3 - 6 Weeks",
+  "summary": "The all-new second-generation Škoda Kodiaq brings Czech flagship luxury to India with a 204 PS / 320 Nm 2.0L TSI EVO engine, intelligent 4x4 all-wheel drive with 7-speed DSG, crystalline illuminated front grille, Dark Chrome D-pillar, Škoda Smart Dials with haptic rotary screens, a massive 32.77 cm (12.9-inch) freestanding infotainment display, 13-speaker 725W Canton sound system, Ergo pneumatic massaging front seats, and 9 airbags standard.",
+  "colors": [
+    {
+      "id": "bronx-gold",
+      "name": "Bronx Gold Metallic",
+      "hex": "#7E754A",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/6.jpg"
+    },
+    {
+      "id": "race-blue",
+      "name": "Race Blue Metallic",
+      "hex": "#658FCB",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/5.jpg"
+    },
+    {
+      "id": "moon-white",
+      "name": "Moon White Metallic",
+      "hex": "#F5F5F5",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/1.jpg"
+    },
+    {
+      "id": "graphite-grey",
+      "name": "Graphite Grey Metallic",
+      "hex": "#405371",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/3.jpg"
+    },
+    {
+      "id": "magic-black",
+      "name": "Magic Black Metallic",
+      "hex": "#121A1C",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/2.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "crystalline-illuminated-grille",
+      "title": "TOP LED Matrix Crystalline Headlights & Horizontal Illuminated Grille Strip",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/37bb533f-cf67-46e3-96e0-564ac6676fac/9cb32c06a1e0d6301cbd00404dea6587/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "dark-chrome-d-pillar",
+      "title": "Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/423149b1-fd51-4e82-b02b-50ba7f664700/1972bb053d8e61b4814b1f9f495c5651/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "c-shaped-connected-taillamps",
+      "title": "Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/2d1e57d5-04ed-40bf-be54-ce0bd3b5d5da/20b654a1656f72e935dab4deae0655cd/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "selection-lk-flagship",
+      "title": "Škoda Kodiaq Selection L&K (Laurin & Klement) 4x4 Flagship",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/d301fc44-7435-4ba2-80af-2fd468b67c6e/d92d3ddd11b8f63dec81de476e33a877/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "sportline-4x4-edition",
+      "title": "Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/07ad9e93-fec1-4c9a-be47-2c99390b631d/c8a9735d75b6ff4d2ff27a24bea3faa0/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "panoramic-sunroof-kodiaq",
+      "title": "Expansive Two-Pane Electric Panoramic Sunroof",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/a32b3aeb-0644-4f77-b9fe-92715787ccfb/b19fa4c4f80cf3b364185da02ff01001/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1920_1.webp"
+    },
+    {
+      "id": "skoda-smart-dials",
+      "title": "Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/f7fbaf87-a110-4a30-93ab-1c751656fbd7/20b106934d9b21060d6a70a7ae49071a/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1920_1.webp"
+    },
+    {
+      "id": "infotainment-3277cm",
+      "title": "32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/212a537d-2861-4930-8909-649e5ac6283c/6e836a5e038bdb8759408dc657c85750/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1920_1.webp"
+    },
+    {
+      "id": "canton-sound-system",
+      "title": "13-Speaker 725W Canton Surround Sound System with Subwoofer",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/a1e63527-1d35-46fb-91a3-4d952238886d/0eb78ca0f933c0299a3c16e11b2ac82b/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1920_1.webp"
+    },
+    {
+      "id": "three-row-7seater-cabin",
+      "title": "Luxurious 3-Row 7-Seater Cabin with Cognac / Suedia Upholstery",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/4e8989cb-f813-4804-9f6c-b16ab7bbcfea/836ae1e2f2f52c0826bfd01dbcc122af/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "flexible-boot-space",
+      "title": "Versatile Split-Folding Luggage Compartment (Up to 2,035L)",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/5d4653d2-d4ca-4704-94da-7ff7feb978de/4c5e25af9712f0d4b56e8788757b7909/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "nine-airbags-park-assist",
+      "title": "9 Airbags Standard, Intelligent Park Assist & 360° Area View",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/8db944e1-06a7-4710-a30c-f649efb7b869/555f0a1da340298ac48659fe614398db/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "2.0L TSI EVO Turbo Petrol (204 PS / 150 kW @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+    ],
+    "transmissions": [
+      "7-Speed DSG Dual-Clutch Automatic with Intelligent 4x4 All-Wheel Drive & Off-Road Mode"
+    ],
+    "dimensions": "4758 mm L × 1864 mm W × 1659 mm H",
+    "wheelbase": "2791 mm",
+    "fuelTank": "62 Litres",
+    "seatingCapacity": "5 / 7 Seater"
+  },
+  "variants": [
+    {
+      "name": "Lounge 2.0 TSI 4x4 AT (5-Seater)",
+      "exShowroom": 4689000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4x4)",
+      "engine": "2.0L TSI Turbo (204 PS)",
+      "mileage": "14.86 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "204 PS / 320 Nm 2.0L TSI Engine with 7-Speed DSG & 4x4 All-Wheel Drive",
+        "9 Airbags, Multi-Collision Brake, Driver Attention Alert & Hill Descent Control",
+        "Grey Suedia & Fabric Lounge Interiors with 26.03 cm Virtual Cockpit",
+        "Škoda Smart Dials, Tri-Zone Climatronic AC & Panoramic Sunroof"
+      ]
+    },
+    {
+      "name": "Sportline 2.0 TSI 4x4 AT (7-Seater)",
+      "exShowroom": 4689000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4x4)",
+      "engine": "2.0L TSI Turbo (204 PS)",
+      "mileage": "14.86 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Sporty Blacked-Out 7-Seater 4x4",
+      "keyFeatures": [
+        "Glossy Black Grille, D-Pillar, Roof Rails & R18 Soira Anthracite Alloy Wheels",
+        "All-Black Suedia Sport Seats with Integrated Headrests & 3-Spoke Sport Steering",
+        "32.77 cm (12.9-inch) Infotainment Screen + 26.03 cm Virtual Cockpit + Smart Dials",
+        "13-Speaker 725W Canton Sound System, Panoramic Sunroof & Dual Wireless Phone Cooling Box",
+        "9 Airbags, TOP LED Matrix Headlamps & Electric Tailgate"
+      ]
+    },
+    {
+      "name": "Selection L&K 2.0 TSI 4x4 AT (7-Seater)",
+      "exShowroom": 4869000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG 4x4)",
+      "engine": "2.0L TSI Turbo (204 PS)",
+      "mileage": "14.86 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Ultimate Luxury Flagship",
+      "keyFeatures": [
+        "Illuminated Crystal Grille Strip & Exclusive R18 Belatrix Aero Alloy Wheels",
+        "Cognac Perforated Leather Ergo Seats with Pneumatic 10-Cushion Massage, Ventilation & Heating",
+        "360° Area View Camera, Intelligent Park Assist & Virtual Pedal Hands-Free Tailgate",
+        "32.77 cm Infotainment, Škoda Smart Dials & 13-Speaker 725W Canton Sound System",
+        "9 Airbags, Off-Road 4x4 Mode & 4-Year / 1,00,000 km Standard Warranty"
+      ]
+    }
+  ]
+}
+

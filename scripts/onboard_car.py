@@ -12,12 +12,17 @@ import json
 import argparse
 import subprocess
 import urllib.request
+import ssl
 import requests
 from PIL import Image
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Ensure UTF-8 output on Windows
 sys.stdout.reconfigure(encoding='utf-8')
+
+SSL_CTX = ssl.create_default_context()
+SSL_CTX.check_hostname = False
+SSL_CTX.verify_mode = ssl.CERT_NONE
 
 IMAGEKIT_PRIVATE_KEY = os.getenv("IMAGEKIT_PRIVATE_KEY", "private_eJrRIeRW3SUSsmIl2pW+XKX3qCU=")
 IMAGEKIT_ENDPOINT = "https://ik.imagekit.io/2908vvlod"
@@ -31,7 +36,7 @@ def fetch_bytes(url, max_retries=3, timeout=15):
     for attempt in range(max_retries):
         try:
             req = urllib.request.Request(url, headers=HTTP_HEADERS)
-            with urllib.request.urlopen(req, timeout=timeout) as res:
+            with urllib.request.urlopen(req, context=SSL_CTX, timeout=timeout) as res:
                 if res.status == 200:
                     return res.read()
         except Exception as e:

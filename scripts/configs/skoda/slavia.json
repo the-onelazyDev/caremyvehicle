@@ -1,0 +1,278 @@
+{
+  "id": "skoda-slavia",
+  "name": "Škoda Slavia",
+  "brand": "Skoda",
+  "tagline": "5-Star Global NCAP Luxury European Sedan with 150 PS 1.5 TSI DSG, 521L Boot, 360° Camera & Rear-Seat Massagers",
+  "launchDate": "2026 (New Slavia)",
+  "bodyType": "Sedan",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹9.99 - ₹18.69 Lakh",
+  "minPrice": 999900,
+  "maxPrice": 1869000,
+  "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+  "groundClearance": "179 mm",
+  "bootSpace": "521 Litres",
+  "waitingPeriod": "2 - 5 Weeks",
+  "summary": "The new Škoda Slavia combines timeless European coupé-inspired sedan elegance with a 5-Star Global NCAP safety rating, class-leading 179 mm ground clearance and 521-litre boot space, 360° area-view camera, sequential LED tail lamps, ventilated electric front seats, rear-seat massagers, an 8-speed torque converter AT on the 1.0 TSI, and the 150 PS 1.5 TSI EVO with 7-speed DSG.",
+  "colors": [
+    {
+      "id": "lava-blue",
+      "name": "Lava Blue",
+      "hex": "#135D7D",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/492.jpg"
+    },
+    {
+      "id": "cherry-red",
+      "name": "Cherry Red",
+      "hex": "#640015",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/490.jpg"
+    },
+    {
+      "id": "arctic-silver",
+      "name": "Arctic Silver",
+      "hex": "#B8C3BC",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/483.jpg"
+    },
+    {
+      "id": "cappuccino-beige",
+      "name": "Cappuccino Beige",
+      "hex": "#A8A49E",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/484.jpg"
+    },
+    {
+      "id": "shimla-green",
+      "name": "Shimla Green",
+      "hex": "#6C7261",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/485.jpg"
+    },
+    {
+      "id": "steel-grey",
+      "name": "Steel Grey",
+      "hex": "#6F7477",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/486.jpg"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#FCFAF1",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/488.jpg"
+    },
+    {
+      "id": "carbon-steel",
+      "name": "Carbon Steel",
+      "hex": "#5B5E63",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/489.jpg"
+    },
+    {
+      "id": "deep-black",
+      "name": "Deep Black",
+      "hex": "#0A0809",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/491.jpg"
+    },
+    {
+      "id": "brilliant-silver",
+      "name": "Brilliant Silver",
+      "hex": "#DFE0E2",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/487.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "slavia-hero-exterior",
+      "title": "Refreshed New Škoda Slavia European Sedan Stance",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/3bd1fd2d-5e72-4fc2-9fe9-7ba26c7548e1/3d4269ca88a5d4e9eb6cff1e57ee1338/HighlightsModule/ef5b1d3c6935204272c6bd4203d6007b/dc644d7dcc87568712479736f3d9616116a47d60f725f03bd4a66359b5358ab7/Default_bp1920_1.webp"
+    },
+    {
+      "id": "monte-carlo-grille",
+      "title": "Sporty Red Grille Stripes & Monte Carlo Badging",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/0187aeb5-f236-4553-9212-5c040146ebb8/838c7c0ead73d70517240e44c9b92b3c/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "sequential-led-taillamps",
+      "title": "New Crystalline LED Tail Lamps with Sequential Turn Indicators",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/481948e2-6611-4d3e-8159-0684bb52ecf7/068a9b8d9cab8b51e85497c54b15e42f/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "new-led-headlamps",
+      "title": "New Crystalline LED Projector Headlamps & Fog Lamps",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/10fcf7b1-ae21-4e69-8929-810dc9838ff4/46a6cdb303c2fc35170a4c023ff406cf/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "red-caliper-alloys",
+      "title": "R16 Black Alloy Wheels Paired with Sporty Red Brake Calipers",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/9e7cbe53-2d66-4c4f-91d1-5123bed6b4cf/ec7c6772e843f3aca620b5de250459dd/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "monte-carlo-edition",
+      "title": "Škoda Slavia Monte Carlo 1.5 TSI DSG Flagship",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/346bcf6d-ed0b-4419-ab1e-985d670da7ba/b7a1b79257c6f3f1ccf31405aeda3797/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "area-view-360-camera",
+      "title": "360° Area View Camera System for Effortless Parking",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/16a75ead-e666-4659-904f-d5da3e6e5707/51900116b1c66ccc1145701d36587788/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "virtual-cockpit-26cm",
+      "title": "26.03 cm Virtual Cockpit with Turn-by-Turn Navigation",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/7d77c860-4cb8-4bb9-982a-2de2410bae28/b6e9f478b5cfe44007715ad554895894/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "infotainment-google-ai",
+      "title": "25.6 cm Touchscreen Infotainment with Google Cloud AI Assistant",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/018ffe68-bef3-4521-8d87-b0ed2c3a1a99/e3ea6434809830d920d79c4cb80203b7/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "ventilated-electric-seats",
+      "title": "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/18a31efe-f2e0-4a50-bfac-a1a78961f1df/89b019186552fc6cbeaa519fa0d25b01/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "rear-seat-massagers",
+      "title": "Relaxing Rear-Seat Massagers with Executive Legroom",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/9a6b69a8-76f1-45c8-ac62-6ec838e1ada7/a22872aad1b48785290ea6e82c5e428d/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "global-ncap-5star-sedan",
+      "title": "5-Star Global NCAP Safety with 6 Airbags Standard",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/a15fce60-3144-415f-80a7-94e954288ee6/dda041bad545fd2391e30b8da0cb30b8/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+      "1.5L TSI EVO Turbo Petrol with Active Cylinder Technology (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission",
+      "8-Speed Torque Converter Automatic (1.0 TSI)",
+      "7-Speed DSG Dual-Clutch Automatic (1.5 TSI EVO)"
+    ],
+    "dimensions": "4541 mm L × 1752 mm W × 1507 mm H",
+    "wheelbase": "2651 mm",
+    "fuelTank": "45 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Classic 1.0 TSI MT",
+      "exShowroom": 999900,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.32 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Sub-10L 5-Star Turbo Sedan",
+      "keyFeatures": [
+        "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety Standard",
+        "179 mm SUV-Like Ground Clearance & Massive 521-Litre Boot Space",
+        "17.7 cm Touchscreen, LED DRLs, Rear Parking Sensors & Auto Engine Start-Stop"
+      ]
+    },
+    {
+      "name": "Classic+ 1.0 TSI MT",
+      "exShowroom": 1099000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.32 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof & R16 Alloy Wheels",
+        "Cruise Control, Rear View Camera & Automatic Headlamps",
+        "6 Airbags, TPMS & Hill Hold Control"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI MT",
+      "exShowroom": 1299000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "20.32 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Most Popular Balanced Trim",
+      "keyFeatures": [
+        "25.6 cm (10.1-inch) Touchscreen with Wireless Apple CarPlay & Android Auto",
+        "Climatronic Auto AC, Cruise Control, Ambient Lighting & R16 Alloy Wheels",
+        "LED Tail Lamps, Chrome Window Garnish & 60:40 Split Rear Seats"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI AT",
+      "exShowroom": 1409000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.73 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+        "25.6 cm Touchscreen, Climatronic Auto AC & Rear View Camera",
+        "Hill Hold Control, TPMS & 6 Airbags"
+      ]
+    },
+    {
+      "name": "Sportline 1.0 TSI AT",
+      "exShowroom": 1499000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.73 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof, Glossy Black R16 Alloys & Blacked-Out Exterior Styling",
+        "Aluminium Pedals, Sporty Grey Fabric/Leatherette Cabin & Rain-Sensing Wipers",
+        "Crystalline LED Headlamps & Sequential LED Tail Lamps"
+      ]
+    },
+    {
+      "name": "Sportline 1.5 TSI DSG",
+      "exShowroom": 1679000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "19.36 kmpl",
+      "isVFM": true,
+      "vfmBadge": "150 PS Enthusiast Value Pick",
+      "keyFeatures": [
+        "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)",
+        "7-Speed DSG Dual-Clutch Automatic & Sporty Black Exterior Package",
+        "Electric Sunroof, 25.6 cm Infotainment & Sequential LED Tail Lamps"
+      ]
+    },
+    {
+      "name": "Prestige 1.5 TSI DSG",
+      "exShowroom": 1829000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "19.36 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "360° Area View Camera, Rear-Seat Massagers & Electric Sunroof",
+        "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+        "26.03 cm Virtual Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant",
+        "8-Speaker Škoda Sound System with Subwoofer & Footwell Illumination"
+      ]
+    },
+    {
+      "name": "Monte Carlo 1.5 TSI DSG",
+      "exShowroom": 1869000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "19.36 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Monte Carlo Red Grille Accents, Red Brake Calipers & Glossy Black Spoiler",
+        "Ruby Red & Black Ventilated Electric Seats with Monte Carlo Badging",
+        "360° Area View Camera, Rear-Seat Massagers & 26.03 cm Red-Themed Virtual Cockpit",
+        "150 PS 1.5L TSI EVO with 7-Speed DSG"
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,274 @@
+{
+  "id": "skoda-kylaq",
+  "name": "Škoda Kylaq",
+  "brand": "Skoda",
+  "tagline": "India's 5-Star Bharat NCAP Compact SUV with 1.0L TSI Turbo, 446L Boot Space & Ventilated Electric Seats",
+  "launchDate": "2025",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹7.89 - ₹14.40 Lakh",
+  "minPrice": 789000,
+  "maxPrice": 1440000,
+  "safetyRating": "5.0 ★ (Bharat NCAP 5-Star – Adult 30.88/32, Child 45.00/49)",
+  "groundClearance": "189 mm",
+  "bootSpace": "446 Litres",
+  "waitingPeriod": "4 - 8 Weeks",
+  "summary": "Built on the MQB-A0-IN platform, the Škoda Kylaq brings authentic European driving dynamics to the sub-4m SUV segment with a punchy 115 PS 1.0L TSI engine, segment-best 446-litre boot space, 5-star Bharat NCAP safety with 25+ standard safety features including 6 airbags, and segment-first 6-way electrically adjustable ventilated front seats.",
+  "colors": [
+    {
+      "id": "olive-gold",
+      "name": "Olive Gold",
+      "hex": "#7D8B24",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/34.jpg"
+    },
+    {
+      "id": "tornado-red",
+      "name": "Tornado Red",
+      "hex": "#B51822",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/33.jpg"
+    },
+    {
+      "id": "cherry-red",
+      "name": "Cherry Red",
+      "hex": "#640015",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/408.jpg"
+    },
+    {
+      "id": "lava-blue",
+      "name": "Lava Blue",
+      "hex": "#135D7D",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/37.jpg"
+    },
+    {
+      "id": "deep-black",
+      "name": "Deep Black",
+      "hex": "#0A0809",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/36.jpg"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#F2F2F2",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/31.jpg"
+    },
+    {
+      "id": "carbon-steel",
+      "name": "Carbon Steel",
+      "hex": "#5B5E63",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/35.jpg"
+    },
+    {
+      "id": "brilliant-silver",
+      "name": "Brilliant Silver",
+      "hex": "#C1C2BD",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/32.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "modern-solid-front",
+      "title": "Modern Solid 3D Glossy Black Grille & Split LED Projector Headlamps",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/168cec84-b5e9-4e50-87c8-548f2f946791/28562a7e23517b263a35714000619ccf/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "commanding-suv-stance",
+      "title": "Commanding Sub-4m SUV Profile with 189 mm Ground Clearance",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/37b2e6de-a3f3-4dbd-ba18-a13881888ff6/041e902d405ba559642fada1145b6189/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "t-shaped-led-taillights",
+      "title": "T-Shaped Crystalline LED Tail Lamps & 3D Rear Diffuser",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/b8af40f0-a90e-4f0d-8c48-5b33fd4e0458/97eb60688000830755fc97b0a43109ef/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "prestige-plus-exterior",
+      "title": "Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/4343db03-62b2-475e-8c9f-8a9817f444a7/ec69a3424e9bdd35eac40d58823c8ef6/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "sportline-edition",
+      "title": "Škoda Kylaq Sportline with Blacked-Out Styling Accents",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/4ab4922c-7896-4092-8892-bba5edf86674/378ed6458dafb917087d8129d0dbc787/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "boot-space-446l",
+      "title": "Segment-Leading 446-Litre Boot Space (1,265L Expanded)",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/718a7e80-9b60-4acf-8566-5ae32ecfe21f/8a05e8eed37ed1496da071fc75012213/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "modern-cabin-dashboard",
+      "title": "Modern Dual-Screen Cabin with 25.6 cm Infotainment & Digital Cockpit",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/4a973cdd-3897-4285-a0c8-43b104cf650f/fa03ba7e5b5070a66749d2ffe6df7cfd/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "ventilated-front-seats",
+      "title": "Ventilated Front Seats for Driver & Co-Driver",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/05652b01-addf-42df-875f-e55b98c62023/e5569c60852a235e1b5c6459c36f4f8e/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "electric-seats-6way",
+      "title": "Segment-First 6-Way Electrically Adjustable Front Seats",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/d0bbee87-a369-4cdb-a395-4d52aee021d8/2cef4eb9df021fdb390de01e61d3c930/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "ambient-cabin-lighting",
+      "title": "Soothing Cabin Ambient Lighting & Climatronic Auto AC",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/4e1166a3-80f4-4e7e-9944-769a8d50d2fb/db69ea4eadf0db9a57974dcfb3156d8f/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "rear-armrest-comfort",
+      "title": "Spacious Rear Bench with Center Armrest & Cupholders",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/0042ed0c-5795-45fd-a85e-305f8a22f0fa/0c59347497105155d759048931a42fa4/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "six-airbags-safety",
+      "title": "6 Airbags Standard & 5-Star Bharat NCAP Protection",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/f56003db-6850-46b6-80a7-f255b167839e/ebb08b8cafaaf7c25808b1bee9bba2ef/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4000 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission",
+      "6-Speed Torque Converter Automatic (with Paddle Shifters)"
+    ],
+    "dimensions": "3995 mm L × 1783 mm W × 1619 mm H",
+    "wheelbase": "2566 mm",
+    "fuelTank": "45 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Classic 1.0 TSI MT",
+      "exShowroom": 789000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.68 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Unbeatable Turbo Entry Price",
+      "keyFeatures": [
+        "6 Airbags, ESC, Traction Control, Multi-Collision Brake & 25+ Standard Safety Features",
+        "Škoda Crystalline LED Headlamps, LED DRLs & LED Tail Lamps",
+        "16-inch Steel Wheels with Full Wheel Covers & Black Roof Rails",
+        "All-4 Power Windows, Rear AC Vents & Tilt/Telescopic Steering",
+        "5-Star Bharat NCAP Safety Rating"
+      ]
+    },
+    {
+      "name": "Classic+ 1.0 TSI MT",
+      "exShowroom": 859000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.68 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof with Anti-Pinch Technology",
+        "Cruise Control & Auto-Dimming Inside Rear-View Mirror (IRVM)",
+        "Automatic Headlamps & Rain-Sensing Wipers",
+        "4 Speakers + Steering-Mounted Controls"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI MT",
+      "exShowroom": 959000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.68 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Sub-10L Value Package",
+      "keyFeatures": [
+        "16-inch Silver Alloy Wheels & Tyre Pressure Monitoring System (TPMS)",
+        "17.7 cm Škoda Touch Infotainment System with Android Auto & Apple CarPlay",
+        "Cruise Control, Rear Defogger, Cooled Glovebox & Rear Parcel Tray",
+        "Dual-Tone Fabric Seats, Leather-Wrapped Steering & Chrome Interior Accents",
+        "USB-C Fast Charging Ports (Front & Rear)"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI AT",
+      "exShowroom": 1059000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.05 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Smooth 6-Speed Torque Converter Automatic with Hill Hold Control",
+        "16-inch Alloy Wheels, TPMS & Cruise Control",
+        "17.7 cm Touchscreen, 6 Speakers & Rear AC Vents",
+        "6 Airbags & Electronic Differential Lock (EDS)"
+      ]
+    },
+    {
+      "name": "Signature+ 1.0 TSI MT",
+      "exShowroom": 1140000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.68 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Big-Screen & Tech Trim",
+      "keyFeatures": [
+        "25.6 cm (10.1-inch) Infotainment with Wireless Apple CarPlay & Android Auto",
+        "20.32 cm (8-inch) Digital Instrument Cluster (Virtual Cockpit)",
+        "Climatronic Automatic Climate Control & Rear View Camera with Guidelines",
+        "Auto-Folding ORVMs, Shark Fin Antenna & 60:40 Split Rear Seats with Armrest",
+        "Cruise Control & Automatic Headlamps"
+      ]
+    },
+    {
+      "name": "Signature+ 1.0 TSI AT",
+      "exShowroom": 1240000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.05 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6-Speed Torque Converter AT with Steering Paddle Shifters",
+        "25.6 cm Touchscreen + 20.32 cm Digital Cockpit",
+        "Climatronic Auto AC, Rear Camera & Keyless Entry (KESSY)",
+        "Hill Hold Control & Auto-Folding ORVMs"
+      ]
+    },
+    {
+      "name": "Prestige 1.0 TSI MT",
+      "exShowroom": 1335000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.68 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Electric Sunroof with Anti-Pinch & R17 Dual-Tone Alloy Wheels",
+        "Ventilated Leatherette Front Seats & Wireless Smartphone Charger",
+        "Škoda Crystalline LED Projector Headlamps with Cornering Fog Lamps",
+        "Auto-Dimming IRVM, Rear Wiper/Washer & Ambient Cabin Lighting"
+      ]
+    },
+    {
+      "name": "Prestige+ 1.0 TSI AT",
+      "exShowroom": 1440000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.05 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "6-Way Electrically Adjustable & Ventilated Driver and Co-Driver Seats",
+        "6-Speed Torque Converter Automatic with Paddle Shifters",
+        "Electric Sunroof, R17 Dual-Tone Alloys & Crystalline LED Projector Headlamps",
+        "25.6 cm Infotainment, 20.32 cm Virtual Cockpit & Wireless Charger",
+        "5-Star Bharat NCAP Safety & 4-Year / 1,00,000 km Standard Warranty"
+      ]
+    }
+  ]
+}
+

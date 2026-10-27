@@ -1,0 +1,270 @@
+{
+  "id": "skoda-kushaq",
+  "name": "Škoda Kushaq",
+  "brand": "Skoda",
+  "tagline": "5-Star Global NCAP European SUV with 1.0L & 1.5L TSI EVO, Panoramic Sunroof & Segment-First Rear Seat Massage",
+  "launchDate": "2026 (New Kushaq)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹10.89 - ₹18.79 Lakh",
+  "minPrice": 1089000,
+  "maxPrice": 1879000,
+  "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+  "groundClearance": "188 mm",
+  "bootSpace": "385 Litres",
+  "waitingPeriod": "2 - 5 Weeks",
+  "summary": "The refreshed Škoda Kushaq raises the mid-size SUV benchmark with a 5-Star Global NCAP safety rating (both Adult & Child), an illuminated front grille light band, connected LED taillights with illuminated Škoda lettering, standard electric sunroof across the range (panoramic sunroof on top trims), segment-first rear-seat massagers, an 8-speed automatic torque converter on the 1.0 TSI, and the 150 PS 1.5 TSI EVO with Active Cylinder Technology (ACT) & 7-speed DSG.",
+  "colors": [
+    {
+      "id": "lava-blue",
+      "name": "Lava Blue",
+      "hex": "#1A354A",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/315.jpg"
+    },
+    {
+      "id": "shimla-green",
+      "name": "Shimla Green",
+      "hex": "#6C7261",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/320.jpg"
+    },
+    {
+      "id": "cherry-red",
+      "name": "Cherry Red",
+      "hex": "#640015",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/318.jpg"
+    },
+    {
+      "id": "candy-white",
+      "name": "Candy White",
+      "hex": "#FCFAF1",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/313.jpg"
+    },
+    {
+      "id": "carbon-steel",
+      "name": "Carbon Steel",
+      "hex": "#888284",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/316.jpg"
+    },
+    {
+      "id": "deep-black",
+      "name": "Deep Black",
+      "hex": "#101010",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/317.jpg"
+    },
+    {
+      "id": "steel-grey",
+      "name": "Steel Grey",
+      "hex": "#B8C3BC",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/319.jpg"
+    },
+    {
+      "id": "brilliant-silver",
+      "name": "Brilliant Silver",
+      "hex": "#DFE0E2",
+      "sourceUrl": "https://www.buyskodaonline.co.in/car/314.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "illuminated-grille-front",
+      "title": "Bold New Grille with Sporty Red Accents & Illuminated Light Band",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/a3903efa-1431-42ee-a9c9-37885c4a39ad/53d1dd81e2d73abaf299f1fe92360e19/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "connected-led-taillights",
+      "title": "Connected LED Taillights with Illuminated Škoda Lettering",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/ddda2787-5090-483c-9837-f9c5042037d4/97402edb601aff311af78870ff1a6cf3/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "monte-carlo-flagship",
+      "title": "Škoda Kushaq Monte Carlo 1.5 TSI DSG Edition",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/d8552ac2-1618-4d17-9c79-602dc70fdc88/c65ffd5e5eaa62a098b0b59cb671df79/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "prestige-trim-exterior",
+      "title": "Škoda Kushaq Prestige with R17 Dual-Tone Alloy Wheels",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/f170f93f-1bac-4643-a49b-624a6a9e9a65/d873d5051f6ae790c1a99a5cff5f7eea/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "crystalline-led-headlights",
+      "title": "All-New Sharp Crystalline LED Projector Headlights",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/eb033933-9961-4775-b1c2-9224b3f239e3/074c06891e32949c2fe3e1be73974a8b/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "standard-alloy-wheels",
+      "title": "Sporty Diamond-Cut Alloy Wheels & All-4 Disc Brakes (1.5 TSI)",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/319c7a12-0ecc-4b46-aef7-107c21561490/4613ec65e2e48e448b35920415b6083c/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "panoramic-sunroof",
+      "title": "Panoramic Sunroof on Top Trims (Electric Sunroof Standard)",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/bb519033-461c-4a94-8982-a80aa34176a1/e0399e38907d5c283d3289cc070ecc18/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "rear-seat-massage",
+      "title": "Segment-First Rear Seat Massage Cushion for Long Journeys",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/28e2b504-db68-43e0-9bb6-49f2390560a9/508ef95c4f0783702007971b2b4f5a7e/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "infotainment-256cm",
+      "title": "25.6 cm Touchscreen with Wireless Apple CarPlay, Android Auto & AI Assistant",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/f63b7dfa-5fb3-4627-9219-79de63af3b7b/2c764c86e3fc85a4b284e9c74328aa85/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "digital-cockpit-26cm",
+      "title": "26.03 cm Virtual Cockpit with Turn-by-Turn Navigation",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/61494ffe-9226-435b-aa44-dadbdfeef895/a781e437d0440fe7f81f174494619761/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "tsi-dsg-transmission",
+      "title": "1.5 TSI EVO with 7-Speed DSG & Active Cylinder Technology",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/ee3da62e-9100-4d16-a84a-97d627f589e9/d76e5f3684cfd8857e5cd10579a9e8af/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    },
+    {
+      "id": "global-ncap-5star-safety",
+      "title": "5-Star Global NCAP Safety with 6 Airbags & Up to 40 Safety Features",
+      "sourceUrl": "https://cdn.skoda-auto.com/images/sites/enin-v2/65c90711-e287-433c-87dc-d43f0b05aedd/891177c2ee08380deb8503d33d37b91e/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1920_1.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+      "1.5L TSI EVO Turbo Petrol with Active Cylinder Technology (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+    ],
+    "transmissions": [
+      "6-Speed Manual Transmission",
+      "8-Speed Torque Converter Automatic (1.0 TSI)",
+      "7-Speed DSG Dual-Clutch Automatic (1.5 TSI EVO)"
+    ],
+    "dimensions": "4225 mm L × 1760 mm W × 1612 mm H",
+    "wheelbase": "2651 mm",
+    "fuelTank": "50 Litres",
+    "seatingCapacity": "5 Seater"
+  },
+  "variants": [
+    {
+      "name": "Classic+ 1.0 TSI MT",
+      "exShowroom": 1089000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.76 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Standard Sunroof & Alloys",
+      "keyFeatures": [
+        "Electric Sunroof & Alloy Wheels Now Standard from Base Variant",
+        "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety",
+        "All-New LED Headlamps, Connected LED Tail Lamps & Rear Wiper/Defogger",
+        "17.7 cm Touchscreen Infotainment, Rear Parking Sensors & Auto AC"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI MT",
+      "exShowroom": 1289000,
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "19.76 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Best Value Mid-Trim",
+      "keyFeatures": [
+        "25.6 cm (10.1-inch) Infotainment with Wireless Apple CarPlay & Android Auto",
+        "Cruise Control, Rear View Camera & Climatronic Automatic Climate Control",
+        "R16 Grus Alloy Wheels, Shark Fin Antenna & 60:40 Split Rear Seats",
+        "6-Speaker Škoda Sound System & Ambient Cabin Lighting"
+      ]
+    },
+    {
+      "name": "Signature 1.0 TSI AT",
+      "exShowroom": 1399000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.09 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+        "Electric Sunroof, 25.6 cm Touchscreen & Cruise Control",
+        "Hill Hold Control, TPMS & Auto-Folding ORVMs",
+        "6 Airbags & 25+ Active/Passive Safety Features"
+      ]
+    },
+    {
+      "name": "Sportline 1.0 TSI AT",
+      "exShowroom": 1499000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.09 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Blacked-Out Grille, R17 Black Vega Alloy Wheels & Sportline Badging",
+        "Electric Sunroof, Aluminium Pedals & Dual-Tone Sporty Cabin",
+        "25.6 cm Touchscreen, Rain-Sensing Wipers & Auto-Dimming IRVM"
+      ]
+    },
+    {
+      "name": "Sportline 1.5 TSI DSG",
+      "exShowroom": 1689000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "18.86 kmpl",
+      "isVFM": true,
+      "vfmBadge": "Enthusiast 150 PS Value Pick",
+      "keyFeatures": [
+        "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)",
+        "Lightning-Fast 7-Speed DSG Dual-Clutch Automatic & All-4 Disc Brakes",
+        "R17 Glossy Black Alloy Wheels, Black Exterior Pack & Electric Sunroof"
+      ]
+    },
+    {
+      "name": "Prestige 1.0 TSI AT",
+      "exShowroom": 1639000,
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "engine": "1.0L TSI Turbo (115 PS)",
+      "mileage": "18.09 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Panoramic Sunroof, Illuminated Front Grille Band & Rear Seat Massagers",
+        "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+        "26.03 cm Virtual Cockpit with Navigation & Škoda Subwoofer Audio",
+        "Crystalline LED Projector Headlamps & KESSY Keyless Entry"
+      ]
+    },
+    {
+      "name": "Prestige 1.5 TSI DSG",
+      "exShowroom": 1839000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "18.86 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "150 PS 1.5L TSI EVO + 7-Speed DSG + All-4 Wheel Disc Brakes",
+        "Panoramic Sunroof, Rear Seat Massage & Electric Ventilated Front Seats",
+        "26.03 cm Digital Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant",
+        "Up to 40 Active & Passive Safety Features"
+      ]
+    },
+    {
+      "name": "Monte Carlo 1.5 TSI DSG",
+      "exShowroom": 1879000,
+      "fuel": "Petrol",
+      "trans": "Automatic (DSG)",
+      "engine": "1.5L TSI EVO (150 PS)",
+      "mileage": "18.86 kmpl",
+      "isVFM": false,
+      "keyFeatures": [
+        "Signature Monte Carlo Red Grille Slats, Red Brake Calipers & R17 Vega Alloys",
+        "Ruby Red & Black Ventilated Electric Leatherette Seats with Monte Carlo Embossing",
+        "Ruby Red Themed 26.03 cm Virtual Cockpit & Panoramic Sunroof",
+        "150 PS 1.5L TSI EVO with 7-Speed DSG & All-4 Disc Brakes"
+      ]
+    }
+  ]
+}
+

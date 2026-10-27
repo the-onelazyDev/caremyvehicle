@@ -11076,6 +11076,1005 @@ export const CARS = [
           }
       ]
   },
+  {
+      "id": "skoda-kylaq",
+      "name": "Škoda Kylaq",
+      "brand": "Skoda",
+      "tagline": "India's 5-Star Bharat NCAP Compact SUV with 1.0L TSI Turbo, 446L Boot Space & Ventilated Electric Seats",
+      "launchDate": "2025",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹7.89 - ₹14.40 Lakh",
+      "minPrice": 789000,
+      "maxPrice": 1440000,
+      "safetyRating": "5.0 ★ (Bharat NCAP 5-Star – Adult 30.88/32, Child 45.00/49)",
+      "groundClearance": "189 mm",
+      "bootSpace": "446 Litres",
+      "waitingPeriod": "4 - 8 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp",
+      "summary": "Built on the MQB-A0-IN platform, the Škoda Kylaq brings authentic European driving dynamics to the sub-4m SUV segment with a punchy 115 PS 1.0L TSI engine, segment-best 446-litre boot space, 5-star Bharat NCAP safety with 25+ standard safety features including 6 airbags, and segment-first 6-way electrically adjustable ventilated front seats.",
+      "colors": [
+          {
+              "id": "olive-gold",
+              "name": "Olive Gold",
+              "hex": "#7D8B24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp"
+          },
+          {
+              "id": "tornado-red",
+              "name": "Tornado Red",
+              "hex": "#B51822",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/tornado-red.webp"
+          },
+          {
+              "id": "cherry-red",
+              "name": "Cherry Red",
+              "hex": "#640015",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/cherry-red.webp"
+          },
+          {
+              "id": "lava-blue",
+              "name": "Lava Blue",
+              "hex": "#135D7D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/lava-blue.webp"
+          },
+          {
+              "id": "deep-black",
+              "name": "Deep Black",
+              "hex": "#0A0809",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/deep-black.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#F2F2F2",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/candy-white.webp"
+          },
+          {
+              "id": "carbon-steel",
+              "name": "Carbon Steel",
+              "hex": "#5B5E63",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/carbon-steel.webp"
+          },
+          {
+              "id": "brilliant-silver",
+              "name": "Brilliant Silver",
+              "hex": "#C1C2BD",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/brilliant-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "modern-solid-front",
+              "title": "Modern Solid 3D Glossy Black Grille & Split LED Projector Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-solid-front.webp"
+          },
+          {
+              "id": "commanding-suv-stance",
+              "title": "Commanding Sub-4m SUV Profile with 189 mm Ground Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/commanding-suv-stance.webp"
+          },
+          {
+              "id": "t-shaped-led-taillights",
+              "title": "T-Shaped Crystalline LED Tail Lamps & 3D Rear Diffuser",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/t-shaped-led-taillights.webp"
+          },
+          {
+              "id": "prestige-plus-exterior",
+              "title": "Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/prestige-plus-exterior.webp"
+          },
+          {
+              "id": "sportline-edition",
+              "title": "Škoda Kylaq Sportline with Blacked-Out Styling Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/sportline-edition.webp"
+          },
+          {
+              "id": "boot-space-446l",
+              "title": "Segment-Leading 446-Litre Boot Space (1,265L Expanded)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/boot-space-446l.webp"
+          },
+          {
+              "id": "modern-cabin-dashboard",
+              "title": "Modern Dual-Screen Cabin with 25.6 cm Infotainment & Digital Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-cabin-dashboard.webp"
+          },
+          {
+              "id": "ventilated-front-seats",
+              "title": "Ventilated Front Seats for Driver & Co-Driver",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ventilated-front-seats.webp"
+          },
+          {
+              "id": "electric-seats-6way",
+              "title": "Segment-First 6-Way Electrically Adjustable Front Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/electric-seats-6way.webp"
+          },
+          {
+              "id": "ambient-cabin-lighting",
+              "title": "Soothing Cabin Ambient Lighting & Climatronic Auto AC",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ambient-cabin-lighting.webp"
+          },
+          {
+              "id": "rear-armrest-comfort",
+              "title": "Spacious Rear Bench with Center Armrest & Cupholders",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/rear-armrest-comfort.webp"
+          },
+          {
+              "id": "six-airbags-safety",
+              "title": "6 Airbags Standard & 5-Star Bharat NCAP Protection",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/six-airbags-safety.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4000 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission",
+              "6-Speed Torque Converter Automatic (with Paddle Shifters)"
+          ],
+          "dimensions": "3995 mm L × 1783 mm W × 1619 mm H",
+          "wheelbase": "2566 mm",
+          "fuelTank": "45 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Classic 1.0 TSI MT",
+              "exShowroom": 789000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.68 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Unbeatable Turbo Entry Price",
+              "keyFeatures": [
+                  "6 Airbags, ESC, Traction Control, Multi-Collision Brake & 25+ Standard Safety Features",
+                  "Škoda Crystalline LED Headlamps, LED DRLs & LED Tail Lamps",
+                  "16-inch Steel Wheels with Full Wheel Covers & Black Roof Rails",
+                  "All-4 Power Windows, Rear AC Vents & Tilt/Telescopic Steering",
+                  "5-Star Bharat NCAP Safety Rating"
+              ]
+          },
+          {
+              "name": "Classic+ 1.0 TSI MT",
+              "exShowroom": 859000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.68 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof with Anti-Pinch Technology",
+                  "Cruise Control & Auto-Dimming Inside Rear-View Mirror (IRVM)",
+                  "Automatic Headlamps & Rain-Sensing Wipers",
+                  "4 Speakers + Steering-Mounted Controls"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI MT",
+              "exShowroom": 959000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.68 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Sub-10L Value Package",
+              "keyFeatures": [
+                  "16-inch Silver Alloy Wheels & Tyre Pressure Monitoring System (TPMS)",
+                  "17.7 cm Škoda Touch Infotainment System with Android Auto & Apple CarPlay",
+                  "Cruise Control, Rear Defogger, Cooled Glovebox & Rear Parcel Tray",
+                  "Dual-Tone Fabric Seats, Leather-Wrapped Steering & Chrome Interior Accents",
+                  "USB-C Fast Charging Ports (Front & Rear)"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI AT",
+              "exShowroom": 1059000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.05 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Smooth 6-Speed Torque Converter Automatic with Hill Hold Control",
+                  "16-inch Alloy Wheels, TPMS & Cruise Control",
+                  "17.7 cm Touchscreen, 6 Speakers & Rear AC Vents",
+                  "6 Airbags & Electronic Differential Lock (EDS)"
+              ]
+          },
+          {
+              "name": "Signature+ 1.0 TSI MT",
+              "exShowroom": 1140000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.68 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Big-Screen & Tech Trim",
+              "keyFeatures": [
+                  "25.6 cm (10.1-inch) Infotainment with Wireless Apple CarPlay & Android Auto",
+                  "20.32 cm (8-inch) Digital Instrument Cluster (Virtual Cockpit)",
+                  "Climatronic Automatic Climate Control & Rear View Camera with Guidelines",
+                  "Auto-Folding ORVMs, Shark Fin Antenna & 60:40 Split Rear Seats with Armrest",
+                  "Cruise Control & Automatic Headlamps"
+              ]
+          },
+          {
+              "name": "Signature+ 1.0 TSI AT",
+              "exShowroom": 1240000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.05 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6-Speed Torque Converter AT with Steering Paddle Shifters",
+                  "25.6 cm Touchscreen + 20.32 cm Digital Cockpit",
+                  "Climatronic Auto AC, Rear Camera & Keyless Entry (KESSY)",
+                  "Hill Hold Control & Auto-Folding ORVMs"
+              ]
+          },
+          {
+              "name": "Prestige 1.0 TSI MT",
+              "exShowroom": 1335000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.68 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof with Anti-Pinch & R17 Dual-Tone Alloy Wheels",
+                  "Ventilated Leatherette Front Seats & Wireless Smartphone Charger",
+                  "Škoda Crystalline LED Projector Headlamps with Cornering Fog Lamps",
+                  "Auto-Dimming IRVM, Rear Wiper/Washer & Ambient Cabin Lighting"
+              ]
+          },
+          {
+              "name": "Prestige+ 1.0 TSI AT",
+              "exShowroom": 1440000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.05 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6-Way Electrically Adjustable & Ventilated Driver and Co-Driver Seats",
+                  "6-Speed Torque Converter Automatic with Paddle Shifters",
+                  "Electric Sunroof, R17 Dual-Tone Alloys & Crystalline LED Projector Headlamps",
+                  "25.6 cm Infotainment, 20.32 cm Virtual Cockpit & Wireless Charger",
+                  "5-Star Bharat NCAP Safety & 4-Year / 1,00,000 km Standard Warranty"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "skoda-kushaq",
+      "name": "Škoda Kushaq",
+      "brand": "Skoda",
+      "tagline": "5-Star Global NCAP European SUV with 1.0L & 1.5L TSI EVO, Panoramic Sunroof & Segment-First Rear Seat Massage",
+      "launchDate": "2026 (New Kushaq)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹10.89 - ₹18.79 Lakh",
+      "minPrice": 1089000,
+      "maxPrice": 1879000,
+      "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+      "groundClearance": "188 mm",
+      "bootSpace": "385 Litres",
+      "waitingPeriod": "2 - 5 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/lava-blue.webp",
+      "summary": "The refreshed Škoda Kushaq raises the mid-size SUV benchmark with a 5-Star Global NCAP safety rating (both Adult & Child), an illuminated front grille light band, connected LED taillights with illuminated Škoda lettering, standard electric sunroof across the range (panoramic sunroof on top trims), segment-first rear-seat massagers, an 8-speed automatic torque converter on the 1.0 TSI, and the 150 PS 1.5 TSI EVO with Active Cylinder Technology (ACT) & 7-speed DSG.",
+      "colors": [
+          {
+              "id": "lava-blue",
+              "name": "Lava Blue",
+              "hex": "#1A354A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/lava-blue.webp"
+          },
+          {
+              "id": "shimla-green",
+              "name": "Shimla Green",
+              "hex": "#6C7261",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/shimla-green.webp"
+          },
+          {
+              "id": "cherry-red",
+              "name": "Cherry Red",
+              "hex": "#640015",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/cherry-red.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#FCFAF1",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/candy-white.webp"
+          },
+          {
+              "id": "carbon-steel",
+              "name": "Carbon Steel",
+              "hex": "#888284",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/carbon-steel.webp"
+          },
+          {
+              "id": "deep-black",
+              "name": "Deep Black",
+              "hex": "#101010",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/deep-black.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#B8C3BC",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/steel-grey.webp"
+          },
+          {
+              "id": "brilliant-silver",
+              "name": "Brilliant Silver",
+              "hex": "#DFE0E2",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/colors/brilliant-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "illuminated-grille-front",
+              "title": "Bold New Grille with Sporty Red Accents & Illuminated Light Band",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/illuminated-grille-front.webp"
+          },
+          {
+              "id": "connected-led-taillights",
+              "title": "Connected LED Taillights with Illuminated Škoda Lettering",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/connected-led-taillights.webp"
+          },
+          {
+              "id": "monte-carlo-flagship",
+              "title": "Škoda Kushaq Monte Carlo 1.5 TSI DSG Edition",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/monte-carlo-flagship.webp"
+          },
+          {
+              "id": "prestige-trim-exterior",
+              "title": "Škoda Kushaq Prestige with R17 Dual-Tone Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/prestige-trim-exterior.webp"
+          },
+          {
+              "id": "crystalline-led-headlights",
+              "title": "All-New Sharp Crystalline LED Projector Headlights",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/crystalline-led-headlights.webp"
+          },
+          {
+              "id": "standard-alloy-wheels",
+              "title": "Sporty Diamond-Cut Alloy Wheels & All-4 Disc Brakes (1.5 TSI)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/standard-alloy-wheels.webp"
+          },
+          {
+              "id": "panoramic-sunroof",
+              "title": "Panoramic Sunroof on Top Trims (Electric Sunroof Standard)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/panoramic-sunroof.webp"
+          },
+          {
+              "id": "rear-seat-massage",
+              "title": "Segment-First Rear Seat Massage Cushion for Long Journeys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/rear-seat-massage.webp"
+          },
+          {
+              "id": "infotainment-256cm",
+              "title": "25.6 cm Touchscreen with Wireless Apple CarPlay, Android Auto & AI Assistant",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/infotainment-256cm.webp"
+          },
+          {
+              "id": "digital-cockpit-26cm",
+              "title": "26.03 cm Virtual Cockpit with Turn-by-Turn Navigation",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/digital-cockpit-26cm.webp"
+          },
+          {
+              "id": "tsi-dsg-transmission",
+              "title": "1.5 TSI EVO with 7-Speed DSG & Active Cylinder Technology",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/tsi-dsg-transmission.webp"
+          },
+          {
+              "id": "global-ncap-5star-safety",
+              "title": "5-Star Global NCAP Safety with 6 Airbags & Up to 40 Safety Features",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kushaq/gallery/global-ncap-5star-safety.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+              "1.5L TSI EVO Turbo Petrol with Active Cylinder Technology (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission",
+              "8-Speed Torque Converter Automatic (1.0 TSI)",
+              "7-Speed DSG Dual-Clutch Automatic (1.5 TSI EVO)"
+          ],
+          "dimensions": "4225 mm L × 1760 mm W × 1612 mm H",
+          "wheelbase": "2651 mm",
+          "fuelTank": "50 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Classic+ 1.0 TSI MT",
+              "exShowroom": 1089000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.76 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Standard Sunroof & Alloys",
+              "keyFeatures": [
+                  "Electric Sunroof & Alloy Wheels Now Standard from Base Variant",
+                  "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety",
+                  "All-New LED Headlamps, Connected LED Tail Lamps & Rear Wiper/Defogger",
+                  "17.7 cm Touchscreen Infotainment, Rear Parking Sensors & Auto AC"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI MT",
+              "exShowroom": 1289000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "19.76 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Best Value Mid-Trim",
+              "keyFeatures": [
+                  "25.6 cm (10.1-inch) Infotainment with Wireless Apple CarPlay & Android Auto",
+                  "Cruise Control, Rear View Camera & Climatronic Automatic Climate Control",
+                  "R16 Grus Alloy Wheels, Shark Fin Antenna & 60:40 Split Rear Seats",
+                  "6-Speaker Škoda Sound System & Ambient Cabin Lighting"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI AT",
+              "exShowroom": 1399000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.09 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+                  "Electric Sunroof, 25.6 cm Touchscreen & Cruise Control",
+                  "Hill Hold Control, TPMS & Auto-Folding ORVMs",
+                  "6 Airbags & 25+ Active/Passive Safety Features"
+              ]
+          },
+          {
+              "name": "Sportline 1.0 TSI AT",
+              "exShowroom": 1499000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.09 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Blacked-Out Grille, R17 Black Vega Alloy Wheels & Sportline Badging",
+                  "Electric Sunroof, Aluminium Pedals & Dual-Tone Sporty Cabin",
+                  "25.6 cm Touchscreen, Rain-Sensing Wipers & Auto-Dimming IRVM"
+              ]
+          },
+          {
+              "name": "Sportline 1.5 TSI DSG",
+              "exShowroom": 1689000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "18.86 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Enthusiast 150 PS Value Pick",
+              "keyFeatures": [
+                  "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)",
+                  "Lightning-Fast 7-Speed DSG Dual-Clutch Automatic & All-4 Disc Brakes",
+                  "R17 Glossy Black Alloy Wheels, Black Exterior Pack & Electric Sunroof"
+              ]
+          },
+          {
+              "name": "Prestige 1.0 TSI AT",
+              "exShowroom": 1639000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.09 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Panoramic Sunroof, Illuminated Front Grille Band & Rear Seat Massagers",
+                  "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+                  "26.03 cm Virtual Cockpit with Navigation & Škoda Subwoofer Audio",
+                  "Crystalline LED Projector Headlamps & KESSY Keyless Entry"
+              ]
+          },
+          {
+              "name": "Prestige 1.5 TSI DSG",
+              "exShowroom": 1839000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "18.86 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "150 PS 1.5L TSI EVO + 7-Speed DSG + All-4 Wheel Disc Brakes",
+                  "Panoramic Sunroof, Rear Seat Massage & Electric Ventilated Front Seats",
+                  "26.03 cm Digital Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant",
+                  "Up to 40 Active & Passive Safety Features"
+              ]
+          },
+          {
+              "name": "Monte Carlo 1.5 TSI DSG",
+              "exShowroom": 1879000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "18.86 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Signature Monte Carlo Red Grille Slats, Red Brake Calipers & R17 Vega Alloys",
+                  "Ruby Red & Black Ventilated Electric Leatherette Seats with Monte Carlo Embossing",
+                  "Ruby Red Themed 26.03 cm Virtual Cockpit & Panoramic Sunroof",
+                  "150 PS 1.5L TSI EVO with 7-Speed DSG & All-4 Disc Brakes"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "skoda-slavia",
+      "name": "Škoda Slavia",
+      "brand": "Skoda",
+      "tagline": "5-Star Global NCAP Luxury European Sedan with 150 PS 1.5 TSI DSG, 521L Boot, 360° Camera & Rear-Seat Massagers",
+      "launchDate": "2026 (New Slavia)",
+      "bodyType": "Sedan",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹9.99 - ₹18.69 Lakh",
+      "minPrice": 999900,
+      "maxPrice": 1869000,
+      "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult & 5-Star Child Safety)",
+      "groundClearance": "179 mm",
+      "bootSpace": "521 Litres",
+      "waitingPeriod": "2 - 5 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/lava-blue.webp",
+      "summary": "The new Škoda Slavia combines timeless European coupé-inspired sedan elegance with a 5-Star Global NCAP safety rating, class-leading 179 mm ground clearance and 521-litre boot space, 360° area-view camera, sequential LED tail lamps, ventilated electric front seats, rear-seat massagers, an 8-speed torque converter AT on the 1.0 TSI, and the 150 PS 1.5 TSI EVO with 7-speed DSG.",
+      "colors": [
+          {
+              "id": "lava-blue",
+              "name": "Lava Blue",
+              "hex": "#135D7D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/lava-blue.webp"
+          },
+          {
+              "id": "cherry-red",
+              "name": "Cherry Red",
+              "hex": "#640015",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/cherry-red.webp"
+          },
+          {
+              "id": "arctic-silver",
+              "name": "Arctic Silver",
+              "hex": "#B8C3BC",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/arctic-silver.webp"
+          },
+          {
+              "id": "cappuccino-beige",
+              "name": "Cappuccino Beige",
+              "hex": "#A8A49E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/cappuccino-beige.webp"
+          },
+          {
+              "id": "shimla-green",
+              "name": "Shimla Green",
+              "hex": "#6C7261",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/shimla-green.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#6F7477",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/steel-grey.webp"
+          },
+          {
+              "id": "candy-white",
+              "name": "Candy White",
+              "hex": "#FCFAF1",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/candy-white.webp"
+          },
+          {
+              "id": "carbon-steel",
+              "name": "Carbon Steel",
+              "hex": "#5B5E63",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/carbon-steel.webp"
+          },
+          {
+              "id": "deep-black",
+              "name": "Deep Black",
+              "hex": "#0A0809",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/deep-black.webp"
+          },
+          {
+              "id": "brilliant-silver",
+              "name": "Brilliant Silver",
+              "hex": "#DFE0E2",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/colors/brilliant-silver.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "slavia-hero-exterior",
+              "title": "Refreshed New Škoda Slavia European Sedan Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/slavia-hero-exterior.webp"
+          },
+          {
+              "id": "monte-carlo-grille",
+              "title": "Sporty Red Grille Stripes & Monte Carlo Badging",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/monte-carlo-grille.webp"
+          },
+          {
+              "id": "sequential-led-taillamps",
+              "title": "New Crystalline LED Tail Lamps with Sequential Turn Indicators",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/sequential-led-taillamps.webp"
+          },
+          {
+              "id": "new-led-headlamps",
+              "title": "New Crystalline LED Projector Headlamps & Fog Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/new-led-headlamps.webp"
+          },
+          {
+              "id": "red-caliper-alloys",
+              "title": "R16 Black Alloy Wheels Paired with Sporty Red Brake Calipers",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/red-caliper-alloys.webp"
+          },
+          {
+              "id": "monte-carlo-edition",
+              "title": "Škoda Slavia Monte Carlo 1.5 TSI DSG Flagship",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/monte-carlo-edition.webp"
+          },
+          {
+              "id": "area-view-360-camera",
+              "title": "360° Area View Camera System for Effortless Parking",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/area-view-360-camera.webp"
+          },
+          {
+              "id": "virtual-cockpit-26cm",
+              "title": "26.03 cm Virtual Cockpit with Turn-by-Turn Navigation",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/virtual-cockpit-26cm.webp"
+          },
+          {
+              "id": "infotainment-google-ai",
+              "title": "25.6 cm Touchscreen Infotainment with Google Cloud AI Assistant",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/infotainment-google-ai.webp"
+          },
+          {
+              "id": "ventilated-electric-seats",
+              "title": "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/ventilated-electric-seats.webp"
+          },
+          {
+              "id": "rear-seat-massagers",
+              "title": "Relaxing Rear-Seat Massagers with Executive Legroom",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/rear-seat-massagers.webp"
+          },
+          {
+              "id": "global-ncap-5star-sedan",
+              "title": "5-Star Global NCAP Safety with 6 Airbags Standard",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-slavia/gallery/global-ncap-5star-sedan.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "1.0L TSI Turbo Petrol (115 PS @ 5000-5500 rpm, 178 Nm @ 1750-4500 rpm)",
+              "1.5L TSI EVO Turbo Petrol with Active Cylinder Technology (150 PS @ 5000-6000 rpm, 250 Nm @ 1600-3500 rpm)"
+          ],
+          "transmissions": [
+              "6-Speed Manual Transmission",
+              "8-Speed Torque Converter Automatic (1.0 TSI)",
+              "7-Speed DSG Dual-Clutch Automatic (1.5 TSI EVO)"
+          ],
+          "dimensions": "4541 mm L × 1752 mm W × 1507 mm H",
+          "wheelbase": "2651 mm",
+          "fuelTank": "45 Litres",
+          "seatingCapacity": "5 Seater"
+      },
+      "variants": [
+          {
+              "name": "Classic 1.0 TSI MT",
+              "exShowroom": 999900,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.32 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Sub-10L 5-Star Turbo Sedan",
+              "keyFeatures": [
+                  "6 Airbags, ESC, Multi-Collision Brake & 5-Star Global NCAP Safety Standard",
+                  "179 mm SUV-Like Ground Clearance & Massive 521-Litre Boot Space",
+                  "17.7 cm Touchscreen, LED DRLs, Rear Parking Sensors & Auto Engine Start-Stop"
+              ]
+          },
+          {
+              "name": "Classic+ 1.0 TSI MT",
+              "exShowroom": 1099000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.32 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof & R16 Alloy Wheels",
+                  "Cruise Control, Rear View Camera & Automatic Headlamps",
+                  "6 Airbags, TPMS & Hill Hold Control"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI MT",
+              "exShowroom": 1299000,
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "20.32 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Most Popular Balanced Trim",
+              "keyFeatures": [
+                  "25.6 cm (10.1-inch) Touchscreen with Wireless Apple CarPlay & Android Auto",
+                  "Climatronic Auto AC, Cruise Control, Ambient Lighting & R16 Alloy Wheels",
+                  "LED Tail Lamps, Chrome Window Garnish & 60:40 Split Rear Seats"
+              ]
+          },
+          {
+              "name": "Signature 1.0 TSI AT",
+              "exShowroom": 1409000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.73 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All-New 8-Speed Torque Converter Automatic with Paddle Shifters",
+                  "25.6 cm Touchscreen, Climatronic Auto AC & Rear View Camera",
+                  "Hill Hold Control, TPMS & 6 Airbags"
+              ]
+          },
+          {
+              "name": "Sportline 1.0 TSI AT",
+              "exShowroom": 1499000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "1.0L TSI Turbo (115 PS)",
+              "mileage": "18.73 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Electric Sunroof, Glossy Black R16 Alloys & Blacked-Out Exterior Styling",
+                  "Aluminium Pedals, Sporty Grey Fabric/Leatherette Cabin & Rain-Sensing Wipers",
+                  "Crystalline LED Headlamps & Sequential LED Tail Lamps"
+              ]
+          },
+          {
+              "name": "Sportline 1.5 TSI DSG",
+              "exShowroom": 1679000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "19.36 kmpl",
+              "isVFM": true,
+              "vfmBadge": "150 PS Enthusiast Value Pick",
+              "keyFeatures": [
+                  "150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)",
+                  "7-Speed DSG Dual-Clutch Automatic & Sporty Black Exterior Package",
+                  "Electric Sunroof, 25.6 cm Infotainment & Sequential LED Tail Lamps"
+              ]
+          },
+          {
+              "name": "Prestige 1.5 TSI DSG",
+              "exShowroom": 1829000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "19.36 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "360° Area View Camera, Rear-Seat Massagers & Electric Sunroof",
+                  "6-Way Electrically Adjustable & Ventilated Front Leatherette Seats",
+                  "26.03 cm Virtual Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant",
+                  "8-Speaker Škoda Sound System with Subwoofer & Footwell Illumination"
+              ]
+          },
+          {
+              "name": "Monte Carlo 1.5 TSI DSG",
+              "exShowroom": 1869000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG)",
+              "engine": "1.5L TSI EVO (150 PS)",
+              "mileage": "19.36 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Monte Carlo Red Grille Accents, Red Brake Calipers & Glossy Black Spoiler",
+                  "Ruby Red & Black Ventilated Electric Seats with Monte Carlo Badging",
+                  "360° Area View Camera, Rear-Seat Massagers & 26.03 cm Red-Themed Virtual Cockpit",
+                  "150 PS 1.5L TSI EVO with 7-Speed DSG"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "skoda-kodiaq",
+      "name": "Škoda Kodiaq",
+      "brand": "Skoda",
+      "tagline": "All-New 2nd-Gen 4x4 Flagship European Luxury SUV with 204 PS 2.0L TSI, Smart Dials, 32.77 cm Screen & 9 Airbags",
+      "launchDate": "2025 (All-New 2nd Gen)",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹46.89 - ₹48.69 Lakh",
+      "minPrice": 4689000,
+      "maxPrice": 4869000,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star + 9 Airbags Standard)",
+      "groundClearance": "190 mm",
+      "bootSpace": "281 Litres (910L 5-Seat Mode)",
+      "waitingPeriod": "3 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/bronx-gold.webp",
+      "summary": "The all-new second-generation Škoda Kodiaq brings Czech flagship luxury to India with a 204 PS / 320 Nm 2.0L TSI EVO engine, intelligent 4x4 all-wheel drive with 7-speed DSG, crystalline illuminated front grille, Dark Chrome D-pillar, Škoda Smart Dials with haptic rotary screens, a massive 32.77 cm (12.9-inch) freestanding infotainment display, 13-speaker 725W Canton sound system, Ergo pneumatic massaging front seats, and 9 airbags standard.",
+      "colors": [
+          {
+              "id": "bronx-gold",
+              "name": "Bronx Gold Metallic",
+              "hex": "#7E754A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/bronx-gold.webp"
+          },
+          {
+              "id": "race-blue",
+              "name": "Race Blue Metallic",
+              "hex": "#658FCB",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/race-blue.webp"
+          },
+          {
+              "id": "moon-white",
+              "name": "Moon White Metallic",
+              "hex": "#F5F5F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/moon-white.webp"
+          },
+          {
+              "id": "graphite-grey",
+              "name": "Graphite Grey Metallic",
+              "hex": "#405371",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/graphite-grey.webp"
+          },
+          {
+              "id": "magic-black",
+              "name": "Magic Black Metallic",
+              "hex": "#121A1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/magic-black.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "crystalline-illuminated-grille",
+              "title": "TOP LED Matrix Crystalline Headlights & Horizontal Illuminated Grille Strip",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/crystalline-illuminated-grille.webp"
+          },
+          {
+              "id": "dark-chrome-d-pillar",
+              "title": "Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/dark-chrome-d-pillar.webp"
+          },
+          {
+              "id": "c-shaped-connected-taillamps",
+              "title": "Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/c-shaped-connected-taillamps.webp"
+          },
+          {
+              "id": "selection-lk-flagship",
+              "title": "Škoda Kodiaq Selection L&K (Laurin & Klement) 4x4 Flagship",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/selection-lk-flagship.webp"
+          },
+          {
+              "id": "sportline-4x4-edition",
+              "title": "Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/sportline-4x4-edition.webp"
+          },
+          {
+              "id": "panoramic-sunroof-kodiaq",
+              "title": "Expansive Two-Pane Electric Panoramic Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/panoramic-sunroof-kodiaq.webp"
+          },
+          {
+              "id": "skoda-smart-dials",
+              "title": "Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/skoda-smart-dials.webp"
+          },
+          {
+              "id": "infotainment-3277cm",
+              "title": "32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/infotainment-3277cm.webp"
+          },
+          {
+              "id": "canton-sound-system",
+              "title": "13-Speaker 725W Canton Surround Sound System with Subwoofer",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/canton-sound-system.webp"
+          },
+          {
+              "id": "three-row-7seater-cabin",
+              "title": "Luxurious 3-Row 7-Seater Cabin with Cognac / Suedia Upholstery",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/three-row-7seater-cabin.webp"
+          },
+          {
+              "id": "flexible-boot-space",
+              "title": "Versatile Split-Folding Luggage Compartment (Up to 2,035L)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/flexible-boot-space.webp"
+          },
+          {
+              "id": "nine-airbags-park-assist",
+              "title": "9 Airbags Standard, Intelligent Park Assist & 360° Area View",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/nine-airbags-park-assist.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": [
+              "2.0L TSI EVO Turbo Petrol (204 PS / 150 kW @ 4500-6000 rpm, 320 Nm @ 1500-4400 rpm)"
+          ],
+          "transmissions": [
+              "7-Speed DSG Dual-Clutch Automatic with Intelligent 4x4 All-Wheel Drive & Off-Road Mode"
+          ],
+          "dimensions": "4758 mm L × 1864 mm W × 1659 mm H",
+          "wheelbase": "2791 mm",
+          "fuelTank": "62 Litres",
+          "seatingCapacity": "5 / 7 Seater"
+      },
+      "variants": [
+          {
+              "name": "Lounge 2.0 TSI 4x4 AT (5-Seater)",
+              "exShowroom": 4689000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4x4)",
+              "engine": "2.0L TSI Turbo (204 PS)",
+              "mileage": "14.86 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "204 PS / 320 Nm 2.0L TSI Engine with 7-Speed DSG & 4x4 All-Wheel Drive",
+                  "9 Airbags, Multi-Collision Brake, Driver Attention Alert & Hill Descent Control",
+                  "Grey Suedia & Fabric Lounge Interiors with 26.03 cm Virtual Cockpit",
+                  "Škoda Smart Dials, Tri-Zone Climatronic AC & Panoramic Sunroof"
+              ]
+          },
+          {
+              "name": "Sportline 2.0 TSI 4x4 AT (7-Seater)",
+              "exShowroom": 4689000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4x4)",
+              "engine": "2.0L TSI Turbo (204 PS)",
+              "mileage": "14.86 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Sporty Blacked-Out 7-Seater 4x4",
+              "keyFeatures": [
+                  "Glossy Black Grille, D-Pillar, Roof Rails & R18 Soira Anthracite Alloy Wheels",
+                  "All-Black Suedia Sport Seats with Integrated Headrests & 3-Spoke Sport Steering",
+                  "32.77 cm (12.9-inch) Infotainment Screen + 26.03 cm Virtual Cockpit + Smart Dials",
+                  "13-Speaker 725W Canton Sound System, Panoramic Sunroof & Dual Wireless Phone Cooling Box",
+                  "9 Airbags, TOP LED Matrix Headlamps & Electric Tailgate"
+              ]
+          },
+          {
+              "name": "Selection L&K 2.0 TSI 4x4 AT (7-Seater)",
+              "exShowroom": 4869000,
+              "fuel": "Petrol",
+              "trans": "Automatic (DSG 4x4)",
+              "engine": "2.0L TSI Turbo (204 PS)",
+              "mileage": "14.86 kmpl",
+              "isVFM": true,
+              "vfmBadge": "Ultimate Luxury Flagship",
+              "keyFeatures": [
+                  "Illuminated Crystal Grille Strip & Exclusive R18 Belatrix Aero Alloy Wheels",
+                  "Cognac Perforated Leather Ergo Seats with Pneumatic 10-Cushion Massage, Ventilation & Heating",
+                  "360° Area View Camera, Intelligent Park Assist & Virtual Pedal Hands-Free Tailgate",
+                  "32.77 cm Infotainment, Škoda Smart Dials & 13-Speaker 725W Canton Sound System",
+                  "9 Airbags, Off-Road 4x4 Mode & 4-Year / 1,00,000 km Standard Warranty"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price
