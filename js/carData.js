@@ -5528,6 +5528,149 @@ export const CARS = [
         keyFeatures: ['Exclusive Matte Graphite Signature Exterior Paint Finish', 'Splendid Sage Green / Glossy Black Exclusive X-Line Interiors', 'R18 Crystal Cut Glossy Black Alloy Wheels', 'Full Level 2+ ADAS Suite (28 Autonomous Features)', 'Head-Up Display & 360° Surround View Monitor', 'Bose Premium 8-Speaker Audio', 'Boundless Panoramic Sunroof']
       }
     ]
+  },
+  {
+    id: 'kia-sonet',
+    brand: 'Kia',
+    model: 'Sonet',
+    tagline: 'Wild. Reborn. Dominating Tech SUV with Level 1 ADAS',
+    priceRange: '₹7.45 - 14.36 Lakh',
+    type: 'Compact SUV',
+    seats: 5,
+    rating: 4.8,
+    reviewsCount: 3840,
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp',
+    summary: 'The latest Kia Sonet facelift redefines the compact SUV benchmark with an aggressive, wild stance, 6 standard airbags, and an advanced Level 1 ADAS safety suite featuring 10 autonomous functions. Power comes from three versatile and refined engines: a sporty 1.0L Turbo GDi petrol (120 PS / 172 Nm) paired with a 7-speed Dual Clutch Transmission (7DCT) or 6-speed clutchless iMT, a reliable 1.2L Smartstream MPi petrol (83 PS / 115 Nm) with 5MT, and an ultra-torquey 1.5L CRDi VGT Diesel (116 PS / 250 Nm) offered with a 6-speed manual, 6-speed iMT, or smooth 6-speed torque converter automatic. Inside, the high-tech cabin features dual 10.25-inch high-definition connected screens (touchscreen infotainment and digital driver cluster), an electric sunroof, front row ventilated seats with a 4-way power driver seat, a 360° surround view camera with blind view monitor, and a premium 7-speaker Bose sound system.',
+    spin360: {
+      totalFrames: 36,
+      folder: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360',
+      format: 'webp',
+      defaultColor: 'pewter-olive',
+      colors: [
+        { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343' },
+        { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8' },
+        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
+        { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357' },
+        { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A' },
+        { id: 'intense-red', name: 'Intense Red', hex: '#A8141D' },
+        { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA' },
+        { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E' },
+        { id: 'glacier-white-black-roof', name: 'Glacier White Pearl + Aurora Black Pearl', hex: '#EAEBEF' },
+        { id: 'intense-red-black-roof', name: 'Intense Red + Aurora Black Pearl', hex: '#931118' }
+      ]
+    },
+    colors: [
+      { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp' },
+      { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/glacier-white-pearl/1.webp' },
+      { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/aurora-black-pearl/1.webp' },
+      { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/gravity-grey/1.webp' },
+      { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/imperial-blue/1.webp' },
+      { id: 'intense-red', name: 'Intense Red', hex: '#A8141D', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/intense-red/1.webp' },
+      { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/sparkling-silver/1.webp' },
+      { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/matte-graphite/1.webp' },
+      { id: 'glacier-white-black-roof', name: 'Glacier White Pearl + Aurora Black Pearl', hex: '#EAEBEF', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/glacier-white-black-roof/1.webp' },
+      { id: 'intense-red-black-roof', name: 'Intense Red + Aurora Black Pearl', hex: '#931118', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/intense-red-black-roof/1.webp' }
+    ],
+    angles: [
+      { label: 'Front 3/4th Stance & Star Map DRLs', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp' },
+      { label: 'Dual 10.25-inch HD Screen Panel', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/dual-10-25-inch-hd-touchscreen-digital-cluster.webp' },
+      { label: 'Crown Jewel LED & Tiger Nose', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/crown-jewel-led-headlamps-tiger-nose-grille.webp' },
+      { label: 'Bose 7-Speaker Sound System', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/bose-premium-7-speaker-sound-system.webp' }
+    ],
+    gallery: [
+      { title: 'Crown Jewel LED Headlamps with Signature Star Map LED DRLs & Sleek Tiger Nose Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/crown-jewel-led-headlamps-tiger-nose-grille.webp' },
+      { title: 'Star Map Connected LED Tail Lamps with Sporty Aerodynamic Rear Spoiler', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/star-map-connected-led-tail-lamps.webp' },
+      { title: 'Dual 10.25-inch Connected HD Touchscreen Infotainment & Full Digital Color Instrument Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/dual-10-25-inch-hd-touchscreen-digital-cluster.webp' },
+      { title: 'Immersive Bose Premium 7-Speaker Audio System with Dedicated Subwoofer & Dynamic Speed Compensation', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/bose-premium-7-speaker-sound-system.webp' },
+      { title: 'Front Row Ventilated Seats with 4-Way Power Adjustable Driver Seat for Long-Haul Comfort', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/front-ventilated-seats-4-way-power-driver-seat.webp' },
+      { title: '360° Surround View Camera with Blind View Monitor (BVM) Integrated in Digital Cluster', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/360-degree-camera-blind-view-monitor.webp' },
+      { title: 'Level 1 ADAS Autonomous Safety Suite with 10 Features including FCA, LKA, LFA & High Beam Assist', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/level-1-adas-autonomous-safety-suite.webp' },
+      { title: 'R16 (215/60 R16) Sporty Crystal-Cut Alloy Wheels with Distinctive X-Line Styling & Accents', url: 'https://ik.imagekit.io/2908vvlod/cars/sonet/gallery/r16-crystal-cut-alloy-wheels-x-line-styling.webp' }
+    ],
+    specs: {
+      engineOptions: '1.0L Smartstream T-GDi Turbo Petrol (120 PS / 172 Nm) | 1.2L Smartstream MPi Petrol (83 PS / 115 Nm) | 1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+      transmissions: '5-Speed Manual, 6-Speed Manual, Smartstream 6iMT (Clutchless), 6-Speed Advance AT & 7-Speed Dual Clutch (7DCT)',
+      dimensions: '3995 mm (L) × 1790 mm (W) × 1642 mm (H) (with Roof Rails)',
+      wheelbase: '2500 mm (Ground Clearance: 205 mm)',
+      fuelTank: '45 Litres',
+      bootSpace: '385 Litres (VDA Standard)',
+      brakes: 'All 4 Disc Brakes (GTX+ & X-Line) / Front Disc & Rear Drum with ABS, EBD, ESC, VSM & HAC',
+      suspension: 'McPherson Strut with Coil Spring (Front) / Coupled Torsion Beam Axle with High-Performance Gas Dampers (Rear)',
+      safety: '6 Airbags Standard Across All Variants, Level 1 ADAS (10 Autonomous Features), 360° Camera, Blind View Monitor, ESC, VSM, HAC, TPMS Highline, ISOFIX'
+    },
+    variants: [
+      {
+        name: 'HTE 1.2L Petrol 5MT',
+        exShowroom: 744900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Smartstream MPi (83 PS / 115 Nm)',
+        mileage: '18.8 km/l',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Control (ESC) & VSM', 'Hill-Start Assist Control (HAC)', 'Halogen Headlamps & Star Map LED DRLs', 'Front Power Windows', 'Central Locking & Keyless Entry', 'Rear Parking Sensors']
+      },
+      {
+        name: 'HTK 1.2L Petrol 5MT',
+        exShowroom: 888900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Smartstream MPi (83 PS / 115 Nm)',
+        mileage: '18.8 km/l',
+        isVFM: false,
+        keyFeatures: ['20.32 cm (8") Touchscreen with Wireless Android Auto & Apple CarPlay', 'Rear View Camera with Dynamic Guidelines', 'Shark Fin Antenna & Steering Audio Controls', 'Front & Rear USB-C Charging Ports', 'Electrically Adjustable ORVMs', 'Front Parking Sensors']
+      },
+      {
+        name: 'HTK+ 1.0L Turbo Petrol 6iMT',
+        exShowroom: 1028900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.0L Smartstream T-GDi Turbo (120 PS / 172 Nm)',
+        mileage: '18.7 km/l',
+        isVFM: false,
+        keyFeatures: ['120 PS Turbo GDi Engine with Clutchless 6iMT', 'Electric Sunroof with Voice Operation', 'LED Connected Tail Lamps', 'Fully Automatic Air Conditioner (FATC)', 'Smart Key with Push Button Start / Stop', 'Auto Light Control & Power Folding Mirrors']
+      },
+      {
+        name: 'HTX 1.0L Turbo Petrol 7DCT (Automatic)',
+        exShowroom: 1183900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Smartstream T-GDi Turbo (120 PS / 172 Nm)',
+        mileage: '19.2 km/l',
+        isVFM: true,
+        vfmBadge: '💎 BEST VALUE COMPACT SUV AUTOMATIC',
+        keyFeatures: ['7-Speed Dual Clutch Transmission (7DCT) with Paddle Shifters', 'Crown Jewel LED Headlamps & Star Map Connected LED Tail Lamps', 'Electric Sunroof', 'Dual 10.25-inch Digital Screen Setup', 'Front Ventilated Seats', 'Drive & Traction Modes (Eco, Normal, Sport / Sand, Mud, Snow)', 'Rear Door Sunshade Curtains']
+      },
+      {
+        name: 'HTX 1.5L Diesel 6AT (Automatic)',
+        exShowroom: 1238900,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+        mileage: '19.0 km/l',
+        isVFM: false,
+        keyFeatures: ['116 PS / 250 Nm CRDi Diesel with Smooth 6-Speed Torque Converter AT', 'Paddle Shifters & Drive Modes', 'Front Ventilated Seats', 'Electric Sunroof', 'LED Headlamps & Connected LED Tail Lamps', 'Rear Disc Brakes & Cruise Control', 'Smart Key Remote Engine Start']
+      },
+      {
+        name: 'GTX+ 1.0L Turbo Petrol 7DCT (GT-Line)',
+        exShowroom: 1374900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.0L Smartstream T-GDi Turbo (120 PS / 172 Nm)',
+        mileage: '19.2 km/l',
+        isVFM: false,
+        keyFeatures: ['Full Level 1 ADAS Suite (10 Autonomous Features with FCA, LDW, LKA, LFA)', 'Bose Premium 7-Speaker Sound System with Subwoofer', '360° Surround View Camera with Blind View Monitor (BVM)', 'Front Row Ventilated Leatherette Seats with 4-Way Power Driver Seat', 'All 4 Disc Brakes Standard', 'R16 Crystal-Cut Alloy Wheels', 'Electric Sunroof with Voice Control']
+      },
+      {
+        name: 'X-Line 1.5L Diesel 6AT (Matte Graphite)',
+        exShowroom: 1435900,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '1.5L CRDi VGT Diesel (116 PS / 250 Nm)',
+        mileage: '19.0 km/l',
+        isVFM: false,
+        keyFeatures: ['Exclusive Matte Graphite Signature Exterior Paint', 'Splendid Sage Green Leatherette Interiors with Contrast Stitching', 'Glossy Black Front Grille & Dark Metallic Accents', 'Full Level 1 ADAS Safety Suite (10 Autonomous Features)', 'Bose Premium 7-Speaker Sound System', '360° Surround View Camera & Blind View Monitor', 'All 4 Disc Brakes & 16-inch Crystal Cut Glossy Black Alloys']
+      }
+    ]
   }
 ];
 
