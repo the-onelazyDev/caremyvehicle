@@ -4199,6 +4199,192 @@ export const CARS = [
     ]
   },
   {
+    id: 'mahindra-scorpio-n',
+    name: 'Mahindra Scorpio-N',
+    brand: 'Mahindra',
+    tagline: 'The Big Daddy of SUVs with 5-Star Global NCAP, 4XPLOR Terrain Modes & 200 PS mStallion Power',
+    launchDate: 'Updated 2025 (Z-Series Lineup)',
+    bodyType: 'SUV',
+    fuelTypes: ['Petrol', 'Diesel'],
+    priceRange: '₹13.85 - ₹24.89 Lakh',
+    minPrice: 1385000,
+    maxPrice: 2489000,
+    safetyRating: '5.0 ★ (Global NCAP 5-Star Rating - 29.25/34 Adult Score)',
+    groundClearance: '187 mm',
+    bootSpace: '460 L (3rd Row Folded)',
+    waitingPeriod: '6 - 14 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp',
+    summary: 'The Mahindra Scorpio-N, celebrated as the "Big Daddy of SUVs", redefines the authentic D-segment body-on-frame SUV experience in India. Engineered on a third-generation stiffened steel chassis with Frequency Selective Damping (FSD) and Penta-link rear suspension, it is powered by class-leading engines: a 2.0L mStallion Turbo Petrol delivering 200 PS and 380 Nm, or a 2.2L mHawk Turbo Diesel producing up to 175 PS and 400 Nm, mated to 6-speed manual or AISIN 6-speed automatic transmissions. Equipped with the legendary 4XPLOR intelligent terrain response system (Normal, Grass/Gravel/Snow, Mud/Ruts, Sand) with mechanical rear locking differential, an Adrenox-powered 20.32 cm touchscreen with built-in Alexa, a 12-speaker Sony 3D spatial sound system, dual-zone climate control, and 5-Star Global NCAP crash safety.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'napoli-black',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/360'
+    },
+    colors: [
+      { id: 'deep-forest', name: 'Deep Forest Green (Signature Hero Shade)', hex: '#1D3B2F', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp' },
+      { id: 'everest-white', name: 'Everest White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/everest-white.webp' },
+      { id: 'dazzling-silver', name: 'Dazzling Silver', hex: '#D1D5DB', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/dazzling-silver.webp' },
+      { id: 'napoli-black', name: 'Napoli Black', hex: '#1A1D20', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/napoli-black.webp' },
+      { id: 'midnight-black', name: 'Midnight Black', hex: '#111827', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/midnight-black.webp' },
+      { id: 'oceanic', name: 'Oceanic Blue', hex: '#1E3A5F', image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/oceanic.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero 3/4 Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/360/napoli-black/1.webp' },
+      { label: 'Adrenox Digital Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/adrenox_cockpit.webp' },
+      { label: 'R18 Diamond-Cut Alloys', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/r18_diamond_cut_alloys.webp' },
+      { label: 'Signature Talon Grille', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/chrome_talon_grille.webp' }
+    ],
+    gallery: [
+      { title: 'Adrenox Intelligent Connected Cockpit with Built-in Amazon Alexa & 70+ Connected Features', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/adrenox_cockpit.webp' },
+      { title: '20.32 cm Touchscreen Infotainment with 17.78 cm High-Resolution Driver Digital Information Display', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/infotainment_cluster.webp' },
+      { title: 'Sony 12-Speaker 3D Immersive Spatial Audio System with Dual Subwoofers & Roof-Mounted Speakers', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/sony_3d_sound.webp' },
+      { title: 'R18 Diamond-Cut Premium Alloy Wheels with All-Terrain High-Profile Tyres & Disc Brakes', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/r18_diamond_cut_alloys.webp' },
+      { title: 'Signature Chrome Talon Front Grille with Dual-Barrel LED Projector Headlamps & Sequential Turn Indicators', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/chrome_talon_grille.webp' },
+      { title: 'Iconic Tall-Stacked Vertical LED Taillamps with Signature Scorpion Sting Element', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/tall_stacked_led_lamp.webp' },
+      { title: 'LED Projector Fog Lamps with Integrated C-Shaped LED Daytime Running Lights (DRLs)', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/projector_fog_lamps.webp' },
+      { title: 'High-Definition Rear Parking Camera with Dynamic Steering Guidelines & Ultrasonic Sensors', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/rear_view_camera.webp' },
+      { title: 'Dual-Zone Fully Automatic Temperature Control (FATC) with Independent Rear AC Vents & Controls', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/dual_fatc.webp' },
+      { title: 'Smooth 6-Speed AISIN Torque Converter Automatic Transmission with Drive Modes (Zip, Zap, Zoom)', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/speed_transmission.webp' },
+      { title: 'Driver Drowsiness Alert System Actively Monitoring Steering Input Behaviour & Fatigue Levels', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/driver_drowsiness.webp' },
+      { title: 'Next-Gen 3G Body-on-Frame Architecture with High-Strength Steel & 4XPLOR Intelligent Terrain Modes', url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/gallery/next_gen_3g_frame.webp' }
+    ],
+    specs: {
+      engineOptions: '2.0L mStallion Turbo Petrol (200 PS / 380 Nm) | 2.2L mHawk Turbo Diesel (132/175 PS, up to 400 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed AISIN Torque Converter Automatic | 4XPLOR 4WD with Terrain Modes',
+      dimensions: '4662 mm (L) × 1917 mm (W) × 1857 mm (H)',
+      wheelbase: '2750 mm',
+      fuelTank: '57 Litres',
+      seatingCapacity: '6 or 7 Passengers (Captain / Bench Options)'
+    },
+    variants: [
+      {
+        name: 'Z2 2.0 Petrol MT (7S)',
+        exShowroom: 1385000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '12.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['200 PS mStallion Engine', 'All 4 Disc Brakes', 'LED Turn Indicators', 'Electronic Power Steering (Petrol)']
+      },
+      {
+        name: 'Z2 2.2 Diesel MT (7S)',
+        exShowroom: 1425000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (132 PS)',
+        mileage: '15.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['2.2L mHawk 300 Nm Torque', 'Penta-Link Rear Suspension with FSD', 'Touchscreen Infotainment', 'Rear AC Vents']
+      },
+      {
+        name: 'Z4 2.0 Petrol MT (7S)',
+        exShowroom: 1549000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '12.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['20.32 cm Infotainment Display', 'Android Auto & Apple CarPlay', 'Cruise Control', 'Electronic Stability Program (ESP)']
+      },
+      {
+        name: 'Z4 2.2 Diesel MT (7S)',
+        exShowroom: 1599000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (175 PS / 370 Nm)',
+        mileage: '15.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['175 PS High-Output mHawk Diesel', 'Hill Hold & Hill Descent Control', 'Second Row AC', 'Fabric Upholstery']
+      },
+      {
+        name: 'Z4 2.2 Diesel AT (7S)',
+        exShowroom: 1795000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 400 Nm)',
+        mileage: '14.20 kmpl',
+        isVFM: false,
+        keyFeatures: ['6-Speed AISIN Automatic', '400 Nm Peak Torque', 'Drive Modes (Zip, Zap, Zoom)', 'Electronic Power Steering']
+      },
+      {
+        name: 'Z6 2.2 Diesel MT (7S)',
+        exShowroom: 1689000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (175 PS)',
+        mileage: '15.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BEST VALUE DIESEL PICK',
+        keyFeatures: ['Electric Sunroof with Anti-Pinch', 'Adrenox Connected Intelligence with Alexa', '17.78 cm Colour TFT Driver Display', 'Wireless Smartphone Connectivity']
+      },
+      {
+        name: 'Z6 2.2 Diesel AT (7S)',
+        exShowroom: 1889000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 400 Nm)',
+        mileage: '14.20 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER AUTOMATIC PICK',
+        keyFeatures: ['6-Speed Automatic Transmission', 'Electric Sunroof', 'Built-in Alexa with What3Words', 'Connected Vehicle Telematics (eCall/bCall)']
+      },
+      {
+        name: 'Z8 2.0 Petrol MT (7S)',
+        exShowroom: 1874000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '2.0L mStallion Turbo (200 PS)',
+        mileage: '12.20 kmpl',
+        isVFM: false,
+        keyFeatures: ['Rich Coffee Black Leatherette Interiors', 'Dual-Barrel LED Projector Headlamps', 'Dual-Zone FATC', 'Push Button Start/Stop & Smart Key']
+      },
+      {
+        name: 'Z8 2.2 Diesel MT (7S)',
+        exShowroom: 1939000,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.2L mHawk Diesel (175 PS)',
+        mileage: '15.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['4XPLOR Intelligent Terrain Modes (4WD optional)', '6 Airbags Standard', 'Rear Parking Camera', 'Electrically Foldable ORVMs']
+      },
+      {
+        name: 'Z8 2.2 Diesel AT (7S)',
+        exShowroom: 2139000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 400 Nm)',
+        mileage: '14.20 kmpl',
+        isVFM: false,
+        keyFeatures: ['Smooth 6-Speed AISIN Automatic', 'R18 Diamond-Cut Alloys', 'Side & Curtain Airbags', 'Leather Wrapped Steering & Gear Shift']
+      },
+      {
+        name: 'Z8L 2.2 Diesel AT 4WD (7S)',
+        exShowroom: 2454000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 400 Nm)',
+        mileage: '13.80 kmpl',
+        isVFM: false,
+        vfmBadge: '🛡️ 4XPLOR 4WD OFF-ROAD KING',
+        keyFeatures: ['4XPLOR Intelligent 4WD with Mechanical Rear Locking Diff', 'Sony 12-Speaker 3D Audio System', 'Front Parking Camera & Sensors', '6-Way Powered Driver Seat']
+      },
+      {
+        name: 'Z8L 6S Captain Seats 2.2 Diesel AT 4WD',
+        exShowroom: 2489000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.2L mHawk Diesel (175 PS / 400 Nm)',
+        mileage: '13.80 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 6-SEATER LUXURY FLAGSHIP',
+        keyFeatures: ['Executive 2nd Row Captain Seats with Individual Armrests', 'Sony 12-Speaker Spatial Audio with Subwoofer', 'Wireless Phone Charger', 'Driver Drowsiness Alert']
+      }
+    ]
+  },
+  {
     id: 'tata-nexon',
     name: 'Tata Nexon',
     brand: 'Tata',
