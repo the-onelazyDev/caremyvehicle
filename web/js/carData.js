@@ -8101,7 +8101,286 @@ export const CARS = [
         keyFeatures: ['Dual Motor All Wheel Drive (325 PS / 605 Nm, 0-100 km/h in 5.3s)', '84 kWh Lithium-Ion Battery (663 km ARAI Range)', '14-Speaker Meridian Premium Concert Sound System with Active Sound Design', 'Augmented Reality Head-Up Display (AR HUD)', '360-Degree Surround View Monitor with Blind View Monitor (BVM)', 'Level 2 ADAS 2.0 with 25 Autonomous Features', 'Smart Power Tailgate with Hands-Free Access', 'Vehicle-to-Load (V2L - 3.5 kW) and Vehicle-to-Vehicle (V2V) Support']
       }
     ]
-  }
+  },
+  {
+      "id": "toyota-innova-hycross",
+      "name": "Toyota Innova Hycross",
+      "brand": "Toyota",
+      "tagline": "The Flagship Self-Charging Hybrid MPV with Ottoman Seats & ADAS",
+      "launchDate": "Updated 2024 (GX(O) & ZX(O))",
+      "bodyType": "MPV",
+      "fuelTypes": [
+          "Petrol",
+          "Hybrid"
+      ],
+      "priceRange": "₹19.53 - ₹31.84 Lakh",
+      "minPrice": 1953000,
+      "maxPrice": 3184000,
+      "safetyRating": "5.0 ★ (Expected Bharat NCAP / ASEAN NCAP 5-Star)",
+      "groundClearance": "185 mm",
+      "bootSpace": "300 L (Expandable to 991 L)",
+      "waitingPeriod": "3 - 6 Months",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp",
+      "summary": "The Innova Hycross is Toyota’s flagship multi-purpose vehicle built on the high-rigidity TNGA-C monocoque platform. Featuring a 2.0L 5th-Gen Self-Charging Strong Hybrid powertrain delivering an ARAI-certified 21.19 kmpl, Level-2 Toyota Safety Sense ADAS, a dual-pane panoramic sunroof, 10.1-inch floating touchscreen with Apple CarPlay, and electrically powered Ottoman captain seats with extended leg support.",
+      "spin360": {
+          "totalFrames": 36,
+          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/360",
+          "format": "webp",
+          "defaultColor": "blackish-ageha-glass-flake",
+          "colors": [
+              {
+                  "id": "blackish-ageha-glass-flake",
+                  "name": "Blackish Ageha Glass Flake",
+                  "hex": "#1B2C33"
+              }
+          ]
+      },
+      "colors": [
+          {
+              "id": "blackish-ageha-glass-flake",
+              "name": "Blackish Ageha Glass Flake",
+              "hex": "#1B2C33",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp"
+          },
+          {
+              "id": "platinum-white-pearl",
+              "name": "Platinum White Pearl",
+              "hex": "#F1F3F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp"
+          },
+          {
+              "id": "silver-metallic",
+              "name": "Silver Metallic",
+              "hex": "#CBD3D8",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/silver-metallic.webp"
+          },
+          {
+              "id": "avant-garde-bronze-metallic",
+              "name": "Avant-garde Bronze Metallic",
+              "hex": "#63584E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/avant-garde-bronze-metallic.webp"
+          },
+          {
+              "id": "attitude-black-mica",
+              "name": "Attitude Black Mica",
+              "hex": "#111315",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/attitude-black-mica.webp"
+          },
+          {
+              "id": "super-white",
+              "name": "Super White",
+              "hex": "#FFFFFF",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/super-white.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "front_dynamic_stance",
+              "title": "Imposing SUV-Inspired Front Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_dynamic_stance.webp"
+          },
+          {
+              "id": "front_hexagonal_grille",
+              "title": "Hexagonal Chrome Grille & Tri-Eye LED Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_hexagonal_grille.webp"
+          },
+          {
+              "id": "side_profile_stance",
+              "title": "Executive 4.75m Side Profile & Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/side_profile_stance.webp"
+          },
+          {
+              "id": "rear_sculpted_design",
+              "title": "Sculpted Rear Design with LED Combination Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/rear_sculpted_design.webp"
+          },
+          {
+              "id": "left_front_profile",
+              "title": "High Bonnet Line with Muscular Character Lines",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/left_front_profile.webp"
+          },
+          {
+              "id": "luxury_cockpit_dashboard",
+              "title": "Dual-Tone Chestnut Soft-Touch Dashboard Layout",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/luxury_cockpit_dashboard.webp"
+          },
+          {
+              "id": "floating_infotainment_touchscreen",
+              "title": "10.1-inch Audio Display with Apple CarPlay & JBL 9-Speaker",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/floating_infotainment_touchscreen.webp"
+          },
+          {
+              "id": "digital_tft_instrument_cluster",
+              "title": "7-inch Multi-Information TFT Instrument Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/digital_tft_instrument_cluster.webp"
+          },
+          {
+              "id": "steering_wheel_controls",
+              "title": "Leather-Wrapped Steering with ADAS & Audio Controls",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/steering_wheel_controls.webp"
+          },
+          {
+              "id": "front_ventilated_seats",
+              "title": "Ventilated Front Seats with 8-Way Power Adjustment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_ventilated_seats.webp"
+          },
+          {
+              "id": "second_row_ottoman_captain_seats",
+              "title": "Powered Ottoman Captain Seats with Leg Rest",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/second_row_ottoman_captain_seats.webp"
+          },
+          {
+              "id": "modular_boot_space",
+              "title": "Flat-Folding Third Row with Expandable 991L Boot",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/modular_boot_space.webp"
+          }
+      ],
+      "specs": {
+          "engineOptions": "2.0L TNGA 4-Cyl Petrol (172 bhp / 209 Nm) | 2.0L 5th-Gen Strong Hybrid (184 bhp combined)",
+          "transmissions": "Direct Shift CVT (Petrol) & e-CVT (Strong Hybrid)",
+          "dimensions": "4755 mm (L) × 1850 mm (W) × 1795 mm (H)",
+          "wheelbase": "2850 mm",
+          "fuelTank": "52 Litres",
+          "seatingCapacity": "7-Seater (Captain Seats) & 8-Seater (Bench Seat)"
+      },
+      "variants": [
+          {
+              "name": "GX 2.0 Petrol Automatic (CVT) 7 STR",
+              "exShowroom": 1953000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "2.0L TNGA Petrol (172 bhp)",
+              "mileage": "16.13 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "16-inch Alloy Wheels",
+                  "LED Headlamps & Tail Lamps",
+                  "8-inch Touchscreen Infotainment",
+                  "Push Button Start/Stop",
+                  "Vehicle Stability Control (VSC)",
+                  "Hill Start Assist (HAC)"
+              ]
+          },
+          {
+              "name": "GX 2.0 Petrol Automatic (CVT) 8 STR",
+              "exShowroom": 1958000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "2.0L TNGA Petrol (172 bhp)",
+              "mileage": "16.13 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "8-Seater Bench with 60:40 Split",
+                  "16-inch Alloy Wheels",
+                  "8-inch Touchscreen Audio",
+                  "Reverse Camera",
+                  "VSC & Hill Start Assist"
+              ]
+          },
+          {
+              "name": "GX (O) 2.0 Petrol Automatic (CVT) 8 STR",
+              "exShowroom": 2084000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "2.0L TNGA Petrol (172 bhp)",
+              "mileage": "16.13 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Front LED Fog Lamps",
+                  "Rear Sunshades",
+                  "Dual-Tone Chestnut Interior",
+                  "Automatic Climate Control",
+                  "Rear Defogger"
+              ]
+          },
+          {
+              "name": "GX (O) 2.0 Petrol Automatic (CVT) 7 STR",
+              "exShowroom": 2097000,
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "engine": "2.0L TNGA Petrol (172 bhp)",
+              "mileage": "16.13 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST PETROL PICK",
+              "keyFeatures": [
+                  "10.1-inch Floating Touchscreen",
+                  "Wireless Apple CarPlay",
+                  "360-Degree Panoramic View Monitor",
+                  "Front Parking Sensors",
+                  "Dual-Tone Chestnut Soft-Touch Dashboard"
+              ]
+          },
+          {
+              "name": "VX Hybrid 2.0 Automatic (e-CVT) 7 STR",
+              "exShowroom": 2676000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.0L Strong Hybrid (184 bhp combined)",
+              "mileage": "21.19 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Self-Charging Strong Hybrid Powertrain (21.19 kmpl)",
+                  "Paddle Shifters",
+                  "17-inch Alloy Wheels",
+                  "Full LED Headlamps with Position Lamps",
+                  "Auto Electric Parking Brake (EPB) with Auto Hold",
+                  "Acoustic Windshield Glass"
+              ]
+          },
+          {
+              "name": "VX (O) Hybrid 2.0 Automatic (e-CVT) 7 STR",
+              "exShowroom": 2877000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.0L Strong Hybrid (184 bhp combined)",
+              "mileage": "21.19 kmpl",
+              "isVFM": true,
+              "vfmBadge": "🏆 BEST HYBRID VFM PICK",
+              "keyFeatures": [
+                  "Dual-Pane Panoramic Sunroof with Mood Lighting",
+                  "10.1-inch Display Audio",
+                  "Wireless Apple CarPlay",
+                  "6 Airbags Standard",
+                  "Front LED Fog Lamps",
+                  "360 Panoramic View Monitor"
+              ]
+          },
+          {
+              "name": "ZX Hybrid 2.0 Automatic (e-CVT) 7 STR",
+              "exShowroom": 3120000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.0L Strong Hybrid (184 bhp combined)",
+              "mileage": "21.19 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Powered Ottoman 2nd-Row Captain Seats with Leg Rest",
+                  "Ventilated Front Seats",
+                  "Dark Chrome 18-inch Metallic Alloy Wheels",
+                  "JBL 9-Speaker Premium Sound System with Subwoofer",
+                  "Dual-Zone Automatic Climate Control (Front & Rear)",
+                  "Electrochromic IRVM"
+              ]
+          },
+          {
+              "name": "ZX (O) Hybrid 2.0 Automatic (e-CVT) 7 STR",
+              "exShowroom": 3184000,
+              "fuel": "Hybrid",
+              "trans": "Automatic",
+              "engine": "2.0L Strong Hybrid (184 bhp combined)",
+              "mileage": "21.19 kmpl",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Toyota Safety Sense (TSS) Level-2 ADAS",
+                  "Dynamic Radar Cruise Control (DRCC)",
+                  "Lane Trace Assist (LTA)",
+                  "Pre-Collision System (PCS)",
+                  "Blind Spot Monitor (BSM) & Rear Cross Traffic Alert",
+                  "Auto High Beam (AHB)"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price
