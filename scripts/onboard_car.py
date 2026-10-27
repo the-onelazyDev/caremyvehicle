@@ -388,12 +388,13 @@ def main():
         "waitingPeriod": cfg.get("waitingPeriod", "2 - 4 Weeks"),
         "heroImage": hero_image,
         "summary": cfg.get("summary", ""),
-        "spin360": spin360,
         "colors": colors,
         "gallery": gallery,
         "specs": cfg.get("specs", {}),
         "variants": cfg.get("variants", [])
     }
+    if spin360:
+        car_object["spin360"] = spin360
 
     # 5. Inject into Codebase
     print(f"\n[CODEBASE SYNC] Synchronizing {car_slug} into root & web data files...")

@@ -2,209 +2,155 @@
   "id": "toyota-hilux",
   "name": "Toyota Hilux",
   "brand": "Toyota",
-  "tagline": "The Legendary Unstoppable 4x4 Adventure Lifestyle Pickup",
-  "launchDate": "2024 (Updated 4x4 & 4x2 Lineup)",
+  "tagline": "The World's Most Legendary Lifestyle 4x4 Off-Road Pickup Truck",
+  "launchDate": "2023 (Updated 2024 Black Edition)",
   "bodyType": "Pickup Truck",
   "fuelTypes": [
     "Diesel"
   ],
-  "priceRange": "₹31.99 - ₹36.89 Lakh",
-  "minPrice": 3199000,
-  "maxPrice": 3689000,
-  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 32.93/36, Child 44.09/49)",
+  "priceRange": "₹30.40 - ₹37.90 Lakh",
+  "minPrice": 3040000,
+  "maxPrice": 3790000,
+  "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star Off-Road Crash Protection)",
   "groundClearance": "216 mm",
-  "bootSpace": "435 L Flat Deck (470 kg payload)",
-  "waitingPeriod": "2 - 4 Weeks",
-  "summary": "The Toyota Hilux is the world's benchmark for extreme-durability lifestyle utility. Built on the heavy-duty IMV platform with a rigid ladder-frame chassis, it pairs a potent 2.8L D-4D turbo diesel producing 201 bhp and 500 Nm of torque with electronic 4x4, rear diff-lock, active traction control (A-TRC), 700 mm water wading capability, and a versatile double-cab cargo deck.",
-  "spin360": {
-    "totalFrames": 36,
-    "sourceUrlTemplate": "https://imgd.aeplcdn.com/1056x594/cw/360/toyota/3872/24636/closed-door/d1a041/{frame}.jpg",
-    "defaultColor": "sulphur-metallic",
-    "defaultColorName": "Sulphur Metallic",
-    "defaultColorHex": "#D1A041",
-    "colors": [
-      {
-        "id": "sulphur-metallic",
-        "name": "Sulphur Metallic",
-        "hex": "#D1A041"
-      }
-    ]
-  },
+  "bootSpace": "435 kg Deck Payload (Water wading 700 mm)",
+  "waitingPeriod": "1 - 2 Months",
+  "summary": "The Toyota Hilux is the globally acclaimed benchmark for lifestyle 4x4 pickup trucks, renowned for conquering polar ice caps, volcanoes, and desert rallies. Armed with a 2.8L Four-Cylinder Turbo Diesel pushing 201 bhp and an immense 500 Nm of torque, it boasts shift-on-the-fly 4WD, electronic locking rear differential, active traction control, 700 mm water wading capability, and heavy-duty steel cargo bed.",
   "colors": [
-    {
-      "id": "sulphur-metallic",
-      "name": "Sulphur Metallic",
-      "hex": "#D1A041",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/o2rrgkb_1978882.jpg"
-    },
-    {
-      "id": "platinum-pearl-white",
-      "name": "Platinum Pearl White Metallic",
-      "hex": "#DDDDDA",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/5tprgkb_1978880.jpg"
-    },
-    {
-      "id": "attitude-black",
-      "name": "Attitude Black",
-      "hex": "#08070C",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/w3orgkb_1978878.jpg"
-    },
-    {
-      "id": "ash",
-      "name": "Ash Grey",
-      "hex": "#929799",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/8bmrgkb_1978876.jpg"
-    },
     {
       "id": "emotional-red",
       "name": "Emotional Red",
-      "hex": "#7C0C0E",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/zelrgkb_1978874.jpg"
+      "hex": "#9E1B27",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-emotional-red-1349x759.webp"
+    },
+    {
+      "id": "white-pearl-crystal-shine",
+      "name": "White Pearl Crystal Shine",
+      "hex": "#EBECE9",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-platinum-pearl-white-metallic-1349x759.webp"
     },
     {
       "id": "super-white",
       "name": "Super White",
-      "hex": "#EAEAEA",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/43jrgkb_1978872.jpg"
+      "hex": "#F8F8F8",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-super-white-1349x759.webp"
+    },
+    {
+      "id": "grey-metallic",
+      "name": "Grey Metallic",
+      "hex": "#505256",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-ash-1349x759.webp"
+    },
+    {
+      "id": "attitude-black",
+      "name": "Attitude Black",
+      "hex": "#0D0E10",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-attitude-black-1349x759.webp"
+    },
+    {
+      "id": "sulphur-metallic",
+      "name": "Sulphur Metallic",
+      "hex": "#8A7A40",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/colors/car-sulphur-metallic-1349x759.webp"
     }
   ],
   "gallery": [
     {
-      "id": "front_dominant_stance",
-      "title": "Rugged Adventure Stance & High Deck Profile",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-right-front-three-quarter.png?isig=0&q=80"
+      "id": "offroad-bumper",
+      "title": "Aggressive Front Bumper with Skid Plate",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/exterior/img-exterior-feature-01.webp"
     },
     {
-      "id": "front_hexagonal_grille",
-      "title": "Aggressive Bold Front Grille with Chrome Surrounds",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-front-view.jpeg?isig=0&q=80"
+      "id": "led-headlamps",
+      "title": "LED Headlamps with Integrated DRLs",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/exterior/img-exterior-feature-02.webp"
     },
     {
-      "id": "side_pickup_profile",
-      "title": "Double-Cab 5.32m Long Body with Heavy-Duty Cargo Deck",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-right-side-view.jpeg?isig=0&q=80"
+      "id": "chrome-grille",
+      "title": "Bold Hexagonal Chrome Grille",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/exterior/img-exterior-feature-03.webp"
     },
     {
-      "id": "rear_cargo_bed",
-      "title": "Heavy-Duty Flatbed Tailgate with Integrated Step",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-rear-view-22.jpeg?isig=0&q=80"
+      "id": "alloys",
+      "title": "18-inch Machine-Cut Alloy Wheels",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/exterior/img-exterior-feature-04.webp"
     },
     {
-      "id": "all_terrain_stance",
-      "title": "High Wading Depth & 29-Degree Approach Angle",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-left-front-three-quarter.jpeg?isig=0&q=80"
+      "id": "interior-cockpit",
+      "title": "Premium Dual-Zone Automatic Climate Control",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/interior/img-interior-feature-01.webp"
     },
     {
-      "id": "premium_cabin_dashboard",
-      "title": "All-Black Executive Cabin with Brushed Metallic Highlights",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-interior-dashboard.jpeg?isig=0&q=80"
+      "id": "touchscreen",
+      "title": "8-inch Infotainment with Apple CarPlay & Android Auto",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/interior/img-interior-feature-02.webp"
     },
     {
-      "id": "touchscreen_system",
-      "title": "8.0-inch Smart Touchscreen Infotainment",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-interior-engine-start-button.jpeg?isig=0&q=80"
+      "id": "leather-seats",
+      "title": "Plush Leather Upholstery with 8-Way Power Driver Seat",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/interior/img-interior-feature-03.webp"
     },
     {
-      "id": "instrument_dials",
-      "title": "Twin-Dial Analogue Cluster with TFT MID Display",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-interior-instrument-cluster.jpeg?isig=0&q=80"
+      "id": "electronic-4x4",
+      "title": "Electronic Shift-on-the-Fly 4WD with Auto-LSD",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/sec-4x4/icon-4wd-systems-163x104.webp"
     },
     {
-      "id": "steering_controls",
-      "title": "Leather Steering with Cruise Control & MID Selectors",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-interior-steering-wheel.jpeg?isig=0&q=80"
+      "id": "diesel-engine",
+      "title": "2.8L Turbo Diesel with 500 Nm Torque",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/performance/ico-500nm-torqe-130x130.webp"
     },
     {
-      "id": "rear_three_quarter",
-      "title": "Heavy-Duty 18-inch Precision Alloy Wheels",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
+      "id": "safety-airbags",
+      "title": "7 SRS Airbags, VSC & Trailer Sway Control",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/safety-feature/safety-feature-1-875x550.webp"
     },
     {
-      "id": "rear_deck_utility",
-      "title": "Weather-Proof Lined Bed Liner for Expeditions",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-left-rear-three-quarter-2.jpeg?isig=0&q=80"
+      "id": "deck-loading",
+      "title": "Heavy-Duty Cargo Deck with 435 kg Payload Capacity",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/convinience/convinience-feature-1-875x550.webp"
     },
     {
-      "id": "side_stance_clearance",
-      "title": "High 216 mm Ground Clearance with 700 mm Water Wading",
-      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/223184/new-hilux-exterior-left-side-view.jpeg?isig=0&q=80"
+      "id": "legacy",
+      "title": "World's Most Indestructible Pickup Truck",
+      "sourceUrl": "https://static3.toyotabharat.com/images/showroom/hilux-v1/legacy/legacy-section-1920x1433.webp"
     }
   ],
   "specs": {
-    "engineOptions": "2.8L 4-Cylinder D-4D Turbo Diesel (201 bhp / 500 Nm)",
-    "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
-    "dimensions": "5325 mm (L) × 1855 mm (W) × 1815 mm (H)",
-    "wheelbase": "3085 mm",
+    "engine": "2755 cc 4-Cylinder D-4D Turbocharged Diesel",
+    "power": "201 bhp @ 3400 rpm",
+    "torque": "500 Nm @ 1600-2800 rpm (AT) / 420 Nm (MT)",
+    "transmission": "6-Speed Automatic / 6-Speed Manual with iMT",
+    "drivetrain": "Shift-on-the-fly 4WD with Electronic Diff Lock",
+    "mileage": "13.0 km/l",
     "fuelTank": "80 Litres",
-    "seatingCapacity": "5 Persons (Double Cab Configuration)"
+    "dimensions": "5325 mm L x 1855 mm W x 1815 mm H",
+    "wheelbase": "3085 mm",
+    "brakes": "Ventilated Discs Front / Leading-Trailing Drum Rear",
+    "suspension": "Double Wishbone Front / Leaf Spring Heavy-Duty Rear",
+    "seating": "5 Seater (Double Cab)"
   },
   "variants": [
     {
-      "name": "Standard (GX) 4x2 2.8 Diesel Automatic",
-      "exShowroom": 3199000,
+      "name": "4x4 STD MT",
+      "price": 3040000,
       "fuel": "Diesel",
-      "trans": "Automatic",
-      "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
-      "mileage": "13.80 kmpl",
-      "isVFM": false,
-      "keyFeatures": [
-        "201 bhp & 500 Nm Diesel Engine",
-        "7 Airbags Standard",
-        "8-inch Touchscreen with Apple CarPlay/Android Auto",
-        "Vehicle Stability Control (VSC) & HAC",
-        "17-inch Alloy Wheels"
-      ]
+      "transmission": "Manual",
+      "features": "Heavy-Duty 4WD with Low Range, Halogen Headlamps, 8\" Touchscreen, 7 Airbags, Auto LSD"
     },
     {
-      "name": "Standard (GX) 4x4 2.8 Diesel Manual",
-      "exShowroom": 3040000,
+      "name": "4x4 High MT",
+      "price": 3715000,
       "fuel": "Diesel",
-      "trans": "Manual",
-      "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
-      "mileage": "14.20 kmpl",
-      "isVFM": true,
-      "vfmBadge": "🏆 BEST VALUE 4x4 OFF-ROADER",
-      "keyFeatures": [
-        "Shift-on-the-Fly 4x4 (High / Low Range)",
-        "Rear Differential Lock (e-Locker)",
-        "Active Traction Control (A-TRC)",
-        "Downhill Assist Control (DAC)",
-        "7 Airbags Standard"
-      ]
+      "transmission": "Manual",
+      "features": "LED Headlamps with DRLs, 18\" Machine Alloys, Leather Seats, 8-Way Powered Driver Seat, Dual-Zone AC"
     },
     {
-      "name": "High (VX) 4x4 2.8 Diesel Manual",
-      "exShowroom": 3715000,
+      "name": "4x4 High AT",
+      "price": 3790000,
       "fuel": "Diesel",
-      "trans": "Manual",
-      "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
-      "mileage": "14.20 kmpl",
-      "isVFM": false,
-      "keyFeatures": [
-        "Dual-Zone Automatic Climate Control",
-        "Full LED Headlamps with DRLs",
-        "8-Way Power-Adjustable Driver Seat",
-        "18-inch Precision Alloy Wheels",
-        "Soft-Touch Leather Upholstery"
-      ]
-    },
-    {
-      "name": "High (VX) 4x4 2.8 Diesel Automatic",
-      "exShowroom": 3669000,
-      "fuel": "Diesel",
-      "trans": "Automatic",
-      "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
-      "mileage": "13.60 kmpl",
-      "isVFM": true,
-      "vfmBadge": "🏆 TOP OVERLANDING PICK",
-      "keyFeatures": [
-        "6-Speed Sequential Automatic with 500 Nm Torque",
-        "Electronic 4WD Transfer Case with Low Range",
-        "Front & Rear Parking Sensors",
-        "Dual-Zone Auto AC",
-        "Electrochromic Inside Rear-View Mirror"
-      ]
+      "transmission": "Automatic",
+      "features": "500 Nm Torque, 6-Speed AT with Sequential Shift, Downhill Assist Control (DAC), Cruise Control"
     }
   ]
 }
-

@@ -596,7 +596,7 @@ window.openCarModal = function(carId) {
       </button>
       ${(spin360 || colors.length > 0 || angles.length > 0) ? `
         <button class="modal-tab-btn" data-tab="colors" onclick="switchModalTab('colors')">
-          🎨 Colors & 360° Studio ${spin360 ? '🔄' : `(${colors.length})`}
+          ${spin360 ? '🎨 Colors & 360° Studio 🔄' : `🎨 Official Colors (${colors.length})`}
         </button>
       ` : ''}
       ${gallery.length > 0 ? `
@@ -665,7 +665,7 @@ window.openCarModal = function(carId) {
               </div>
 
               <div class="feature-bullets">
-                ${v.keyFeatures.map(f => `<span class="feat-tag">✓ ${f}</span>`).join('')}
+                ${(Array.isArray(v.keyFeatures) ? v.keyFeatures : (typeof v.features === 'string' ? v.features.split(',').map(s => s.trim()) : (Array.isArray(v.features) ? v.features : []))).map(f => `<span class="feat-tag">✓ ${f}</span>`).join('')}
               </div>
             </div>
           `;

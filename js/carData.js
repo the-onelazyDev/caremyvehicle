@@ -28,15 +28,6 @@ export const CARS = [
     waitingPeriod: '1 - 3 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp',
     summary: 'The iconic Alto K10 now comes with standard 6 airbags, Electronic Stability Program (ESP), 7-inch SmartPlay Studio touchscreen with Apple CarPlay/Android Auto, and an ultra-frugal 1.0L Next-Gen K-Series Dual Jet engine delivering up to 33.40 km/kg on CNG.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/360',
-      format: 'webp',
-      defaultColor: 'sizzling-red',
-      colors: [
-        { id: 'sizzling-red', name: 'Metallic Sizzling Red', hex: '#E62924' }
-      ]
-    },
     colors: [
       { id: 'sizzling-red', name: 'Metallic Sizzling Red', hex: '#E62924', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp' },
       { id: 'speedy-blue', name: 'Metallic Speedy Blue', hex: '#1E40AF', image: 'https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/speedy-blue.webp' },
@@ -170,20 +161,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp',
     summary: 'The Epic New 4th Generation Swift features the all-new 1.2L 3-cylinder Z-Series Dual Jet engine delivering up to 25.75 km/l (and 32.85 km/kg on S-CNG). It brings standard 6 airbags across every single variant, 9-inch SmartPlay Pro+ touchscreen with wireless CarPlay/Android Auto, Arkamys Surround Sense audio, wireless charging, and cruise control.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/swift/360',
-      format: 'webp',
-      defaultColor: 'sizzling-red-bluish-black',
-      colors: [
-        { id: 'sizzling-red-bluish-black', name: 'Sizzling Red with Bluish Black', hex: '#DC2626' },
-        { id: 'luster-blue', name: 'Luster Blue', hex: '#1F47C2' },
-        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F8FAFC' },
-        { id: 'magma-grey', name: 'Magma Grey', hex: '#475569' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#CBD5E1' },
-        { id: 'novel-orange', name: 'Novel Orange', hex: '#B33316' }
-      ]
-    },
     colors: [
       { name: 'Sizzling Red with Bluish Black', hex: '#DC2626', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp' },
       { name: 'Luster Blue', hex: '#1F47C2', image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/luster-blue/4.webp' },
@@ -316,20 +293,6 @@ export const CARS = [
     waitingPeriod: '3 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp',
     summary: 'The Maruti Suzuki Brezza is one of India’s highest selling compact SUVs powered by the refined 1.5L K15C Dual Jet Smart Hybrid engine (and factory S-CNG). It features an electric sunroof, 360-degree surround view camera, Head-Up Display (HUD), paddle shifters with 6-speed torque converter automatic, and 9-inch SmartPlay Pro+ infotainment with wireless Apple CarPlay/Android Auto.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360',
-      format: 'webp',
-      defaultColor: 'sizzling-red-bluish-black',
-      colors: [
-        { id: 'sizzling-red-bluish-black', name: 'Sizzling Red with Bluish Black', hex: '#990000' },
-        { id: 'lustrous-beige', name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A' },
-        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
-        { id: 'magma-gray', name: 'Magma Gray', hex: '#555347' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#A5AFB1' },
-        { id: 'pearl-bluish-black', name: 'Pearl Bluish Black', hex: '#0C0D11' }
-      ]
-    },
     colors: [
       { name: 'Sizzling Red with Bluish Black', hex: '#990000', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp' },
       { name: 'Lustrous Beige / Brave Khaki', hex: '#9F957A', image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/lustrous-beige/4.webp' },
@@ -472,20 +435,6 @@ export const CARS = [
     waitingPeriod: '1 - 3 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp',
     summary: 'The All-New Celerio is India’s most fuel-efficient petrol hatchback, delivering up to 26.68 km/l with the Next-Gen 1.0L K10C Dual Jet engine with idle start-stop, and an astonishing 34.43 km/kg on factory S-CNG. It features 3D organic sculpted styling, 7-inch SmartPlay Studio touchscreen, keyless entry with push start, 313L large boot, and 15-inch black alloys.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360',
-      format: 'webp',
-      defaultColor: 'solid-fire-red',
-      colors: [
-        { id: 'solid-fire-red', name: 'Solid Fire Red', hex: '#8E0D0F' },
-        { id: 'speedy-blue', name: 'Speedy Blue', hex: '#1F47C2' },
-        { id: 'arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
-        { id: 'glistening-grey', name: 'Glistening Grey', hex: '#4A4A4A' },
-        { id: 'silky-silver', name: 'Silky Silver', hex: '#737373' },
-        { id: 'caffeine-brown', name: 'Caffeine Brown', hex: '#28201D' }
-      ]
-    },
     colors: [
       { name: 'Solid Fire Red', hex: '#8E0D0F', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp' },
       { name: 'Speedy Blue', hex: '#1F47C2', image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/speedy-blue/4.webp' },
@@ -618,20 +567,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp',
     summary: 'The Maruti Suzuki Wagon R is India’s beloved tall-boy hatchback offering maximum cabin headroom, unmatched practicality, and a choice of two refined engines: 1.0L K10C (up to 25.19 km/l and 34.05 km/kg on factory S-CNG) and the punchy 1.2L K12N Dual Jet (90 PS). It features dual-tone floating roof styling, 7-inch SmartPlay Studio touchscreen with smartphone navigation, 341L cavernous boot, and 60:40 rear split seats.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360',
-      format: 'webp',
-      defaultColor: 'gallant-red-black-roof',
-      colors: [
-        { id: 'gallant-red-black-roof', name: 'Gallant Red with Black Roof', hex: '#D2232B' },
-        { id: 'poolside-blue', name: 'Poolside Blue', hex: '#1188C5' },
-        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
-        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
-        { id: 'silky-silver', name: 'Silky Silver', hex: '#737373' },
-        { id: 'nutmeg-brown', name: 'Nutmeg Brown', hex: '#54473C' }
-      ]
-    },
     colors: [
       { name: 'Gallant Red with Black Roof', hex: '#D2232B', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/gallant-red-black-roof/4.webp' },
       { name: 'Poolside Blue', hex: '#1188C5', image: 'https://ik.imagekit.io/2908vvlod/cars/wagon-r/360/poolside-blue/4.webp' },
@@ -775,21 +710,6 @@ export const CARS = [
     waitingPeriod: '4 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
     summary: 'The All-New 4th Generation Maruti Suzuki Dzire redefines India’s sedan landscape with a historic 5-Star Global NCAP adult safety rating and 6 airbags standard across every single variant. Engineered on the ultra-rigid Heartect platform and powered by the new 1.2L Z-Series 3-cylinder engine (Z12E) boasting class-leading 24.79 km/l (MT), 25.71 km/l (AGS) and 33.73 km/kg on factory S-CNG. Packed with first-in-segment electric sunroof, 360-degree HD camera, 9-inch SmartPlay Pro+ touchscreen with wireless Apple CarPlay/Android Auto, wireless phone charger, and sculpted European styling.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360',
-      format: 'webp',
-      defaultColor: 'alluring-blue',
-      colors: [
-        { id: 'alluring-blue', name: 'Alluring Blue', hex: '#415159' },
-        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
-        { id: 'gallant-red', name: 'Gallant Red', hex: '#D2232B' },
-        { id: 'bluish-black', name: 'Bluish Black', hex: '#141414' },
-        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
-        { id: 'nutmeg-brown', name: 'Nutmeg Brown', hex: '#54473C' }
-      ]
-    },
     colors: [
       { name: 'Alluring Blue', hex: '#415159', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp' },
       { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/pearl-arctic-white/4.webp' },
@@ -934,19 +854,6 @@ export const CARS = [
     waitingPeriod: '1 - 3 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp',
     summary: 'The Maruti Suzuki Eeco is India’s undisputed king of practical family travel and versatile multi-purpose mobility. Powered by the refined 1.2L Advanced K-Series Dual Jet Dual VVT engine (80.76 PS / 104.4 Nm in petrol, 71.65 PS in CNG), the Eeco delivers an impressive 19.71 km/l petrol and 26.78 km/kg on factory S-CNG. Available in spacious 5-seater and 7-seater layouts with powerful air conditioning, digital instrument cluster, flat cabin floor, and huge 540L luggage capacity.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360',
-      format: 'webp',
-      defaultColor: 'brisk-blue',
-      colors: [
-        { id: 'brisk-blue', name: 'Metallic Brisk Blue', hex: '#0D6DC3' },
-        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
-        { id: 'silky-silver', name: 'Metallic Silky Silver', hex: '#737373' },
-        { id: 'glistening-grey', name: 'Metallic Glistening Grey', hex: '#4A4A4A' },
-        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
-      ]
-    },
     colors: [
       { name: 'Metallic Brisk Blue', hex: '#0D6DC3', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/brisk-blue/4.webp' },
       { name: 'Solid White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/eeco/360/solid-white/4.webp' },
@@ -1038,24 +945,6 @@ export const CARS = [
     waitingPeriod: '4 - 10 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp',
     summary: 'The Maruti Suzuki Victoris is the brand’s flagship mid-size SUV engineered with commanding road presence, state-of-the-art Level 2 ADAS autonomous safety, dual-pane panoramic sunroof, and All-Terrain ALLGRIP SELECT AWD. It offers three versatile powertrains: 1.5L K15C Smart Hybrid (petrol MT/AT), 1.5L S-CNG, and the ultra-refined 1.5L Intelligent Strong Hybrid with EV drive mode delivering an astonishing 27.97 km/l. Equipped with a 10.25-inch SmartPlay Pro+ touchscreen, ventilated front seats, head-up display (HUD), and connected car tech.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360',
-      format: 'webp',
-      defaultColor: 'sizzling-red-black-roof',
-      colors: [
-        { id: 'sizzling-red-black-roof', name: 'Sizzling Red with Black Roof', hex: '#A10000' },
-        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Black Roof', hex: '#EDEDF2' },
-        { id: 'celestial-blue-black-roof', name: 'Celestial Blue with Black Roof', hex: '#24475B' },
-        { id: 'arctic-white', name: 'Arctic White', hex: '#F3F3F3' },
-        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#2B2C31' },
-        { id: 'celestial-blue', name: 'Celestial Blue', hex: '#24475B' },
-        { id: 'midnight-black', name: 'Midnight Black', hex: '#141414' },
-        { id: 'sizzling-red', name: 'Sizzling Red', hex: '#A10000' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
-        { id: 'brave-khaki', name: 'Brave Khaki', hex: '#233B47' }
-      ]
-    },
     colors: [
       { name: 'Sizzling Red with Black Roof', hex: '#A10000', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/sizzling-red-black-roof/4.webp' },
       { name: 'Splendid Silver with Black Roof', hex: '#EDEDF2', image: 'https://ik.imagekit.io/2908vvlod/cars/victoris/360/splendid-silver-black-roof/4.webp' },
@@ -1214,21 +1103,6 @@ export const CARS = [
     waitingPeriod: '4 - 12 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp',
     summary: 'The Maruti Suzuki Ertiga is India’s undisputed bestselling 7-seater MPV, trusted by over a million families. Powered by the refined 1.5L K15C Smart Hybrid Dual VVT engine (103 PS / 136.8 Nm) paired with either a 5-speed manual or a 6-speed automatic with paddle shifters, achieving 20.51 km/l (MT) and 20.30 km/l (AT). Also available with factory S-CNG delivering class-leading 26.11 km/kg economy. Features 7-inch SmartPlay Pro touchscreen, second-row roof-mounted AC with independent blower controls, air-cooled cup holders, and versatile one-touch recline and slide seats.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360',
-      format: 'webp',
-      defaultColor: 'oxford-blue',
-      colors: [
-        { id: 'oxford-blue', name: 'Pearl Metallic Oxford Blue', hex: '#40519C' },
-        { id: 'pearl-arctic-white', name: 'Pearl Arctic White', hex: '#F3F3F3' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#737373' },
-        { id: 'magma-grey', name: 'Magma Grey', hex: '#2B2C31' },
-        { id: 'auburn-red', name: 'Auburn Red', hex: '#732112' },
-        { id: 'dignity-brown', name: 'Dignity Brown', hex: '#1F1412' },
-        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
-      ]
-    },
     colors: [
       { name: 'Pearl Metallic Oxford Blue', hex: '#40519C', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/oxford-blue/4.webp' },
       { name: 'Pearl Arctic White', hex: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/ertiga/360/pearl-arctic-white/4.webp' },
@@ -1374,21 +1248,6 @@ export const CARS = [
     waitingPeriod: '1 - 3 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp',
     summary: 'The Maruti Suzuki S-Presso is India’s signature mini-SUV that punches above its weight with a bold upright stance, commanding high seating position, and generous 180mm ground clearance. Powered by the efficient 1.0L Next-Gen K-Series Dual Jet Dual VVT engine (67 PS / 89 Nm) with Idle Start-Stop delivering up to 25.30 km/l on AGS automatic and 32.73 km/kg on factory S-CNG. Features a unique circular center console with 7-inch SmartPlay Studio touchscreen with smartphone navigation, dynamic digital speedometer, and high approach and departure angles.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360',
-      format: 'webp',
-      defaultColor: 'sizzle-orange',
-      colors: [
-        { id: 'sizzle-orange', name: 'Solid Sizzle Orange', hex: '#A83C0F' },
-        { id: 'solid-fire-red', name: 'Solid Fire Red', hex: '#8E0D0F' },
-        { id: 'pearl-starry-blue', name: 'Pearl Starry Blue', hex: '#114887' },
-        { id: 'solid-white', name: 'Solid White', hex: '#F3F3F3' },
-        { id: 'metallic-silky-silver', name: 'Metallic Silky Silver', hex: '#737373' },
-        { id: 'metallic-granite-grey', name: 'Metallic Granite Grey', hex: '#222526' },
-        { id: 'bluish-black', name: 'Pearl Midnight Black', hex: '#141414' }
-      ]
-    },
     colors: [
       { name: 'Solid Sizzle Orange', hex: '#A83C0F', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/sizzle-orange/4.webp' },
       { name: 'Solid Fire Red', hex: '#8E0D0F', image: 'https://ik.imagekit.io/2908vvlod/cars/s-presso/360/solid-fire-red/4.webp' },
@@ -1524,24 +1383,6 @@ export const CARS = [
     waitingPeriod: '2 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp',
     summary: 'The Maruti Suzuki Fronx is Nexa’s trendsetting compact coupe-SUV that combines athletic, aerodynamic fastback proportions with SUV toughness. Powered by either the punchy 1.0L K-Series Turbo Boosterjet engine (100.06 PS / 147.6 Nm with Progressive Smart Hybrid and paddle shifters) or the refined 1.2L Dual Jet engine (89.73 PS) available with manual, 5-speed AGS, and factory S-CNG (28.51 km/kg). Highlights include a 9-inch SmartPlay Pro+ touchscreen with wireless Apple CarPlay/Android Auto, Head-Up Display (HUD), 360-degree HD view camera, and 190mm ground clearance.',
-    spin360: {
-      totalFrames: 24,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360',
-      format: 'webp',
-      defaultColor: 'nexa-blue',
-      colors: [
-        { id: 'nexa-blue', name: 'Nexa Blue (Celestial)', hex: '#163472' },
-        { id: 'opulent-red-black-roof', name: 'Opulent Red with Bluish Black Roof', hex: '#AC0F0F' },
-        { id: 'earthen-brown-black-roof', name: 'Earthen Brown with Bluish Black Roof', hex: '#95897B' },
-        { id: 'splendid-silver-black-roof', name: 'Splendid Silver with Bluish Black Roof', hex: '#B6BABD' },
-        { id: 'arctic-white', name: 'Arctic White', hex: '#F9F9F9' },
-        { id: 'bluish-black', name: 'Bluish Black', hex: '#171717' },
-        { id: 'grandeur-grey', name: 'Grandeur Grey', hex: '#464848' },
-        { id: 'earthen-brown', name: 'Earthen Brown', hex: '#95897B' },
-        { id: 'opulent-red', name: 'Opulent Red', hex: '#AC0F0F' },
-        { id: 'splendid-silver', name: 'Splendid Silver', hex: '#B6BABD' }
-      ]
-    },
     colors: [
       { name: 'Nexa Blue (Celestial)', hex: '#163472', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/nexa-blue/4.webp' },
       { name: 'Opulent Red with Bluish Black Roof', hex: '#AC0F0F', image: 'https://ik.imagekit.io/2908vvlod/cars/fronx/360/opulent-red-black-roof/4.webp' },
@@ -2777,23 +2618,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/exter/360/ranger-khaki-black-roof/1.webp',
     summary: 'Hyundai Exter sets the benchmark in micro-SUVs with standard 6 airbags, voice-enabled smart electric sunroof, factory-fitted dual-camera dashcam, 8-inch touchscreen infotainment with smartphone connectivity, and revolutionary Hy-CNG Duo dual-cylinder technology providing practical boot space.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/exter/360',
-      format: 'webp',
-      defaultColor: 'ranger-khaki-black-roof',
-      colors: [
-        { id: 'ranger-khaki-black-roof', name: 'Ranger Khaki with Abyss Black Roof', hex: '#60695C' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
-        { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#687163' },
-        { id: 'titan-grey', name: 'Ecotronic Gray', hex: '#565A5C' },
-        { id: 'titan-grey-matte', name: 'Ecotronic Gray Matte', hex: '#5C6062' },
-        { id: 'starry-night', name: 'Starry Night', hex: '#1E2B37' },
-        { id: 'titanium-black', name: 'Titanium Black', hex: '#18181A' },
-        { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#2B2B2D' },
-        { id: 'golden-bronze', name: 'Golden Bronze', hex: '#96806C' }
-      ]
-    },
     colors: [
       { id: 'ranger-khaki-black-roof', name: 'Ranger Khaki with Abyss Black Roof', hex: '#60695C', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/ranger-khaki-black-roof.webp' },
       { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/exter/colors/atlas-white.webp' },
@@ -3013,22 +2837,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360/aqua-teal-black-roof/1.webp',
     summary: 'The new Hyundai Grand i10 Nios redefines urban driving dynamics with standard 6 airbags, painted black radiator grille with Boomerang LED DRLs, 8-inch touchscreen infotainment with Apple CarPlay & Android Auto, wireless phone charging, cruise control, and refined 1.2L Kappa petrol & factory Bi-Fuel Hy-CNG powertrains.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/360',
-      format: 'webp',
-      defaultColor: 'aqua-teal-black-roof',
-      colors: [
-        { id: 'aqua-teal-black-roof', name: 'Aqua Teal with Abyss Black Roof', hex: '#184F5E' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1' },
-        { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
-        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
-        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' }
-      ]
-    },
     colors: [
       { id: 'aqua-teal-black-roof', name: 'Aqua Teal with Abyss Black Roof', hex: '#184F5E', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/aqua-teal-black-roof.webp' },
       { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1', image: 'https://ik.imagekit.io/2908vvlod/cars/grand-i10-nios/colors/atlas-white-black-roof.webp' },
@@ -3197,23 +3005,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp',
     summary: 'The new Hyundai i20 sets the benchmark in premium hatchbacks with its bold parametric jewel grille, 6 airbags standard, smart electric sunroof, 10.25-inch touchscreen with navigation & Bose premium 7-speaker audio system, wireless smartphone charger, and refined 1.2L Kappa petrol engine paired with 5MT or smooth Intelligent Variable Transmission (IVT).',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/i20/360',
-      format: 'webp',
-      defaultColor: 'starry-night',
-      colors: [
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: '#B71C1C' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: '#ECEFF1' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
-        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
-        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
-        { id: 'knight-black', name: 'Titanium Black (Knight Edition)', hex: '#151515' }
-      ]
-    },
     colors: [
       { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/starry-night.webp' },
       { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: '#B71C1C', image: 'https://ik.imagekit.io/2908vvlod/cars/i20/colors/fiery-red-black-roof.webp' },
@@ -3381,21 +3172,6 @@ export const CARS = [
     waitingPeriod: '2 - 4 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/aura/360/starry-night/1.webp',
     summary: 'The new Hyundai Aura combines contemporary sedan elegance with standard 6 airbags, painted black radiator grille with inverted L-shaped LED DRLs, 8-inch touchscreen with Apple CarPlay/Android Auto, wireless phone charging, cruise control, segment-leading 402L boot space, and frugal 1.2L Kappa petrol & factory Bi-Fuel CNG powertrains.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/aura/360',
-      format: 'webp',
-      defaultColor: 'starry-night',
-      colors: [
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#585D62' },
-        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'aqua-teal', name: 'Aqua Teal', hex: '#205869' },
-        { id: 'vintage-brown', name: 'Vintage Brown', hex: '#5A4036' }
-      ]
-    },
     colors: [
       { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/starry-night.webp' },
       { id: 'atlas-white', name: 'Atlas White', hex: '#F8F9FA', image: 'https://ik.imagekit.io/2908vvlod/cars/aura/colors/atlas-white.webp' },
@@ -3554,25 +3330,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp',
     summary: 'The Hyundai Venue establishes itself as India’s definitive tech-driven compact SUV, featuring Level 1 ADAS (Hyundai SmartSense), standard 6 airbags, connected LED lightbars, 8-inch touchscreen infotainment with Blue Link (60+ features), voice-controlled electric sunroof, 4-way power driver seat, and 2-step reclining rear seats. Available with three powertrain choices: 1.2L Kappa Petrol, 1.0L Turbo GDi with 7DCT, and 1.5L U2 CRDi Diesel.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/venue/360',
-      format: 'webp',
-      defaultColor: 'atlas-white',
-      colors: [
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A' },
-        { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
-        { id: 'dragon-red', name: 'Dragon Red', hex: '#B51A22' },
-        { id: 'hazel-blue', name: 'Hazel Blue', hex: '#3D546B' },
-        { id: 'mystic-sapphire', name: 'Mystic Sapphire', hex: '#17233B' },
-        { id: 'hazel-blue-matte', name: 'Hazel Blue Matte', hex: '#3D4C59' },
-        { id: 'mystic-sapphire-matte', name: 'Mystic Sapphire Matte', hex: '#1C2A3A' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F2F4F7 60%, #15161A 60%)' },
-        { id: 'hazel-blue-black-roof', name: 'Hazel Blue with Titanium Black Roof', hex: 'linear-gradient(135deg, #4A5B6E 60%, #15161A 60%)' }
-      ]
-    },
     colors: [
       { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/atlas-white/1.webp' },
       { id: 'titanium-black-knight', name: 'Titanium Black Knight', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue/360/titanium-black-knight/1.webp' },
@@ -3764,25 +3521,6 @@ export const CARS = [
     waitingPeriod: '2 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp',
     summary: 'The 6th-generation Hyundai Verna redefines the mid-size sedan segment with its sensational fastback silhouette, parametric jewel grille, and full-width Horizon LED lightbars. Awarded a prestigious 5-Star Global NCAP crash test rating for both adult and child protection, it features Level 2 Hyundai SmartSense ADAS with 17 radar/camera features, segment-leading 160 PS 1.5L Turbo GDi engine, dual integrated 10.25-inch curved screens, Bose 8-speaker audio, and first-in-segment front heated and ventilated seats.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/verna/360',
-      format: 'webp',
-      defaultColor: 'starry-night',
-      colors: [
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'abyss-black', name: 'Abyss Black', hex: '#0D0E10' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
-        { id: 'titan-grey-matte', name: 'Titan Grey Matte', hex: '#424548' },
-        { id: 'tellurian-brown', name: 'Tellurian Brown', hex: '#54483C' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
-        { id: 'classy-blue', name: 'Classy Blue', hex: '#1D3557' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Abyss Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
-        { id: 'fiery-red-black-roof', name: 'Fiery Red with Abyss Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'starry-night', name: 'Starry Night', hex: '#1B2430', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp' },
       { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/atlas-white/1.webp' },
@@ -3945,25 +3683,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp',
     summary: 'The new Hyundai Alcazar facelift elevates family luxury with commanding SUV road presence, signature H-shaped LED daytime running lights, and versatile 6 or 7-passenger configurations. Featuring first-in-segment ventilated seats for both 1st and 2nd row captain chairs, dual 10.25-inch curved cockpit screens, voice-enabled panoramic sunroof, Level 2 ADAS with 70+ safety features, dual wireless phone chargers, and Digital Key with NFC. Powered by a potent 160 PS 1.5L Turbo GDi petrol and a high-efficiency 1.5L U2 CRDi diesel.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360',
-      format: 'webp',
-      defaultColor: 'robust-emerald-matte',
-      colors: [
-        { id: 'robust-emerald-matte', name: 'Robust Emerald Matte', hex: '#1E352F' },
-        { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'abyss-black', name: 'Titanium Black', hex: '#0D0E10' },
-        { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E' },
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#5E646A' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'typhoon-silver', name: 'Typhoon Silver', hex: '#D6D8DB' },
-        { id: 'taiga-brown', name: 'Taiga Brown', hex: '#4A3C31' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'robust-emerald-matte', name: 'Robust Emerald Matte', hex: '#1E352F', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-matte/1.webp' },
       { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831', image: 'https://ik.imagekit.io/2908vvlod/cars/alcazar/360/robust-emerald-pearl/1.webp' },
@@ -5916,19 +5635,10 @@ export const CARS = [
     groundClearance: '208 mm',
     bootSpace: '500 L (Expandable to 973 L)',
     waitingPeriod: '4 - 8 Weeks',
-    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence.webp',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence-v2.webp',
     summary: 'The Tata Curvv is India’s breakthrough mass-market SUV Coupe, melding the commanding elevated stance of a rugged SUV with the aerodynamic sloping silhouette of a luxury coupe. Awarded a full 5-Star Bharat NCAP safety rating (scoring 30.81/32 for Adult and 44.83/49 for Child safety), it debuts cutting-edge technology including capacitive flush door handles with approach auto-deploy, voice-assisted panoramic glass sunroof with ambient mood lighting, a powered tailgate with hands-free gesture activation, and dual high-definition curved cockpit displays (12.3-inch Cinematic Infotainment by HARMAN with 9-speaker JBL acoustic sound system + 10.25-inch reconfigurable digital instrument cluster). Powertrain options include the brand-new 1.2L Hyperion Direct Injection Turbo Petrol (125 PS / 225 Nm), the refined 1.2L Revotron Turbo Petrol (120 PS / 170 Nm), and the high-torque 1.5L Kryojet Diesel (118 PS / 260 Nm), paired with either a 6-speed manual or an advanced wet-clutch 7-speed dual-clutch automatic (DCA) featuring paddle shifters.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/curvv/360',
-      format: 'webp',
-      defaultColor: 'gold-essence',
-      colors: [
-        { id: 'gold-essence', name: 'Gold Essence', hex: '#B9A593' }
-      ]
-    },
     colors: [
-      { id: 'gold-essence', name: 'Gold Essence Metallic', hex: '#B9A593', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence.webp' },
+      { id: 'gold-essence', name: 'Gold Essence Metallic', hex: '#B9A593', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence-v2.webp' },
       { id: 'glossy-carbon-black', name: 'Glossy Carbon Black', hex: '#15161A', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/glossy-carbon-black.webp' },
       { id: 'opera-blue', name: 'Opera Blue Dual Tone', hex: '#27367A', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/opera-blue.webp' },
       { id: 'pristine-white', name: 'Pristine White Dual Tone', hex: '#ECEDEF', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/pristine-white.webp' },
@@ -6073,15 +5783,6 @@ export const CARS = [
     waitingPeriod: '3 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
     summary: 'The Tata Curvv EV spearheads India’s electric design renaissance as an aerodynamic luxury SUV Coupe built on Tata’s Acti.ev pure electric platform. Certified with a 5-Star Bharat NCAP crash safety score, the Curvv EV is offered in two liquid-cooled IP67 high-energy battery options: 45 kWh delivering 502 km certified range and a flagship 55 kWh pack delivering an astonishing 585 km single-charge driving range. Equipped with a permanent magnet synchronous motor generating up to 167 PS (123 kW) and instantaneous 215 Nm torque, propelling it from 0 to 100 km/h in just 8.6 seconds. Ultra-fast 70 kW DC charging replenishes 10% to 80% battery in 40 minutes, adding 150 km of driving range in 15 minutes. Advanced V2V (Vehicle-to-Vehicle) and V2L (Vehicle-to-Load 3.3 kW) charging technology transforms the vehicle into a mobile power bank.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/360',
-      format: 'webp',
-      defaultColor: 'pure-grey',
-      colors: [
-        { id: 'pure-grey', name: 'Pure Grey', hex: '#696A73' }
-      ]
-    },
     colors: [
       { id: 'pure-grey', name: 'Pure Grey Dual Tone', hex: '#696A73', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp' },
       { id: 'empowered-oxide', name: 'Empowered Oxide Dual Tone', hex: '#BBBCB5', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp' },
@@ -6207,15 +5908,6 @@ export const CARS = [
     waitingPeriod: '4 - 10 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/citrine-yellow.webp',
     summary: 'The Mahindra XUV 3XO thoroughly disrupts India’s sub-4 metre compact SUV category by democratizing luxury features previously reserved for vehicles twice its price. It introduces the segment’s first and largest Panoramic Skyroof, full Level 2 ADAS (featuring radar and camera systems with 10 proactive safety features like adaptive cruise control with stop-and-go, lane keep assist, and autonomous emergency braking), 360-degree surround-view camera with blind view monitor, and segment-exclusive dual-zone automatic climate control. Engine prowess is class-leading: 1.2L mStallion TGDi Turbo Petrol churning out 130 PS and 230 Nm (fastest in segment: 0-60 km/h in 4.5s), 1.2L TCMPFi Turbo Petrol (111 PS / 200 Nm), and 1.5L CRDe Turbo Diesel (117 PS / 300 Nm). Transmission choices include a smooth 6-speed manual and a world-renowned AISIN 6-speed torque converter automatic.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/360',
-      format: 'webp',
-      defaultColor: 'citrine-yellow',
-      colors: [
-        { id: 'citrine-yellow', name: 'Citrine Yellow', hex: '#DDCD3D' }
-      ]
-    },
     colors: [
       { id: 'citrine-yellow', name: 'Citrine Yellow Metallic', hex: '#DDCD3D', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/citrine-yellow.webp' },
       { id: 'dune-beige', name: 'Dune Beige', hex: '#9D987B', image: 'https://ik.imagekit.io/2908vvlod/cars/xuv-3xo/colors/dune-beige.webp' },
@@ -6394,25 +6086,6 @@ export const CARS = [
     waitingPeriod: '4 - 12 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
     summary: 'The undisputed king of the mid-size SUV segment redefined in its latest facelift with a commanding parametric black-chrome grille, continuous full-width Horizon LED DRLs, quad-beam LED headlamps, twin 10.25-inch curved cockpit displays, and 70+ advanced connected safety features.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta/360',
-      format: 'webp',
-      defaultColor: 'robust-emerald-pearl',
-      colors: [
-        { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831' },
-        { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'titan-grey', name: 'Ecotronic Grey', hex: '#545B62' },
-        { id: 'titan-grey-matte', name: 'Ecotronic Grey Matte', hex: '#61666B' },
-        { id: 'ranger-khaki', name: 'Ranger Khaki', hex: '#556857' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'abyss-black-matte', name: 'Titanium Black Matte (Knight Edition)', hex: '#1A1B1E' },
-        { id: 'king-abyss-black-matte', name: 'King Limited Edition (Black Matte & Red Calipers)', hex: '#141517' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'robust-emerald-pearl', name: 'Robust Emerald Pearl', hex: '#173831', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp' },
       { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/abyss-black/1.webp' },
@@ -6602,21 +6275,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/shadow-grey/1.webp',
     summary: 'The track-honed iteration of India’s benchmark SUV engineered for automotive enthusiasts. Featuring an exclusive WRC-inspired front bumper with red aerodynamic accents, signature N Line honeycomb grille, dual twin-tip performance exhaust with tuned sound, firmer damper settings, weighted steering rack, and 18-inch diamond-cut alloys with red brake calipers. Inside, an all-black cockpit with red stitching, metal pedals, dual dashcam, and Level 2 ADAS suite.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360',
-      format: 'webp',
-      defaultColor: 'shadow-grey',
-      colors: [
-        { id: 'shadow-grey', name: 'Shadow Grey (Exclusive N Line)', hex: '#4C5156' },
-        { id: 'thunder-blue', name: 'Thunder Blue (Signature N Line)', hex: '#1B3B8A' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'abyss-black', name: 'Titanium Black (Abyss Black)', hex: '#0D0E10' },
-        { id: 'abyss-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'shadow-grey', name: 'Shadow Grey (Exclusive N Line)', hex: '#4C5156', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/shadow-grey/1.webp' },
       { id: 'thunder-blue', name: 'Thunder Blue (Signature N Line)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/creta-n-line/360/thunder-blue/1.webp' },
@@ -6724,21 +6382,6 @@ export const CARS = [
     waitingPeriod: '4 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/amazon-grey/1.webp',
     summary: 'Hyundai’s flagship luxury SUV designed to challenge European luxury crossovers. Built on the extended long-wheelbase (LWB) platform with a commanding 2,755 mm wheelbase, the Tucson features iconic Parametric Jewel hidden LED daytime running lamps seamlessly integrated into a dark chrome grille. Powertrains include a refined Nu 2.0L Petrol with 6-speed AT and a potent 186 PS / 416 Nm R 2.0L VGT Diesel with 8-speed AT and HTRAC All-Wheel Drive featuring Multi-Terrain Modes (Snow, Mud, Sand). Inside, experience dual 10.25-inch floating displays, shift-by-wire push-button transmission controls, voice-enabled smart panoramic sunroof, 8-speaker Bose audio, heated & ventilated memory seats, passenger walk-in device, and comprehensive Level 2 Hyundai SmartSense ADAS.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360',
-      format: 'webp',
-      defaultColor: 'amazon-grey',
-      colors: [
-        { id: 'amazon-grey', name: 'Amazon Grey (Hero Color)', hex: '#4E5452' },
-        { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7' },
-        { id: 'phantom-black', name: 'Abyss Black Pearl', hex: '#0D0E10' },
-        { id: 'starry-night', name: 'Starry Night', hex: '#1B2430' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
-        { id: 'fiery-red-dual-tone', name: 'Fiery Red with Phantom Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'amazon-grey', name: 'Amazon Grey (Hero Color)', hex: '#4E5452', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/amazon-grey/1.webp' },
       { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/tucson/360/polar-white/1.webp' },
@@ -6859,24 +6502,6 @@ export const CARS = [
     waitingPeriod: '4 - 10 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white/1.webp',
     summary: 'The all-new Hyundai BAYON is Hyundai’s latest intelligent urban crossover SUV positioned between the Venue and Creta. Featuring bold crossover proportions with signature arrow-shaped LED daytime running lights, dual LED projector lamps, wide gloss-black parametric grille, and connecting LED tail lamps with an aerodynamic rear spoiler. Inside, the cabin features dual integrated 31.24 cm (12.3-inch) curved panoramic displays accelerated by NVIDIA ccNC architecture with Generative AI voice assistant, voice-controlled smart panoramic sunroof, Bose Premium 8-speaker sound system with subwoofer, ventilated front seats, electric 8-way driver seat, factory-fitted dual dashcam, and Hyundai SmartSense Level 2 Pro ADAS with 23 autonomous safety features including Highway Driving Assist and Navigation-based Smart Cruise Control.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360',
-      format: 'webp',
-      defaultColor: 'atlas-white',
-      colors: [
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'ecotronic-grey', name: 'Ecotronic Grey', hex: '#545B62' },
-        { id: 'golden-bronze', name: 'Golden Bronze', hex: '#8D6942' },
-        { id: 'classy-blue', name: 'Classy Blue', hex: '#1E3A5F' },
-        { id: 'titanium-black-matte', name: 'Titanium Black Matte', hex: '#1A1B1E' },
-        { id: 'classy-blue-matte', name: 'Classy Blue Matte', hex: '#2B3D52' },
-        { id: 'atlas-white-black-roof', name: 'Atlas White with Titanium Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
-        { id: 'fiery-red-black-roof', name: 'Fiery Red with Titanium Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/atlas-white/1.webp' },
       { id: 'titanium-black', name: 'Titanium Black', hex: '#0D0E10', image: 'https://ik.imagekit.io/2908vvlod/cars/bayon/360/titanium-black/1.webp' },
@@ -7052,18 +6677,6 @@ export const CARS = [
     waitingPeriod: '2 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/gravity-gold-matte/1.webp',
     summary: 'The internationally acclaimed World Car of the Year, Hyundai IONIQ 5 is built on the revolutionary Electric Global Modular Platform (E-GMP) featuring an ultra-fast 800V charging architecture (10% to 80% charge in just 18 minutes on a 350 kW DC charger). Powered by a permanent magnet synchronous motor delivering rear-wheel-drive dynamics with up to 228.5 PS / 350 Nm and an ARAI-certified range of up to 631 km. The cabin redefines automotive interiors as a customizable Smart Living Space with eco-processed leather, a movable Universal Island sliding console, front relaxation seats with calf support, fixed glass Vision Roof, Vehicle-to-Load (V2L) bidirectional power supply up to 3.6 kW, and Hyundai SmartSense Level 2 ADAS with 21 advanced driver assistance features.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360',
-      format: 'webp',
-      defaultColor: 'gravity-gold-matte',
-      colors: [
-        { id: 'gravity-gold-matte', name: 'Gravity Gold Matte (Hero Color)', hex: '#B59A7A' },
-        { id: 'optic-white', name: 'Optic White', hex: '#F5F6F8' },
-        { id: 'midnight-black-pearl', name: 'Midnight Black Pearl', hex: '#0E1012' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#52565A' }
-      ]
-    },
     colors: [
       { id: 'gravity-gold-matte', name: 'Gravity Gold Matte (Hero Color)', hex: '#B59A7A', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/gravity-gold-matte/1.webp' },
       { id: 'optic-white', name: 'Optic White', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/ioniq-5/360/optic-white/1.webp' },
@@ -7138,22 +6751,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue/1.webp',
     summary: 'The Hyundai Venue N Line brings World Rally Championship (WRC) motorsport pedigree to the compact SUV segment. Powered by a punchy 1.0L Kappa Turbo GDi petrol engine producing 120 PS and 172 Nm of torque, it is paired with either a slick 6-speed manual or an ultra-responsive 7-speed Dual Clutch Transmission (7DCT) equipped with steering-mounted paddle shifters. Engineered for enthusiastic drivers, the Venue N Line features a sport-tuned suspension with firmer damping for razor-sharp handling, weighted steering feedback, all-4 disc brakes with striking red calipers, and a dual twin-tip performance exhaust tuned to deliver an intoxicating acoustic soundtrack. Inside, the race-inspired cabin boasts all-black leatherette upholstery with red contrast stitching, embossed N branding, sunrise red ambient lighting, sporty brushed metal pedals, and a bespoke N-badged steering wheel and gear shifter. In its range-topping N10 trim, it elevates technology with dual 12.3-inch curved panoramic displays running the next-gen NVIDIA ccNC platform, Bose 8-speaker audio, smart aroma diffuser, front ventilated seats, 4-way power driver seat, factory dual dashcam, voice-controlled sunroof, and a comprehensive Level 2 Hyundai SmartSense ADAS suite with Smart Cruise Control Stop & Go, Forward Collision Avoidance, and 360° Surround View Monitor.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360',
-      format: 'webp',
-      defaultColor: 'hazel-blue',
-      colors: [
-        { id: 'hazel-blue', name: 'Thunder Blue (Hazel Blue)', hex: '#1B3B8A' },
-        { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7' },
-        { id: 'abyss-black', name: 'Shadow Black (Abyss Black)', hex: '#0D0E10' },
-        { id: 'dragon-red', name: 'Dragon Red', hex: '#B71C1C' },
-        { id: 'titan-grey', name: 'Titan Grey', hex: '#545B62' },
-        { id: 'hazel-blue-dual-tone', name: 'Thunder Blue with Shadow Black Roof', hex: 'linear-gradient(135deg, #1B3B8A 60%, #0D0E10 60%)' },
-        { id: 'atlas-white-dual-tone', name: 'Atlas White with Shadow Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' },
-        { id: 'dragon-red-dual-tone', name: 'Dragon Red with Shadow Black Roof', hex: 'linear-gradient(135deg, #B71C1C 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'hazel-blue', name: 'Thunder Blue (Hazel Blue)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/hazel-blue/1.webp' },
       { id: 'atlas-white', name: 'Atlas White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/venue-n-line/360/atlas-white/1.webp' },
@@ -7272,21 +6869,6 @@ export const CARS = [
     waitingPeriod: '2 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/thunder-blue/1.webp',
     summary: 'The Hyundai i20 N Line brings authentic World Rally Championship (WRC) motorsport excitement to India’s premium hatchback category. Powered by an enthusiastic 1.0L Kappa Turbo GDi petrol engine churning out 120 PS and 172 Nm of peak torque, it offers drivers the choice of an engaging 6-speed manual transmission or a lightning-fast 7-speed Dual Clutch Transmission (7DCT) with steering-mounted paddle shifters. Engineered for purists, the i20 N Line features a motorsport-tuned suspension with 30% stiffer damping for flat, responsive cornering, calibrated heavy-feel steering for sharp directional changes, all-4 disc brakes with striking red front calipers, and a signature twin-tip sports exhaust that barks with a throaty exhaust note. The cockpit is drenched in performance aesthetics with chequered-flag leatherette upholstery, red contrast stitching, red ambient mood lighting, sporty brushed metal pedals, and bespoke 3-spoke N steering wheel and N-embossed gear lever. High-end convenience is fully served by a 26.03 cm (10.25") HD infotainment screen with Apple CarPlay & Android Auto, Bose Premium 7-speaker sound system with subwoofer, voice-enabled smart electric sunroof, wireless charging pad, Bluelink connectivity, and standard 6 airbags.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360',
-      format: 'webp',
-      defaultColor: 'thunder-blue',
-      colors: [
-        { id: 'thunder-blue', name: 'Thunder Blue (Hero Signature Shade)', hex: '#1B3B8A' },
-        { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7' },
-        { id: 'abyss-black', name: 'Abyss Black Pearl', hex: '#0D0E10' },
-        { id: 'fiery-red', name: 'Fiery Red', hex: '#B71C1C' },
-        { id: 'starry-night', name: 'Starry Night (Midnight Navy Blue)', hex: '#1C2536' },
-        { id: 'titan-grey', name: 'Titan Grey Metallic', hex: '#545B62' },
-        { id: 'polar-white-dual-tone', name: 'Polar White with Phantom Black Roof', hex: 'linear-gradient(135deg, #F4F5F7 60%, #0D0E10 60%)' }
-      ]
-    },
     colors: [
       { id: 'thunder-blue', name: 'Thunder Blue (Hero Signature Shade)', hex: '#1B3B8A', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/thunder-blue/1.webp' },
       { id: 'polar-white', name: 'Polar White', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/i20-n-line/360/polar-white/1.webp' },
@@ -7424,24 +7006,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/pewter-olive/1.webp',
     summary: 'The all-new 2025–2026 Kia Seltos redefines the mid-size SUV benchmark with dominant styling, reinforced K3 platform engineering, and a certified 5-Star Bharat NCAP safety rating (scoring 76.7 out of 81 points). Available with three refined powertrains: the potent Smartstream 1.5L Turbo GDi petrol producing a class-leading 160 PS and 253 Nm paired with a 7-speed Dual Clutch Transmission (7DCT) or 6-speed iMT, a silky 1.5L naturally aspirated petrol with 6MT / Smartstream IVT automatic, and an efficient 1.5L CRDi VGT Diesel producing 116 PS and 250 Nm paired with 6-speed torque converter automatic or 6iMT. The progressive cabin showcases the Command-Centric Trinity Panoramic Display panel (dual seamless 10.25-inch or 12.3-inch displays), a boundless dual-pane panoramic sunroof, immersive Bose Premium 8-speaker audio, 64-color ambient mood lighting, dual-zone FATC with 5-inch digital climate touch control, front ventilated seats with 8-way power adjust and memory/relaxation position, and standard 6 airbags with all-4 disc brakes. Its segment-leading Level 2+ ADAS suite features 28 autonomous safety functions including Forward Collision-Avoidance Assist with Junction Crossing & Turning, Smart Cruise Control with Stop & Go, 360° Surround View Monitor, and Blind View Monitor.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360',
-      format: 'webp',
-      defaultColor: 'pewter-olive',
-      colors: [
-        { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343' },
-        { id: 'frost-blue', name: 'Frost Blue', hex: '#66879B' },
-        { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A' },
-        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
-        { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8' },
-        { id: 'gravity-gray', name: 'Gravity Gray', hex: '#4F5357' },
-        { id: 'magma-red', name: 'Magma Red', hex: '#A8141D' },
-        { id: 'ivory-silver-gloss', name: 'Ivory Silver Gloss', hex: '#8E9297' },
-        { id: 'morning-haze', name: 'Morning Haze', hex: '#86919B' },
-        { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E' }
-      ]
-    },
     colors: [
       { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/pewter-olive/1.webp' },
       { id: 'frost-blue', name: 'Frost Blue', hex: '#66879B', image: 'https://ik.imagekit.io/2908vvlod/cars/seltos/360/frost-blue/1.webp' },
@@ -7572,24 +7136,6 @@ export const CARS = [
     waitingPeriod: '3 - 6 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp',
     summary: 'The latest Kia Sonet facelift redefines the compact SUV benchmark with an aggressive, wild stance, 6 standard airbags, and an advanced Level 1 ADAS safety suite featuring 10 autonomous functions. Power comes from three versatile and refined engines: a sporty 1.0L Turbo GDi petrol (120 PS / 172 Nm) paired with a 7-speed Dual Clutch Transmission (7DCT) or 6-speed clutchless iMT, a reliable 1.2L Smartstream MPi petrol (83 PS / 115 Nm) with 5MT, and an ultra-torquey 1.5L CRDi VGT Diesel (116 PS / 250 Nm) offered with a 6-speed manual, 6-speed iMT, or smooth 6-speed torque converter automatic. Inside, the high-tech cabin features dual 10.25-inch high-definition connected screens (touchscreen infotainment and digital driver cluster), an electric sunroof, front row ventilated seats with a 4-way power driver seat, a 360° surround view camera with blind view monitor, and a premium 7-speaker Bose sound system.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360',
-      format: 'webp',
-      defaultColor: 'pewter-olive',
-      colors: [
-        { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343' },
-        { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8' },
-        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
-        { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357' },
-        { id: 'imperial-blue', name: 'Imperial Blue', hex: '#1C2E4A' },
-        { id: 'intense-red', name: 'Intense Red', hex: '#A8141D' },
-        { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA' },
-        { id: 'matte-graphite', name: 'Matte Graphite (X-Line Exclusive)', hex: '#3A3C3E' },
-        { id: 'glacier-white-black-roof', name: 'Glacier White Pearl + Aurora Black Pearl', hex: '#EAEBEF' },
-        { id: 'intense-red-black-roof', name: 'Intense Red + Aurora Black Pearl', hex: '#931118' }
-      ]
-    },
     colors: [
       { id: 'pewter-olive', name: 'Pewter Olive (Signature Hero Shade)', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp' },
       { id: 'glacier-white-pearl', name: 'Glacier White Pearl', hex: '#F5F6F8', image: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/glacier-white-pearl/1.webp' },
@@ -7720,20 +7266,6 @@ export const CARS = [
     waitingPeriod: '3 - 8 Weeks',
     heroImage: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/imperial-blue/1.webp',
     summary: 'The Kia Carens redefines three-row family mobility as a progressive Recreational Vehicle (RV), merging the boldness of an SUV with the spacious versatility of an MPV. Standard with the Robust 15 Hi-Safety Package across every single variant—including 6 Airbags, All-Wheel Disc Brakes, ESC, VSM, HAC, Downhill Brake Control (DBC), and Highline TPMS. Power comes from four refined powertrain options: an energetic 1.5L Turbo GDi petrol (160 PS / 253 Nm) with 7DCT or 6iMT, a dependable 1.5L Smartstream naturally aspirated petrol (115 PS / 144 Nm) with 6MT, a punchy 1.5L CRDi VGT Diesel (116 PS / 250 Nm) with 6MT, 6iMT or 6-speed torque converter automatic, and a factory-fitted Bi-Fuel 1.5L CNG option delivering exceptional fuel efficiency. The lavish cabin offers 6-seater (Captain Seats) or 7-seater configurations, world-first One-Touch Easy Electric 2nd-Row Tumble, roof-flushed diffused AC vents for all three rows, 10.25-inch HD Touchscreen with Kia Connect, Bose 8-Speaker Audio, ventilated front seats, and SkyLight electric sunroof.',
-    spin360: {
-      totalFrames: 36,
-      folder: 'https://ik.imagekit.io/2908vvlod/cars/carens/360',
-      format: 'webp',
-      defaultColor: 'imperial-blue',
-      colors: [
-        { id: 'imperial-blue', name: 'Imperial Blue (Signature Hero Shade)', hex: '#1C2E4A' },
-        { id: 'pewter-olive', name: 'Pewter Olive', hex: '#4E5343' },
-        { id: 'aurora-black-pearl', name: 'Aurora Black Pearl', hex: '#0F1012' },
-        { id: 'gravity-grey', name: 'Gravity Grey', hex: '#4F5357' },
-        { id: 'sparkling-silver', name: 'Sparkling Silver', hex: '#C5C7CA' },
-        { id: 'clear-white', name: 'Clear White', hex: '#F5F6F8' }
-      ]
-    },
     colors: [
       { id: 'imperial-blue', name: 'Imperial Blue (Signature Hero Shade)', hex: '#1C2E4A', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/imperial-blue/1.webp' },
       { id: 'pewter-olive', name: 'Pewter Olive', hex: '#4E5343', image: 'https://ik.imagekit.io/2908vvlod/cars/carens/360/pewter-olive/1.webp' },
@@ -8106,278 +7638,192 @@ export const CARS = [
       "id": "toyota-innova-hycross",
       "name": "Toyota Innova Hycross",
       "brand": "Toyota",
-      "tagline": "The Flagship Self-Charging Hybrid MPV with Ottoman Seats & ADAS",
-      "launchDate": "Updated 2024 (GX(O) & ZX(O))",
+      "tagline": "India's Premier Luxury Hybrid MPV with Segment-First Ottoman Lounge",
+      "launchDate": "2023 (Updated 2024 GX(O))",
       "bodyType": "MPV",
       "fuelTypes": [
-          "Petrol",
-          "Hybrid"
+          "Hybrid",
+          "Petrol"
       ],
-      "priceRange": "₹19.53 - ₹31.84 Lakh",
-      "minPrice": 1953000,
-      "maxPrice": 3184000,
-      "safetyRating": "5.0 ★ (Expected Bharat NCAP / ASEAN NCAP 5-Star)",
+      "priceRange": "₹19.77 - ₹30.98 Lakh",
+      "minPrice": 1977000,
+      "maxPrice": 3098000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 35.1/36, Child 44.0/49)",
       "groundClearance": "185 mm",
       "bootSpace": "300 L (Expandable to 991 L)",
       "waitingPeriod": "3 - 6 Months",
-      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp",
-      "summary": "The Innova Hycross is Toyota’s flagship multi-purpose vehicle built on the high-rigidity TNGA-C monocoque platform. Featuring a 2.0L 5th-Gen Self-Charging Strong Hybrid powertrain delivering an ARAI-certified 21.19 kmpl, Level-2 Toyota Safety Sense ADAS, a dual-pane panoramic sunroof, 10.1-inch floating touchscreen with Apple CarPlay, and electrically powered Ottoman captain seats with extended leg support.",
-      "spin360": {
-          "totalFrames": 36,
-          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/360",
-          "format": "webp",
-          "defaultColor": "blackish-ageha-glass-flake",
-          "colors": [
-              {
-                  "id": "blackish-ageha-glass-flake",
-                  "name": "Blackish Ageha Glass Flake",
-                  "hex": "#1B2C33"
-              }
-          ]
-      },
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp",
+      "summary": "The Toyota Innova Hycross is India's most advanced luxury MPV built on the TNGA monocoque platform. Featuring a 5th-generation self-charging strong hybrid electric powertrain delivering an astonishing 21.1 km/l efficiency, it offers powered Ottoman captain lounge seats, a massive panoramic sunroof, ADAS Level 2 safety suite (Toyota Safety Sense), and 10.1-inch floating touchscreen with 9-speaker JBL audio.",
       "colors": [
-          {
-              "id": "blackish-ageha-glass-flake",
-              "name": "Blackish Ageha Glass Flake",
-              "hex": "#1B2C33",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp"
-          },
           {
               "id": "platinum-white-pearl",
               "name": "Platinum White Pearl",
-              "hex": "#F1F3F5",
+              "hex": "#EBECE8",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp"
           },
           {
-              "id": "silver-metallic",
-              "name": "Silver Metallic",
-              "hex": "#CBD3D8",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/silver-metallic.webp"
+              "id": "attitude-black",
+              "name": "Attitude Black",
+              "hex": "#0E0F11",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/attitude-black.webp"
           },
           {
-              "id": "avant-garde-bronze-metallic",
-              "name": "Avant-garde Bronze Metallic",
-              "hex": "#63584E",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/avant-garde-bronze-metallic.webp"
+              "id": "avant-garde-bronze",
+              "name": "Avant-Garde Bronze Metallic",
+              "hex": "#575249",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/avant-garde-bronze.webp"
           },
           {
-              "id": "attitude-black-mica",
-              "name": "Attitude Black Mica",
-              "hex": "#111315",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/attitude-black-mica.webp"
+              "id": "blackish-ageha-glass-flake",
+              "name": "Blackish Ageha Glass Flake",
+              "hex": "#1B2B34",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp"
+          },
+          {
+              "id": "sparkling-black-crystal-shine",
+              "name": "Sparkling Black Crystal Shine",
+              "hex": "#1C1C21",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/sparkling-black-crystal-shine.webp"
           },
           {
               "id": "super-white",
               "name": "Super White",
-              "hex": "#FFFFFF",
+              "hex": "#F7F7F7",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/super-white.webp"
           }
       ],
       "gallery": [
           {
-              "id": "front_dynamic_stance",
-              "title": "Imposing SUV-Inspired Front Stance",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_dynamic_stance.webp"
+              "id": "exterior-front",
+              "title": "Muscular SUV-Inspired Front Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/exterior-front.webp"
           },
           {
-              "id": "front_hexagonal_grille",
-              "title": "Hexagonal Chrome Grille & Tri-Eye LED Headlamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_hexagonal_grille.webp"
+              "id": "exterior-profile",
+              "title": "Aerodynamic Luxury Silhouette",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/exterior-profile.webp"
           },
           {
-              "id": "side_profile_stance",
-              "title": "Executive 4.75m Side Profile & Alloy Wheels",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/side_profile_stance.webp"
+              "id": "ottoman-seats",
+              "title": "Powered Ottoman Captain Seats with Leg Rests",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/ottoman-seats.webp"
           },
           {
-              "id": "rear_sculpted_design",
-              "title": "Sculpted Rear Design with LED Combination Lamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/rear_sculpted_design.webp"
+              "id": "panoramic-sunroof",
+              "title": "Panoramic Sunroof with Ambient Mood Lighting",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/panoramic-sunroof.webp"
           },
           {
-              "id": "left_front_profile",
-              "title": "High Bonnet Line with Muscular Character Lines",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/left_front_profile.webp"
+              "id": "hybrid-engine",
+              "title": "2.0L TNGA 5th Gen Self-Charging Strong Hybrid",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/hybrid-engine.webp"
           },
           {
-              "id": "luxury_cockpit_dashboard",
-              "title": "Dual-Tone Chestnut Soft-Touch Dashboard Layout",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/luxury_cockpit_dashboard.webp"
+              "id": "e-drive",
+              "title": "E-Drive Transmission with Pure EV Mode",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/e-drive.webp"
           },
           {
-              "id": "floating_infotainment_touchscreen",
-              "title": "10.1-inch Audio Display with Apple CarPlay & JBL 9-Speaker",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/floating_infotainment_touchscreen.webp"
+              "id": "tnga-platform",
+              "title": "TNGA Monocoque High-Rigidity Platform",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/tnga-platform.webp"
           },
           {
-              "id": "digital_tft_instrument_cluster",
-              "title": "7-inch Multi-Information TFT Instrument Display",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/digital_tft_instrument_cluster.webp"
+              "id": "dashboard",
+              "title": "First-Class Soft-Touch Cockpit & 10.1\" Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/dashboard.webp"
           },
           {
-              "id": "steering_wheel_controls",
-              "title": "Leather-Wrapped Steering with ADAS & Audio Controls",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/steering_wheel_controls.webp"
+              "id": "adas",
+              "title": "Toyota Safety Sense (ADAS Level 2 Suite)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/adas.webp"
           },
           {
-              "id": "front_ventilated_seats",
-              "title": "Ventilated Front Seats with 8-Way Power Adjustment",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/front_ventilated_seats.webp"
+              "id": "airbags",
+              "title": "6 SRS Airbags Comprehensive Cabin Protection",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/airbags.webp"
           },
           {
-              "id": "second_row_ottoman_captain_seats",
-              "title": "Powered Ottoman Captain Seats with Leg Rest",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/second_row_ottoman_captain_seats.webp"
+              "id": "connected-car",
+              "title": "Toyota i-Connect 65+ Smart Connected Features",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/connected-car.webp"
           },
           {
-              "id": "modular_boot_space",
-              "title": "Flat-Folding Third Row with Expandable 991L Boot",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/modular_boot_space.webp"
+              "id": "hybrid-lifestyle",
+              "title": "Unrivalled Luxury Meets 21.1 kmpl Hybrid Efficiency",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/gallery/hybrid-lifestyle.webp"
           }
       ],
       "specs": {
-          "engineOptions": "2.0L TNGA 4-Cyl Petrol (172 bhp / 209 Nm) | 2.0L 5th-Gen Strong Hybrid (184 bhp combined)",
-          "transmissions": "Direct Shift CVT (Petrol) & e-CVT (Strong Hybrid)",
-          "dimensions": "4755 mm (L) × 1850 mm (W) × 1795 mm (H)",
-          "wheelbase": "2850 mm",
+          "engine": "1987 cc 4-Cylinder Dual VVT-i Petrol + Electric Motor",
+          "power": "184 bhp combined (150 bhp Engine + 111 bhp Motor)",
+          "torque": "188 Nm @ 4400-5200 rpm (Engine) + 206 Nm (Motor)",
+          "transmission": "e-CVT (Hybrid) / Direct Shift CVT (Petrol)",
+          "drivetrain": "Front-Wheel Drive (FWD)",
+          "mileage": "21.1 km/l (Hybrid) / 16.13 km/l (Petrol)",
           "fuelTank": "52 Litres",
-          "seatingCapacity": "7-Seater (Captain Seats) & 8-Seater (Bench Seat)"
+          "dimensions": "4755 mm L x 1845 mm W x 1785 mm H",
+          "wheelbase": "2850 mm",
+          "brakes": "Discs Front & Rear",
+          "suspension": "MacPherson Strut Front / Torsion Beam Rear",
+          "seating": "7 or 8 Seater configurations"
       },
       "variants": [
           {
-              "name": "GX 2.0 Petrol Automatic (CVT) 7 STR",
-              "exShowroom": 1953000,
+              "name": "GX 7-Str Petrol CVT",
+              "price": 1977000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "2.0L TNGA Petrol (172 bhp)",
-              "mileage": "16.13 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "16-inch Alloy Wheels",
-                  "LED Headlamps & Tail Lamps",
-                  "8-inch Touchscreen Infotainment",
-                  "Push Button Start/Stop",
-                  "Vehicle Stability Control (VSC)",
-                  "Hill Start Assist (HAC)"
-              ]
+              "transmission": "Automatic",
+              "features": "16\" Alloys, LED Reflector Lamps, 8\" Touchscreen, Apple CarPlay/Android Auto, Push Button Start"
           },
           {
-              "name": "GX 2.0 Petrol Automatic (CVT) 8 STR",
-              "exShowroom": 1958000,
+              "name": "GX 8-Str Petrol CVT",
+              "price": 1982000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "2.0L TNGA Petrol (172 bhp)",
-              "mileage": "16.13 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "8-Seater Bench with 60:40 Split",
-                  "16-inch Alloy Wheels",
-                  "8-inch Touchscreen Audio",
-                  "Reverse Camera",
-                  "VSC & Hill Start Assist"
-              ]
+              "transmission": "Automatic",
+              "features": "8-Seater Bench Configuration, 16\" Alloys, Dual Airbags, ESP, Hill-Start Assist"
           },
           {
-              "name": "GX (O) 2.0 Petrol Automatic (CVT) 8 STR",
-              "exShowroom": 2084000,
+              "name": "GX(O) 7-Str Petrol CVT",
+              "price": 2099000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "2.0L TNGA Petrol (172 bhp)",
-              "mileage": "16.13 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Front LED Fog Lamps",
-                  "Rear Sunshades",
-                  "Dual-Tone Chestnut Interior",
-                  "Automatic Climate Control",
-                  "Rear Defogger"
-              ]
+              "transmission": "Automatic",
+              "features": "10.1\" Touchscreen, Wireless Apple CarPlay, Auto Climate Control, Rear Sunshades, 360 Camera"
           },
           {
-              "name": "GX (O) 2.0 Petrol Automatic (CVT) 7 STR",
-              "exShowroom": 2097000,
+              "name": "GX(O) 8-Str Petrol CVT",
+              "price": 2113000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "2.0L TNGA Petrol (172 bhp)",
-              "mileage": "16.13 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST PETROL PICK",
-              "keyFeatures": [
-                  "10.1-inch Floating Touchscreen",
-                  "Wireless Apple CarPlay",
-                  "360-Degree Panoramic View Monitor",
-                  "Front Parking Sensors",
-                  "Dual-Tone Chestnut Soft-Touch Dashboard"
-              ]
+              "transmission": "Automatic",
+              "features": "8-Seater with 60:40 Split Bench, Front Parking Sensors, Rear Defogger, Premium Fabric Seats"
           },
           {
-              "name": "VX Hybrid 2.0 Automatic (e-CVT) 7 STR",
-              "exShowroom": 2676000,
+              "name": "VX Hybrid 7-Str e-CVT",
+              "price": 2572000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.0L Strong Hybrid (184 bhp combined)",
-              "mileage": "21.19 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Self-Charging Strong Hybrid Powertrain (21.19 kmpl)",
-                  "Paddle Shifters",
-                  "17-inch Alloy Wheels",
-                  "Full LED Headlamps with Position Lamps",
-                  "Auto Electric Parking Brake (EPB) with Auto Hold",
-                  "Acoustic Windshield Glass"
-              ]
+              "transmission": "Automatic",
+              "features": "Self-Charging Hybrid, Full LED Headlamps, Paddle Shifters, 6 Airbags, 360 Panoramic View Monitor"
           },
           {
-              "name": "VX (O) Hybrid 2.0 Automatic (e-CVT) 7 STR",
-              "exShowroom": 2877000,
+              "name": "VX(O) Hybrid 7-Str e-CVT",
+              "price": 2769000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.0L Strong Hybrid (184 bhp combined)",
-              "mileage": "21.19 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST HYBRID VFM PICK",
-              "keyFeatures": [
-                  "Dual-Pane Panoramic Sunroof with Mood Lighting",
-                  "10.1-inch Display Audio",
-                  "Wireless Apple CarPlay",
-                  "6 Airbags Standard",
-                  "Front LED Fog Lamps",
-                  "360 Panoramic View Monitor"
-              ]
+              "transmission": "Automatic",
+              "features": "Panoramic Sunroof, 10.1\" Screen, Wireless Apple CarPlay, LED Fog Lamps, Chrome Accents"
           },
           {
-              "name": "ZX Hybrid 2.0 Automatic (e-CVT) 7 STR",
-              "exShowroom": 3120000,
+              "name": "ZX Hybrid 7-Str e-CVT",
+              "price": 3014000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.0L Strong Hybrid (184 bhp combined)",
-              "mileage": "21.19 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Powered Ottoman 2nd-Row Captain Seats with Leg Rest",
-                  "Ventilated Front Seats",
-                  "Dark Chrome 18-inch Metallic Alloy Wheels",
-                  "JBL 9-Speaker Premium Sound System with Subwoofer",
-                  "Dual-Zone Automatic Climate Control (Front & Rear)",
-                  "Electrochromic IRVM"
-              ]
+              "transmission": "Automatic",
+              "features": "Powered Ottoman Seats, Ventilated Front Seats, 18\" Super Chrome Alloys, 9-Speaker JBL Audio"
           },
           {
-              "name": "ZX (O) Hybrid 2.0 Automatic (e-CVT) 7 STR",
-              "exShowroom": 3184000,
+              "name": "ZX(O) Hybrid 7-Str e-CVT",
+              "price": 3098000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.0L Strong Hybrid (184 bhp combined)",
-              "mileage": "21.19 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Toyota Safety Sense (TSS) Level-2 ADAS",
-                  "Dynamic Radar Cruise Control (DRCC)",
-                  "Lane Trace Assist (LTA)",
-                  "Pre-Collision System (PCS)",
-                  "Blind Spot Monitor (BSM) & Rear Cross Traffic Alert",
-                  "Auto High Beam (AHB)"
-              ]
+              "transmission": "Automatic",
+              "features": "Toyota Safety Sense ADAS (Lane Keep Assist, ACC, Pre-Collision, Blind Spot), Ottoman Lounge, JBL Audio"
           }
       ]
   },
@@ -8401,19 +7847,6 @@ export const CARS = [
       "waitingPeriod": "1 - 3 Months",
       "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/platinum-white-pearl.webp",
       "summary": "The Toyota Fortuner is India's reigning full-size 7-seater SUV, celebrated for legendary reliability, heavy-duty body-on-frame chassis, and formidable 4x4 off-road capabilities. Powered by a brawny 2.8L D-4D diesel generating 201 bhp and an immense 500 Nm of torque, it features an electronic drive control (High/Low range), auto limited-slip differential (LSD), ventilated leather seats, 11-speaker JBL audio, and active traction control.",
-      "spin360": {
-          "totalFrames": 36,
-          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/360",
-          "format": "webp",
-          "defaultColor": "super-white",
-          "colors": [
-              {
-                  "id": "super-white",
-                  "name": "Super White",
-                  "hex": "#FFFFFF"
-              }
-          ]
-      },
       "colors": [
           {
               "id": "platinum-white-pearl",
@@ -8441,217 +7874,149 @@ export const CARS = [
           },
           {
               "id": "avant-garde-bronze",
-              "name": "Avant-Garde Bronze Metallic",
-              "hex": "#BFB3A7",
+              "name": "Avant-Garde Bronze",
+              "hex": "#5A5348",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/avant-garde-bronze.webp"
           },
           {
               "id": "silver-metallic",
               "name": "Silver Metallic",
-              "hex": "#CED4E1",
+              "hex": "#C0C0C0",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/colors/silver-metallic.webp"
           }
       ],
       "gallery": [
           {
-              "id": "gr_banner_front",
-              "title": "Aggressive GR Sport Front Stance & Aerodynamic Silhouette",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_front.webp"
+              "id": "gr-front",
+              "title": "GR Sport Aerodynamic Front Fascia",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr-front.webp"
           },
           {
-              "id": "gr_banner_exterior",
-              "title": "Dynamic 4.79m Profile with Precision 18-inch Alloys",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_exterior.webp"
+              "id": "gr-exterior",
+              "title": "Dynamic Muscular Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr-exterior.webp"
           },
           {
-              "id": "gr_banner_rear",
-              "title": "Sculpted Rear Design with Roof Spoiler & LED Taillamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_rear.webp"
+              "id": "led-headlamps",
+              "title": "Bi-Beam LED Headlamps with DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/led-headlamps.webp"
           },
           {
-              "id": "gr_banner_interior",
-              "title": "Driver-Focused All-Black Cockpit & Premium Leather Upholstery",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_interior.webp"
+              "id": "alloys",
+              "title": "18\" Super Chrome Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/alloys.webp"
           },
           {
-              "id": "gr_banner_lifestyle",
-              "title": "Unrivalled All-Terrain & Expedition Touring Capability",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/gr_banner_lifestyle.webp"
+              "id": "led-tail-lamps",
+              "title": "Sleek Split LED Rear Combination Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/led-tail-lamps.webp"
           },
           {
-              "id": "bi_beam_led_headlamps",
-              "title": "Bi-Beam LED Projector Headlamps with Integrated LED DRLs",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/bi_beam_led_headlamps.webp"
+              "id": "front-grille",
+              "title": "Trapezoidal Front Grille with Chrome Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/front-grille.webp"
           },
           {
-              "id": "led_rear_combination_lamps",
-              "title": "Aero-Fin Designed LED Rear Combination Taillamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/led_rear_combination_lamps.webp"
+              "id": "jbl-audio",
+              "title": "11-Speaker JBL Premium Sound System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/jbl-audio.webp"
           },
           {
-              "id": "catamaran_front_bumper",
-              "title": "Muscular Catamaran-Style Front Bumper & Tough Skid Plates",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/catamaran_front_bumper.webp"
+              "id": "ventilated-seats",
+              "title": "Ventilated Front Leather Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/ventilated-seats.webp"
           },
           {
-              "id": "ventilated_front_seats",
-              "title": "Front Row Ventilated Perforated Leather Seats",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/ventilated_front_seats.webp"
+              "id": "optitron-cluster",
+              "title": "Optitron Meter & 4.2-inch Color TFT MID",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/optitron-cluster.webp"
           },
           {
-              "id": "smart_touchscreen_audio",
-              "title": "8.0-inch Smart Touchscreen Infotainment with Apple CarPlay & Android Auto",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/smart_touchscreen_audio.webp"
+              "id": "iconnect",
+              "title": "Toyota i-Connect Smart Telematics",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/iconnect.webp"
           },
           {
-              "id": "optitron_meter_cluster",
-              "title": "Optitron Meter Cluster with 4.2-inch TFT Multi-Information Display",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/optitron_meter_cluster.webp"
+              "id": "safety-suite",
+              "title": "7 SRS Airbags, VSC & Hill-Assist Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/safety-suite.webp"
           },
           {
-              "id": "jbl_11_speaker_audio",
-              "title": "11-Speaker JBL Premium Audio System with Subwoofer",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/jbl_11_speaker_audio.webp"
+              "id": "kick-sensor-tailgate",
+              "title": "Power Tailgate with Kick Sensor",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-fortuner/gallery/kick-sensor-tailgate.webp"
           }
       ],
       "specs": {
-          "engineOptions": "2.8L 4-Cyl D-4D Turbo Diesel (201 bhp / 500 Nm) | 2.7L Petrol (164 bhp / 245 Nm)",
-          "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
-          "dimensions": "4795 mm (L) × 1855 mm (W) × 1835 mm (H)",
-          "wheelbase": "2745 mm",
+          "engine": "2755 cc 4-Cylinder D-4D Turbo Diesel / 2694 cc Petrol",
+          "power": "201 bhp @ 3400 rpm (Diesel) / 164 bhp (Petrol)",
+          "torque": "500 Nm @ 1600-2800 rpm (AT) / 420 Nm (MT)",
+          "transmission": "6-Speed Automatic / 6-Speed Manual with iMT",
+          "drivetrain": "4x4 with High/Low Range & Auto LSD / 4x2 RWD",
+          "mileage": "14.4 kmpl (Diesel MT) / 10.3 kmpl (Petrol)",
           "fuelTank": "80 Litres",
-          "seatingCapacity": "7-Seater (Three Rows with Recline)"
+          "dimensions": "4795 mm L x 1855 mm W x 1835 mm H",
+          "wheelbase": "2745 mm",
+          "brakes": "Ventilated Discs Front & Rear",
+          "suspension": "Double Wishbone Front / 4-Link with Coil Spring Rear",
+          "seating": "7 Seater (2+3+2)"
       },
       "variants": [
           {
-              "name": "4x2 2.7 Petrol 5-Speed Manual",
-              "exShowroom": 3343000,
+              "name": "4x2 2.7 Petrol MT",
+              "price": 3343000,
               "fuel": "Petrol",
-              "trans": "Manual",
-              "engine": "2.7L Dual VVT-i (164 bhp)",
-              "mileage": "10.30 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Bi-Beam LED Headlamps with LED DRLs",
-                  "7 Airbags Standard Across All Variants",
-                  "Vehicle Stability Control with Brake Assist",
-                  "Hill Start Assist Control (HAC)",
-                  "Leather-Wrapped Steering Wheel"
-              ]
+              "transmission": "Manual",
+              "features": "LED DRLs, 8\" Touchscreen, Android Auto/Apple CarPlay, 7 Airbags, Cruise Control, Leatherette Seats"
           },
           {
-              "name": "4x2 2.7 Petrol 6-Speed Automatic",
-              "exShowroom": 3476000,
+              "name": "4x2 2.7 Petrol AT",
+              "price": 3502000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "2.7L Dual VVT-i (164 bhp)",
-              "mileage": "10.01 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Paddle Shifters",
-                  "Sequential Shift with Sport Mode",
-                  "Cruise Control",
-                  "8-inch Touchscreen Infotainment",
-                  "Front Ventilated Seats"
-              ]
+              "transmission": "Automatic",
+              "features": "Paddle Shifters, Drive Modes, 8\" Touchscreen, Push Button Start, 7 Airbags, 17\" Alloys"
           },
           {
-              "name": "4x2 2.8 Diesel 6-Speed Manual",
-              "exShowroom": 3540000,
+              "name": "4x2 2.8 Diesel MT",
+              "price": 3593000,
               "fuel": "Diesel",
-              "trans": "Manual",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
-              "mileage": "14.40 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "201 bhp Brawny Diesel Power",
-                  "iMT (Intelligent Manual Transmission)",
-                  "Drive Modes (Eco, Normal, Sport)",
-                  "Auto Limited Slip Differential (Auto-LSD)",
-                  "Electrically Powered Tailgate with Height Memory"
-              ]
+              "transmission": "Manual",
+              "features": "201 bhp 2.8L Diesel, 420 Nm Torque, iMT Technology, VSC, Hill Assist, Ventilated Seats"
           },
           {
-              "name": "4x2 2.8 Diesel 6-Speed Automatic",
-              "exShowroom": 3761000,
+              "name": "4x2 2.8 Diesel AT",
+              "price": 3821000,
               "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
-              "mileage": "14.28 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST VALUE 4x2 PICK",
-              "keyFeatures": [
-                  "Massive 500 Nm Peak Torque",
-                  "Sequential Automatic with Paddle Shifters",
-                  "Ventilated Front Seats (Driver & Co-Driver)",
-                  "18-inch Super Chrome Alloy Wheels",
-                  "Dual-Zone Automatic Climate Control"
-              ]
+              "transmission": "Automatic",
+              "features": "500 Nm Torque, 6-Speed AT with Paddle Shifters, 11-Speaker JBL Audio, Powered Front Seats"
           },
           {
-              "name": "Leader Edition 2.8 Diesel 4x2 Automatic",
-              "exShowroom": 3872000,
+              "name": "Leader Edition 4x2 Diesel AT",
+              "price": 3950000,
               "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
-              "mileage": "14.28 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Dual-Tone Exterior Styling & Black Alloys",
-                  "Front & Rear Bumper Spoilers",
-                  "Wireless Phone Charger",
-                  "Tyre Pressure Monitoring System (TPMS)",
-                  "500 Nm Torque"
-              ]
+              "transmission": "Automatic",
+              "features": "Dual-Tone Contrast Roof, Black Aero Package, Auto Folding Mirrors, TPMS, Wireless Charger"
           },
           {
-              "name": "4x4 2.8 Diesel 6-Speed Manual",
-              "exShowroom": 3935000,
+              "name": "4x4 2.8 Diesel MT",
+              "price": 4003000,
               "fuel": "Diesel",
-              "trans": "Manual",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 420 Nm)",
-              "mileage": "14.00 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Electronic 4x4 Shift-On-The-Fly (High/Low Range)",
-                  "Downhill Assist Control (DAC)",
-                  "Active Traction Control (A-TRC)",
-                  "Lockable Differential System",
-                  "iMT 6-Speed"
-              ]
+              "transmission": "Manual",
+              "features": "Shift-on-the-Fly 4WD, Low/High Transfer Case, Downhill Assist Control (DAC), Auto LSD, 18\" Machine Alloys"
           },
           {
-              "name": "4x4 2.8 Diesel 6-Speed Automatic",
-              "exShowroom": 4198000,
+              "name": "4x4 2.8 Diesel AT",
+              "price": 4232000,
               "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
-              "mileage": "13.80 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST 4x4 TOURING PICK",
-              "keyFeatures": [
-                  "Electronic 4x4 with High & Low Range Transfer Case",
-                  "11-Speaker JBL Premium Audio with Subwoofer",
-                  "Downhill Assist Control (DAC)",
-                  "Active Traction Control (A-TRC)",
-                  "500 Nm Heavy-Duty Torque"
-              ]
+              "transmission": "Automatic",
+              "features": "Top Spec 4x4, 500 Nm Torque, Electronic Diff Lock, 11 JBL Speakers with Subwoofer, Ventilated Seats"
           },
           {
-              "name": "GR-S 4x4 2.8 Diesel Automatic",
-              "exShowroom": 5046000,
+              "name": "GR-S (Gazoo Racing Sport) 4x4 AT",
+              "price": 5046000,
               "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Turbo Diesel (201 bhp / 500 Nm)",
-              "mileage": "13.60 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Gazoo Racing (GR) Tuned Suspension Setup",
-                  "GR Aero Package & Red Brake Calipers",
-                  "Alcantara & Leather Seats with GR Stitching",
-                  "GR Engine Start/Stop Button & Steering Badge",
-                  "11-Speaker JBL Audio System"
-              ]
+              "transmission": "Automatic",
+              "features": "GR Suspension Tuning, GR Aerodynamic Bodykit, All-Black Cabin with Red Stitching, Aluminum Pedals, GR Badging"
           }
       ]
   },
@@ -8659,281 +8024,199 @@ export const CARS = [
       "id": "toyota-hyryder",
       "name": "Toyota Urban Cruiser Hyryder",
       "brand": "Toyota",
-      "tagline": "India's High-Mileage Compact SUV with Strong Hybrid & AWD Capability",
-      "launchDate": "Updated 2024 (Aero Black Edition & Dual-Tone)",
+      "tagline": "India's First Mid-Size Hybrid SUV with AWD & 27.97 kmpl High-Mileage Leadership",
+      "launchDate": "2023 (Updated 2024 Dual-Tone Editions)",
       "bodyType": "SUV",
       "fuelTypes": [
           "Hybrid",
           "Petrol",
           "CNG"
       ],
-      "priceRange": "₹11.31 - ₹20.19 Lakh",
-      "minPrice": 1131000,
+      "priceRange": "₹11.14 - ₹20.19 Lakh",
+      "minPrice": 1114000,
       "maxPrice": 2019000,
-      "safetyRating": "4.0 ★ (Global NCAP Expected 4-Star Safety)",
+      "safetyRating": "4.0 ★ (Global NCAP 4-Star Safety Package)",
       "groundClearance": "210 mm",
-      "bootSpace": "373 L (Hybrid: 265 L)",
+      "bootSpace": "373 L (Hybrid 255 L)",
       "waitingPeriod": "1 - 3 Months",
-      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/speedy-blue.webp",
-      "summary": "The Toyota Urban Cruiser Hyryder brings self-charging strong hybrid technology to the compact SUV segment. Delivering an astounding ARAI mileage of 27.97 kmpl, it features an all-wheel-drive (AWD) NeoDrive petrol option, a dual-pane panoramic sunroof, Head-Up Display (HUD), ventilated front seats, and a 9-inch Smart Play Cast touchscreen with 360-degree camera.",
-      "spin360": {
-          "totalFrames": 36,
-          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/360",
-          "format": "webp",
-          "defaultColor": "speedy-blue",
-          "colors": [
-              {
-                  "id": "speedy-blue",
-                  "name": "Speedy Blue with Midnight Black Roof",
-                  "hex": "#3F79A4"
-              }
-          ]
-      },
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cafe-white.webp",
+      "summary": "The Toyota Urban Cruiser Hyryder is a category-redefining midsize SUV that debuted segment-first Self-Charging Strong Hybrid Electric tech with an astonishing 27.97 km/l fuel efficiency, as well as an exclusive AllGrip Select AWD system for true multi-terrain confidence. Engineered with modern Japanese aesthetics, it comes with panoramic sunroof, head-up display, wireless smartphone charging, and ventilated seats.",
       "colors": [
-          {
-              "id": "speedy-blue",
-              "name": "Speedy Blue Dual Tone",
-              "hex": "#3F79A4",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/speedy-blue.webp"
-          },
           {
               "id": "cafe-white",
               "name": "Cafe White",
-              "hex": "#FFFFFF",
+              "hex": "#F4F4F4",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cafe-white.webp"
+          },
+          {
+              "id": "enticing-silver",
+              "name": "Enticing Silver",
+              "hex": "#BCC0C4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/enticing-silver.webp"
           },
           {
               "id": "gaming-grey",
               "name": "Gaming Grey",
-              "hex": "#636363",
+              "hex": "#4E5258",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/gaming-grey.webp"
           },
           {
-              "id": "sportin-red",
-              "name": "Sportin Red Dual Tone",
-              "hex": "#CD2229",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/sportin-red.webp"
+              "id": "sporting-red",
+              "name": "Sporting Red",
+              "hex": "#B51C29",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/sporting-red.webp"
           },
           {
-              "id": "midnight-black",
-              "name": "Midnight Black",
-              "hex": "#050606",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/midnight-black.webp"
+              "id": "speedy-blue",
+              "name": "Speedy Blue",
+              "hex": "#1E468A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/speedy-blue.webp"
           },
           {
               "id": "cave-black",
               "name": "Cave Black",
-              "hex": "#867860",
+              "hex": "#121214",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cave-black.webp"
           },
           {
-              "id": "enticing-silver",
-              "name": "Enticing Silver Dual Tone",
-              "hex": "#B3B4B5",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/enticing-silver.webp"
+              "id": "cafe-white-midnight-black",
+              "name": "Cafe White with Midnight Black Roof",
+              "hex": "#EAEAEA",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/colors/cafe-white-midnight-black.webp"
           }
       ],
       "gallery": [
           {
-              "id": "front_dynamic_stance",
-              "title": "Urban SUV Front Dynamic Stance",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/front_dynamic_stance.webp"
+              "id": "hybrid-banner",
+              "title": "Self-Charging Strong Hybrid Electric",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/hybrid-banner.webp"
           },
           {
-              "id": "crystal_acrylic_grille",
-              "title": "Crystal Acrylic Grille with Twin LED DRLs",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/crystal_acrylic_grille.webp"
+              "id": "front-styling",
+              "title": "Crystal Acrylic Front Grille with Chrome Garnish",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/front-styling.webp"
           },
           {
-              "id": "side_profile_stance",
-              "title": "Bold 4.36m SUV Profile with 17-inch Alloys",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/side_profile_stance.webp"
+              "id": "touchscreen",
+              "title": "9-inch Smart Play Cast Touchscreen",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/touchscreen.webp"
           },
           {
-              "id": "rear_led_c_lamps",
-              "title": "Sleek Split LED C-Shape Taillamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/rear_led_c_lamps.webp"
+              "id": "wireless-charging",
+              "title": "Wireless Smartphone Qi Charger",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/wireless-charging.webp"
           },
           {
-              "id": "left_quarter_profile",
-              "title": "Sporty Dual-Tone Black Roofline",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/left_quarter_profile.webp"
+              "id": "panoramic-roof",
+              "title": "Segment-Leading Panoramic Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/panoramic-roof.webp"
           },
           {
-              "id": "dual_tone_cockpit",
-              "title": "Black and Brown Leatherette Soft-Touch Dashboard",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/dual_tone_cockpit.webp"
+              "id": "hud",
+              "title": "Color Head-Up Display & 7-inch TFT Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/hud.webp"
           },
           {
-              "id": "touchscreen_smart_play",
-              "title": "9-inch Smart Play Cast Infotainment with Wireless CarPlay",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/touchscreen_smart_play.webp"
+              "id": "front-bumper",
+              "title": "Rugged Dual-Tone Front Skid Plate",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/front-bumper.webp"
           },
           {
-              "id": "digital_driver_display",
-              "title": "7-inch Full Digital Color Instrument Cluster",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/digital_driver_display.webp"
+              "id": "rear-styling",
+              "title": "Signature Split LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/rear-styling.webp"
           },
           {
-              "id": "steering_controls",
-              "title": "Leather Steering Wheel with Cruise & Audio Controls",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/steering_controls.webp"
+              "id": "tail-garnish",
+              "title": "Sporty Rear Door Lid Garnish",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/tail-garnish.webp"
           },
           {
-              "id": "panoramic_sunroof",
-              "title": "Dual-Pane Sliding Panoramic Glass Roof",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/panoramic_sunroof.webp"
+              "id": "alloys",
+              "title": "17-inch Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/alloys.webp"
           },
           {
-              "id": "gear_shifter_console",
-              "title": "e-CVT Drive Selector with EV Mode & Drive Mode Dials",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/gear_shifter_console.webp"
+              "id": "connectivity",
+              "title": "Toyota i-Connect & Voice Assistant",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/connectivity.webp"
           },
           {
-              "id": "high_ground_clearance",
-              "title": "210 mm Ground Clearance for High Obstacle Clearence",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/high_ground_clearance.webp"
+              "id": "all-wheel-drive",
+              "title": "AllGrip Select All-Wheel Drive AWD System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hyryder/gallery/all-wheel-drive.webp"
           }
       ],
       "specs": {
-          "engineOptions": "1.5L Strong Hybrid e-CVT (114 bhp / 27.97 kmpl) | 1.5L K15C NeoDrive Petrol (102 bhp) | 1.5L Factory CNG (26.6 km/kg)",
-          "transmissions": "e-CVT Automatic (Hybrid), 5-Speed Manual & 6-Speed Torque Converter AT",
-          "dimensions": "4365 mm (L) × 1795 mm (W) × 1645 mm (H)",
+          "engine": "1490 cc 3-Cylinder Hybrid / 1462 cc 4-Cylinder Neo Drive Petrol",
+          "power": "114 bhp combined (Hybrid) / 102 bhp (Neo Drive)",
+          "torque": "122 Nm Engine + 141 Nm Motor (Hybrid) / 137 Nm (Neo Drive)",
+          "transmission": "e-CVT (Hybrid) / 5-Speed Manual & 6-Speed Automatic (Neo Drive)",
+          "drivetrain": "FWD / AllGrip Select AWD",
+          "mileage": "27.97 km/l (Hybrid) / 21.12 km/l (Petrol MT) / 26.6 km/kg (CNG)",
+          "fuelTank": "45 Litres / 55L CNG Cylinder",
+          "dimensions": "4365 mm L x 1795 mm W x 1645 mm H",
           "wheelbase": "2600 mm",
-          "fuelTank": "45 Litres (CNG: 55L Water Equivalent)",
-          "seatingCapacity": "5 Persons"
+          "brakes": "Discs Front & Rear",
+          "suspension": "MacPherson Strut Front / Torsion Beam Rear",
+          "seating": "5 Seater"
       },
       "variants": [
           {
-              "name": "E 1.5 NeoDrive Petrol Manual",
-              "exShowroom": 1131000,
+              "name": "E 1.5 Neo Drive MT",
+              "price": 1114000,
               "fuel": "Petrol",
-              "trans": "Manual",
-              "engine": "1.5L K15C DualJet (102 bhp)",
-              "mileage": "21.12 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Vehicle Stability Control (VSC)",
-                  "Hill Hold Assist",
-                  "All 4 Disc Brakes",
-                  "Keyless Smart Entry with Push Start",
-                  "Auto Climate Control"
-              ]
+              "transmission": "Manual",
+              "features": "Projector Headlamps with LED DRLs, Dual Airbags, ESP, Hill Hold Assist, All 4 Power Windows"
           },
           {
-              "name": "S 1.5 NeoDrive Petrol Manual",
-              "exShowroom": 1282000,
+              "name": "S 1.5 Neo Drive MT",
+              "price": 1281000,
               "fuel": "Petrol",
-              "trans": "Manual",
-              "engine": "1.5L K15C DualJet (102 bhp)",
-              "mileage": "21.12 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "7-inch Smart Play Cast Touchscreen",
-                  "Android Auto & Apple CarPlay",
-                  "Rear Parking Camera",
-                  "Cruise Control",
-                  "Steering Mounted Audio Controls"
-              ]
+              "transmission": "Manual",
+              "features": "7\" Touchscreen, Android Auto/Apple CarPlay, Steering Controls, Cruise Control, Reverse Camera"
           },
           {
-              "name": "S 1.5 Factory CNG Manual",
-              "exShowroom": 1371000,
-              "fuel": "CNG",
-              "trans": "Manual",
-              "engine": "1.5L K15C S-CNG (87 bhp)",
-              "mileage": "26.60 km/kg",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST CNG SUV PICK",
-              "keyFeatures": [
-                  "Factory-Fitted CNG Kit (26.60 km/kg)",
-                  "7-inch Touchscreen Audio",
-                  "Rear Camera & Cruise Control",
-                  "Projector Headlamps",
-                  "LED DRLs"
-              ]
-          },
-          {
-              "name": "S 1.5 NeoDrive Petrol 6-Speed AT",
-              "exShowroom": 1417000,
+              "name": "S 1.5 Neo Drive AT",
+              "price": 1401000,
               "fuel": "Petrol",
-              "trans": "Automatic",
-              "engine": "1.5L K15C DualJet (102 bhp)",
-              "mileage": "20.58 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Paddle Shifters",
-                  "6-Speed Torque Converter AT",
-                  "Cruise Control",
-                  "Smart Play Touchscreen",
-                  "ESP & Hill Hold"
-              ]
+              "transmission": "Automatic",
+              "features": "6-Speed Torque Converter AT, Paddle Shifters, Hill Descent Control, Toyota i-Connect"
           },
           {
-              "name": "G 1.5 NeoDrive Petrol Manual",
-              "exShowroom": 1487000,
+              "name": "G 1.5 Neo Drive MT",
+              "price": 1449000,
               "fuel": "Petrol",
-              "trans": "Manual",
-              "engine": "1.5L K15C DualJet (102 bhp)",
-              "mileage": "21.12 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST PETROL VFM PICK",
-              "keyFeatures": [
-                  "Full LED Headlamps",
-                  "17-inch Alloy Wheels",
-                  "9-inch Touchscreen Infotainment",
-                  "6 Airbags Standard",
-                  "Auto-Folding ORVMs"
-              ]
+              "transmission": "Manual",
+              "features": "Full LED Headlamps, 9\" Smart Play Cast Touchscreen, 6 Airbags, 17\" Alloys, Auto Folding ORVMs"
           },
           {
-              "name": "S Strong Hybrid 1.5 e-CVT",
-              "exShowroom": 1718000,
+              "name": "G 1.5 Neo Drive AT",
+              "price": 1569000,
+              "fuel": "Petrol",
+              "transmission": "Automatic",
+              "features": "Panoramic Sunroof, Wireless Charging, 9\" Touchscreen, Paddle Shifters, 6 Airbags"
+          },
+          {
+              "name": "V 1.5 Neo Drive AllGrip AWD MT",
+              "price": 1754000,
+              "fuel": "Petrol",
+              "transmission": "Manual",
+              "features": "AllGrip Select Mechanical 4WD (Auto/Sport/Snow/Lock modes), Panoramic Sunroof, 360 Camera, 6 Airbags"
+          },
+          {
+              "name": "S Hybrid 1.5 e-CVT",
+              "price": 1666000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
-              "mileage": "27.97 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 MOST AFFORDABLE HYBRID",
-              "keyFeatures": [
-                  "Self-Charging Strong Hybrid (27.97 kmpl)",
-                  "Pure EV Drive Mode",
-                  "7-inch Digital Driver Display",
-                  "Auto Electric Parking Brake",
-                  "e-CVT Transmission"
-              ]
+              "transmission": "Automatic",
+              "features": "Self-Charging Strong Hybrid Powertrain, 27.97 km/l, Pure EV Drive Mode, 7\" Digital Driver Display"
           },
           {
-              "name": "G Strong Hybrid 1.5 e-CVT",
-              "exShowroom": 1924000,
+              "name": "V Hybrid 1.5 e-CVT",
+              "price": 2019000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
-              "mileage": "27.97 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Dual-Pane Panoramic Sunroof",
-                  "Head-Up Display (HUD)",
-                  "Wireless Phone Charger",
-                  "6 Airbags Standard",
-                  "9-inch Smart Play Infotainment"
-              ]
-          },
-          {
-              "name": "V Strong Hybrid 1.5 e-CVT Dual Tone",
-              "exShowroom": 2019000,
-              "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "1.5L Self-Charging Strong Hybrid (114 bhp)",
-              "mileage": "27.97 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Front Ventilated Leatherette Seats",
-                  "360-Degree Panoramic View Camera",
-                  "Dual-Tone Contrast Black Roof",
-                  "Premium Arkamys Surround Sound",
-                  "Tyre Pressure Monitor (TPMS)"
-              ]
+              "transmission": "Automatic",
+              "features": "Panoramic Sunroof, Ventilated Leather Seats, Head-Up Display, 360 Panoramic Camera, Arkamys Audio"
           }
       ]
   },
@@ -8941,208 +8224,156 @@ export const CARS = [
       "id": "toyota-hilux",
       "name": "Toyota Hilux",
       "brand": "Toyota",
-      "tagline": "The Legendary Unstoppable 4x4 Adventure Lifestyle Pickup",
-      "launchDate": "2024 (Updated 4x4 & 4x2 Lineup)",
+      "tagline": "The World's Most Legendary Lifestyle 4x4 Off-Road Pickup Truck",
+      "launchDate": "2023 (Updated 2024 Black Edition)",
       "bodyType": "Pickup Truck",
       "fuelTypes": [
           "Diesel"
       ],
-      "priceRange": "₹31.99 - ₹36.89 Lakh",
-      "minPrice": 3199000,
-      "maxPrice": 3689000,
-      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 32.93/36, Child 44.09/49)",
+      "priceRange": "₹30.40 - ₹37.90 Lakh",
+      "minPrice": 3040000,
+      "maxPrice": 3790000,
+      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star Off-Road Crash Protection)",
       "groundClearance": "216 mm",
-      "bootSpace": "435 L Flat Deck (470 kg payload)",
-      "waitingPeriod": "2 - 4 Weeks",
-      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/sulphur-metallic.webp",
-      "summary": "The Toyota Hilux is the world's benchmark for extreme-durability lifestyle utility. Built on the heavy-duty IMV platform with a rigid ladder-frame chassis, it pairs a potent 2.8L D-4D turbo diesel producing 201 bhp and 500 Nm of torque with electronic 4x4, rear diff-lock, active traction control (A-TRC), 700 mm water wading capability, and a versatile double-cab cargo deck.",
-      "spin360": {
-          "totalFrames": 36,
-          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/360",
-          "format": "webp",
-          "defaultColor": "sulphur-metallic",
-          "colors": [
-              {
-                  "id": "sulphur-metallic",
-                  "name": "Sulphur Metallic",
-                  "hex": "#D1A041"
-              }
-          ]
-      },
+      "bootSpace": "435 kg Deck Payload (Water wading 700 mm)",
+      "waitingPeriod": "1 - 2 Months",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/emotional-red.webp",
+      "summary": "The Toyota Hilux is the globally acclaimed benchmark for lifestyle 4x4 pickup trucks, renowned for conquering polar ice caps, volcanoes, and desert rallies. Armed with a 2.8L Four-Cylinder Turbo Diesel pushing 201 bhp and an immense 500 Nm of torque, it boasts shift-on-the-fly 4WD, electronic locking rear differential, active traction control, 700 mm water wading capability, and heavy-duty steel cargo bed.",
       "colors": [
-          {
-              "id": "sulphur-metallic",
-              "name": "Sulphur Metallic",
-              "hex": "#D1A041",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/sulphur-metallic.webp"
-          },
-          {
-              "id": "platinum-pearl-white",
-              "name": "Platinum Pearl White Metallic",
-              "hex": "#DDDDDA",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/platinum-pearl-white.webp"
-          },
-          {
-              "id": "attitude-black",
-              "name": "Attitude Black",
-              "hex": "#08070C",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/attitude-black.webp"
-          },
-          {
-              "id": "ash",
-              "name": "Ash Grey",
-              "hex": "#929799",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/ash.webp"
-          },
           {
               "id": "emotional-red",
               "name": "Emotional Red",
-              "hex": "#7C0C0E",
+              "hex": "#9E1B27",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/emotional-red.webp"
+          },
+          {
+              "id": "white-pearl-crystal-shine",
+              "name": "White Pearl Crystal Shine",
+              "hex": "#EBECE9",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/white-pearl-crystal-shine.webp"
           },
           {
               "id": "super-white",
               "name": "Super White",
-              "hex": "#EAEAEA",
+              "hex": "#F8F8F8",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/super-white.webp"
+          },
+          {
+              "id": "grey-metallic",
+              "name": "Grey Metallic",
+              "hex": "#505256",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/grey-metallic.webp"
+          },
+          {
+              "id": "attitude-black",
+              "name": "Attitude Black",
+              "hex": "#0D0E10",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/attitude-black.webp"
+          },
+          {
+              "id": "sulphur-metallic",
+              "name": "Sulphur Metallic",
+              "hex": "#8A7A40",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/colors/sulphur-metallic.webp"
           }
       ],
       "gallery": [
           {
-              "id": "front_dominant_stance",
-              "title": "Rugged Adventure Stance & High Deck Profile",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/front_dominant_stance.webp"
+              "id": "offroad-bumper",
+              "title": "Aggressive Front Bumper with Skid Plate",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/offroad-bumper.webp"
           },
           {
-              "id": "front_hexagonal_grille",
-              "title": "Aggressive Bold Front Grille with Chrome Surrounds",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/front_hexagonal_grille.webp"
+              "id": "led-headlamps",
+              "title": "LED Headlamps with Integrated DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/led-headlamps.webp"
           },
           {
-              "id": "side_pickup_profile",
-              "title": "Double-Cab 5.32m Long Body with Heavy-Duty Cargo Deck",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/side_pickup_profile.webp"
+              "id": "chrome-grille",
+              "title": "Bold Hexagonal Chrome Grille",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/chrome-grille.webp"
           },
           {
-              "id": "rear_cargo_bed",
-              "title": "Heavy-Duty Flatbed Tailgate with Integrated Step",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_cargo_bed.webp"
+              "id": "alloys",
+              "title": "18-inch Machine-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/alloys.webp"
           },
           {
-              "id": "all_terrain_stance",
-              "title": "High Wading Depth & 29-Degree Approach Angle",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/all_terrain_stance.webp"
+              "id": "interior-cockpit",
+              "title": "Premium Dual-Zone Automatic Climate Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/interior-cockpit.webp"
           },
           {
-              "id": "premium_cabin_dashboard",
-              "title": "All-Black Executive Cabin with Brushed Metallic Highlights",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/premium_cabin_dashboard.webp"
+              "id": "touchscreen",
+              "title": "8-inch Infotainment with Apple CarPlay & Android Auto",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/touchscreen.webp"
           },
           {
-              "id": "touchscreen_system",
-              "title": "8.0-inch Smart Touchscreen Infotainment",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/touchscreen_system.webp"
+              "id": "leather-seats",
+              "title": "Plush Leather Upholstery with 8-Way Power Driver Seat",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/leather-seats.webp"
           },
           {
-              "id": "instrument_dials",
-              "title": "Twin-Dial Analogue Cluster with TFT MID Display",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/instrument_dials.webp"
+              "id": "electronic-4x4",
+              "title": "Electronic Shift-on-the-Fly 4WD with Auto-LSD",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/electronic-4x4.webp"
           },
           {
-              "id": "steering_controls",
-              "title": "Leather Steering with Cruise Control & MID Selectors",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/steering_controls.webp"
+              "id": "diesel-engine",
+              "title": "2.8L Turbo Diesel with 500 Nm Torque",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/diesel-engine.webp"
           },
           {
-              "id": "rear_three_quarter",
-              "title": "Heavy-Duty 18-inch Precision Alloy Wheels",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_three_quarter.webp"
+              "id": "safety-airbags",
+              "title": "7 SRS Airbags, VSC & Trailer Sway Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/safety-airbags.webp"
           },
           {
-              "id": "rear_deck_utility",
-              "title": "Weather-Proof Lined Bed Liner for Expeditions",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/rear_deck_utility.webp"
+              "id": "deck-loading",
+              "title": "Heavy-Duty Cargo Deck with 435 kg Payload Capacity",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/deck-loading.webp"
           },
           {
-              "id": "side_stance_clearance",
-              "title": "High 216 mm Ground Clearance with 700 mm Water Wading",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/side_stance_clearance.webp"
+              "id": "legacy",
+              "title": "World's Most Indestructible Pickup Truck",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-hilux/gallery/legacy.webp"
           }
       ],
       "specs": {
-          "engineOptions": "2.8L 4-Cylinder D-4D Turbo Diesel (201 bhp / 500 Nm)",
-          "transmissions": "6-Speed Manual & 6-Speed Torque Converter Sequential Automatic",
-          "dimensions": "5325 mm (L) × 1855 mm (W) × 1815 mm (H)",
-          "wheelbase": "3085 mm",
+          "engine": "2755 cc 4-Cylinder D-4D Turbocharged Diesel",
+          "power": "201 bhp @ 3400 rpm",
+          "torque": "500 Nm @ 1600-2800 rpm (AT) / 420 Nm (MT)",
+          "transmission": "6-Speed Automatic / 6-Speed Manual with iMT",
+          "drivetrain": "Shift-on-the-fly 4WD with Electronic Diff Lock",
+          "mileage": "13.0 km/l",
           "fuelTank": "80 Litres",
-          "seatingCapacity": "5 Persons (Double Cab Configuration)"
+          "dimensions": "5325 mm L x 1855 mm W x 1815 mm H",
+          "wheelbase": "3085 mm",
+          "brakes": "Ventilated Discs Front / Leading-Trailing Drum Rear",
+          "suspension": "Double Wishbone Front / Leaf Spring Heavy-Duty Rear",
+          "seating": "5 Seater (Double Cab)"
       },
       "variants": [
           {
-              "name": "Standard (GX) 4x2 2.8 Diesel Automatic",
-              "exShowroom": 3199000,
+              "name": "4x4 STD MT",
+              "price": 3040000,
               "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
-              "mileage": "13.80 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "201 bhp & 500 Nm Diesel Engine",
-                  "7 Airbags Standard",
-                  "8-inch Touchscreen with Apple CarPlay/Android Auto",
-                  "Vehicle Stability Control (VSC) & HAC",
-                  "17-inch Alloy Wheels"
-              ]
+              "transmission": "Manual",
+              "features": "Heavy-Duty 4WD with Low Range, Halogen Headlamps, 8\" Touchscreen, 7 Airbags, Auto LSD"
           },
           {
-              "name": "Standard (GX) 4x4 2.8 Diesel Manual",
-              "exShowroom": 3040000,
+              "name": "4x4 High MT",
+              "price": 3715000,
               "fuel": "Diesel",
-              "trans": "Manual",
-              "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
-              "mileage": "14.20 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST VALUE 4x4 OFF-ROADER",
-              "keyFeatures": [
-                  "Shift-on-the-Fly 4x4 (High / Low Range)",
-                  "Rear Differential Lock (e-Locker)",
-                  "Active Traction Control (A-TRC)",
-                  "Downhill Assist Control (DAC)",
-                  "7 Airbags Standard"
-              ]
+              "transmission": "Manual",
+              "features": "LED Headlamps with DRLs, 18\" Machine Alloys, Leather Seats, 8-Way Powered Driver Seat, Dual-Zone AC"
           },
           {
-              "name": "High (VX) 4x4 2.8 Diesel Manual",
-              "exShowroom": 3715000,
+              "name": "4x4 High AT",
+              "price": 3790000,
               "fuel": "Diesel",
-              "trans": "Manual",
-              "engine": "2.8L D-4D Diesel (201 bhp / 420 Nm)",
-              "mileage": "14.20 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Dual-Zone Automatic Climate Control",
-                  "Full LED Headlamps with DRLs",
-                  "8-Way Power-Adjustable Driver Seat",
-                  "18-inch Precision Alloy Wheels",
-                  "Soft-Touch Leather Upholstery"
-              ]
-          },
-          {
-              "name": "High (VX) 4x4 2.8 Diesel Automatic",
-              "exShowroom": 3669000,
-              "fuel": "Diesel",
-              "trans": "Automatic",
-              "engine": "2.8L D-4D Diesel (201 bhp / 500 Nm)",
-              "mileage": "13.60 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 TOP OVERLANDING PICK",
-              "keyFeatures": [
-                  "6-Speed Sequential Automatic with 500 Nm Torque",
-                  "Electronic 4WD Transfer Case with Low Range",
-                  "Front & Rear Parking Sensors",
-                  "Dual-Zone Auto AC",
-                  "Electrochromic Inside Rear-View Mirror"
-              ]
+              "transmission": "Automatic",
+              "features": "500 Nm Torque, 6-Speed AT with Sequential Shift, Downhill Assist Control (DAC), Cruise Control"
           }
       ]
   },
@@ -9150,181 +8381,145 @@ export const CARS = [
       "id": "toyota-camry",
       "name": "Toyota Camry",
       "brand": "Toyota",
-      "tagline": "The Pinnacle of Hybrid Luxury Sedans with 218 bhp & Rear Reclining Seats",
-      "launchDate": "Updated 2024 (Sprint Edition & Elegant Hybrid)",
+      "tagline": "The Benchmark of Executive Luxury Sedans with 218 PS Self-Charging Hybrid",
+      "launchDate": "2023 (Updated 2024 Hybrid Dynamic)",
       "bodyType": "Sedan",
       "fuelTypes": [
-          "Hybrid",
-          "Petrol"
+          "Hybrid"
       ],
-      "priceRange": "₹48.69 - ₹48.89 Lakh",
-      "minPrice": 4869000,
-      "maxPrice": 4889000,
-      "safetyRating": "5.0 ★ (ASEAN NCAP 5-Star - Adult 35.31/36, Child 44.44/49)",
+      "priceRange": "₹46.17 Lakh",
+      "minPrice": 4617000,
+      "maxPrice": 4617000,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star Comprehensive Adult & Child Protection)",
       "groundClearance": "160 mm",
       "bootSpace": "524 L",
       "waitingPeriod": "1 - 2 Months",
-      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/cement-grey.webp",
-      "summary": "The Toyota Camry represents the pinnacle of executive luxury sedans in India, built on the TNGA-K platform with unmatched quietness and ride comfort. Powered by a 2.5L 4-Cylinder Dynamic Force engine with self-charging Hybrid Synergy Drive producing 218 bhp combined, it features power-reclining rear seats, 3-zone climate control with capacitive touch armrest, 9-speaker JBL audio, ventilated seats, and 9 SRS airbags standard.",
-      "spin360": {
-          "totalFrames": 36,
-          "folder": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/360",
-          "format": "webp",
-          "defaultColor": "cement-grey",
-          "colors": [
-              {
-                  "id": "cement-grey",
-                  "name": "Cement Grey",
-                  "hex": "#464E4F"
-              }
-          ]
-      },
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white.webp",
+      "summary": "The Toyota Camry Hybrid is the epitome of world-class executive luxury and green engineering. Featuring Toyota's legendary 4th generation 2.5L self-charging strong hybrid electric powertrain generating 218 PS combined power, it delivers up to 19.1 km/l efficiency. The cabin provides opulent rear reclining seats with armrest touchscreen capacitive controls, 9-speaker JBL premium acoustics, electronic moonroof, 9 SRS airbags, and HUD.",
       "colors": [
           {
-              "id": "cement-grey",
-              "name": "Cement Grey",
-              "hex": "#464E4F",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/cement-grey.webp"
-          },
-          {
-              "id": "platinum-white-pearl",
+              "id": "platinum-white",
               "name": "Platinum White Pearl",
-              "hex": "#E7E9E8",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white-pearl.webp"
+              "hex": "#EBECE8",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white.webp"
           },
           {
               "id": "attitude-black",
               "name": "Attitude Black",
-              "hex": "#040503",
+              "hex": "#0B0B0D",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/attitude-black.webp"
+          },
+          {
+              "id": "cement-grey",
+              "name": "Cement Grey Metallic",
+              "hex": "#6B7278",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/cement-grey.webp"
+          },
+          {
+              "id": "dark-blue",
+              "name": "Dark Blue Metallic",
+              "hex": "#16243E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/dark-blue.webp"
           },
           {
               "id": "emotional-red",
               "name": "Emotional Red",
-              "hex": "#CB4847",
+              "hex": "#9E1925",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/emotional-red.webp"
           },
           {
-              "id": "dark-blue",
-              "name": "Dark Blue Mica",
-              "hex": "#242F54",
-              "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/dark-blue.webp"
-          },
-          {
               "id": "precious-metal",
-              "name": "Precious Metal Metallic",
-              "hex": "#6D767E",
+              "name": "Precious Metal",
+              "hex": "#838589",
               "image": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/precious-metal.webp"
           }
       ],
       "gallery": [
           {
-              "id": "front_executive_stance",
-              "title": "Low & Wide Aerodynamic Executive Stance",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/front_executive_stance.webp"
+              "id": "camry-banner",
+              "title": "Luxury Meets Hybrid Innovation",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/camry-banner.webp"
           },
           {
-              "id": "wide_lower_grille",
-              "title": "Sleek Upper Grille & Bold Horizontal Lower Intake",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/wide_lower_grille.webp"
+              "id": "sprint-profile",
+              "title": "Sleek Aerodynamic Fastback Silhouette",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sprint-profile.webp"
           },
           {
-              "id": "side_profile_sedan",
-              "title": "4.88m Sweeping Silhouette with 18-inch Dark Alloys",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/side_profile_sedan.webp"
+              "id": "headlamps",
+              "title": "Dynamic LED Headlamps with Integrated DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/headlamps.webp"
           },
           {
-              "id": "rear_sculpted_led",
-              "title": "Sculpted Trunk Lid & Compact LED Combination Lamps",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear_sculpted_led.webp"
+              "id": "alloys",
+              "title": "18-inch Multi-Spoke Two-Tone Alloys",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/alloys.webp"
           },
           {
-              "id": "rear_three_quarter",
-              "title": "Dual Exhaust Tips & Sporty Diffuser Accents",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear_three_quarter.webp"
+              "id": "rear-comfort",
+              "title": "Executive Reclining Rear Seats with Touch Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear-comfort.webp"
           },
           {
-              "id": "luxury_y_shaped_cockpit",
-              "title": "Driver-Focused Y-Shaped Center Console Cockpit",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/luxury_y_shaped_cockpit.webp"
+              "id": "infotainment",
+              "title": "9-inch Floating Touchscreen Infotainment",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/infotainment.webp"
           },
           {
-              "id": "steering_controls",
-              "title": "Leather Steering with Tilt/Telescopic Memory & Paddle Shifters",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/steering_controls.webp"
+              "id": "jbl-audio",
+              "title": "9-Speaker JBL Concert Sound System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/jbl-audio.webp"
           },
           {
-              "id": "instrument_cluster",
-              "title": "7-inch Color TFT Multi-Information Cluster",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/instrument_cluster.webp"
+              "id": "hybrid-performance",
+              "title": "218 PS Self-Charging Strong Hybrid Engine",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hybrid-performance.webp"
           },
           {
-              "id": "smart_start_button",
-              "title": "Smart Push-Button Ignition with EV Drive Mode Select",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/smart_start_button.webp"
+              "id": "safety-suite",
+              "title": "9 SRS Airbags, VSC & Active Traction Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/safety-suite.webp"
           },
           {
-              "id": "left_side_profile",
-              "title": "Acoustic Glass Windows for Benchmark NVH Insulation",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_side_profile.webp"
+              "id": "hud-cluster",
+              "title": "10-inch Color Head-Up Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hud-cluster.webp"
           },
           {
-              "id": "left_front_profile",
-              "title": "Bi-Beam LED Projector Headlamps with 3-Layer DRLs",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_front_profile.webp"
+              "id": "sunroof",
+              "title": "Electric Tilt & Slide Moonroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sunroof.webp"
           },
           {
-              "id": "left_rear_profile",
-              "title": "Large 524-Litre Trunk with Wide Boot Opening",
-              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/left_rear_profile.webp"
+              "id": "tnga-chassis",
+              "title": "TNGA Low-Center-of-Gravity Global Architecture",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/tnga-chassis.webp"
           }
       ],
       "specs": {
-          "engineOptions": "2.5L 4-Cylinder Dynamic Force Petrol + Permanent Magnet Synchronous Motor (218 bhp combined / 221 Nm)",
-          "transmissions": "Electronically Controlled Continuously Variable Transmission (e-CVT)",
-          "dimensions": "4885 mm (L) × 1840 mm (W) × 1445 mm (H)",
-          "wheelbase": "2825 mm",
+          "engine": "2487 cc 4-Cylinder Dynamic Force Hybrid Petrol",
+          "power": "218 PS combined (178 PS Engine @ 5700 rpm + 120 PS Motor)",
+          "torque": "221 Nm @ 3600-5200 rpm (Engine) + 202 Nm (Motor)",
+          "transmission": "Electronically Controlled Continuously Variable Transmission (e-CVT)",
+          "drivetrain": "Front-Wheel Drive (FWD)",
+          "mileage": "19.1 km/l",
           "fuelTank": "50 Litres",
-          "seatingCapacity": "5 Persons (Power Reclining Rear Seats)"
+          "dimensions": "4885 mm L x 1840 mm W x 1455 mm H",
+          "wheelbase": "2825 mm",
+          "brakes": "Discs Front & Rear",
+          "suspension": "MacPherson Strut Front / Double Wishbone Rear",
+          "seating": "5 Seater"
       },
       "variants": [
           {
-              "name": "Elegant Hybrid 2.5 e-CVT",
-              "exShowroom": 4869000,
+              "name": "2.5 Hybrid e-CVT",
+              "price": 4617000,
               "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
-              "mileage": "19.10 kmpl",
-              "isVFM": true,
-              "vfmBadge": "🏆 BEST EXECUTIVE LUXURY PICK",
-              "keyFeatures": [
-                  "Self-Charging Strong Hybrid Powertrain (218 bhp)",
-                  "Rear Power-Reclining Seats with Armrest Touch Controls",
-                  "9-Speaker JBL Premium Audio with Clari-Fi",
-                  "3-Zone Independent Automatic Climate Control",
-                  "10-Way Power-Adjustable Ventilated Front Seats with Memory",
-                  "9 SRS Airbags Standard",
-                  "Head-Up Display (10-inch HUD)"
-              ]
-          },
-          {
-              "name": "Sprint Edition Hybrid 2.5 e-CVT Dual Tone",
-              "exShowroom": 4869000,
-              "fuel": "Hybrid",
-              "trans": "Automatic",
-              "engine": "2.5L Dynamic Force Hybrid (218 bhp)",
-              "mileage": "19.10 kmpl",
-              "isVFM": false,
-              "keyFeatures": [
-                  "Contrast Matte Black Roof & Mirror Caps",
-                  "18-inch Dark Metallic Alloy Wheels",
-                  "Sporty Black Interior Theme",
-                  "Paddle Shifters with Drive Modes (Eco, Normal, Sport)",
-                  "9 SRS Airbags & TPMS"
-              ]
+              "transmission": "Automatic",
+              "features": "9 Airbags, Reclining Rear Seats, 9-Speaker JBL Audio, 10\" HUD, Ventilated Seats, Wireless Charging"
           }
       ]
-  },
+  }
 ];
 
 // Helper to calculate exact city on-road price
