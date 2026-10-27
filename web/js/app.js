@@ -366,11 +366,15 @@ window.selectUniversalColor = function(colorIdx) {
   const colObj = colorsList[colorIdx];
   if (!colObj) return;
 
-  const spinContainer = document.getElementById('spin360Container');
-  const colorStage = document.getElementById('spinColorStage');
+  const canvas = document.getElementById('spin360Canvas');
+  const spinColorStage = document.getElementById('spinColorStage');
   const displayImg = document.getElementById('spinColorDisplayImg');
   const nameBadge = document.getElementById('colorNameBadge');
   const colorDot = document.getElementById('colorDot');
+  const spin360Controls = document.getElementById('spin360Controls');
+  const spin2dControls = document.getElementById('spin2dControls');
+  const btnReturnToSpin = document.getElementById('btnReturnToSpin');
+  const spin360Badge = document.getElementById('spin360Badge');
 
   // Check if this color has a matching 360 spin set
   let spinMatch = null;
@@ -393,18 +397,35 @@ window.selectUniversalColor = function(colorIdx) {
     }
   }
 
-  if (spinMatch && spinContainer) {
-    spinContainer.style.display = 'block';
-    if (colorStage) colorStage.style.display = 'none';
+  if (spinMatch && canvas) {
+    canvas.style.display = 'block';
+    if (spinColorStage) spinColorStage.style.display = 'none';
+    if (spin360Controls) spin360Controls.style.display = 'flex';
+    if (spin2dControls) spin2dControls.style.display = 'none';
+    if (btnReturnToSpin) btnReturnToSpin.style.display = 'none';
+    if (spin360Badge) spin360Badge.style.display = 'inline-flex';
     window.selectSpinColor(spinMatch.folderName || spinMatch.id, spinMatchIdx);
-  } else if (colorStage && displayImg) {
-    if (spinContainer) spinContainer.style.display = 'none';
-    colorStage.style.display = 'block';
+  } else if (spinColorStage && displayImg) {
+    canvas.style.display = 'none';
+    spinColorStage.style.display = 'flex';
+    if (spin360Controls) spin360Controls.style.display = 'none';
+    if (spin2dControls) spin2dControls.style.display = 'flex';
+    if (btnReturnToSpin) btnReturnToSpin.style.display = 'inline-flex';
+    if (spin360Badge) spin360Badge.style.display = 'none';
+    if (spinState.autoSpinInterval) {
+      clearInterval(spinState.autoSpinInterval);
+      spinState.autoSpinInterval = null;
+      const btn = document.getElementById('btnAutoSpin');
+      if (btn) {
+        btn.innerHTML = '▶ Auto-Spin';
+        btn.classList.remove('active');
+      }
+    }
     displayImg.style.opacity = '0.3';
     setTimeout(() => {
       displayImg.src = colObj.image || colObj.url || currentModalCar.heroImage;
       displayImg.style.opacity = '1';
-    }, 80);
+    }, 60);
   }
 
   if (nameBadge) nameBadge.textContent = colObj.name;
@@ -654,14 +675,29 @@ window.openCarModal = function(carId) {
       <div id="tab-pane-colors" class="tab-pane">
         <div class="color-studio">
           ${spin360 ? `
-            <!-- 360 Interactive Drag & Spin Turntable -->
+            <!-- 360 Interactive Drag & Spin Turntable & Unified Studio Stage -->
             <div class="spin360-container" id="spin360Container">
-              <div class="spin360-badge">
+              <!-- Top Left Badge -->
+              <div class="spin360-badge" id="spin360Badge">
                 <span>🔄</span>
-                <span>Drag / Swipe to Spin 360°</span>
+                <span id="spin360BadgeText">Drag / Swipe to Spin 360°</span>
               </div>
+
+              <!-- Top Right Floating Return Button (Visible in 2D Shade mode) -->
+              <button type="button" id="btnReturnToSpin" class="spin-return-pill" onclick="window.returnTo360Spin()" style="display:none;" title="Switch back to 360° Turntable">
+                🔄 360° Spin Studio
+              </button>
+
+              <!-- 360 Turntable Canvas -->
               <canvas id="spin360Canvas" width="1056" height="594" class="spin360-canvas"></canvas>
-              <div class="spin360-controls">
+
+              <!-- 2D High-Res Official Shade (Seamlessly integrated inside same frame) -->
+              <div id="spinColorStage" class="spin2d-stage" style="display:none;">
+                <img id="spinColorDisplayImg" src="" alt="${car.name}" class="spin2d-img">
+              </div>
+
+              <!-- Bottom 360 Controls Bar -->
+              <div class="spin360-controls" id="spin360Controls">
                 <button type="button" id="btnAutoSpin" class="spin-ctrl-btn" onclick="window.toggleAutoSpin()">
                   ▶ Auto-Spin
                 </button>
@@ -672,14 +708,14 @@ window.openCarModal = function(carId) {
                 </div>
                 <span id="spinAngleBadge" style="font-size:12px; font-weight:800; color:var(--text-main); min-width:40px; text-align:right;">0°</span>
               </div>
-            </div>
 
-            <!-- 2D High-Res Official Shade Stage (shown when a non-360 color is selected) -->
-            <div class="color-stage" id="spinColorStage" style="display:none; text-align:center;">
-              <img id="spinColorDisplayImg" src="" alt="${car.name}" class="color-display-img" style="max-height:480px; width:auto; margin:0 auto; display:block;">
-              <div style="margin-top:10px;">
-                <button type="button" class="city-selector-btn" style="padding:6px 14px; font-size:12px; font-weight:700; cursor:pointer;" onclick="window.returnTo360Spin()">
-                  🔄 Switch back to 360° Spin Studio
+              <!-- Bottom 2D Shade Controls Bar -->
+              <div class="spin360-controls" id="spin2dControls" style="display:none; justify-content:space-between; align-items:center;">
+                <span style="font-size:12px; font-weight:700; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px;">
+                  <span>🎨</span> Official Paint Shade (Studio View)
+                </span>
+                <button type="button" class="spin-ctrl-btn" onclick="window.returnTo360Spin()" style="background:var(--primary); color:#FFF; border-color:var(--primary);">
+                  🔄 Return to 360° Spin
                 </button>
               </div>
             </div>
