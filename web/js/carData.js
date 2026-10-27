@@ -4531,6 +4531,172 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-harrier',
+    name: 'Tata Harrier',
+    brand: 'Tata',
+    tagline: 'Flagship 5-Star Bharat NCAP SUV with Land Rover-Derived OMEGARC, ADAS Level 2 & 12.3" Cinematic Screen',
+    launchDate: 'Updated 2025 (Facelift Persona Lineup)',
+    bodyType: 'Mid-Size SUV',
+    fuelTypes: ['Diesel'],
+    priceRange: '₹14.99 - ₹26.44 Lakh',
+    minPrice: 1499990,
+    maxPrice: 2644000,
+    safetyRating: '5.0 ★ (Highest Bharat NCAP & GNCAP Score in India)',
+    groundClearance: '205 mm',
+    bootSpace: '445 L',
+    waitingPeriod: '4 - 8 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp',
+    summary: 'The Tata Harrier is Tata Motors’ flagship mid-size 5-seater luxury SUV engineered on the legendary OMEGARC architecture derived from Land Rover’s D8 platform. Holding the highest-ever crash safety score in Indian history (5-Star Bharat NCAP), it features a commanding 170 PS / 350 Nm 2.0L Kryotec turbo-diesel engine, 12.3-inch cinematic touchscreen with wireless mirroring, 10.25-inch configurable digital cockpit with full map display, 10-speaker JBL audio with dedicated subwoofer, voice-assisted panoramic sunroof with ambient mood lighting, ventilated front seats with memory & welcome retract, bejewelled rotary terrain mode selector, hands-free powered tailgate, and Level 2 ADAS with 11 autonomous safety functions.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'sunlit-yellow',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360'
+    },
+    colors: [
+      { id: 'sunlit-yellow', name: 'Sunlit Yellow with Black Roof (Signature Hero Shade)', hex: '#F7D000', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp' },
+      { id: 'seawed-green', name: 'Seaweed Green with Black Roof (Deep Emerald)', hex: '#2B4A3F', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/seawed-green/1.webp' },
+      { id: 'pure-grey', name: 'Pebble Grey with Black Roof', hex: '#788085', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/pure-grey/1.webp' },
+      { id: 'fearless-red', name: 'Coral Red with Black Roof', hex: '#B82329', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/fearless-red/1.webp' },
+      { id: 'daytona-grey', name: 'Ash Grey with Black Roof', hex: '#474E55', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/daytona-grey/1.webp' },
+      { id: 'prestine-white', name: 'Lunar White with Black Roof', hex: '#F4F5F7', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/prestine-white/1.webp' },
+      { id: 'nitro-crimson', name: 'Nitro Crimson with Black Roof', hex: '#8E161C', image: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/nitro-crimson/1.webp' }
+    ],
+    multiAngles: [
+      { label: 'Hero SUV Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp' },
+      { label: '12.3" Cinematic Cockpit', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp' },
+      { label: 'Panoramic Sunroof & Mood Light', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp' },
+      { label: 'Connected Signature Taillamps', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/signature-connected-led-taillamp.webp' }
+    ],
+    gallery: [
+      { title: '12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto & Apple CarPlay', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp' },
+      { title: '26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/26-cm-configurable-digital-instrument-cluster.webp' },
+      { title: 'Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/digital-steering-wheel-with-illuminated-logo.webp' },
+      { title: 'Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp' },
+      { title: 'Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/ventilated-front-row-comfort-seats.webp' },
+      { title: '6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/powered-memory-driver-seat-welcome-function.webp' },
+      { title: 'Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise & Lane Keep Assist', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/adas-level-2-advanced-safety-suite.webp' },
+      { title: '10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/jbl-10-speaker-premium-audio-with-subwoofer.webp' },
+      { title: 'High-Definition 360-Degree 3D Surround View Camera System with Dynamic Blind View Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/360-degree-3d-surround-view-camera.webp' },
+      { title: 'Bejewelled Rotary Terrain Response Selector with Integrated Digital Color Display Modes', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/bejewelled-rotary-terrain-response-selector.webp' },
+      { title: 'Connected Full-Width Signature LED Taillamps with Dynamic Welcome and Goodbye Animation', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/signature-connected-led-taillamp.webp' },
+      { title: 'Smart Gesture-Controlled Powered Tailgate with Hands-Free Kick Opening Sensor', url: 'https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/gesture-controlled-powered-smart-tailgate.webp' }
+    ],
+    specs: {
+      engineOptions: '2.0L Kryotec Turbocharged Diesel Engine (170 PS / 350 Nm)',
+      transmissions: '6-Speed Manual | 6-Speed Torque Converter Automatic with E-Shifter & Paddle Shifters',
+      dimensions: '4605 mm (L) × 1922 mm (W) × 1718 mm (H)',
+      wheelbase: '2741 mm',
+      fuelTank: '50 Litres',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'Smart 2.0 Diesel MT',
+        exShowroom: 1499990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['6 Airbags Standard', 'Electronic Stability Program (ESP)', 'All 4 Disc Brakes', 'LED Projector Headlamps & DRLs']
+      },
+      {
+        name: 'Pure 2.0 Diesel MT',
+        exShowroom: 1699990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['10.25-inch Touchscreen Infotainment', '10.25-inch Digital Instrument Cluster', 'Reverse Parking Camera', 'Electrically Folding ORVMs']
+      },
+      {
+        name: 'Pure+ S 2.0 Diesel MT',
+        exShowroom: 1869990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 BUDGET VALUE PICK',
+        keyFeatures: ['Voice-Assisted Panoramic Sunroof', 'Auto Headlamps & Rain Wipers', '17-inch Alloy Wheels', 'Wireless Android Auto & Apple CarPlay']
+      },
+      {
+        name: 'Adventure 2.0 Diesel MT',
+        exShowroom: 2019990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['Multi-Drive Modes & Terrain Modes', 'Leatherette Upholstery', 'Rear AC Vents', 'Cruise Control & Shark Fin Antenna']
+      },
+      {
+        name: 'Adventure+ 2.0 Diesel AT',
+        exShowroom: 2299990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.60 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BESTSELLER TECH PICK',
+        keyFeatures: ['6-Speed Automatic with E-Shifter & Paddle Shifters', 'Panoramic Sunroof', '360° 3D Camera with Blind View Monitor', 'Electronic Parking Brake with Auto Hold']
+      },
+      {
+        name: 'Adventure+ A 2.0 Diesel AT',
+        exShowroom: 2399990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.60 kmpl',
+        isVFM: false,
+        keyFeatures: ['Level 2 ADAS Safety Suite', 'Adaptive Cruise Control with Stop & Go', 'Autonomous Emergency Braking', 'Traffic Sign Recognition']
+      },
+      {
+        name: 'Fearless 2.0 Diesel MT',
+        exShowroom: 2299990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['12.3-inch Cinematic Harman Touchscreen', '10-Speaker JBL Audio with Subwoofer', 'Ventilated Front Seats', 'Sequential LED DRLs & Taillamps']
+      },
+      {
+        name: 'Fearless+ 2.0 Diesel MT',
+        exShowroom: 2449990,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '16.80 kmpl',
+        isVFM: false,
+        keyFeatures: ['7 Airbags (Driver Knee Airbag)', 'Level 2 ADAS Suite', 'Dual-Zone Climate Control', 'Gesture Controlled Powered Tailgate']
+      },
+      {
+        name: 'Fearless+ 2.0 Diesel AT',
+        exShowroom: 2589990,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.60 kmpl',
+        isVFM: false,
+        vfmBadge: '👑 FLAGSHIP TOP SPEC',
+        keyFeatures: ['Flagship Top-End Luxury Automatic', 'Memory Driver Seat with Welcome Retract', 'Bejewelled Terrain Selector', 'Emergency SOS (E-Call / B-Call)']
+      },
+      {
+        name: 'Fearless+ Dark Edition 2.0 Diesel AT',
+        exShowroom: 2644000,
+        fuel: 'Diesel',
+        trans: 'Automatic',
+        engine: '2.0L Kryotec Diesel (170 PS)',
+        mileage: '14.60 kmpl',
+        isVFM: false,
+        keyFeatures: ['Exclusive Oberon Black Exterior & R19 Dark Alloys', 'Carnelian Red & Piano Black Interior', 'All Top-End Flagship Luxury & ADAS Features']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
