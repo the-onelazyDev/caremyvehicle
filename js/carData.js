@@ -5236,6 +5236,214 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-altroz',
+    name: 'Tata Altroz',
+    brand: 'Tata',
+    tagline: '5-Star Bharat NCAP Gold Standard Premium Hatchback with Twin-Cylinder iCNG, Voice Sunroof & 7-Speed Dual-Clutch DCA',
+    launchDate: 'Updated 2025 (iCNG & Racer Lineup)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG', 'Diesel'],
+    priceRange: '₹6.65 - ₹11.35 Lakh',
+    minPrice: 664900,
+    maxPrice: 1134900,
+    safetyRating: '5.0 ★ (Global NCAP 5-Star Adult Safety Rating)',
+    groundClearance: '165 mm',
+    bootSpace: '345 L (ICE) / 210 L (iCNG Usable Space)',
+    waitingPeriod: '2 - 6 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/ember-glow.webp',
+    summary: 'The Tata Altroz is India’s benchmark "Gold Standard" premium hatchback, built on the advanced ALFA-ARC (Agile Light Flexible Advanced Architecture) and awarded an exemplary 5-Star Adult Safety Rating by Global NCAP. It offers India\'s most versatile powertrain spectrum: an efficient 1.2L Revotron 3-cylinder Petrol (88 PS / 115 Nm), an innovative Twin-Cylinder iCNG (73.5 PS / 103 Nm) that cleverly tucks dual cylinders beneath the luggage floor to preserve a class-leading 210 litres of usable boot space, a high-torque 1.5L Revotorq 4-cylinder Turbo Diesel (90 PS / 200 Nm) delivering up to 23.64 kmpl, and a performance-tuned 1.2L i-Turbo+ Petrol (120 PS / 170 Nm) in the Altroz Racer. Transmission options feature a slick 5-speed manual and a world-class Wet-Clutch 7-Speed DCA (Dual-Clutch Automatic) with machine learning shift logic. The cabin boasts 90-degree wide-opening doors, a 26.03 cm (10.25") HD touchscreen by HARMAN, 17.78 cm digital cluster, voice-assisted electric sunroof, 360-degree surround camera with blind-view monitor, wireless charging, and plush leatherette ventilated front seats.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'ember-glow',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/altroz/360'
+    },
+    colors: [
+      { id: 'ember-glow', name: 'Ember Glow (Downtown Red)', hex: '#D83519', bg: '#D83519', image: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/ember-glow.webp' },
+      { id: 'dune-glow', name: 'Dune Glow', hex: '#BFAE9C', bg: '#BFAE9C', image: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/dune-glow.webp' },
+      { id: 'royal-blue', name: 'Royal Blue', hex: '#0B1E50', bg: '#0B1E50', image: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/royal-blue.webp' },
+      { id: 'pure-grey', name: 'Pure Grey', hex: '#7F7F7F', bg: '#7F7F7F', image: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/pure-grey.webp' },
+      { id: 'pristine-white', name: 'Pristine White', hex: '#FFFFFF', bg: '#FFFFFF', image: 'https://ik.imagekit.io/2908vvlod/cars/altroz/colors/pristine-white.webp' }
+    ],
+    multiAngle: [
+      { label: 'Front 3/4 Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/360/ember-glow/1.webp' },
+      { label: 'Side Profile Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/360/ember-glow/10.webp' },
+      { label: 'Rear 3/4 Road View', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/360/ember-glow/19.webp' },
+      { label: 'Direct Front Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/360/ember-glow/28.webp' }
+    ],
+    gallery: [
+      { title: 'Dual-Tone Cockpit Dashboard with Ambient Mood Lighting & Satin Silver Accents', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/dashboard.webp' },
+      { title: 'Voice-Assisted Electric Sunroof with Anti-Pinch Safety Sensor & One-Touch Tilt', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/electric_sunroof.webp' },
+      { title: 'Innovative Twin-Cylinder iCNG Tech Preserving 210 Litres Usable Luggage Trunk Space', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/icng_boot_space.webp' },
+      { title: '360-Degree HD Surround View Camera with Integrated Dynamic Blind Spot Monitor', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/surround_camera_360.webp' },
+      { title: '26.03 cm (10.25-inch) Floating HD Touchscreen by HARMAN with Wireless Apple CarPlay', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/touchscreen_infotainment.webp' },
+      { title: '17.78 cm TFT Digital Instrument Cluster with Turn-by-Turn Navigation Prompts', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/digital_cluster.webp' },
+      { title: 'Fast Wireless Smartphone Charging Pad with Cooling Ventilation Air Inlet', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/wireless_charging.webp' },
+      { title: 'Executive Rear Cabin with Dedicated AC Vents, Armrest & 90-Degree Door Opening', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/rear_cabin_comfort.webp' },
+      { title: 'Ergonomic Perforated Leatherette Seats with Front Seat Ventilation in Racer Trims', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/leatherette_seats.webp' },
+      { title: '16-inch Laser-Cut Precision Dual-Tone Diamond Alloy Wheels with Aero Profile', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/laser_cut_alloys.webp' },
+      { title: 'Dual-Chamber Projector Headlamps with Signature LED DRLs & Follow-Me-Home Function', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/projector_headlamps.webp' },
+      { title: 'Piano Black Athletic Grille with Chrome Humanity Line & 5-Star Bharat NCAP Badge', url: 'https://ik.imagekit.io/2908vvlod/cars/altroz/gallery/humanity_grille.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Revotron Petrol (88 PS / 115 Nm) | 1.2L iCNG (73.5 PS / 103 Nm) | 1.5L Revotorq Diesel (90 PS / 200 Nm) | 1.2L Turbo Racer (120 PS / 170 Nm)',
+      transmissions: '5-Speed Manual | 7-Speed Wet-Clutch Dual-Clutch Automatic (DCA)',
+      dimensions: '3990 mm (L) × 1755 mm (W) × 1523 mm (H)',
+      wheelbase: '2501 mm',
+      fuelTank: '37 Litres Petrol/Diesel | 60 Litres Water Capacity (Dual Underfloor CNG Cylinders)',
+      seatingCapacity: '5 Passengers (Flat Floor Architecture)'
+    },
+    variants: [
+      {
+        name: 'XE 1.2 Petrol MT',
+        exShowroom: 664900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: false,
+        keyFeatures: ['ALFA-ARC Architecture with 5-Star Safety', 'Dual Front Airbags & ABS with EBD', 'Drive Modes (City & Eco)', '90-Degree Opening Doors']
+      },
+      {
+        name: 'XM 1.2 Petrol MT',
+        exShowroom: 714900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: false,
+        keyFeatures: ['Electric Foldable ORVMs', '10.16 cm Digital Instrument Cluster', 'Steering-Mounted Audio Controls', 'Front & Rear Power Windows']
+      },
+      {
+        name: 'XM Plus 1.2 Petrol MT',
+        exShowroom: 774900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 EVERYDAY COMMUTER VALUE',
+        keyFeatures: ['17.78 cm Touchscreen Infotainment by HARMAN', 'Apple CarPlay & Android Auto', 'Cruise Control', '16-inch Full Wheel Covers']
+      },
+      {
+        name: 'XM Plus (S) 1.2 Petrol MT',
+        exShowroom: 814900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: false,
+        keyFeatures: ['Voice-Assisted Electric Sunroof', 'Shark Fin Antenna', 'Automatic Headlamps', 'Rain-Sensing Wipers']
+      },
+      {
+        name: 'XM Plus iCNG (Twin-Cylinder)',
+        exShowroom: 839900,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L iCNG Twin-Cylinder (73.5 PS / 103 Nm)',
+        mileage: '26.20 km/kg',
+        isVFM: true,
+        vfmBadge: '🌿 GREEN TWIN-CYLINDER VFM PICK',
+        keyFeatures: ['Patented Twin-Cylinder Underfloor CNG Tanks (210L Boot Space)', 'Direct Start in CNG Mode', '17.78 cm Touchscreen Infotainment', 'Thermal Incident Safety Cutoff']
+      },
+      {
+        name: 'XZ 1.2 Petrol MT',
+        exShowroom: 889900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: false,
+        keyFeatures: ['16-inch Laser-Cut Dual-Tone Alloy Wheels', 'Fully Automatic Temperature Control (FATC)', 'Projector Headlamps with LED DRLs', 'Cooled Glovebox with Illumination']
+      },
+      {
+        name: 'XZ 1.2 Petrol DCA (Automatic)',
+        exShowroom: 974900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '18.50 kmpl',
+        isVFM: true,
+        vfmBadge: '⚡ SEGMENT SMOOTHEST DUAL-CLUTCH',
+        keyFeatures: ['World-Class 7-Speed Wet-Clutch DCA Transmission', 'Active Cooling Technology & Machine Learning', 'Shift-by-Wire Monostable Shifter', 'Electronic Stability Program (ESP)']
+      },
+      {
+        name: 'XZ Plus (S) 1.2 Petrol MT',
+        exShowroom: 929900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '19.33 kmpl',
+        isVFM: false,
+        keyFeatures: ['Voice-Assisted Electric Sunroof', '26.03 cm (10.25") HD Floating Touchscreen', 'Wireless Smartphone Charger', 'Rear AC Vents & Central Armrest']
+      },
+      {
+        name: 'XZ Plus (S) iCNG (Twin-Cylinder)',
+        exShowroom: 999900,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L iCNG Twin-Cylinder (73.5 PS / 103 Nm)',
+        mileage: '26.20 km/kg',
+        isVFM: true,
+        vfmBadge: '🏆 FULLY-LOADED SUNROOF CNG',
+        keyFeatures: ['Electric Voice-Operated Sunroof with CNG', 'Twin Underfloor Cylinders (Usable Luggage Area)', 'Leatherette Seat Upholstery', 'Wireless Phone Charger & Rear AC Vents']
+      },
+      {
+        name: 'XZ Plus (S) LUX 1.2 Petrol DCA',
+        exShowroom: 1049900,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (88 PS / 115 Nm)',
+        mileage: '18.50 kmpl',
+        isVFM: true,
+        vfmBadge: '👑 LUXURY TECH AUTOMATIC',
+        keyFeatures: ['7-Speed Wet-Clutch DCA Automatic', '360-Degree Surround Camera with Blind View Monitor', '26.03 cm HD Display with Wireless CarPlay', 'Electric Sunroof & Ambient Lighting']
+      },
+      {
+        name: 'XM Plus 1.5 Diesel MT',
+        exShowroom: 899900,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L Revotorq Turbo Diesel (90 PS / 200 Nm)',
+        mileage: '23.64 kmpl',
+        isVFM: false,
+        keyFeatures: ['Torquey 1.5L Revotorq 4-Cylinder Diesel (200 Nm)', 'Highway Fuel Efficiency up to 23.64 kmpl', 'Cruise Control & 17.78 cm Infotainment', 'Drive Modes (City & Eco)']
+      },
+      {
+        name: 'XZ Plus (S) 1.5 Diesel MT',
+        exShowroom: 1079900,
+        fuel: 'Diesel',
+        trans: 'Manual',
+        engine: '1.5L Revotorq Turbo Diesel (90 PS / 200 Nm)',
+        mileage: '23.64 kmpl',
+        isVFM: true,
+        vfmBadge: '🚀 LONG-DISTANCE TORQUE KING',
+        keyFeatures: ['Massive 200 Nm Turbo Diesel Torque', 'Voice-Assisted Electric Sunroof', '16-inch Laser-Cut Alloys', '26.03 cm HD Touchscreen & Wireless Charging']
+      },
+      {
+        name: 'Racer R1 1.2 Turbo Petrol (120 PS)',
+        exShowroom: 949900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L i-Turbo+ Petrol (120 PS / 170 Nm)',
+        mileage: '17.50 kmpl',
+        isVFM: false,
+        keyFeatures: ['High-Performance 120 PS Turbo Petrol Engine', 'Sporty Dual White Racing Stripes & Shadow Black Roof', 'Dual Exhaust Tips with Sporty Throaty Note', '6 Airbags Standard']
+      },
+      {
+        name: 'Racer R3 1.2 Turbo Petrol (120 PS)',
+        exShowroom: 1099900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L i-Turbo+ Petrol (120 PS / 170 Nm)',
+        mileage: '17.50 kmpl',
+        isVFM: true,
+        vfmBadge: '🏎️ TRACK-INSPIRED HOT HATCH',
+        keyFeatures: ['120 PS / 170 Nm Turbo with 6-Speed Short-Throw MT', 'Segment-First Ventilated Front Seats', '360-Degree Surround Camera with Blind View', 'iRA Connected Tech with 70+ Smart Features']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
