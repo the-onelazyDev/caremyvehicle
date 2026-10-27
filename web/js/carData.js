@@ -5614,6 +5614,194 @@ export const CARS = [
     ]
   },
   {
+    id: 'tata-tiago',
+    name: 'Tata Tiago',
+    brand: 'Tata',
+    tagline: 'India\'s Safest Entry Hatchback with 4-Star Global NCAP, Twin-Cylinder iCNG & Smooth AMT',
+    launchDate: 'Updated 2025 (iCNG & Dual-Tone Lineup)',
+    bodyType: 'Hatchback',
+    fuelTypes: ['Petrol', 'CNG'],
+    priceRange: '₹5.65 - ₹8.90 Lakh',
+    minPrice: 564900,
+    maxPrice: 889900,
+    safetyRating: '4.0 ★ (Global NCAP 4-Star Adult Safety Rating)',
+    groundClearance: '170 mm',
+    bootSpace: '242 L (Petrol) / Usable Underfloor Twin-Cylinder CNG Luggage Space',
+    waitingPeriod: '2 - 4 Weeks',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/flame-red.webp',
+    summary: 'The Tata Tiago is India’s benchmark entry-level family hatchback, renowned for setting the gold standard in cabin build quality and passenger protection with a certified 4-Star Global NCAP safety rating. Powered by the energetic 1.2L Revotron 3-cylinder Petrol engine producing 86 PS and 113 Nm of torque, it pairs with either a crisp 5-speed manual or a convenient 5-speed smart AMT automatic. For eco-conscious commuters, the groundbreaking Tiago iCNG introduces Tata\'s patented Twin-Cylinder technology—cleverly mounting dual cylinders under the boot floor to provide genuine usable luggage capacity alongside direct start in CNG mode and 26.49 km/kg efficiency. The modern dual-tone cabin includes a 17.78 cm touchscreen infotainment system by HARMAN with 8-speaker surround acoustics, digital instrument cluster, automatic climate control, rear parking camera, projector headlamps with LED DRLs, and corner stability control.',
+    threeSixty: {
+      enabled: true,
+      frameFolder: 'flame-red',
+      totalFrames: 36,
+      basePath: 'https://ik.imagekit.io/2908vvlod/cars/tiago/360'
+    },
+    colors: [
+      { id: 'flame-red', name: 'Varanasi Vibrance (Flame Red)', hex: '#CF4B44', bg: '#CF4B44', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/flame-red.webp' },
+      { id: 'pangong-pulse', name: 'Pangong Pulse (Sky Blue)', hex: '#90ABC0', bg: '#90ABC0', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/pangong-pulse.webp' },
+      { id: 'pristine-white', name: 'Pristine White', hex: '#F3F3F3', bg: '#F3F3F3', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/pristine-white.webp' },
+      { id: 'daytona-grey', name: 'Daytona Grey', hex: '#373739', bg: '#373739', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/daytona-grey.webp' },
+      { id: 'sobo-surge', name: 'Sobo Surge (Coffee Bronze)', hex: '#978483', bg: '#978483', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/sobo-surge.webp' },
+      { id: 'pure-grey', name: 'Pure Grey', hex: '#A1A2A5', bg: '#A1A2A5', image: 'https://ik.imagekit.io/2908vvlod/cars/tiago/colors/pure-grey.webp' }
+    ],
+    multiAngle: [
+      { label: 'Front 3/4 Studio View', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/360/flame-red/1.webp' },
+      { label: 'Side Profile Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/360/flame-red/10.webp' },
+      { label: 'Rear 3/4 Road View', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/360/flame-red/19.webp' },
+      { label: 'Direct Front Stance', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/360/flame-red/28.webp' }
+    ],
+    gallery: [
+      { title: 'Dual-Tone Cockpit Dashboard with Premium Piano Black Center Console', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/dashboard.webp' },
+      { title: '17.78 cm Touchscreen Infotainment System by HARMAN with Apple CarPlay & Android Auto', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/touchscreen.webp' },
+      { title: 'Fully Digital Instrument Cluster with Dual-Dial RPM Gauges & Trip Telemetry', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/instrument_cluster.webp' },
+      { title: 'Practical 242 Litre Luggage Boot & Underfloor Twin-Cylinder iCNG Usable Space', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/open_trunk.webp' },
+      { title: 'Ergonomic Sculpted Fabric Bucket Seats with Height-Adjustable Driver Seat', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/front_seats.webp' },
+      { title: 'Spacious 5-Seater Cabin with Wide Rear Legroom & Integrated Headrests', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/rear_cabin.webp' },
+      { title: '15-inch Dual-Tone Precision Diamond-Cut Alloy Wheels', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/alloy_wheels.webp' },
+      { title: 'Angular Dual-Chamber Headlamps with Signature LED Daytime Running Lights (DRLs)', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/projector_headlamps.webp' },
+      { title: 'Gloss Piano Black Front Grille with Tri-Arrow Motif & Chrome Humanity Line', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/humanity_grille.webp' },
+      { title: 'Segment-First High-Definition Surround Camera with Dynamic Reverse Parking Guidelines', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/surround_camera_360.webp' },
+      { title: 'Convenient Smart Automated Manual Transmission (AMT) with Manual Shift Gate', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/gear_shifter.webp' },
+      { title: '4-Star Global NCAP Impact-Absorbing High-Strength Steel Body Structure', url: 'https://ik.imagekit.io/2908vvlod/cars/tiago/gallery/front_stance.webp' }
+    ],
+    specs: {
+      engineOptions: '1.2L Revotron 3-Cylinder Petrol (86 PS / 113 Nm) | 1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+      transmissions: '5-Speed Manual | 5-Speed Smart Automated Manual Transmission (AMT)',
+      dimensions: '3765 mm (L) × 1677 mm (W) × 1535 mm (H)',
+      wheelbase: '2400 mm',
+      fuelTank: '35 Litres Petrol | 60 Litres Water Capacity (Dual Underfloor CNG Tanks)',
+      seatingCapacity: '5 Passengers'
+    },
+    variants: [
+      {
+        name: 'XE 1.2 Petrol MT',
+        exShowroom: 564900,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.01 kmpl',
+        isVFM: false,
+        keyFeatures: ['4-Star Global NCAP Safety Rating', 'Dual Front Airbags & ABS with EBD', 'Corner Stability Control (CSC)', 'Immobilizer & Body-Colored Bumpers']
+      },
+      {
+        name: 'XM 1.2 Petrol MT',
+        exShowroom: 600000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.01 kmpl',
+        isVFM: false,
+        keyFeatures: ['Front Power Windows', 'Central Locking with Key', 'Manual Day/Night IRVM', 'Integrated Rear Headrests']
+      },
+      {
+        name: 'XT 1.2 Petrol MT',
+        exShowroom: 640000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.01 kmpl',
+        isVFM: true,
+        vfmBadge: '🌟 BUDGET DAILY COMMUTER',
+        keyFeatures: ['14-inch Hyperstyle Wheels', 'Electrically Adjustable ORVMs with Turn Indicators', 'Steering-Mounted Audio Controls', 'Front & Rear Power Windows']
+      },
+      {
+        name: 'XT Rhythm 1.2 Petrol MT',
+        exShowroom: 670000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.01 kmpl',
+        isVFM: false,
+        keyFeatures: ['17.78 cm Touchscreen Infotainment by HARMAN', '4 Speakers & 4 Tweeters Sound System', 'Reverse Parking Camera with Guidelines', 'Voice Commands Support']
+      },
+      {
+        name: 'XTA 1.2 Petrol AMT',
+        exShowroom: 695000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.00 kmpl',
+        isVFM: true,
+        vfmBadge: '⚡ AFFORDABLE CITY AUTOMATIC',
+        keyFeatures: ['Smooth Smart Automated Manual Transmission (AMT)', 'Creep Function for Bumper-to-Bumper Traffic', 'Electrically Foldable ORVMs', 'Steering Mounted Controls']
+      },
+      {
+        name: 'XZ Plus 1.2 Petrol MT',
+        exShowroom: 730000,
+        fuel: 'Petrol',
+        trans: 'Manual',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.01 kmpl',
+        isVFM: true,
+        vfmBadge: '🏆 FULLY-LOADED PETROL MANUAL',
+        keyFeatures: ['15-inch Dual-Tone Diamond-Cut Alloy Wheels', 'Fully Automatic Temperature Control (FATC)', 'Projector Headlamps with Signature LED DRLs', '7-inch Touchscreen with Apple CarPlay & Android Auto']
+      },
+      {
+        name: 'XZA Plus 1.2 Petrol AMT',
+        exShowroom: 785000,
+        fuel: 'Petrol',
+        trans: 'Automatic',
+        engine: '1.2L Revotron Petrol (86 PS / 113 Nm)',
+        mileage: '19.00 kmpl',
+        isVFM: false,
+        keyFeatures: ['Convenient 5-Speed AMT Automatic', '15-inch Diamond-Cut Alloys', 'Rear Wiper & Washer with Defogger', 'Height-Adjustable Driver Seat']
+      },
+      {
+        name: 'XE iCNG (Twin-Cylinder)',
+        exShowroom: 659900,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+        mileage: '26.49 km/kg',
+        isVFM: false,
+        keyFeatures: ['Patented Twin-Cylinder Underfloor CNG Technology', 'Direct Start in CNG Mode', 'Single Advanced ECU for Seamless Petrol/CNG Transition', 'Leak Detection & Thermal Incident Cutoff']
+      },
+      {
+        name: 'XM iCNG (Twin-Cylinder)',
+        exShowroom: 695000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+        mileage: '26.49 km/kg',
+        isVFM: false,
+        keyFeatures: ['Underfloor Dual CNG Tanks with Usable Luggage Boot', 'Front Power Windows & Central Locking', 'Direct Start in CNG Mode', 'Micro-Switch Safety Sensor on Fuel Flap']
+      },
+      {
+        name: 'XT iCNG (Twin-Cylinder)',
+        exShowroom: 735000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+        mileage: '26.49 km/kg',
+        isVFM: true,
+        vfmBadge: '🌿 GREEN COMMUTER VFM PICK',
+        keyFeatures: ['Patented Twin-Cylinder Tech with Preserved Boot Area', 'Electrically Adjustable ORVMs', 'Steering Mounted Controls', 'Puncture Repair Kit with Underbody Spare Wheel']
+      },
+      {
+        name: 'XZ Plus iCNG (Twin-Cylinder)',
+        exShowroom: 835000,
+        fuel: 'CNG',
+        trans: 'Manual',
+        engine: '1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+        mileage: '26.49 km/kg',
+        isVFM: true,
+        vfmBadge: '👑 TOP-SPEC TWIN-CYLINDER CNG',
+        keyFeatures: ['15-inch Precision Alloys on CNG Variant', 'Automatic Climate Control', '17.78 cm Touchscreen with Android Auto & Apple CarPlay', 'Projector Headlamps with LED DRLs']
+      },
+      {
+        name: 'XZA Plus iCNG AMT (Twin-Cylinder Automatic)',
+        exShowroom: 889900,
+        fuel: 'CNG',
+        trans: 'Automatic',
+        engine: '1.2L Bi-Fuel iCNG (73.5 PS / 95 Nm)',
+        mileage: '26.49 km/kg',
+        isVFM: true,
+        vfmBadge: '🔥 INDIA FIRST AUTOMATIC CNG',
+        keyFeatures: ['India’s First Factory-Fitted Automated Manual (AMT) CNG Car', 'Twin Underfloor CNG Tanks', 'Zero Clutch Fatigue in City Traffic', 'Automatic Temperature Control & HARMAN Audio']
+      }
+    ]
+  },
+  {
     id: 'tata-curvv',
     name: 'Tata Curvv (ICE & EV)',
     brand: 'Tata',
