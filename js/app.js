@@ -575,14 +575,17 @@ window.openCarModal = function(carId) {
           <span class="card-brand">${car.brand} • ${car.bodyType}</span>
           <span class="badge-safety" style="position:static; font-size:11px; padding:2px 8px;">🛡️ ${car.safetyRating}</span>
         </div>
-        <h2 style="font-size:24px; font-weight:900; letter-spacing:-0.5px; margin-top:2px;">${car.name}</h2>
-        <p style="font-size:13px; color:var(--text-secondary); margin-top:4px;">${car.summary}</p>
+        <div style="display:flex; align-items:baseline; gap:10px; margin-top:2px;">
+          <h2 style="font-size:21px; font-weight:900; letter-spacing:-0.5px; margin:0;">${car.name}</h2>
+          <span style="font-size:14px; font-weight:800; color:var(--primary);">${car.priceRange}</span>
+        </div>
+        <p style="font-size:12px; color:var(--text-muted); margin-top:2px; margin-bottom:0; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${car.tagline || car.summary}</p>
       </div>
-      <div style="display:flex; align-items:center; gap:8px;">
+      <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
         <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
           🔗 Share
         </button>
-        <button class="modal-close-btn" onclick="closeModal('carDetailModal')">&times;</button>
+        <button class="modal-close-btn" onclick="closeModal('carDetailModal')" title="Close">&times;</button>
       </div>
     </div>
 
@@ -817,6 +820,10 @@ window.openCarModal = function(carId) {
 
     <!-- TAB 4: SPECIFICATIONS & DIMENSIONS -->
     <div id="tab-pane-specs" class="tab-pane">
+      <div style="background:#F8FAFC; border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:16px;">
+        <h4 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:6px;">📖 Complete Vehicle Overview</h4>
+        <p style="font-size:13px; line-height:1.6; color:var(--text-secondary); margin:0;">${car.summary}</p>
+      </div>
       <table class="specs-table">
         <tbody>
           <tr>
