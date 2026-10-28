@@ -35,19 +35,36 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Structured Data (JSON-LD) for SEO -->
+    <!-- Structured Data (JSON-LD) for SEO, Site Name & Google Search Logo -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Care My Vehicle",
-    "url": "https://www.caremyvehicle.in",
-    "description": "Comprehensive guide to all newly launched car models and variants in India with transparent on-road prices.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.caremyvehicle.in/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.caremyvehicle.in/#website",
+        "name": "Care My Vehicle",
+        "url": "https://www.caremyvehicle.in",
+        "description": "Comprehensive guide to all newly launched car models and variants in India with transparent on-road prices.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.caremyvehicle.in/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.caremyvehicle.in/#organization",
+        "name": "Care My Vehicle",
+        "url": "https://www.caremyvehicle.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.caremyvehicle.in/assets/logo.png",
+          "width": 1000,
+          "height": 1000
+        }
+      }
+    ]
   }
   </script>
 </head>
