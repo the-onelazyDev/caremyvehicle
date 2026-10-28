@@ -1,0 +1,143 @@
+{
+  "id": "nissan-x-trail",
+  "name": "Nissan X-Trail",
+  "brand": "Nissan",
+  "tagline": "Flagship 7-Seater Luxury SUV with 1.5L VC-Turbo Mild Hybrid & 7 Airbags",
+  "launchDate": "2024 / 2025",
+  "bodyType": "Luxury SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹49.92 Lakh",
+  "minPrice": 4992000,
+  "maxPrice": 4992000,
+  "safetyRating": "5.0 ★ (Euro NCAP 5-Star / 7 Airbags Standard)",
+  "groundClearance": "210 mm",
+  "bootSpace": "585 – 1424 Litres",
+  "waitingPeriod": "4 - 8 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/colors/champagne-silver.webp",
+  "summary": "The 4th-generation Nissan X-Trail is Nissan's flagship global SUV in India, engineered with the world's first production Variable Compression Turbo (1.5L KR15 VC-Turbo) engine paired with 12V ALiS mild-hybrid tech and an advanced X-Tronic CVT. Boasting 7-seater flexible seating, a panoramic electric sunroof, 360-degree Around View Monitor, electronic shift-by-wire gear selector, limited slip differential, 20-inch diamond-cut alloys, and a 5-star Euro NCAP safety rating.",
+  "colors": [
+    {
+      "id": "champagne-silver",
+      "name": "Champagne Silver",
+      "hex": "#D2C4B1",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_x-trail_champagne-silver.png"
+    },
+    {
+      "id": "diamond-black",
+      "name": "Diamond Black",
+      "hex": "#1B1B1B",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_x-trail_diamond-black.png"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#FAF8F5",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_x-trail_pearl-white.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "xt-1",
+      "title": "Commanding V-Motion Front Architecture & Split LED Lights",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p0_img0_1201x801.jpeg"
+    },
+    {
+      "id": "xt-2",
+      "title": "Global Tough-Gear SUV Design Philosophy",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p1_img0_1201x802.jpeg"
+    },
+    {
+      "id": "xt-3",
+      "title": "Variable Compression KR15 VC-Turbo Engine Innovation",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p2_img0_1202x802.jpeg"
+    },
+    {
+      "id": "xt-4",
+      "title": "ALiS 12V Advanced Lithium-ion Mild Hybrid System",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p3_img0_1203x803.jpeg"
+    },
+    {
+      "id": "xt-5",
+      "title": "XTRONIC Stepped Continuously Variable Transmission",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p4_img0_1203x802.jpeg"
+    },
+    {
+      "id": "xt-6",
+      "title": "Brake Actuated Limited Slip Differential & Dynamic Control",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p6_img0_1203x803.jpeg"
+    },
+    {
+      "id": "xt-7",
+      "title": "Shift-by-Wire Electronic E-Shifter Control Center",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p7_img0_1203x803.jpeg"
+    },
+    {
+      "id": "xt-8",
+      "title": "Around View 360-Degree Monitor with Moving Object Detection",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p9_img0_1143x763.jpeg"
+    },
+    {
+      "id": "xt-9",
+      "title": "12.3-inch High Definition Electronic Multi-Functional Cluster",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p11_img0_1201x801.jpeg"
+    },
+    {
+      "id": "xt-10",
+      "title": "85-Degree Wide Opening Rear Doors for Effortless Ingress",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p12_img0_1203x803.jpeg"
+    },
+    {
+      "id": "xt-11",
+      "title": "7-Seater Flexible Cabin with 16 Versatile Seat Modes",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p13_img0_1203x803.jpeg"
+    },
+    {
+      "id": "xt-12",
+      "title": "20-inch Diamond Cut Machined Alloys & Panoramic Sunroof",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/x-trail_p14_img0_1199x799.jpeg"
+    }
+  ],
+  "specs": {
+    "engine": "1.5L KR15 VC-Turbo (Variable Compression) Mild Hybrid",
+    "power": "163 PS @ 4800 rpm",
+    "torque": "300 Nm @ 2800-3600 rpm",
+    "transmission": "X-TRONIC Stepped CVT Automatic",
+    "mileage": "13.7 km/l (ARAI)",
+    "seating": "7 Seater",
+    "fuelTank": "55 Litres",
+    "length": "4680 mm",
+    "width": "1840 mm",
+    "height": "1725 mm",
+    "wheelbase": "2705 mm",
+    "groundClearance": "210 mm",
+    "bootSpace": "177 Litres (585L Behind 2nd Row / 1424L Max)"
+  },
+  "variants": [
+    {
+      "name": "1.5 VC-Turbo Mild Hybrid 2WD X-Tronic CVT",
+      "exShowroom": 4992000,
+      "engine": "1.5L VC-Turbo Mild Hybrid",
+      "trans": "CVT",
+      "mileage": "13.7 km/l",
+      "fuel": "Petrol",
+      "isVFM": true,
+      "vfmBadge": "Flagship Luxury",
+      "keyFeatures": [
+        "163 PS 1.5L Variable Compression Turbo Engine",
+        "12V ALiS Mild Hybrid System",
+        "X-TRONIC Stepped CVT with Paddle Shifters",
+        "7 Airbags Standard with Euro NCAP 5-Star Safety",
+        "Dual Panoramic Sunroof",
+        "20-inch Diamond Cut Alloy Wheels",
+        "12.3-inch Full Digital Driver Display",
+        "Around View 360-Degree Monitor with MOD",
+        "Limited Slip Differential (Brake Actuated)",
+        "Electronic E-Shifter Gear Selector",
+        "7-Seater Modular Cabin with 16 Versatile Layouts",
+        "Wireless Smartphone Charger & Dual-Zone Climate Control"
+      ]
+    }
+  ]
+}

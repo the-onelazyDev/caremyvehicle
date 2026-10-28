@@ -1,0 +1,259 @@
+{
+  "id": "nissan-tekton",
+  "name": "Nissan Tekton",
+  "brand": "Nissan",
+  "tagline": "Premium Midsize SUV Inspired by 75 Years of Legendary Patrol Heritage",
+  "launchDate": "2025 / 2026",
+  "bodyType": "Midsize SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹10.99 – ₹18.59 Lakh",
+  "minPrice": 1099000,
+  "maxPrice": 1859000,
+  "safetyRating": "5.0 ★ (6 Airbags Standard, Level 2 ADAS, All-Wheel Disc Brakes)",
+  "groundClearance": "212 mm",
+  "bootSpace": "700 Litres (518L Parcel Shelf)",
+  "waitingPeriod": "4 - 6 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/moonbow-gray.webp",
+  "summary": "The Nissan Tekton is a rugged yet sophisticated midsize SUV inspired by Nissan's iconic Patrol heritage. Built on a rigid high-tensile architecture with best-in-class 212 mm ground clearance and 700-litre luggage capacity, it features a tri-tone beige burgundy leatherette interior with rose gold accents, dual 10.25-inch panoramic cockpit screens, E-Shifter, Level 2 ADAS, and potent Turbo T160 and 163 PS Turbo T280 engines paired with 6-speed wet-clutch DCT.",
+  "colors": [
+    {
+      "id": "moonbow-gray",
+      "name": "Moonbow Gray",
+      "hex": "#5A646E",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_moonbow-gray.png"
+    },
+    {
+      "id": "blade-silver",
+      "name": "Blade Silver",
+      "hex": "#BCC0C4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_blade-silver.png"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#FAF8F5",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_pearl-white.png"
+    },
+    {
+      "id": "onyx-black",
+      "name": "Onyx Black",
+      "hex": "#1A1A1A",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_onyx-black.png"
+    },
+    {
+      "id": "flare-garnet-red",
+      "name": "Flare Garnet Red",
+      "hex": "#BA1C24",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_flare-garnet-red.png"
+    },
+    {
+      "id": "indigo-blue",
+      "name": "Indigo Blue",
+      "hex": "#1C2E4C",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_tekton_indigo-blue.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "tek-1",
+      "title": "Patrol-Inspired Imposing Grille & Commanding Silhouette",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p0_img0_3863x1985.jpeg"
+    },
+    {
+      "id": "tek-2",
+      "title": "75 Years of Legendary Nissan SUV Heritage",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p0_img1_1214x683.jpeg"
+    },
+    {
+      "id": "tek-3",
+      "title": "Connected Horizon LED DRLs & Split Bi-Beam Projectors",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p10_img0_2396x1351.jpeg"
+    },
+    {
+      "id": "tek-4",
+      "title": "Muscular Flared Wheel Arches & 212 mm Ground Clearance",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p11_img0_2935x1435.jpeg"
+    },
+    {
+      "id": "tek-5",
+      "title": "Dual-Tone Floating Roof & Satin Aluminum Roof Bars",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p12_img0_2398x1351.jpeg"
+    },
+    {
+      "id": "tek-6",
+      "title": "Sculpted Tailgate with Full-Width Connected LED Light Bar",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p13_img0_2563x1442.jpeg"
+    },
+    {
+      "id": "tek-7",
+      "title": "Tri-Tone Burgundy Beige & Rose Gold Leather Cockpit",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p14_img0_3896x2192.jpeg"
+    },
+    {
+      "id": "tek-8",
+      "title": "Dual 10.25-inch Panoramic Floating Digital Screens",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p15_img0_4305x2422.jpeg"
+    },
+    {
+      "id": "tek-9",
+      "title": "Electronic Shift-by-Wire E-Shifter with 6-Speed Wet DCT",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p10_img1_8000x4500.jpeg"
+    },
+    {
+      "id": "tek-10",
+      "title": "Panoramic Dual-Pane Sunroof with Electric Blind",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p11_img1_8000x4500.jpeg"
+    },
+    {
+      "id": "tek-11",
+      "title": "Class-Leading 700 Litre Cavernous Boot Capacity",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p12_img1_8000x4500.jpeg"
+    },
+    {
+      "id": "tek-12",
+      "title": "163 PS 1.33L Turbo GDi T280 High-Performance Engine",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/tekton_p13_img1_8000x4500.jpeg"
+    }
+  ],
+  "specs": {
+    "engine": "1.0L Turbo T160 (100 PS) / 1.33L Turbo T280 (163 PS)",
+    "power": "100 PS @ 5000 rpm / 163 PS @ 5250 rpm",
+    "torque": "166 Nm @ 2000-3750 rpm / 280 Nm @ 2000-3500 rpm",
+    "transmission": "6-Speed Manual / 6-Speed Wet Clutch DCT",
+    "mileage": "16.8 – 18.2 km/l (ARAI)",
+    "seating": "5 Seater",
+    "fuelTank": "50 Litres",
+    "length": "4349 mm",
+    "width": "1815 mm",
+    "height": "1674 mm",
+    "wheelbase": "2657 mm",
+    "groundClearance": "212 mm",
+    "bootSpace": "700 Litres (518L Parcel Shelf)"
+  },
+  "variants": [
+    {
+      "name": "Visia Turbo T160 MT",
+      "exShowroom": 1099000,
+      "engine": "1.0L Turbo T160",
+      "trans": "Manual",
+      "mileage": "18.2 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags Standard",
+        "All-Wheel Disc Brakes",
+        "ESP with Traction Control",
+        "17-inch Steel Wheels with Hub Caps",
+        "LED Daytime Running Lights",
+        "Auto AC",
+        "Rear Parking Sensors"
+      ]
+    },
+    {
+      "name": "Visia+ Turbo T160 MT",
+      "exShowroom": 1199000,
+      "engine": "1.0L Turbo T160",
+      "trans": "Manual",
+      "mileage": "18.2 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "All Visia Features",
+        "8-inch Touchscreen Infotainment",
+        "Wireless Android Auto & Apple CarPlay",
+        "Rear View Camera",
+        "Steering Controls",
+        "Electric ORVMs"
+      ]
+    },
+    {
+      "name": "Acenta Turbo T160 MT",
+      "exShowroom": 1349000,
+      "engine": "1.0L Turbo T160",
+      "trans": "Manual",
+      "mileage": "18.2 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "17-inch Dual-Tone Flex Wheels",
+        "10.25-inch Touchscreen Infotainment",
+        "Push Button Start with Smart i-Key",
+        "Cruise Control",
+        "Rear AC Vents",
+        "LED Headlamps"
+      ]
+    },
+    {
+      "name": "N-Connecta Turbo T160 MT",
+      "exShowroom": 1479000,
+      "engine": "1.0L Turbo T160",
+      "trans": "Manual",
+      "mileage": "18.2 km/l",
+      "fuel": "Petrol",
+      "isVFM": true,
+      "vfmBadge": "Best Value Mid-SUV",
+      "keyFeatures": [
+        "18-inch Painted Alloy Wheels",
+        "Dual 10.25-inch Panoramic Cockpit",
+        "Around View 360-Degree Camera",
+        "Wireless Charger",
+        "Auto Dimming IRVM",
+        "Ambient Lighting"
+      ]
+    },
+    {
+      "name": "N-Connecta Turbo T280 DCT",
+      "exShowroom": 1619000,
+      "engine": "1.33L Turbo T280 (163 PS)",
+      "trans": "DCT",
+      "mileage": "16.8 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "163 PS T280 4-Cylinder Turbo Engine",
+        "6-Speed Wet-Clutch DCT with E-Shifter",
+        "18-inch Alloys",
+        "360 Camera",
+        "Dual 10.25-inch Screens",
+        "Paddle Shifters"
+      ]
+    },
+    {
+      "name": "Tekna Turbo T280 MT",
+      "exShowroom": 1649000,
+      "engine": "1.33L Turbo T280 (163 PS)",
+      "trans": "Manual",
+      "mileage": "17.4 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "Tri-Tone Leatherette Cabin",
+        "Panoramic Sunroof with Electric Blind",
+        "18-inch Diamond Cut Alloys",
+        "Level 2 ADAS Suite",
+        "Ventilated Front Seats",
+        "BOSE Premium 8-Speaker Audio"
+      ]
+    },
+    {
+      "name": "Tekna+ Turbo T280 DCT",
+      "exShowroom": 1859000,
+      "engine": "1.33L Turbo T280 (163 PS)",
+      "trans": "DCT",
+      "mileage": "16.8 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "Full Level 2 ADAS with Lane Keep & Adaptive Cruise",
+        "6-Speed Wet-Clutch DCT",
+        "Panoramic Sunroof",
+        "Ventilated Front Seats",
+        "Powered Driver Seat",
+        "Dual 10.25-inch Displays",
+        "BOSE 8-Speaker Audio"
+      ]
+    }
+  ]
+}

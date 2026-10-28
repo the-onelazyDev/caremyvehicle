@@ -1,0 +1,253 @@
+{
+  "id": "nissan-gravite",
+  "name": "Nissan Gravite",
+  "brand": "Nissan",
+  "tagline": "The All-New 7-Seater Modular Family SUV Inspired by 1.4 Billion Indians",
+  "launchDate": "2025 / 2026",
+  "bodyType": "7-Seater MPV",
+  "fuelTypes": [
+    "Petrol",
+    "CNG"
+  ],
+  "priceRange": "₹5.65 – ₹8.90 Lakh",
+  "minPrice": 565000,
+  "maxPrice": 890000,
+  "safetyRating": "4.0 ★ (6 Airbags Standard, ESP, HSA, TPMS)",
+  "groundClearance": "182 mm",
+  "bootSpace": "625 Litres (5-Seater Mode) / 320L (6-Seater)",
+  "waitingPeriod": "2 - 4 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/forest-green.webp",
+  "summary": "The All-New Nissan Gravite is a class-defining modular 7-seater designed for Indian families, offering class-leading 625-litre flexible boot space with independent removable 3rd-row seats, dual-tone cabin with wooden finish, 20.32 cm touchscreen with wireless smartphone mirroring, independent 3-row tropicalised AC vents, and high-efficiency 1.0L petrol and factory twin-cylinder CNG powertrains returning up to 19.6 km/l.",
+  "colors": [
+    {
+      "id": "forest-green",
+      "name": "Forest Green",
+      "hex": "#1E3B2F",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_gravite_forest-green.png"
+    },
+    {
+      "id": "onyx-black",
+      "name": "Onyx Black",
+      "hex": "#1A1A1A",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_gravite_onyx-black.png"
+    },
+    {
+      "id": "blade-silver",
+      "name": "Blade Silver",
+      "hex": "#BCC0C4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_gravite_blade-silver.png"
+    },
+    {
+      "id": "storm-white",
+      "name": "Storm White",
+      "hex": "#F4F4F4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_gravite_storm-white.png"
+    },
+    {
+      "id": "metallic-grey",
+      "name": "Metallic Grey",
+      "hex": "#4F5459",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_gravite_metallic-grey.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "grav-1",
+      "title": "The All-New Nissan Gravite 7-Seater Family SUV",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p0_img0_1271x903.jpeg"
+    },
+    {
+      "id": "grav-2",
+      "title": "Spacious Modular 7-Seater Inspired by 1.4 Billion Indians",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p1_img0_1256x1215.jpeg"
+    },
+    {
+      "id": "grav-3",
+      "title": "182 mm High Ground Clearance & Robust Exterior Stance",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p2_img0_1278x719.jpeg"
+    },
+    {
+      "id": "grav-4",
+      "title": "Signature V-Motion Grille with Satin Silver Accents",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p2_img3_1425x878.jpeg"
+    },
+    {
+      "id": "grav-5",
+      "title": "Commanding Road Presence with Protective C-Accents",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p2_img4_2326x1434.jpeg"
+    },
+    {
+      "id": "grav-6",
+      "title": "Functional Roof Rails with 50 kg Dynamic Load Capacity",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p2_img5_1754x1090.jpeg"
+    },
+    {
+      "id": "grav-7",
+      "title": "Class-Leading 625L Flexible Boot with Removable 3rd Row",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p3_img6_1425x878.jpeg"
+    },
+    {
+      "id": "grav-8",
+      "title": "Dual-Tone Dashboard with Elegant Wooden Hairline Finish",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p3_img7_2326x1434.jpeg"
+    },
+    {
+      "id": "grav-9",
+      "title": "Independent 3-Row Tropicalised Air Conditioning Vents",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p3_img8_1754x1090.jpeg"
+    },
+    {
+      "id": "grav-10",
+      "title": "20.32 cm Touchscreen with Wireless Apple CarPlay & Android Auto",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p4_img1_1454x650.jpeg"
+    },
+    {
+      "id": "grav-11",
+      "title": "Active Modular Seating Modes (Life, Surf, Camp & Tribe)",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p5_img0_1196x511.jpeg"
+    },
+    {
+      "id": "grav-12",
+      "title": "High Efficiency 1.0L Energy Petrol & Twin-Cylinder CNG Power",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/gravite_p6_img1_1296x842.jpeg"
+    }
+  ],
+  "specs": {
+    "engine": "1.0L B4D Dual VVT Petrol / 1.0L Bi-Fuel CNG",
+    "power": "72 PS @ 6250 rpm (Petrol)",
+    "torque": "96 Nm @ 3500 rpm",
+    "transmission": "5-Speed Manual / 5-Speed EZ-Shift AMT",
+    "mileage": "19.3 – 19.6 km/l (ARAI)",
+    "seating": "7 Seater (Modular 5+2)",
+    "fuelTank": "40 Litres",
+    "length": "3987 mm",
+    "width": "1734 mm",
+    "height": "1643 mm",
+    "wheelbase": "2636 mm",
+    "groundClearance": "182 mm",
+    "bootSpace": "625 Litres (5-Seater) / 320L (6-Seater)"
+  },
+  "variants": [
+    {
+      "name": "Visia 1.0 NA MT",
+      "exShowroom": 565000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags Standard",
+        "ESP with Hill Start Assist",
+        "Traction Control System",
+        "3rd Row Removable Seats",
+        "8.89 cm LED Digital Cluster",
+        "Front Power Windows",
+        "ISOFIX Child Anchors"
+      ]
+    },
+    {
+      "name": "Acenta 1.0 NA MT",
+      "exShowroom": 655000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "8-inch Touchscreen Infotainment",
+        "Wireless Smartphone Mirroring",
+        "Independent 2nd & 3rd Row AC Vents",
+        "Remote Central Locking",
+        "Rear Room Lamps",
+        "Speed Sensing Door Lock"
+      ]
+    },
+    {
+      "name": "N-Connecta 1.0 NA MT",
+      "exShowroom": 735000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "fuel": "Petrol",
+      "isVFM": true,
+      "vfmBadge": "Top Family Value",
+      "keyFeatures": [
+        "Rear Camera with Guidelines",
+        "Roof Rails with 50kg Capacity",
+        "Suede & Fabric Hexagon Seats",
+        "Center Console with Cooled Storage",
+        "Rear Wiper & Defogger",
+        "Electrically Foldable ORVMs"
+      ]
+    },
+    {
+      "name": "N-Connecta 1.0 NA EZ-Shift AMT",
+      "exShowroom": 785000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Automatic",
+      "mileage": "19.6 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "5-Speed EZ-Shift AMT",
+        "Rear Camera with Guidelines",
+        "Roof Rails (50kg Load)",
+        "Cooled Center Console",
+        "Independent 3-Row AC Vents"
+      ]
+    },
+    {
+      "name": "Tekna 1.0 NA MT",
+      "exShowroom": 825000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "Signature LED DRLs & LED Fog Lamps",
+        "15-inch Dual-Tone Flex Wheels",
+        "17.78 cm Full Digital Cluster",
+        "Smart i-Key with Push Button Start",
+        "Cruise Control",
+        "Front Parking Sensors",
+        "Rain Sensing Wipers"
+      ]
+    },
+    {
+      "name": "Tekna 1.0 NA EZ-Shift AMT",
+      "exShowroom": 875000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Automatic",
+      "mileage": "19.6 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "5-Speed EZ-Shift AMT",
+        "15-inch Dual-Tone Wheels",
+        "17.78 cm Digital Cluster",
+        "Push Button Start",
+        "Front Parking Sensors",
+        "Rain Sensing Wipers"
+      ]
+    },
+    {
+      "name": "Tekna Launch Edition 1.0 NA MT",
+      "exShowroom": 890000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "Dual Dash Cam Installed",
+        "Premium Audio by JBL",
+        "Air Purifier with PM2.5 Filter",
+        "Wireless Smartphone Charging",
+        "Ambient Cabin Mood Light",
+        "Protective C-Shaped Aero Accents"
+      ]
+    }
+  ]
+}

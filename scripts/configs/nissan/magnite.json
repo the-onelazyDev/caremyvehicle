@@ -1,0 +1,330 @@
+{
+  "id": "nissan-magnite",
+  "name": "Nissan Magnite",
+  "brand": "Nissan",
+  "tagline": "Bold, Premium & Advanced Compact SUV with 320+ Upgrades & 5-Star Safety",
+  "launchDate": "2024 / 2025",
+  "bodyType": "Compact SUV",
+  "fuelTypes": [
+    "Petrol",
+    "CNG"
+  ],
+  "priceRange": "₹5.99 – ₹11.50 Lakh",
+  "minPrice": 599000,
+  "maxPrice": 1150000,
+  "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult Safety / 6 Airbags Standard)",
+  "groundClearance": "205 mm",
+  "bootSpace": "336 – 690 Litres",
+  "waitingPeriod": "2 - 4 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp",
+  "summary": "The New Nissan Magnite comes packed with over 320 upgrades, featuring an aggressive commanding front grille, LED Bi-Projector headlamps with L-shaped DRLs, 3D honeycomb LED tail lamps, best-in-segment 205 mm ground clearance, 6 airbags standard across all variants, wireless Android Auto & Apple CarPlay, 360-degree Around View Monitor, and a choice of responsive 1.0L naturally aspirated and 100 PS HRA0 turbo petrol engines with X-TRONIC CVT and EZ-Shift AMT.",
+  "colors": [
+    {
+      "id": "sunrise-copper-orange",
+      "name": "Sunrise Copper Orange",
+      "hex": "#D86B27",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_sunrise-copper-orange.png"
+    },
+    {
+      "id": "flare-garnet-red",
+      "name": "Flare Garnet Red",
+      "hex": "#BA1C24",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_flare-garnet-red.png"
+    },
+    {
+      "id": "blade-silver",
+      "name": "Blade Silver",
+      "hex": "#BCC0C4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_blade-silver.png"
+    },
+    {
+      "id": "onyx-black",
+      "name": "Onyx Black",
+      "hex": "#1A1A1A",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_onyx-black.png"
+    },
+    {
+      "id": "storm-white",
+      "name": "Storm White",
+      "hex": "#F4F4F4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_storm-white.png"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#FAF8F5",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_pearl-white.png"
+    },
+    {
+      "id": "metallic-grey",
+      "name": "Metallic Grey",
+      "hex": "#4F5459",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_metallic-grey.png"
+    },
+    {
+      "id": "olive-bronze",
+      "name": "Olive Bronze",
+      "hex": "#4D4428",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_olive-bronze.png"
+    },
+    {
+      "id": "sunrise-copper-orange-onyx-black",
+      "name": "Sunrise Copper Orange & Onyx Black",
+      "hex": "#D86B27",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_sunrise-copper-orange-onyx-black.png"
+    },
+    {
+      "id": "flare-garnet-red-onyx-black",
+      "name": "Flare Garnet Red & Onyx Black",
+      "hex": "#BA1C24",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_flare-garnet-red-onyx-black.png"
+    },
+    {
+      "id": "blade-silver-onyx-black",
+      "name": "Blade Silver & Onyx Black",
+      "hex": "#BCC0C4",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_blade-silver-onyx-black.png"
+    },
+    {
+      "id": "pearl-white-onyx-black",
+      "name": "Pearl White & Onyx Black",
+      "hex": "#FAF8F5",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_colors/nissan_magnite_pearl-white-onyx-black.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "title": "Bold Front Facia with Bi-Projector LED Headlamps",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p1_img0_1192x840.jpeg"
+    },
+    {
+      "id": "gal-2",
+      "title": "Dynamic Side Profile & 205 mm Ground Clearance",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p10_img0_1269x846.jpeg"
+    },
+    {
+      "id": "gal-3",
+      "title": "Cruise Control & Ergonomic Driver Seating",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p12_img0_1648x1484.jpeg"
+    },
+    {
+      "id": "gal-4",
+      "title": "Premium Dual-Tone Interior Cockpit Theme",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p13_img0_1159x773.jpeg"
+    },
+    {
+      "id": "gal-5",
+      "title": "Tri-Tone Interior Ambience with Continuous Ambient Light",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p14_img0_1159x773.jpeg"
+    },
+    {
+      "id": "gal-6",
+      "title": "First-in-Segment Premium MODURE Quilted Leatherette Seats",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p15_img0_1355x812.jpeg"
+    },
+    {
+      "id": "gal-7",
+      "title": "Multi-Colour Ambient Mood Lighting Across Dash & Doors",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p16_img0_1010x839.jpeg"
+    },
+    {
+      "id": "gal-8",
+      "title": "Class-Leading Spacious Couple Distance & Cabin Width",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p17_img1_1559x934.jpeg"
+    },
+    {
+      "id": "gal-9",
+      "title": "Full Leather-Wrapped Dashboard & Instrument Panel",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p18_img0_1574x1018.jpeg"
+    },
+    {
+      "id": "gal-10",
+      "title": "Electronic Frameless Auto-Dimming Rear View Mirror",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p19_img0_1413x1212.jpeg"
+    },
+    {
+      "id": "gal-11",
+      "title": "16-inch Diamond Cut Precision Alloy Wheels",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p7_img1_1860x1310.jpeg"
+    },
+    {
+      "id": "gal-12",
+      "title": "L-Shaped LED DRLs & Split 3D Honeycomb LED Tail Lamps",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/nissan_extracted/magnite_p8_img0_1276x905.jpeg"
+    }
+  ],
+  "specs": {
+    "engine": "1.0L B4D Petrol (72 PS) / 1.0L HRA0 Turbo (100 PS)",
+    "power": "72 PS @ 6250 rpm / 100 PS @ 5000 rpm",
+    "torque": "96 Nm @ 3500 rpm / 160 Nm @ 2800 rpm (152 Nm CVT)",
+    "transmission": "5-Speed Manual / 5-Speed EZ-Shift AMT / X-TRONIC CVT",
+    "mileage": "17.9 – 19.9 km/l (ARAI)",
+    "seating": "5 Seater",
+    "fuelTank": "40 Litres",
+    "length": "3994 mm",
+    "width": "1758 mm",
+    "height": "1572 mm",
+    "wheelbase": "2500 mm",
+    "groundClearance": "205 mm",
+    "bootSpace": "336 Litres (690L Folded)"
+  },
+  "variants": [
+    {
+      "name": "Visia 1.0 NA MT",
+      "exShowroom": 599000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.4 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "6 Airbags Standard",
+        "ABS with EBD & Brake Assist",
+        "ESP & Traction Control",
+        "Hill Start Assist",
+        "Rear Parking Sensors",
+        "14-inch Steel Wheels with Caps",
+        "Halogen Headlamps",
+        "Manual AC with Filter"
+      ]
+    },
+    {
+      "name": "Visia+ 1.0 NA MT",
+      "exShowroom": 649000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.4 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "All Visia Features",
+        "2-DIN Audio System with Bluetooth",
+        "Front & Rear Speakers",
+        "Rear Power Windows",
+        "Remote Keyless Entry",
+        "Speed Sensing Door Lock"
+      ]
+    },
+    {
+      "name": "Acenta 1.0 NA MT",
+      "exShowroom": 714000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.4 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "8-inch Touchscreen Infotainment",
+        "Wireless Android Auto & Apple CarPlay",
+        "16-inch Dual-Tone Wheel Covers",
+        "Steering Mounted Audio Controls",
+        "Driver Seat Height Adjust",
+        "Electrically Foldable ORVMs"
+      ]
+    },
+    {
+      "name": "Acenta 1.0 NA EZ-Shift AMT",
+      "exShowroom": 764000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Automatic",
+      "mileage": "19.7 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "5-Speed EZ-Shift AMT",
+        "Creep Function",
+        "8-inch Wireless Touchscreen",
+        "Steering Mounted Controls",
+        "Driver Seat Height Adjust",
+        "Electrically Foldable ORVMs"
+      ]
+    },
+    {
+      "name": "N-Connecta 1.0 NA MT",
+      "exShowroom": 786000,
+      "engine": "1.0L NA Petrol",
+      "trans": "Manual",
+      "mileage": "19.4 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "16-inch Diamond Cut Alloys",
+        "7-inch TFT Advanced Driver Display",
+        "LED Signature DRLs",
+        "Automatic Climate Control",
+        "Rear AC Vents",
+        "Rear View Camera with Guidelines"
+      ]
+    },
+    {
+      "name": "N-Connecta 1.0 Turbo MT",
+      "exShowroom": 910000,
+      "engine": "1.0L Turbo Petrol (100 PS)",
+      "trans": "Manual",
+      "mileage": "19.9 km/l",
+      "fuel": "Petrol",
+      "isVFM": true,
+      "vfmBadge": "Best Value Turbo",
+      "keyFeatures": [
+        "100 PS HRA0 Turbo Engine",
+        "16-inch Diamond Cut Alloys",
+        "7-inch TFT Display",
+        "Rear View Camera",
+        "Auto AC with Rear Vents",
+        "Push Button Start with Smart i-Key"
+      ]
+    },
+    {
+      "name": "Tekna 1.0 Turbo MT",
+      "exShowroom": 999000,
+      "engine": "1.0L Turbo Petrol (100 PS)",
+      "trans": "Manual",
+      "mileage": "19.9 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "LED Bi-Projector Headlamps",
+        "3D Honeycomb LED Tail Lamps",
+        "Around View 360-Degree Camera",
+        "Cruise Control",
+        "Ambient Mood Lighting",
+        "Leather Wrapped Steering"
+      ]
+    },
+    {
+      "name": "Tekna 1.0 Turbo X-Tronic CVT",
+      "exShowroom": 1075000,
+      "engine": "1.0L Turbo Petrol (100 PS)",
+      "trans": "CVT",
+      "mileage": "17.9 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "X-TRONIC Stepped D-Step CVT",
+        "Around View 360 Monitor",
+        "LED Bi-Projector Lights",
+        "Cruise Control",
+        "Smart Keyless Walk-Away Lock",
+        "Hill Descent Assist"
+      ]
+    },
+    {
+      "name": "Tekna+ 1.0 Turbo X-Tronic CVT",
+      "exShowroom": 1150000,
+      "engine": "1.0L Turbo Petrol (100 PS)",
+      "trans": "CVT",
+      "mileage": "17.9 km/l",
+      "fuel": "Petrol",
+      "isVFM": false,
+      "keyFeatures": [
+        "Tri-Tone Leatherette Cabin",
+        "Wireless Phone Charging",
+        "PlasmaCluster Air Ionizer",
+        "Around View 360 Monitor",
+        "LED Bi-Projector Lights",
+        "X-TRONIC Stepped CVT"
+      ]
+    }
+  ]
+}

@@ -16071,6 +16071,991 @@ export const CARS = [
           }
       ]
   },
+  {
+      "id": "nissan-magnite",
+      "name": "Nissan Magnite",
+      "brand": "Nissan",
+      "tagline": "Bold, Premium & Advanced Compact SUV with 320+ Upgrades & 5-Star Safety",
+      "launchDate": "2024 / 2025",
+      "bodyType": "Compact SUV",
+      "fuelTypes": [
+          "Petrol",
+          "CNG"
+      ],
+      "priceRange": "₹5.99 – ₹11.50 Lakh",
+      "minPrice": 599000,
+      "maxPrice": 1150000,
+      "safetyRating": "5.0 ★ (Global NCAP 5-Star Adult Safety / 6 Airbags Standard)",
+      "groundClearance": "205 mm",
+      "bootSpace": "336 – 690 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp",
+      "summary": "The New Nissan Magnite comes packed with over 320 upgrades, featuring an aggressive commanding front grille, LED Bi-Projector headlamps with L-shaped DRLs, 3D honeycomb LED tail lamps, best-in-segment 205 mm ground clearance, 6 airbags standard across all variants, wireless Android Auto & Apple CarPlay, 360-degree Around View Monitor, and a choice of responsive 1.0L naturally aspirated and 100 PS HRA0 turbo petrol engines with X-TRONIC CVT and EZ-Shift AMT.",
+      "colors": [
+          {
+              "id": "sunrise-copper-orange",
+              "name": "Sunrise Copper Orange",
+              "hex": "#D86B27",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp"
+          },
+          {
+              "id": "flare-garnet-red",
+              "name": "Flare Garnet Red",
+              "hex": "#BA1C24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/flare-garnet-red.webp"
+          },
+          {
+              "id": "blade-silver",
+              "name": "Blade Silver",
+              "hex": "#BCC0C4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/blade-silver.webp"
+          },
+          {
+              "id": "onyx-black",
+              "name": "Onyx Black",
+              "hex": "#1A1A1A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/onyx-black.webp"
+          },
+          {
+              "id": "storm-white",
+              "name": "Storm White",
+              "hex": "#F4F4F4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/storm-white.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#FAF8F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/pearl-white.webp"
+          },
+          {
+              "id": "metallic-grey",
+              "name": "Metallic Grey",
+              "hex": "#4F5459",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/metallic-grey.webp"
+          },
+          {
+              "id": "olive-bronze",
+              "name": "Olive Bronze",
+              "hex": "#4D4428",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/olive-bronze.webp"
+          },
+          {
+              "id": "sunrise-copper-orange-onyx-black",
+              "name": "Sunrise Copper Orange & Onyx Black",
+              "hex": "#D86B27",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange-onyx-black.webp"
+          },
+          {
+              "id": "flare-garnet-red-onyx-black",
+              "name": "Flare Garnet Red & Onyx Black",
+              "hex": "#BA1C24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/flare-garnet-red-onyx-black.webp"
+          },
+          {
+              "id": "blade-silver-onyx-black",
+              "name": "Blade Silver & Onyx Black",
+              "hex": "#BCC0C4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/blade-silver-onyx-black.webp"
+          },
+          {
+              "id": "pearl-white-onyx-black",
+              "name": "Pearl White & Onyx Black",
+              "hex": "#FAF8F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/pearl-white-onyx-black.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "gal-1",
+              "title": "Bold Front Facia with Bi-Projector LED Headlamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-1.webp"
+          },
+          {
+              "id": "gal-2",
+              "title": "Dynamic Side Profile & 205 mm Ground Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-2.webp"
+          },
+          {
+              "id": "gal-3",
+              "title": "Cruise Control & Ergonomic Driver Seating",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-3.webp"
+          },
+          {
+              "id": "gal-4",
+              "title": "Premium Dual-Tone Interior Cockpit Theme",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-4.webp"
+          },
+          {
+              "id": "gal-5",
+              "title": "Tri-Tone Interior Ambience with Continuous Ambient Light",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-5.webp"
+          },
+          {
+              "id": "gal-6",
+              "title": "First-in-Segment Premium MODURE Quilted Leatherette Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-6.webp"
+          },
+          {
+              "id": "gal-7",
+              "title": "Multi-Colour Ambient Mood Lighting Across Dash & Doors",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-7.webp"
+          },
+          {
+              "id": "gal-8",
+              "title": "Class-Leading Spacious Couple Distance & Cabin Width",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-8.webp"
+          },
+          {
+              "id": "gal-9",
+              "title": "Full Leather-Wrapped Dashboard & Instrument Panel",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-9.webp"
+          },
+          {
+              "id": "gal-10",
+              "title": "Electronic Frameless Auto-Dimming Rear View Mirror",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-10.webp"
+          },
+          {
+              "id": "gal-11",
+              "title": "16-inch Diamond Cut Precision Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-11.webp"
+          },
+          {
+              "id": "gal-12",
+              "title": "L-Shaped LED DRLs & Split 3D Honeycomb LED Tail Lamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/gallery/gal-12.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.0L B4D Petrol (72 PS) / 1.0L HRA0 Turbo (100 PS)",
+          "power": "72 PS @ 6250 rpm / 100 PS @ 5000 rpm",
+          "torque": "96 Nm @ 3500 rpm / 160 Nm @ 2800 rpm (152 Nm CVT)",
+          "transmission": "5-Speed Manual / 5-Speed EZ-Shift AMT / X-TRONIC CVT",
+          "mileage": "17.9 – 19.9 km/l (ARAI)",
+          "seating": "5 Seater",
+          "fuelTank": "40 Litres",
+          "length": "3994 mm",
+          "width": "1758 mm",
+          "height": "1572 mm",
+          "wheelbase": "2500 mm",
+          "groundClearance": "205 mm",
+          "bootSpace": "336 Litres (690L Folded)"
+      },
+      "variants": [
+          {
+              "name": "Visia 1.0 NA MT",
+              "exShowroom": 599000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.4 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "ABS with EBD & Brake Assist",
+                  "ESP & Traction Control",
+                  "Hill Start Assist",
+                  "Rear Parking Sensors",
+                  "14-inch Steel Wheels with Caps",
+                  "Halogen Headlamps",
+                  "Manual AC with Filter"
+              ]
+          },
+          {
+              "name": "Visia+ 1.0 NA MT",
+              "exShowroom": 649000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.4 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All Visia Features",
+                  "2-DIN Audio System with Bluetooth",
+                  "Front & Rear Speakers",
+                  "Rear Power Windows",
+                  "Remote Keyless Entry",
+                  "Speed Sensing Door Lock"
+              ]
+          },
+          {
+              "name": "Acenta 1.0 NA MT",
+              "exShowroom": 714000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.4 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "8-inch Touchscreen Infotainment",
+                  "Wireless Android Auto & Apple CarPlay",
+                  "16-inch Dual-Tone Wheel Covers",
+                  "Steering Mounted Audio Controls",
+                  "Driver Seat Height Adjust",
+                  "Electrically Foldable ORVMs"
+              ]
+          },
+          {
+              "name": "Acenta 1.0 NA EZ-Shift AMT",
+              "exShowroom": 764000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Automatic",
+              "mileage": "19.7 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "5-Speed EZ-Shift AMT",
+                  "Creep Function",
+                  "8-inch Wireless Touchscreen",
+                  "Steering Mounted Controls",
+                  "Driver Seat Height Adjust",
+                  "Electrically Foldable ORVMs"
+              ]
+          },
+          {
+              "name": "N-Connecta 1.0 NA MT",
+              "exShowroom": 786000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.4 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "16-inch Diamond Cut Alloys",
+                  "7-inch TFT Advanced Driver Display",
+                  "LED Signature DRLs",
+                  "Automatic Climate Control",
+                  "Rear AC Vents",
+                  "Rear View Camera with Guidelines"
+              ]
+          },
+          {
+              "name": "N-Connecta 1.0 Turbo MT",
+              "exShowroom": 910000,
+              "engine": "1.0L Turbo Petrol (100 PS)",
+              "trans": "Manual",
+              "mileage": "19.9 km/l",
+              "fuel": "Petrol",
+              "isVFM": true,
+              "vfmBadge": "Best Value Turbo",
+              "keyFeatures": [
+                  "100 PS HRA0 Turbo Engine",
+                  "16-inch Diamond Cut Alloys",
+                  "7-inch TFT Display",
+                  "Rear View Camera",
+                  "Auto AC with Rear Vents",
+                  "Push Button Start with Smart i-Key"
+              ]
+          },
+          {
+              "name": "Tekna 1.0 Turbo MT",
+              "exShowroom": 999000,
+              "engine": "1.0L Turbo Petrol (100 PS)",
+              "trans": "Manual",
+              "mileage": "19.9 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "LED Bi-Projector Headlamps",
+                  "3D Honeycomb LED Tail Lamps",
+                  "Around View 360-Degree Camera",
+                  "Cruise Control",
+                  "Ambient Mood Lighting",
+                  "Leather Wrapped Steering"
+              ]
+          },
+          {
+              "name": "Tekna 1.0 Turbo X-Tronic CVT",
+              "exShowroom": 1075000,
+              "engine": "1.0L Turbo Petrol (100 PS)",
+              "trans": "CVT",
+              "mileage": "17.9 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "X-TRONIC Stepped D-Step CVT",
+                  "Around View 360 Monitor",
+                  "LED Bi-Projector Lights",
+                  "Cruise Control",
+                  "Smart Keyless Walk-Away Lock",
+                  "Hill Descent Assist"
+              ]
+          },
+          {
+              "name": "Tekna+ 1.0 Turbo X-Tronic CVT",
+              "exShowroom": 1150000,
+              "engine": "1.0L Turbo Petrol (100 PS)",
+              "trans": "CVT",
+              "mileage": "17.9 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Tri-Tone Leatherette Cabin",
+                  "Wireless Phone Charging",
+                  "PlasmaCluster Air Ionizer",
+                  "Around View 360 Monitor",
+                  "LED Bi-Projector Lights",
+                  "X-TRONIC Stepped CVT"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "nissan-gravite",
+      "name": "Nissan Gravite",
+      "brand": "Nissan",
+      "tagline": "The All-New 7-Seater Modular Family SUV Inspired by 1.4 Billion Indians",
+      "launchDate": "2025 / 2026",
+      "bodyType": "7-Seater MPV",
+      "fuelTypes": [
+          "Petrol",
+          "CNG"
+      ],
+      "priceRange": "₹5.65 – ₹8.90 Lakh",
+      "minPrice": 565000,
+      "maxPrice": 890000,
+      "safetyRating": "4.0 ★ (6 Airbags Standard, ESP, HSA, TPMS)",
+      "groundClearance": "182 mm",
+      "bootSpace": "625 Litres (5-Seater Mode) / 320L (6-Seater)",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/forest-green.webp",
+      "summary": "The All-New Nissan Gravite is a class-defining modular 7-seater designed for Indian families, offering class-leading 625-litre flexible boot space with independent removable 3rd-row seats, dual-tone cabin with wooden finish, 20.32 cm touchscreen with wireless smartphone mirroring, independent 3-row tropicalised AC vents, and high-efficiency 1.0L petrol and factory twin-cylinder CNG powertrains returning up to 19.6 km/l.",
+      "colors": [
+          {
+              "id": "forest-green",
+              "name": "Forest Green",
+              "hex": "#1E3B2F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/forest-green.webp"
+          },
+          {
+              "id": "onyx-black",
+              "name": "Onyx Black",
+              "hex": "#1A1A1A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/onyx-black.webp"
+          },
+          {
+              "id": "blade-silver",
+              "name": "Blade Silver",
+              "hex": "#BCC0C4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/blade-silver.webp"
+          },
+          {
+              "id": "storm-white",
+              "name": "Storm White",
+              "hex": "#F4F4F4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/storm-white.webp"
+          },
+          {
+              "id": "metallic-grey",
+              "name": "Metallic Grey",
+              "hex": "#4F5459",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/colors/metallic-grey.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "grav-1",
+              "title": "The All-New Nissan Gravite 7-Seater Family SUV",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-1.webp"
+          },
+          {
+              "id": "grav-2",
+              "title": "Spacious Modular 7-Seater Inspired by 1.4 Billion Indians",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-2.webp"
+          },
+          {
+              "id": "grav-3",
+              "title": "182 mm High Ground Clearance & Robust Exterior Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-3.webp"
+          },
+          {
+              "id": "grav-4",
+              "title": "Signature V-Motion Grille with Satin Silver Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-4.webp"
+          },
+          {
+              "id": "grav-5",
+              "title": "Commanding Road Presence with Protective C-Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-5.webp"
+          },
+          {
+              "id": "grav-6",
+              "title": "Functional Roof Rails with 50 kg Dynamic Load Capacity",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-6.webp"
+          },
+          {
+              "id": "grav-7",
+              "title": "Class-Leading 625L Flexible Boot with Removable 3rd Row",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-7.webp"
+          },
+          {
+              "id": "grav-8",
+              "title": "Dual-Tone Dashboard with Elegant Wooden Hairline Finish",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-8.webp"
+          },
+          {
+              "id": "grav-9",
+              "title": "Independent 3-Row Tropicalised Air Conditioning Vents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-9.webp"
+          },
+          {
+              "id": "grav-10",
+              "title": "20.32 cm Touchscreen with Wireless Apple CarPlay & Android Auto",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-10.webp"
+          },
+          {
+              "id": "grav-11",
+              "title": "Active Modular Seating Modes (Life, Surf, Camp & Tribe)",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-11.webp"
+          },
+          {
+              "id": "grav-12",
+              "title": "High Efficiency 1.0L Energy Petrol & Twin-Cylinder CNG Power",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-gravite/gallery/grav-12.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.0L B4D Dual VVT Petrol / 1.0L Bi-Fuel CNG",
+          "power": "72 PS @ 6250 rpm (Petrol)",
+          "torque": "96 Nm @ 3500 rpm",
+          "transmission": "5-Speed Manual / 5-Speed EZ-Shift AMT",
+          "mileage": "19.3 – 19.6 km/l (ARAI)",
+          "seating": "7 Seater (Modular 5+2)",
+          "fuelTank": "40 Litres",
+          "length": "3987 mm",
+          "width": "1734 mm",
+          "height": "1643 mm",
+          "wheelbase": "2636 mm",
+          "groundClearance": "182 mm",
+          "bootSpace": "625 Litres (5-Seater) / 320L (6-Seater)"
+      },
+      "variants": [
+          {
+              "name": "Visia 1.0 NA MT",
+              "exShowroom": 565000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "ESP with Hill Start Assist",
+                  "Traction Control System",
+                  "3rd Row Removable Seats",
+                  "8.89 cm LED Digital Cluster",
+                  "Front Power Windows",
+                  "ISOFIX Child Anchors"
+              ]
+          },
+          {
+              "name": "Acenta 1.0 NA MT",
+              "exShowroom": 655000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "8-inch Touchscreen Infotainment",
+                  "Wireless Smartphone Mirroring",
+                  "Independent 2nd & 3rd Row AC Vents",
+                  "Remote Central Locking",
+                  "Rear Room Lamps",
+                  "Speed Sensing Door Lock"
+              ]
+          },
+          {
+              "name": "N-Connecta 1.0 NA MT",
+              "exShowroom": 735000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "fuel": "Petrol",
+              "isVFM": true,
+              "vfmBadge": "Top Family Value",
+              "keyFeatures": [
+                  "Rear Camera with Guidelines",
+                  "Roof Rails with 50kg Capacity",
+                  "Suede & Fabric Hexagon Seats",
+                  "Center Console with Cooled Storage",
+                  "Rear Wiper & Defogger",
+                  "Electrically Foldable ORVMs"
+              ]
+          },
+          {
+              "name": "N-Connecta 1.0 NA EZ-Shift AMT",
+              "exShowroom": 785000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Automatic",
+              "mileage": "19.6 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "5-Speed EZ-Shift AMT",
+                  "Rear Camera with Guidelines",
+                  "Roof Rails (50kg Load)",
+                  "Cooled Center Console",
+                  "Independent 3-Row AC Vents"
+              ]
+          },
+          {
+              "name": "Tekna 1.0 NA MT",
+              "exShowroom": 825000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Signature LED DRLs & LED Fog Lamps",
+                  "15-inch Dual-Tone Flex Wheels",
+                  "17.78 cm Full Digital Cluster",
+                  "Smart i-Key with Push Button Start",
+                  "Cruise Control",
+                  "Front Parking Sensors",
+                  "Rain Sensing Wipers"
+              ]
+          },
+          {
+              "name": "Tekna 1.0 NA EZ-Shift AMT",
+              "exShowroom": 875000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Automatic",
+              "mileage": "19.6 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "5-Speed EZ-Shift AMT",
+                  "15-inch Dual-Tone Wheels",
+                  "17.78 cm Digital Cluster",
+                  "Push Button Start",
+                  "Front Parking Sensors",
+                  "Rain Sensing Wipers"
+              ]
+          },
+          {
+              "name": "Tekna Launch Edition 1.0 NA MT",
+              "exShowroom": 890000,
+              "engine": "1.0L NA Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Dual Dash Cam Installed",
+                  "Premium Audio by JBL",
+                  "Air Purifier with PM2.5 Filter",
+                  "Wireless Smartphone Charging",
+                  "Ambient Cabin Mood Light",
+                  "Protective C-Shaped Aero Accents"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "nissan-tekton",
+      "name": "Nissan Tekton",
+      "brand": "Nissan",
+      "tagline": "Premium Midsize SUV Inspired by 75 Years of Legendary Patrol Heritage",
+      "launchDate": "2025 / 2026",
+      "bodyType": "Midsize SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹10.99 – ₹18.59 Lakh",
+      "minPrice": 1099000,
+      "maxPrice": 1859000,
+      "safetyRating": "5.0 ★ (6 Airbags Standard, Level 2 ADAS, All-Wheel Disc Brakes)",
+      "groundClearance": "212 mm",
+      "bootSpace": "700 Litres (518L Parcel Shelf)",
+      "waitingPeriod": "4 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/moonbow-gray.webp",
+      "summary": "The Nissan Tekton is a rugged yet sophisticated midsize SUV inspired by Nissan's iconic Patrol heritage. Built on a rigid high-tensile architecture with best-in-class 212 mm ground clearance and 700-litre luggage capacity, it features a tri-tone beige burgundy leatherette interior with rose gold accents, dual 10.25-inch panoramic cockpit screens, E-Shifter, Level 2 ADAS, and potent Turbo T160 and 163 PS Turbo T280 engines paired with 6-speed wet-clutch DCT.",
+      "colors": [
+          {
+              "id": "moonbow-gray",
+              "name": "Moonbow Gray",
+              "hex": "#5A646E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/moonbow-gray.webp"
+          },
+          {
+              "id": "blade-silver",
+              "name": "Blade Silver",
+              "hex": "#BCC0C4",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/blade-silver.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#FAF8F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/pearl-white.webp"
+          },
+          {
+              "id": "onyx-black",
+              "name": "Onyx Black",
+              "hex": "#1A1A1A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/onyx-black.webp"
+          },
+          {
+              "id": "flare-garnet-red",
+              "name": "Flare Garnet Red",
+              "hex": "#BA1C24",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/flare-garnet-red.webp"
+          },
+          {
+              "id": "indigo-blue",
+              "name": "Indigo Blue",
+              "hex": "#1C2E4C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/colors/indigo-blue.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "tek-1",
+              "title": "Patrol-Inspired Imposing Grille & Commanding Silhouette",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-1.webp"
+          },
+          {
+              "id": "tek-2",
+              "title": "75 Years of Legendary Nissan SUV Heritage",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-2.webp"
+          },
+          {
+              "id": "tek-3",
+              "title": "Connected Horizon LED DRLs & Split Bi-Beam Projectors",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-3.webp"
+          },
+          {
+              "id": "tek-4",
+              "title": "Muscular Flared Wheel Arches & 212 mm Ground Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-4.webp"
+          },
+          {
+              "id": "tek-5",
+              "title": "Dual-Tone Floating Roof & Satin Aluminum Roof Bars",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-5.webp"
+          },
+          {
+              "id": "tek-6",
+              "title": "Sculpted Tailgate with Full-Width Connected LED Light Bar",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-6.webp"
+          },
+          {
+              "id": "tek-7",
+              "title": "Tri-Tone Burgundy Beige & Rose Gold Leather Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-7.webp"
+          },
+          {
+              "id": "tek-8",
+              "title": "Dual 10.25-inch Panoramic Floating Digital Screens",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-8.webp"
+          },
+          {
+              "id": "tek-9",
+              "title": "Electronic Shift-by-Wire E-Shifter with 6-Speed Wet DCT",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-9.webp"
+          },
+          {
+              "id": "tek-10",
+              "title": "Panoramic Dual-Pane Sunroof with Electric Blind",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-10.webp"
+          },
+          {
+              "id": "tek-11",
+              "title": "Class-Leading 700 Litre Cavernous Boot Capacity",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-11.webp"
+          },
+          {
+              "id": "tek-12",
+              "title": "163 PS 1.33L Turbo GDi T280 High-Performance Engine",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-tekton/gallery/tek-12.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.0L Turbo T160 (100 PS) / 1.33L Turbo T280 (163 PS)",
+          "power": "100 PS @ 5000 rpm / 163 PS @ 5250 rpm",
+          "torque": "166 Nm @ 2000-3750 rpm / 280 Nm @ 2000-3500 rpm",
+          "transmission": "6-Speed Manual / 6-Speed Wet Clutch DCT",
+          "mileage": "16.8 – 18.2 km/l (ARAI)",
+          "seating": "5 Seater",
+          "fuelTank": "50 Litres",
+          "length": "4349 mm",
+          "width": "1815 mm",
+          "height": "1674 mm",
+          "wheelbase": "2657 mm",
+          "groundClearance": "212 mm",
+          "bootSpace": "700 Litres (518L Parcel Shelf)"
+      },
+      "variants": [
+          {
+              "name": "Visia Turbo T160 MT",
+              "exShowroom": 1099000,
+              "engine": "1.0L Turbo T160",
+              "trans": "Manual",
+              "mileage": "18.2 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "All-Wheel Disc Brakes",
+                  "ESP with Traction Control",
+                  "17-inch Steel Wheels with Hub Caps",
+                  "LED Daytime Running Lights",
+                  "Auto AC",
+                  "Rear Parking Sensors"
+              ]
+          },
+          {
+              "name": "Visia+ Turbo T160 MT",
+              "exShowroom": 1199000,
+              "engine": "1.0L Turbo T160",
+              "trans": "Manual",
+              "mileage": "18.2 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "All Visia Features",
+                  "8-inch Touchscreen Infotainment",
+                  "Wireless Android Auto & Apple CarPlay",
+                  "Rear View Camera",
+                  "Steering Controls",
+                  "Electric ORVMs"
+              ]
+          },
+          {
+              "name": "Acenta Turbo T160 MT",
+              "exShowroom": 1349000,
+              "engine": "1.0L Turbo T160",
+              "trans": "Manual",
+              "mileage": "18.2 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "17-inch Dual-Tone Flex Wheels",
+                  "10.25-inch Touchscreen Infotainment",
+                  "Push Button Start with Smart i-Key",
+                  "Cruise Control",
+                  "Rear AC Vents",
+                  "LED Headlamps"
+              ]
+          },
+          {
+              "name": "N-Connecta Turbo T160 MT",
+              "exShowroom": 1479000,
+              "engine": "1.0L Turbo T160",
+              "trans": "Manual",
+              "mileage": "18.2 km/l",
+              "fuel": "Petrol",
+              "isVFM": true,
+              "vfmBadge": "Best Value Mid-SUV",
+              "keyFeatures": [
+                  "18-inch Painted Alloy Wheels",
+                  "Dual 10.25-inch Panoramic Cockpit",
+                  "Around View 360-Degree Camera",
+                  "Wireless Charger",
+                  "Auto Dimming IRVM",
+                  "Ambient Lighting"
+              ]
+          },
+          {
+              "name": "N-Connecta Turbo T280 DCT",
+              "exShowroom": 1619000,
+              "engine": "1.33L Turbo T280 (163 PS)",
+              "trans": "DCT",
+              "mileage": "16.8 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "163 PS T280 4-Cylinder Turbo Engine",
+                  "6-Speed Wet-Clutch DCT with E-Shifter",
+                  "18-inch Alloys",
+                  "360 Camera",
+                  "Dual 10.25-inch Screens",
+                  "Paddle Shifters"
+              ]
+          },
+          {
+              "name": "Tekna Turbo T280 MT",
+              "exShowroom": 1649000,
+              "engine": "1.33L Turbo T280 (163 PS)",
+              "trans": "Manual",
+              "mileage": "17.4 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Tri-Tone Leatherette Cabin",
+                  "Panoramic Sunroof with Electric Blind",
+                  "18-inch Diamond Cut Alloys",
+                  "Level 2 ADAS Suite",
+                  "Ventilated Front Seats",
+                  "BOSE Premium 8-Speaker Audio"
+              ]
+          },
+          {
+              "name": "Tekna+ Turbo T280 DCT",
+              "exShowroom": 1859000,
+              "engine": "1.33L Turbo T280 (163 PS)",
+              "trans": "DCT",
+              "mileage": "16.8 km/l",
+              "fuel": "Petrol",
+              "isVFM": false,
+              "keyFeatures": [
+                  "Full Level 2 ADAS with Lane Keep & Adaptive Cruise",
+                  "6-Speed Wet-Clutch DCT",
+                  "Panoramic Sunroof",
+                  "Ventilated Front Seats",
+                  "Powered Driver Seat",
+                  "Dual 10.25-inch Displays",
+                  "BOSE 8-Speaker Audio"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "nissan-x-trail",
+      "name": "Nissan X-Trail",
+      "brand": "Nissan",
+      "tagline": "Flagship 7-Seater Luxury SUV with 1.5L VC-Turbo Mild Hybrid & 7 Airbags",
+      "launchDate": "2024 / 2025",
+      "bodyType": "Luxury SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹49.92 Lakh",
+      "minPrice": 4992000,
+      "maxPrice": 4992000,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star / 7 Airbags Standard)",
+      "groundClearance": "210 mm",
+      "bootSpace": "585 – 1424 Litres",
+      "waitingPeriod": "4 - 8 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/colors/champagne-silver.webp",
+      "summary": "The 4th-generation Nissan X-Trail is Nissan's flagship global SUV in India, engineered with the world's first production Variable Compression Turbo (1.5L KR15 VC-Turbo) engine paired with 12V ALiS mild-hybrid tech and an advanced X-Tronic CVT. Boasting 7-seater flexible seating, a panoramic electric sunroof, 360-degree Around View Monitor, electronic shift-by-wire gear selector, limited slip differential, 20-inch diamond-cut alloys, and a 5-star Euro NCAP safety rating.",
+      "colors": [
+          {
+              "id": "champagne-silver",
+              "name": "Champagne Silver",
+              "hex": "#D2C4B1",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/colors/champagne-silver.webp"
+          },
+          {
+              "id": "diamond-black",
+              "name": "Diamond Black",
+              "hex": "#1B1B1B",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/colors/diamond-black.webp"
+          },
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#FAF8F5",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/colors/pearl-white.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "xt-1",
+              "title": "Commanding V-Motion Front Architecture & Split LED Lights",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-1.webp"
+          },
+          {
+              "id": "xt-2",
+              "title": "Global Tough-Gear SUV Design Philosophy",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-2.webp"
+          },
+          {
+              "id": "xt-3",
+              "title": "Variable Compression KR15 VC-Turbo Engine Innovation",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-3.webp"
+          },
+          {
+              "id": "xt-4",
+              "title": "ALiS 12V Advanced Lithium-ion Mild Hybrid System",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-4.webp"
+          },
+          {
+              "id": "xt-5",
+              "title": "XTRONIC Stepped Continuously Variable Transmission",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-5.webp"
+          },
+          {
+              "id": "xt-6",
+              "title": "Brake Actuated Limited Slip Differential & Dynamic Control",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-6.webp"
+          },
+          {
+              "id": "xt-7",
+              "title": "Shift-by-Wire Electronic E-Shifter Control Center",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-7.webp"
+          },
+          {
+              "id": "xt-8",
+              "title": "Around View 360-Degree Monitor with Moving Object Detection",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-8.webp"
+          },
+          {
+              "id": "xt-9",
+              "title": "12.3-inch High Definition Electronic Multi-Functional Cluster",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-9.webp"
+          },
+          {
+              "id": "xt-10",
+              "title": "85-Degree Wide Opening Rear Doors for Effortless Ingress",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-10.webp"
+          },
+          {
+              "id": "xt-11",
+              "title": "7-Seater Flexible Cabin with 16 Versatile Seat Modes",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-11.webp"
+          },
+          {
+              "id": "xt-12",
+              "title": "20-inch Diamond Cut Machined Alloys & Panoramic Sunroof",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/nissan-x-trail/gallery/xt-12.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.5L KR15 VC-Turbo (Variable Compression) Mild Hybrid",
+          "power": "163 PS @ 4800 rpm",
+          "torque": "300 Nm @ 2800-3600 rpm",
+          "transmission": "X-TRONIC Stepped CVT Automatic",
+          "mileage": "13.7 km/l (ARAI)",
+          "seating": "7 Seater",
+          "fuelTank": "55 Litres",
+          "length": "4680 mm",
+          "width": "1840 mm",
+          "height": "1725 mm",
+          "wheelbase": "2705 mm",
+          "groundClearance": "210 mm",
+          "bootSpace": "177 Litres (585L Behind 2nd Row / 1424L Max)"
+      },
+      "variants": [
+          {
+              "name": "1.5 VC-Turbo Mild Hybrid 2WD X-Tronic CVT",
+              "exShowroom": 4992000,
+              "engine": "1.5L VC-Turbo Mild Hybrid",
+              "trans": "CVT",
+              "mileage": "13.7 km/l",
+              "fuel": "Petrol",
+              "isVFM": true,
+              "vfmBadge": "Flagship Luxury",
+              "keyFeatures": [
+                  "163 PS 1.5L Variable Compression Turbo Engine",
+                  "12V ALiS Mild Hybrid System",
+                  "X-TRONIC Stepped CVT with Paddle Shifters",
+                  "7 Airbags Standard with Euro NCAP 5-Star Safety",
+                  "Dual Panoramic Sunroof",
+                  "20-inch Diamond Cut Alloy Wheels",
+                  "12.3-inch Full Digital Driver Display",
+                  "Around View 360-Degree Monitor with MOD",
+                  "Limited Slip Differential (Brake Actuated)",
+                  "Electronic E-Shifter Gear Selector",
+                  "7-Seater Modular Cabin with 16 Versatile Layouts",
+                  "Wireless Smartphone Charger & Dual-Zone Climate Control"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price
