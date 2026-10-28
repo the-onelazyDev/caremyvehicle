@@ -1,0 +1,279 @@
+{
+  "id": "citroen-aircross",
+  "name": "Citro\u00ebn Aircross",
+  "brand": "Citro\u00ebn",
+  "tagline": "The Ultra-Modular 5 & 5+2 Seater SUV with Supreme Ride Comfort",
+  "launchDate": "2024 / 2025",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "\u20b98.89 \u2013 \u20b914.54 Lakh",
+  "minPrice": 889000,
+  "maxPrice": 1454000,
+  "safetyRating": "4.0 \u2605 (Bharat NCAP 4-Star \u2014 Adult 26.19/32, Child 35.90/49)",
+  "groundClearance": "200 mm",
+  "bootSpace": "444 \u2013 511 Litres",
+  "waitingPeriod": "2 - 4 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/citroen-aircross-deep-forest-green.webp",
+  "summary": "The Citro\u00ebn Aircross is a highly versatile mid-size SUV offering class-exclusive 5-seater and 5+2 modular seating with removable third-row seats, best-in-segment suspension ride quality, 200 mm ground clearance, and punchy 110 PS turbo petrol power.",
+  "colors": [
+    {
+      "id": "polar-white",
+      "name": "Polar White",
+      "hex": "#E3E3E3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_polar-white.png"
+    },
+    {
+      "id": "steel-grey",
+      "name": "Steel Grey",
+      "hex": "#A3A3A3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_steel-grey.png"
+    },
+    {
+      "id": "deep-forest-green",
+      "name": "Deep Forest Green",
+      "hex": "#14221A",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_deep-forest-green.png"
+    },
+    {
+      "id": "galaxy-blue",
+      "name": "Galaxy Blue",
+      "hex": "#172B4D",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_galaxy-blue.png"
+    },
+    {
+      "id": "perla-nera-black",
+      "name": "Perla Nera Black",
+      "hex": "#1C1C1C",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_perla-nera-black.png"
+    },
+    {
+      "id": "garnet-red",
+      "name": "Garnet Red",
+      "hex": "#D54638",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_garnet-red.png"
+    },
+    {
+      "id": "polar-white-black-roof",
+      "name": "Polar White & Black Roof",
+      "hex": "#E3E3E3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_polar-white-black-roof.png"
+    },
+    {
+      "id": "deep-forest-green-black-roof",
+      "name": "Deep Forest Green & Black Roof",
+      "hex": "#14221A",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_deep-forest-green-black-roof.png"
+    },
+    {
+      "id": "galaxy-blue-polar-white-roof",
+      "name": "Galaxy Blue & Polar White Roof",
+      "hex": "#172B4D",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_galaxy-blue-polar-white-roof.png"
+    },
+    {
+      "id": "garnet-red-black-roof",
+      "name": "Garnet Red & Black Roof",
+      "hex": "#D54638",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_aircross_garnet-red-black-roof.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "ext-1",
+      "title": "Bold Modern Citro\u00ebn Front Facia",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/1.jpg"
+    },
+    {
+      "id": "ext-2",
+      "title": "Rugged SUV Stance & High Clearance",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/2.jpg"
+    },
+    {
+      "id": "ext-3",
+      "title": "Floating Roofline & Dual Tone Accents",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/3.jpg"
+    },
+    {
+      "id": "ext-4",
+      "title": "Chiseled Rear Profile with Distinct Badging",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/4.jpg"
+    },
+    {
+      "id": "ext-5",
+      "title": "Projector Headlamps with Signature DRLs",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/5.jpg"
+    },
+    {
+      "id": "ext-6",
+      "title": "Robust Roof Rails for Practical Adventure",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/exterior/6.jpg"
+    },
+    {
+      "id": "int-1",
+      "title": "Ergonomic Dashboard with Premium Injected Gray",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/1.jpg"
+    },
+    {
+      "id": "int-2",
+      "title": "Leatherette Wrapped Steering with Mounted Controls",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/2.jpg"
+    },
+    {
+      "id": "seat-1",
+      "title": "Class-Exclusive 5+2 Removable 3rd Row",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/seats/Full_House.jpg"
+    },
+    {
+      "id": "seat-2",
+      "title": "Expansive 511-Litre Boot Capacity",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/seats/UltraSpace.jpg"
+    },
+    {
+      "id": "seat-3",
+      "title": "Modular Flat Fold Outdoor Configuration",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/seats/Outdoor.jpg"
+    },
+    {
+      "id": "tech-1",
+      "title": "26 cm Citro\u00ebn Connect Touchscreen with Wireless AA/CP",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/technology/1.jpg"
+    }
+  ],
+  "variants": [
+    {
+      "name": "You 1.2 NA 5-Seater",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "18.5 km/l",
+      "exShowroom": 889000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "6 Airbags Standard",
+        "ESC & Hill Hold Assist",
+        "TPMS (Tyre Pressure Monitor)",
+        "High Ground Clearance (200mm)",
+        "Front Power Windows"
+      ]
+    },
+    {
+      "name": "Plus 1.2 NA 5-Seater",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "18.5 km/l",
+      "exShowroom": 999000,
+      "isVFM": true,
+      "vfmBadge": "Best Value SUV",
+      "keyFeatures": [
+        "26 cm Touchscreen Infotainment",
+        "Wireless Android Auto & Apple CarPlay",
+        "Roof Mounted Rear AC Vents",
+        "LED DRLs",
+        "Steering Audio Controls"
+      ]
+    },
+    {
+      "name": "Plus Turbo 1.2 5+2 Seater",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "18.5 km/l",
+      "exShowroom": 1161400,
+      "isVFM": true,
+      "vfmBadge": "Best Value 7-Seater",
+      "keyFeatures": [
+        "Modular 7-Seater with Removable 3rd Row",
+        "110 PS Turbo Petrol Power",
+        "Dedicated Blower for 3rd Row",
+        "Rear Camera with Sensors",
+        "16-inch Steel Wheels with Caps"
+      ]
+    },
+    {
+      "name": "Max Turbo 1.2 5-Seater MT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "18.5 km/l",
+      "exShowroom": 1260500,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "17-inch Diamond Cut Alloy Wheels",
+        "Front Fog Lamps",
+        "Leatherette Seat Upholstery",
+        "MyCitro\u00ebn Connect App",
+        "Shark Fin Antenna"
+      ]
+    },
+    {
+      "name": "Max Turbo 1.2 5+2 Seater MT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "18.5 km/l",
+      "exShowroom": 1295000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "Full 7-Seater Configuration",
+        "17-inch Diamond Cut Alloys",
+        "Auto Climate Control",
+        "Power Folding ORVMs",
+        "Rear Defogger & Wiper"
+      ]
+    },
+    {
+      "name": "Max Turbo 1.2 5-Seater AT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "mileage": "17.6 km/l",
+      "exShowroom": 1399000,
+      "isVFM": true,
+      "vfmBadge": "Top Pick Automatic",
+      "keyFeatures": [
+        "6-Speed AISIN Torque Converter AT",
+        "205 Nm Punchy Torque",
+        "Cruise Control with Speed Limiter",
+        "Telescopic Steering Adjust",
+        "Wireless Charger"
+      ]
+    },
+    {
+      "name": "Max Turbo 1.2 5+2 Seater AT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "mileage": "17.6 km/l",
+      "exShowroom": 1454000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "Top-Spec 7-Seater Automatic",
+        "Removable Third-Row Chairs",
+        "Full Safety Suite (6 Airbags + ESP)",
+        "Connected Car Telematics",
+        "Dual Tone Roof Fitment"
+      ]
+    }
+  ],
+  "specs": {
+    "engine": "1.2L PureTech 82 NA / 1.2L PureTech 110 Turbo Petrol",
+    "power": "82 PS @ 5750 rpm / 110 PS @ 5500 rpm",
+    "torque": "115 Nm @ 3750 rpm / 205 Nm @ 1750-2500 rpm",
+    "transmission": "5-Speed MT / 6-Speed MT / 6-Speed AISIN Torque Converter AT",
+    "mileage": "17.6 \u2013 18.5 km/l",
+    "fuelTank": "45 Litres",
+    "dimensions": "4323 mm L x 1796 mm W x 1669 mm H",
+    "wheelbase": "2671 mm",
+    "groundClearance": "200 mm",
+    "bootSpace": "444 Litres (5-Seater) / 511 Litres (with 3rd row removed)",
+    "brakes": "Front Disc, Rear Drum",
+    "suspension": "MacPherson Strut with Progressive Hydraulic Cushions (Front) / Twist Beam (Rear)"
+  }
+}

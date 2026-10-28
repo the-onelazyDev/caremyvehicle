@@ -14975,7 +14975,1102 @@ export const CARS = [
               ]
           }
       ]
-  }
+  },
+  {
+      "id": "citroen-basalt",
+      "name": "Citroën Basalt",
+      "brand": "Citroën",
+      "tagline": "India's First Mainstream SUV Coupe with Advanced Flying Carpet Comfort & 4-Star Safety",
+      "launchDate": "2024 / 2025",
+      "bodyType": "SUV Coupe",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹7.99 – ₹13.83 Lakh",
+      "minPrice": 799000,
+      "maxPrice": 1383000,
+      "safetyRating": "4.0 ★ (Bharat NCAP 4-Star — Adult 26.19/32, Child 35.90/49)",
+      "groundClearance": "180 mm",
+      "bootSpace": "470 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/garnet-red.webp",
+      "summary": "The Citroën Basalt is India's first mainstream coupe SUV, combining a sweeping aerodynamic fastback silhouette with Citroën's signature Advanced Comfort suspension with Progressive Hydraulic Cushions, 26 cm floating touchscreen, wireless phone charging, 6 airbags standard, and spirited PureTech 110 turbo petrol engines.",
+      "colors": [
+          {
+              "id": "polar-white",
+              "name": "Polar White",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/polar-white.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#A3A3A3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/steel-grey.webp"
+          },
+          {
+              "id": "galaxy-blue",
+              "name": "Galaxy Blue",
+              "hex": "#172B4D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/galaxy-blue.webp"
+          },
+          {
+              "id": "garnet-red",
+              "name": "Garnet Red",
+              "hex": "#D54638",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/garnet-red.webp"
+          },
+          {
+              "id": "perla-nera-black",
+              "name": "Perla Nera Black",
+              "hex": "#1C1C1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/perla-nera-black.webp"
+          },
+          {
+              "id": "polar-white-black-roof",
+              "name": "Polar White & Black Roof",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/polar-white-black-roof.webp"
+          },
+          {
+              "id": "garnet-red-black-roof",
+              "name": "Garnet Red & Black Roof",
+              "hex": "#D54638",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/colors/garnet-red-black-roof.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ext-1",
+              "title": "Coupe Silhouette & Aerodynamics",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-1.webp"
+          },
+          {
+              "id": "ext-2",
+              "title": "Aggressive Front Grille & LED DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-2.webp"
+          },
+          {
+              "id": "ext-3",
+              "title": "Sweeping Fastback Roofline",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-3.webp"
+          },
+          {
+              "id": "ext-4",
+              "title": "Muscular Rear Stance & 3D Taillamps",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-4.webp"
+          },
+          {
+              "id": "ext-5",
+              "title": "Citroën Comfort Heritage",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-5.webp"
+          },
+          {
+              "id": "ext-6",
+              "title": "Advanced Comfort Cockpit & 26cm Screen",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/ext-6.webp"
+          },
+          {
+              "id": "int-1",
+              "title": "Citroën Advanced Comfort Cockpit",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/int-1.webp"
+          },
+          {
+              "id": "int-2",
+              "title": "26 cm Floating Infotainment Touchscreen",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/int-2.webp"
+          },
+          {
+              "id": "int-3",
+              "title": "Ergonomic Center Console & Wireless Charger",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/int-3.webp"
+          },
+          {
+              "id": "int-4",
+              "title": "Spacious Rear Bench with Adjustable Headrests",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/int-4.webp"
+          },
+          {
+              "id": "comf-1",
+              "title": "Plush Flying Carpet Ride Comfort",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/comf-1.webp"
+          },
+          {
+              "id": "tech-1",
+              "title": "Digital Driver Cluster with Multi-Mode View",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-basalt/gallery/tech-1.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.2L PureTech 82 NA / 1.2L PureTech 110 Turbo Petrol",
+          "power": "82 PS @ 5750 rpm / 110 PS @ 5500 rpm",
+          "torque": "115 Nm @ 3750 rpm / 205 Nm @ 1750-2500 rpm",
+          "transmission": "5-Speed MT / 6-Speed MT / 6-Speed AISIN Torque Converter AT",
+          "mileage": "18.0 – 19.5 km/l",
+          "fuelTank": "45 Litres",
+          "dimensions": "4352 mm L x 1765 mm W x 1593 mm H",
+          "wheelbase": "2651 mm",
+          "groundClearance": "180 mm",
+          "bootSpace": "470 Litres",
+          "brakes": "Front Disc, Rear Drum",
+          "suspension": "MacPherson Strut with Flying Carpet Progressive Cushions (Front) / Twist Beam (Rear)"
+      },
+      "variants": [
+          {
+              "name": "You 1.2 NA Petrol",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.0 km/l",
+              "exShowroom": 799000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "ESC & Hill Hold Assist",
+                  "Rear Parking Sensors",
+                  "Front Power Windows",
+                  "High Ground Clearance"
+              ]
+          },
+          {
+              "name": "Plus 1.2 NA Petrol",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.0 km/l",
+              "exShowroom": 999000,
+              "isVFM": true,
+              "vfmBadge": "Best Value Petrol",
+              "keyFeatures": [
+                  "26 cm Touchscreen Infotainment",
+                  "Wireless Android Auto & Apple CarPlay",
+                  "Automatic Climate Control",
+                  "LED DRLs",
+                  "Steering Mounted Controls"
+              ]
+          },
+          {
+              "name": "Plus Turbo 1.2 Petrol MT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.5 km/l",
+              "exShowroom": 1157000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "110 PS Turbo Petrol Punch",
+                  "6-Speed Manual Transmission",
+                  "Rear AC Vents",
+                  "Dual Tone Roof Option",
+                  "Rear Camera with Guidelines"
+              ]
+          },
+          {
+              "name": "Plus Turbo 1.2 Petrol AT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "mileage": "18.7 km/l",
+              "exShowroom": 1282000,
+              "isVFM": true,
+              "vfmBadge": "Top Pick Automatic",
+              "keyFeatures": [
+                  "6-Speed AISIN Torque Converter AT",
+                  "205 Nm Peak Torque",
+                  "Cruise Control with Speed Limiter",
+                  "Wireless Phone Charging",
+                  "Leatherette Armrest"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 Petrol MT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.5 km/l",
+              "exShowroom": 1243000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "16-inch Diamond Cut Alloys",
+                  "LED Projector Headlamps",
+                  "Advanced Comfort Ventilated Seats",
+                  "MyCitroën Connect Telematics",
+                  "Shark Fin Antenna"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 Petrol AT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "mileage": "18.7 km/l",
+              "exShowroom": 1383000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "Fully Loaded Automatic Coupe",
+                  "6-Speed AT with Paddle Shifters",
+                  "360-View Camera System",
+                  "Premium Dual-Tone Upholstery",
+                  "Automatic Temperature Control"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "citroen-aircross",
+      "name": "Citroën Aircross",
+      "brand": "Citroën",
+      "tagline": "The Ultra-Modular 5 & 5+2 Seater SUV with Supreme Ride Comfort",
+      "launchDate": "2024 / 2025",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹8.89 – ₹14.54 Lakh",
+      "minPrice": 889000,
+      "maxPrice": 1454000,
+      "safetyRating": "4.0 ★ (Bharat NCAP 4-Star — Adult 26.19/32, Child 35.90/49)",
+      "groundClearance": "200 mm",
+      "bootSpace": "444 – 511 Litres",
+      "waitingPeriod": "2 - 4 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/deep-forest-green.webp",
+      "summary": "The Citroën Aircross is a highly versatile mid-size SUV offering class-exclusive 5-seater and 5+2 modular seating with removable third-row seats, best-in-segment suspension ride quality, 200 mm ground clearance, and punchy 110 PS turbo petrol power.",
+      "colors": [
+          {
+              "id": "polar-white",
+              "name": "Polar White",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/polar-white.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#A3A3A3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/steel-grey.webp"
+          },
+          {
+              "id": "deep-forest-green",
+              "name": "Deep Forest Green",
+              "hex": "#14221A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/deep-forest-green.webp"
+          },
+          {
+              "id": "galaxy-blue",
+              "name": "Galaxy Blue",
+              "hex": "#172B4D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/galaxy-blue.webp"
+          },
+          {
+              "id": "perla-nera-black",
+              "name": "Perla Nera Black",
+              "hex": "#1C1C1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/perla-nera-black.webp"
+          },
+          {
+              "id": "garnet-red",
+              "name": "Garnet Red",
+              "hex": "#D54638",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/garnet-red.webp"
+          },
+          {
+              "id": "polar-white-black-roof",
+              "name": "Polar White & Black Roof",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/polar-white-black-roof.webp"
+          },
+          {
+              "id": "deep-forest-green-black-roof",
+              "name": "Deep Forest Green & Black Roof",
+              "hex": "#14221A",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/deep-forest-green-black-roof.webp"
+          },
+          {
+              "id": "galaxy-blue-polar-white-roof",
+              "name": "Galaxy Blue & Polar White Roof",
+              "hex": "#172B4D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/galaxy-blue-polar-white-roof.webp"
+          },
+          {
+              "id": "garnet-red-black-roof",
+              "name": "Garnet Red & Black Roof",
+              "hex": "#D54638",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/colors/garnet-red-black-roof.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ext-1",
+              "title": "Bold Modern Citroën Front Facia",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-1.webp"
+          },
+          {
+              "id": "ext-2",
+              "title": "Rugged SUV Stance & High Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-2.webp"
+          },
+          {
+              "id": "ext-3",
+              "title": "Floating Roofline & Dual Tone Accents",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-3.webp"
+          },
+          {
+              "id": "ext-4",
+              "title": "Chiseled Rear Profile with Distinct Badging",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-4.webp"
+          },
+          {
+              "id": "ext-5",
+              "title": "Projector Headlamps with Signature DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-5.webp"
+          },
+          {
+              "id": "ext-6",
+              "title": "Robust Roof Rails for Practical Adventure",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/ext-6.webp"
+          },
+          {
+              "id": "int-1",
+              "title": "Ergonomic Dashboard with Premium Injected Gray",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/int-1.webp"
+          },
+          {
+              "id": "int-2",
+              "title": "Leatherette Wrapped Steering with Mounted Controls",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/int-2.webp"
+          },
+          {
+              "id": "seat-1",
+              "title": "Class-Exclusive 5+2 Removable 3rd Row",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/seat-1.webp"
+          },
+          {
+              "id": "seat-2",
+              "title": "Expansive 511-Litre Boot Capacity",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/seat-2.webp"
+          },
+          {
+              "id": "seat-3",
+              "title": "Modular Flat Fold Outdoor Configuration",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/seat-3.webp"
+          },
+          {
+              "id": "tech-1",
+              "title": "26 cm Citroën Connect Touchscreen with Wireless AA/CP",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-aircross/gallery/tech-1.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.2L PureTech 82 NA / 1.2L PureTech 110 Turbo Petrol",
+          "power": "82 PS @ 5750 rpm / 110 PS @ 5500 rpm",
+          "torque": "115 Nm @ 3750 rpm / 205 Nm @ 1750-2500 rpm",
+          "transmission": "5-Speed MT / 6-Speed MT / 6-Speed AISIN Torque Converter AT",
+          "mileage": "17.6 – 18.5 km/l",
+          "fuelTank": "45 Litres",
+          "dimensions": "4323 mm L x 1796 mm W x 1669 mm H",
+          "wheelbase": "2671 mm",
+          "groundClearance": "200 mm",
+          "bootSpace": "444 Litres (5-Seater) / 511 Litres (with 3rd row removed)",
+          "brakes": "Front Disc, Rear Drum",
+          "suspension": "MacPherson Strut with Progressive Hydraulic Cushions (Front) / Twist Beam (Rear)"
+      },
+      "variants": [
+          {
+              "name": "You 1.2 NA 5-Seater",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.5 km/l",
+              "exShowroom": 889000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "ESC & Hill Hold Assist",
+                  "TPMS (Tyre Pressure Monitor)",
+                  "High Ground Clearance (200mm)",
+                  "Front Power Windows"
+              ]
+          },
+          {
+              "name": "Plus 1.2 NA 5-Seater",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.5 km/l",
+              "exShowroom": 999000,
+              "isVFM": true,
+              "vfmBadge": "Best Value SUV",
+              "keyFeatures": [
+                  "26 cm Touchscreen Infotainment",
+                  "Wireless Android Auto & Apple CarPlay",
+                  "Roof Mounted Rear AC Vents",
+                  "LED DRLs",
+                  "Steering Audio Controls"
+              ]
+          },
+          {
+              "name": "Plus Turbo 1.2 5+2 Seater",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.5 km/l",
+              "exShowroom": 1161400,
+              "isVFM": true,
+              "vfmBadge": "Best Value 7-Seater",
+              "keyFeatures": [
+                  "Modular 7-Seater with Removable 3rd Row",
+                  "110 PS Turbo Petrol Power",
+                  "Dedicated Blower for 3rd Row",
+                  "Rear Camera with Sensors",
+                  "16-inch Steel Wheels with Caps"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 5-Seater MT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.5 km/l",
+              "exShowroom": 1260500,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "17-inch Diamond Cut Alloy Wheels",
+                  "Front Fog Lamps",
+                  "Leatherette Seat Upholstery",
+                  "MyCitroën Connect App",
+                  "Shark Fin Antenna"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 5+2 Seater MT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "18.5 km/l",
+              "exShowroom": 1295000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "Full 7-Seater Configuration",
+                  "17-inch Diamond Cut Alloys",
+                  "Auto Climate Control",
+                  "Power Folding ORVMs",
+                  "Rear Defogger & Wiper"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 5-Seater AT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "mileage": "17.6 km/l",
+              "exShowroom": 1399000,
+              "isVFM": true,
+              "vfmBadge": "Top Pick Automatic",
+              "keyFeatures": [
+                  "6-Speed AISIN Torque Converter AT",
+                  "205 Nm Punchy Torque",
+                  "Cruise Control with Speed Limiter",
+                  "Telescopic Steering Adjust",
+                  "Wireless Charger"
+              ]
+          },
+          {
+              "name": "Max Turbo 1.2 5+2 Seater AT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "mileage": "17.6 km/l",
+              "exShowroom": 1454000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "Top-Spec 7-Seater Automatic",
+                  "Removable Third-Row Chairs",
+                  "Full Safety Suite (6 Airbags + ESP)",
+                  "Connected Car Telematics",
+                  "Dual Tone Roof Fitment"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "citroen-c3",
+      "name": "Citroën C3",
+      "brand": "Citroën",
+      "tagline": "The Expressive Hatchback with Genuine SUV Stance & Segment-Best Performance",
+      "launchDate": "2024 / 2025",
+      "bodyType": "Hatchback",
+      "fuelTypes": [
+          "Petrol"
+      ],
+      "priceRange": "₹4.99 – ₹9.45 Lakh",
+      "minPrice": 499000,
+      "maxPrice": 945000,
+      "safetyRating": "4.0 ★ (Bharat NCAP 4-Star — Adult 26.19/32, Child 35.90/49)",
+      "groundClearance": "180 mm",
+      "bootSpace": "315 Litres",
+      "waitingPeriod": "1 - 3 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/citroen-c3-garnet-red.webp",
+      "summary": "The Citroën C3 redefines the Indian hatchback space with an elevated driving stance, best-in-class 110 PS Turbo petrol option, 10.25-inch wireless infotainment, exceptional road-eating ride quality, and 6 standard airbags across all MY2025/2026 variants.",
+      "colors": [
+          {
+              "id": "polar-white",
+              "name": "Polar White",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/polar-white.webp"
+          },
+          {
+              "id": "steel-grey",
+              "name": "Steel Grey",
+              "hex": "#A3A3A3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/steel-grey.webp"
+          },
+          {
+              "id": "galaxy-blue",
+              "name": "Galaxy Blue",
+              "hex": "#172B4D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/galaxy-blue.webp"
+          },
+          {
+              "id": "perla-nera-black",
+              "name": "Perla Nera Black",
+              "hex": "#1C1C1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/perla-nera-black.webp"
+          },
+          {
+              "id": "garnet-red",
+              "name": "Garnet Red",
+              "hex": "#D54638",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/garnet-red.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ext-1",
+              "title": "Bold Chevron Double Grille Front",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/ext-1.webp"
+          },
+          {
+              "id": "ext-2",
+              "title": "High Ground Clearance & Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/ext-2.webp"
+          },
+          {
+              "id": "ext-3",
+              "title": "Aerodynamic Roof Rails & Side Cladding",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/ext-3.webp"
+          },
+          {
+              "id": "ext-4",
+              "title": "Sculpted Rear Profile with Skid Plates",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/ext-4.webp"
+          },
+          {
+              "id": "ext-5",
+              "title": "Dual-Tone Wheels & Sporty Wheel Arches",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/ext-5.webp"
+          },
+          {
+              "id": "int-1",
+              "title": "Dual-Tone Modern Cockpit with Anodized Trim",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/int-1.webp"
+          },
+          {
+              "id": "int-2",
+              "title": "Metropolitan Leatherette Wrapped Dashboard",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/int-2.webp"
+          },
+          {
+              "id": "comf-1",
+              "title": "Supple Advanced Comfort Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/comf-1.webp"
+          },
+          {
+              "id": "comf-2",
+              "title": "Roomy Rear Legroom & Generous Headroom",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/comf-2.webp"
+          },
+          {
+              "id": "comf-3",
+              "title": "Useful Storage Consoles & Cable Organizers",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/comf-3.webp"
+          },
+          {
+              "id": "safe-1",
+              "title": "6 Airbags Standard Safety Shield",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/safe-1.webp"
+          },
+          {
+              "id": "tech-1",
+              "title": "10-inch Infotainment with Wireless Phone Mirroring",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/gallery/tech-1.webp"
+          }
+      ],
+      "specs": {
+          "engine": "1.2L PureTech 82 NA / 1.2L PureTech 110 Turbo Petrol",
+          "power": "82 PS @ 5750 rpm / 110 PS @ 5500 rpm",
+          "torque": "115 Nm @ 3750 rpm / 205 Nm @ 1750-2500 rpm",
+          "transmission": "5-Speed MT / 6-Speed MT / 6-Speed AISIN Torque Converter AT",
+          "mileage": "18.5 – 19.3 km/l",
+          "fuelTank": "30 Litres",
+          "dimensions": "3981 mm L x 1733 mm W x 1586 mm H",
+          "wheelbase": "2540 mm",
+          "groundClearance": "180 mm",
+          "bootSpace": "315 Litres",
+          "brakes": "Front Disc, Rear Drum",
+          "suspension": "MacPherson Strut with Coil Spring (Front) / Rear Twist Beam"
+      },
+      "variants": [
+          {
+              "name": "Live 1.2 Petrol MT",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "exShowroom": 499000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "6 Airbags Standard",
+                  "ESC & Hill Start Assist",
+                  "Manual AC with Pollen Filter",
+                  "Digital Speedometer Cluster",
+                  "Front Power Windows"
+              ]
+          },
+          {
+              "name": "Live with Vibe Pack 1.2 MT",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "exShowroom": 553000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "Exterior Orange Accent Trim",
+                  "Body Side Moldings",
+                  "Fog Lamp Bezel Accents",
+                  "6 Airbags Standard",
+                  "Central Door Locking"
+              ]
+          },
+          {
+              "name": "Feel 1.2 Petrol MT",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "exShowroom": 585000,
+              "isVFM": true,
+              "vfmBadge": "Best Budget Choice",
+              "keyFeatures": [
+                  "26 cm Touchscreen Infotainment",
+                  "Wireless Apple CarPlay & Android Auto",
+                  "4 Speakers Audio System",
+                  "Steering Mounted Controls",
+                  "Roof Rails & Skid Plates"
+              ]
+          },
+          {
+              "name": "Shine 1.2 Petrol MT",
+              "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "exShowroom": 763000,
+              "isVFM": true,
+              "vfmBadge": "Most Popular",
+              "keyFeatures": [
+                  "15-inch Diamond Cut Alloys",
+                  "Electrically Adjustable ORVMs",
+                  "Rear Defogger & Wiper",
+                  "Rear Parking Camera",
+                  "Day/Night IRVM"
+              ]
+          },
+          {
+              "name": "Shine Turbo 1.2 Petrol MT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+              "fuel": "Petrol",
+              "trans": "Manual",
+              "mileage": "19.3 km/l",
+              "exShowroom": 874000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "110 PS Hot-Hatch Performance",
+                  "6-Speed Manual Gearbox",
+                  "190 Nm Peak Torque",
+                  "Leatherette Steering Wrap",
+                  "MyCitroën Connect Telematics"
+              ]
+          },
+          {
+              "name": "Shine Turbo 1.2 Petrol AT",
+              "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+              "fuel": "Petrol",
+              "trans": "Automatic",
+              "mileage": "18.5 km/l",
+              "exShowroom": 945000,
+              "isVFM": true,
+              "vfmBadge": "Top Pick Turbo AT",
+              "keyFeatures": [
+                  "6-Speed AISIN Torque Converter Automatic",
+                  "205 Nm Massive Torque",
+                  "Cruise Control with Speed Limiter",
+                  "Diamond Cut Alloy Wheels",
+                  "Automatic Climate Control"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "citroen-ec3",
+      "name": "Citroën ë-C3",
+      "brand": "Citroën",
+      "tagline": "All-Electric Urban SUV with 320 km Range & DC Fast Charging",
+      "launchDate": "2024 / 2025",
+      "bodyType": "Electric SUV",
+      "fuelTypes": [
+          "Electric"
+      ],
+      "priceRange": "₹11.99 – ₹13.36 Lakh",
+      "minPrice": 1199000,
+      "maxPrice": 1336300,
+      "safetyRating": "4.0 ★ (Bharat NCAP 4-Star — Adult 26.19/32, Child 35.90/49)",
+      "groundClearance": "170 mm",
+      "bootSpace": "315 Litres",
+      "waitingPeriod": "1 - 3 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/colors/citroen-ec3-galaxy-blue.webp",
+      "summary": "The Citroën ë-C3 is a practical, comfortable 100% electric SUV featuring a 29.2 kWh battery pack, certified 320 km MIDC range, CCS2 DC fast charging (10% to 80% in 57 mins), regenerative braking, and unmatched city suspension comfort.",
+      "colors": [
+          {
+              "id": "polar-white",
+              "name": "Polar White",
+              "hex": "#E3E3E3",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/colors/polar-white.webp"
+          },
+          {
+              "id": "perla-nera-black",
+              "name": "Perla Nera Black",
+              "hex": "#1C1C1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/colors/perla-nera-black.webp"
+          },
+          {
+              "id": "galaxy-blue",
+              "name": "Galaxy Blue",
+              "hex": "#172B4D",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/colors/galaxy-blue.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ext-1",
+              "title": "Clean Front Grille with Flush Charging Port",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/ext-1.webp"
+          },
+          {
+              "id": "ext-2",
+              "title": "Electric Blue Accent Trims & Badges",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/ext-2.webp"
+          },
+          {
+              "id": "ext-3",
+              "title": "Elevated Stance with 170 mm Clearance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/ext-3.webp"
+          },
+          {
+              "id": "ext-4",
+              "title": "Aerodynamic Wheels & Underbody Battery Shield",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/ext-4.webp"
+          },
+          {
+              "id": "int-1",
+              "title": "Anodized Blue Themed Modern Interior",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/int-1.webp"
+          },
+          {
+              "id": "int-2",
+              "title": "e-Toggle Electronic Drive Selector",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/int-2.webp"
+          },
+          {
+              "id": "tech-1",
+              "title": "29.2 kWh Battery with 320 km Range",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/tech-1.webp"
+          },
+          {
+              "id": "tech-2",
+              "title": "DC Fast Charging: 10% to 80% in 57 min",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/tech-2.webp"
+          },
+          {
+              "id": "tech-3",
+              "title": "CCS2 Charging Gun Compatibility",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/tech-3.webp"
+          },
+          {
+              "id": "tech-4",
+              "title": "Wireless Smartphone Charging Deck",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/tech-4.webp"
+          },
+          {
+              "id": "tech-5",
+              "title": "Connected Car Navigation & Range Monitor",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/tech-5.webp"
+          },
+          {
+              "id": "hero-1",
+              "title": "Citroën ë-C3 Electric SUV Panorama",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/gallery/hero-1.webp"
+          }
+      ],
+      "specs": {
+          "engine": "Permanent Magnet Synchronous Electric Motor",
+          "battery": "29.2 kWh Advanced Lithium-ion",
+          "power": "57 PS (42 kW)",
+          "torque": "143 Nm instantaneous torque",
+          "transmission": "Single Speed Automatic (e-Toggle)",
+          "range": "320 km (MIDC Certified)",
+          "chargingTime": "10% to 80% in 57 mins (DC Fast Charger) / 10.5 hrs (3.3 kW Home AC)",
+          "dimensions": "3981 mm L x 1733 mm W x 1586 mm H",
+          "wheelbase": "2540 mm",
+          "groundClearance": "170 mm",
+          "bootSpace": "315 Litres",
+          "brakes": "Front Disc, Rear Drum with Regenerative Braking",
+          "suspension": "MacPherson Strut (Front) / Rear Twist Beam"
+      },
+      "variants": [
+          {
+              "name": "Live Electric AT",
+              "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "mileage": "320 km Range",
+              "exShowroom": 1209000,
+              "isVFM": false,
+              "vfmBadge": "",
+              "keyFeatures": [
+                  "29.2 kWh Battery Pack",
+                  "320 km Certified Range",
+                  "6 Airbags Standard",
+                  "e-Toggle Shift by Wire",
+                  "Regenerative Braking"
+              ]
+          },
+          {
+              "name": "Live (O) Electric AT",
+              "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "mileage": "320 km Range",
+              "exShowroom": 1245000,
+              "isVFM": true,
+              "vfmBadge": "Best Value EV",
+              "keyFeatures": [
+                  "DC Fast Charging (CCS2)",
+                  "26 cm Touchscreen Infotainment",
+                  "Wireless Android Auto & Apple CarPlay",
+                  "Front Power Windows",
+                  "Speed Sensing Door Locks"
+              ]
+          },
+          {
+              "name": "Shine Electric AT",
+              "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+              "fuel": "Electric",
+              "trans": "Automatic",
+              "mileage": "320 km Range",
+              "exShowroom": 1336300,
+              "isVFM": true,
+              "vfmBadge": "Top Spec EV",
+              "keyFeatures": [
+                  "15-inch Diamond Cut Alloys",
+                  "Rear Parking Camera",
+                  "Electrically Folding Mirrors",
+                  "Leatherette Wrapped Steering",
+                  "MyCitroën Connect EV Telematics"
+              ]
+          }
+      ]
+  },
+  {
+      "id": "citroen-c5-aircross",
+      "name": "Citroën C5 Aircross",
+      "brand": "Citroën",
+      "tagline": "The Ultra-Comfort Flagship SUV with Progressive Hydraulic Cushions & Pure French Luxury",
+      "launchDate": "2024 / 2025",
+      "bodyType": "SUV",
+      "fuelTypes": [
+          "Diesel"
+      ],
+      "priceRange": "₹37.32 – ₹39.99 Lakh",
+      "minPrice": 3732400,
+      "maxPrice": 3999000,
+      "safetyRating": "5.0 ★ (Euro NCAP 5-Star — Adult 89%, Child 86%)",
+      "groundClearance": "230 mm",
+      "bootSpace": "580 – 720 Litres",
+      "waitingPeriod": "3 - 6 Weeks",
+      "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/citroen-c5-aircross-eclipse-blue.webp",
+      "summary": "The Citroën C5 Aircross is Citroën's flagship premium SUV in India, boasting unmatched ride plushness via Progressive Hydraulic Cushions, acoustic double-laminated glass, 3 independent reclining rear seats, a panoramic sunroof, and a muscular 2.0L diesel engine paired with an 8-speed automatic.",
+      "colors": [
+          {
+              "id": "pearl-white",
+              "name": "Pearl White",
+              "hex": "#ECECEC",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/pearl-white.webp"
+          },
+          {
+              "id": "pearl-nera-black",
+              "name": "Pearl Nera Black",
+              "hex": "#1C1C1C",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/pearl-nera-black.webp"
+          },
+          {
+              "id": "eclipse-blue",
+              "name": "Eclipse Blue",
+              "hex": "#1D2D5F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/eclipse-blue.webp"
+          },
+          {
+              "id": "cumulus-grey",
+              "name": "Cumulus Grey",
+              "hex": "#8B8D8E",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/cumulus-grey.webp"
+          },
+          {
+              "id": "pearl-white-black-roof",
+              "name": "Pearl White & Black Roof",
+              "hex": "#ECECEC",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/pearl-white-black-roof.webp"
+          },
+          {
+              "id": "eclipse-blue-black-roof",
+              "name": "Eclipse Blue & Black Roof",
+              "hex": "#1D2D5F",
+              "image": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/eclipse-blue-black-roof.webp"
+          }
+      ],
+      "gallery": [
+          {
+              "id": "ext-1",
+              "title": "Stately Flagship European SUV Front",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/ext-1.webp"
+          },
+          {
+              "id": "ext-2",
+              "title": "Aerodynamic Profile with Chrome Window C-Signature",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/ext-2.webp"
+          },
+          {
+              "id": "ext-3",
+              "title": "18-inch Two-Tone Pulsar Diamond-Cut Alloy Wheels",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/ext-3.webp"
+          },
+          {
+              "id": "ext-4",
+              "title": "3D LED Vision Headlamps with Integrated DRLs",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/ext-4.webp"
+          },
+          {
+              "id": "int-1",
+              "title": "Advanced Comfort Lounge with High-Density Foam Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/int-1.webp"
+          },
+          {
+              "id": "int-2",
+              "title": "3 Individual Reclining & Sliding Rear Seats",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/int-2.webp"
+          },
+          {
+              "id": "int-3",
+              "title": "Panoramic Sunroof with Electric Blind",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/int-3.webp"
+          },
+          {
+              "id": "tech-1",
+              "title": "10-inch High-Definition Floating Central Screen",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/tech-1.webp"
+          },
+          {
+              "id": "tech-2",
+              "title": "12.3-inch Fully Customizable Digital Driver Display",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/tech-2.webp"
+          },
+          {
+              "id": "safe-1",
+              "title": "Blind Spot Monitoring & Park Assist Suite",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/safe-1.webp"
+          },
+          {
+              "id": "banner-1",
+              "title": "Citroën C5 Aircross High-Speed Highway Stance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/banner-1.webp"
+          },
+          {
+              "id": "banner-2",
+              "title": "Flagship Luxury & Road Dominance",
+              "url": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/gallery/banner-2.webp"
+          }
+      ],
+      "specs": {
+          "engine": "2.0L 4-Cylinder Turbo Diesel (DW10 FC)",
+          "power": "177 PS (130 kW) @ 3750 rpm",
+          "torque": "400 Nm @ 2000 rpm",
+          "transmission": "8-Speed Torque Converter Automatic with Electronic Selector & Paddle Shifters",
+          "mileage": "17.5 km/l (ARAI Certified)",
+          "fuelTank": "52.5 Litres",
+          "dimensions": "4500 mm L x 1969 mm W x 1710 mm H",
+          "wheelbase": "2730 mm",
+          "groundClearance": "230 mm",
+          "bootSpace": "580 Litres (expandable to 720L with seats slid forward / 1630L folded)",
+          "brakes": "Front & Rear Ventilated Discs with Electronic Parking Brake",
+          "suspension": "MacPherson Strut with Progressive Hydraulic Cushions (Front) / Multi-Arm Double Cushions (Rear)"
+      },
+      "variants": [
+          {
+              "name": "Feel 2.0 Diesel 8AT",
+              "engine": "2.0L DW10 FC Turbo Diesel (177 PS / 400 Nm)",
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "mileage": "17.5 km/l",
+              "exShowroom": 3732400,
+              "isVFM": true,
+              "vfmBadge": "Flagship Value",
+              "keyFeatures": [
+                  "177 PS / 400 Nm DW10 FC Engine",
+                  "8-Speed Automatic with Paddle Shifters",
+                  "Progressive Hydraulic Cushions Suspension",
+                  "Panoramic Sunroof",
+                  "Hands-Free Electric Tailgate"
+              ]
+          },
+          {
+              "name": "Shine 2.0 Diesel 8AT",
+              "engine": "2.0L DW10 FC Turbo Diesel (177 PS / 400 Nm)",
+              "fuel": "Diesel",
+              "trans": "Automatic",
+              "mileage": "17.5 km/l",
+              "exShowroom": 3999000,
+              "isVFM": true,
+              "vfmBadge": "Top Luxury",
+              "keyFeatures": [
+                  "Acoustic Double-Laminated Glass",
+                  "3 Independent Sliding Rear Seats",
+                  "Blind Spot Monitoring System",
+                  "Park Assist with 360 Camera",
+                  "Dual-Tone Contrast Black Roof"
+              ]
+          }
+      ]
+  },
 ];
 
 // Helper to calculate exact city on-road price

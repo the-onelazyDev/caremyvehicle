@@ -31,7 +31,17 @@ HTTP_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 
 def fetch_bytes(url, max_retries=3, timeout=15):
-    """Fetch binary data from URL with retries."""
+    """Fetch binary data from URL or local path with retries."""
+    if os.path.exists(url):
+        with open(url, 'rb') as f:
+            return f.read()
+    if url.startswith('file://'):
+        p = url[7:].replace('/', os.sep)
+        if os.name == 'nt' and p.startswith('\\') and len(p) > 2 and p[2] == ':':
+            p = p[1:]
+        if os.path.exists(p):
+            with open(p, 'rb') as f:
+                return f.read()
     url = url.replace(" ", "%20")
     for attempt in range(max_retries):
         try:

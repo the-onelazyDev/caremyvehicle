@@ -1,0 +1,232 @@
+{
+  "id": "citroen-c3",
+  "name": "Citro\u00ebn C3",
+  "brand": "Citro\u00ebn",
+  "tagline": "The Expressive Hatchback with Genuine SUV Stance & Segment-Best Performance",
+  "launchDate": "2024 / 2025",
+  "bodyType": "Hatchback",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "\u20b94.99 \u2013 \u20b99.45 Lakh",
+  "minPrice": 499000,
+  "maxPrice": 945000,
+  "safetyRating": "4.0 \u2605 (Bharat NCAP 4-Star \u2014 Adult 26.19/32, Child 35.90/49)",
+  "groundClearance": "180 mm",
+  "bootSpace": "315 Litres",
+  "waitingPeriod": "1 - 3 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-c3/colors/citroen-c3-garnet-red.webp",
+  "summary": "The Citro\u00ebn C3 redefines the Indian hatchback space with an elevated driving stance, best-in-class 110 PS Turbo petrol option, 10.25-inch wireless infotainment, exceptional road-eating ride quality, and 6 standard airbags across all MY2025/2026 variants.",
+  "colors": [
+    {
+      "id": "polar-white",
+      "name": "Polar White",
+      "hex": "#E3E3E3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c3_polar-white.png"
+    },
+    {
+      "id": "steel-grey",
+      "name": "Steel Grey",
+      "hex": "#A3A3A3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c3_steel-grey.png"
+    },
+    {
+      "id": "galaxy-blue",
+      "name": "Galaxy Blue",
+      "hex": "#172B4D",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c3_galaxy-blue.png"
+    },
+    {
+      "id": "perla-nera-black",
+      "name": "Perla Nera Black",
+      "hex": "#1C1C1C",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c3_perla-nera-black.png"
+    },
+    {
+      "id": "garnet-red",
+      "name": "Garnet Red",
+      "hex": "#D54638",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c3_garnet-red.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "ext-1",
+      "title": "Bold Chevron Double Grille Front",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/exterior/1.jpg"
+    },
+    {
+      "id": "ext-2",
+      "title": "High Ground Clearance & Stance",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/exterior/2.jpg"
+    },
+    {
+      "id": "ext-3",
+      "title": "Aerodynamic Roof Rails & Side Cladding",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/exterior/3.jpg"
+    },
+    {
+      "id": "ext-4",
+      "title": "Sculpted Rear Profile with Skid Plates",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/exterior/4.jpg"
+    },
+    {
+      "id": "ext-5",
+      "title": "Dual-Tone Wheels & Sporty Wheel Arches",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/exterior/5.jpg"
+    },
+    {
+      "id": "int-1",
+      "title": "Dual-Tone Modern Cockpit with Anodized Trim",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/interior/1.jpg"
+    },
+    {
+      "id": "int-2",
+      "title": "Metropolitan Leatherette Wrapped Dashboard",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/interior/2.jpg"
+    },
+    {
+      "id": "comf-1",
+      "title": "Supple Advanced Comfort Seats",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/1.jpg"
+    },
+    {
+      "id": "comf-2",
+      "title": "Roomy Rear Legroom & Generous Headroom",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/2.jpg"
+    },
+    {
+      "id": "comf-3",
+      "title": "Useful Storage Consoles & Cable Organizers",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/3.jpg"
+    },
+    {
+      "id": "safe-1",
+      "title": "6 Airbags Standard Safety Shield",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/safety/1.jpg"
+    },
+    {
+      "id": "tech-1",
+      "title": "10-inch Infotainment with Wireless Phone Mirroring",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/technology/1.jpg"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Live 1.2 Petrol MT",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "exShowroom": 499000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "6 Airbags Standard",
+        "ESC & Hill Start Assist",
+        "Manual AC with Pollen Filter",
+        "Digital Speedometer Cluster",
+        "Front Power Windows"
+      ]
+    },
+    {
+      "name": "Live with Vibe Pack 1.2 MT",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "exShowroom": 553000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "Exterior Orange Accent Trim",
+        "Body Side Moldings",
+        "Fog Lamp Bezel Accents",
+        "6 Airbags Standard",
+        "Central Door Locking"
+      ]
+    },
+    {
+      "name": "Feel 1.2 Petrol MT",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "exShowroom": 585000,
+      "isVFM": true,
+      "vfmBadge": "Best Budget Choice",
+      "keyFeatures": [
+        "26 cm Touchscreen Infotainment",
+        "Wireless Apple CarPlay & Android Auto",
+        "4 Speakers Audio System",
+        "Steering Mounted Controls",
+        "Roof Rails & Skid Plates"
+      ]
+    },
+    {
+      "name": "Shine 1.2 Petrol MT",
+      "engine": "1.2L PureTech 82 (82 PS / 115 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "exShowroom": 763000,
+      "isVFM": true,
+      "vfmBadge": "Most Popular",
+      "keyFeatures": [
+        "15-inch Diamond Cut Alloys",
+        "Electrically Adjustable ORVMs",
+        "Rear Defogger & Wiper",
+        "Rear Parking Camera",
+        "Day/Night IRVM"
+      ]
+    },
+    {
+      "name": "Shine Turbo 1.2 Petrol MT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 190 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.3 km/l",
+      "exShowroom": 874000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "110 PS Hot-Hatch Performance",
+        "6-Speed Manual Gearbox",
+        "190 Nm Peak Torque",
+        "Leatherette Steering Wrap",
+        "MyCitro\u00ebn Connect Telematics"
+      ]
+    },
+    {
+      "name": "Shine Turbo 1.2 Petrol AT",
+      "engine": "1.2L PureTech 110 Turbo (110 PS / 205 Nm)",
+      "fuel": "Petrol",
+      "trans": "Automatic",
+      "mileage": "18.5 km/l",
+      "exShowroom": 945000,
+      "isVFM": true,
+      "vfmBadge": "Top Pick Turbo AT",
+      "keyFeatures": [
+        "6-Speed AISIN Torque Converter Automatic",
+        "205 Nm Massive Torque",
+        "Cruise Control with Speed Limiter",
+        "Diamond Cut Alloy Wheels",
+        "Automatic Climate Control"
+      ]
+    }
+  ],
+  "specs": {
+    "engine": "1.2L PureTech 82 NA / 1.2L PureTech 110 Turbo Petrol",
+    "power": "82 PS @ 5750 rpm / 110 PS @ 5500 rpm",
+    "torque": "115 Nm @ 3750 rpm / 205 Nm @ 1750-2500 rpm",
+    "transmission": "5-Speed MT / 6-Speed MT / 6-Speed AISIN Torque Converter AT",
+    "mileage": "18.5 \u2013 19.3 km/l",
+    "fuelTank": "30 Litres",
+    "dimensions": "3981 mm L x 1733 mm W x 1586 mm H",
+    "wheelbase": "2540 mm",
+    "groundClearance": "180 mm",
+    "bootSpace": "315 Litres",
+    "brakes": "Front Disc, Rear Drum",
+    "suspension": "MacPherson Strut with Coil Spring (Front) / Rear Twist Beam"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "citroen-ec3",
+  "name": "Citro\u00ebn \u00eb-C3",
+  "brand": "Citro\u00ebn",
+  "tagline": "All-Electric Urban SUV with 320 km Range & DC Fast Charging",
+  "launchDate": "2024 / 2025",
+  "bodyType": "Electric SUV",
+  "fuelTypes": [
+    "Electric"
+  ],
+  "priceRange": "\u20b911.99 \u2013 \u20b913.36 Lakh",
+  "minPrice": 1199000,
+  "maxPrice": 1336300,
+  "safetyRating": "4.0 \u2605 (Bharat NCAP 4-Star \u2014 Adult 26.19/32, Child 35.90/49)",
+  "groundClearance": "170 mm",
+  "bootSpace": "315 Litres",
+  "waitingPeriod": "1 - 3 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-ec3/colors/citroen-ec3-galaxy-blue.webp",
+  "summary": "The Citro\u00ebn \u00eb-C3 is a practical, comfortable 100% electric SUV featuring a 29.2 kWh battery pack, certified 320 km MIDC range, CCS2 DC fast charging (10% to 80% in 57 mins), regenerative braking, and unmatched city suspension comfort.",
+  "colors": [
+    {
+      "id": "polar-white",
+      "name": "Polar White",
+      "hex": "#E3E3E3",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_ec3_polar-white.png"
+    },
+    {
+      "id": "perla-nera-black",
+      "name": "Perla Nera Black",
+      "hex": "#1C1C1C",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_ec3_perla-nera-black.png"
+    },
+    {
+      "id": "galaxy-blue",
+      "name": "Galaxy Blue",
+      "hex": "#172B4D",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_ec3_galaxy-blue.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "ext-1",
+      "title": "Clean Front Grille with Flush Charging Port",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/ec3/gallery/Exterior.jpg"
+    },
+    {
+      "id": "ext-2",
+      "title": "Electric Blue Accent Trims & Badges",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Refined_Cabin_Design.png"
+    },
+    {
+      "id": "ext-3",
+      "title": "Elevated Stance with 170 mm Clearance",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Drive.webp"
+    },
+    {
+      "id": "ext-4",
+      "title": "Aerodynamic Wheels & Underbody Battery Shield",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Zero_Running_Costs.png"
+    },
+    {
+      "id": "int-1",
+      "title": "Anodized Blue Themed Modern Interior",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/ec3/gallery/comfort/Citroen_EC3_CenterConsole.jpg"
+    },
+    {
+      "id": "int-2",
+      "title": "e-Toggle Electronic Drive Selector",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Spacious_Cabin.png"
+    },
+    {
+      "id": "tech-1",
+      "title": "29.2 kWh Battery with 320 km Range",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/MIDC_Certified_Range.png"
+    },
+    {
+      "id": "tech-2",
+      "title": "DC Fast Charging: 10% to 80% in 57 min",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/ec3/gallery/technology/Citroen_EC3_EVCharger.jpg"
+    },
+    {
+      "id": "tech-3",
+      "title": "CCS2 Charging Gun Compatibility",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Fast_Charger.webp"
+    },
+    {
+      "id": "tech-4",
+      "title": "Wireless Smartphone Charging Deck",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Wireless_Charger.png"
+    },
+    {
+      "id": "tech-5",
+      "title": "Connected Car Navigation & Range Monitor",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/highlights/Technology.png"
+    },
+    {
+      "id": "hero-1",
+      "title": "Citro\u00ebn \u00eb-C3 Electric SUV Panorama",
+      "sourceUrl": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/banners/5b5f82c4-edf2-4bee-9ebc-386972997662.jpg"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Live Electric AT",
+      "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "mileage": "320 km Range",
+      "exShowroom": 1209000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "keyFeatures": [
+        "29.2 kWh Battery Pack",
+        "320 km Certified Range",
+        "6 Airbags Standard",
+        "e-Toggle Shift by Wire",
+        "Regenerative Braking"
+      ]
+    },
+    {
+      "name": "Live (O) Electric AT",
+      "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "mileage": "320 km Range",
+      "exShowroom": 1245000,
+      "isVFM": true,
+      "vfmBadge": "Best Value EV",
+      "keyFeatures": [
+        "DC Fast Charging (CCS2)",
+        "26 cm Touchscreen Infotainment",
+        "Wireless Android Auto & Apple CarPlay",
+        "Front Power Windows",
+        "Speed Sensing Door Locks"
+      ]
+    },
+    {
+      "name": "Shine Electric AT",
+      "engine": "Permanent Magnet Synchronous Motor (57 PS / 143 Nm)",
+      "fuel": "Electric",
+      "trans": "Automatic",
+      "mileage": "320 km Range",
+      "exShowroom": 1336300,
+      "isVFM": true,
+      "vfmBadge": "Top Spec EV",
+      "keyFeatures": [
+        "15-inch Diamond Cut Alloys",
+        "Rear Parking Camera",
+        "Electrically Folding Mirrors",
+        "Leatherette Wrapped Steering",
+        "MyCitro\u00ebn Connect EV Telematics"
+      ]
+    }
+  ],
+  "specs": {
+    "engine": "Permanent Magnet Synchronous Electric Motor",
+    "battery": "29.2 kWh Advanced Lithium-ion",
+    "power": "57 PS (42 kW)",
+    "torque": "143 Nm instantaneous torque",
+    "transmission": "Single Speed Automatic (e-Toggle)",
+    "range": "320 km (MIDC Certified)",
+    "chargingTime": "10% to 80% in 57 mins (DC Fast Charger) / 10.5 hrs (3.3 kW Home AC)",
+    "dimensions": "3981 mm L x 1733 mm W x 1586 mm H",
+    "wheelbase": "2540 mm",
+    "groundClearance": "170 mm",
+    "bootSpace": "315 Litres",
+    "brakes": "Front Disc, Rear Drum with Regenerative Braking",
+    "suspension": "MacPherson Strut (Front) / Rear Twist Beam"
+  }
+}

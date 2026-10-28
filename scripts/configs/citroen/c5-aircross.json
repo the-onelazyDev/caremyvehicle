@@ -1,0 +1,170 @@
+{
+  "id": "citroen-c5-aircross",
+  "name": "Citro\u00ebn C5 Aircross",
+  "brand": "Citro\u00ebn",
+  "tagline": "The Ultra-Comfort Flagship SUV with Progressive Hydraulic Cushions & Pure French Luxury",
+  "launchDate": "2024 / 2025",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Diesel"
+  ],
+  "priceRange": "\u20b937.32 \u2013 \u20b939.99 Lakh",
+  "minPrice": 3732400,
+  "maxPrice": 3999000,
+  "safetyRating": "5.0 \u2605 (Euro NCAP 5-Star \u2014 Adult 89%, Child 86%)",
+  "groundClearance": "230 mm",
+  "bootSpace": "580 \u2013 720 Litres",
+  "waitingPeriod": "3 - 6 Weeks",
+  "heroImage": "https://ik.imagekit.io/2908vvlod/cars/citroen-c5-aircross/colors/citroen-c5-aircross-eclipse-blue.webp",
+  "summary": "The Citro\u00ebn C5 Aircross is Citro\u00ebn's flagship premium SUV in India, boasting unmatched ride plushness via Progressive Hydraulic Cushions, acoustic double-laminated glass, 3 independent reclining rear seats, a panoramic sunroof, and a muscular 2.0L diesel engine paired with an 8-speed automatic.",
+  "colors": [
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#ECECEC",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_pearl-white.png"
+    },
+    {
+      "id": "pearl-nera-black",
+      "name": "Pearl Nera Black",
+      "hex": "#1C1C1C",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_pearl-nera-black.png"
+    },
+    {
+      "id": "eclipse-blue",
+      "name": "Eclipse Blue",
+      "hex": "#1D2D5F",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_eclipse-blue.png"
+    },
+    {
+      "id": "cumulus-grey",
+      "name": "Cumulus Grey",
+      "hex": "#8B8D8E",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_cumulus-grey.png"
+    },
+    {
+      "id": "pearl-white-black-roof",
+      "name": "Pearl White & Black Roof",
+      "hex": "#ECECEC",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_pearl-white-black-roof.png"
+    },
+    {
+      "id": "eclipse-blue-black-roof",
+      "name": "Eclipse Blue & Black Roof",
+      "hex": "#1D2D5F",
+      "sourceUrl": "C:/Users/the.oneManLazy/.gemini/antigravity/brain/45cc168d-5469-4192-8d67-9cb166e6a1fc/scratch/citroen_colors/citroen_c5_eclipse-blue-black-roof.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "ext-1",
+      "title": "Stately Flagship European SUV Front",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/exterior/1.jpg"
+    },
+    {
+      "id": "ext-2",
+      "title": "Aerodynamic Profile with Chrome Window C-Signature",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/exterior/2.jpg"
+    },
+    {
+      "id": "ext-3",
+      "title": "18-inch Two-Tone Pulsar Diamond-Cut Alloy Wheels",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/highlights/Design.webp"
+    },
+    {
+      "id": "ext-4",
+      "title": "3D LED Vision Headlamps with Integrated DRLs",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/highlights/Tech.webp"
+    },
+    {
+      "id": "int-1",
+      "title": "Advanced Comfort Lounge with High-Density Foam Seats",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/comfort/1.jpg"
+    },
+    {
+      "id": "int-2",
+      "title": "3 Individual Reclining & Sliding Rear Seats",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/comfort/2.jpg"
+    },
+    {
+      "id": "int-3",
+      "title": "Panoramic Sunroof with Electric Blind",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/highlights/Comfort.webp"
+    },
+    {
+      "id": "tech-1",
+      "title": "10-inch High-Definition Floating Central Screen",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/technology/1.jpg"
+    },
+    {
+      "id": "tech-2",
+      "title": "12.3-inch Fully Customizable Digital Driver Display",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/technology/2.jpg"
+    },
+    {
+      "id": "safe-1",
+      "title": "Blind Spot Monitoring & Park Assist Suite",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/highlights/Safety.webp"
+    },
+    {
+      "id": "banner-1",
+      "title": "Citro\u00ebn C5 Aircross High-Speed Highway Stance",
+      "sourceUrl": "https://www.citroen.in/content/dam/citroen/india/models/c5/banner/C5_Aircross_Desktop.jpg"
+    },
+    {
+      "id": "banner-2",
+      "title": "Flagship Luxury & Road Dominance",
+      "sourceUrl": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/banners/e4651410-8e65-49d2-adcd-541564da0f74.jpg"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Feel 2.0 Diesel 8AT",
+      "engine": "2.0L DW10 FC Turbo Diesel (177 PS / 400 Nm)",
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "mileage": "17.5 km/l",
+      "exShowroom": 3732400,
+      "isVFM": true,
+      "vfmBadge": "Flagship Value",
+      "keyFeatures": [
+        "177 PS / 400 Nm DW10 FC Engine",
+        "8-Speed Automatic with Paddle Shifters",
+        "Progressive Hydraulic Cushions Suspension",
+        "Panoramic Sunroof",
+        "Hands-Free Electric Tailgate"
+      ]
+    },
+    {
+      "name": "Shine 2.0 Diesel 8AT",
+      "engine": "2.0L DW10 FC Turbo Diesel (177 PS / 400 Nm)",
+      "fuel": "Diesel",
+      "trans": "Automatic",
+      "mileage": "17.5 km/l",
+      "exShowroom": 3999000,
+      "isVFM": true,
+      "vfmBadge": "Top Luxury",
+      "keyFeatures": [
+        "Acoustic Double-Laminated Glass",
+        "3 Independent Sliding Rear Seats",
+        "Blind Spot Monitoring System",
+        "Park Assist with 360 Camera",
+        "Dual-Tone Contrast Black Roof"
+      ]
+    }
+  ],
+  "specs": {
+    "engine": "2.0L 4-Cylinder Turbo Diesel (DW10 FC)",
+    "power": "177 PS (130 kW) @ 3750 rpm",
+    "torque": "400 Nm @ 2000 rpm",
+    "transmission": "8-Speed Torque Converter Automatic with Electronic Selector & Paddle Shifters",
+    "mileage": "17.5 km/l (ARAI Certified)",
+    "fuelTank": "52.5 Litres",
+    "dimensions": "4500 mm L x 1969 mm W x 1710 mm H",
+    "wheelbase": "2730 mm",
+    "groundClearance": "230 mm",
+    "bootSpace": "580 Litres (expandable to 720L with seats slid forward / 1630L folded)",
+    "brakes": "Front & Rear Ventilated Discs with Electronic Parking Brake",
+    "suspension": "MacPherson Strut with Progressive Hydraulic Cushions (Front) / Multi-Arm Double Cushions (Rear)"
+  }
+}

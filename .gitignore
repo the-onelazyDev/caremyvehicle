@@ -15,3 +15,5 @@ test_*.jpg
 *.graphql.json
 *.pdf
 scratch/
+__pycache__/
+*.pyc
