@@ -354,6 +354,7 @@ def main():
     parser = argparse.ArgumentParser(description="CareMyVehicle Car Onboarding Engine")
     parser.add_argument("--config", required=True, help="Path to car JSON config file")
     parser.add_argument("--dry-run", action="store_true", help="Simulate without uploading or modifying files")
+    parser.add_argument("--skip-upload", action="store_true", help="Skip ImageKit upload and only sync carData.js")
     args = parser.parse_args()
 
     if not os.path.exists(args.config):
@@ -368,14 +369,16 @@ def main():
     brand = cfg["brand"]
     print(f"\n{'='*70}\nStarting Onboarding: {car_name} ({brand}) [ID: {car_slug}]\n{'='*70}")
 
+    skip_cdn = args.dry_run or args.skip_upload
+
     # 1. Process 360 Spin
-    spin360 = process_spin360(car_slug, cfg.get("spin360"), dry_run=args.dry_run)
+    spin360 = process_spin360(car_slug, cfg.get("spin360"), dry_run=skip_cdn)
 
     # 2. Process Official Colors
-    colors = process_colors(car_slug, cfg.get("colors", []), dry_run=args.dry_run)
+    colors = process_colors(car_slug, cfg.get("colors", []), dry_run=skip_cdn)
 
     # 3. Process Gallery Cards
-    gallery = process_gallery(car_slug, cfg.get("gallery", []), dry_run=args.dry_run)
+    gallery = process_gallery(car_slug, cfg.get("gallery", []), dry_run=skip_cdn)
 
     # 4. Construct Final Car Object
     hero_image = cfg.get("heroImage")

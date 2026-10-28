@@ -1,0 +1,428 @@
+{
+  "id": "renault-duster",
+  "name": "Renault Duster",
+  "brand": "Renault",
+  "tagline": "The Icon Reborn – 5-Star Bharat NCAP SUV with 163 PS Turbo TCe, Strong Hybrid E-Tech 160, 212 mm Ground Clearance & Panoramic Sunroof",
+  "launchDate": "2026 (All-New 3rd Generation)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol",
+    "Hybrid"
+  ],
+  "priceRange": "₹10.49 - ₹19.49 Lakh",
+  "minPrice": 1049000,
+  "maxPrice": 1949000,
+  "safetyRating": "5.0 ★ (Bharat NCAP 5-Star + 6 Airbags + Level 2 ADAS)",
+  "groundClearance": "212 mm",
+  "bootSpace": "517 Litres",
+  "waitingPeriod": "4 - 8 Weeks",
+  "summary": "The legendary SUV returns to India in its all-new 2026 generation with a 5-Star Bharat NCAP safety rating, rugged 212 mm ground clearance, electric panoramic sunroof, dual OpenR Link screens (25.65 cm touchscreen + 26.03 cm digital cluster with Google built-in), Level 2 ADAS (17 autonomous features), 360° Around View Camera, ventilated front seats, Arkamys 3D audio, and three advanced powertrains: 100 PS Turbo TCe 100, 163 PS / 280 Nm 1.3L Turbo TCe 160 (6MT / 6DCT), and 160 PS 1.6L Strong Hybrid E-Tech 160.",
+  "colors": [
+    {
+      "id": "sunset-red",
+      "name": "Sunset Red",
+      "hex": "#A8261E",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-TENBW"
+    },
+    {
+      "id": "moonlight-silver",
+      "name": "Moonlight Silver",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-TEK23"
+    },
+    {
+      "id": "mountain-jade-green",
+      "name": "Mountain Jade Green",
+      "hex": "#3C4F29",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-TEDQT"
+    },
+    {
+      "id": "river-blue",
+      "name": "River Blue",
+      "hex": "#2D5A7B",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-TEB53"
+    },
+    {
+      "id": "stealth-black",
+      "name": "Stealth Black",
+      "hex": "#181A1D",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-OVC61"
+    },
+    {
+      "id": "pearl-white",
+      "name": "Pearl White",
+      "hex": "#ECEBE6",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-OQX1"
+    },
+    {
+      "id": "mountain-jade-green-with-stealth-black-roof",
+      "name": "Mountain Jade Green With Stealth Black Roof",
+      "hex": "#3C4F29",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-BIYZZ"
+    },
+    {
+      "id": "river-blue-with-stealth-black-roof",
+      "name": "River Blue With Stealth Black Roof",
+      "hex": "#2D5A7B",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-BIYWR"
+    },
+    {
+      "id": "sunset-red-with-stealth-black-roof",
+      "name": "Sunset Red With Stealth Black Roof",
+      "hex": "#A8261E",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-BIXEF"
+    },
+    {
+      "id": "pearl-white-with-stealth-black-roof",
+      "name": "Pearl White With Stealth Black Roof",
+      "hex": "#ECEBE6",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1NIVEQPT5_-BIXCC"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "duster-reveal-hero",
+      "title": "All-New 2026 Renault Duster – Bold SUV Stance with DUSTER Front Grille",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/R_DUSTER_REVEAL_2560x1440_MI02.jpg.ximg.largex2.webp/2469c3512e.webp"
+    },
+    {
+      "id": "duster-adventure-hero",
+      "title": "Rugged Adventure Edition with 212 mm Ground Clearance & Skid Plates",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster-adventure/2560x1440.jpg.ximg.largex2.webp/068dbc6036.webp"
+    },
+    {
+      "id": "duster-bncap-5star",
+      "title": "5-Star Bharat NCAP Safety Rating with 6 Airbags & High-Strength CMF-B Structure",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/Duster-BNCAP---Webpage-Banner.jpg.ximg.largex2.webp/40ddbe3616.webp"
+    },
+    {
+      "id": "duster-full-led-headlamps",
+      "title": "Full-LED Headlamps with Y-Shaped Signature LED DRLs",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/design/full%20LED.jpg.ximg.largex2.webp/c443b48052.webp"
+    },
+    {
+      "id": "duster-led-rear-bar",
+      "title": "Connected Horizontal LED Rear Light Bar & Sculpted Tailgate",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/design/LED%20Horizontal%20rear%20bar.jpg.ximg.largex2.webp/aa933b4d6e.webp"
+    },
+    {
+      "id": "duster-alloy-wheels",
+      "title": "R18 Diamond-Cut Adventure Alloy Wheels & Starkle Side Cladding",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/design/Adventure%20alloy%20wheels.jpg.ximg.largex2.webp/2f87475b32.webp"
+    },
+    {
+      "id": "duster-roof-bars",
+      "title": "Modular Roof Bars with 80 kg Dynamic Load Capacity",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/design/Roof%20bars.jpg.ximg.largex2.webp/b215b7c4f8.webp"
+    },
+    {
+      "id": "duster-openr-cockpit",
+      "title": "Dual OpenR Link Digital Cockpit (25.65 cm Touchscreen + 26.03 cm Driver Display)",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/subpages/connectivity/renault-duster-connectivity-_desktop_001.jpg.ximg.largex2.webp/247944980d.webp"
+    },
+    {
+      "id": "duster-iconic-seats",
+      "title": "Iconic Upholstery with Duster Emblem & Contrast Yellow Stitching",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/duster2026/design/Duster%20emblem%20with%20iconic%20yellow%20stitch.jpg.ximg.largex2.webp/186cf084bb.webp"
+    },
+    {
+      "id": "duster-cabin-space",
+      "title": "Generous 5-Seater Cabin with Ventilated Front Seats & Dual-Zone Climate Control",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/subpages/dimensions/renault-duster-habitability-and-dimensions-001-desktop.jpg.ximg.largex2.webp/9cf1ae1dd8.webp"
+    },
+    {
+      "id": "duster-boot-capacity",
+      "title": "Massive 517-Litre Luggage Compartment with YouClip Modular Accessories",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/subpages/dimensions/renault-duster-habitability-and-dimensions-011.jpg.ximg.largex2.webp/20d8a55122.webp"
+    },
+    {
+      "id": "duster-adas-safety",
+      "title": "Level 2 ADAS with 17 Autonomous Safety Features & 360° Around View Monitor",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/subpages/safety-equipment/renault-duster-safety-001.jpg.ximg.largex2.webp/3bbae7ce7c.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "999 cc Turbo TCe 100 Petrol (100 PS @ 5000 rpm, 166 Nm @ 2800 rpm) – 6-Speed MT",
+      "1332 cc 1.3L Turbo TCe 160 Direct-Injection Petrol (163 PS @ 5500 rpm, 280 Nm @ 1800 rpm) – 6MT / 6-Speed Wet DCT",
+      "1598 cc 1.6L Strong Hybrid E-Tech 160 (160 PS Combined, 208 Nm + 1.4 kWh Battery) – Multi-Mode Automatic"
+    ],
+    "dimensions": "4346 mm L x 1815 mm W x 1701 mm H",
+    "wheelbase": "2657 mm",
+    "FuelTank": "50 Litres",
+    "Tires": "215/65 R17 & 215/60 R18 Diamond-Cut Alloy Wheels"
+  },
+  "variants": [
+    {
+      "name": "Authentic Turbo TCe 100 6MT",
+      "engine": "1.0L Turbo TCe 100 (100 PS / 166 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "17.5 kmpl",
+      "exShowroom": 1049000,
+      "isVFM": true,
+      "vfmBadge": "Best Sub-10.5L Mid-Size SUV Entry Pick",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Start Assist & TPMS",
+      "keyFeatures": [
+        "5-Star Bharat NCAP Safety Rating with 6 Airbags, ESP, Hill Start Assist & TPMS",
+        "100 PS & 166 Nm Turbo TCe 100 Engine with 6-Speed Manual Transmission",
+        "Full-LED Headlamps with Y-Shaped LED DRLs, 212 mm Ground Clearance & Roof Bars",
+        "All 4 Power Windows, Rear Parking Sensors, Auto Headlamps & Digital Cluster"
+      ]
+    },
+    {
+      "name": "Evolution Turbo TCe 100 6MT",
+      "engine": "1.0L Turbo TCe 100 (100 PS / 166 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "17.5 kmpl",
+      "exShowroom": 1169000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Start Assist & Rear Camera",
+      "keyFeatures": [
+        "25.65 cm (10.1-inch) OpenR Touchscreen with Wireless Android Auto & Apple CarPlay",
+        "17.78 cm Digital Driver Display, Reverse Parking Camera & Rear AC Vents",
+        "Electrically Adjustable ORVMs, Steering Controls & YouClip Attachment Points",
+        "Connected LED Tail Lamps & 517-Litre Boot Space"
+      ]
+    },
+    {
+      "name": "Adventure Turbo TCe 100 6MT",
+      "engine": "1.0L Turbo TCe 100 (100 PS / 166 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "17.5 kmpl",
+      "exShowroom": 1299000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Descent Control & Rear Camera",
+      "keyFeatures": [
+        "R17 Adventure Alloy Wheels, Modular Roof Bars & Starkle Protective Cladding",
+        "Auto Climate Control, Smart Keyless Entry, Push Button Start & Cruise Control",
+        "25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio & Washable Adventure Upholstery"
+      ]
+    },
+    {
+      "name": "Evolution Turbo TCe 160 6MT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "16.8 kmpl",
+      "exShowroom": 1299000,
+      "isVFM": true,
+      "vfmBadge": "Most Powerful 163 PS Turbo SUV at ₹12.99L",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, All-4 Disc Brakes & Rear Camera",
+      "keyFeatures": [
+        "163 PS & 280 Nm 1.3L Direct-Injection Turbo TCe 160 Engine with 6-Speed Manual",
+        "25.65 cm OpenR Touchscreen with Wireless Smartphone Replication & Rear Camera",
+        "All-4 Disc Brakes, 6 Airbags, ESP, Hill Start Assist & Rear AC Vents"
+      ]
+    },
+    {
+      "name": "Adventure Turbo TCe 160 6MT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "16.8 kmpl",
+      "exShowroom": 1399000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Descent Control & All-4 Discs",
+      "keyFeatures": [
+        "163 PS / 280 Nm 1.3L Turbo TCe 160 with R17 Adventure Alloy Wheels",
+        "Modular Roof Bars (80 kg), Auto Climate Control, Smart Card & Push Start",
+        "25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio & Electronic Parking Brake"
+      ]
+    },
+    {
+      "name": "Evolution Turbo TCe 160 6DCT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "DCT",
+      "mileage": "16.5 kmpl",
+      "exShowroom": 1449000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Start Assist & All-4 Discs",
+      "keyFeatures": [
+        "163 PS / 280 Nm 1.3L Turbo Engine with 6-Speed Wet Dual-Clutch Automatic (DCT)",
+        "25.65 cm OpenR Touchscreen, Wireless Android Auto/CarPlay & Reverse Camera",
+        "Paddle Shifters, Electronic Parking Brake with Auto Hold & Rear AC Vents"
+      ]
+    },
+    {
+      "name": "Techno+ Turbo TCe 160 6MT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "16.8 kmpl",
+      "exShowroom": 1529000,
+      "isVFM": true,
+      "vfmBadge": "Best Feature-Loaded 163 PS SUV Pick",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, 360° Camera & Blind Spot Warning",
+      "keyFeatures": [
+        "Electric Panoramic Sunroof & 26.03 cm (10.25-inch) Full Digital Driver Display",
+        "25.65 cm OpenR Link Touchscreen with Google Built-In & Wireless Charger",
+        "R18 Diamond-Cut Alloy Wheels, 360° Around View Camera & Front/Rear Sensors",
+        "Dual-Zone Auto Climate Control, Power-Folding ORVMs & Arkamys 3D Sound"
+      ]
+    },
+    {
+      "name": "Adventure Turbo TCe 160 6DCT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "DCT",
+      "mileage": "16.5 kmpl",
+      "exShowroom": 1539000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, Hill Descent Control & All-4 Discs",
+      "keyFeatures": [
+        "163 PS / 280 Nm 1.3L Turbo with 6-Speed Wet DCT & Multi-Sense Drive Modes",
+        "R17 Adventure Alloy Wheels, Modular Roof Bars & Washable MicroCloud Upholstery",
+        "25.65 cm OpenR Touchscreen, Wireless Charger & Electronic Parking Brake"
+      ]
+    },
+    {
+      "name": "Techno+ Turbo TCe 160 6DCT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "DCT",
+      "mileage": "16.5 kmpl",
+      "exShowroom": 1669000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, 360° Camera & Blind Spot Warning",
+      "keyFeatures": [
+        "163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Electric Panoramic Sunroof",
+        "Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera & R18 Alloys",
+        "Wireless Smartphone Charger, Dual-Zone AC & Arkamys 3D Sound System"
+      ]
+    },
+    {
+      "name": "Evolution Strong Hybrid E-Tech 160",
+      "engine": "1.6L Strong Hybrid E-Tech 160 (160 PS)",
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "mileage": "24.5 kmpl",
+      "exShowroom": 1699000,
+      "isVFM": true,
+      "vfmBadge": "Most Accessible Strong Hybrid SUV",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, ESP, E-Save Mode & All-4 Discs",
+      "keyFeatures": [
+        "160 PS 1.6L Strong Hybrid E-Tech Powertrain with 1.4 kWh Battery & Up to 80% City EV Drive",
+        "Multi-Mode Clutchless Dog-Box Automatic Transmission with Regenerative Braking",
+        "25.65 cm OpenR Touchscreen, 26.03 cm Digital Cluster & Electronic Parking Brake"
+      ]
+    },
+    {
+      "name": "Iconic Launch Edition Turbo TCe 160 6MT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "16.8 kmpl",
+      "exShowroom": 1719000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "Level 2 ADAS (17 Features), 5-Star Bharat NCAP, 6 Airbags & 360° Camera",
+      "keyFeatures": [
+        "Level 2 ADAS Suite (Adaptive Cruise Control, AEB, Lane Keep Assist, Blind Spot Warning)",
+        "Electric Panoramic Sunroof, Ventilated Front Seats & 6-Way Power Driver Seat",
+        "Iconic Yellow-Stitched Leatherette Interior, Powered Tailgate & R18 Diamond-Cut Alloys"
+      ]
+    },
+    {
+      "name": "Iconic Turbo TCe 160 6DCT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "DCT",
+      "mileage": "16.5 kmpl",
+      "exShowroom": 1849000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "Level 2 ADAS (17 Features), 5-Star Bharat NCAP, 6 Airbags & 360° Camera",
+      "keyFeatures": [
+        "163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Level 2 ADAS (17 Autonomous Features)",
+        "Electric Panoramic Sunroof, Ventilated Front Seats, Powered Tailgate & R18 Alloys",
+        "Dual OpenR Link Screens with Google Built-In, 360° Camera & Arkamys 3D Sound"
+      ]
+    },
+    {
+      "name": "Iconic Launch Edition Turbo TCe 160 6DCT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "DCT",
+      "mileage": "16.5 kmpl",
+      "exShowroom": 1869000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "Level 2 ADAS (17 Features), 5-Star Bharat NCAP, 6 Airbags & 360° Camera",
+      "keyFeatures": [
+        "Exclusive Iconic Launch Edition Decals, Dual-Tone Stealth Black Roof & Yellow Accents",
+        "163 PS Turbo 6DCT, Level 2 ADAS, Panoramic Sunroof & Ventilated Front Seats",
+        "Powered Tailgate, 360° Around View Camera & Dual OpenR Link Screens"
+      ]
+    },
+    {
+      "name": "Iconic Turbo TCe 160 6MT",
+      "engine": "1.3L Turbo TCe 160 (163 PS / 280 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "16.8 kmpl",
+      "exShowroom": 1899000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "Level 2 ADAS (17 Features), 5-Star Bharat NCAP, 6 Airbags & 360° Camera",
+      "keyFeatures": [
+        "Top-Spec Iconic Trim with 163 PS / 280 Nm 6-Speed Manual & Level 2 ADAS",
+        "Electric Panoramic Sunroof, Ventilated Leatherette Seats & Powered Tailgate",
+        "Dual OpenR Link Screens, 360° Camera & R18 Diamond-Cut Alloys"
+      ]
+    },
+    {
+      "name": "Techno Strong Hybrid E-Tech 160",
+      "engine": "1.6L Strong Hybrid E-Tech 160 (160 PS)",
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "mileage": "24.5 kmpl",
+      "exShowroom": 1899000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "5-Star Bharat NCAP, 6 Airbags, 360° Camera & Blind Spot Warning",
+      "keyFeatures": [
+        "160 PS Strong Hybrid E-Tech Powertrain with Electric Panoramic Sunroof",
+        "Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera & R18 Alloys",
+        "Wireless Charger, Dual-Zone Auto Climate Control & Arkamys 3D Sound"
+      ]
+    },
+    {
+      "name": "Emotion Strong Hybrid E-Tech 160",
+      "engine": "1.6L Strong Hybrid E-Tech 160 (160 PS)",
+      "fuel": "Hybrid",
+      "trans": "Automatic",
+      "mileage": "24.5 kmpl",
+      "exShowroom": 1949000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "Level 2 ADAS (17 Features), 5-Star Bharat NCAP, 6 Airbags & 360° Camera",
+      "keyFeatures": [
+        "Flagship 160 PS Strong Hybrid E-Tech 160 with Level 2 ADAS (17 Autonomous Features)",
+        "Electric Panoramic Sunroof, Ventilated Front Seats, 6-Way Power Seat & Powered Tailgate",
+        "Dual OpenR Link Screens with Google Built-In, 360° Camera & Dual-Tone Roof Options"
+      ]
+    }
+  ]
+}

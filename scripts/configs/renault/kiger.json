@@ -1,0 +1,399 @@
+{
+  "id": "renault-kiger",
+  "name": "Renault Kiger",
+  "brand": "Renault",
+  "tagline": "Sporty Compact SUV with 100 PS 1.0L Turbo X-Tronic CVT, 205 mm Ground Clearance, 6 Airbags & 3D Arkamys Audio",
+  "launchDate": "2026 (MY26 Phase 2 Range)",
+  "bodyType": "SUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹5.81 - ₹10.40 Lakh",
+  "minPrice": 581000,
+  "maxPrice": 1040000,
+  "safetyRating": "4.0 ★ (Global NCAP 4-Star + 6 Airbags Standard)",
+  "groundClearance": "205 mm",
+  "bootSpace": "405 Litres (879L Expanded)",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "Updated for MY26 with 6 airbags standard across the range, Renault's new diamond emblem, semi-leatherette ventilated seats/upholstery, auto headlamps, and rain-sensing wipers, the Renault Kiger offers segment-leading 405-litre boot space, 205 mm ground clearance, Multi-Sense drive modes (Eco, Normal, Sport), 3D Sound by Arkamys (8 speakers), wireless Android Auto & Apple CarPlay, and a choice of 72 PS 1.0L Energy and 100 PS 1.0L Turbo petrol engines.",
+  "colors": [
+    {
+      "id": "caspian-blue",
+      "name": "Caspian Blue",
+      "hex": "#13528A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TERCA"
+    },
+    {
+      "id": "shadow-grey",
+      "name": "Shadow Grey",
+      "hex": "#5C6168",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEKAD"
+    },
+    {
+      "id": "moonlight-silver",
+      "name": "Moonlight Silver",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEK23"
+    },
+    {
+      "id": "oasis-yellow",
+      "name": "Oasis Yellow",
+      "hex": "#D8A31A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TED37"
+    },
+    {
+      "id": "outback-bronze",
+      "name": "Outback Bronze",
+      "hex": "#6D543E",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TED18"
+    },
+    {
+      "id": "stealth-black",
+      "name": "Stealth Black",
+      "hex": "#181A1D",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OVC61"
+    },
+    {
+      "id": "ice-cool-white",
+      "name": "Ice Cool White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OD34"
+    },
+    {
+      "id": "oasis-yellow-with-mystery-black-roof",
+      "name": "Oasis Yellow With Mystery Black Roof",
+      "hex": "#D8A31A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZM"
+    },
+    {
+      "id": "shadow-grey-with-mystery-black-roof",
+      "name": "Shadow Grey with Mystery Black Roof",
+      "hex": "#5C6168",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZK"
+    },
+    {
+      "id": "radiant-red-with-mystery-black-roof",
+      "name": "Radiant Red With Mystery Black Roof",
+      "hex": "#C41E24",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXYV"
+    },
+    {
+      "id": "moonlight-silver-with-mystery-black-roof",
+      "name": "Moonlight Silver With Mystery Black Roof",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXYR"
+    },
+    {
+      "id": "ice-cool-white-with-mystery-black-roof",
+      "name": "Ice Cool White With Mystery Black Roof",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXNY"
+    },
+    {
+      "id": "caspian-blue-with-mystery-black-roof",
+      "name": "Caspian Blue With Mystery Black Roof",
+      "hex": "#13528A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXNW"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "kiger-hero-banner",
+      "title": "Renault Kiger MY26 with New Renault Emblem & Muscular SUV Stance",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/new-homepage-image-/Kiger-ph2-2560x945.png.ximg.largex2.webp/28eebf6495.webp"
+    },
+    {
+      "id": "kiger-exterior-front",
+      "title": "Tri-Octa Pure Vision LED Headlamps & Winged Front Grille",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-001-desktop.jpg.ximg.largex2.webp/2e6fcb6dc9.webp"
+    },
+    {
+      "id": "kiger-exterior-profile",
+      "title": "205 mm High Ground Clearance & Coupe-Like Floating Roofline",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-003-desktop.jpg.ximg.largex2.webp/722c310033.webp"
+    },
+    {
+      "id": "kiger-alloys-calipers",
+      "title": "R16 Diamond-Cut Alloy Wheels with Sporty Red Brake Calipers",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-004-desktop.jpg.ximg.largex2.webp/c5f53776a4.webp"
+    },
+    {
+      "id": "kiger-led-taillamps",
+      "title": "Signature C-Shaped Double-Extractor LED Tail Lamps",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-005-desktop.jpg.ximg.largex2.webp/760a262acf.webp"
+    },
+    {
+      "id": "kiger-roof-bars",
+      "title": "Functional 50 kg Roof Bars & Shark Fin Antenna",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-006-desktop.jpg.ximg.largex2.webp/5b71ea0314.webp"
+    },
+    {
+      "id": "kiger-cockpit-interior",
+      "title": "Smart Cockpit with 20.32 cm Floating Touchscreen & Center Console",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-012-desktop.jpg.ximg.largex2.webp/ce6ae2c973.webp"
+    },
+    {
+      "id": "kiger-tft-cluster",
+      "title": "17.78 cm Multi-Skin Reconfigurable TFT Digital Cluster",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-014-desktop.jpg.ximg.largex2.webp/e697f92515.webp"
+    },
+    {
+      "id": "kiger-multisense-dial",
+      "title": "Multi-Sense Rotary Drive Mode Selector (Normal, Eco & Sport)",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-015-desktop.jpg.ximg.largex2.webp/c9d675d615.webp"
+    },
+    {
+      "id": "kiger-arkamys-audio",
+      "title": "Auditorium 3D Sound by Arkamys (4 Speakers + 4 Tweeters)",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-017-desktop.jpg.ximg.largex2.webp/37d67296f1.webp"
+    },
+    {
+      "id": "kiger-boot-space",
+      "title": "Segment-Leading 405-Litre Boot Space (Expandable to 879 Litres)",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/modularity-specification/renault-kiger-modularity-specification-001.jpg.ximg.largex2.webp/e34bccf707.webp"
+    },
+    {
+      "id": "kiger-safety-airbags",
+      "title": "6 Airbags, ESP, Hill Start Assist & Traction Control",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/connectivity-safety/renault-kiger-connectivity-safety-016.jpg.ximg.largex2.webp/e00aec9053.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "999 cc 1.0L Energy 3-Cylinder Petrol (72 PS @ 6250 rpm, 96 Nm @ 3500 rpm) – 5MT / 5-Speed Easy-R AMT",
+      "999 cc 1.0L Turbo 3-Cylinder Petrol (100 PS @ 5000 rpm, 160 Nm MT / 152 Nm CVT) – 5MT / X-Tronic CVT"
+    ],
+    "dimensions": "3991 mm L x 1750 mm W x 1605 mm H",
+    "wheelbase": "2500 mm",
+    "FuelTank": "40 Litres",
+    "Tires": "195/60 R16 Diamond-Cut Alloy / Styled Flex Wheels"
+  },
+  "variants": [
+    {
+      "name": "Authentic 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.17 kmpl",
+      "exShowroom": 581000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Traction Control & TPMS",
+      "keyFeatures": [
+        "6 Airbags (Front, Side & Curtain), ESP, Hill Start Assist, TCS & TPMS Standard",
+        "LED DRLs, C-Shaped Signature LED Tail Lamps & Rear Spoiler",
+        "All 4 Power Windows, Remote Keyless Entry & 3.5-inch LED Instrument Cluster",
+        "405-Litre Boot Space, 205 mm Ground Clearance & R16 Steel Wheels with Covers"
+      ]
+    },
+    {
+      "name": "Evolution 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.17 kmpl",
+      "exShowroom": 659000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Parking Sensors",
+      "keyFeatures": [
+        "Rear AC Vents, Electrically Adjustable ORVMs & Shark Fin Antenna",
+        "R400 Audio System with Bluetooth, USB, 4 Speakers & Steering Audio Controls",
+        "60:40 Split Folding Rear Seats with Adjustable Headrests & Center Armrest",
+        "Height-Adjustable Tilt Steering & Front Center Armrest with Storage"
+      ]
+    },
+    {
+      "name": "Evolution 1.0L Easy-R AMT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "19.03 kmpl",
+      "exShowroom": 703000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Traffic Assist",
+      "keyFeatures": [
+        "5-Speed Easy-R AMT Automatic with Traffic Crawl Assist & Hill Start Assist",
+        "Rear AC Vents, Electric ORVMs, Shark Fin Antenna & 4-Speaker Audio",
+        "6 Airbags, Electronic Stability Program (ESP) & Real-Time TPMS",
+        "60:40 Split Rear Seats & 405-Litre Boot"
+      ]
+    },
+    {
+      "name": "Evolution+ 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.17 kmpl",
+      "exShowroom": 703000,
+      "isVFM": true,
+      "vfmBadge": "Best Sub-7.5L Compact SUV Value Pick",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear View Camera",
+      "keyFeatures": [
+        "20.32 cm (8-inch) Floating Touchscreen with Android Auto & Apple CarPlay",
+        "Reverse Parking Camera with Guidelines & Functional 50 kg Roof Bars",
+        "Rear AC Vents, Electric ORVMs, Shark Fin Antenna & Steering Controls",
+        "6 Airbags, ESP, Hill Start Assist & TPMS"
+      ]
+    },
+    {
+      "name": "Evolution+ 1.0L Easy-R AMT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "19.03 kmpl",
+      "exShowroom": 749000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear View Camera",
+      "keyFeatures": [
+        "5-Speed Easy-R AMT Automatic with 20.32 cm Floating Touchscreen",
+        "Reverse Parking Camera, Android Auto, Apple CarPlay & Functional Roof Bars",
+        "Rear AC Vents, Electric ORVMs & 6 Airbags Standard"
+      ]
+    },
+    {
+      "name": "Techno 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.17 kmpl",
+      "exShowroom": 760000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "Tri-Octa Pure Vision LED Headlamps & R16 Dual-Tone Flex Wheels",
+        "Smart Access Card with Walk-Away Lock & Push Button Start/Stop",
+        "Auto AC, Rear Wiper & Washer, Driver Seat Height Adjust & Upper Glovebox",
+        "20.32 cm Touchscreen with Wireless Smartphone Replication & 4 Speakers + 2 Tweeters"
+      ]
+    },
+    {
+      "name": "Evolution+ 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 160 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.5 kmpl",
+      "exShowroom": 793000,
+      "isVFM": true,
+      "vfmBadge": "Most Affordable 100 PS Turbo SUV in India",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear View Camera",
+      "keyFeatures": [
+        "100 PS & 160 Nm 1.0L Turbocharged Petrol Engine with 5-Speed Manual",
+        "20.32 cm Floating Touchscreen, Rear View Camera & Functional Roof Bars",
+        "6 Airbags, ESP, Hill Start Assist, Traction Control & TPMS"
+      ]
+    },
+    {
+      "name": "Techno 1.0L Easy-R AMT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "19.03 kmpl",
+      "exShowroom": 810000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "5-Speed Easy-R AMT with Tri-Octa Pure Vision LED Headlamps & Auto AC",
+        "Smart Access Card, Push Button Start & Wireless Android Auto / Apple CarPlay",
+        "R16 Dual-Tone Flex Wheels, Rear Wiper/Washer & 6-Speaker Audio"
+      ]
+    },
+    {
+      "name": "Techno 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 160 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.5 kmpl",
+      "exShowroom": 850000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "100 PS / 160 Nm 1.0L Turbo Engine with Tri-Octa Pure Vision LED Headlamps",
+        "Smart Access Card, Push Start, Auto AC & Wireless Smartphone Replication",
+        "R16 Dual-Tone Flex Wheels & 6 Airbags"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.17 kmpl",
+      "exShowroom": 850000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Auto Headlamps",
+      "keyFeatures": [
+        "R16 Diamond-Cut Alloy Wheels, Auto Headlamps & Rain-Sensing Wipers",
+        "17.78 cm Multi-Skin TFT Digital Cluster & 3D Sound by Arkamys (8 Speakers)",
+        "Multi-Sense Drive Modes, Cruise Control, Cooled Lower Glovebox & Ambient Lighting",
+        "Leatherette Steering Wheel, Semi-Leatherette Seats & Power-Folding ORVMs"
+      ]
+    },
+    {
+      "name": "Techno 1.0L Turbo X-Tronic CVT",
+      "engine": "1.0L Turbo Petrol (100 PS / 152 Nm)",
+      "fuel": "Petrol",
+      "trans": "CVT",
+      "mileage": "18.24 kmpl",
+      "exShowroom": 940000,
+      "isVFM": true,
+      "vfmBadge": "Best Sub-9.5L Turbo CVT Automatic Pick",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "100 PS 1.0L Turbo Engine with Smooth X-Tronic D-Step CVT Automatic",
+        "Tri-Octa Pure Vision LED Headlamps, Auto AC & Smart Access Card",
+        "20.32 cm Touchscreen with Wireless Android Auto & Apple CarPlay"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 160 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.5 kmpl",
+      "exShowroom": 940000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Auto Headlamps",
+      "keyFeatures": [
+        "100 PS / 160 Nm Turbo MT with R16 Diamond-Cut Alloys & Red Brake Calipers",
+        "Wireless Smartphone Charger, Cruise Control, Auto Headlamps & Rain Wipers",
+        "17.78 cm Multi-Skin TFT Cluster, 8-Speaker 3D Arkamys Audio & Multi-Sense Modes"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L Turbo X-Tronic CVT",
+      "engine": "1.0L Turbo Petrol (100 PS / 152 Nm)",
+      "fuel": "Petrol",
+      "trans": "CVT",
+      "mileage": "18.24 kmpl",
+      "exShowroom": 1040000,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Auto Headlamps",
+      "keyFeatures": [
+        "Flagship 100 PS Turbo X-Tronic CVT with Multi-Sense Drive Modes (Eco, Normal, Sport)",
+        "R16 Diamond-Cut Alloys with Red Calipers, Wireless Charger & Remote Engine Start",
+        "17.78 cm TFT Digital Cluster, 8-Speaker 3D Arkamys Sound & Dual-Tone Roof Options"
+      ]
+    }
+  ]
+}

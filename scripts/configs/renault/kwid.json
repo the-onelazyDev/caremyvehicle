@@ -1,0 +1,228 @@
+{
+  "id": "renault-kwid",
+  "name": "Renault Kwid",
+  "brand": "Renault",
+  "tagline": "India's SUV-Inspired Entry Hatchback with 184 mm Ground Clearance, 6 Airbags & 20.32 cm Touchscreen MediaNAV",
+  "launchDate": "2026 (MY26 Updated Range)",
+  "bodyType": "Hatchback",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹4.53 - ₹5.61 Lakh",
+  "minPrice": 452900,
+  "maxPrice": 560900,
+  "safetyRating": "6 Airbags + 17 Standard Safety Features (ESP, HSA, TPMS)",
+  "groundClearance": "184 mm",
+  "bootSpace": "279 Litres (620L Expanded)",
+  "waitingPeriod": "1 - 3 Weeks",
+  "summary": "Updated for MY26 with Renault's Human First safety suite including 6 airbags, Electronic Stability Program (ESP), Hill Start Assist (HSA), Traction Control System (TCS), and Tyre Pressure Monitoring System (TPMS), the Renault Kwid pairs SUV-inspired styling, 184 mm ground clearance, and LED DRLs with a peppy 1.0L SCe petrol engine (69 PS, 92.5 Nm) offered in 5-speed Manual and Easy-R AMT transmissions.",
+  "colors": [
+    {
+      "id": "zanskar-blue",
+      "name": "Zanskar Blue",
+      "hex": "#1B5E85",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TERRD"
+    },
+    {
+      "id": "moonlight-silver",
+      "name": "Moonlight Silver",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TEK23"
+    },
+    {
+      "id": "outback-bronze",
+      "name": "Outback Bronze",
+      "hex": "#6D543E",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TED18"
+    },
+    {
+      "id": "fiery-red",
+      "name": "Fiery Red",
+      "hex": "#B81D24",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TEB76"
+    },
+    {
+      "id": "ice-cool-white",
+      "name": "Ice Cool White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-OD34"
+    },
+    {
+      "id": "zanskar-blue-with-mystery-black-roof",
+      "name": "Zanskar Blue With Mystery Black Roof",
+      "hex": "#1B5E85",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYXD"
+    },
+    {
+      "id": "ice-cool-white-with-mystery-black-roof",
+      "name": "Ice Cool White With Mystery Black Roof",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYXB"
+    },
+    {
+      "id": "fiery-red-with-mystery-black-roof",
+      "name": "Fiery Red With Mystery Black Roof",
+      "hex": "#B81D24",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYWP"
+    },
+    {
+      "id": "moonlight-silver-with-mystery-black-roof",
+      "name": "Moonlight Silver With Mystery Black Roof",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXYR"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "kwid-hero-front",
+      "title": "SUV-Inspired Stance with Bold Front Grille & Silver Streak LED DRLs",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_kv_2.jpg.ximg.largex2.webp/a3218070ed.webp"
+    },
+    {
+      "id": "kwid-climber-action",
+      "title": "Renault Kwid Climber Dual-Tone Exterior with Roof Rails",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_kv_2%20(1).jpg.ximg.largex2.webp/0e2363a2af.webp"
+    },
+    {
+      "id": "kwid-ground-clearance",
+      "title": "High 184 mm Ground Clearance with Front & Rear Skid Plates",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_184mm.jpg.ximg.largex2.webp/0ea0bc6110.webp"
+    },
+    {
+      "id": "kwid-dualtone-roof",
+      "title": "Contrasting Mystery Black Dual-Tone Roof & ORVMs",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_dualtone.jpg.ximg.largex2.webp/42cbd9c19a.webp"
+    },
+    {
+      "id": "kwid-wheels",
+      "title": "R14 Volcano Grey Multi-Spoke Flex Wheels",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_wheelcover.jpg.ximg.largex2.webp/190c8da27e.webp"
+    },
+    {
+      "id": "kwid-rear-view",
+      "title": "Signature C-Shaped LED Tail Lamps & Sculpted Tailgate",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1920_back_kv.jpg.ximg.largex2.webp/80451e6063.webp"
+    },
+    {
+      "id": "kwid-dashboard",
+      "title": "Dual-Tone Cockpit with 20.32 cm Touchscreen MediaNAV Evolution",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_db.jpg.ximg.largex2.webp/21959730a7.webp"
+    },
+    {
+      "id": "kwid-steering-cluster",
+      "title": "LED Digital Instrument Cluster & Steering-Mounted Controls",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_db_steering.jpg.ximg.largex2.webp/e1e33d5316.webp"
+    },
+    {
+      "id": "kwid-infotainment",
+      "title": "Android Auto, Apple CarPlay & Voice Recognition",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_tech.jpg.ximg.largex2.webp/6fde1d89b4.webp"
+    },
+    {
+      "id": "kwid-seats",
+      "title": "Sporty Climber Upholstery with Metal Mustard Accents",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_seats.jpg.ximg.largex2.webp/a24d9cfefa.webp"
+    },
+    {
+      "id": "kwid-six-airbags",
+      "title": "6 Airbags & 17 Standard Human First Safety Features",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/six_airbags.jpg.ximg.largex2.webp/e8fa63757e.webp"
+    },
+    {
+      "id": "kwid-rear-camera",
+      "title": "Reverse Parking Camera with Dynamic Guidelines",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/kwid-my26/AR-AM-KWID-CLIMBER-FACELIFT-REAR-CAMERA-SHOT-2026-v3%20(1).jpg.ximg.largex2.webp/690978b663.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "999 cc 1.0L SCe 3-Cylinder Petrol (69 PS @ 5500 rpm, 92.5 Nm @ 4250 rpm) – 5MT / 5-Speed Easy-R AMT"
+    ],
+    "dimensions": "3731 mm L x 1579 mm W x 1474 mm H (1490 mm with Roof Bars)",
+    "wheelbase": "2422 mm",
+    "FuelTank": "28 Litres",
+    "Tires": "165/70 R14 Tubeless Radial"
+  },
+  "variants": [
+    {
+      "name": "Evolution 1.0L MT",
+      "engine": "1.0L SCe Petrol (69 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "21.46 kmpl",
+      "exShowroom": 452900,
+      "isVFM": true,
+      "vfmBadge": "Best Sub-5L Entry SUV-Hatch Pick",
+      "ADASSafety": "ESP, Hill Start Assist, Traction Control, TPMS & ABS with EBD",
+      "keyFeatures": [
+        "20.32 cm (8-inch) Touchscreen MediaNAV Evolution with Android Auto & Apple CarPlay",
+        "Silver Streak LED DRLs & C-Shaped Signature LED Tail Lamps",
+        "Electronic Stability Program (ESP), Hill Start Assist (HSA), Traction Control & TPMS",
+        "Front & Rear Power Windows, Remote Keyless Entry & LED Digital Instrument Cluster"
+      ]
+    },
+    {
+      "name": "Evolution 1.0L Easy-R AMT",
+      "engine": "1.0L SCe Petrol (69 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "22.30 kmpl",
+      "exShowroom": 489900,
+      "isVFM": true,
+      "vfmBadge": "Most Affordable Automatic in India",
+      "ADASSafety": "ESP, Hill Start Assist, Traction Control, TPMS & Traffic Assist",
+      "keyFeatures": [
+        "5-Speed Easy-R Shift-by-Wire Rotary Dial AMT with Crawl / Traffic Assist",
+        "20.32 cm Touchscreen MediaNAV Evolution with Rear View Camera",
+        "Electronic Stability Program (ESP), Hill Start Assist (HSA) & TPMS",
+        "184 mm Ground Clearance & 279-Litre Boot Space"
+      ]
+    },
+    {
+      "name": "Climber 1.0L MT",
+      "engine": "1.0L SCe Petrol (69 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "21.46 kmpl",
+      "exShowroom": 514900,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Traction Control & Rear Camera",
+      "keyFeatures": [
+        "6 Airbags (Front, Side & Curtain) & 3-Point Seatbelts for All Seats",
+        "Sporty Climber Exterior Package with Roof Bars, Skid Plates & Volcano Grey Flex Wheels",
+        "Optional Dual-Tone Mystery Black Roof & Sporty White / Mustard Cabin Accents",
+        "Rear Seat Armrest, Fast USB Charger, Rear View Camera & Electric ORVMs"
+      ]
+    },
+    {
+      "name": "Climber 1.0L Easy-R AMT",
+      "engine": "1.0L SCe Petrol (69 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "22.30 kmpl",
+      "exShowroom": 560900,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Traction Control & Rear Camera",
+      "keyFeatures": [
+        "5-Speed Easy-R Rotary Dial Automatic with Crawl Assist & Hill Start Assist",
+        "6 Airbags, ESP, Traction Control System & Real-Time TPMS",
+        "Dual-Tone Mystery Black Roof Options & Climber Protective Body Cladding",
+        "20.32 cm Touchscreen MediaNAV, Reverse Parking Camera & Steering Audio Controls"
+      ]
+    }
+  ]
+}

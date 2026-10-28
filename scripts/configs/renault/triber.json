@@ -1,0 +1,297 @@
+{
+  "id": "renault-triber",
+  "name": "Renault Triber",
+  "brand": "Renault",
+  "tagline": "India's Most Modular 7-Seater Now with 100 PS 1.0L Turbo Engine, 6 Airbags, 625L Boot & EasyFix Seats",
+  "launchDate": "2026 (MY26 Facelift & New 1.0L Turbo)",
+  "bodyType": "MUV",
+  "fuelTypes": [
+    "Petrol"
+  ],
+  "priceRange": "₹5.81 - ₹9.00 Lakh",
+  "minPrice": 580875,
+  "maxPrice": 899900,
+  "safetyRating": "4.0 ★ (Global NCAP 4-Star + 6 Airbags Standard)",
+  "groundClearance": "182 mm",
+  "bootSpace": "625 Litres (5-Seat Mode) / 84L (7-Seat Mode)",
+  "waitingPeriod": "2 - 4 Weeks",
+  "summary": "Refreshed for MY26 with Renault's new diamond emblem, redesigned front fascia, and the introduction of a punchy 100 PS / 180 Nm 1.0L Turbo petrol engine alongside the 72 PS 1.0L Energy engine, the Renault Triber delivers unmatched 100+ seating configurations with EasyFix removable 3rd-row seats, 625 litres of boot space in Life Mode, twin AC with 2nd and 3rd row vents, 6 airbags, ESP, Hill Start Assist, wireless charger, and a 17.78 cm TFT digital cluster.",
+  "colors": [
+    {
+      "id": "zanskar-blue",
+      "name": "Zanskar Blue",
+      "hex": "#1B5E85",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TERRD"
+    },
+    {
+      "id": "shadow-grey",
+      "name": "Shadow Grey",
+      "hex": "#5C6168",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEKAD"
+    },
+    {
+      "id": "moonlight-silver",
+      "name": "Moonlight Silver",
+      "hex": "#A3A8AE",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEK23"
+    },
+    {
+      "id": "amber-terracotta",
+      "name": "Amber Terracotta",
+      "hex": "#A64B2A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TECNZ"
+    },
+    {
+      "id": "stealth-black",
+      "name": "Stealth Black",
+      "hex": "#181A1D",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OVC61"
+    },
+    {
+      "id": "ice-cool-white",
+      "name": "Ice Cool White",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OD34"
+    },
+    {
+      "id": "amber-terracotta-with-mystery-black-roof",
+      "name": "Amber Terracotta With Mystery Black Roof",
+      "hex": "#A64B2A",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZL"
+    },
+    {
+      "id": "shadow-grey-with-mystery-black-roof",
+      "name": "Shadow Grey With Mystery Black Roof",
+      "hex": "#5C6168",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZK"
+    },
+    {
+      "id": "ice-cool-white-with-mystery-black-roof",
+      "name": "Ice Cool White With Mystery Black Roof",
+      "hex": "#F4F5F7",
+      "sourceUrl": "https://www.renault.co.in/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY2/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXNY"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "triber-turbo-hero",
+      "title": "New 2026 Renault Triber Turbo with New Diamond Grille & LED Projector Headlamps",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/Triber%20Turbo%20KV%20desktop.jpg.ximg.largex2.webp/d9145d91fa.webp"
+    },
+    {
+      "id": "triber-family-lifestyle",
+      "title": "Many Lives, One Car – Modular 7-Seater Family Proportion",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/Triber_turbo_family_desktop.jpg.ximg.largex2.webp/5ce8055d83.webp"
+    },
+    {
+      "id": "triber-rear-quarter",
+      "title": "Sculpted Rear Profile with Eagle-Beak Tail Lamps & SUV Skid Plates",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/Triber_turbo_backside.jpg.ximg.largex2.webp/c737438afb.webp"
+    },
+    {
+      "id": "triber-roof-rails",
+      "title": "Functional Load-Bearing Roof Rails (50 kg Capacity)",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/roofrail.jpg.ximg.largex2.webp/87aa39d455.webp"
+    },
+    {
+      "id": "triber-top-view",
+      "title": "Spacious 3-Row 7-Seater Cabin Architecture on 2636 mm Wheelbase",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/top-view-2d.jpg.ximg.largex2.webp/98385f5329.webp"
+    },
+    {
+      "id": "triber-auto-headlamps",
+      "title": "Auto Headlamps & Rain-Sensing Wipers",
+      "category": "Exterior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber-ph2/auto%20lamps%20and%20rain%20sensing%20wipers.jpg.ximg.largex2.webp/fe71e5d831.webp"
+    },
+    {
+      "id": "triber-interior-cockpit",
+      "title": "Modern Dual-Tone Dashboard with 20.32 cm Floating Touchscreen",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/interior.jpg.ximg.largex2.webp/593a805cff.webp"
+    },
+    {
+      "id": "triber-tft-cluster",
+      "title": "17.78 cm (7-inch) Reconfigurable TFT Digital Instrument Cluster",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/tftcluster.jpg.ximg.largex2.webp/144db12890.webp"
+    },
+    {
+      "id": "triber-one-touch-tumble",
+      "title": "2nd Row Slide, Recline & One-Touch Fold & Tumble Seats",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/onetouchfold.jpg.ximg.largex2.webp/e79a599b42.webp"
+    },
+    {
+      "id": "triber-premium-seats",
+      "title": "Premium Dual-Tone Quilted Seat Upholstery with Driver Armrest",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/seat.jpg.ximg.largex2.webp/974b0a4dcf.webp"
+    },
+    {
+      "id": "triber-cooled-glovebox",
+      "title": "Cooled Lower Glovebox & Cooled Center Console Storage",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber-ph2/glovebox-2560x1707.jpg.ximg.largex2.webp/09fee60cd9.webp"
+    },
+    {
+      "id": "triber-cruise-control",
+      "title": "Steering-Mounted Cruise Control & Audio Controls",
+      "category": "Interior",
+      "sourceUrl": "https://cdn.group.renault.com/ren/in/triber-ph2/cruise%20control.jpg.ximg.largex2.webp/904a38a3d7.webp"
+    }
+  ],
+  "specs": {
+    "engineOptions": [
+      "999 cc 1.0L Energy 3-Cylinder Petrol (72 PS @ 6250 rpm, 96 Nm @ 3500 rpm) – 5MT / 5-Speed Easy-R AMT",
+      "999 cc 1.0L Turbo 3-Cylinder Petrol (100 PS @ 5000 rpm, 180 Nm @ 2800-3600 rpm) – 5MT"
+    ],
+    "dimensions": "3985 mm L x 1734 mm W x 1643 mm H",
+    "wheelbase": "2636 mm",
+    "FuelTank": "40 Litres",
+    "Tires": "185/65 R15 Styled Flex / Alloy Wheels"
+  },
+  "variants": [
+    {
+      "name": "Authentic 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.0 kmpl",
+      "exShowroom": 580875,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Traction Control & TPMS",
+      "keyFeatures": [
+        "6 Airbags, ESP, Hill Start Assist (HSA), Traction Control System (TCS) & TPMS",
+        "Slide & Recline 2nd Row with One-Touch Fold & Tumble + EasyFix Removable 3rd Row",
+        "All 4 Power Windows, Remote Central Locking & LED Instrument Cluster",
+        "Projector Headlamps, 182 mm Ground Clearance & Rear Parking Sensors"
+      ]
+    },
+    {
+      "name": "Evolution 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.0 kmpl",
+      "exShowroom": 673605,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear View Camera",
+      "keyFeatures": [
+        "20.32 cm Touchscreen MediaNAV Evolution with Android Auto & Apple CarPlay",
+        "Twin AC with Dedicated 2nd & 3rd Row Roof-Mounted Vents",
+        "Reverse Parking Camera with Guidelines & Electrically Adjustable ORVMs",
+        "Roof Rails (50 kg Load Capacity), Wheel Arch Cladding & 4 Speakers"
+      ]
+    },
+    {
+      "name": "Techno 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.0 kmpl",
+      "exShowroom": 744120,
+      "isVFM": true,
+      "vfmBadge": "Best Value 7-Seater Family Pick",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "17.78 cm (7-inch) TFT Digital Instrument Cluster & Steering-Mounted Controls",
+        "Cooled Center Console, Cooled Lower Glovebox & Driver Seat Height Adjust",
+        "R15 Dual-Tone Styled Flex Wheels, Skid Plates & LED Turn Indicators on ORVMs",
+        "Rear Wiper & Defogger, Day/Night IRVM & 2 Front Tweeters"
+      ]
+    },
+    {
+      "name": "Evolution 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 180 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.5 kmpl",
+      "exShowroom": 784900,
+      "isVFM": true,
+      "vfmBadge": "Most Affordable 100 PS Turbo 7-Seater",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Traction Control & TPMS",
+      "keyFeatures": [
+        "New 100 PS & 180 Nm 1.0L Turbocharged Petrol Engine with 5-Speed Manual",
+        "20.32 cm Touchscreen MediaNAV, Rear View Camera & Twin AC with 3-Row Vents",
+        "6 Airbags, Electronic Stability Program (ESP) & Hill Start Assist",
+        "EasyFix Modular 7-Seat Cabin with 625-Litre Boot in 5-Seat Mode"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L MT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "20.0 kmpl",
+      "exShowroom": 805350,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Front Parking Sensors & Rear Camera",
+      "keyFeatures": [
+        "Wireless Smartphone Charger, Walk-Away Lock / Approach Unlock Smart Access Card",
+        "Push Button Start/Stop, Auto Headlamps, Rain-Sensing Wipers & Cruise Control",
+        "LED DRLs, Front Parking Sensors, Driver Seat Armrest & PM2.5 Air Filter",
+        "Optional Dual-Tone Mystery Black Roof & Chrome Exterior Highlights"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L Easy-R AMT",
+      "engine": "1.0L Energy Petrol (72 PS)",
+      "fuel": "Petrol",
+      "trans": "AMT",
+      "mileage": "19.6 kmpl",
+      "exShowroom": 852950,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Front Sensors & Rear Camera",
+      "keyFeatures": [
+        "5-Speed Easy-R AMT with Traffic Crawl Assist & Hill Start Assist",
+        "Wireless Charger, Smart Access Card, Push Button Start & Cruise Control",
+        "20.32 cm Touchscreen with Wireless Smartphone Replication & 17.78 cm TFT Cluster",
+        "Auto Headlamps, Rain-Sensing Wipers & Twin AC for All 3 Rows"
+      ]
+    },
+    {
+      "name": "Techno 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 180 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.5 kmpl",
+      "exShowroom": 853900,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, TPMS & Rear Camera",
+      "keyFeatures": [
+        "100 PS / 180 Nm 1.0L Turbo Engine for Effortless Full-Load Highway Cruising",
+        "17.78 cm Digital TFT Cluster, 20.32 cm Touchscreen & 6-Speaker Arkamys Audio",
+        "Cooled Lower Glovebox, Cooled Center Console & Height-Adjustable Driver Seat",
+        "R15 Styled Wheels, Functional 50 kg Roof Rails & Rear Wiper/Washer"
+      ]
+    },
+    {
+      "name": "Emotion 1.0L Turbo MT",
+      "engine": "1.0L Turbo Petrol (100 PS / 180 Nm)",
+      "fuel": "Petrol",
+      "trans": "Manual",
+      "mileage": "19.5 kmpl",
+      "exShowroom": 899900,
+      "isVFM": false,
+      "vfmBadge": "",
+      "ADASSafety": "6 Airbags, ESP, Hill Start Assist, Front & Rear Parking Sensors + Camera",
+      "keyFeatures": [
+        "Flagship 100 PS / 180 Nm Turbo 7-Seater with Multi-Sense Driving Modes",
+        "Wireless Charger, Smart Access Card, Push Start, Auto Headlamps & Rain Wipers",
+        "Cruise Control, Front Parking Sensors, Rear Camera & 17.78 cm TFT Cluster",
+        "Dual-Tone Mystery Black Roof Options & Quilted Premium Upholstery"
+      ]
+    }
+  ]
+}
