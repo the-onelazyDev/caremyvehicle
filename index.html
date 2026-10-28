@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Care My Vehicle — Every New Car Launch, Variants & Real On-Road Prices</title>
-  <meta name="description" content="India's fastest and 100% spam-free new car launch radar. Explore every model, variant-by-variant breakdown, and transparent city-wise on-road prices.">
+  <meta name="description" content="India's fastest and 100% spam-free new car launch radar. Explore every model, variant-by-variant breakdown, official studio colors, and transparent city-wise on-road prices.">
   <meta name="theme-color" content="#2563EB">
 
   <!-- Canonical & Search Engine Robots -->
   <link rel="canonical" href="https://www.caremyvehicle.in/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="keywords" content="new car launches India, on-road price calculator, car variants comparison, best value for money cars, Bharat NCAP ratings">
+  <meta name="keywords" content="new car launches India, on-road price calculator, car variants comparison, best value for money cars, Bharat NCAP ratings, official car colors">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Care My Vehicle — Every New Car Launch in India">
-  <meta property="og:description" content="100% Spam-Free: Real On-Road Prices, Value-For-Money Variant Picks & Granular Specs.">
+  <meta property="og:description" content="100% Spam-Free: Real On-Road Prices, Value-For-Money Variant Picks, Official Colors & Granular Specs.">
   <meta property="og:image" content="https://www.caremyvehicle.in/assets/logo.png">
   <meta property="og:url" content="https://www.caremyvehicle.in/">
   <meta property="og:type" content="website">
@@ -52,27 +52,53 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="brand-lockup">
-        <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon">
-        <div>
-          <div class="brand-name">Care My <span>Vehicle</span></div>
-          <div class="brand-tagline">Care Better. Drive Longer.</div>
-        </div>
+        <a href="index.html" style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon">
+          <div>
+            <div class="brand-name">Care My <span>Vehicle</span></div>
+            <div class="brand-tagline">Care Better. Drive Longer.</div>
+          </div>
+        </a>
       </div>
 
-      <button id="citySelectorBtn" class="city-selector-btn" aria-label="Select City">
-        <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </button>
+      <!-- Quick Nav Desktop Links -->
+      <nav class="desktop-nav">
+        <a href="#brandsSection" class="nav-link">🏢 Brands</a>
+        <a href="#trendingSection" class="nav-link">🔥 Trending</a>
+        <a href="#catalogSection" class="nav-link">🚗 All Cars</a>
+        <a href="#newsSection" class="nav-link">📰 Reviews & News</a>
+      </nav>
+
+      <div class="header-actions-right">
+        <button id="citySelectorBtn" class="city-selector-btn" aria-label="Select City">
+          <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-pill">⚡ 2024–2025 New Car Launches</div>
-    <h1 class="hero-title">Every New Car Launch.<br>Every Variant. 100% Details.</h1>
-    <p class="hero-desc">Zero spam calls. Zero hidden dealer markups. Check exact city on-road prices and value-for-money variant picks instantly.</p>
+  <!-- Hero Section & Live Search Radar -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-pill">⚡ 2024–2026 Live Automotive Radar</div>
+    <h1 class="hero-title">Every New Car Launch.<br>Every Variant. <span>Zero Spam.</span></h1>
+    <p class="hero-desc">
+      Zero dealer spam calls. Zero hidden dealer markups. Check exact city on-road prices, value-for-money picks, and official manufacturer colors in real-time.
+    </p>
+
+    <!-- Smart Search Input Bar -->
+    <div class="search-bar-wrapper">
+      <div class="search-input-box">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="globalSearchInput" placeholder="Search by car name, brand, or fuel (e.g. Magnite, Curvv, EV, Thar)..." autocomplete="off">
+        <button id="clearSearchBtn" class="search-clear-btn" style="display:none;" onclick="window.clearSearch()">&times;</button>
+      </div>
+    </div>
 
     <div class="trust-badges">
       <div class="trust-chip">
@@ -81,35 +107,156 @@
       </div>
       <div class="trust-chip">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-        <span>True RTO & Tax Breakdown</span>
+        <span>True City RTO & Tax Calculation</span>
       </div>
       <div class="trust-chip">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-        <span>Bharat NCAP Safety Verified</span>
+        <span>100% Official OEM Studio Renders</span>
       </div>
     </div>
   </section>
 
-  <!-- Quick Filter Tabs (Touch Friendly) -->
-  <nav class="filter-bar" aria-label="Car Categories">
-    <div class="filter-scroll">
-      <button class="filter-btn active" data-filter="all">All Launches</button>
-      <button class="filter-btn" data-filter="suv">SUVs & Coupes</button>
-      <button class="filter-btn" data-filter="ev">EVs & Clean Fuel</button>
-      <button class="filter-btn" data-filter="under-10l">Under ₹10 Lakh</button>
-      <button class="filter-btn" data-filter="10-15l">₹10 – ₹15 Lakh</button>
-      <button class="filter-btn" data-filter="above-15l">₹15 Lakh+</button>
+  <!-- 1. 🏢 EXPLORE BY POPULAR BRANDS SHELF -->
+  <section id="brandsSection" class="brands-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <h2 class="section-main-title">🏢 Explore by Popular Brands</h2>
+          <p class="section-sub-title">Select an automaker to instantly view all active car models and variant lineups.</p>
+        </div>
+        <button id="clearBrandBtn" class="btn-text-action" style="display:none;" onclick="window.selectBrand('all')">
+          ✕ Show All Brands
+        </button>
+      </div>
+      
+      <div class="brands-shelf-scroll" id="brandsShelfContainer">
+        <!-- Rendered by app.js with official brand logos -->
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- Main Cars Grid -->
-  <main class="main-content">
-    <div id="carsContainer" class="cars-grid">
-      <!-- Injected reactively by app.js -->
+  <!-- 2. 🔥 HOT & TRENDING NEW LAUNCHES SHOWCASE (NEW CAR SECTION) -->
+  <section id="trendingSection" class="trending-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-badge">🔥 JUST LAUNCHED</span>
+          <h2 class="section-main-title">Trending 2024–2026 Launches</h2>
+          <p class="section-sub-title">Top highlighted newly launched SUVs, Coupes & EVs with verified on-road pricing.</p>
+        </div>
+      </div>
+
+      <div class="trending-shelf-scroll" id="trendingShelfContainer">
+        <!-- Rendered by app.js -->
+      </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Car Detail & Variant Bottom Drawer Modal -->
+  <!-- 3. 🎯 MULTI-FACET FILTER DASHBOARD & MAIN CAR CATALOG -->
+  <section id="catalogSection" class="catalog-section">
+    <div class="section-container">
+      <!-- Filter Dashboard Card -->
+      <div class="filter-dashboard-card">
+        <!-- Category (Body Type) Segmented Tabs -->
+        <div class="filter-row-categories">
+          <span class="filter-row-label">Category:</span>
+          <div class="filter-chips-scroll" id="categoryChips">
+            <button class="filter-chip active" data-category="all">🚗 All Categories</button>
+            <button class="filter-chip" data-category="suv">🚙 SUVs & Coupes</button>
+            <button class="filter-chip" data-category="sedan">🚘 Sedans</button>
+            <button class="filter-chip" data-category="hatchback">🏎️ Hatchbacks</button>
+            <button class="filter-chip" data-category="mpv">🚐 MPVs / 7-Seaters</button>
+            <button class="filter-chip" data-category="ev">⚡ Electric (EV)</button>
+            <button class="filter-chip" data-category="luxury">💎 Luxury (₹25L+)</button>
+          </div>
+        </div>
+
+        <!-- Facets Row: Fuel, Price Range, Sort -->
+        <div class="filter-facets-row">
+          <!-- Fuel Filter -->
+          <div class="facet-group">
+            <span class="facet-label">Fuel:</span>
+            <div class="facet-pills" id="fuelChips">
+              <button class="facet-pill active" data-fuel="all">All</button>
+              <button class="facet-pill" data-fuel="EV">⚡ EV</button>
+              <button class="facet-pill" data-fuel="Petrol">⛽ Petrol</button>
+              <button class="facet-pill" data-fuel="Diesel">🛢️ Diesel</button>
+              <button class="facet-pill" data-fuel="CNG">🌱 CNG</button>
+            </div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="facet-group">
+            <span class="facet-label">Budget:</span>
+            <select id="priceSelectFilter" class="facet-select" onchange="window.handlePriceSelect(this.value)">
+              <option value="all">All Budgets</option>
+              <option value="under-6l">Under ₹6 Lakh</option>
+              <option value="6-10l">₹6 – ₹10 Lakh</option>
+              <option value="10-15l">₹10 – ₹15 Lakh</option>
+              <option value="15-25l">₹15 – ₹25 Lakh</option>
+              <option value="above-25l">Above ₹25 Lakh</option>
+            </select>
+          </div>
+
+          <!-- Sort Selector -->
+          <div class="facet-group" style="margin-left:auto;">
+            <span class="facet-label">Sort:</span>
+            <select id="sortSelect" class="facet-select" onchange="window.handleSortSelect(this.value)">
+              <option value="newest">🔥 Latest Launches First</option>
+              <option value="price-asc">💰 Price: Low to High</option>
+              <option value="price-desc">💎 Price: High to Low</option>
+              <option value="safety">🛡️ Highest Safety Rating</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Active Filter Tags Bar -->
+        <div class="active-filters-bar" id="activeFiltersBar" style="display:none;">
+          <div class="active-tags-list" id="activeTagsList"></div>
+          <button class="btn-clear-all" onclick="window.resetAllFilters()">✕ Reset All Filters</button>
+        </div>
+
+        <div class="catalog-status-bar">
+          <div class="results-count-text" id="resultsCountDisplay">Showing <strong>...</strong> new car models</div>
+        </div>
+      </div>
+
+      <!-- Main Cars Grid -->
+      <main class="main-content" style="padding:0; margin:0; max-width:100%;">
+        <div id="carsContainer" class="cars-grid">
+          <!-- Injected reactively by app.js -->
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- 4. 📰 EXPERT REVIEWS & AUTOMOTIVE NEWS SECTION -->
+  <section id="newsSection" class="news-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-badge badge-editorial">📰 EDITORIAL RADAR</span>
+          <h2 class="section-main-title">Expert Car Reviews & Buying Guides</h2>
+          <p class="section-sub-title">100% independent automotive testing, variant comparisons, and real-world range reports.</p>
+        </div>
+      </div>
+
+      <div class="news-grid" id="newsContainer">
+        <!-- Rendered by app.js from newsData.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 📖 ARTICLE READER MODAL -->
+  <div id="articleModal" class="modal-overlay">
+    <div class="modal-sheet" style="max-width:760px;">
+      <div id="articleModalContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 🚗 CAR DETAIL & VARIANT MODAL -->
   <div id="carDetailModal" class="modal-overlay">
     <div class="modal-sheet">
       <div id="carModalContent">
@@ -118,7 +265,7 @@
     </div>
   </div>
 
-  <!-- City Selection Modal -->
+  <!-- 7. 📍 CITY SELECTION MODAL -->
   <div id="cityModal" class="modal-overlay">
     <div class="modal-sheet" style="max-width: 440px;">
       <div class="modal-header">
@@ -143,7 +290,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="brand-name" style="font-size:22px;">Care My <span>Vehicle</span></div>
-      <p style="font-size:13px; color:var(--text-secondary);">
+      <p style="font-size:13px; color:var(--text-secondary); margin-top:4px;">
         India's modern, zero-spam automotive radar for new car launches, variants, and honest ownership care.
       </p>
       
@@ -151,11 +298,38 @@
         <strong>Legal & Editorial Disclaimer:</strong> Care My Vehicle is an independent automotive research, variant analysis, and consumer education platform. All brand names, model trademarks, logos, and vehicle photographs belong to their respective automotive manufacturers (OEMs) and are utilized here strictly under the doctrine of Fair Dealing (Section 52 of the Indian Copyright Act, 1957) for editorial reporting, review, and public information. Care My Vehicle is not an authorized dealership.
       </p>
 
-      <div style="font-size:12px; color:var(--text-muted); margin-top:10px;">
-        © 2024–2026 Care My Vehicle. All rights reserved.
+      <div style="font-size:12px; color:var(--text-muted); margin-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <div>© 2024–2026 Care My Vehicle. All rights reserved.</div>
+        <div>
+          <a href="admin.html" style="color:var(--text-muted); font-size:12px; text-decoration:none;">🔒 Admin Portal</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- App-like Mobile Sticky Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="#heroSection" class="mobile-nav-item active">
+      <span class="mobile-nav-icon">🏠</span>
+      <span class="mobile-nav-label">Home</span>
+    </a>
+    <a href="#brandsSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🏢</span>
+      <span class="mobile-nav-label">Brands</span>
+    </a>
+    <a href="#trendingSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">⚡</span>
+      <span class="mobile-nav-label">Trending</span>
+    </a>
+    <a href="#catalogSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🚗</span>
+      <span class="mobile-nav-label">Cars</span>
+    </a>
+    <a href="#newsSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">📰</span>
+      <span class="mobile-nav-label">News</span>
+    </a>
+  </nav>
 
   <!-- Application Logic -->
   <script type="module" src="js/app.js"></script>

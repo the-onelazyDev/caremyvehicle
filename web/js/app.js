@@ -1,26 +1,59 @@
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './carData.js';
+import { ARTICLES } from './newsData.js';
 
-// Application State
-let activeFilter = 'all';
+// Official Brand Logos Mapping
+export const BRAND_LOGOS = {
+  'Maruti Suzuki': 'assets/brands/maruti-suzuki.webp',
+  'Maruti Suzuki (Nexa)': 'assets/brands/maruti-suzuki-nexa.webp',
+  'Hyundai': 'assets/brands/hyundai.webp',
+  'Tata': 'assets/brands/tata.webp',
+  'Mahindra': 'assets/brands/mahindra.webp',
+  'Kia': 'assets/brands/kia.webp',
+  'Toyota': 'assets/brands/toyota.webp',
+  'MG Motor': 'assets/brands/mg-motor.webp',
+  'Honda': 'assets/brands/honda.webp',
+  'Skoda': 'assets/brands/skoda.webp',
+  'Volkswagen': 'assets/brands/volkswagen.webp',
+  'Renault': 'assets/brands/renault.webp',
+  'Citroën': 'assets/brands/citroen.webp',
+  'BYD': 'assets/brands/byd.webp',
+  'Nissan': 'assets/brands/nissan.webp'
+};
+
+// Multi-Facet Filter State
+let filters = {
+  category: 'all',
+  brand: 'all',
+  fuel: 'all',
+  price: 'all',
+  search: '',
+  sort: 'newest'
+};
+
 let selectedCityId = 'delhi';
 let currentModalCar = null;
 
 // DOM Elements
 const carsContainer = document.getElementById('carsContainer');
-const filterButtons = document.querySelectorAll('.filter-btn');
 const citySelectorBtn = document.getElementById('citySelectorBtn');
 const cityNameDisplay = document.getElementById('cityNameDisplay');
 const cityModal = document.getElementById('cityModal');
 const carDetailModal = document.getElementById('carDetailModal');
+const articleModal = document.getElementById('articleModal');
+const globalSearchInput = document.getElementById('globalSearchInput');
+const clearSearchBtn = document.getElementById('clearSearchBtn');
 
-// Initialize App
+// Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
+  renderBrandsShelf();
+  renderTrendingLaunches();
   renderCars();
+  renderNewsSection();
   setupEventListeners();
   checkDeepLink();
 });
 
-// Helper to retrieve both built-in dataset and locally added custom cars
+// Helper to retrieve both built-in dataset and locally added custom cars with visibility filters
 function getAllCars() {
   try {
     const hiddenCars = new Set(JSON.parse(localStorage.getItem('cmv_hidden_cars') || '[]'));
@@ -47,25 +80,283 @@ function checkDeepLink() {
   }
 }
 
-// Render Car Cards based on active filter
-function renderCars() {
+// 1. 🏢 Render Explore by Popular Brands Shelf
+function renderBrandsShelf() {
+  const container = document.getElementById('brandsShelfContainer');
+  if (!container) return;
+
   const allCars = getAllCars();
-  const filteredCars = allCars.filter(car => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === 'suv') return car.bodyType.toLowerCase().includes('suv');
-    if (activeFilter === 'ev') return car.fuelTypes.includes('EV');
-    if (activeFilter === 'under-10l') return car.minPrice < 1000000;
-    if (activeFilter === '10-15l') return car.minPrice >= 1000000 && car.minPrice <= 1500000;
-    if (activeFilter === 'above-15l') return car.minPrice > 1500000;
-    return true;
+  const brandCounts = {};
+  allCars.forEach(c => {
+    brandCounts[c.brand] = (brandCounts[c.brand] || 0) + 1;
   });
+
+  const uniqueBrands = Object.keys(brandCounts).sort();
+  
+  let html = `
+    <button class="brand-pill-card ${filters.brand === 'all' ? 'active' : ''}" onclick="window.selectBrand('all')">
+      <div style="font-size:24px; line-height:1; height:38px; display:flex; align-items:center;">🚗</div>
+      <div class="brand-pill-name">All Brands</div>
+      <div class="brand-pill-count">${allCars.length} Cars</div>
+    </button>
+  `;
+
+  uniqueBrands.forEach(b => {
+    const logoUrl = BRAND_LOGOS[b] || `assets/brands/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.webp`;
+    const count = brandCounts[b];
+    const isActive = filters.brand === b;
+
+    html += `
+      <button class="brand-pill-card ${isActive ? 'active' : ''}" onclick="window.selectBrand('${b.replace(/'/g, "\\'")}')">
+        <img src="${logoUrl}" alt="${b} Logo" class="brand-pill-logo" onerror="this.src='assets/logo.png'">
+        <div class="brand-pill-name">${b}</div>
+        <div class="brand-pill-count">${count} Cars</div>
+      </button>
+    `;
+  });
+
+  container.innerHTML = html;
+
+  const clearBtn = document.getElementById('clearBrandBtn');
+  if (clearBtn) {
+    clearBtn.style.display = filters.brand !== 'all' ? 'inline-block' : 'none';
+  }
+}
+
+window.selectBrand = function(brandName) {
+  filters.brand = brandName;
+  renderBrandsShelf();
+  renderCars();
+  const catSec = document.getElementById('catalogSection');
+  if (catSec && brandName !== 'all') {
+    catSec.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+// 2. 🔥 Render Trending 2024-2026 Launches
+function renderTrendingLaunches() {
+  const container = document.getElementById('trendingShelfContainer');
+  if (!container) return;
+
+  const allCars = getAllCars();
+  const trendingIds = [
+    'nissan-magnite',
+    'tata-curvv',
+    'mahindra-thar-roxx',
+    'skoda-kylaq',
+    'hyundai-creta',
+    'mg-windsor-ev',
+    'nissan-tekton',
+    'toyota-innova-hycross',
+    'maruti-swift'
+  ];
+
+  const trendingCars = [];
+  trendingIds.forEach(id => {
+    const found = allCars.find(c => c.id === id);
+    if (found) trendingCars.push(found);
+  });
+
+  const displayList = trendingCars.length >= 4 ? trendingCars : allCars.slice(0, 8);
+
+  container.innerHTML = displayList.map(car => {
+    const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
+    return `
+      <div class="trending-card" onclick="window.openCarModal('${car.id}')" style="cursor:pointer;">
+        <div class="trending-card-media">
+          <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
+          <span class="trending-safety-badge">🛡️ ${car.safetyRating ? car.safetyRating.split('(')[0].trim() : '5-Star Safety'}</span>
+          <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy">
+        </div>
+        <div class="trending-card-body">
+          <span class="trending-brand">${car.brand} • ${car.bodyType}</span>
+          <h3 class="trending-title">${car.name}</h3>
+          <div class="trending-specs-mini">
+            <span>⛽ ${(car.fuelTypes || []).join('/')}</span>
+            <span>•</span>
+            <span>📐 ${car.groundClearance}</span>
+          </div>
+          <div class="trending-price">
+            ${car.priceRange}
+            <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road: ${formatLakh(onRoadEstimate.total)}</div>
+          </div>
+          <button class="trending-btn" onclick="event.stopPropagation(); window.openCarModal('${car.id}')">
+            Explore 360 & Variants ➔
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// 3. Multi-Facet Filtering Engine
+function getFilteredCars() {
+  const allCars = getAllCars();
+  return allCars.filter(car => {
+    // Category / Body Type
+    if (filters.category !== 'all') {
+      const cat = filters.category.toLowerCase();
+      const body = (car.bodyType || '').toLowerCase();
+      if (cat === 'suv' && !body.includes('suv')) return false;
+      if (cat === 'sedan' && !body.includes('sedan')) return false;
+      if (cat === 'hatchback' && !body.includes('hatchback')) return false;
+      if (cat === 'mpv' && !body.includes('mpv') && !body.includes('muv') && !(car.specs?.seatingCapacity && car.specs.seatingCapacity.includes('7'))) return false;
+      if (cat === 'ev' && !car.fuelTypes.includes('EV')) return false;
+      if (cat === 'luxury' && car.minPrice < 2500000) return false;
+    }
+
+    // Brand Filter
+    if (filters.brand !== 'all' && car.brand !== filters.brand) {
+      return false;
+    }
+
+    // Fuel Filter
+    if (filters.fuel !== 'all') {
+      if (filters.fuel === 'EV' && !car.fuelTypes.includes('EV')) return false;
+      if (filters.fuel === 'Petrol' && !car.fuelTypes.includes('Petrol')) return false;
+      if (filters.fuel === 'Diesel' && !car.fuelTypes.includes('Diesel')) return false;
+      if (filters.fuel === 'CNG' && !car.fuelTypes.includes('CNG')) return false;
+      if (filters.fuel === 'Hybrid' && !car.fuelTypes.includes('Hybrid') && !(car.tagline && car.tagline.toLowerCase().includes('hybrid'))) return false;
+    }
+
+    // Price Budget Filter
+    if (filters.price !== 'all') {
+      if (filters.price === 'under-6l' && car.minPrice >= 600000) return false;
+      if (filters.price === '6-10l' && (car.minPrice < 600000 || car.minPrice > 1000000)) return false;
+      if (filters.price === '10-15l' && (car.minPrice < 1000000 || car.minPrice > 1500000)) return false;
+      if (filters.price === '15-25l' && (car.minPrice < 1500000 || car.minPrice > 2500000)) return false;
+      if (filters.price === 'above-25l' && car.minPrice < 2500000) return false;
+    }
+
+    // Search Query Text
+    if (filters.search) {
+      const q = filters.search.toLowerCase().trim();
+      const matchName = car.name.toLowerCase().includes(q);
+      const matchBrand = car.brand.toLowerCase().includes(q);
+      const matchTag = (car.tagline || '').toLowerCase().includes(q);
+      const matchBody = (car.bodyType || '').toLowerCase().includes(q);
+      const matchFuel = (car.fuelTypes || []).some(f => f.toLowerCase().includes(q));
+      if (!matchName && !matchBrand && !matchTag && !matchBody && !matchFuel) return false;
+    }
+
+    return true;
+  }).sort((a, b) => {
+    if (filters.sort === 'price-asc') return a.minPrice - b.minPrice;
+    if (filters.sort === 'price-desc') return b.minPrice - a.minPrice;
+    if (filters.sort === 'safety') {
+      const getRating = s => (s && (s.includes('5.0') || s.includes('5-Star') || s.includes('5 ★'))) ? 5 : 4;
+      return getRating(b.safetyRating) - getRating(a.safetyRating);
+    }
+    return 0; // Default newest
+  });
+}
+
+function renderActiveFilterTags() {
+  const bar = document.getElementById('activeFiltersBar');
+  const list = document.getElementById('activeTagsList');
+  if (!bar || !list) return;
+
+  const tags = [];
+  if (filters.category !== 'all') {
+    tags.push({ key: 'category', label: `Category: ${filters.category.toUpperCase()}` });
+  }
+  if (filters.brand !== 'all') {
+    tags.push({ key: 'brand', label: `Brand: ${filters.brand}` });
+  }
+  if (filters.fuel !== 'all') {
+    tags.push({ key: 'fuel', label: `Fuel: ${filters.fuel}` });
+  }
+  if (filters.price !== 'all') {
+    const priceLabels = {
+      'under-6l': 'Under ₹6 Lakh',
+      '6-10l': '₹6 – ₹10 Lakh',
+      '10-15l': '₹10 – ₹15 Lakh',
+      '15-25l': '₹15 – ₹25 Lakh',
+      'above-25l': 'Above ₹25 Lakh'
+    };
+    tags.push({ key: 'price', label: `Budget: ${priceLabels[filters.price] || filters.price}` });
+  }
+  if (filters.search) {
+    tags.push({ key: 'search', label: `Search: "${filters.search}"` });
+  }
+
+  if (tags.length === 0) {
+    bar.style.display = 'none';
+    list.innerHTML = '';
+  } else {
+    bar.style.display = 'flex';
+    list.innerHTML = tags.map(t => `
+      <span class="active-tag-chip">
+        ${t.label}
+        <button type="button" class="active-tag-remove" onclick="window.removeFilter('${t.key}')" title="Remove filter">&times;</button>
+      </span>
+    `).join('');
+  }
+}
+
+window.removeFilter = function(facetKey) {
+  if (facetKey === 'category') {
+    filters.category = 'all';
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
+  } else if (facetKey === 'brand') {
+    filters.brand = 'all';
+    renderBrandsShelf();
+  } else if (facetKey === 'fuel') {
+    filters.fuel = 'all';
+    document.querySelectorAll('.facet-pill').forEach(p => p.classList.toggle('active', p.dataset.fuel === 'all'));
+  } else if (facetKey === 'price') {
+    filters.price = 'all';
+    const sel = document.getElementById('priceSelectFilter');
+    if (sel) sel.value = 'all';
+  } else if (facetKey === 'search') {
+    window.clearSearch();
+    return;
+  }
+  renderCars();
+};
+
+window.resetAllFilters = function() {
+  filters.category = 'all';
+  filters.brand = 'all';
+  filters.fuel = 'all';
+  filters.price = 'all';
+  filters.search = '';
+  filters.sort = 'newest';
+
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
+  document.querySelectorAll('.facet-pill').forEach(p => p.classList.toggle('active', p.dataset.fuel === 'all'));
+  const pSel = document.getElementById('priceSelectFilter');
+  if (pSel) pSel.value = 'all';
+  const sSel = document.getElementById('sortSelect');
+  if (sSel) sSel.value = 'newest';
+  if (globalSearchInput) globalSearchInput.value = '';
+  if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+
+  renderBrandsShelf();
+  renderCars();
+};
+
+// 4. Render Main Car Catalog
+function renderCars() {
+  const filteredCars = getFilteredCars();
+  const allCars = getAllCars();
+
+  const countDisplay = document.getElementById('resultsCountDisplay');
+  if (countDisplay) {
+    countDisplay.innerHTML = `Showing <strong>${filteredCars.length}</strong> of <strong>${allCars.length}</strong> new car models`;
+  }
+
+  renderActiveFilterTags();
 
   if (filteredCars.length === 0) {
     carsContainer.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px; border: 1px dashed var(--border); margin: 20px 0;">
-        <div style="font-size: 40px; margin-bottom: 12px;">🚗</div>
-        <h3 style="font-size: 18px; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">No Cars Currently Visible</h3>
-        <p style="font-size: 13px; color: var(--text-secondary); max-width: 420px; margin: 0 auto;">No car models match the current filter or visibility settings.</p>
+      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px; border: 1.5px dashed var(--border); margin: 20px 0;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🚗</div>
+        <h3 style="font-size: 19px; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">No Cars Match Your Filters</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); max-width: 440px; margin: 0 auto 16px;">
+          Try adjusting your price range, fuel type, or clear some filters to see available car models.
+        </p>
+        <button class="filter-chip active" onclick="window.resetAllFilters()">✕ Clear All Filters</button>
       </div>
     `;
     return;
@@ -131,35 +422,145 @@ function renderCars() {
   }).join('');
 }
 
-// Setup Event Listeners
+// 5. 📰 Render Automotive Reviews & News Section
+function renderNewsSection() {
+  const container = document.getElementById('newsContainer');
+  if (!container) return;
+
+  container.innerHTML = ARTICLES.map(article => `
+    <article class="news-card" onclick="window.openArticleModal('${article.id}')">
+      <div class="news-card-media">
+        <img src="${article.image}" alt="${article.title}" class="news-card-img" loading="lazy">
+        <span class="news-cat-badge ${article.badgeClass}">${article.category}</span>
+      </div>
+      <div class="news-card-body">
+        <h3 class="news-card-title">${article.title}</h3>
+        <p class="news-card-excerpt">${article.excerpt}</p>
+        <div class="news-card-footer">
+          <span>${article.author} • ${article.readTime}</span>
+          <span class="news-read-more">Read Review ➔</span>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+window.openArticleModal = function(articleId) {
+  const article = ARTICLES.find(a => a.id === articleId);
+  if (!article) return;
+
+  const modal = document.getElementById('articleModal');
+  const content = document.getElementById('articleModalContent');
+  if (!modal || !content) return;
+
+  content.innerHTML = `
+    <div class="modal-header">
+      <div>
+        <span class="news-cat-badge ${article.badgeClass}" style="position:static;">${article.category}</span>
+        <h2 style="font-size:21px; font-weight:900; margin-top:8px; line-height:1.35; color:var(--text-main);">${article.title}</h2>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:6px;">
+          By <strong>${article.author}</strong> • ${article.date} • ⏱️ ${article.readTime}
+        </div>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeArticleModal()">&times;</button>
+    </div>
+
+    <div style="padding:16px 0; border-bottom:1px solid var(--border); margin-bottom:20px;">
+      <img src="${article.image}" alt="${article.title}" onerror="this.src='assets/logo.png'" style="width:100%; max-height:360px; object-fit:cover; border-radius:14px;">
+    </div>
+
+    <div style="font-size:15px; line-height:1.75; color:var(--text-main);" class="article-body-text">
+      ${article.content}
+    </div>
+
+    <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-size:12px; color:var(--text-muted);">Care My Vehicle Editorial Radar</span>
+      <button class="city-selector-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Review Link Copied!');">
+        🔗 Share Article
+      </button>
+    </div>
+  `;
+
+  modal.classList.add('active');
+};
+
+window.closeArticleModal = function() {
+  const modal = document.getElementById('articleModal');
+  if (modal) modal.classList.remove('active');
+};
+
+// Filter Interaction Handlers
+window.handlePriceSelect = function(val) {
+  filters.price = val;
+  renderCars();
+};
+
+window.handleSortSelect = function(val) {
+  filters.sort = val;
+  renderCars();
+};
+
+window.clearSearch = function() {
+  filters.search = '';
+  if (globalSearchInput) globalSearchInput.value = '';
+  if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+  renderCars();
+};
+
+// Event Listeners Setup
 function setupEventListeners() {
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeFilter = btn.dataset.filter;
+  // Category Segmented Tabs
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      filters.category = chip.dataset.category || 'all';
       renderCars();
     });
   });
 
-  citySelectorBtn.addEventListener('click', () => {
-    cityModal.classList.add('active');
+  // Fuel Facet Pills
+  document.querySelectorAll('.facet-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.facet-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      filters.fuel = pill.dataset.fuel || 'all';
+      renderCars();
+    });
   });
 
-  window.closeModal = function(modalId) {
-    document.getElementById(modalId).classList.remove('active');
-    if (modalId === 'carDetailModal') {
-      if (spinState.autoSpinInterval) {
-        clearInterval(spinState.autoSpinInterval);
-        spinState.autoSpinInterval = null;
+  // Live Search Input with Debounce
+  if (globalSearchInput) {
+    let debounceTimer;
+    globalSearchInput.addEventListener('input', (e) => {
+      clearTimeout(debounceTimer);
+      const val = e.target.value;
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = val ? 'flex' : 'none';
       }
-      currentModalCar = null;
-      history.pushState(null, '', window.location.pathname);
-    }
-  };
+      debounceTimer = setTimeout(() => {
+        filters.search = val;
+        renderCars();
+      }, 150);
+    });
+  }
+
+  // City Modal Trigger
+  if (citySelectorBtn) {
+    citySelectorBtn.addEventListener('click', () => {
+      if (cityModal) cityModal.classList.add('active');
+    });
+  }
+
+  // Close modals on overlay backdrop click
+  window.addEventListener('click', (e) => {
+    if (e.target === cityModal) cityModal.classList.remove('active');
+    if (e.target === carDetailModal) window.closeModal('carDetailModal');
+    if (e.target === articleModal) window.closeArticleModal();
+  });
 }
 
-// City Selection Handler
+
 window.selectCity = function(cityId) {
   selectedCityId = cityId;
   const city = CITIES.find(c => c.id === cityId);
