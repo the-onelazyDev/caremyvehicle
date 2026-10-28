@@ -37,7 +37,7 @@ const POPULAR_COMPARISONS = [
   { label: 'Curvv vs Basalt', ids: ['tata-curvv', 'citroen-basalt'] },
   { label: 'Creta vs Seltos', ids: ['hyundai-creta', 'kia-seltos'] },
   { label: 'Kylaq vs Brezza', ids: ['skoda-kylaq', 'maruti-brezza'] },
-  { label: 'Thar Roxx vs Jimny', ids: ['mahindra-thar-roxx', 'maruti-suzuki-jimny'] },
+  { label: 'Thar Roxx vs Jimny', ids: ['thar-roxx', 'maruti-jimny'] },
   { label: 'Curvv EV vs Windsor EV', ids: ['tata-curvv-ev', 'mg-windsor-ev'] },
   { label: 'Innova Hycross vs XUV700', ids: ['toyota-innova-hycross', 'mahindra-xuv700'] }
 ];
@@ -145,6 +145,39 @@ window.selectBrand = function(brandName) {
 };
 
 // 2. 🔥 Render Trending 2024-2026 Launches
+
+export function formatSafetyBadge(s) {
+  if (!s) return '⭐ High Safety';
+  if (/5-Star|5\.0|5\s*⭐/i.test(s)) {
+    if (/Bharat|B-NCAP/i.test(s)) return '⭐ 5-Star B-NCAP';
+    if (/Global|G-NCAP/i.test(s)) return '⭐ 5-Star G-NCAP';
+    if (/Euro/i.test(s)) return '⭐ 5-Star Euro NCAP';
+    return '⭐ 5-Star Safety';
+  }
+  if (/4-Star|4\.0|4\s*⭐/i.test(s)) {
+    if (/Bharat|B-NCAP/i.test(s)) return '⭐ 4-Star B-NCAP';
+    if (/Global|G-NCAP/i.test(s)) return '⭐ 4-Star G-NCAP';
+    return '⭐ 4-Star Safety';
+  }
+  if (/11\s*Airbag/i.test(s)) return '🛡️ 11 Airbags Std';
+  if (/9\s*Airbag/i.test(s)) return '🛡️ 9 Airbags Std';
+  if (/7\s*Airbag/i.test(s)) return '🛡️ 7 Airbags Std';
+  if (/6\s*Airbag/i.test(s)) return '🛡️ 6 Airbags Std';
+  if (/ADAS/i.test(s)) return '🛡️ Level 2 ADAS';
+  if (/Dual\s*Airbag/i.test(s)) return '🛡️ Dual Airbags Std';
+  return '🛡️ Standard Safety';
+}
+
+export function formatLaunchBadge(d) {
+  if (!d) return '🚀 New Launch';
+  if (/2026/i.test(d)) return '🔥 2026 Model';
+  if (/2025/i.test(d)) return '🔥 2025 Model';
+  if (/Facelift|Updated/i.test(d)) return '✨ New Facelift';
+  if (/September|October|August|November|December/i.test(d)) return '🔥 Just Launched';
+  if (/2024/i.test(d)) return '🚀 2024 Model';
+  return '🚀 New Launch';
+}
+
 function renderTrendingLaunches() {
   const container = document.getElementById('trendingShelfContainer');
   if (!container) return;
@@ -153,7 +186,7 @@ function renderTrendingLaunches() {
   const trendingIds = [
     'nissan-magnite',
     'tata-curvv',
-    'mahindra-thar-roxx',
+    'thar-roxx',
     'skoda-kylaq',
     'hyundai-creta',
     'mg-windsor-ev',
@@ -175,8 +208,10 @@ function renderTrendingLaunches() {
     return `
       <div class="trending-card" onclick="window.openCarModal('${car.id}')" style="cursor:pointer;">
         <div class="trending-card-media">
-          <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
-          <span class="trending-safety-badge">🛡️ ${car.safetyRating ? car.safetyRating.split('(')[0].trim() : '5-Star Safety'}</span>
+          <div class="trending-badge-row">
+            <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
+            <span class="trending-safety-badge">${formatSafetyBadge(car.safetyRating)}</span>
+          </div>
           <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy">
         </div>
         <div class="trending-card-body">
@@ -385,9 +420,11 @@ function renderCars() {
     return `
       <article class="car-card" data-car-id="${car.id}" onclick="window.openCarModal('${car.id}')" title="Click anywhere on card for full 360° studio & variants">
         <div class="card-media">
+          <div class="card-badge-row">
+            <span class="card-badge badge-launch">${formatLaunchBadge(car.launchDate)}</span>
+            <span class="card-badge badge-safety">${formatSafetyBadge(car.safetyRating)}</span>
+          </div>
           <img src="${car.heroImage}" alt="${car.name}" class="card-img" loading="lazy">
-          <span class="badge-launch">🚀 Launched ${car.launchDate}</span>
-          <span class="badge-safety">🛡️ ${car.safetyRating}</span>
         </div>
 
         <div class="card-body">
@@ -1963,8 +2000,10 @@ function renderPopularUsedCars() {
   container.innerHTML = POPULAR_USED_CARS.map(car => `
     <article class="popular-used-card" onclick="window.exploreUsedCarModel('${car.id}')">
       <div class="popular-used-media">
-        <span class="popular-used-demand-badge">${car.retentionScore}</span>
-        <span class="popular-used-years-badge">📅 ${car.topYears}</span>
+        <div class="popular-used-badge-row">
+          <span class="popular-used-demand-badge">${car.retentionScore}</span>
+          <span class="popular-used-years-badge">📅 ${car.topYears}</span>
+        </div>
         <img src="${car.image}" alt="${car.name}" class="popular-used-img" loading="lazy">
       </div>
       <div class="popular-used-body">

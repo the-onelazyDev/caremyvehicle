@@ -5635,7 +5635,7 @@ export const CARS = [
     groundClearance: '208 mm',
     bootSpace: '500 L (Expandable to 973 L)',
     waitingPeriod: '4 - 8 Weeks',
-    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence-v2.webp',
+    heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp',
     summary: 'The Tata Curvv is India’s breakthrough mass-market SUV Coupe, melding the commanding elevated stance of a rugged SUV with the aerodynamic sloping silhouette of a luxury coupe. Awarded a full 5-Star Bharat NCAP safety rating (scoring 30.81/32 for Adult and 44.83/49 for Child safety), it debuts cutting-edge technology including capacitive flush door handles with approach auto-deploy, voice-assisted panoramic glass sunroof with ambient mood lighting, a powered tailgate with hands-free gesture activation, and dual high-definition curved cockpit displays (12.3-inch Cinematic Infotainment by HARMAN with 9-speaker JBL acoustic sound system + 10.25-inch reconfigurable digital instrument cluster). Powertrain options include the brand-new 1.2L Hyperion Direct Injection Turbo Petrol (125 PS / 225 Nm), the refined 1.2L Revotron Turbo Petrol (120 PS / 170 Nm), and the high-torque 1.5L Kryojet Diesel (118 PS / 260 Nm), paired with either a 6-speed manual or an advanced wet-clutch 7-speed dual-clutch automatic (DCA) featuring paddle shifters.',
     colors: [
       { id: 'gold-essence', name: 'Gold Essence Metallic', hex: '#B9A593', image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/gold-essence-v2.webp' },
