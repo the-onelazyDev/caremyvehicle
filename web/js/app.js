@@ -60,7 +60,10 @@ const clearSearchBtn = document.getElementById('clearSearchBtn');
 document.addEventListener('DOMContentLoaded', () => {
   renderBrandsShelf();
   renderTrendingLaunches();
+  renderCompareShelf();
   renderCars();
+  renderPopularUsedCars();
+  renderUsedCarsByCity();
   renderNewsSection();
   setupEventListeners();
   checkDeepLink();
@@ -198,11 +201,16 @@ function renderTrendingLaunches() {
           </div>
           <div class="trending-price">
             ${car.priceRange}
-            <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road: ${formatLakh(onRoadEstimate.total)}</div>
+            <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road (${onRoadEstimate.cityName}): ${formatLakh(onRoadEstimate.total)}</div>
           </div>
-          <button class="trending-btn" onclick="event.stopPropagation(); window.openCarModal('${car.id}')">
-            Explore 360 & Variants ➔
-          </button>
+          <div class="trending-actions-carwale">
+            <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.openCarPriceBreakup('${car.id}')" title="View variant price breakup">
+              View Price Breakup &rsaquo;
+            </button>
+            <button type="button" class="btn-check-onroad" onclick="event.stopPropagation(); window.checkOnRoadPrice('${car.id}')" title="Check city on-road price">
+              Check On-Road Price
+            </button>
+          </div>
         </div>
       </div>
     `;
@@ -387,7 +395,7 @@ function renderCars() {
     const colorCount = car.colors ? car.colors.length : 0;
     
     return `
-      <article class="car-card" data-car-id="${car.id}">
+      <article class="car-card" data-car-id="${car.id}" onclick="window.openCarModal('${car.id}')" title="Click anywhere on card for full 360° studio & variants">
         <div class="card-media">
           <img src="${car.heroImage}" alt="${car.name}" class="card-img" loading="lazy">
           <span class="badge-launch">🚀 Launched ${car.launchDate}</span>
@@ -395,7 +403,12 @@ function renderCars() {
         </div>
 
         <div class="card-body">
-          <span class="card-brand">${car.brand}</span>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
+            <span class="card-brand">${car.brand} • ${car.bodyType}</span>
+            <button type="button" class="btn-card-compare ${compareList.includes(car.id) ? 'active' : ''}" onclick="event.stopPropagation(); window.toggleCarCompare('${car.id}')" title="Compare this car">
+              ${compareList.includes(car.id) ? '✓ Compare' : '⚖️ Compare'}
+            </button>
+          </div>
           <h3 class="card-title">${car.name}</h3>
           <p class="card-tagline">${car.tagline}</p>
 
@@ -431,15 +444,18 @@ function renderCars() {
             <div>
               <div class="price-sub">Est. On-Road (${onRoadEstimate.cityName})</div>
               <div class="price-main">${formatLakh(onRoadEstimate.total)} <span style="font-size:12px; font-weight:600; color:var(--text-muted)">onwards</span></div>
+              <div style="font-size:11px; color:var(--text-muted); font-weight:600; margin-top:2px;">Ex-Showroom: ${car.priceRange}</div>
             </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <button type="button" class="btn-card-compare ${compareList.includes(car.id) ? 'active' : ''}" onclick="window.toggleCarCompare('${car.id}')" title="Compare this car">
-                ${compareList.includes(car.id) ? '✓ In Compare' : '⚖️ Compare'}
-              </button>
-              <button class="btn-view-variants" onclick="window.openCarModal('${car.id}')">
-                Explore All ➔
-              </button>
-            </div>
+          </div>
+
+          <!-- CarWale Action Buttons -->
+          <div class="card-actions-carwale">
+            <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.openCarPriceBreakup('${car.id}')" title="View variant price breakup">
+              View Price Breakup &rsaquo;
+            </button>
+            <button type="button" class="btn-check-onroad" onclick="event.stopPropagation(); window.checkOnRoadPrice('${car.id}')" title="Check city on-road price">
+              Check On-Road Price
+            </button>
           </div>
         </div>
       </article>
@@ -590,9 +606,12 @@ function setupEventListeners() {
 window.selectCity = function(cityId) {
   selectedCityId = cityId;
   const city = CITIES.find(c => c.id === cityId);
-  cityNameDisplay.textContent = city.name;
-  cityModal.classList.remove('active');
+  if (city && cityNameDisplay) cityNameDisplay.textContent = city.name;
+  if (cityModal) cityModal.classList.remove('active');
+  renderTrendingLaunches();
+  renderCompareShelf();
   renderCars();
+  renderUsedCarsByCity();
   if (currentModalCar) {
     window.openCarModal(currentModalCar.id);
   }
@@ -989,6 +1008,35 @@ window.shareCarLink = function(carId) {
   } else {
     prompt('Copy direct link:', shareUrl);
   }
+};
+
+// Close Any Modal Drawer
+window.closeModal = function(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) modal.classList.remove('active');
+  if (modalId === 'carDetailModal') {
+    currentModalCar = null;
+    history.pushState(null, '', window.location.pathname);
+  }
+};
+
+// Global Toast Notification Helper
+window.showToast = function(msg) {
+  let toast = document.getElementById('cmvToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'cmvToast';
+    toast.style.cssText = 'position:fixed; bottom:28px; left:50%; transform:translateX(-50%); background:#0F172A; color:#FFFFFF; padding:12px 22px; border-radius:30px; font-size:13px; font-weight:700; z-index:9999; box-shadow:0 12px 28px rgba(0,0,0,0.28); display:flex; align-items:center; gap:8px; transition:opacity 0.25s ease, transform 0.25s ease; opacity:0; pointer-events:none;';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = msg;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateX(-50%) translateY(0)';
+  clearTimeout(window._toastTimeout);
+  window._toastTimeout = setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(10px)';
+  }, 2600);
 };
 
 // Open Car Detail Modal Drawer
@@ -1701,4 +1749,387 @@ window.openCompareModal = function(presetIds) {
 window.closeCompareModal = function() {
   const modal = document.getElementById('compareModal');
   if (modal) modal.classList.remove('active');
+};
+
+
+// ==========================================================================
+// 2B. ⚖️ CARWALE-STYLE COMPARE CARS SHELF (HEAD-TO-HEAD MATCHUPS)
+// ==========================================================================
+const POPULAR_COMPARE_MATCHUPS = [
+  {
+    car1Id: 'hyundai-bayon',
+    car2Id: 'hyundai-venue',
+    tag: 'Compact Crossover Rivals'
+  },
+  {
+    car1Id: 'maruti-brezza',
+    car2Id: 'xuv-3xo',
+    tag: 'Sub-4M SUV Clash'
+  },
+  {
+    car1Id: 'tata-altroz',
+    car2Id: 'maruti-dzire',
+    tag: 'Safe Hatch vs Value Sedan'
+  },
+  {
+    car1Id: 'hyundai-creta',
+    car2Id: 'kia-seltos',
+    tag: 'Midsize SUV Titans'
+  },
+  {
+    car1Id: 'tata-curvv',
+    car2Id: 'citroen-basalt',
+    tag: 'New-Age SUV-Coupe War'
+  },
+  {
+    car1Id: 'thar-roxx',
+    car2Id: 'maruti-jimny',
+    tag: '4x4 Off-Road Showdown'
+  },
+  {
+    car1Id: 'skoda-kylaq',
+    car2Id: 'maruti-fronx',
+    tag: 'Turbo SUV Faceoff'
+  },
+  {
+    car1Id: 'nissan-magnite',
+    car2Id: 'tata-punch',
+    tag: 'Value Urban Compacts'
+  }
+];
+
+function renderCompareShelf() {
+  const container = document.getElementById('compareShelfContainer');
+  if (!container) return;
+
+  const allCars = getAllCars();
+
+  container.innerHTML = POPULAR_COMPARE_MATCHUPS.map(m => {
+    const car1 = allCars.find(c => c.id === m.car1Id);
+    const car2 = allCars.find(c => c.id === m.car2Id);
+    if (!car1 || !car2) return '';
+
+    const name1 = car1.name.replace(car1.brand, '').trim() || car1.name;
+    const name2 = car2.name.replace(car2.brand, '').trim() || car2.name;
+
+    return `
+      <div class="compare-match-card">
+        <div class="compare-match-header">
+          <span>${m.tag}</span>
+          <span style="font-size:10px; color:#94A3B8;">VS Battle</span>
+        </div>
+        <div class="compare-cars-battle">
+          <div class="compare-side-car">
+            <img src="${car1.heroImage}" alt="${car1.name}" class="compare-side-img" loading="lazy">
+            <div class="compare-side-name" title="${car1.name}">${car1.brand}<br><strong>${name1}</strong></div>
+            <div class="compare-side-price">${car1.priceRange}</div>
+          </div>
+          <div class="compare-vs-badge-circle">vs</div>
+          <div class="compare-side-car">
+            <img src="${car2.heroImage}" alt="${car2.name}" class="compare-side-img" loading="lazy">
+            <div class="compare-side-name" title="${car2.name}">${car2.brand}<br><strong>${name2}</strong></div>
+            <div class="compare-side-price">${car2.priceRange}</div>
+          </div>
+        </div>
+        <button type="button" class="btn-shelf-compare-now" onclick="window.launchHeadToHeadCompare('${car1.id}', '${car2.id}')">
+          Compare Now
+        </button>
+      </div>
+    `;
+  }).filter(Boolean).join('');
+}
+
+window.launchHeadToHeadCompare = function(car1Id, car2Id) {
+  window.openCompareModal([car1Id, car2Id]);
+};
+
+window.scrollShelf = function(containerId, offset) {
+  const el = document.getElementById(containerId);
+  if (el) {
+    el.scrollBy({ left: offset, behavior: 'smooth' });
+  }
+};
+
+// ==========================================================================
+// 3B. 🚗 CARWALE-STYLE "POPULAR USED CARS IN INDIA"
+// ==========================================================================
+const POPULAR_USED_CARS = [
+  {
+    id: 'maruti-swift',
+    name: 'Maruti Suzuki Swift',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp',
+    usedPriceRange: '₹2.50 – ₹7.20 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG', 'Diesel'],
+    bodyType: 'Hatchback',
+    mileage: '22.56 – 32.85 km/l',
+    topYears: '2018 – 2024',
+    badge: 'India’s #1 Resale Hatchback',
+    highlight: 'Lowest cost per km, ubiquitous spare parts, instant buyer liquidity across India.'
+  },
+  {
+    id: 'honda-city',
+    name: 'Honda City',
+    brand: 'Honda',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp',
+    usedPriceRange: '₹3.20 – ₹9.80 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Executive Sedan',
+    mileage: '17.8 – 24.1 km/l',
+    topYears: '2016 – 2023',
+    badge: 'Timeless Japanese Reliability',
+    highlight: 'Legendary 1.5L i-VTEC engine easily exceeds 250,000 km without major overhaul.'
+  },
+  {
+    id: 'hyundai-i20',
+    name: 'Hyundai i20',
+    brand: 'Hyundai',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp',
+    usedPriceRange: '₹2.80 – ₹7.50 Lakh',
+    retentionScore: '⭐ 4.7/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Premium Hatchback',
+    mileage: '19.8 – 25.2 km/l',
+    topYears: '2017 – 2024',
+    badge: 'Feature-Rich Premium Cabin',
+    highlight: 'High quality European fit & finish, sunroof, touchscreen, and great city driveability.'
+  },
+  {
+    id: 'mahindra-scorpio-n',
+    name: 'Mahindra Scorpio',
+    brand: 'Mahindra',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp',
+    usedPriceRange: '₹4.50 – ₹12.00 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Diesel'],
+    bodyType: 'Rugged 7-Seater SUV',
+    mileage: '15.0 – 16.5 km/l',
+    topYears: '2016 – 2023',
+    badge: 'Unstoppable Resale Retention',
+    highlight: 'Commanding road presence, indestructible ladder chassis, and massive rural + tier-2 demand.'
+  },
+  {
+    id: 'toyota-innova-hycross',
+    name: 'Toyota Innova / Crysta',
+    brand: 'Toyota',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2',
+    usedPriceRange: '₹5.50 – ₹16.50 Lakh',
+    retentionScore: '⭐ 5.0/5 The Resale King',
+    fuelTypes: ['Diesel', 'Petrol'],
+    bodyType: '7-Seater MPV',
+    mileage: '14.5 – 21.1 km/l',
+    topYears: '2015 – 2024',
+    badge: 'Highest Value Retention in India',
+    highlight: 'Often sells at near original invoice price after 5 years. Renowned for 500,000+ km longevity.'
+  },
+  {
+    id: 'hyundai-creta',
+    name: 'Hyundai Creta',
+    brand: 'Hyundai',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
+    usedPriceRange: '₹6.50 – ₹13.50 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Midsize SUV',
+    mileage: '17.4 – 21.8 km/l',
+    topYears: '2018 – 2024',
+    badge: 'India’s #1 Used SUV',
+    highlight: 'Dominates the used SUV market with rapid turnover and premium resale value in all cities.'
+  },
+  {
+    id: 'maruti-baleno',
+    name: 'Maruti Suzuki Baleno',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp',
+    usedPriceRange: '₹3.80 – ₹7.40 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG'],
+    bodyType: 'Premium Hatchback',
+    mileage: '22.35 – 30.61 km/kg',
+    topYears: '2019 – 2024',
+    badge: 'Best Family Commuter Value',
+    highlight: 'Extremely spacious rear legroom, 22+ km/l real-world mileage, hassle-free maintenance.'
+  },
+  {
+    id: 'maruti-dzire',
+    name: 'Maruti Suzuki Dzire',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
+    usedPriceRange: '₹3.10 – ₹7.20 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG'],
+    bodyType: 'Compact Sedan',
+    mileage: '22.61 – 31.12 km/kg',
+    topYears: '2018 – 2024',
+    badge: 'Most Economical Boot Sedan',
+    highlight: '378L boot space, unmatched fuel efficiency, and lowest depreciation rate in the compact sedan class.'
+  }
+];
+
+function renderPopularUsedCars() {
+  const container = document.getElementById('popularUsedGridContainer');
+  if (!container) return;
+
+  container.innerHTML = POPULAR_USED_CARS.map(car => `
+    <article class="popular-used-card" onclick="window.exploreUsedCarModel('${car.id}')">
+      <div class="popular-used-media">
+        <span class="popular-used-demand-badge">${car.retentionScore}</span>
+        <span class="popular-used-years-badge">📅 ${car.topYears}</span>
+        <img src="${car.image}" alt="${car.name}" class="popular-used-img" loading="lazy">
+      </div>
+      <div class="popular-used-body">
+        <span class="popular-used-brand">${car.brand} • ${car.bodyType}</span>
+        <h3 class="popular-used-title">${car.name}</h3>
+        <div class="popular-used-price-tag">
+          <span class="popular-used-price-val">${car.usedPriceRange}</span>
+          <span class="popular-used-price-lbl">(Est. Used Price)</span>
+        </div>
+        <div class="popular-used-specs-mini">
+          <span class="used-spec-chip">⛽ ${car.fuelTypes.join('/')}</span>
+          <span class="used-spec-chip">⚡ ${car.mileage}</span>
+        </div>
+        <p class="popular-used-highlight">${car.highlight}</p>
+        <button type="button" class="btn-explore-used" onclick="event.stopPropagation(); window.exploreUsedCarModel('${car.id}')">
+          View Used & New Specs &rsaquo;
+        </button>
+      </div>
+    </article>
+  `).join('');
+}
+
+window.exploreUsedCarModel = function(carId) {
+  const allCars = getAllCars();
+  const car = allCars.find(c => c.id === carId);
+  if (car) {
+    window.openCarModal(car.id);
+  } else {
+    showToast('Viewing specifications for ' + carId);
+  }
+};
+
+// ==========================================================================
+// 3C. 🏙️ CARWALE-STYLE "USED CARS BY CITY"
+// ==========================================================================
+const USED_CARS_CITIES = [
+  {
+    id: 'delhi',
+    name: 'Delhi',
+    count: '10,700+ Cars',
+    fromPrice: 'From Rs. 45,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 56h40M16 56V26h32v30M24 26V18h16v8M28 18V12h8v6M26 56V38a6 6 0 0 1 12 0v18M14 26h36M18 20h28"/>
+    </svg>`
+  },
+  {
+    id: 'mumbai',
+    name: 'Mumbai',
+    count: '9,200+ Cars',
+    fromPrice: 'From Rs. 45,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 56h44M16 56V30l6-4v-8l4-4 4 4v8l6 4v26M24 56V38a8 8 0 0 1 16 0v18M42 30v-8l4-4 4 4v8l6 4v26M12 30h40M22 18h20"/>
+    </svg>`
+  },
+  {
+    id: 'bengaluru',
+    name: 'Bangalore',
+    count: '5,400+ Cars',
+    fromPrice: 'From Rs. 50,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 56h44M14 56V32h36v24M22 32V22c0-5.5 4.5-10 10-10s10 4.5 10 10v10M32 8v4M26 56V42a6 6 0 0 1 12 0v14M12 32h40M18 40h4M42 40h4"/>
+    </svg>`
+  },
+  {
+    id: 'pune',
+    name: 'Pune',
+    count: '4,200+ Cars',
+    fromPrice: 'From Rs. 30,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 56h44M14 56V30c0-6 5-11 11-11h14c6 0 11 5 11 11v26M25 56V40a7 7 0 0 1 14 0v16M14 26l6-6h24l6 6M20 34h6M38 34h6"/>
+    </svg>`
+  },
+  {
+    id: 'hyderabad',
+    name: 'Hyderabad',
+    count: '4,200+ Cars',
+    fromPrice: 'From Rs. 35,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 56h44M14 56V18l4-4 4 4v38M42 56V18l4-4 4 4v38M20 32c0-7 5.4-12 12-12s12 5 12 12v24M26 56V42a6 6 0 0 1 12 0v14M20 28h24M28 20h8"/>
+    </svg>`
+  },
+  {
+    id: 'ahmedabad',
+    name: 'Ahmedabad',
+    count: '3,900+ Cars',
+    fromPrice: 'From Rs. 30,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 56h40M18 56V32c0-8 6.3-14 14-14s14 6 14 14v24M26 56V42a6 6 0 0 1 12 0v14M16 26l16-12 16 12M32 10v4M22 36a10 10 0 0 1 20 0"/>
+    </svg>`
+  },
+  {
+    id: 'chennai',
+    name: 'Chennai',
+    count: '3,500+ Cars',
+    fromPrice: 'From Rs. 40,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 56h44M16 56V28h32v28M24 28V16h16v12M28 16V10h8v6M26 56V42a6 6 0 0 1 12 0v14M14 28h36M32 20v4"/>
+    </svg>`
+  },
+  {
+    id: 'kolkata',
+    name: 'Kolkata',
+    count: '2,800+ Cars',
+    fromPrice: 'From Rs. 35,000',
+    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 52h48M14 52V20l18 14 18-14v32M14 20h36M14 36l18-12 18 12M24 52V36M40 52V36M8 56h48"/>
+    </svg>`
+  }
+];
+
+function renderUsedCarsByCity() {
+  const container = document.getElementById('usedCityShelfContainer');
+  if (!container) return;
+
+  container.innerHTML = USED_CARS_CITIES.map(c => `
+    <div class="used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.selectUsedCity('${c.id}', '${c.name}')">
+      <div class="used-city-icon-wrap">${c.iconSvg}</div>
+      <div class="used-city-name">${c.name}</div>
+      <div class="used-city-count">${c.count}</div>
+      <div class="used-city-price">${c.fromPrice}</div>
+    </div>
+  `).join('');
+}
+
+window.selectUsedCity = function(cityId, cityName) {
+  const matched = CITIES.find(c => c.id === cityId);
+  if (matched) {
+    window.selectCity(matched.id);
+  }
+  showToast(`📍 Selected ${cityName} — On-road RTO & local specs updated!`);
+};
+
+// CarWale Card Action Helpers
+window.openCarPriceBreakup = function(carId) {
+  window.openCarModal(carId);
+  setTimeout(() => {
+    const table = document.querySelector('.variants-list') || document.querySelector('.variant-card');
+    if (table) table.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 250);
+};
+
+window.checkOnRoadPrice = function(carId) {
+  window.openCarModal(carId);
+  setTimeout(() => {
+    const badge = document.querySelector('.on-road-city-badge');
+    if (badge) {
+      badge.style.transition = 'all 0.3s ease';
+      badge.style.transform = 'scale(1.05)';
+      badge.style.background = '#EFF6FF';
+      setTimeout(() => {
+        badge.style.transform = 'scale(1)';
+        badge.style.background = '';
+      }, 1200);
+    }
+  }, 250);
 };

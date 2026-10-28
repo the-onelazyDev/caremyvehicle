@@ -65,9 +65,11 @@
       <nav class="desktop-nav">
         <a href="#brandsSection" class="nav-link">🏢 Brands</a>
         <a href="#trendingSection" class="nav-link">🔥 Trending</a>
+        <a href="#compareSection" class="nav-link">⚖️ Compare</a>
         <a href="#catalogSection" class="nav-link">🚗 All Cars</a>
+        <a href="#popularUsedCarsSection" class="nav-link">🏷️ Used Cars</a>
         <a href="#newsSection" class="nav-link">📰 Reviews & News</a>
-        <button type="button" class="nav-link" onclick="window.openCompareModal()" style="background:none; border:none; cursor:pointer; font-family:inherit;">⚖️ Compare <span id="navCompareCount" style="background:var(--primary); color:#FFF; padding:1px 7px; border-radius:10px; font-size:11px; margin-left:3px; display:none;">0</span></button>
+        <button type="button" class="nav-link" onclick="window.openCompareModal()" style="background:none; border:none; cursor:pointer; font-family:inherit;">⚖️ Compare (<span id="navCompareCount" style="background:var(--primary); color:#FFF; padding:1px 7px; border-radius:10px; font-size:11px;">0</span>)</button>
       </nav>
 
       <div class="header-actions-right">
@@ -153,6 +155,33 @@
     </div>
   </section>
 
+  <!-- 2B. ⚖️ CARWALE-STYLE HEAD-TO-HEAD COMPARE CARS SHELF -->
+  <section id="compareSection" class="compare-showcase-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-badge" style="background:#EFF6FF; color:#0284C7; border:1px solid #BFDBFE;">⚖️ HEAD-TO-HEAD MATCHUPS</span>
+          <h2 class="section-main-title">Compare Cars</h2>
+          <p class="section-sub-title">Confused between rivals? Compare on-road price, dimensions, safety ratings, mileage, and features side-by-side.</p>
+        </div>
+        <div class="shelf-controls">
+          <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', -360)" title="Scroll left">‹</button>
+          <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', 360)" title="Scroll right">›</button>
+        </div>
+      </div>
+
+      <div class="compare-shelf-scroll" id="compareShelfContainer">
+        <!-- Injected dynamically by app.js -->
+      </div>
+
+      <div class="compare-shelf-bottom-link">
+        <button type="button" class="link-compare-choice" onclick="window.openCompareModal()">
+          Compare Cars of Your Choice &rsaquo;
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- 3. 🎯 MULTI-FACET FILTER DASHBOARD & MAIN CAR CATALOG -->
   <section id="catalogSection" class="catalog-section">
     <div class="section-container">
@@ -228,6 +257,44 @@
           <!-- Injected reactively by app.js -->
         </div>
       </main>
+    </div>
+  </section>
+
+  <!-- 3B. 🚗 POPULAR USED CARS IN INDIA -->
+  <section id="popularUsedCarsSection" class="popular-used-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-badge" style="background:#FEF3C7; color:#D97706; border:1px solid #FDE68A;">⭐ HIGH RESALE RETENTION</span>
+          <h2 class="section-main-title">Popular Used Cars in India</h2>
+          <p class="section-sub-title">India’s most trusted pre-owned models with verified market prices, low maintenance costs, and exceptional resale value.</p>
+        </div>
+      </div>
+
+      <div class="popular-used-grid" id="popularUsedGridContainer">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3C. 🏙️ USED CARS BY CITY (CARWALE-STYLE MONUMENT CARDS) -->
+  <section id="usedCarsByCitySection" class="used-city-section">
+    <div class="section-container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-badge" style="background:#F0FDFA; color:#0D9488; border:1px solid #99F6E4;">📍 CERTIFIED PRE-OWNED METROS</span>
+          <h2 class="section-main-title">Used Cars By City</h2>
+          <p class="section-sub-title">Find verified, inspection-certified second-hand cars across India’s top metropolitan cities.</p>
+        </div>
+        <div class="shelf-controls">
+          <button class="shelf-scroll-btn" onclick="window.scrollShelf('usedCityShelfContainer', -300)" title="Scroll left">‹</button>
+          <button class="shelf-scroll-btn" onclick="window.scrollShelf('usedCityShelfContainer', 300)" title="Scroll right">›</button>
+        </div>
+      </div>
+
+      <div class="used-city-shelf-scroll" id="usedCityShelfContainer">
+        <!-- Injected dynamically by app.js -->
+      </div>
     </div>
   </section>
 
