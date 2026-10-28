@@ -120,20 +120,17 @@ function renderBrandsShelf() {
     <button class="brand-pill-card ${filters.brand === 'all' ? 'active' : ''}" onclick="window.selectBrand('all')">
       <div style="font-size:24px; line-height:1; height:38px; display:flex; align-items:center;">🚗</div>
       <div class="brand-pill-name">All Brands</div>
-      <div class="brand-pill-count">${allCars.length} Cars</div>
     </button>
   `;
 
   uniqueBrands.forEach(b => {
     const logoUrl = BRAND_LOGOS[b] || `assets/brands/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.webp`;
-    const count = brandCounts[b];
     const isActive = filters.brand === b;
 
     html += `
       <button class="brand-pill-card ${isActive ? 'active' : ''}" onclick="window.selectBrand('${b.replace(/'/g, "\\'")}')">
         <img src="${logoUrl}" alt="${b} Logo" class="brand-pill-logo" onerror="this.src='assets/logo.png'">
         <div class="brand-pill-name">${b}</div>
-        <div class="brand-pill-count">${count} Cars</div>
       </button>
     `;
   });

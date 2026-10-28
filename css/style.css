@@ -2575,3 +2575,12 @@ a {
 .trending-actions-carwale button,.card-actions-carwale button{min-width:0;white-space:normal;}
 @media (min-width:641px){.card-actions-carwale button{font-size:12px;padding:9px 6px;}}
 @media (max-width:1100px){.desktop-nav .nav-link{font-size:12px;padding-left:5px;padding-right:5px;}}
+
+/* Brands shelf: wrapped grid (two rows on desktop), no scrollbar */
+.brands-shelf-scroll{display:grid !important;grid-template-columns:repeat(8,1fr);gap:12px;overflow:visible !important;padding:6px 2px 10px;}
+.brands-shelf-scroll .brand-pill-card{min-width:0;width:100%;flex:none;}
+.brand-pill-count{display:none !important;}
+@media (max-width:1024px){.brands-shelf-scroll{grid-template-columns:repeat(6,1fr);}}
+@media (max-width:640px){.brands-shelf-scroll{grid-template-columns:repeat(4,1fr);gap:8px;}.brands-shelf-scroll .brand-pill-name{font-size:11px;}}
+
+.brands-shelf-scroll .brand-pill-name{white-space:normal;text-align:center;line-height:1.2;font-size:12px;padding:0 4px;overflow-wrap:anywhere;}
