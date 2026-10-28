@@ -23,10 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Helper to retrieve both built-in dataset and locally added custom cars
 function getAllCars() {
   try {
+    const hiddenCars = new Set(JSON.parse(localStorage.getItem('cmv_hidden_cars') || '[]'));
+    const hiddenBrands = new Set(JSON.parse(localStorage.getItem('cmv_hidden_brands') || '[]'));
     const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
     const customIds = new Set(custom.map(c => c.id));
     const base = CARS.filter(c => !customIds.has(c.id));
-    return [...custom, ...base];
+    const all = [...custom, ...base];
+    return all.filter(c => !hiddenCars.has(c.id) && !hiddenBrands.has(c.brand));
   } catch (e) {
     return CARS;
   }
@@ -56,6 +59,17 @@ function renderCars() {
     if (activeFilter === 'above-15l') return car.minPrice > 1500000;
     return true;
   });
+
+  if (filteredCars.length === 0) {
+    carsContainer.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px; border: 1px dashed var(--border); margin: 20px 0;">
+        <div style="font-size: 40px; margin-bottom: 12px;">🚗</div>
+        <h3 style="font-size: 18px; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">No Cars Currently Visible</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); max-width: 420px; margin: 0 auto;">No car models match the current filter or visibility settings.</p>
+      </div>
+    `;
+    return;
+  }
 
   carsContainer.innerHTML = filteredCars.map(car => {
     const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);

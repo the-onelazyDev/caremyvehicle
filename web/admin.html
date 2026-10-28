@@ -317,7 +317,419 @@
       padding: 28px;
       box-shadow: var(--shadow-lg);
     }
-  </style>
+  
+    /* ==========================================
+       👁️ VISIBILITY MANAGER & TABS STYLES
+       ========================================== */
+    .admin-nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0px;
+    }
+    .admin-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 14px 14px 0 0;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-bottom: -2px;
+    }
+    .admin-tab-btn:hover {
+      color: var(--primary);
+      background: #F8FAFC;
+    }
+    .admin-tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      background: #EFF6FF;
+    }
+    .tab-counter-badge {
+      padding: 2px 8px;
+      background: #FEE2E2;
+      color: #DC2626;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Metric Cards Grid */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .metric-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .metric-card-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 6px;
+    }
+    .metric-card-val {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--text-main);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .metric-card-val.val-green { color: #16A34A; }
+    .metric-card-val.val-red { color: #DC2626; }
+    .metric-card-val.val-blue { color: var(--primary); }
+
+    /* Section Boxes */
+    .section-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .section-top-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-act {
+      padding: 9px 15px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      font-family: inherit;
+    }
+    .btn-act-hide {
+      background: #FEE2E2;
+      color: #DC2626;
+      border-color: #FECACA;
+    }
+    .btn-act-hide:hover {
+      background: #FCA5A5;
+      color: #991B1B;
+    }
+    .btn-act-show {
+      background: #DCFCE7;
+      color: #16A34A;
+      border-color: #BBF7D0;
+    }
+    .btn-act-show:hover {
+      background: #BBF7D0;
+      color: #15803D;
+    }
+    .btn-act-outline {
+      background: #FFFFFF;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+    .btn-act-outline:hover {
+      background: #F1F5F9;
+    }
+
+    /* Brands Grid */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .brand-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      background: #FAFAFA;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand-box:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+      background: #FFFFFF;
+    }
+    .brand-box.brand-is-hidden {
+      background: #FEF2F2;
+      border-color: #FECACA;
+    }
+    .brand-box-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .brand-checkbox {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      margin-top: 3px;
+      accent-color: var(--primary);
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .brand-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    .pill-visible {
+      background: #DCFCE7;
+      color: #16A34A;
+    }
+    .pill-hidden {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+    .pill-partial {
+      background: #FEF3C7;
+      color: #B45309;
+    }
+    .btn-brand-toggle {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: inherit;
+    }
+    .btn-brand-toggle.btn-hide {
+      background: #FFFFFF;
+      color: #DC2626;
+      border: 1px solid #FECACA;
+    }
+    .btn-brand-toggle.btn-hide:hover {
+      background: #FEE2E2;
+    }
+    .btn-brand-toggle.btn-show {
+      background: #16A34A;
+      color: #FFFFFF;
+    }
+    .btn-brand-toggle.btn-show:hover {
+      background: #15803D;
+    }
+
+    /* Car Table Controls */
+    .car-filter-bar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .search-box-wrap {
+      flex: 1;
+      min-width: 240px;
+      position: relative;
+    }
+    .search-box-wrap input {
+      width: 100%;
+      padding: 10px 14px 10px 36px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 13px;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .search-box-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .filter-pills-row {
+      display: flex;
+      gap: 6px;
+    }
+    .filter-pill-btn {
+      padding: 8px 14px;
+      background: #F1F5F9;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .filter-pill-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .car-admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+    .car-admin-table th {
+      background: #F8FAFC;
+      padding: 12px 14px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .car-admin-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #F1F5F9;
+      vertical-align: middle;
+    }
+    .car-admin-table tr:hover td {
+      background: #F8FAFC;
+    }
+    .car-admin-table tr.row-hidden td {
+      background: #FFF5F5;
+    }
+    .car-row-thumb {
+      width: 58px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #F1F5F9;
+      display: block;
+    }
+    .btn-car-act {
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: inherit;
+    }
+    .btn-car-act.btn-hide-car {
+      background: #FFFFFF;
+      color: #DC2626;
+      border-color: #FECACA;
+    }
+    .btn-car-act.btn-hide-car:hover {
+      background: #FEE2E2;
+    }
+    .btn-car-act.btn-show-car {
+      background: #16A34A;
+      color: #FFFFFF;
+    }
+    .btn-car-act.btn-show-car:hover {
+      background: #15803D;
+    }
+    .btn-car-act.btn-brand-locked {
+      background: #F1F5F9;
+      color: #64748B;
+      border-color: #E2E8F0;
+      cursor: pointer;
+    }
+    .btn-car-act.btn-brand-locked:hover {
+      background: #E2E8F0;
+      color: var(--text-main);
+    }
+
+    /* Admin Toast Notification */
+    .admin-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+</style>
 </head>
 <body>
 
@@ -387,7 +799,141 @@
       </div>
     </header>
 
-    <div class="admin-container">
+        <div class="admin-container">
+      <!-- Top Navigation Tabs -->
+      <div class="admin-nav-tabs">
+        <button type="button" class="admin-tab-btn active" id="tabBtnVisibility" onclick="switchAdminTab('visibility')">
+          👁️ Car & Brand Visibility Control
+          <span class="tab-counter-badge" id="tabHiddenBadge" style="display:none;">0 hidden</span>
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
+          ➕ Add Newly Launched Car
+        </button>
+      </div>
+
+      <!-- VIEW 1: CATALOG & VISIBILITY CONTROL -->
+      <div id="viewVisibility">
+        <!-- Overview Metrics -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-card-label">Total Catalog Cars</div>
+            <div class="metric-card-val val-blue" id="metricTotalCars">--</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-label">Visible on Website</div>
+            <div class="metric-card-val val-green" id="metricVisibleCars">--</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-label">Hidden Cars</div>
+            <div class="metric-card-val val-red" id="metricHiddenCars">0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-label">Total Brands</div>
+            <div class="metric-card-val val-blue" id="metricTotalBrands">--</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-label">Hidden Brands</div>
+            <div class="metric-card-val val-red" id="metricHiddenBrands">0</div>
+          </div>
+        </div>
+
+        <!-- 1. BRAND-LEVEL CONTROLS -->
+        <div class="section-card">
+          <div class="section-top-flex">
+            <div>
+              <h3 class="section-title">🏢 Brand-Level Visibility Controls</h3>
+              <p class="section-desc">
+                Hide or show all cars of any brand with a single button click. Or select multiple brands to hide/show in bulk.
+              </p>
+            </div>
+            <div class="action-group">
+              <button type="button" class="btn-act btn-act-hide" onclick="hideSelectedBrands()">
+                🙈 Hide Selected Brands (<span id="selectedBrandsCount">0</span>)
+              </button>
+              <button type="button" class="btn-act btn-act-show" onclick="showSelectedBrands()">
+                👁️ Show Selected Brands
+              </button>
+              <button type="button" class="btn-act btn-act-outline" onclick="resetAllVisibility()">
+                🔄 Show All (Everything)
+              </button>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px dashed var(--border);">
+            <label style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; cursor:pointer;">
+              <input type="checkbox" id="selectAllBrandsCheck" class="brand-checkbox" onchange="toggleSelectAllBrands(this.checked)">
+              <span>Select All Brands</span>
+            </label>
+            <span style="font-size:12px; color:var(--text-secondary);" id="brandsOverviewText">Showing all brands</span>
+          </div>
+
+          <div class="brands-grid" id="brandsContainer">
+            <!-- Dynamic Brand Boxes -->
+          </div>
+        </div>
+
+        <!-- 2. CAR-LEVEL CONTROLS -->
+        <div class="section-card">
+          <div class="section-top-flex">
+            <div>
+              <h3 class="section-title">🚗 Individual Car Visibility Controls</h3>
+              <p class="section-desc">
+                Search, filter, and toggle visibility for individual car models. Or select multiple cars to hide/show in bulk.
+              </p>
+            </div>
+            <div class="action-group">
+              <button type="button" class="btn-act btn-act-hide" onclick="hideSelectedCars()">
+                🙈 Hide Selected Cars (<span id="selectedCarsCount">0</span>)
+              </button>
+              <button type="button" class="btn-act btn-act-show" onclick="showSelectedCars()">
+                👁️ Show Selected Cars
+              </button>
+            </div>
+          </div>
+
+          <!-- Car Search & Filters -->
+          <div class="car-filter-bar">
+            <div class="search-box-wrap">
+              <span class="search-box-icon">🔍</span>
+              <input type="text" id="carSearchInput" placeholder="Search by model or brand (e.g. Magnite, Creta, EV)..." oninput="filterCarsTable()">
+            </div>
+            <div class="filter-pills-row">
+              <button type="button" class="filter-pill-btn active" data-filter="all" onclick="setCarTableFilter('all')">All (<span id="pillCountAll">0</span>)</button>
+              <button type="button" class="filter-pill-btn" data-filter="visible" onclick="setCarTableFilter('visible')">Visible (<span id="pillCountVisible">0</span>)</button>
+              <button type="button" class="filter-pill-btn" data-filter="hidden" onclick="setCarTableFilter('hidden')">Hidden (<span id="pillCountHidden">0</span>)</button>
+            </div>
+            <div>
+              <select id="brandSelectFilter" class="form-control" style="padding:8px 12px; font-size:13px; font-weight:600;" onchange="filterCarsTable()">
+                <option value="all">All Brands</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="car-admin-table">
+              <thead>
+                <tr>
+                  <th style="width:36px; text-align:center;">
+                    <input type="checkbox" id="selectAllCarsCheck" class="brand-checkbox" onchange="toggleSelectAllCars(this.checked)">
+                  </th>
+                  <th style="width:68px;">Photo</th>
+                  <th>Car Model & Brand</th>
+                  <th>Body Type & Fuel</th>
+                  <th>Price Range</th>
+                  <th>Visibility Status</th>
+                  <th style="text-align:right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="carsTableBody">
+                <!-- Dynamic Car Rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: ADD NEW CAR LAUNCH -->
+      <div id="viewAddCar" style="display:none;">
       <div class="admin-card">
         <div class="admin-header">
           <div>
@@ -542,6 +1088,7 @@
 
         <div id="outputContainer" class="output-box"></div>
       </div>
+      </div><!-- end viewAddCar -->
     </div>
   </div>
 
@@ -618,6 +1165,9 @@
     function showAdminApp() {
       document.getElementById('loginGate').style.display = 'none';
       document.getElementById('adminApp').style.display = 'block';
+      if (typeof window.initVisibilityManager === 'function') {
+        window.initVisibilityManager();
+      }
     }
 
     function showLoginGate() {
@@ -1035,6 +1585,495 @@
       }
       navigator.clipboard.writeText(JSON.stringify(window.lastGeneratedCar, null, 2));
       alert('📋 Car JSON copied to clipboard! Paste it directly into js/carData.js');
+    }
+  
+    // =========================================================================
+    // 👁️ CAR & BRAND VISIBILITY CONTROLLER (ADMIN PANEL)
+    // =========================================================================
+    let activeCarTableFilter = 'all';
+
+    function switchAdminTab(tabName) {
+      const tabVis = document.getElementById('tabBtnVisibility');
+      const tabAdd = document.getElementById('tabBtnAddCar');
+      const viewVis = document.getElementById('viewVisibility');
+      const viewAdd = document.getElementById('viewAddCar');
+
+      if (tabName === 'visibility') {
+        tabVis.classList.add('active');
+        tabAdd.classList.remove('active');
+        viewVis.style.display = 'block';
+        viewAdd.style.display = 'none';
+        renderVisibilityManager();
+      } else {
+        tabAdd.classList.add('active');
+        tabVis.classList.remove('active');
+        viewVis.style.display = 'none';
+        viewAdd.style.display = 'block';
+      }
+    }
+
+    function getCatalogCars() {
+      try {
+        const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+        const customIds = new Set(custom.map(c => c.id));
+        const base = (window.APP_CARS || []).filter(c => !customIds.has(c.id));
+        return [...custom, ...base];
+      } catch (e) {
+        return window.APP_CARS || [];
+      }
+    }
+
+    function getHiddenCars() {
+      try {
+        return new Set(JSON.parse(localStorage.getItem('cmv_hidden_cars') || '[]'));
+      } catch (e) {
+        return new Set();
+      }
+    }
+
+    function saveHiddenCars(set) {
+      localStorage.setItem('cmv_hidden_cars', JSON.stringify([...set]));
+    }
+
+    function getHiddenBrands() {
+      try {
+        return new Set(JSON.parse(localStorage.getItem('cmv_hidden_brands') || '[]'));
+      } catch (e) {
+        return new Set();
+      }
+    }
+
+    function saveHiddenBrands(set) {
+      localStorage.setItem('cmv_hidden_brands', JSON.stringify([...set]));
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('adminToast');
+      if (!toast) return;
+      toast.innerHTML = message;
+      toast.style.display = 'flex';
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+
+    function initVisibilityManager() {
+      renderVisibilityManager();
+      populateBrandFilterDropdown();
+    }
+    window.initVisibilityManager = initVisibilityManager;
+
+    function renderVisibilityManager() {
+      const cars = getCatalogCars();
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+
+      if (!cars || cars.length === 0) {
+        document.getElementById('metricTotalCars').textContent = '...';
+        return;
+      }
+
+      // 1. Group cars by brand
+      const brandMap = new Map();
+      cars.forEach(car => {
+        if (!brandMap.has(car.brand)) {
+          brandMap.set(car.brand, []);
+        }
+        brandMap.get(car.brand).push(car);
+      });
+
+      // 2. Compute Metric Counters
+      let totalCarsCount = cars.length;
+      let hiddenCarsCount = 0;
+
+      cars.forEach(car => {
+        if (hiddenCars.has(car.id) || hiddenBrands.has(car.brand)) {
+          hiddenCarsCount++;
+        }
+      });
+
+      let visibleCarsCount = totalCarsCount - hiddenCarsCount;
+      let totalBrandsCount = brandMap.size;
+      let hiddenBrandsCount = hiddenBrands.size;
+
+      document.getElementById('metricTotalCars').textContent = totalCarsCount;
+      document.getElementById('metricVisibleCars').textContent = visibleCarsCount;
+      document.getElementById('metricHiddenCars').textContent = hiddenCarsCount;
+      document.getElementById('metricTotalBrands').textContent = totalBrandsCount;
+      document.getElementById('metricHiddenBrands').textContent = hiddenBrandsCount;
+
+      const tabBadge = document.getElementById('tabHiddenBadge');
+      if (hiddenCarsCount > 0) {
+        tabBadge.style.display = 'inline-block';
+        tabBadge.textContent = `${hiddenCarsCount} hidden`;
+      } else {
+        tabBadge.style.display = 'none';
+      }
+
+      // 3. Render Brands Grid
+      renderBrandsGrid(brandMap, hiddenBrands, hiddenCars);
+
+      // 4. Render Cars Table
+      renderCarsTable(cars, hiddenCars, hiddenBrands);
+
+      // 5. Update pill counts
+      document.getElementById('pillCountAll').textContent = totalCarsCount;
+      document.getElementById('pillCountVisible').textContent = visibleCarsCount;
+      document.getElementById('pillCountHidden').textContent = hiddenCarsCount;
+    }
+
+    function renderBrandsGrid(brandMap, hiddenBrands, hiddenCars) {
+      const container = document.getElementById('brandsContainer');
+      if (!container) return;
+
+      const sortedBrands = Array.from(brandMap.keys()).sort();
+      let html = '';
+
+      sortedBrands.forEach(brand => {
+        const models = brandMap.get(brand);
+        const isBrandHidden = hiddenBrands.has(brand);
+
+        // Check if individual cars are hidden
+        const hiddenInBrand = models.filter(c => hiddenCars.has(c.id)).length;
+        let statusBadge = '';
+        if (isBrandHidden) {
+          statusBadge = '<span class="status-pill pill-hidden">🔴 Brand Hidden</span>';
+        } else if (hiddenInBrand === models.length && models.length > 0) {
+          statusBadge = '<span class="status-pill pill-hidden">🔴 All Cars Hidden</span>';
+        } else if (hiddenInBrand > 0) {
+          statusBadge = `<span class="status-pill pill-partial">🟡 ${hiddenInBrand}/${models.length} Hidden</span>`;
+        } else {
+          statusBadge = '<span class="status-pill pill-visible">🟢 All Visible</span>';
+        }
+
+        const modelNames = models.map(m => m.name.replace(brand, '').trim()).slice(0, 4).join(', ');
+        const extraCount = models.length > 4 ? ` +${models.length - 4}` : '';
+
+        html += `
+          <div class="brand-box ${isBrandHidden ? 'brand-is-hidden' : ''}">
+            <div class="brand-box-top">
+              <input type="checkbox" class="brand-checkbox brand-item-check" data-brand="${brand}" onchange="updateSelectedBrandsCount()">
+              <div style="flex:1;">
+                <div class="brand-title">${brand}</div>
+                <div class="brand-meta">${models.length} models (${modelNames}${extraCount})</div>
+                ${statusBadge}
+              </div>
+            </div>
+            <div>
+              <button type="button" 
+                      class="btn-brand-toggle ${isBrandHidden ? 'btn-brand-toggle btn-show' : 'btn-brand-toggle btn-hide'}" 
+                      onclick="toggleBrandVisibility('${brand.replace(/'/g, "\\'")}')">
+                ${isBrandHidden ? '👁️ Show All Brand Cars' : '🙈 Hide All Brand Cars'}
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      updateSelectedBrandsCount();
+    }
+
+    function renderCarsTable(allCars, hiddenCars, hiddenBrands) {
+      const tbody = document.getElementById('carsTableBody');
+      if (!tbody) return;
+
+      const searchVal = (document.getElementById('carSearchInput')?.value || '').toLowerCase().trim();
+      const selectedBrand = document.getElementById('brandSelectFilter')?.value || 'all';
+
+      const filtered = allCars.filter(car => {
+        const isHidden = hiddenCars.has(car.id) || hiddenBrands.has(car.brand);
+        
+        // Tab filter
+        if (activeCarTableFilter === 'visible' && isHidden) return false;
+        if (activeCarTableFilter === 'hidden' && !isHidden) return false;
+
+        // Brand dropdown filter
+        if (selectedBrand !== 'all' && car.brand !== selectedBrand) return false;
+
+        // Search input filter
+        if (searchVal) {
+          const matchName = car.name.toLowerCase().includes(searchVal);
+          const matchBrand = car.brand.toLowerCase().includes(searchVal);
+          const matchBody = (car.bodyType || '').toLowerCase().includes(searchVal);
+          if (!matchName && !matchBrand && !matchBody) return false;
+        }
+
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" style="text-align:center; padding:36px 14px; color:var(--text-secondary);">
+              🔍 No car models match the current filter or search criteria.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      let html = '';
+      filtered.forEach(car => {
+        const isBrandHidden = hiddenBrands.has(car.brand);
+        const isCarHiddenDirect = hiddenCars.has(car.id);
+        const isHidden = isBrandHidden || isCarHiddenDirect;
+
+        let statusPill = '';
+        let actionBtn = '';
+
+        if (isBrandHidden) {
+          statusPill = `<span class="status-pill pill-hidden">🔴 Hidden (Brand Hidden)</span>`;
+          actionBtn = `<button type="button" class="btn-car-act btn-brand-locked" onclick="toggleBrandVisibility('${car.brand.replace(/'/g, "\\'")}')">🏢 Unhide Brand</button>`;
+        } else if (isCarHiddenDirect) {
+          statusPill = `<span class="status-pill pill-hidden">🔴 Hidden</span>`;
+          actionBtn = `<button type="button" class="btn-car-act btn-show-car" onclick="toggleCarVisibility('${car.id}')">👁️ Show Car</button>`;
+        } else {
+          statusPill = `<span class="status-pill pill-visible">🟢 Visible</span>`;
+          actionBtn = `<button type="button" class="btn-car-act btn-hide-car" onclick="toggleCarVisibility('${car.id}')">🙈 Hide Car</button>`;
+        }
+
+        html += `
+          <tr class="${isHidden ? 'row-hidden' : ''}">
+            <td style="text-align:center;">
+              <input type="checkbox" class="brand-checkbox car-item-check" data-car-id="${car.id}" onchange="updateSelectedCarsCount()">
+            </td>
+            <td>
+              <img src="${car.heroImage || 'assets/logo.png'}" alt="${car.name}" class="car-row-thumb" onerror="this.src='assets/logo.png'">
+            </td>
+            <td>
+              <div style="font-weight:800; color:var(--text-main); font-size:14px;">${car.name}</div>
+              <div style="font-size:12px; color:var(--text-secondary);">${car.brand}</div>
+            </td>
+            <td>
+              <div>${car.bodyType || 'SUV'}</div>
+              <div style="font-size:11px; color:var(--text-muted);">${(car.fuelTypes || []).join(', ')}</div>
+            </td>
+            <td style="font-weight:700; color:var(--primary);">${car.priceRange || 'N/A'}</td>
+            <td>${statusPill}</td>
+            <td style="text-align:right;">${actionBtn}</td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+      updateSelectedCarsCount();
+    }
+
+    function populateBrandFilterDropdown() {
+      const select = document.getElementById('brandSelectFilter');
+      if (!select) return;
+      const cars = getCatalogCars();
+      const brands = [...new Set(cars.map(c => c.brand))].sort();
+      
+      const currentVal = select.value;
+      select.innerHTML = '<option value="all">All Brands</option>' + 
+        brands.map(b => `<option value="${b}">${b}</option>`).join('');
+      if (brands.includes(currentVal)) {
+        select.value = currentVal;
+      }
+    }
+
+    // Toggle Single Car Visibility
+    function toggleCarVisibility(carId) {
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+      const cars = getCatalogCars();
+      const car = cars.find(c => c.id === carId);
+      const carName = car ? car.name : carId;
+
+      if (hiddenCars.has(carId)) {
+        hiddenCars.delete(carId);
+        saveHiddenCars(hiddenCars);
+        // If brand was hidden, prompt/unhide brand too
+        if (car && hiddenBrands.has(car.brand)) {
+          hiddenBrands.delete(car.brand);
+          saveHiddenBrands(hiddenBrands);
+          showToast(`👁️ "${carName}" unhidden & brand "${car.brand}" made visible!`);
+        } else {
+          showToast(`👁️ "${carName}" is now visible on live website!`);
+        }
+      } else {
+        hiddenCars.add(carId);
+        saveHiddenCars(hiddenCars);
+        showToast(`🙈 "${carName}" is now hidden from live website!`);
+      }
+
+      renderVisibilityManager();
+    }
+    window.toggleCarVisibility = toggleCarVisibility;
+
+    // Toggle Brand Visibility
+    function toggleBrandVisibility(brandName) {
+      const hiddenBrands = getHiddenBrands();
+      const hiddenCars = getHiddenCars();
+      const cars = getCatalogCars();
+
+      if (hiddenBrands.has(brandName)) {
+        hiddenBrands.delete(brandName);
+        saveHiddenBrands(hiddenBrands);
+        // Also unhide individual cars under this brand for a clean restore
+        cars.filter(c => c.brand === brandName).forEach(c => hiddenCars.delete(c.id));
+        saveHiddenCars(hiddenCars);
+        showToast(`👁️ All models for "${brandName}" are now visible!`);
+      } else {
+        hiddenBrands.add(brandName);
+        saveHiddenBrands(hiddenBrands);
+        showToast(`🙈 All models for "${brandName}" are now hidden!`);
+      }
+
+      renderVisibilityManager();
+    }
+    window.toggleBrandVisibility = toggleBrandVisibility;
+
+    // Bulk Brand Selection Handlers
+    function toggleSelectAllBrands(checked) {
+      const checks = document.querySelectorAll('.brand-item-check');
+      checks.forEach(c => c.checked = checked);
+      updateSelectedBrandsCount();
+    }
+    window.toggleSelectAllBrands = toggleSelectAllBrands;
+
+    function updateSelectedBrandsCount() {
+      const count = document.querySelectorAll('.brand-item-check:checked').length;
+      const el = document.getElementById('selectedBrandsCount');
+      if (el) el.textContent = count;
+    }
+    window.updateSelectedBrandsCount = updateSelectedBrandsCount;
+
+    function hideSelectedBrands() {
+      const checkedBoxes = document.querySelectorAll('.brand-item-check:checked');
+      if (checkedBoxes.length === 0) {
+        alert('Please select at least one brand checkbox first.');
+        return;
+      }
+      const hiddenBrands = getHiddenBrands();
+      checkedBoxes.forEach(cb => hiddenBrands.add(cb.dataset.brand));
+      saveHiddenBrands(hiddenBrands);
+      showToast(`🙈 Hidden ${checkedBoxes.length} selected brand(s)!`);
+      renderVisibilityManager();
+    }
+    window.hideSelectedBrands = hideSelectedBrands;
+
+    function showSelectedBrands() {
+      const checkedBoxes = document.querySelectorAll('.brand-item-check:checked');
+      if (checkedBoxes.length === 0) {
+        alert('Please select at least one brand checkbox first.');
+        return;
+      }
+      const hiddenBrands = getHiddenBrands();
+      const hiddenCars = getHiddenCars();
+      const cars = getCatalogCars();
+
+      checkedBoxes.forEach(cb => {
+        const brand = cb.dataset.brand;
+        hiddenBrands.delete(brand);
+        cars.filter(c => c.brand === brand).forEach(c => hiddenCars.delete(c.id));
+      });
+
+      saveHiddenBrands(hiddenBrands);
+      saveHiddenCars(hiddenCars);
+      showToast(`👁️ Made ${checkedBoxes.length} selected brand(s) visible!`);
+      renderVisibilityManager();
+    }
+    window.showSelectedBrands = showSelectedBrands;
+
+    // Bulk Car Selection Handlers
+    function toggleSelectAllCars(checked) {
+      const checks = document.querySelectorAll('.car-item-check');
+      checks.forEach(c => c.checked = checked);
+      updateSelectedCarsCount();
+    }
+    window.toggleSelectAllCars = toggleSelectAllCars;
+
+    function updateSelectedCarsCount() {
+      const count = document.querySelectorAll('.car-item-check:checked').length;
+      const el = document.getElementById('selectedCarsCount');
+      if (el) el.textContent = count;
+    }
+    window.updateSelectedCarsCount = updateSelectedCarsCount;
+
+    function hideSelectedCars() {
+      const checkedBoxes = document.querySelectorAll('.car-item-check:checked');
+      if (checkedBoxes.length === 0) {
+        alert('Please select at least one car checkbox first.');
+        return;
+      }
+      const hiddenCars = getHiddenCars();
+      checkedBoxes.forEach(cb => hiddenCars.add(cb.dataset.carId));
+      saveHiddenCars(hiddenCars);
+      showToast(`🙈 Hidden ${checkedBoxes.length} selected car(s)!`);
+      renderVisibilityManager();
+    }
+    window.hideSelectedCars = hideSelectedCars;
+
+    function showSelectedCars() {
+      const checkedBoxes = document.querySelectorAll('.car-item-check:checked');
+      if (checkedBoxes.length === 0) {
+        alert('Please select at least one car checkbox first.');
+        return;
+      }
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+      const cars = getCatalogCars();
+
+      checkedBoxes.forEach(cb => {
+        const carId = cb.dataset.carId;
+        hiddenCars.delete(carId);
+        const car = cars.find(c => c.id === carId);
+        if (car && hiddenBrands.has(car.brand)) {
+          hiddenBrands.delete(car.brand);
+        }
+      });
+
+      saveHiddenCars(hiddenCars);
+      saveHiddenBrands(hiddenBrands);
+      showToast(`👁️ Made ${checkedBoxes.length} selected car(s) visible!`);
+      renderVisibilityManager();
+    }
+    window.showSelectedCars = showSelectedCars;
+
+    // Reset All Visibility
+    function resetAllVisibility() {
+      if (!confirm('Are you sure you want to make ALL cars and brands visible on the public website?')) {
+        return;
+      }
+      saveHiddenCars(new Set());
+      saveHiddenBrands(new Set());
+      showToast('🔄 All cars and brands restored to 100% visible!');
+      renderVisibilityManager();
+    }
+    window.resetAllVisibility = resetAllVisibility;
+
+    // Filter Cars Table
+    function filterCarsTable() {
+      const cars = getCatalogCars();
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+      renderCarsTable(cars, hiddenCars, hiddenBrands);
+    }
+    window.filterCarsTable = filterCarsTable;
+
+    function setCarTableFilter(filter) {
+      activeCarTableFilter = filter;
+      document.querySelectorAll('.filter-pill-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+      filterCarsTable();
+    }
+    window.setCarTableFilter = setCarTableFilter;
+</script>
+
+  <!-- Admin Toast Notification -->
+  <div id="adminToast" class="admin-toast"></div>
+
+  <!-- Load Dataset into Admin Panel Window -->
+  <script type="module">
+    import { CARS } from './js/carData.js';
+    window.APP_CARS = CARS;
+    if (typeof window.initVisibilityManager === 'function') {
+      window.initVisibilityManager();
     }
   </script>
 </body>
