@@ -2584,3 +2584,13 @@ a {
 @media (max-width:640px){.brands-shelf-scroll{grid-template-columns:repeat(4,1fr);gap:8px;}.brands-shelf-scroll .brand-pill-name{font-size:11px;}}
 
 .brands-shelf-scroll .brand-pill-name{white-space:normal;text-align:center;line-height:1.2;font-size:12px;padding:0 4px;overflow-wrap:anywhere;}
+
+/* CarWale-style All Brands bordered grid */
+.brands-shelf-scroll{display:grid !important;grid-template-columns:repeat(6,1fr) !important;gap:0 !important;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden !important;background:#FFF;padding:0 !important;}
+.brands-shelf-scroll .brand-pill-card{border:none !important;border-right:1px solid #E2E8F0 !important;border-bottom:1px solid #E2E8F0 !important;border-radius:0 !important;box-shadow:none !important;background:#FFF;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px 6px;transform:none !important;transition:background .2s;}
+.brands-shelf-scroll .brand-pill-card:hover{background:#F1F5F9;}
+.brands-shelf-scroll .brand-pill-card.active{background:#EFF6FF;box-shadow:inset 0 0 0 2px #2563EB !important;}
+.brands-shelf-scroll .brand-pill-logo{width:auto !important;height:48px !important;max-width:90px;object-fit:contain;}
+.brands-shelf-scroll .brand-pill-name{font-size:13px;font-weight:500;color:#334155;font-family:inherit;}
+@media (max-width:1024px){.brands-shelf-scroll{grid-template-columns:repeat(4,1fr) !important;}}
+@media (max-width:640px){.brands-shelf-scroll{grid-template-columns:repeat(3,1fr) !important;}.brands-shelf-scroll .brand-pill-card{height:104px;}.brands-shelf-scroll .brand-pill-logo{height:40px !important;max-width:72px;}.brands-shelf-scroll .brand-pill-name{font-size:11.5px;}}

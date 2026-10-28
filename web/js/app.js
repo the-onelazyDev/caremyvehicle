@@ -3,21 +3,20 @@ import { ARTICLES } from './newsData.js';
 
 // Official Brand Logos Mapping
 export const BRAND_LOGOS = {
-  'Maruti Suzuki': 'assets/brands/maruti-suzuki.webp',
-  'Maruti Suzuki (Nexa)': 'assets/brands/maruti-suzuki-nexa.webp',
-  'Hyundai': 'assets/brands/hyundai.webp',
-  'Tata': 'assets/brands/tata.webp',
-  'Mahindra': 'assets/brands/mahindra.webp',
-  'Kia': 'assets/brands/kia.webp',
-  'Toyota': 'assets/brands/toyota.webp',
-  'MG Motor': 'assets/brands/mg-motor.webp',
-  'Honda': 'assets/brands/honda.webp',
-  'Skoda': 'assets/brands/skoda.webp',
-  'Volkswagen': 'assets/brands/volkswagen.webp',
-  'Renault': 'assets/brands/renault.webp',
-  'Citroën': 'assets/brands/citroen.webp',
-  'BYD': 'assets/brands/byd.webp',
-  'Nissan': 'assets/brands/nissan.webp'
+  'Maruti Suzuki': 'assets/brands/maruti-suzuki.png',
+  'Hyundai': 'assets/brands/hyundai.png',
+  'Tata': 'assets/brands/tata.png',
+  'Mahindra': 'assets/brands/mahindra.png',
+  'Kia': 'assets/brands/kia.png',
+  'Toyota': 'assets/brands/toyota.png',
+  'MG Motor': 'assets/brands/mg-motor.png',
+  'Honda': 'assets/brands/honda.png',
+  'Skoda': 'assets/brands/skoda.png',
+  'Volkswagen': 'assets/brands/volkswagen.png',
+  'Renault': 'assets/brands/renault.png',
+  'Citroën': 'assets/brands/citroen.png',
+  'BYD': 'assets/brands/byd.png',
+  'Nissan': 'assets/brands/nissan.png'
 };
 
 // Multi-Facet Filter State
@@ -104,38 +103,30 @@ function checkDeepLink() {
 }
 
 // 1. 🏢 Render Explore by Popular Brands Shelf
+function brandKey(b) {
+  return (b || '').replace(/\s*\(Nexa\)\s*$/i, '').trim();
+}
+
 function renderBrandsShelf() {
   const container = document.getElementById('brandsShelfContainer');
   if (!container) return;
 
-  const allCars = getAllCars();
-  const brandCounts = {};
-  allCars.forEach(c => {
-    brandCounts[c.brand] = (brandCounts[c.brand] || 0) + 1;
+  const BRAND_ORDER = ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD'];
+  const uniqueBrands = [...new Set(getAllCars().map(c => brandKey(c.brand)))].sort((a, b) => {
+    const ia = BRAND_ORDER.indexOf(a), ib = BRAND_ORDER.indexOf(b);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
   });
 
-  const uniqueBrands = Object.keys(brandCounts).sort();
-  
-  let html = `
-    <button class="brand-pill-card ${filters.brand === 'all' ? 'active' : ''}" onclick="window.selectBrand('all')">
-      <div style="font-size:24px; line-height:1; height:38px; display:flex; align-items:center;">🚗</div>
-      <div class="brand-pill-name">All Brands</div>
-    </button>
-  `;
-
-  uniqueBrands.forEach(b => {
-    const logoUrl = BRAND_LOGOS[b] || `assets/brands/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.webp`;
+  container.innerHTML = uniqueBrands.map(b => {
+    const logoUrl = BRAND_LOGOS[b] || `assets/brands/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
     const isActive = filters.brand === b;
-
-    html += `
-      <button class="brand-pill-card ${isActive ? 'active' : ''}" onclick="window.selectBrand('${b.replace(/'/g, "\\'")}')">
+    return `
+      <button class="brand-pill-card ${isActive ? 'active' : ''}" onclick="window.selectBrand('${b.replace(/'/g, "\\'")}')" title="${b}">
         <img src="${logoUrl}" alt="${b} Logo" class="brand-pill-logo" onerror="this.src='assets/logo.png'">
         <div class="brand-pill-name">${b}</div>
       </button>
     `;
-  });
-
-  container.innerHTML = html;
+  }).join('');
 
   const clearBtn = document.getElementById('clearBrandBtn');
   if (clearBtn) {
@@ -231,7 +222,7 @@ function getFilteredCars() {
     }
 
     // Brand Filter
-    if (filters.brand !== 'all' && car.brand !== filters.brand) {
+    if (filters.brand !== 'all' && brandKey(car.brand) !== filters.brand) {
       return false;
     }
 
