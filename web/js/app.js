@@ -31,6 +31,17 @@ let filters = {
 };
 
 let selectedCityId = 'delhi';
+let compareList = []; // Up to 4 car IDs for side-by-side comparison
+
+const POPULAR_COMPARISONS = [
+  { label: 'Magnite vs Punch', ids: ['nissan-magnite', 'tata-punch'] },
+  { label: 'Curvv vs Basalt', ids: ['tata-curvv', 'citroen-basalt'] },
+  { label: 'Creta vs Seltos', ids: ['hyundai-creta', 'kia-seltos'] },
+  { label: 'Kylaq vs Brezza', ids: ['skoda-kylaq', 'maruti-brezza'] },
+  { label: 'Thar Roxx vs Jimny', ids: ['mahindra-thar-roxx', 'maruti-suzuki-jimny'] },
+  { label: 'Curvv EV vs Windsor EV', ids: ['tata-curvv-ev', 'mg-windsor-ev'] },
+  { label: 'Innova Hycross vs XUV700', ids: ['toyota-innova-hycross', 'mahindra-xuv700'] }
+];
 let currentModalCar = null;
 
 // DOM Elements
@@ -40,6 +51,8 @@ const cityNameDisplay = document.getElementById('cityNameDisplay');
 const cityModal = document.getElementById('cityModal');
 const carDetailModal = document.getElementById('carDetailModal');
 const articleModal = document.getElementById('articleModal');
+const compareModal = document.getElementById('compareModal');
+const compareDock = document.getElementById('compareDock');
 const globalSearchInput = document.getElementById('globalSearchInput');
 const clearSearchBtn = document.getElementById('clearSearchBtn');
 
@@ -76,6 +89,13 @@ function checkDeepLink() {
     const car = getAllCars().find(c => c.id === carId || (carId === 'hyundai-creta-facelift' && c.id === 'hyundai-creta'));
     if (car) {
       setTimeout(() => window.openCarModal(car.id), 150);
+    }
+  }
+  const compareParam = params.get('compare');
+  if (compareParam) {
+    const ids = compareParam.split(',').filter(Boolean);
+    if (ids.length >= 2) {
+      setTimeout(() => window.openCompareModal(ids), 200);
     }
   }
 }
@@ -412,9 +432,14 @@ function renderCars() {
               <div class="price-sub">Est. On-Road (${onRoadEstimate.cityName})</div>
               <div class="price-main">${formatLakh(onRoadEstimate.total)} <span style="font-size:12px; font-weight:600; color:var(--text-muted)">onwards</span></div>
             </div>
-            <button class="btn-view-variants" onclick="window.openCarModal('${car.id}')">
-              Explore All ➔
-            </button>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <button type="button" class="btn-card-compare ${compareList.includes(car.id) ? 'active' : ''}" onclick="window.toggleCarCompare('${car.id}')" title="Compare this car">
+                ${compareList.includes(car.id) ? '✓ In Compare' : '⚖️ Compare'}
+              </button>
+              <button class="btn-view-variants" onclick="window.openCarModal('${car.id}')">
+                Explore All ➔
+              </button>
+            </div>
           </div>
         </div>
       </article>
@@ -557,6 +582,7 @@ function setupEventListeners() {
     if (e.target === cityModal) cityModal.classList.remove('active');
     if (e.target === carDetailModal) window.closeModal('carDetailModal');
     if (e.target === articleModal) window.closeArticleModal();
+    if (e.target === compareModal) window.closeCompareModal();
   });
 }
 
@@ -1303,4 +1329,376 @@ window.openCarModal = function(carId) {
   `;
 
   carDetailModal.classList.add('active');
+};
+
+
+// ==========================================================================
+// ⚖️ CAR COMPARISON ENGINE & SIDE-BY-SIDE SPEC EVALUATOR
+// ==========================================================================
+
+window.toggleCarCompare = function(carId) {
+  const idx = compareList.indexOf(carId);
+  if (idx !== -1) {
+    compareList.splice(idx, 1);
+  } else {
+    if (compareList.length >= 4) {
+      alert('You can compare up to 4 cars side-by-side. Click "Compare Now" or remove a car first.');
+      return;
+    }
+    compareList.push(carId);
+  }
+
+  updateCompareDock();
+  renderCars();
+};
+
+window.clearCompareList = function() {
+  compareList = [];
+  updateCompareDock();
+  renderCars();
+};
+
+function updateCompareDock() {
+  const dock = document.getElementById('compareDock');
+  const container = document.getElementById('compareDockCars');
+  const countSpan = document.getElementById('dockCompareCount');
+  const navBadge = document.getElementById('navCompareCount');
+  if (!dock) return;
+
+  if (navBadge) {
+    if (compareList.length > 0) {
+      navBadge.style.display = 'inline-block';
+      navBadge.textContent = compareList.length;
+    } else {
+      navBadge.style.display = 'none';
+    }
+  }
+
+  if (compareList.length === 0) {
+    dock.classList.remove('active');
+    return;
+  }
+
+  dock.classList.add('active');
+  if (countSpan) countSpan.textContent = `(${compareList.length})`;
+
+  const allCars = getAllCars();
+  container.innerHTML = compareList.map(id => {
+    const car = allCars.find(c => c.id === id);
+    if (!car) return '';
+    return `
+      <div class="compare-dock-chip">
+        <img src="${car.heroImage}" alt="${car.name}" class="compare-dock-thumb">
+        <span>${car.name.replace(car.brand, '').trim() || car.name}</span>
+        <button type="button" class="compare-dock-chip-remove" onclick="event.stopPropagation(); window.toggleCarCompare('${car.id}')" title="Remove">&times;</button>
+      </div>
+    `;
+  }).join('');
+}
+
+window.openCompareModal = function(presetIds) {
+  if (presetIds && Array.isArray(presetIds)) {
+    compareList = [...presetIds];
+    updateCompareDock();
+    renderCars();
+  }
+
+  const modal = document.getElementById('compareModal');
+  const content = document.getElementById('compareModalContent');
+  if (!modal || !content) return;
+
+  const allCars = getAllCars();
+
+  // If fewer than 2 cars selected, show the selection builder
+  if (compareList.length < 2) {
+    content.innerHTML = `
+      <div class="modal-header">
+        <div>
+          <span class="section-badge" style="background:#EFF6FF; color:var(--primary);">⚖️ CAR COMPARISON ENGINE</span>
+          <h2 style="font-size:22px; font-weight:900; margin-top:6px; color:var(--text-main);">Compare Any 2 to 4 Cars Side-by-Side</h2>
+          <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
+            Select at least 2 cars below to compare granular dimensions, real on-road pricing, crash test ratings, and engine performance.
+          </p>
+        </div>
+        <button class="modal-close-btn" onclick="window.closeCompareModal()">&times;</button>
+      </div>
+
+      <!-- Quick Rival Presets -->
+      <div style="margin:20px 0 10px;">
+        <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">🔥 Popular Head-to-Head Comparisons:</span>
+        <div class="compare-presets-row" style="margin-top:8px;">
+          ${POPULAR_COMPARISONS.map(p => `
+            <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
+              ${p.label}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Car Pickers -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin:24px 0;">
+        <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
+          <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select Car #1</label>
+          <select id="compareSelect1" class="form-control" style="width:100%; padding:10px; border-radius:10px; font-weight:700;">
+            ${allCars.map(c => `<option value="${c.id}" ${compareList[0] === c.id ? 'selected' : ''}>${c.brand} - ${c.name}</option>`).join('')}
+          </select>
+        </div>
+
+        <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
+          <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select Car #2</label>
+          <select id="compareSelect2" class="form-control" style="width:100%; padding:10px; border-radius:10px; font-weight:700;">
+            ${allCars.map((c, i) => `<option value="${c.id}" ${(compareList[1] === c.id || (!compareList[1] && i === 1)) ? 'selected' : ''}>${c.brand} - ${c.name}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <button type="button" class="btn-dock-launch" style="padding:12px 30px; font-size:15px;" onclick="
+          const c1 = document.getElementById('compareSelect1').value;
+          const c2 = document.getElementById('compareSelect2').value;
+          if (c1 === c2) { alert('Please select two different cars to compare.'); return; }
+          window.openCompareModal([c1, c2]);
+        ">
+          Launch Side-by-Side Comparison ➔
+        </button>
+      </div>
+    `;
+    modal.classList.add('active');
+    return;
+  }
+
+  // Render Full Side-by-Side Comparison Table
+  const cars = compareList.map(id => allCars.find(c => c.id === id)).filter(Boolean);
+  
+  // Calculate advantages
+  const minPrices = cars.map(c => c.minPrice);
+  const minPriceLowest = Math.min(...minPrices);
+
+  const getNum = str => {
+    if (!str) return 0;
+    const m = str.match(/([0-9.]+)/);
+    return m ? parseFloat(m[1]) : 0;
+  };
+
+  const groundClearances = cars.map(c => getNum(c.groundClearance));
+  const maxGC = Math.max(...groundClearances);
+
+  const bootSpaces = cars.map(c => getNum(c.bootSpace));
+  const maxBoot = Math.max(...bootSpaces);
+
+  const shareCompareUrl = `${window.location.origin}${window.location.pathname}?compare=${compareList.join(',')}`;
+
+  content.innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="section-badge" style="background:#EFF6FF; color:var(--primary); margin:0;">⚖️ SIDE-BY-SIDE COMPARISON</span>
+          <span style="font-size:12px; color:var(--text-muted);">Comparing <strong>${cars.length}</strong> Car Models</span>
+        </div>
+        <h2 style="font-size:22px; font-weight:900; margin-top:6px; color:var(--text-main);">
+          ${cars.map(c => c.name).join(' vs ')}
+        </h2>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="navigator.clipboard.writeText('${shareCompareUrl}'); alert('🔗 Comparison Direct Link Copied to Clipboard!');" title="Share comparison">
+          🔗 Share
+        </button>
+        <button class="modal-close-btn" onclick="window.closeCompareModal()">&times;</button>
+      </div>
+    </div>
+
+    <!-- Quick Rival Presets -->
+    <div style="margin:12px 0 6px;">
+      <div class="compare-presets-row">
+        <span style="font-size:12px; font-weight:800; color:var(--text-muted); align-self:center; margin-right:4px;">Popular:</span>
+        ${POPULAR_COMPARISONS.map(p => `
+          <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
+            ${p.label}
+          </button>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="compare-table-wrapper">
+      <table class="compare-table">
+        <!-- Header: Vehicle Photos & Names -->
+        <thead>
+          <tr>
+            <th class="compare-col-header" style="width:160px; min-width:140px; background:#F8FAFC;">
+              <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Vehicle Model</span>
+            </th>
+            ${cars.map(car => {
+              const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
+              return `
+                <th class="compare-col-header">
+                  <button type="button" style="float:right; background:none; border:none; color:#EF4444; font-size:16px; cursor:pointer;" onclick="window.toggleCarCompare('${car.id}'); window.openCompareModal();" title="Remove">&times;</button>
+                  <img src="${car.heroImage}" alt="${car.name}" class="compare-car-thumb">
+                  <div class="compare-car-name">${car.name}</div>
+                  <div class="compare-car-price">${car.priceRange}</div>
+                  <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-top:2px;">
+                    Est. On-Road (${onRoadEstimate.cityName}): <strong>${formatLakh(onRoadEstimate.total)}</strong>
+                  </div>
+                  <button class="trending-btn" style="margin-top:8px; padding:6px 10px; font-size:11px;" onclick="window.closeCompareModal(); window.openCarModal('${car.id}');">
+                    View 360 & Variants ➔
+                  </button>
+                </th>
+              `;
+            }).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 1. PRICING & ESSENTIALS -->
+          <tr class="compare-category-row">
+            <td colspan="${cars.length + 1}">💰 Pricing & Ownership</td>
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Price Range (Ex-Showroom)</td>
+            ${cars.map(c => `
+              <td class="compare-cell-value ${c.minPrice === minPriceLowest ? 'compare-advantage' : ''}">
+                ${c.priceRange} ${c.minPrice === minPriceLowest ? '⭐ Lowest Entry' : ''}
+              </td>
+            `).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Est. On-Road Price (${CITIES.find(c => c.id === selectedCityId)?.name || 'Delhi'})</td>
+            ${cars.map(c => {
+              const quote = calculateOnRoadPrice(c.minPrice, selectedCityId);
+              return `<td class="compare-cell-value"><strong>${formatLakh(quote.total)}</strong> onwards</td>`;
+            }).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Waiting Period</td>
+            ${cars.map(c => `<td class="compare-cell-value">${c.waitingPeriod || '2 - 4 Weeks'}</td>`).join('')}
+          </tr>
+
+          <!-- 2. SAFETY & CRASH TEST -->
+          <tr class="compare-category-row">
+            <td colspan="${cars.length + 1}">🛡️ Crash Safety & Structural Rating</td>
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Safety Rating</td>
+            ${cars.map(c => `
+              <td class="compare-cell-value">
+                <span class="badge-safety" style="position:static; display:inline-block; font-size:11px;">🛡️ ${c.safetyRating}</span>
+              </td>
+            `).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Airbags & Standard Safety</td>
+            ${cars.map(c => {
+              const is6Airbags = c.safetyRating && c.safetyRating.includes('6 Airbags');
+              return `<td class="compare-cell-value">${is6Airbags ? '6 Airbags Standard Across All Variants' : 'Dual / 6 Airbags (Variant Dependent)'}</td>`;
+            }).join('')}
+          </tr>
+
+          <!-- 3. POWERTRAINS & FUEL -->
+          <tr class="compare-category-row">
+            <td colspan="${cars.length + 1}">⚙️ Powertrains & Performance</td>
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Fuel Options</td>
+            ${cars.map(c => `<td class="compare-cell-value"><strong>${(c.fuelTypes || []).join(', ')}</strong></td>`).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Engine Options</td>
+            ${cars.map(c => {
+              const eng = c.specs?.engine || c.specs?.engineOptions || (c.variants && c.variants[0] ? c.variants[0].engine : 'Standard Engine');
+              return `<td class="compare-cell-value">${eng}</td>`;
+            }).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Transmissions</td>
+            ${cars.map(c => {
+              const tr = c.specs?.transmission || c.specs?.transmissions || [...new Set((c.variants || []).map(v => v.trans))].join(', ');
+              return `<td class="compare-cell-value">${tr || 'Manual / Automatic'}</td>`;
+            }).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Claimed ARAI Mileage / Range</td>
+            ${cars.map(c => {
+              const mil = c.specs?.mileage || (c.variants && c.variants[0] ? c.variants[0].mileage : '18.5 kmpl');
+              return `<td class="compare-cell-value">${mil}</td>`;
+            }).join('')}
+          </tr>
+
+          <!-- 4. DIMENSIONS & PRACTICALITY -->
+          <tr class="compare-category-row">
+            <td colspan="${cars.length + 1}">📐 Dimensions & Space</td>
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Ground Clearance</td>
+            ${cars.map(c => {
+              const val = getNum(c.groundClearance);
+              const isWin = val > 0 && val === maxGC;
+              return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.groundClearance || '190 mm'} ${isWin ? '🏆 Highest GC' : ''}</td>`;
+            }).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Boot Space</td>
+            ${cars.map(c => {
+              const val = getNum(c.bootSpace);
+              const isWin = val > 0 && val === maxBoot;
+              return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.bootSpace || '350 L'} ${isWin ? '🏆 Largest Boot' : ''}</td>`;
+            }).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Body Type</td>
+            ${cars.map(c => `<td class="compare-cell-value">${c.bodyType}</td>`).join('')}
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Available Official Colors</td>
+            ${cars.map(c => {
+              const colorList = c.colors || [];
+              return `
+                <td class="compare-cell-value">
+                  <div style="font-weight:700; margin-bottom:4px;">${colorList.length} Shades</div>
+                  <div style="display:flex; gap:4px; flex-wrap:wrap;">
+                    ${colorList.slice(0, 6).map(col => `<span style="width:14px; height:14px; border-radius:50%; background:${col.hex}; border:1px solid #CBD5E1; display:inline-block;" title="${col.name}"></span>`).join('')}
+                  </div>
+                </td>
+              `;
+            }).join('')}
+          </tr>
+
+          <!-- 5. VALUE FOR MONEY PICK -->
+          <tr class="compare-category-row">
+            <td colspan="${cars.length + 1}">🏆 Recommended Value-For-Money (VFM) Variant</td>
+          </tr>
+          <tr>
+            <td class="compare-cell-title">Recommended Pick</td>
+            ${cars.map(c => {
+              const vfmVar = (c.variants || []).find(v => v.isVFM) || (c.variants && c.variants[1]) || (c.variants && c.variants[0]);
+              if (!vfmVar) return '<td class="compare-cell-value">Standard Trim</td>';
+              const quote = calculateOnRoadPrice(vfmVar.exShowroom, selectedCityId);
+              return `
+                <td class="compare-cell-value" style="background:#FFFDF5;">
+                  <div style="font-weight:800; color:var(--primary); font-size:14px;">${vfmVar.name}</div>
+                  <div style="font-size:12px; font-weight:700; color:var(--text-main); margin:3px 0;">On-Road: ${formatLakh(quote.total)}</div>
+                  <div style="font-size:11px; color:var(--text-secondary);">${(vfmVar.keyFeatures || []).slice(0, 3).join(', ')}</div>
+                </td>
+              `;
+            }).join('')}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom Actions -->
+    <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <button type="button" class="btn-text-action" onclick="window.clearCompareList(); window.closeCompareModal();">
+        🗑️ Clear All & Close
+      </button>
+      <button type="button" class="btn-dock-launch" onclick="window.closeCompareModal();">
+        ✓ Done Comparing
+      </button>
+    </div>
+  `;
+
+  modal.classList.add('active');
+};
+
+window.closeCompareModal = function() {
+  const modal = document.getElementById('compareModal');
+  if (modal) modal.classList.remove('active');
 };
