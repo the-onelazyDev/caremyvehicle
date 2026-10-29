@@ -4,31 +4,32 @@
    ========================================================================== */
 
 :root {
-  --primary: #FF5100;
-  --trav-primary: #FF5100;
-  --trav-primary-dark: #E04700;
-  --trav-primary-light: #FFF4EE;
-  --trav-primary-border: #FFD4C2;
-  --trav-dark: #002244;
-  --trav-green: #00A651;
+  --primary: #FF5100;            /* Vibrant CTA Action Orange */
   --primary-hover: #E04700;
-  --primary-light: #FFF4EE;
-  --accent: #FF5100;
-  --accent-light: #FFF4EE;
+  --primary-light: #F1F5F9;      /* Replaced peach with clean neutral slate */
+  --primary-border: #CBD5E1;
+  --trav-navy: #13253B;          /* Travomint Deep Midnight Navy (Header & Hero) */
+  --trav-navy-card: #1D334E;
+  --trav-navy-cell: #263F60;
+  --trav-navy-border: #35537B;
+  --trav-teal: #0D9488;          /* Travomint Category Teal/Cyan */
+  --trav-blue: #1860B8;          /* Travomint Royal Blue */
+  --trav-green: #00A651;         /* Travomint 100% Refundable / Offer Green */
+  --trav-dark: #002244;          /* Midnight Footer Navy */
   --text-main: #0F172A;
   --text-secondary: #475569;
   --text-muted: #64748B;
-  --bg-page: #F8FAFC;
+  --bg-page: #F4F7F9;            /* Travomint clean cool grey background */
   --bg-card: #FFFFFF;
   --border: #E2E8F0;
-  --border-focus: #FF5100;
+  --border-focus: #1860B8;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-full: 9999px;
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.10);
+  --shadow-md: 0 6px 20px rgba(19, 37, 59, 0.08);
+  --shadow-lg: 0 12px 32px rgba(19, 37, 59, 0.14);
   --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --max-width: 1200px;
 }
@@ -5033,4 +5034,250 @@ h1, h2, h3, .brand-font {
   .onroad-checker-inputs {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   TRAVOMINT DEEP NAVY HEADER & TOP UTILITY BAR (MATCHING FLIGHT RESULTS)
+   ========================================================================== */
+.top-utility-bar {
+  background: #0B1726;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 24px;
+  font-size: 12px;
+  color: #94A3B8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-utility-links a {
+  color: #CBD5E1;
+}
+
+.top-utility-links a:hover {
+  color: #FFFFFF;
+}
+
+.site-header {
+  background: var(--trav-navy, #13253B);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand-name {
+  color: #FFFFFF;
+}
+
+.brand-name span {
+  color: var(--primary);
+}
+
+.brand-tagline {
+  color: #94A3B8;
+}
+
+.nav-tab-item {
+  color: #CBD5E1;
+}
+
+.nav-tab-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.nav-tab-item.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-tab-item.active::after {
+  background: var(--primary);
+}
+
+/* ==========================================================================
+   TRAVOMINT SIGNATURE HERO SEARCH CARD (DARK SLATE NAVY WITH ORANGE CTA)
+   ========================================================================== */
+.hero-search-card {
+  background: #182C44;
+  border: 1px solid #284467;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(19, 37, 59, 0.25);
+  margin-top: 24px;
+}
+
+.radio-pill {
+  color: #FFFFFF;
+}
+
+.radio-pill input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+.ai-mode-chip {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #F8FAFC;
+}
+
+.search-field-cell {
+  background: #243D5D;
+  border: 1px solid #365782;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.search-field-cell:focus-within {
+  border-color: #38BDF8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+.cell-label {
+  color: #94A3B8;
+}
+
+.cell-input {
+  color: #FFFFFF;
+}
+
+.cell-input option {
+  background: #182C44;
+  color: #FFFFFF;
+}
+
+.btn-search-cta {
+  background: var(--primary, #FF5100);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 81, 0, 0.35);
+}
+
+.hero-trust-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trust-strip-item {
+  color: #CBD5E1;
+}
+
+/* ==========================================================================
+   CRISP NEUTRAL CAR CARDS & SHELVES (ELIMINATING OVERWHELMING ORANGE)
+   ========================================================================== */
+.shelf-car-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.shelf-car-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.shelf-car-media {
+  background: #F8FAFC;
+  border: 1px solid #F1F5F9;
+}
+
+.shelf-badge-pill {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+}
+
+.shelf-car-brand {
+  color: #64748B;
+}
+
+.shelf-car-price {
+  color: #0F172A; /* Deep Charcoal Black price, matching Travomint ₹ 7,297 */
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.shelf-car-sub {
+  color: #64748B;
+}
+
+/* Orange reserved for high-impact CTA Action button */
+.btn-shelf-action {
+  background: var(--primary);
+  border: none;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.btn-shelf-action:hover {
+  background: var(--primary-hover);
+  color: #FFFFFF;
+}
+
+/* Sub-filter Pills (Matching Images 1 & 2) */
+.sub-pill-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+}
+
+.sub-pill-btn:hover, .sub-pill-btn.active {
+  background: #FFFFFF;
+  border-color: var(--trav-teal, #0D9488);
+  color: var(--trav-teal, #0D9488);
+  box-shadow: 0 0 0 1px var(--trav-teal, #0D9488);
+}
+
+/* Budget Tabs (Matching Image 2) */
+.budget-tab-btn {
+  color: #64748B;
+}
+
+.budget-tab-btn.active {
+  color: var(--trav-teal, #0D9488);
+}
+
+.budget-tab-btn.active::after {
+  background: var(--trav-teal, #0D9488);
+}
+
+/* Smart Pulse Section - Balanced Theme */
+.smart-pulse-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.pulse-item {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+
+.pulse-price {
+  color: #0F172A;
+  background: #E2E8F0;
+}
+
+/* Main Car Card in Catalog */
+.car-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+}
+
+.card-media {
+  background: #F8FAFC;
+}
+
+.price-main {
+  color: #0F172A;
+}
+
+.btn-price-breakup {
+  background: var(--primary);
+  color: #FFFFFF;
+  border: none;
+}
+
+.btn-price-breakup:hover {
+  background: var(--primary-hover);
 }
