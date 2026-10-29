@@ -639,6 +639,8 @@ window.selectCity = function(cityId) {
   selectedCityId = cityId;
   const city = CITIES.find(c => c.id === cityId);
   if (city && cityNameDisplay) cityNameDisplay.textContent = city.name;
+  const heroCity = document.getElementById('heroCityName');
+  if (heroCity && city) heroCity.textContent = city.name + ' (' + Math.round(city.rtoRate * 100) + '% RTO)';
   if (cityModal) cityModal.classList.remove('active');
   renderTrendingLaunches();
   renderCompareShelf();
@@ -2242,4 +2244,43 @@ window.checkOnRoadPrice = function(carId) {
       }, 1200);
     }
   }, 250);
+};
+
+// Travomint Hero Search & Navigation Helpers
+window.selectHeroType = function(type) {
+  filters.category = type;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === type));
+  renderCars();
+  const catalog = document.getElementById('catalogSection');
+  if (catalog && type !== 'all') {
+    catalog.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+window.selectHeroPrice = function(val) {
+  filters.price = val;
+  const sel = document.getElementById('priceSelectFilter');
+  if (sel) sel.value = val;
+  renderCars();
+  const catalog = document.getElementById('catalogSection');
+  if (catalog && val !== 'all') {
+    catalog.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+window.triggerHeroSearch = function() {
+  const catalog = document.getElementById('catalogSection');
+  if (catalog) {
+    catalog.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+window.selectCategory = function(cat) {
+  filters.category = cat;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === cat));
+  renderCars();
+  const catalog = document.getElementById('catalogSection');
+  if (catalog) {
+    catalog.scrollIntoView({ behavior: 'smooth' });
+  }
 };
