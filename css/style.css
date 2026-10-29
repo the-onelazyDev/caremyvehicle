@@ -5663,3 +5663,266 @@ h1, h2, h3, .brand-font {
 }
 
 @media (max-width: 768px) { .top-utility-bar { display: none !important; } }
+
+
+/* ==========================================================================
+   CARWALE-STYLE CLEAN CAR CARDS (MATCHING USER'S REFERENCE SCREENSHOT)
+   ========================================================================== */
+.shelf-car-card {
+  min-width: 230px !important;
+  max-width: 240px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 16px !important;
+  padding: 16px 16px 18px !important;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.shelf-car-card:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+.shelf-car-media {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 0 8px !important;
+  text-align: center;
+  position: relative;
+  height: 120px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0 !important;
+}
+
+.shelf-car-img {
+  max-width: 92% !important;
+  max-height: 105px !important;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.06));
+  transition: transform 0.2s ease;
+}
+
+.shelf-car-card:hover .shelf-car-img {
+  transform: scale(1.04);
+}
+
+.shelf-car-name {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1E293B !important;
+  margin: 10px 0 4px !important;
+  line-height: 1.3 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left !important;
+}
+
+.shelf-car-price {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+  margin: 0 0 12px !important;
+  text-align: left !important;
+}
+
+.shelf-car-action {
+  margin-top: auto;
+  text-align: left;
+}
+
+.view-breakup-link {
+  color: #0284C7 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.shelf-car-card:hover .view-breakup-link {
+  color: #0369A1 !important;
+  text-decoration: underline !important;
+}
+
+/* Remove grey nested cards in media containers */
+.card-media,
+.trending-card-media {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.trending-card,
+.car-card {
+  border-radius: 16px !important;
+  border: 1px solid #E5E7EB !important;
+  background: #FFFFFF !important;
+}
+
+/* Hide duplicate button completely - ONLY ONE BUTTON */
+.btn-check-onroad {
+  display: none !important;
+}
+
+.trending-actions-carwale,
+.card-actions-carwale {
+  display: block !important;
+  grid-template-columns: 1fr !important;
+  margin-top: 10px !important;
+}
+
+.btn-price-breakup {
+  width: 100% !important;
+  display: block !important;
+  text-align: center;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+}
+
+.btn-price-breakup:hover {
+  background: #0369A1 !important;
+}
+
+
+/* ==========================================================================
+   CARWALE-STYLE CLEAN CAR CARDS (ELIMINATING CARD-INSIDE-CARD & DROP-SHADOWS)
+   ========================================================================== */
+.shelf-car-card {
+  min-width: 230px !important;
+  max-width: 240px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 16px !important;
+  padding: 16px 16px 18px !important;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none !important;
+}
+
+.shelf-car-card:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06) !important;
+  transform: translateY(-2px);
+}
+
+.shelf-car-media {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 0 8px !important;
+  text-align: center;
+  position: relative;
+  height: 120px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+}
+
+/* Eliminate drop-shadow that creates rectangular border around image */
+.shelf-car-img,
+.card-img,
+.trending-card-img {
+  max-width: 90% !important;
+  max-height: 105px !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+  filter: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: transform 0.2s ease;
+}
+
+.shelf-car-card:hover .shelf-car-img {
+  transform: scale(1.04);
+}
+
+.shelf-car-name {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1E293B !important;
+  margin: 10px 0 4px !important;
+  line-height: 1.3 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left !important;
+}
+
+.shelf-car-price {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+  margin: 0 0 12px !important;
+  text-align: left !important;
+}
+
+.shelf-car-action {
+  margin-top: auto;
+  text-align: left;
+}
+
+.view-breakup-link {
+  color: #0284C7 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.shelf-car-card:hover .view-breakup-link {
+  color: #0369A1 !important;
+  text-decoration: underline !important;
+}
+
+/* Eliminate inner grey boxes from any other cards */
+.card-media,
+.trending-card-media {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.trending-card,
+.car-card {
+  border-radius: 16px !important;
+  border: 1px solid #E5E7EB !important;
+  background: #FFFFFF !important;
+}
+
+/* Strictly ONLY ONE BUTTON */
+.btn-check-onroad {
+  display: none !important;
+}
+
+.trending-actions-carwale,
+.card-actions-carwale {
+  display: block !important;
+  grid-template-columns: 1fr !important;
+  margin-top: 10px !important;
+}

@@ -251,13 +251,10 @@ function renderTrendingLaunches() {
             <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road (${onRoadEstimate.cityName}): ${formatLakh(onRoadEstimate.total)}</div>
           </div>
           <div class="trending-actions-carwale">
-            <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.openCarPriceBreakup('${car.id}')" title="View variant price breakup">
-              View Price Breakup &rsaquo;
-            </button>
-            <button type="button" class="btn-check-onroad" onclick="event.stopPropagation(); window.checkOnRoadPrice('${car.id}')" title="Check city on-road price">
-              Check On-Road Price
-            </button>
-          </div>
+      <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" title="View variant price breakup">
+        View Price Breakup
+      </button>
+    </div>
         </div>
       </div>
     `;
@@ -524,13 +521,10 @@ function renderCars() {
 
           <!-- CarWale Action Buttons -->
           <div class="card-actions-carwale">
-            <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.openCarPriceBreakup('${car.id}')" title="View variant price breakup">
-              View Price Breakup &rsaquo;
-            </button>
-            <button type="button" class="btn-check-onroad" onclick="event.stopPropagation(); window.checkOnRoadPrice('${car.id}')" title="Check city on-road price">
-              Check On-Road Price
-            </button>
-          </div>
+      <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" title="View variant price breakup">
+        View Price Breakup
+      </button>
+    </div>
         </div>
       </article>
     `;
@@ -2505,21 +2499,18 @@ try {
 // MODULAR HOMEPAGE HORIZONTAL SHELVES ENGINE
 // ==========================================================================
 
-function createShelfCarCard(car, actionLabel = 'View Price Breakup &rsaquo;') {
-  const onRoad = calculateOnRoadPrice(car.minPrice, selectedCityId);
+function createShelfCarCard(car) {
+  const priceDisplay = car.priceRange ? car.priceRange.replace('₹', 'Rs. ') : ('Rs. ' + car.minPrice + ' - ' + car.maxPrice + ' Lakh');
   return `
     <article class="shelf-car-card" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
       <div class="shelf-car-media">
-        <span class="shelf-badge-pill">${formatLaunchBadge(car.launchDate)}</span>
         <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy">
       </div>
-      <span class="shelf-car-brand">${car.brand} &bull; ${car.bodyType}</span>
       <h4 class="shelf-car-name">${car.name}</h4>
-      <div class="shelf-car-price">${formatLakh(onRoad.total)} <span style="font-size:11px; font-weight:600; color:#64748B;">on-road</span></div>
-      <div class="shelf-car-sub">${car.priceRange} ex-showroom</div>
-      <button type="button" class="btn-shelf-action" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')">
-        ${actionLabel}
-      </button>
+      <div class="shelf-car-price">${priceDisplay}</div>
+      <div class="shelf-car-action">
+        <span class="view-breakup-link">View Price Breakup</span>
+      </div>
     </article>
   `;
 }
