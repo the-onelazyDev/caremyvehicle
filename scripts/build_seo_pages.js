@@ -775,3 +775,4 @@ const vercelConfig = JSON.stringify({
 fs.writeFileSync(path.join(rootDir, 'vercel.json'), vercelConfig, 'utf-8');
 fs.writeFileSync(path.join(webDir, 'vercel.json'), vercelConfig, 'utf-8');
 console.log('Created vercel.json with cleanUrls: true.');
+

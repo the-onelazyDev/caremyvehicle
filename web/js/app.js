@@ -701,25 +701,49 @@ window.initSpin360 = function(spinConfig) {
   renderSpinFrame();
 
   // Pointer drag events (touch + mouse unified)
+  // Track whether user is doing horizontal (spin) vs vertical (scroll) drag
+  let _spinStartY = 0;
+  let _spinAxis = null; // 'h' = horizontal spin, 'v' = vertical scroll, null = undecided
+
   container.onpointerdown = function(e) {
-    spinState.isDragging = true;
+    spinState.isDragging = false; // not confirmed horizontal yet
     spinState.startX = e.clientX;
-    container.setPointerCapture(e.pointerId);
+    _spinStartY = e.clientY;
+    _spinAxis = null;
+    // Don't capture yet — wait until we know axis
     if (spinState.autoSpinInterval) {
       window.toggleAutoSpin();
     }
   };
 
   container.onpointermove = function(e) {
-    if (!spinState.isDragging) return;
+    const dx = e.clientX - spinState.startX;
+    const dy = e.clientY - _spinStartY;
+
+    if (_spinAxis === null) {
+      // Determine axis on first meaningful move
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) {
+        if (Math.abs(dx) >= Math.abs(dy)) {
+          _spinAxis = 'h'; // horizontal drag → spin
+          spinState.isDragging = true;
+          try { container.setPointerCapture(e.pointerId); } catch(err) {}
+        } else {
+          _spinAxis = 'v'; // vertical drag → allow native scroll
+          spinState.isDragging = false;
+        }
+      }
+      return;
+    }
+
+    if (_spinAxis !== 'h' || !spinState.isDragging) return;
+    e.preventDefault(); // only prevent default for confirmed horizontal drag
+    const sensitivity = 8;
     const deltaX = e.clientX - spinState.startX;
-    const sensitivity = 8; // pixels of drag per frame
     if (Math.abs(deltaX) >= sensitivity) {
       const frameStep = Math.floor(deltaX / sensitivity);
       let newFrame = spinState.currentFrame - frameStep;
       while (newFrame < 1) newFrame += spinState.totalFrames;
       while (newFrame > spinState.totalFrames) newFrame -= spinState.totalFrames;
-      
       spinState.currentFrame = newFrame;
       spinState.startX = e.clientX;
       renderSpinFrame();
@@ -728,11 +752,13 @@ window.initSpin360 = function(spinConfig) {
 
   container.onpointerup = function(e) {
     spinState.isDragging = false;
+    _spinAxis = null;
     try { container.releasePointerCapture(e.pointerId); } catch(err) {}
   };
 
   container.onpointercancel = function() {
     spinState.isDragging = false;
+    _spinAxis = null;
   };
 };
 
@@ -1042,6 +1068,10 @@ window.closeModal = function(modalId) {
   if (modalId === 'carDetailModal') {
     currentModalCar = null;
     history.pushState(null, '', window.location.pathname);
+    // Restore body scroll
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
   }
 };
 
@@ -1073,7 +1103,21 @@ window.openCarModal = function(carId) {
   // Update URL for SEO & deep linking
   history.pushState(null, '', `?car=${car.id}`);
 
+  // Lock body scroll while modal is open (prevents page scroll bleed)
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
+
   const modalBody = document.getElementById('carModalContent');
+  // Show skeleton immediately so modal opens fast
+  modalBody.innerHTML = '<div style="padding:24px;text-align:center;color:#94A3B8;font-size:14px;font-weight:600;">⏳ Loading...</div>';
+  const overlay = document.getElementById('carDetailModal');
+  if (overlay) overlay.classList.add('active');
+  // Defer heavy render to next animation frame to unblock main thread
+  requestAnimationFrame(() => { _renderCarModalContent(car, modalBody); });
+};
+
+function _renderCarModalContent(car, modalBody) {
   const city = CITIES.find(c => c.id === selectedCityId);
   const colors = car.colors || [];
   const angles = car.angles || [];
@@ -1401,8 +1445,15 @@ window.openCarModal = function(carId) {
     </div>
   `;
 
-  carDetailModal.classList.add('active');
-};
+  // Scroll sheet to top so user sees header first
+  const sheet = document.querySelector('#carDetailModal .modal-sheet');
+  if (sheet) { sheet.scrollTop = 0; }
+
+  // Init 360 spin after render
+  if (spin360) {
+    setTimeout(() => window.initSpin360(spin360), 80);
+  }
+}
 
 
 // ==========================================================================
