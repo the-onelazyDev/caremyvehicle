@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star Euro NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/cipressino-green-metallic.webp" alt="Volkswagen Tiguan R-Line" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/colors/cipressino-green-metallic.webp" alt="Volkswagen Tiguan R-Line" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/tiguan-r-line-hero.webp', 'All-New Volkswagen Tiguan R-Line German Performance SUV', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/tiguan-r-line-hero.webp" alt="All-New Volkswagen Tiguan R-Line German Performance SUV" loading="lazy">
+                <span>All-New Volkswagen</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/sporty-r-theme-design.webp', 'Signature R-Line Bumpers, Glossy Black Grille &amp; Aerodynamic Stance', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/sporty-r-theme-design.webp" alt="Signature R-Line Bumpers, Glossy Black Grille &amp; Aerodynamic Stance" loading="lazy">
+                <span>Signature R-Line</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/illuminated-light-bands.webp', 'IQ.LIGHT HD Matrix Headlamps with Illuminated Front &amp; Rear Light Bands', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/illuminated-light-bands.webp" alt="IQ.LIGHT HD Matrix Headlamps with Illuminated Front &amp; Rear Light Bands" loading="lazy">
+                <span>IQ.LIGHT HD</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/coventry-19-inch-alloys.webp', 'R19 Coventry Diamond-Turned Alloy Wheels', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/coventry-19-inch-alloys.webp" alt="R19 Coventry Diamond-Turned Alloy Wheels" loading="lazy">
+                <span>R19 Coventry</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/infotainment-381cm-display.webp', 'Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/infotainment-381cm-display.webp" alt="Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display" loading="lazy">
+                <span>Massive 38.1</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/digital-cockpit-pro.webp', '26.04 cm Digital Cockpit Pro &amp; Windshield Head-Up Display (HUD)', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/digital-cockpit-pro.webp" alt="26.04 cm Digital Cockpit Pro &amp; Windshield Head-Up Display (HUD)" loading="lazy">
+                <span>26.04 cm</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/ambient-lighting-30-color.webp', '30-Colour Customizable R-Line Dashboard &amp; Door Ambient Lighting', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/ambient-lighting-30-color.webp" alt="30-Colour Customizable R-Line Dashboard &amp; Door Ambient Lighting" loading="lazy">
+                <span>30-Colour Customizable</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/r-line-massage-sport-seats.webp', 'R-Line ErgoActive Sport Seats with Pneumatic Massage &amp; Lumbar Support', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/r-line-massage-sport-seats.webp" alt="R-Line ErgoActive Sport Seats with Pneumatic Massage &amp; Lumbar Support" loading="lazy">
+                <span>R-Line ErgoActive</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -537,6 +641,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Volkswagen Tiguan R-Line HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/tiguan-r-line-hero.webp', 'All-New Volkswagen Tiguan R-Line German Performance SUV')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/tiguan-r-line-hero.webp" alt="All-New Volkswagen Tiguan R-Line German Performance SUV" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> All-New Volkswagen Tiguan R-Line German Performance SUV
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/sporty-r-theme-design.webp', 'Signature R-Line Bumpers, Glossy Black Grille &amp; Aerodynamic Stance')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/sporty-r-theme-design.webp" alt="Signature R-Line Bumpers, Glossy Black Grille &amp; Aerodynamic Stance" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Signature R-Line Bumpers, Glossy Black Grille &amp; Aerodynamic Stance
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/illuminated-light-bands.webp', 'IQ.LIGHT HD Matrix Headlamps with Illuminated Front &amp; Rear Light Bands')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/illuminated-light-bands.webp" alt="IQ.LIGHT HD Matrix Headlamps with Illuminated Front &amp; Rear Light Bands" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> IQ.LIGHT HD Matrix Headlamps with Illuminated Front &amp; Rear Light Bands
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/coventry-19-inch-alloys.webp', 'R19 Coventry Diamond-Turned Alloy Wheels')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/coventry-19-inch-alloys.webp" alt="R19 Coventry Diamond-Turned Alloy Wheels" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> R19 Coventry Diamond-Turned Alloy Wheels
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/infotainment-381cm-display.webp', 'Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/infotainment-381cm-display.webp" alt="Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Massive 38.1 cm (15-inch) MIB4 Freestanding Infotainment Display
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/digital-cockpit-pro.webp', '26.04 cm Digital Cockpit Pro &amp; Windshield Head-Up Display (HUD)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/digital-cockpit-pro.webp" alt="26.04 cm Digital Cockpit Pro &amp; Windshield Head-Up Display (HUD)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 26.04 cm Digital Cockpit Pro &amp; Windshield Head-Up Display (HUD)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/ambient-lighting-30-color.webp', '30-Colour Customizable R-Line Dashboard &amp; Door Ambient Lighting')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/ambient-lighting-30-color.webp" alt="30-Colour Customizable R-Line Dashboard &amp; Door Ambient Lighting" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 30-Colour Customizable R-Line Dashboard &amp; Door Ambient Lighting
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/r-line-massage-sport-seats.webp', 'R-Line ErgoActive Sport Seats with Pneumatic Massage &amp; Lumbar Support')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/r-line-massage-sport-seats.webp" alt="R-Line ErgoActive Sport Seats with Pneumatic Massage &amp; Lumbar Support" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> R-Line ErgoActive Sport Seats with Pneumatic Massage &amp; Lumbar Support
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/panoramic-sunroof-tiguan.webp', 'Expansive Tilting &amp; Sliding Panoramic Glass Sunroof')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/panoramic-sunroof-tiguan.webp" alt="Expansive Tilting &amp; Sliding Panoramic Glass Sunroof" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Expansive Tilting &amp; Sliding Panoramic Glass Sunroof
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/dcc-pro-driving-modes.webp', 'DCC Pro Adaptive Chassis Control &amp; Driving Experience Control Dial')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/dcc-pro-driving-modes.webp" alt="DCC Pro Adaptive Chassis Control &amp; Driving Experience Control Dial" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> DCC Pro Adaptive Chassis Control &amp; Driving Experience Control Dial
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/level2-adas-21-features.webp', '21 Level-2 ADAS Autonomous Driving Assistance Features')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/level2-adas-21-features.webp" alt="21 Level-2 ADAS Autonomous Driving Assistance Features" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> 21 Level-2 ADAS Autonomous Driving Assistance Features
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/nine-airbags-euro-ncap.webp', '9 Airbags Standard &amp; 5-Star Euro NCAP Safety Architecture')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-tiguan-r-line/gallery/nine-airbags-euro-ncap.webp" alt="9 Airbags Standard &amp; 5-Star Euro NCAP Safety Architecture" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> 9 Airbags Standard &amp; 5-Star Euro NCAP Safety Architecture
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -687,6 +924,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

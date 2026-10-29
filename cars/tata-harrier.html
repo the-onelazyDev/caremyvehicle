@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star B-NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp" alt="Tata Harrier" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp" alt="Tata Harrier" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp', '12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto &amp; Apple CarPlay', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp" alt="12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto &amp; Apple CarPlay" loading="lazy">
+                <span>12.3-inch Cinematic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/26-cm-configurable-digital-instrument-cluster.webp', '26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/26-cm-configurable-digital-instrument-cluster.webp" alt="26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View" loading="lazy">
+                <span>26.03 cm</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/digital-steering-wheel-with-illuminated-logo.webp', 'Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/digital-steering-wheel-with-illuminated-logo.webp" alt="Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls" loading="lazy">
+                <span>Next-Gen 4-Spoke</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp', 'Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp" alt="Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure" loading="lazy">
+                <span>Voice-Assisted Panoramic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/ventilated-front-row-comfort-seats.webp', 'Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/ventilated-front-row-comfort-seats.webp" alt="Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function" loading="lazy">
+                <span>Ventilated Front</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/powered-memory-driver-seat-welcome-function.webp', '6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/powered-memory-driver-seat-welcome-function.webp" alt="6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist" loading="lazy">
+                <span>6-Way Powered</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/adas-level-2-advanced-safety-suite.webp', 'Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise &amp; Lane Keep Assist', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/adas-level-2-advanced-safety-suite.webp" alt="Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise &amp; Lane Keep Assist" loading="lazy">
+                <span>Level 2</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/jbl-10-speaker-premium-audio-with-subwoofer.webp', '10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/jbl-10-speaker-premium-audio-with-subwoofer.webp" alt="10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes" loading="lazy">
+                <span>10-Speaker JBL</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -542,6 +646,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Tata Harrier HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp', '12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto &amp; Apple CarPlay')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/cinematic-12-3-inch-touchscreen-infotainment.webp" alt="12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto &amp; Apple CarPlay" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> 12.3-inch Cinematic Harman Touchscreen Infotainment with Wireless Android Auto &amp; Apple CarPlay
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/26-cm-configurable-digital-instrument-cluster.webp', '26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/26-cm-configurable-digital-instrument-cluster.webp" alt="26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> 26.03 cm (10.25-inch) Fully Configurable Digital Instrument Cluster with Full Navigation Map View
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/digital-steering-wheel-with-illuminated-logo.webp', 'Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/digital-steering-wheel-with-illuminated-logo.webp" alt="Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Next-Gen 4-Spoke Illuminated Logo Steering Wheel with Integrated Touch Capacitive Controls
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp', 'Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/voice-assisted-panoramic-sunroof-with-mood-lighting.webp" alt="Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Voice-Assisted Panoramic Sunroof with Multi-Color Ambient Mood Lighting Edge Enclosure
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/ventilated-front-row-comfort-seats.webp', 'Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/ventilated-front-row-comfort-seats.webp" alt="Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Ventilated Front Row Ergonomic Comfort Seats with Multi-Stage Seat Cooling Function
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/powered-memory-driver-seat-welcome-function.webp', '6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/powered-memory-driver-seat-welcome-function.webp" alt="6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 6-Way Powered Driver Seat with Memory Presets and Automatic Welcome Retract Assist
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/adas-level-2-advanced-safety-suite.webp', 'Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise &amp; Lane Keep Assist')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/adas-level-2-advanced-safety-suite.webp" alt="Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise &amp; Lane Keep Assist" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> Level 2 ADAS Suite with 11 Autonomous Safety Functions, Adaptive Cruise &amp; Lane Keep Assist
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/jbl-10-speaker-premium-audio-with-subwoofer.webp', '10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/jbl-10-speaker-premium-audio-with-subwoofer.webp" alt="10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> 10-Speaker JBL Concert Sound System with Dedicated Subwoofer and 13 Advanced Audio Modes
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/360-degree-3d-surround-view-camera.webp', 'High-Definition 360-Degree 3D Surround View Camera System with Dynamic Blind View Monitor')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/360-degree-3d-surround-view-camera.webp" alt="High-Definition 360-Degree 3D Surround View Camera System with Dynamic Blind View Monitor" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> High-Definition 360-Degree 3D Surround View Camera System with Dynamic Blind View Monitor
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/bejewelled-rotary-terrain-response-selector.webp', 'Bejewelled Rotary Terrain Response Selector with Integrated Digital Color Display Modes')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/bejewelled-rotary-terrain-response-selector.webp" alt="Bejewelled Rotary Terrain Response Selector with Integrated Digital Color Display Modes" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Bejewelled Rotary Terrain Response Selector with Integrated Digital Color Display Modes
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/signature-connected-led-taillamp.webp', 'Connected Full-Width Signature LED Taillamps with Dynamic Welcome and Goodbye Animation')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/signature-connected-led-taillamp.webp" alt="Connected Full-Width Signature LED Taillamps with Dynamic Welcome and Goodbye Animation" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Connected Full-Width Signature LED Taillamps with Dynamic Welcome and Goodbye Animation
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/gesture-controlled-powered-smart-tailgate.webp', 'Smart Gesture-Controlled Powered Tailgate with Hands-Free Kick Opening Sensor')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/harrier/gallery/gesture-controlled-powered-smart-tailgate.webp" alt="Smart Gesture-Controlled Powered Tailgate with Hands-Free Kick Opening Sensor" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> Smart Gesture-Controlled Powered Tailgate with Hands-Free Kick Opening Sensor
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -809,6 +1046,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

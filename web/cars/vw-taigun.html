@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2026 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star G-NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/wild-cherry-red-metallic.webp" alt="Volkswagen Taigun" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/colors/wild-cherry-red-metallic.webp" alt="Volkswagen Taigun" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/new-taigun-hero-banner.webp', 'The New Volkswagen Taigun German-Engineered SUV', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/new-taigun-hero-banner.webp" alt="The New Volkswagen Taigun German-Engineered SUV" loading="lazy">
+                <span>The New</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/sculpted-bonnet-exterior.webp', 'Sculpted Bonnet, Sharper Lines &amp; IQ.LIGHT LED Matrix Headlamps', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/sculpted-bonnet-exterior.webp" alt="Sculpted Bonnet, Sharper Lines &amp; IQ.LIGHT LED Matrix Headlamps" loading="lazy">
+                <span>Sculpted Bonnet,</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/tsi-evo-performance.webp', '1.0L TSI &amp; 1.5L TSI EVO Turbocharged Engines with 8-Speed AT &amp; 7-Speed DSG', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/tsi-evo-performance.webp" alt="1.0L TSI &amp; 1.5L TSI EVO Turbocharged Engines with 8-Speed AT &amp; 7-Speed DSG" loading="lazy">
+                <span>1.0L TSI</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/leatherette-ventilated-seats.webp', 'Electric &amp; Ventilated Front Leatherette Seats with Contrast Piping', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/leatherette-ventilated-seats.webp" alt="Electric &amp; Ventilated Front Leatherette Seats with Contrast Piping" loading="lazy">
+                <span>Electric &amp;</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/panoramic-sunroof-taigun.webp', 'Expansive Panoramic Sunroof in the New Taigun', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/panoramic-sunroof-taigun.webp" alt="Expansive Panoramic Sunroof in the New Taigun" loading="lazy">
+                <span>Expansive Panoramic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/illuminated-vw-logo-taillights.webp', 'First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/illuminated-vw-logo-taillights.webp" alt="First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo" loading="lazy">
+                <span>First-in-Segment Infinity</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/digital-cockpit-cabin.webp', '20.32 cm Digital Cockpit &amp; 25.65 cm VW Play Touchscreen Infotainment', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/digital-cockpit-cabin.webp" alt="20.32 cm Digital Cockpit &amp; 25.65 cm VW Play Touchscreen Infotainment" loading="lazy">
+                <span>20.32 cm</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/taigun-road-presence.webp', 'Commanding SUV Stance with 188 mm Ground Clearance', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/taigun-road-presence.webp" alt="Commanding SUV Stance with 188 mm Ground Clearance" loading="lazy">
+                <span>Commanding SUV</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -552,6 +656,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Volkswagen Taigun HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/new-taigun-hero-banner.webp', 'The New Volkswagen Taigun German-Engineered SUV')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/new-taigun-hero-banner.webp" alt="The New Volkswagen Taigun German-Engineered SUV" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> The New Volkswagen Taigun German-Engineered SUV
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/sculpted-bonnet-exterior.webp', 'Sculpted Bonnet, Sharper Lines &amp; IQ.LIGHT LED Matrix Headlamps')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/sculpted-bonnet-exterior.webp" alt="Sculpted Bonnet, Sharper Lines &amp; IQ.LIGHT LED Matrix Headlamps" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Sculpted Bonnet, Sharper Lines &amp; IQ.LIGHT LED Matrix Headlamps
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/tsi-evo-performance.webp', '1.0L TSI &amp; 1.5L TSI EVO Turbocharged Engines with 8-Speed AT &amp; 7-Speed DSG')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/tsi-evo-performance.webp" alt="1.0L TSI &amp; 1.5L TSI EVO Turbocharged Engines with 8-Speed AT &amp; 7-Speed DSG" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> 1.0L TSI &amp; 1.5L TSI EVO Turbocharged Engines with 8-Speed AT &amp; 7-Speed DSG
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/leatherette-ventilated-seats.webp', 'Electric &amp; Ventilated Front Leatherette Seats with Contrast Piping')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/leatherette-ventilated-seats.webp" alt="Electric &amp; Ventilated Front Leatherette Seats with Contrast Piping" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Electric &amp; Ventilated Front Leatherette Seats with Contrast Piping
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/panoramic-sunroof-taigun.webp', 'Expansive Panoramic Sunroof in the New Taigun')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/panoramic-sunroof-taigun.webp" alt="Expansive Panoramic Sunroof in the New Taigun" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Expansive Panoramic Sunroof in the New Taigun
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/illuminated-vw-logo-taillights.webp', 'First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/illuminated-vw-logo-taillights.webp" alt="First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> First-in-Segment Infinity LED Tail Lamps with Illuminated VW Logo
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/digital-cockpit-cabin.webp', '20.32 cm Digital Cockpit &amp; 25.65 cm VW Play Touchscreen Infotainment')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/digital-cockpit-cabin.webp" alt="20.32 cm Digital Cockpit &amp; 25.65 cm VW Play Touchscreen Infotainment" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 20.32 cm Digital Cockpit &amp; 25.65 cm VW Play Touchscreen Infotainment
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/taigun-road-presence.webp', 'Commanding SUV Stance with 188 mm Ground Clearance')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/taigun-road-presence.webp" alt="Commanding SUV Stance with 188 mm Ground Clearance" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> Commanding SUV Stance with 188 mm Ground Clearance
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-sport-trim.webp', 'Taigun GT Plus Sport 1.5L TSI DSG with Blacked-Out Alloys &amp; Red Calipers')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-sport-trim.webp" alt="Taigun GT Plus Sport 1.5L TSI DSG with Blacked-Out Alloys &amp; Red Calipers" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Taigun GT Plus Sport 1.5L TSI DSG with Blacked-Out Alloys &amp; Red Calipers
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-chrome-trim.webp', 'Taigun GT Plus Chrome 1.5L TSI DSG with R17 Manila Alloy Wheels')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-plus-chrome-trim.webp" alt="Taigun GT Plus Chrome 1.5L TSI DSG with R17 Manila Alloy Wheels" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Taigun GT Plus Chrome 1.5L TSI DSG with R17 Manila Alloy Wheels
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-line-trim.webp', 'Taigun GT Line 1.0L TSI with Dark Chrome &amp; Glossy Black Accents')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/gt-line-trim.webp" alt="Taigun GT Line 1.0L TSI with Dark Chrome &amp; Glossy Black Accents" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Taigun GT Line 1.0L TSI with Dark Chrome &amp; Glossy Black Accents
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/topline-trim.webp', 'Taigun Topline 1.0L TSI with Chrome Grille &amp; Crystalline LED DRLs')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/vw-taigun/gallery/topline-trim.webp" alt="Taigun Topline 1.0L TSI with Chrome Grille &amp; Crystalline LED DRLs" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> Taigun Topline 1.0L TSI with Chrome Grille &amp; Crystalline LED DRLs
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -806,6 +1043,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

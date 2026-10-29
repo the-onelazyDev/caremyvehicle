@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star B-NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp" alt="Škoda Kylaq" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp" alt="Škoda Kylaq" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-solid-front.webp', 'Modern Solid 3D Glossy Black Grille &amp; Split LED Projector Headlamps', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-solid-front.webp" alt="Modern Solid 3D Glossy Black Grille &amp; Split LED Projector Headlamps" loading="lazy">
+                <span>Modern Solid</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/commanding-suv-stance.webp', 'Commanding Sub-4m SUV Profile with 189 mm Ground Clearance', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/commanding-suv-stance.webp" alt="Commanding Sub-4m SUV Profile with 189 mm Ground Clearance" loading="lazy">
+                <span>Commanding Sub-4m</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/t-shaped-led-taillights.webp', 'T-Shaped Crystalline LED Tail Lamps &amp; 3D Rear Diffuser', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/t-shaped-led-taillights.webp" alt="T-Shaped Crystalline LED Tail Lamps &amp; 3D Rear Diffuser" loading="lazy">
+                <span>T-Shaped Crystalline</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/prestige-plus-exterior.webp', 'Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/prestige-plus-exterior.webp" alt="Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys" loading="lazy">
+                <span>Škoda Kylaq</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/sportline-edition.webp', 'Škoda Kylaq Sportline with Blacked-Out Styling Accents', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/sportline-edition.webp" alt="Škoda Kylaq Sportline with Blacked-Out Styling Accents" loading="lazy">
+                <span>Škoda Kylaq</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/boot-space-446l.webp', 'Segment-Leading 446-Litre Boot Space (1,265L Expanded)', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/boot-space-446l.webp" alt="Segment-Leading 446-Litre Boot Space (1,265L Expanded)" loading="lazy">
+                <span>Segment-Leading 446-Litre</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-cabin-dashboard.webp', 'Modern Dual-Screen Cabin with 25.6 cm Infotainment &amp; Digital Cockpit', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-cabin-dashboard.webp" alt="Modern Dual-Screen Cabin with 25.6 cm Infotainment &amp; Digital Cockpit" loading="lazy">
+                <span>Modern Dual-Screen</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ventilated-front-seats.webp', 'Ventilated Front Seats for Driver &amp; Co-Driver', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ventilated-front-seats.webp" alt="Ventilated Front Seats for Driver &amp; Co-Driver" loading="lazy">
+                <span>Ventilated Front</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -547,6 +651,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Škoda Kylaq HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-solid-front.webp', 'Modern Solid 3D Glossy Black Grille &amp; Split LED Projector Headlamps')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-solid-front.webp" alt="Modern Solid 3D Glossy Black Grille &amp; Split LED Projector Headlamps" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> Modern Solid 3D Glossy Black Grille &amp; Split LED Projector Headlamps
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/commanding-suv-stance.webp', 'Commanding Sub-4m SUV Profile with 189 mm Ground Clearance')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/commanding-suv-stance.webp" alt="Commanding Sub-4m SUV Profile with 189 mm Ground Clearance" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Commanding Sub-4m SUV Profile with 189 mm Ground Clearance
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/t-shaped-led-taillights.webp', 'T-Shaped Crystalline LED Tail Lamps &amp; 3D Rear Diffuser')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/t-shaped-led-taillights.webp" alt="T-Shaped Crystalline LED Tail Lamps &amp; 3D Rear Diffuser" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> T-Shaped Crystalline LED Tail Lamps &amp; 3D Rear Diffuser
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/prestige-plus-exterior.webp', 'Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/prestige-plus-exterior.webp" alt="Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Škoda Kylaq Prestige+ Top Trim with R17 Dual-Tone Alloys
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/sportline-edition.webp', 'Škoda Kylaq Sportline with Blacked-Out Styling Accents')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/sportline-edition.webp" alt="Škoda Kylaq Sportline with Blacked-Out Styling Accents" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Škoda Kylaq Sportline with Blacked-Out Styling Accents
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/boot-space-446l.webp', 'Segment-Leading 446-Litre Boot Space (1,265L Expanded)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/boot-space-446l.webp" alt="Segment-Leading 446-Litre Boot Space (1,265L Expanded)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> Segment-Leading 446-Litre Boot Space (1,265L Expanded)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-cabin-dashboard.webp', 'Modern Dual-Screen Cabin with 25.6 cm Infotainment &amp; Digital Cockpit')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/modern-cabin-dashboard.webp" alt="Modern Dual-Screen Cabin with 25.6 cm Infotainment &amp; Digital Cockpit" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> Modern Dual-Screen Cabin with 25.6 cm Infotainment &amp; Digital Cockpit
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ventilated-front-seats.webp', 'Ventilated Front Seats for Driver &amp; Co-Driver')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ventilated-front-seats.webp" alt="Ventilated Front Seats for Driver &amp; Co-Driver" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> Ventilated Front Seats for Driver &amp; Co-Driver
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/electric-seats-6way.webp', 'Segment-First 6-Way Electrically Adjustable Front Seats')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/electric-seats-6way.webp" alt="Segment-First 6-Way Electrically Adjustable Front Seats" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Segment-First 6-Way Electrically Adjustable Front Seats
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ambient-cabin-lighting.webp', 'Soothing Cabin Ambient Lighting &amp; Climatronic Auto AC')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/ambient-cabin-lighting.webp" alt="Soothing Cabin Ambient Lighting &amp; Climatronic Auto AC" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Soothing Cabin Ambient Lighting &amp; Climatronic Auto AC
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/rear-armrest-comfort.webp', 'Spacious Rear Bench with Center Armrest &amp; Cupholders')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/rear-armrest-comfort.webp" alt="Spacious Rear Bench with Center Armrest &amp; Cupholders" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Spacious Rear Bench with Center Armrest &amp; Cupholders
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/six-airbags-safety.webp', '6 Airbags Standard &amp; 5-Star Bharat NCAP Protection')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/gallery/six-airbags-safety.webp" alt="6 Airbags Standard &amp; 5-Star Bharat NCAP Protection" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> 6 Airbags Standard &amp; 5-Star Bharat NCAP Protection
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -788,6 +1025,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

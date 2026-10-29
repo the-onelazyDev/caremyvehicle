@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star Euro NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/bronx-gold.webp" alt="Škoda Kodiaq" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/colors/bronx-gold.webp" alt="Škoda Kodiaq" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/crystalline-illuminated-grille.webp', 'TOP LED Matrix Crystalline Headlights &amp; Horizontal Illuminated Grille Strip', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/crystalline-illuminated-grille.webp" alt="TOP LED Matrix Crystalline Headlights &amp; Horizontal Illuminated Grille Strip" loading="lazy">
+                <span>TOP LED</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/dark-chrome-d-pillar.webp', 'Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/dark-chrome-d-pillar.webp" alt="Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar" loading="lazy">
+                <span>Sleek Aerodynamic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/c-shaped-connected-taillamps.webp', 'Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/c-shaped-connected-taillamps.webp" alt="Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators" loading="lazy">
+                <span>Unmistakable C-Shaped</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/selection-lk-flagship.webp', 'Škoda Kodiaq Selection L&amp;K (Laurin &amp; Klement) 4x4 Flagship', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/selection-lk-flagship.webp" alt="Škoda Kodiaq Selection L&amp;K (Laurin &amp; Klement) 4x4 Flagship" loading="lazy">
+                <span>Škoda Kodiaq</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/sportline-4x4-edition.webp', 'Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/sportline-4x4-edition.webp" alt="Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents" loading="lazy">
+                <span>Škoda Kodiaq</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/panoramic-sunroof-kodiaq.webp', 'Expansive Two-Pane Electric Panoramic Sunroof', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/panoramic-sunroof-kodiaq.webp" alt="Expansive Two-Pane Electric Panoramic Sunroof" loading="lazy">
+                <span>Expansive Two-Pane</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/skoda-smart-dials.webp', 'Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/skoda-smart-dials.webp" alt="Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays" loading="lazy">
+                <span>Innovative Škoda</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/infotainment-3277cm.webp', '32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/infotainment-3277cm.webp" alt="32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment" loading="lazy">
+                <span>32.77 cm</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -532,6 +636,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Škoda Kodiaq HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/crystalline-illuminated-grille.webp', 'TOP LED Matrix Crystalline Headlights &amp; Horizontal Illuminated Grille Strip')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/crystalline-illuminated-grille.webp" alt="TOP LED Matrix Crystalline Headlights &amp; Horizontal Illuminated Grille Strip" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> TOP LED Matrix Crystalline Headlights &amp; Horizontal Illuminated Grille Strip
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/dark-chrome-d-pillar.webp', 'Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/dark-chrome-d-pillar.webp" alt="Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Sleek Aerodynamic Profile with Signature Dark Chrome D-Pillar
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/c-shaped-connected-taillamps.webp', 'Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/c-shaped-connected-taillamps.webp" alt="Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Unmistakable C-Shaped Connected LED Rear Lights with Animated Indicators
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/selection-lk-flagship.webp', 'Škoda Kodiaq Selection L&amp;K (Laurin &amp; Klement) 4x4 Flagship')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/selection-lk-flagship.webp" alt="Škoda Kodiaq Selection L&amp;K (Laurin &amp; Klement) 4x4 Flagship" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Škoda Kodiaq Selection L&amp;K (Laurin &amp; Klement) 4x4 Flagship
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/sportline-4x4-edition.webp', 'Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/sportline-4x4-edition.webp" alt="Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Škoda Kodiaq Sportline 2.0 TSI 4x4 with Glossy Black Accents
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/panoramic-sunroof-kodiaq.webp', 'Expansive Two-Pane Electric Panoramic Sunroof')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/panoramic-sunroof-kodiaq.webp" alt="Expansive Two-Pane Electric Panoramic Sunroof" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> Expansive Two-Pane Electric Panoramic Sunroof
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/skoda-smart-dials.webp', 'Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/skoda-smart-dials.webp" alt="Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> Innovative Škoda Smart Dials with 32 mm Digital Rotary Displays
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/infotainment-3277cm.webp', '32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/infotainment-3277cm.webp" alt="32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> 32.77 cm (12.9-inch) Freestanding Touchscreen Infotainment
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/canton-sound-system.webp', '13-Speaker 725W Canton Surround Sound System with Subwoofer')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/canton-sound-system.webp" alt="13-Speaker 725W Canton Surround Sound System with Subwoofer" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> 13-Speaker 725W Canton Surround Sound System with Subwoofer
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/three-row-7seater-cabin.webp', 'Luxurious 3-Row 7-Seater Cabin with Cognac / Suedia Upholstery')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/three-row-7seater-cabin.webp" alt="Luxurious 3-Row 7-Seater Cabin with Cognac / Suedia Upholstery" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Luxurious 3-Row 7-Seater Cabin with Cognac / Suedia Upholstery
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/flexible-boot-space.webp', 'Versatile Split-Folding Luggage Compartment (Up to 2,035L)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/flexible-boot-space.webp" alt="Versatile Split-Folding Luggage Compartment (Up to 2,035L)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Versatile Split-Folding Luggage Compartment (Up to 2,035L)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/nine-airbags-park-assist.webp', '9 Airbags Standard, Intelligent Park Assist &amp; 360° Area View')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/skoda-kodiaq/gallery/nine-airbags-park-assist.webp" alt="9 Airbags Standard, Intelligent Park Assist &amp; 360° Area View" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> 9 Airbags Standard, Intelligent Park Assist &amp; 360° Area View
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -708,6 +945,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

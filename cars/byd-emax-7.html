@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star Safety</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/colors/quartz-blue.webp" alt="BYD eMAX 7" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/colors/quartz-blue.webp" alt="BYD eMAX 7" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-hero-stance.webp', 'BYD eMAX 7 Long-Range 6 &amp; 7-Seater Electric MPV', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-hero-stance.webp" alt="BYD eMAX 7 Long-Range 6 &amp; 7-Seater Electric MPV" loading="lazy">
+                <span>BYD eMAX</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-electric-elegance.webp', 'Electric Elegance with Dragon Face Design &amp; 2,800 mm Wheelbase', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-electric-elegance.webp" alt="Electric Elegance with Dragon Face Design &amp; 2,800 mm Wheelbase" loading="lazy">
+                <span>Electric Elegance</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-crystal-diamond-led.webp', 'Crystal Diamond Floating LED Headlamps with Intelligent High Beam', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-crystal-diamond-led.webp" alt="Crystal Diamond Floating LED Headlamps with Intelligent High Beam" loading="lazy">
+                <span>Crystal Diamond</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-immersive-interiors.webp', 'Immersive Black &amp; Brown Dual-Tone Three-Row Cabin', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-immersive-interiors.webp" alt="Immersive Black &amp; Brown Dual-Tone Three-Row Cabin" loading="lazy">
+                <span>Immersive Black</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-intelligent-cockpit.webp', 'Modern Cockpit with 12.8-inch Rotatable Display &amp; 5-inch LCD Cluster', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-intelligent-cockpit.webp" alt="Modern Cockpit with 12.8-inch Rotatable Display &amp; 5-inch LCD Cluster" loading="lazy">
+                <span>Modern Cockpit</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-panoramic-glass-roof.webp', '1.42 m² Panoramic Glass Roof with Electric Slide Sunshade', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-panoramic-glass-roof.webp" alt="1.42 m² Panoramic Glass Roof with Electric Slide Sunshade" loading="lazy">
+                <span>1.42 m²</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seating-flexibility.webp', 'Flexible 6-Seater Captain &amp; 7-Seater Layouts with 580L Max Boot', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seating-flexibility.webp" alt="Flexible 6-Seater Captain &amp; 7-Seater Layouts with 580L Max Boot" loading="lazy">
+                <span>Flexible 6-Seater</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seamless-connectivity.webp', 'Seamless Connectivity with Wireless Charging, NFC Key &amp; Voice Control', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seamless-connectivity.webp" alt="Seamless Connectivity with Wireless Charging, NFC Key &amp; Voice Control" loading="lazy">
+                <span>Seamless Connectivity</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -527,6 +631,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 BYD eMAX 7 HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-hero-stance.webp', 'BYD eMAX 7 Long-Range 6 &amp; 7-Seater Electric MPV')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-hero-stance.webp" alt="BYD eMAX 7 Long-Range 6 &amp; 7-Seater Electric MPV" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> BYD eMAX 7 Long-Range 6 &amp; 7-Seater Electric MPV
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-electric-elegance.webp', 'Electric Elegance with Dragon Face Design &amp; 2,800 mm Wheelbase')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-electric-elegance.webp" alt="Electric Elegance with Dragon Face Design &amp; 2,800 mm Wheelbase" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Electric Elegance with Dragon Face Design &amp; 2,800 mm Wheelbase
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-crystal-diamond-led.webp', 'Crystal Diamond Floating LED Headlamps with Intelligent High Beam')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-crystal-diamond-led.webp" alt="Crystal Diamond Floating LED Headlamps with Intelligent High Beam" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Crystal Diamond Floating LED Headlamps with Intelligent High Beam
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-immersive-interiors.webp', 'Immersive Black &amp; Brown Dual-Tone Three-Row Cabin')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-immersive-interiors.webp" alt="Immersive Black &amp; Brown Dual-Tone Three-Row Cabin" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Immersive Black &amp; Brown Dual-Tone Three-Row Cabin
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-intelligent-cockpit.webp', 'Modern Cockpit with 12.8-inch Rotatable Display &amp; 5-inch LCD Cluster')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-intelligent-cockpit.webp" alt="Modern Cockpit with 12.8-inch Rotatable Display &amp; 5-inch LCD Cluster" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Modern Cockpit with 12.8-inch Rotatable Display &amp; 5-inch LCD Cluster
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-panoramic-glass-roof.webp', '1.42 m² Panoramic Glass Roof with Electric Slide Sunshade')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-panoramic-glass-roof.webp" alt="1.42 m² Panoramic Glass Roof with Electric Slide Sunshade" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 1.42 m² Panoramic Glass Roof with Electric Slide Sunshade
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seating-flexibility.webp', 'Flexible 6-Seater Captain &amp; 7-Seater Layouts with 580L Max Boot')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seating-flexibility.webp" alt="Flexible 6-Seater Captain &amp; 7-Seater Layouts with 580L Max Boot" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> Flexible 6-Seater Captain &amp; 7-Seater Layouts with 580L Max Boot
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seamless-connectivity.webp', 'Seamless Connectivity with Wireless Charging, NFC Key &amp; Voice Control')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-seamless-connectivity.webp" alt="Seamless Connectivity with Wireless Charging, NFC Key &amp; Voice Control" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> Seamless Connectivity with Wireless Charging, NFC Key &amp; Voice Control
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-vtol-power.webp', 'Vehicle-to-Load (VTOL) Mobile Power Station for Family Adventures')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-vtol-power.webp" alt="Vehicle-to-Load (VTOL) Mobile Power Station for Family Adventures" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Vehicle-to-Load (VTOL) Mobile Power Station for Family Adventures
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-150kw-performance.webp', '150 kW (204 PS) &amp; 310 Nm 8-in-1 Electric Powertrain (0-100 km/h in 8.6s)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-150kw-performance.webp" alt="150 kW (204 PS) &amp; 310 Nm 8-in-1 Electric Powertrain (0-100 km/h in 8.6s)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> 150 kW (204 PS) &amp; 310 Nm 8-in-1 Electric Powertrain (0-100 km/h in 8.6s)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-blade-battery.webp', '71.8 kWh Ultra-Safe BYD Blade Battery with 530 km NEDC Range')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-blade-battery.webp" alt="71.8 kWh Ultra-Safe BYD Blade Battery with 530 km NEDC Range" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> 71.8 kWh Ultra-Safe BYD Blade Battery with 530 km NEDC Range
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-adas-safety.webp', 'BYD Advanced Driver Assistance System (Level 2 ADAS) &amp; 6 Airbags')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/byd-emax-7/gallery/emax7-adas-safety.webp" alt="BYD Advanced Driver Assistance System (Level 2 ADAS) &amp; 6 Airbags" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> BYD Advanced Driver Assistance System (Level 2 ADAS) &amp; 6 Airbags
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -716,6 +953,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

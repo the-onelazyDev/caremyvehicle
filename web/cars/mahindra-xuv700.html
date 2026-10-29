@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 5-Star G-NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp" alt="Mahindra XUV700" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp" alt="Mahindra XUV700" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp', 'Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp" alt="Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System" loading="lazy">
+                <span>Coast-to-Coast 31.2</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/surround_camera.webp', '540-Degree Surround View Camera with Integrated Blind View Monitor &amp; Video Recording', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/surround_camera.webp" alt="540-Degree Surround View Camera with Integrated Blind View Monitor &amp; Video Recording" loading="lazy">
+                <span>540-Degree Surround</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/co_driver_boss_mode.webp', '6-Way Powered Driver &amp; Co-Driver Seats with Memory Presets &amp; 4-Way Executive Boss Mode', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/co_driver_boss_mode.webp" alt="6-Way Powered Driver &amp; Co-Driver Seats with Memory Presets &amp; 4-Way Executive Boss Mode" loading="lazy">
+                <span>6-Way Powered</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/approach_unlock.webp', 'Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/approach_unlock.webp" alt="Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock" loading="lazy">
+                <span>Aerodynamic Flush</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp', 'Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp" alt="Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass" loading="lazy">
+                <span>Expansive Segment-Largest</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/leather_interior.webp', 'Plush Dual-Tone White &amp; Black Perforated Leatherette Upholstery with French Twin-Stitching', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/leather_interior.webp" alt="Plush Dual-Tone White &amp; Black Perforated Leatherette Upholstery with French Twin-Stitching" loading="lazy">
+                <span>Plush Dual-Tone</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/alloy_wheels.webp', '18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/alloy_wheels.webp" alt="18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres" loading="lazy">
+                <span>18-inch Diamond-Cut</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/piano_black_grille.webp', 'Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/piano_black_grille.webp" alt="Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot" loading="lazy">
+                <span>Gloss Piano</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -537,6 +641,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Mahindra XUV700 HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp', 'Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/triple_screens.webp" alt="Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> Coast-to-Coast 31.2 cm High-Definition Triple Screen Panoramic Cockpit Display System
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/surround_camera.webp', '540-Degree Surround View Camera with Integrated Blind View Monitor &amp; Video Recording')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/surround_camera.webp" alt="540-Degree Surround View Camera with Integrated Blind View Monitor &amp; Video Recording" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> 540-Degree Surround View Camera with Integrated Blind View Monitor &amp; Video Recording
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/co_driver_boss_mode.webp', '6-Way Powered Driver &amp; Co-Driver Seats with Memory Presets &amp; 4-Way Executive Boss Mode')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/co_driver_boss_mode.webp" alt="6-Way Powered Driver &amp; Co-Driver Seats with Memory Presets &amp; 4-Way Executive Boss Mode" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> 6-Way Powered Driver &amp; Co-Driver Seats with Memory Presets &amp; 4-Way Executive Boss Mode
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/approach_unlock.webp', 'Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/approach_unlock.webp" alt="Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Aerodynamic Flush Smart Door Handles with Approach Auto-Unlock and Walk-Away Auto-Lock
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp', 'Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/panoramic_skyroof.webp" alt="Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Expansive Segment-Largest Panoramic Skyroof with Acoustic Noise Reduction Tinted Glass
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/leather_interior.webp', 'Plush Dual-Tone White &amp; Black Perforated Leatherette Upholstery with French Twin-Stitching')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/leather_interior.webp" alt="Plush Dual-Tone White &amp; Black Perforated Leatherette Upholstery with French Twin-Stitching" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> Plush Dual-Tone White &amp; Black Perforated Leatherette Upholstery with French Twin-Stitching
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/alloy_wheels.webp', '18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/alloy_wheels.webp" alt="18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 18-inch Diamond-Cut Precision Engineered Alloy Wheels with All-Weather Performance Tyres
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/piano_black_grille.webp', 'Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/piano_black_grille.webp" alt="Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> Gloss Piano Black Front Grille with Satin Chrome Accents and Twin-Peaks Chrome Mascot
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sony_3d_audio.webp', 'Sony 12-Speaker 3D Immersive Spatial Audio System with Custom Equalizers &amp; Roof Drivers')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sony_3d_audio.webp" alt="Sony 12-Speaker 3D Immersive Spatial Audio System with Custom Equalizers &amp; Roof Drivers" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Sony 12-Speaker 3D Immersive Spatial Audio System with Custom Equalizers &amp; Roof Drivers
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/adrenox_intelligence.webp', 'Adrenox Connected Car Intelligence with 70+ Connected Features &amp; Built-in Amazon Alexa')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/adrenox_intelligence.webp" alt="Adrenox Connected Car Intelligence with 70+ Connected Features &amp; Built-in Amazon Alexa" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Adrenox Connected Car Intelligence with 70+ Connected Features &amp; Built-in Amazon Alexa
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sixteen_speaker_surround.webp', 'Acoustic Cabin Engineering with High-Fidelity Custom Equalizer Presets &amp; Sound Staging')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/sixteen_speaker_surround.webp" alt="Acoustic Cabin Engineering with High-Fidelity Custom Equalizer Presets &amp; Sound Staging" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Acoustic Cabin Engineering with High-Fidelity Custom Equalizer Presets &amp; Sound Staging
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/five_star_safety_rating.webp', 'Global NCAP 5-Star Adult Safety Rating with Special Safer Choice Accolade (7 Airbags)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/xuv700/gallery/five_star_safety_rating.webp" alt="Global NCAP 5-Star Adult Safety Rating with Special Safer Choice Accolade (7 Airbags)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> Global NCAP 5-Star Adult Safety Rating with Special Safer Choice Accolade (7 Airbags)
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -830,6 +1067,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

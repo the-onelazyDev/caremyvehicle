@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">✨ New Facelift</span>
           <span class="card-badge badge-safety">🛡️ 6 Airbags Std</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp" alt="Maruti Suzuki Alto K10" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/colors/sizzling-red.webp" alt="Maruti Suzuki Alto K10" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_dynamic_stance.webp', 'Front Dynamic Highway Stance', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_dynamic_stance.webp" alt="Front Dynamic Highway Stance" loading="lazy">
+                <span>Front Dynamic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/honeycomb_front_grille.webp', 'Honeycomb Front Grille Design', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/honeycomb_front_grille.webp" alt="Honeycomb Front Grille Design" loading="lazy">
+                <span>Honeycomb Front</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/halogen_headlamps.webp', 'Sweptback Halogen Headlamp Setup', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/halogen_headlamps.webp" alt="Sweptback Halogen Headlamp Setup" loading="lazy">
+                <span>Sweptback Halogen</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/side_compact_profile.webp', 'Agile &amp; Compact City Profile', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/side_compact_profile.webp" alt="Agile &amp; Compact City Profile" loading="lazy">
+                <span>Agile &amp;</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_tail_lamps.webp', 'Contemporary Rear Combination Lamps', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_tail_lamps.webp" alt="Contemporary Rear Combination Lamps" loading="lazy">
+                <span>Contemporary Rear</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/compact_rear_design.webp', 'Sculpted Rear Bumper &amp; Stance', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/compact_rear_design.webp" alt="Sculpted Rear Bumper &amp; Stance" loading="lazy">
+                <span>Sculpted Rear</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/dashboard_cockpit.webp', 'Driver-Centric Digital Dashboard Layout', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/dashboard_cockpit.webp" alt="Driver-Centric Digital Dashboard Layout" loading="lazy">
+                <span>Driver-Centric Digital</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/smartplay_touchscreen.webp', '7-inch SmartPlay Studio Infotainment', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/smartplay_touchscreen.webp" alt="7-inch SmartPlay Studio Infotainment" loading="lazy">
+                <span>7-inch SmartPlay</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -542,6 +646,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Maruti Suzuki Alto K10 HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_dynamic_stance.webp', 'Front Dynamic Highway Stance')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_dynamic_stance.webp" alt="Front Dynamic Highway Stance" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> Front Dynamic Highway Stance
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/honeycomb_front_grille.webp', 'Honeycomb Front Grille Design')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/honeycomb_front_grille.webp" alt="Honeycomb Front Grille Design" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Honeycomb Front Grille Design
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/halogen_headlamps.webp', 'Sweptback Halogen Headlamp Setup')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/halogen_headlamps.webp" alt="Sweptback Halogen Headlamp Setup" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Sweptback Halogen Headlamp Setup
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/side_compact_profile.webp', 'Agile &amp; Compact City Profile')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/side_compact_profile.webp" alt="Agile &amp; Compact City Profile" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Agile &amp; Compact City Profile
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_tail_lamps.webp', 'Contemporary Rear Combination Lamps')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_tail_lamps.webp" alt="Contemporary Rear Combination Lamps" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Contemporary Rear Combination Lamps
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/compact_rear_design.webp', 'Sculpted Rear Bumper &amp; Stance')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/compact_rear_design.webp" alt="Sculpted Rear Bumper &amp; Stance" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> Sculpted Rear Bumper &amp; Stance
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/dashboard_cockpit.webp', 'Driver-Centric Digital Dashboard Layout')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/dashboard_cockpit.webp" alt="Driver-Centric Digital Dashboard Layout" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> Driver-Centric Digital Dashboard Layout
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/smartplay_touchscreen.webp', '7-inch SmartPlay Studio Infotainment')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/smartplay_touchscreen.webp" alt="7-inch SmartPlay Studio Infotainment" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> 7-inch SmartPlay Studio Infotainment
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/digital_instrument_cluster.webp', 'Digital Speedometer &amp; Trip Computer')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/digital_instrument_cluster.webp" alt="Digital Speedometer &amp; Trip Computer" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Digital Speedometer &amp; Trip Computer
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/steering_controls.webp', 'Steering-Mounted Audio &amp; Calling Controls')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/steering_controls.webp" alt="Steering-Mounted Audio &amp; Calling Controls" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Steering-Mounted Audio &amp; Calling Controls
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_cabin_seats.webp', 'Front Ergonomic Bucket Seats')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/front_cabin_seats.webp" alt="Front Ergonomic Bucket Seats" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Front Ergonomic Bucket Seats
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_cabin_seating.webp', 'Comfortable Rear Passenger Seating')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/alto-k10/gallery/rear_cabin_seating.webp" alt="Comfortable Rear Passenger Seating" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> Comfortable Rear Passenger Seating
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -783,6 +1020,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

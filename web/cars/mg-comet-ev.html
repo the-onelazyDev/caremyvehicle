@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 2025 Model</span>
           <span class="card-badge badge-safety">⭐ 4-Star Safety</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/apple-green-starry-black.webp" alt="MG Comet EV" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/colors/apple-green-starry-black.webp" alt="MG Comet EV" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/floating-widescreen.webp', 'Twin 10.25-inch Integrated Floating Widescreen Displays', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/floating-widescreen.webp" alt="Twin 10.25-inch Integrated Floating Widescreen Displays" loading="lazy">
+                <span>Twin 10.25-inch</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/wireless-carplay.webp', 'Wireless Apple CarPlay &amp; Android Auto', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/wireless-carplay.webp" alt="Wireless Apple CarPlay &amp; Android Auto" loading="lazy">
+                <span>Wireless Apple</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/leather-steering-controls.webp', 'iPod-Inspired Steering Wheel Controls', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/leather-steering-controls.webp" alt="iPod-Inspired Steering Wheel Controls" loading="lazy">
+                <span>iPod-Inspired Steering</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/two-door-four-seater.webp', 'Smart 2-Door 4-Seater Layout with One-Touch Tumble', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/two-door-four-seater.webp" alt="Smart 2-Door 4-Seater Layout with One-Touch Tumble" loading="lazy">
+                <span>Smart 2-Door</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-grey-cabin.webp', 'Airy Space Grey Cabin &amp; Ergonomic Seating', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-grey-cabin.webp" alt="Airy Space Grey Cabin &amp; Ergonomic Seating" loading="lazy">
+                <span>Airy Space</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/city-range-230km.webp', '230 km Certified Range &amp; Ultra-Agile 4.2m Turning Radius', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/city-range-230km.webp" alt="230 km Certified Range &amp; Ultra-Agile 4.2m Turning Radius" loading="lazy">
+                <span>230 km</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/ip67-prismatic-battery.webp', '17.3 kWh IP67-Rated Prismatic Li-Ion Battery', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/ip67-prismatic-battery.webp" alt="17.3 kWh IP67-Rated Prismatic Li-Ion Battery" loading="lazy">
+                <span>17.3 kWh</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/high-strength-body.webp', 'High-Strength Body with 17 Hot-Stamped Steel Panels', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/high-strength-body.webp" alt="High-Strength Body with 17 Hot-Stamped Steel Panels" loading="lazy">
+                <span>High-Strength Body</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -532,6 +636,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 MG Comet EV HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/floating-widescreen.webp', 'Twin 10.25-inch Integrated Floating Widescreen Displays')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/floating-widescreen.webp" alt="Twin 10.25-inch Integrated Floating Widescreen Displays" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> Twin 10.25-inch Integrated Floating Widescreen Displays
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/wireless-carplay.webp', 'Wireless Apple CarPlay &amp; Android Auto')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/wireless-carplay.webp" alt="Wireless Apple CarPlay &amp; Android Auto" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Wireless Apple CarPlay &amp; Android Auto
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/leather-steering-controls.webp', 'iPod-Inspired Steering Wheel Controls')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/leather-steering-controls.webp" alt="iPod-Inspired Steering Wheel Controls" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> iPod-Inspired Steering Wheel Controls
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/two-door-four-seater.webp', 'Smart 2-Door 4-Seater Layout with One-Touch Tumble')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/two-door-four-seater.webp" alt="Smart 2-Door 4-Seater Layout with One-Touch Tumble" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> Smart 2-Door 4-Seater Layout with One-Touch Tumble
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-grey-cabin.webp', 'Airy Space Grey Cabin &amp; Ergonomic Seating')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-grey-cabin.webp" alt="Airy Space Grey Cabin &amp; Ergonomic Seating" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Airy Space Grey Cabin &amp; Ergonomic Seating
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/city-range-230km.webp', '230 km Certified Range &amp; Ultra-Agile 4.2m Turning Radius')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/city-range-230km.webp" alt="230 km Certified Range &amp; Ultra-Agile 4.2m Turning Radius" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 230 km Certified Range &amp; Ultra-Agile 4.2m Turning Radius
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/ip67-prismatic-battery.webp', '17.3 kWh IP67-Rated Prismatic Li-Ion Battery')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/ip67-prismatic-battery.webp" alt="17.3 kWh IP67-Rated Prismatic Li-Ion Battery" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 17.3 kWh IP67-Rated Prismatic Li-Ion Battery
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/high-strength-body.webp', 'High-Strength Body with 17 Hot-Stamped Steel Panels')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/high-strength-body.webp" alt="High-Strength Body with 17 Hot-Stamped Steel Panels" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> High-Strength Body with 17 Hot-Stamped Steel Panels
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/serenity-lush-pack.webp', 'Serenity Lush Custom Interior Styling Pack')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/serenity-lush-pack.webp" alt="Serenity Lush Custom Interior Styling Pack" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> Serenity Lush Custom Interior Styling Pack
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/sundowner-lush-pack.webp', 'Sundowner Lush Custom Theme Pack')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/sundowner-lush-pack.webp" alt="Sundowner Lush Custom Theme Pack" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> Sundowner Lush Custom Theme Pack
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/night-cafe-edition.webp', 'Night Cafe Signature Graphic Edition')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/night-cafe-edition.webp" alt="Night Cafe Signature Graphic Edition" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Night Cafe Signature Graphic Edition
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-sticker-edition.webp', 'Space Explorer Custom Graphic Edition')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/mg-comet-ev/gallery/space-sticker-edition.webp" alt="Space Explorer Custom Graphic Edition" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> Space Explorer Custom Graphic Edition
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -747,6 +984,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

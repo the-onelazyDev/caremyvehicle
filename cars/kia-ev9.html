@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">🔥 Just Launched</span>
           <span class="card-badge badge-safety">⭐ 5-Star Euro NCAP</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/ev9/360/ocean-blue/1.webp" alt="Kia EV9" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/ev9/360/ocean-blue/1.webp" alt="Kia EV9" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (8 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 8 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp', 'All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille &amp; Starmap DRLs', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp" alt="All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille &amp; Starmap DRLs" loading="lazy">
+                <span>All-New Kia</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/digital-pattern-lighting-grille-ice-cube-led-headlamps.webp', 'Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps &amp; Dynamic Welcome Sequence', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/digital-pattern-lighting-grille-ice-cube-led-headlamps.webp" alt="Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps &amp; Dynamic Welcome Sequence" loading="lazy">
+                <span>Digital Pattern</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp', 'Trinity Panoramic Display Cockpit (12.3&quot; Digital Cluster + 5&quot; Climate Control Display + 12.3&quot; HD Navigation)', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp" alt="Trinity Panoramic Display Cockpit (12.3&quot; Digital Cluster + 5&quot; Climate Control Display + 12.3&quot; HD Navigation)" loading="lazy">
+                <span>Trinity Panoramic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp', '2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support &amp; Massage Function', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp" alt="2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support &amp; Massage Function" loading="lazy">
+                <span>2nd-Row Powered</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp', 'Dual Electric Sunroofs (Front Tilt &amp; Slide, Rear Panoramic Glass) providing Open-Sky Luxury', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp" alt="Dual Electric Sunroofs (Front Tilt &amp; Slide, Rear Panoramic Glass) providing Open-Sky Luxury" loading="lazy">
+                <span>Dual Electric</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/ultra-fast-350kw-dc-fast-charging-24-minutes.webp', '800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/ultra-fast-350kw-dc-fast-charging-24-minutes.webp" alt="800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)" loading="lazy">
+                <span>800V Ultra-Fast</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/meridian-14-speaker-premium-concert-sound-system.webp', '14-Speaker Meridian Premium Concert Sound System with Active Sound Design &amp; Surround Acoustics', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/meridian-14-speaker-premium-concert-sound-system.webp" alt="14-Speaker Meridian Premium Concert Sound System with Active Sound Design &amp; Surround Acoustics" loading="lazy">
+                <span>14-Speaker Meridian</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/level-2-plus-adas-with-27-autonomous-features-360-cam.webp', 'Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View &amp; Blind View Monitor', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/level-2-plus-adas-with-27-autonomous-features-360-cam.webp" alt="Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View &amp; Blind View Monitor" loading="lazy">
+                <span>Level 2+</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -532,6 +636,99 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Kia EV9 HD Photo Gallery (8 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp', 'All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille &amp; Starmap DRLs')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/all-new-kia-ev9-gt-line-electric-flagship-stance.webp" alt="All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille &amp; Starmap DRLs" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> All-New Kia EV9 GT-Line AWD Exterior Stance with Digital Pattern Lighting Grille &amp; Starmap DRLs
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/digital-pattern-lighting-grille-ice-cube-led-headlamps.webp', 'Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps &amp; Dynamic Welcome Sequence')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/digital-pattern-lighting-grille-ice-cube-led-headlamps.webp" alt="Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps &amp; Dynamic Welcome Sequence" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Digital Pattern Lighting Grille with Intelligent Ice Cube LED Projection Headlamps &amp; Dynamic Welcome Sequence
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp', 'Trinity Panoramic Display Cockpit (12.3&quot; Digital Cluster + 5&quot; Climate Control Display + 12.3&quot; HD Navigation)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/trinity-panoramic-display-futuristic-cockpit.webp" alt="Trinity Panoramic Display Cockpit (12.3&quot; Digital Cluster + 5&quot; Climate Control Display + 12.3&quot; HD Navigation)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Trinity Panoramic Display Cockpit (12.3&quot; Digital Cluster + 5&quot; Climate Control Display + 12.3&quot; HD Navigation)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp', '2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support &amp; Massage Function')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/second-row-powered-vip-relaxation-massage-seats.webp" alt="2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support &amp; Massage Function" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> 2nd-Row Powered VIP Lounge Relaxation Captain Seats with 8-Way Power Adjust, Leg Support &amp; Massage Function
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp', 'Dual Electric Sunroofs (Front Tilt &amp; Slide, Rear Panoramic Glass) providing Open-Sky Luxury')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/dual-electric-sunroof-panoramic-view.webp" alt="Dual Electric Sunroofs (Front Tilt &amp; Slide, Rear Panoramic Glass) providing Open-Sky Luxury" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Dual Electric Sunroofs (Front Tilt &amp; Slide, Rear Panoramic Glass) providing Open-Sky Luxury
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/ultra-fast-350kw-dc-fast-charging-24-minutes.webp', '800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/ultra-fast-350kw-dc-fast-charging-24-minutes.webp" alt="800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 800V Ultra-Fast DC Architecture with 350 kW Charging capability (10% to 80% charge in just 24 minutes)
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/meridian-14-speaker-premium-concert-sound-system.webp', '14-Speaker Meridian Premium Concert Sound System with Active Sound Design &amp; Surround Acoustics')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/meridian-14-speaker-premium-concert-sound-system.webp" alt="14-Speaker Meridian Premium Concert Sound System with Active Sound Design &amp; Surround Acoustics" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 14-Speaker Meridian Premium Concert Sound System with Active Sound Design &amp; Surround Acoustics
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/level-2-plus-adas-with-27-autonomous-features-360-cam.webp', 'Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View &amp; Blind View Monitor')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/ev9/gallery/level-2-plus-adas-with-27-autonomous-features-360-cam.webp" alt="Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View &amp; Blind View Monitor" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> Level 2+ ADAS Suite with 27 Autonomous Safety Features, 360° Surround View &amp; Blind View Monitor
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -672,6 +869,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

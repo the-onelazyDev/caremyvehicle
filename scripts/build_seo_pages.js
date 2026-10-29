@@ -70,6 +70,8 @@ CARS.forEach(car => {
 
   const variantsList = car.variants || [];
   const colorsList = car.colors || [];
+  const galleryList = car.gallery || [];
+  const anglesList = car.angles || [];
 
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -118,9 +120,14 @@ CARS.forEach(car => {
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -152,13 +159,23 @@ CARS.forEach(car => {
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -412,6 +429,40 @@ CARS.forEach(car => {
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -508,7 +559,27 @@ CARS.forEach(car => {
           <span class="card-badge badge-launch">${formatLaunchBadge(car.launchDate)}</span>
           <span class="card-badge badge-safety">${formatSafetyBadge(car.safetyRating)}</span>
         </div>
-        <img id="mainHeroImage" src="${car.heroImage}" alt="${escapeHtml(car.name)}" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="${car.heroImage}" alt="${escapeHtml(car.name)}" class="car-hero-main-img">
+        </div>
+        
+        ${galleryList.length > 0 ? `
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (${galleryList.length} HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All ${galleryList.length} &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            ${galleryList.slice(0, 8).map((item, gIdx) => `
+              <button type="button" class="thumb-pill-btn ${gIdx === 0 ? 'active' : ''}" onclick="switchHeroPhoto('${item.url}', '${escapeHtml(item.title)}', this)">
+                <img src="${item.url}" alt="${escapeHtml(item.title)}" loading="lazy">
+                <span>${escapeHtml(item.title.split(' ')[0] + ' ' + (item.title.split(' ')[1] || ''))}</span>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+        ` : ''}
       </div>
 
       <div class="car-hero-details">
@@ -565,6 +636,29 @@ CARS.forEach(car => {
         </div>
       </div>
     </article>
+
+    ${galleryList.length > 0 ? `
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 ${escapeHtml(car.name)} HD Photo Gallery (${galleryList.length} Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        ${galleryList.map((item, idx) => `
+          <figure class="gallery-photo-card" onclick="openLightbox('${item.url}', '${escapeHtml(item.title)}')">
+            <div class="photo-img-wrap">
+              <img src="${item.url}" alt="${escapeHtml(item.title)}" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#${idx + 1}</strong> ${escapeHtml(item.title)}
+            </figcaption>
+          </figure>
+        `).join('')}
+      </div>
+    </section>
+    ` : ''}
 
     <!-- Key Specifications Grid -->
     <section>
@@ -718,6 +812,45 @@ CARS.forEach(car => {
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

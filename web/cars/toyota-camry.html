@@ -45,9 +45,14 @@
 
   <style>
     .car-page-container {
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 16px 14px 60px;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     .car-breadcrumb {
       display: flex;
@@ -79,13 +84,23 @@
       justify-content: center;
       min-height: 280px;
     }
+    .car-hero-img-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 10px 0;
+    }
     .car-hero-main-img {
-      max-width: 85%;
+      max-width: 90%;
+      height: auto;
       max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
       filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
       transition: transform 0.3s ease;
+      display: block;
     }
     .car-hero-main-img:hover {
       transform: scale(1.03);
@@ -339,6 +354,40 @@
       .car-hero-media-box { min-height: 220px; padding: 20px 10px 10px; }
       .car-hero-main-img { max-width: 95%; max-height: 200px; }
     }
+    @media (max-width: 768px) {
+      .car-hero-media-box {
+        padding: 16px 10px 12px;
+        min-height: auto;
+      }
+      .car-hero-img-wrap {
+        min-height: 180px;
+        padding: 4px 0;
+      }
+      .car-hero-main-img {
+        max-width: 96%;
+        max-height: 200px;
+      }
+      .car-hero-details {
+        padding: 18px 14px;
+      }
+      .car-hero-title {
+        font-size: 24px;
+      }
+      .price-box-card {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .cta-seo-bar {
+        flex-direction: column;
+      }
+      .specs-grid-seo {
+        grid-template-columns: 1fr;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) for Google Search Rich Snippet -->
@@ -435,7 +484,62 @@
           <span class="card-badge badge-launch">✨ New Facelift</span>
           <span class="card-badge badge-safety">⭐ 5-Star Safety</span>
         </div>
-        <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white.webp?v=2" alt="Toyota Camry" class="car-hero-main-img">
+        <div class="car-hero-img-wrap">
+          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/colors/platinum-white.webp?v=2" alt="Toyota Camry" class="car-hero-main-img">
+        </div>
+        
+        
+        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <div class="hero-gallery-strip">
+          <div class="strip-header">
+            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+          </div>
+          <div class="gallery-thumbnails-scroll">
+            
+              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/camry-banner.webp?v=2', 'Luxury Meets Hybrid Innovation', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/camry-banner.webp?v=2" alt="Luxury Meets Hybrid Innovation" loading="lazy">
+                <span>Luxury Meets</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sprint-profile.webp?v=2', 'Sleek Aerodynamic Fastback Silhouette', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sprint-profile.webp?v=2" alt="Sleek Aerodynamic Fastback Silhouette" loading="lazy">
+                <span>Sleek Aerodynamic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/headlamps.webp?v=2', 'Dynamic LED Headlamps with Integrated DRLs', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/headlamps.webp?v=2" alt="Dynamic LED Headlamps with Integrated DRLs" loading="lazy">
+                <span>Dynamic LED</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/alloys.webp?v=2', '18-inch Multi-Spoke Two-Tone Alloys', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/alloys.webp?v=2" alt="18-inch Multi-Spoke Two-Tone Alloys" loading="lazy">
+                <span>18-inch Multi-Spoke</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear-comfort.webp?v=2', 'Executive Reclining Rear Seats with Touch Control', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear-comfort.webp?v=2" alt="Executive Reclining Rear Seats with Touch Control" loading="lazy">
+                <span>Executive Reclining</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/infotainment.webp?v=2', '9-inch Floating Touchscreen Infotainment', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/infotainment.webp?v=2" alt="9-inch Floating Touchscreen Infotainment" loading="lazy">
+                <span>9-inch Floating</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/jbl-audio.webp?v=2', '9-Speaker JBL Concert Sound System', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/jbl-audio.webp?v=2" alt="9-Speaker JBL Concert Sound System" loading="lazy">
+                <span>9-Speaker JBL</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hybrid-performance.webp?v=2', '218 PS Self-Charging Strong Hybrid Engine', this)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hybrid-performance.webp?v=2" alt="218 PS Self-Charging Strong Hybrid Engine" loading="lazy">
+                <span>218 PS</span>
+              </button>
+            
+          </div>
+        </div>
+        
       </div>
 
       <div class="car-hero-details">
@@ -537,6 +641,139 @@
         </div>
       </div>
     </article>
+
+    
+    <!-- CarWale-style Full Photo Gallery Grid (Exterior, Cabin, Technology, Engine) -->
+    <section id="gallerySection" class="car-gallery-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading-seo">📸 Toyota Camry HD Photo Gallery (12 Images)</h2>
+        <span class="section-badge-pill">100% Official OEM High-Res Renders</span>
+      </div>
+      <div class="gallery-cards-grid">
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/camry-banner.webp?v=2', 'Luxury Meets Hybrid Innovation')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/camry-banner.webp?v=2" alt="Luxury Meets Hybrid Innovation" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#1</strong> Luxury Meets Hybrid Innovation
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sprint-profile.webp?v=2', 'Sleek Aerodynamic Fastback Silhouette')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sprint-profile.webp?v=2" alt="Sleek Aerodynamic Fastback Silhouette" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#2</strong> Sleek Aerodynamic Fastback Silhouette
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/headlamps.webp?v=2', 'Dynamic LED Headlamps with Integrated DRLs')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/headlamps.webp?v=2" alt="Dynamic LED Headlamps with Integrated DRLs" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#3</strong> Dynamic LED Headlamps with Integrated DRLs
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/alloys.webp?v=2', '18-inch Multi-Spoke Two-Tone Alloys')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/alloys.webp?v=2" alt="18-inch Multi-Spoke Two-Tone Alloys" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#4</strong> 18-inch Multi-Spoke Two-Tone Alloys
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear-comfort.webp?v=2', 'Executive Reclining Rear Seats with Touch Control')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/rear-comfort.webp?v=2" alt="Executive Reclining Rear Seats with Touch Control" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#5</strong> Executive Reclining Rear Seats with Touch Control
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/infotainment.webp?v=2', '9-inch Floating Touchscreen Infotainment')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/infotainment.webp?v=2" alt="9-inch Floating Touchscreen Infotainment" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#6</strong> 9-inch Floating Touchscreen Infotainment
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/jbl-audio.webp?v=2', '9-Speaker JBL Concert Sound System')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/jbl-audio.webp?v=2" alt="9-Speaker JBL Concert Sound System" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#7</strong> 9-Speaker JBL Concert Sound System
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hybrid-performance.webp?v=2', '218 PS Self-Charging Strong Hybrid Engine')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hybrid-performance.webp?v=2" alt="218 PS Self-Charging Strong Hybrid Engine" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#8</strong> 218 PS Self-Charging Strong Hybrid Engine
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/safety-suite.webp?v=2', '9 SRS Airbags, VSC &amp; Active Traction Control')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/safety-suite.webp?v=2" alt="9 SRS Airbags, VSC &amp; Active Traction Control" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#9</strong> 9 SRS Airbags, VSC &amp; Active Traction Control
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hud-cluster.webp?v=2', '10-inch Color Head-Up Display')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/hud-cluster.webp?v=2" alt="10-inch Color Head-Up Display" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#10</strong> 10-inch Color Head-Up Display
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sunroof.webp?v=2', 'Electric Tilt &amp; Slide Moonroof')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/sunroof.webp?v=2" alt="Electric Tilt &amp; Slide Moonroof" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#11</strong> Electric Tilt &amp; Slide Moonroof
+            </figcaption>
+          </figure>
+        
+          <figure class="gallery-photo-card" onclick="openLightbox('https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/tnga-chassis.webp?v=2', 'TNGA Low-Center-of-Gravity Global Architecture')">
+            <div class="photo-img-wrap">
+              <img src="https://ik.imagekit.io/2908vvlod/cars/toyota-camry/gallery/tnga-chassis.webp?v=2" alt="TNGA Low-Center-of-Gravity Global Architecture" loading="lazy">
+              <span class="photo-zoom-badge">🔍 Zoom</span>
+            </div>
+            <figcaption class="photo-caption">
+              <strong>#12</strong> TNGA Low-Center-of-Gravity Global Architecture
+            </figcaption>
+          </figure>
+        
+      </div>
+    </section>
+    
 
     <!-- Key Specifications Grid -->
     <section>
@@ -700,6 +937,45 @@
           if (cell) cell.innerHTML = '<strong>' + formatLakh(varTotal) + '</strong>';
         }
       });
+    }
+
+    function switchHeroPhoto(imgUrl, title, btn) {
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openLightbox(imgUrl, caption) {
+      let lb = document.getElementById('cmvLightbox');
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.id = 'cmvLightbox';
+        lb.className = 'cmv-lightbox-modal';
+        lb.innerHTML = '<div class="lightbox-overlay" onclick="closeLightbox()"></div>' +
+          '<div class="lightbox-content">' +
+            '<button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>' +
+            '<img id="lightboxImg" src="" alt="">' +
+            '<div id="lightboxCaption" class="lightbox-caption"></div>' +
+          '</div>';
+        document.body.appendChild(lb);
+      }
+      document.getElementById('lightboxImg').src = imgUrl;
+      document.getElementById('lightboxCaption').textContent = caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('cmvLightbox');
+      if (lb) lb.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     function switchColor(imgUrl, colorName, btn) {

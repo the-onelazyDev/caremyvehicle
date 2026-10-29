@@ -3328,3 +3328,272 @@ a {
     font-size: 24px !important;
   }
 }
+
+/* ==========================================================================
+   CARWALE-STYLE VEHICLE PHOTO GALLERY & LIGHTBOX STYLES
+   ========================================================================== */
+
+/* Hero Image Wrap */
+.car-hero-img-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  background: radial-gradient(circle at center, #FFFFFF 20%, #F1F5F9 100%);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+#mainHeroImage {
+  max-width: 90%;
+  max-height: 280px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 14px 20px rgba(15, 23, 42, 0.16));
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Quick Photo Strip under Hero Image */
+.hero-gallery-strip {
+  margin-top: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.strip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
+.view-all-link {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.gallery-thumbnails-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.gallery-thumbnails-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.thumb-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 4px 8px 4px 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #334155;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.thumb-pill-btn img {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.thumb-pill-btn:hover {
+  border-color: #94A3B8;
+  background: #FFFFFF;
+}
+
+.thumb-pill-btn.active {
+  background: #EFF6FF;
+  border-color: #2563EB;
+  color: #1D4ED8;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Section Title Wrap */
+.section-title-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.section-badge-pill {
+  font-size: 11px;
+  font-weight: 800;
+  color: #16A34A;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* Full Photo Gallery Section */
+.car-gallery-section {
+  margin: 36px 0;
+}
+
+.gallery-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .gallery-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.gallery-photo-card {
+  margin: 0;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-photo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.photo-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  background: #F1F5F9;
+  overflow: hidden;
+}
+
+.photo-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-photo-card:hover .photo-img-wrap img {
+  transform: scale(1.04);
+}
+
+.photo-zoom-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.photo-caption {
+  padding: 10px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.4;
+  border-top: 1px solid #F1F5F9;
+}
+
+.photo-caption strong {
+  color: #2563EB;
+  margin-right: 4px;
+}
+
+/* Lightbox Modal */
+.cmv-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cmv-lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.lightbox-content img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-caption {
+  padding: 12px 18px;
+  background: #0F172A;
+  color: #F8FAFC;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #FFF;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
