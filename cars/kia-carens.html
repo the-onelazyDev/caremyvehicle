@@ -572,31 +572,58 @@
 
         <!-- City Selector -->
         <div>
-          <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Select City for Accurate On-Road Pricing:</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:6px;">
+            <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Select City for Accurate On-Road Pricing:</span>
+            <button type="button" class="btn-cell-detect" onclick="detectCarPageLocation()" style="font-size:11px; padding:3px 9px;">🎯 Detect My Location</button>
+          </div>
           <div class="city-picker-row">
             
               <button type="button" class="city-pill-btn active" data-city-id="delhi" onclick="switchCity('delhi', 'Delhi NCR')">
-                📍 Delhi NCR
+                📍 Delhi NCR (10% RTO)
               </button>
             
               <button type="button" class="city-pill-btn " data-city-id="mumbai" onclick="switchCity('mumbai', 'Mumbai')">
-                📍 Mumbai
+                📍 Mumbai (12% RTO)
               </button>
             
               <button type="button" class="city-pill-btn " data-city-id="bengaluru" onclick="switchCity('bengaluru', 'Bengaluru')">
-                📍 Bengaluru
+                📍 Bengaluru (15% RTO)
               </button>
             
               <button type="button" class="city-pill-btn " data-city-id="hyderabad" onclick="switchCity('hyderabad', 'Hyderabad')">
-                📍 Hyderabad
+                📍 Hyderabad (14% RTO)
               </button>
             
               <button type="button" class="city-pill-btn " data-city-id="pune" onclick="switchCity('pune', 'Pune')">
-                📍 Pune
+                📍 Pune (12% RTO)
               </button>
             
               <button type="button" class="city-pill-btn " data-city-id="chennai" onclick="switchCity('chennai', 'Chennai')">
-                📍 Chennai
+                📍 Chennai (13% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="ahmedabad" onclick="switchCity('ahmedabad', 'Ahmedabad')">
+                📍 Ahmedabad (6% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="kolkata" onclick="switchCity('kolkata', 'Kolkata')">
+                📍 Kolkata (10% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="jaipur" onclick="switchCity('jaipur', 'Jaipur')">
+                📍 Jaipur (10% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="lucknow" onclick="switchCity('lucknow', 'Lucknow')">
+                📍 Lucknow (10% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="chandigarh" onclick="switchCity('chandigarh', 'Chandigarh')">
+                📍 Chandigarh (8% RTO)
+              </button>
+            
+              <button type="button" class="city-pill-btn " data-city-id="kochi" onclick="switchCity('kochi', 'Kochi')">
+                📍 Kochi (12% RTO)
               </button>
             
           </div>
@@ -1028,7 +1055,7 @@
   </footer>
 
   <script>
-    const CITIES = [{"id":"delhi","name":"Delhi NCR","rtoRate":0.1,"cess":500,"fastag":500},{"id":"mumbai","name":"Mumbai","rtoRate":0.12,"cess":1500,"fastag":500},{"id":"bengaluru","name":"Bengaluru","rtoRate":0.15,"cess":2000,"fastag":500},{"id":"hyderabad","name":"Hyderabad","rtoRate":0.14,"cess":1200,"fastag":500},{"id":"pune","name":"Pune","rtoRate":0.12,"cess":1500,"fastag":500},{"id":"chennai","name":"Chennai","rtoRate":0.13,"cess":1000,"fastag":500}];
+    const CITIES = [{"id":"delhi","name":"Delhi NCR","rtoRate":0.1,"cess":500,"fastag":500,"lat":28.6139,"lon":77.209},{"id":"mumbai","name":"Mumbai","rtoRate":0.12,"cess":1500,"fastag":500,"lat":19.076,"lon":72.8777},{"id":"bengaluru","name":"Bengaluru","rtoRate":0.15,"cess":2000,"fastag":500,"lat":12.9716,"lon":77.5946},{"id":"hyderabad","name":"Hyderabad","rtoRate":0.14,"cess":1200,"fastag":500,"lat":17.385,"lon":78.4867},{"id":"pune","name":"Pune","rtoRate":0.12,"cess":1500,"fastag":500,"lat":18.5204,"lon":73.8567},{"id":"chennai","name":"Chennai","rtoRate":0.13,"cess":1000,"fastag":500,"lat":13.0827,"lon":80.2707},{"id":"ahmedabad","name":"Ahmedabad","rtoRate":0.06,"cess":800,"fastag":500,"lat":23.0225,"lon":72.5714},{"id":"kolkata","name":"Kolkata","rtoRate":0.1,"cess":1000,"fastag":500,"lat":22.5726,"lon":88.3639},{"id":"jaipur","name":"Jaipur","rtoRate":0.1,"cess":800,"fastag":500,"lat":26.9124,"lon":75.7873},{"id":"lucknow","name":"Lucknow","rtoRate":0.1,"cess":800,"fastag":500,"lat":26.8467,"lon":80.9462},{"id":"chandigarh","name":"Chandigarh","rtoRate":0.08,"cess":600,"fastag":500,"lat":30.7333,"lon":76.7794},{"id":"kochi","name":"Kochi","rtoRate":0.12,"cess":1200,"fastag":500,"lat":9.9312,"lon":76.2673}];
     const minPrice = 1052000;
 
     function calculateOnRoad(exShowroom, cityId) {
@@ -1043,6 +1070,32 @@
     function formatLakh(amt) {
       const lakh = (amt / 100000).toFixed(2);
       return '₹' + lakh + ' Lakh';
+    }
+
+    function detectCarPageLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          let closest = CITIES[0];
+          let minD = Infinity;
+          for (const c of CITIES) {
+            if (!c.lat || !c.lon) continue;
+            const d = Math.hypot(c.lat - pos.coords.latitude, c.lon - pos.coords.longitude);
+            if (d < minD) { minD = d; closest = c; }
+          }
+          switchCity(closest.id, closest.name);
+          alert('🎯 Located: ' + closest.name + ' (' + Math.round(closest.rtoRate * 100) + '% State RTO)');
+        }, () => {
+          fetch('https://ipapi.co/json/').then(r => r.json()).then(data => {
+            if (data && data.city) {
+              const matched = CITIES.find(c => c.name.toLowerCase().includes(data.city.toLowerCase()));
+              if (matched) {
+                switchCity(matched.id, matched.name);
+                alert('🎯 Located via Network: ' + matched.name);
+              }
+            }
+          }).catch(() => {});
+        }, { timeout: 5000 });
+      }
     }
 
     function switchCity(cityId, cityName) {

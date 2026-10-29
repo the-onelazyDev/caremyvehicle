@@ -612,11 +612,14 @@ CARS.forEach(car => {
 
         <!-- City Selector -->
         <div>
-          <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Select City for Accurate On-Road Pricing:</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:6px;">
+            <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Select City for Accurate On-Road Pricing:</span>
+            <button type="button" class="btn-cell-detect" onclick="detectCarPageLocation()" style="font-size:11px; padding:3px 9px;">🎯 Detect My Location</button>
+          </div>
           <div class="city-picker-row">
             ${CITIES.map((c, i) => `
               <button type="button" class="city-pill-btn ${i === 0 ? 'active' : ''}" data-city-id="${c.id}" onclick="switchCity('${c.id}', '${c.name}')">
-                📍 ${c.name}
+                📍 ${c.name} (${Math.round(c.rtoRate * 100)}% RTO)
               </button>
             `).join('')}
           </div>
@@ -898,6 +901,32 @@ CARS.forEach(car => {
     function formatLakh(amt) {
       const lakh = (amt / 100000).toFixed(2);
       return '₹' + lakh + ' Lakh';
+    }
+
+    function detectCarPageLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          let closest = CITIES[0];
+          let minD = Infinity;
+          for (const c of CITIES) {
+            if (!c.lat || !c.lon) continue;
+            const d = Math.hypot(c.lat - pos.coords.latitude, c.lon - pos.coords.longitude);
+            if (d < minD) { minD = d; closest = c; }
+          }
+          switchCity(closest.id, closest.name);
+          alert('🎯 Located: ' + closest.name + ' (' + Math.round(closest.rtoRate * 100) + '% State RTO)');
+        }, () => {
+          fetch('https://ipapi.co/json/').then(r => r.json()).then(data => {
+            if (data && data.city) {
+              const matched = CITIES.find(c => c.name.toLowerCase().includes(data.city.toLowerCase()));
+              if (matched) {
+                switchCity(matched.id, matched.name);
+                alert('🎯 Located via Network: ' + matched.name);
+              }
+            }
+          }).catch(() => {});
+        }, { timeout: 5000 });
+      }
     }
 
     function switchCity(cityId, cityName) {

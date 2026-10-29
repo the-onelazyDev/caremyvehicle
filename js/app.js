@@ -635,13 +635,65 @@ function setupEventListeners() {
 }
 
 
+
+// 7. City Selection & Auto-Detect Location Engine
+function renderCityModalList(filterText = '') {
+  const container = document.getElementById('citiesListContainer');
+  if (!container) return;
+
+  const q = (filterText || '').toLowerCase().trim();
+  const matched = CITIES.filter(c => c.name.toLowerCase().includes(q) || c.id.includes(q));
+
+  if (matched.length === 0) {
+    container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:20px; color:var(--text-muted); font-size:13px;">No city found matching "' + filterText.replace(/</g, '&lt;') + '"</div>';
+    return;
+  }
+
+  container.innerHTML = matched.map(c => {
+    const isSel = c.id === selectedCityId;
+    const rtoPct = Math.round(c.rtoRate * 100);
+    return '<button type="button" class="city-select-card ' + (isSel ? 'active' : '') + '" data-city-id="' + c.id + '" onclick="window.selectCity(\'' + c.id + '\')">' +
+      '<div class="city-name-text">' + c.name + (isSel ? ' ✓' : '') + '</div>' +
+      '<div class="city-rto-tag">' + rtoPct + '% State RTO + Cess</div>' +
+    '</button>';
+  }).join('');
+}
+
+window.filterCitiesList = function(val) {
+  renderCityModalList(val);
+};
+
+window.openCityModal = function() {
+  const modal = document.getElementById('cityModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    renderCityModalList();
+    const input = document.getElementById('citySearchInput');
+    if (input) {
+      input.value = '';
+      setTimeout(() => input.focus(), 120);
+    }
+  }
+};
+
 window.selectCity = function(cityId) {
   selectedCityId = cityId;
-  const city = CITIES.find(c => c.id === cityId);
-  if (city && cityNameDisplay) cityNameDisplay.textContent = city.name;
+  const city = CITIES.find(c => c.id === cityId) || CITIES[0];
+  try {
+    localStorage.setItem('cmv_user_city', cityId);
+  } catch(e) {}
+
+  if (cityNameDisplay) cityNameDisplay.textContent = city.name;
   const heroCity = document.getElementById('heroCityName');
-  if (heroCity && city) heroCity.textContent = city.name + ' (' + Math.round(city.rtoRate * 100) + '% RTO)';
+  if (heroCity && city) {
+    heroCity.textContent = city.name + ' (' + Math.round(city.rtoRate * 100) + '% RTO)';
+  }
+
+  const cityModal = document.getElementById('cityModal');
   if (cityModal) cityModal.classList.remove('active');
+  document.body.style.overflow = '';
+
   renderTrendingLaunches();
   renderCompareShelf();
   renderCars();
@@ -649,6 +701,85 @@ window.selectCity = function(cityId) {
   if (currentModalCar) {
     window.openCarModal(currentModalCar.id);
   }
+};
+
+window.detectUserLocation = async function() {
+  const detectBtn = document.getElementById('detectLocationBtn');
+  const detectSpinner = document.getElementById('detectSpinner');
+  const detectIcon = document.getElementById('detectIcon');
+  const detectLabel = document.getElementById('detectLabel');
+
+  function setDetecting(loading) {
+    if (detectSpinner) detectSpinner.style.display = loading ? 'inline-block' : 'none';
+    if (detectIcon) detectIcon.style.display = loading ? 'none' : 'inline-block';
+    if (detectLabel) detectLabel.textContent = loading ? 'Detecting your city & RTO...' : 'Detect My Location (Auto RTO)';
+    if (detectBtn) detectBtn.disabled = loading;
+  }
+
+  setDetecting(true);
+
+  function findClosestCity(lat, lon) {
+    let closest = CITIES[0];
+    let minDistance = Infinity;
+    for (const city of CITIES) {
+      if (!city.lat || !city.lon) continue;
+      const d = Math.hypot(city.lat - lat, city.lon - lon);
+      if (d < minDistance) {
+        minDistance = d;
+        closest = city;
+      }
+    }
+    return closest;
+  }
+
+  // 1. Try Browser HTML5 Geolocation (GPS)
+  if (navigator.geolocation) {
+    try {
+      const position = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, {
+          timeout: 6000,
+          enableHighAccuracy: false
+        });
+      });
+
+      const { latitude, longitude } = position.coords;
+      const matchedCity = findClosestCity(latitude, longitude);
+      window.selectCity(matchedCity.id);
+      window.showToast('🎯 Auto-Detected: ' + matchedCity.name + ' (' + Math.round(matchedCity.rtoRate * 100) + '% RTO)');
+      setDetecting(false);
+      return;
+    } catch (geoError) {
+      console.log('GPS Geolocation declined or timed out, trying IP fallback...', geoError);
+    }
+  }
+
+  // 2. Fallback to IP Geolocation
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    if (res.ok) {
+      const data = await res.json();
+      let matchedCity = null;
+      if (data && data.city) {
+        const qCity = data.city.toLowerCase();
+        matchedCity = CITIES.find(c => c.name.toLowerCase().includes(qCity) || qCity.includes(c.id));
+      }
+      if (!matchedCity && data && data.latitude && data.longitude) {
+        matchedCity = findClosestCity(data.latitude, data.longitude);
+      }
+      if (matchedCity) {
+        window.selectCity(matchedCity.id);
+        window.showToast('🎯 Located via Network: ' + matchedCity.name + ' (' + Math.round(matchedCity.rtoRate * 100) + '% RTO)');
+        setDetecting(false);
+        return;
+      }
+    }
+  } catch (ipError) {
+    console.log('IP location fallback error:', ipError);
+  }
+
+  setDetecting(false);
+  window.selectCity('delhi');
+  window.showToast('📍 Defaulted to Delhi NCR. Tap any city below to switch.');
 };
 
 // Modal Tab Navigation
@@ -2284,3 +2415,11 @@ window.selectCategory = function(cat) {
     catalog.scrollIntoView({ behavior: 'smooth' });
   }
 };
+
+// Restore saved city from previous session
+try {
+  const savedCity = localStorage.getItem('cmv_user_city');
+  if (savedCity && CITIES.some(c => c.id === savedCity)) {
+    window.selectCity(savedCity);
+  }
+} catch(e) {}

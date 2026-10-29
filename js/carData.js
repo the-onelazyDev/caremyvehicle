@@ -2,12 +2,18 @@
 // Real specifications, all variants, interactive colors, photo galleries, and city-wise RTO pricing
 
 export const CITIES = [
-  { id: 'delhi', name: 'Delhi NCR', rtoRate: 0.10, cess: 500, fastag: 500 },
-  { id: 'mumbai', name: 'Mumbai', rtoRate: 0.12, cess: 1500, fastag: 500 },
-  { id: 'bengaluru', name: 'Bengaluru', rtoRate: 0.15, cess: 2000, fastag: 500 },
-  { id: 'hyderabad', name: 'Hyderabad', rtoRate: 0.14, cess: 1200, fastag: 500 },
-  { id: 'pune', name: 'Pune', rtoRate: 0.12, cess: 1500, fastag: 500 },
-  { id: 'chennai', name: 'Chennai', rtoRate: 0.13, cess: 1000, fastag: 500 }
+  { id: 'delhi', name: 'Delhi NCR', rtoRate: 0.10, cess: 500, fastag: 500, lat: 28.6139, lon: 77.2090 },
+  { id: 'mumbai', name: 'Mumbai', rtoRate: 0.12, cess: 1500, fastag: 500, lat: 19.0760, lon: 72.8777 },
+  { id: 'bengaluru', name: 'Bengaluru', rtoRate: 0.15, cess: 2000, fastag: 500, lat: 12.9716, lon: 77.5946 },
+  { id: 'hyderabad', name: 'Hyderabad', rtoRate: 0.14, cess: 1200, fastag: 500, lat: 17.3850, lon: 78.4867 },
+  { id: 'pune', name: 'Pune', rtoRate: 0.12, cess: 1500, fastag: 500, lat: 18.5204, lon: 73.8567 },
+  { id: 'chennai', name: 'Chennai', rtoRate: 0.13, cess: 1000, fastag: 500, lat: 13.0827, lon: 80.2707 },
+  { id: 'ahmedabad', name: 'Ahmedabad', rtoRate: 0.06, cess: 800, fastag: 500, lat: 23.0225, lon: 72.5714 },
+  { id: 'kolkata', name: 'Kolkata', rtoRate: 0.10, cess: 1000, fastag: 500, lat: 22.5726, lon: 88.3639 },
+  { id: 'jaipur', name: 'Jaipur', rtoRate: 0.10, cess: 800, fastag: 500, lat: 26.9124, lon: 75.7873 },
+  { id: 'lucknow', name: 'Lucknow', rtoRate: 0.10, cess: 800, fastag: 500, lat: 26.8467, lon: 80.9462 },
+  { id: 'chandigarh', name: 'Chandigarh', rtoRate: 0.08, cess: 600, fastag: 500, lat: 30.7333, lon: 76.7794 },
+  { id: 'kochi', name: 'Kochi', rtoRate: 0.12, cess: 1200, fastag: 500, lat: 9.9312, lon: 76.2673 }
 ];
 
 export const CARS = [
