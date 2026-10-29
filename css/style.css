@@ -2668,3 +2668,6 @@ a {
 .brands-shelf-scroll .brand-pill-name{font-size:13px;font-weight:500;color:#334155;font-family:inherit;}
 @media (max-width:1024px){.brands-shelf-scroll{grid-template-columns:repeat(4,1fr) !important;}}
 @media (max-width:640px){.brands-shelf-scroll{grid-template-columns:repeat(3,1fr) !important;}.brands-shelf-scroll .brand-pill-card{height:104px;}.brands-shelf-scroll .brand-pill-logo{height:40px !important;max-width:72px;}.brands-shelf-scroll .brand-pill-name{font-size:11.5px;}}
+
+.car-seo-title-link { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+.car-seo-title-link:hover { color: var(--primary); }

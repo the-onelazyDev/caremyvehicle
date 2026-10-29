@@ -216,7 +216,7 @@ function renderTrendingLaunches() {
         </div>
         <div class="trending-card-body">
           <span class="trending-brand">${car.brand} • ${car.bodyType}</span>
-          <h3 class="trending-title">${car.name}</h3>
+          <h3 class="trending-title"><a href="/cars/${car.id}" class="car-seo-title-link">${car.name}</a></h3>
           <div class="trending-specs-mini">
             <span>⛽ ${(car.fuelTypes || []).join('/')}</span>
             <span>•</span>
@@ -434,7 +434,7 @@ function renderCars() {
               ${compareList.includes(car.id) ? '✓ Compare' : '⚖️ Compare'}
             </button>
           </div>
-          <h3 class="card-title">${car.name}</h3>
+          <h3 class="card-title"><a href="/cars/${car.id}" class="car-seo-title-link">${car.name}</a></h3>
           <p class="card-tagline">${car.tagline}</p>
 
           <div class="card-specs-row">
