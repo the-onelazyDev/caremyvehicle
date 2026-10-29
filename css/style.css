@@ -4590,3 +4590,447 @@ h1, h2, h3, .brand-font {
   margin-left: 6px;
   vertical-align: middle;
 }
+
+/* ==========================================================================
+   HOMEPAGE HORIZONTAL SECTIONS & SHELVES (CARWALE/TRAVOMINT HYBRID)
+   ========================================================================== */
+
+/* Pagination Controls */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pg-btn {
+  background: #FFFFFF;
+  border: 1px solid #D6DCE1;
+  color: #1E293B;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.pg-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.pg-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(255, 81, 0, 0.25);
+}
+
+.pg-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Horizontal Scroll Shelf Container */
+.horizontal-shelf {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 8px 4px 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.horizontal-shelf::-webkit-scrollbar {
+  display: none;
+}
+
+/* Horizontal Car Card */
+.shelf-car-card {
+  min-width: 260px;
+  max-width: 270px;
+  background: #FFFFFF;
+  border: 1px solid #E8ECEF;
+  border-radius: 16px;
+  padding: 14px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.shelf-car-card:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 6px 20px rgba(255, 81, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.shelf-car-media {
+  background: radial-gradient(circle at center, #FFFFFF 40%, #FFF5EF 100%);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shelf-car-img {
+  max-width: 95%;
+  max-height: 110px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+}
+
+.shelf-badge-pill {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #FFFFFF;
+  border: 1px solid #FFE4D6;
+  color: var(--primary);
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+.shelf-car-brand {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.shelf-car-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 2px 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf-car-price {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.shelf-car-sub {
+  font-size: 11px;
+  color: #64748B;
+  margin-bottom: 10px;
+}
+
+.btn-shelf-action {
+  margin-top: auto;
+  width: 100%;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 7px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-shelf-action:hover {
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+/* End of Shelf "View More" Card */
+.shelf-view-more-card {
+  min-width: 200px;
+  max-width: 220px;
+  background: linear-gradient(135deg, #FFF4EE 0%, #FFFFFF 100%);
+  border: 2px dashed #FFD4C2;
+  border-radius: 16px;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: all 0.2s ease;
+}
+
+.shelf-view-more-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 81, 0, 0.12);
+}
+
+.view-more-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(255, 81, 0, 0.3);
+}
+
+.view-more-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 2px;
+}
+
+.view-more-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Sub-filter Pills (Sub Compact SUV, Hatchback, Sedan) - Images 1 & 2 */
+.sub-filter-row {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.sub-pill-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.sub-pill-btn:hover, .sub-pill-btn.active {
+  background: #FFFFFF;
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+/* Budget Tabs (10-20 Lakh, 20-30 Lakh, Luxury) - Image 2 */
+.budget-tabs-row {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 12px;
+}
+
+.budget-tab-btn {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.budget-tab-btn.active {
+  color: var(--primary);
+}
+
+.budget-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* Offers Cards */
+.offers-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+}
+
+.offer-card {
+  min-width: 290px;
+  max-width: 310px;
+  background: linear-gradient(135deg, #FFF9F5 0%, #FFFFFF 100%);
+  border: 1px solid #FFE4D6;
+  border-radius: 16px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+.offer-savings-badge {
+  display: inline-block;
+  background: #DC2626;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Check New Car On-Road Price Box (Image 3) */
+.onroad-checker-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+
+.onroad-checker-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 16px 0 12px;
+}
+
+.checker-input-box {
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.checker-input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #0F172A;
+}
+
+/* Find The Cars Of Your Choice (Image 3) */
+.choice-finder-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 22px 24px;
+}
+
+.choice-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.choice-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #64748B;
+  min-width: 90px;
+}
+
+.choice-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.choice-pill {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E293B;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.choice-pill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* Cars by Fuel Type Carousel (Image 4) */
+.fuel-tabs-row {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 16px;
+}
+
+.fuel-tab-btn {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.fuel-tab-btn.active {
+  color: var(--primary);
+}
+
+.fuel-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+@media (max-width: 640px) {
+  .onroad-checker-inputs {
+    grid-template-columns: 1fr;
+  }
+}

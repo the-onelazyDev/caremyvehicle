@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>All New Cars in India (2024–2026) — Real On-Road Prices & Variants | Care My Vehicle</title>
+  <meta name="description" content="Explore every new car model in India with transparent city on-road prices, variant breakups, official colors, and zero dealer spam. Browse with smart filters & pagination.">
+  <meta name="theme-color" content="#FF5100">
+
+  <!-- Canonical & Search Engine Robots -->
+  <link rel="canonical" href="https://www.caremyvehicle.in/cars.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Google Fonts: Mulish & Overlock -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Overlock:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar (Travomint style) -->
+  <div class="top-utility-bar">
+    <div>
+      ✉️ support@caremyvehicle.in &bull; 100% Spam-Free Automotive Radar
+    </div>
+    <div class="top-utility-links">
+      <a href="/#trendingSection">⭐ Trending Launches</a>
+      <a href="/#compareSection">⚖️ Compare Rivals</a>
+      <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:800;">
+        📸 @caremyvehicle
+      </a>
+    </div>
+  </div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-lockup">
+        <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+          <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
+          <div>
+            <div class="brand-name brand-font" style="font-size:24px; font-weight:900; color:var(--primary); line-height:1;">Care My <span style="color:#1E293B;">Vehicle</span></div>
+            <div class="brand-tagline" style="font-size:10.5px; font-weight:700; color:var(--text-muted);">100% Spam-Free Vehicle Radar</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="nav-tabs-bar">
+        <a href="/" class="nav-tab-item">
+          <span>🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="/cars.html" class="nav-tab-item active">
+          <span>🚗</span>
+          <span>All Cars</span>
+        </a>
+        <a href="/cars.html?fuel=ev" class="nav-tab-item">
+          <span>⚡</span>
+          <span>EVs</span>
+        </a>
+        <a href="/#compareSection" class="nav-tab-item">
+          <span>⚖️</span>
+          <span>Compare</span>
+        </a>
+        <a href="/#newsSection" class="nav-tab-item">
+          <span>📰</span>
+          <span>Reviews</span>
+        </a>
+      </nav>
+
+      <div class="header-actions-right">
+        <a href="/" class="btn-orange-pill" style="text-decoration:none;">
+          <span>&larr; Back to Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Container -->
+  <div class="section-container" style="padding-top:24px;" id="catalogTopAnchor">
+    <nav class="car-breadcrumb" style="margin-bottom:12px;">
+      <a href="/">Home</a> &rsaquo;
+      <span>All Car Models Catalog</span>
+    </nav>
+
+    <div style="margin-bottom:20px;">
+      <h1 class="brand-font" style="font-size:32px; color:#0F172A; margin-bottom:6px;">All New Cars in India (2024–2026)</h1>
+      <p style="font-size:14px; color:var(--text-muted);">
+        Explore India's complete new car catalog with verified on-road prices in <strong id="catalogCityLabel">Delhi NCR</strong>, 20 cars per page, granular specs, and zero dealer spam.
+      </p>
+    </div>
+
+    <!-- Filter Control Card -->
+    <div class="filter-dashboard-card" style="margin-bottom:24px;">
+      <!-- Search Input -->
+      <div style="margin-bottom:16px;">
+        <input type="text" id="catalogSearchInput" class="cell-input" placeholder="🔍 Search car by name, brand, or model..." style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:10px; padding:10px 14px; width:100%;" oninput="window.handleSearch(this.value)">
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div style="margin-bottom:14px;">
+        <span style="font-size:12px; font-weight:800; color:#64748B; text-transform:uppercase; margin-bottom:6px; display:block;">Body Type / Category:</span>
+        <div class="filter-chips-scroll">
+          <button type="button" class="filter-chip cat-pill active" data-category="all" onclick="window.setCategory('all')">🚗 All Cars</button>
+          <button type="button" class="filter-chip cat-pill" data-category="suv" onclick="window.setCategory('suv')">🚙 SUVs & Coupes</button>
+          <button type="button" class="filter-chip cat-pill" data-category="sub-compact-suv" onclick="window.setCategory('sub-compact-suv')">🚙 Sub Compact SUV</button>
+          <button type="button" class="filter-chip cat-pill" data-category="sedan" onclick="window.setCategory('sedan')">🚘 Sedans</button>
+          <button type="button" class="filter-chip cat-pill" data-category="hatchback" onclick="window.setCategory('hatchback')">🏎️ Hatchbacks</button>
+          <button type="button" class="filter-chip cat-pill" data-category="mpv" onclick="window.setCategory('mpv')">🚐 MPVs / 7-Seaters</button>
+          <button type="button" class="filter-chip cat-pill" data-category="ev" onclick="window.setCategory('ev')">⚡ Electric (EV)</button>
+          <button type="button" class="filter-chip cat-pill" data-category="luxury" onclick="window.setCategory('luxury')">💎 Luxury</button>
+        </div>
+      </div>
+
+      <!-- Dropdown Selectors: Budget, Fuel, Brand, Sort -->
+      <div class="filter-facets-row" style="flex-wrap:wrap; gap:12px;">
+        <div class="facet-group">
+          <span class="facet-label">Budget:</span>
+          <select id="budgetFilterSelect" class="facet-select" onchange="window.setBudget(this.value)">
+            <option value="all">Any Budget</option>
+            <option value="under-5l">Under ₹5 Lakh</option>
+            <option value="under-10l">Under ₹10 Lakh</option>
+            <option value="under-15l">Under ₹15 Lakh</option>
+            <option value="above-10l">Above ₹10 Lakh</option>
+            <option value="10-20l">₹10 – ₹20 Lakh</option>
+            <option value="20-30l">₹20 – ₹30 Lakh</option>
+            <option value="above-25l">Above ₹25 Lakh</option>
+          </select>
+        </div>
+
+        <div class="facet-group">
+          <span class="facet-label">Fuel:</span>
+          <select id="fuelFilterSelect" class="facet-select" onchange="window.setFuel(this.value)">
+            <option value="all">All Fuels</option>
+            <option value="ev">⚡ Electric (EV)</option>
+            <option value="petrol">⛽ Petrol</option>
+            <option value="diesel">🛢️ Diesel</option>
+            <option value="cng">🌱 CNG</option>
+            <option value="hybrid">🔋 Hybrid</option>
+          </select>
+        </div>
+
+        <div class="facet-group">
+          <span class="facet-label">Brand:</span>
+          <select id="brandFilterSelect" class="facet-select" onchange="window.setBrand(this.value)">
+            <option value="all">All Brands</option>
+          </select>
+        </div>
+
+        <div class="facet-group" style="margin-left:auto;">
+          <span class="facet-label">Sort By:</span>
+          <select id="sortFilterSelect" class="facet-select" onchange="window.setSort(this.value)">
+            <option value="newest">🔥 Latest Launches</option>
+            <option value="price-asc">💰 Price: Low to High</option>
+            <option value="price-desc">💎 Price: High to Low</option>
+            <option value="name-asc">🔤 Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Status Count -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+      <div id="catalogResultsCount" style="font-size:14px; color:#475569;">
+        Loading cars catalog...
+      </div>
+      <button class="filter-chip" onclick="window.clearAllCatalogFilters()" style="font-size:12px;">✕ Clear Filters</button>
+    </div>
+
+    <!-- 20-Car Paged Grid -->
+    <div id="catalogGridContainer" class="cars-grid">
+      <!-- Injected dynamically by catalog.js -->
+    </div>
+
+    <!-- Pagination Controls (Max 20 cars per page) -->
+    <div id="catalogPaginationContainer" class="pagination-bar" style="margin:36px 0 60px;">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- Exact Travomint Footer -->
+  <footer class="travomint-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: About Us -->
+        <div>
+          <div class="footer-col-title">About Us</div>
+          <ul class="footer-links-list">
+            <li><a href="/#heroSection">About Care My Vehicle</a></li>
+            <li><a href="/#trendingSection">Our Research & Methodology</a></li>
+            <li><a href="/#compareSection">Editorial Team</a></li>
+            <li><a href="mailto:support@caremyvehicle.in">Contact Us</a></li>
+            <li><a href="/#newsSection">Media & Press</a></li>
+            <li><a href="/#brandsSection">Automotive Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Vehicle Radar -->
+        <div>
+          <div class="footer-col-title">Vehicle Radar</div>
+          <ul class="footer-links-list">
+            <li><a href="/cars.html">New Car Launches (2024–2026)</a></li>
+            <li><a href="/cars.html?budget=under-10l">Cars Under 10 Lakh</a></li>
+            <li><a href="/cars.html?fuel=ev">Electric Vehicles (EV) Hub</a></li>
+            <li><a href="/#compareSection">Compare Car Specs Side-by-Side</a></li>
+            <li><a href="/#trendingSection">Value For Money (VFM) Variant Radar</a></li>
+            <li><a href="/#popularUsedCarsSection">Used Car Valuation Hub</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter, 100% Transparent, App & Social Icons -->
+        <div>
+          <div class="footer-col-title">Stay Updated</div>
+          
+          <div class="newsletter-input-box">
+            <input type="email" placeholder="Enter your email address">
+            <button class="newsletter-btn" type="button" onclick="alert('Thank you for subscribing to Care My Vehicle radar updates!')">✈️</button>
+          </div>
+
+          <div class="secure-pay-banner">
+            <div>
+              <div class="secure-pay-title">100% Transparent</div>
+              <div class="secure-pay-sub">- Zero Dealer Spam Guaranteed</div>
+            </div>
+            <div style="font-size:22px;">🛡️</div>
+          </div>
+
+          <!-- App Badges & QR Code -->
+          <div class="app-download-card">
+            <div class="app-badges-col">
+              <a href="#" class="app-badge-btn" onclick="alert('Care My Vehicle Mobile App coming soon to Apple App Store!')">
+                <span style="font-size:16px;">🍏</span>
+                <div>
+                  <div style="font-size:8px; opacity:0.8;">Download on the</div>
+                  <div>App Store</div>
+                </div>
+              </a>
+              <a href="#" class="app-badge-btn" onclick="alert('Care My Vehicle Mobile App coming soon to Google Play Store!')">
+                <span style="font-size:14px;">▶</span>
+                <div>
+                  <div style="font-size:8px; opacity:0.8;">GET IT ON</div>
+                  <div>Google Play</div>
+                </div>
+              </a>
+            </div>
+
+            <div style="font-size:11px; font-weight:800; color:#64748B;">OR</div>
+
+            <div class="qr-box">
+              <div class="qr-code-img">📱</div>
+              <div>Scan for Radar</div>
+            </div>
+          </div>
+
+          <!-- 5 Square Social Buttons -->
+          <div class="social-icons-row">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-sq-btn soc-fb" title="Facebook">f</a>
+            <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" class="social-sq-btn soc-insta" title="Instagram @caremyvehicle">📸</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-sq-btn soc-x" title="X (Twitter)">𝕏</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-sq-btn soc-in" title="LinkedIn">in</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-sq-btn soc-yt" title="YouTube">▶</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mid Brand Logo & Copyright -->
+      <div class="footer-mid-brand">
+        <div class="footer-brand-logo brand-font">Care My <span style="color:#FFF;">Vehicle</span></div>
+        <div class="footer-copyright">&copy; 2024–2026 Care My Vehicle. All Rights Reserved.</div>
+      </div>
+
+      <!-- Contact Pill Strip -->
+      <div class="footer-contact-pill">
+        <div class="contact-item">
+          <span>📞</span> Helpline: +91-120-4814492
+        </div>
+        <div>or, simply</div>
+        <div class="contact-item">
+          <span>✉️</span> Email: contact@caremyvehicle.in
+        </div>
+        <div class="contact-item">
+          <span>📸</span> Instagram: <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" style="color:#FFF; text-decoration:underline;">@caremyvehicle</a>
+        </div>
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <p class="footer-disclaimer-text">
+        Legal & Editorial Disclaimer: Care My Vehicle is an independent automotive research, variant analysis, and consumer education platform. All brand names, model trademarks, logos, and vehicle photographs belong to their respective automotive manufacturers (OEMs) and are utilized here strictly under Indian Fair Dealing copyright laws.
+      </p>
+
+    </div>
+  </footer>
+
+  <script type="module" src="js/catalog.js"></script>
+</body>
+</html>

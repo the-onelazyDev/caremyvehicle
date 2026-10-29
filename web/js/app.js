@@ -65,7 +65,24 @@ const clearSearchBtn = document.getElementById('clearSearchBtn');
 // Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
   renderBrandsShelf();
+  renderRecentlyViewed();
+  renderRecommendedShelf();
+  renderTrendingShelf();
+  renderUnder10LShelf();
+  renderAbove10LShelf();
+  renderUpcomingLaunchedShelf();
+  renderFuelTypeShelf();
   renderTrendingLaunches();
+
+  renderRecentlyViewed();
+  renderRecommendedShelf();
+  renderTrendingShelf();
+  renderUnder10LShelf();
+  renderAbove10LShelf();
+  renderOffersShelf();
+  renderUpcomingLaunchedShelf();
+  renderFuelTypeShelf();
+
   renderCompareShelf();
   renderCars();
   renderPopularUsedCars();
@@ -2472,3 +2489,339 @@ try {
     window.selectCity(savedCity);
   }
 } catch(e) {}
+
+// ==========================================================================
+// MODULAR HOMEPAGE HORIZONTAL SHELVES ENGINE
+// ==========================================================================
+
+function createShelfCarCard(car, actionLabel = 'View Price Breakup &rsaquo;') {
+  const onRoad = calculateOnRoadPrice(car.minPrice, selectedCityId);
+  return `
+    <article class="shelf-car-card" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
+      <div class="shelf-car-media">
+        <span class="shelf-badge-pill">${formatLaunchBadge(car.launchDate)}</span>
+        <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy">
+      </div>
+      <span class="shelf-car-brand">${car.brand} &bull; ${car.bodyType}</span>
+      <h4 class="shelf-car-name">${car.name}</h4>
+      <div class="shelf-car-price">${formatLakh(onRoad.total)} <span style="font-size:11px; font-weight:600; color:#64748B;">on-road</span></div>
+      <div class="shelf-car-sub">${car.priceRange} ex-showroom</div>
+      <button type="button" class="btn-shelf-action" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')">
+        ${actionLabel}
+      </button>
+    </article>
+  `;
+}
+
+function createShelfViewMoreCard(href, title, countText) {
+  return `
+    <a href="${href}" class="shelf-view-more-card" title="${title}">
+      <div class="view-more-circle">&rarr;</div>
+      <div class="view-more-title">${title}</div>
+      <div class="view-more-count">${countText}</div>
+    </a>
+  `;
+}
+
+// 1. Recently Viewed Cars
+function renderRecentlyViewed() {
+  const container = document.getElementById('recentlyViewedShelf');
+  const section = document.getElementById('recentlyViewedSection');
+  if (!container || !section) return;
+
+  let viewedIds = [];
+  try {
+    viewedIds = JSON.parse(localStorage.getItem('cmv_recently_viewed') || '[]');
+  } catch(e) {}
+
+  if (viewedIds.length === 0) {
+    // Show top trending as default so section is useful on first visit
+    viewedIds = ['tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx'];
+  }
+
+  section.style.display = 'block';
+  const all = getAllCars();
+  const matched = viewedIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+
+  let html = matched.map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard('/cars.html', 'View All Cars', '91+ Models &rsaquo;');
+  container.innerHTML = html;
+}
+
+// 2. Recommended For You
+function renderRecommendedShelf() {
+  const container = document.getElementById('recommendedShelf');
+  if (!container) return;
+
+  const recIds = ['tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx', 'maruti-brezza', 'mg-windsor-ev', 'tata-punch', 'nissan-magnite'];
+  const all = getAllCars();
+  const matched = recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+
+  let html = matched.map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard('/cars.html?category=recommended', 'View All Recommended', 'Top Picks &rsaquo;');
+  container.innerHTML = html;
+}
+
+// 3. Trending 2024-2026 Launches Shelf
+function renderTrendingShelf() {
+  const container = document.getElementById('trendingShelfContainer');
+  if (!container) return;
+
+  const trendIds = ['skoda-kylaq', 'tata-curvv', 'mahindra-thar-roxx', 'nissan-magnite', 'hyundai-alcazar', 'tata-nexon', 'mg-windsor-ev', 'kia-ev9'];
+  const all = getAllCars();
+  const matched = trendIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+
+  let html = matched.map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches', '2024–2026 Models &rsaquo;');
+  container.innerHTML = html;
+}
+
+// 4A. Popular Cars Under 10 Lakh
+let currentUnder10LFilter = 'all';
+
+function renderUnder10LShelf() {
+  const container = document.getElementById('under10LShelf');
+  if (!container) return;
+
+  const all = getAllCars().filter(c => c.minPrice < 1000000);
+  let filtered = all;
+
+  if (currentUnder10LFilter === 'sub-compact-suv') {
+    filtered = all.filter(c => (c.bodyType || '').includes('SUV'));
+  } else if (currentUnder10LFilter === 'hatchback') {
+    filtered = all.filter(c => (c.bodyType || '').includes('Hatchback'));
+  } else if (currentUnder10LFilter === 'sedan') {
+    filtered = all.filter(c => (c.bodyType || '').includes('Sedan') || (c.bodyType || '').includes('MPV'));
+  }
+
+  let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard(`/cars.html?budget=under-10l&category=${currentUnder10LFilter}`, 'View All Under 10L', `${filtered.length} Cars &rsaquo;`);
+  container.innerHTML = html;
+}
+
+window.filterUnder10L = function(filterKey, btn) {
+  currentUnder10LFilter = filterKey;
+  document.querySelectorAll('#under10LPills .sub-pill-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderUnder10LShelf();
+};
+
+// 4B. Popular Cars Above 10 Lakh
+let currentAbove10LTab = '10-20l';
+let currentAbove10LFilter = 'all';
+
+function renderAbove10LShelf() {
+  const container = document.getElementById('above10LShelf');
+  if (!container) return;
+
+  const all = getAllCars();
+  let filtered = all;
+
+  // Filter by budget tab
+  if (currentAbove10LTab === '10-20l') {
+    filtered = all.filter(c => c.minPrice >= 1000000 && c.minPrice <= 2000000);
+  } else if (currentAbove10LTab === '20-30l') {
+    filtered = all.filter(c => c.minPrice >= 2000000 && c.minPrice <= 3000000);
+  } else if (currentAbove10LTab === 'luxury') {
+    filtered = all.filter(c => c.minPrice > 2500000 || c.maxPrice > 3000000);
+  }
+
+  // Filter by body pill
+  if (currentAbove10LFilter === 'suv') {
+    filtered = filtered.filter(c => (c.bodyType || '').includes('SUV'));
+  } else if (currentAbove10LFilter === 'sub-compact-suv') {
+    filtered = filtered.filter(c => (c.bodyType || '').includes('SUV') && c.minPrice < 1500000);
+  } else if (currentAbove10LFilter === 'sedan') {
+    filtered = filtered.filter(c => (c.bodyType || '').includes('Sedan') || (c.bodyType || '').includes('MPV'));
+  }
+
+  let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard(`/cars.html?budget=${currentAbove10LTab}&category=${currentAbove10LFilter}`, 'View All Above 10L', `${filtered.length} Cars &rsaquo;`);
+  container.innerHTML = html;
+}
+
+window.switchAbove10LTab = function(tabKey, btn) {
+  currentAbove10LTab = tabKey;
+  document.querySelectorAll('#above10LTabs .budget-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderAbove10LShelf();
+};
+
+window.filterAbove10L = function(filterKey, btn) {
+  currentAbove10LFilter = filterKey;
+  document.querySelectorAll('#above10LPills .sub-pill-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderAbove10LShelf();
+};
+
+// 5. Get Offers on Popular Cars
+function renderOffersShelf() {
+  const container = document.getElementById('offersShelf');
+  if (!container) return;
+
+  const offers = [
+    {
+      carId: 'maruti-grand-vitara',
+      name: 'Maruti Suzuki Grand Vitara',
+      savings: 'Up to ₹1,28,000 Total Benefits',
+      highlight: 'Exchange Bonus + Corporate Discount + 5 Year Warranty',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp'
+    },
+    {
+      carId: 'tata-safari',
+      name: 'Tata Safari & Harrier',
+      savings: 'Up to ₹1,40,000 Festive Savings',
+      highlight: 'Cash Discount + Scrappage Bonus + 3 Yrs Free Maintenance',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp'
+    },
+    {
+      carId: 'mahindra-xuv700',
+      name: 'Mahindra XUV700 (AX7 Series)',
+      savings: 'Flat ₹2,00,000 Price Cut',
+      highlight: 'Official OEM celebration price cut on high-spec variants',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp'
+    },
+    {
+      carId: 'hyundai-creta',
+      name: 'Hyundai Creta & Venue',
+      savings: 'Up to ₹45,000 Special Benefits',
+      highlight: 'Corporate benefit + 6.99% low EMI interest financing',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/creta/colors/ranger-khaki.webp'
+    },
+    {
+      carId: 'mg-windsor-ev',
+      name: 'MG Windsor EV (BaaS)',
+      savings: 'Battery-as-a-Service at ₹3.5/km',
+      highlight: 'Free 1 Year Public Charging + Lifetime Battery Warranty',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp'
+    }
+  ];
+
+  container.innerHTML = offers.map(o => `
+    <div class="offer-card" onclick="window.navigateToCar('${o.carId}')" style="cursor:pointer;">
+      <span class="offer-savings-badge">${o.savings}</span>
+      <div style="height:120px; display:flex; align-items:center; justify-content:center;">
+        <img src="${o.image}" alt="${o.name}" style="max-width:90%; max-height:100px; object-fit:contain; filter:drop-shadow(0 6px 10px rgba(0,0,0,0.1));">
+      </div>
+      <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name}</h4>
+      <p style="font-size:12px; color:#64748B; margin-bottom:12px;">${o.highlight}</p>
+      <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;">
+        View Offer & Price &rsaquo;
+      </button>
+    </div>
+  `).join('');
+}
+
+// 6. Check New Car On-Road Price Search Box
+window.handleQuickPriceSearch = function(q) {
+  const list = document.getElementById('quickSearchResultsList');
+  if (!list) return;
+
+  const query = (q || '').toLowerCase().trim();
+  if (!query) {
+    list.style.display = 'none';
+    return;
+  }
+
+  const all = getAllCars();
+  const matched = all.filter(c => c.name.toLowerCase().includes(query) || c.brand.toLowerCase().includes(query)).slice(0, 5);
+
+  if (matched.length === 0) {
+    list.innerHTML = '<div style="font-size:13px; color:#64748B; padding:6px;">No car found matching query</div>';
+    list.style.display = 'block';
+    return;
+  }
+
+  list.innerHTML = matched.map(car => {
+    const onRoad = calculateOnRoadPrice(car.minPrice, selectedCityId);
+    return `
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 6px; border-bottom:1px solid #E2E8F0; cursor:pointer;" onclick="window.navigateToCar('${car.id}')">
+        <div>
+          <strong style="font-size:13.5px; color:#0F172A;">${car.name}</strong>
+          <div style="font-size:11px; color:#64748B;">${car.brand} &bull; ${car.priceRange}</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:13px; font-weight:900; color:var(--primary);">${formatLakh(onRoad.total)}</div>
+          <span style="font-size:10px; color:#64748B;">Est. ${onRoad.cityName}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+  list.style.display = 'block';
+};
+
+// 7. Upcoming and Recently Launched Cars
+let currentUpcomingTab = 'upcoming';
+
+function renderUpcomingLaunchedShelf() {
+  const container = document.getElementById('upcomingLaunchedShelf');
+  if (!container) return;
+
+  const all = getAllCars();
+  let matched = [];
+
+  if (currentUpcomingTab === 'upcoming') {
+    matched = all.filter(c => c.launchDate.includes('2025') || c.launchDate.includes('2026') || c.launchDate.includes('Upcoming'));
+  } else {
+    matched = all.filter(c => c.launchDate.includes('2024') || c.launchDate.includes('Facelift') || c.launchDate.includes('Launched'));
+  }
+
+  let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard(`/cars.html?category=${currentUpcomingTab}`, 'View All', `${matched.length} Models &rsaquo;`);
+  container.innerHTML = html;
+}
+
+window.switchUpcomingTab = function(tabKey, btn) {
+  currentUpcomingTab = tabKey;
+  document.querySelectorAll('#upcomingTabs .fuel-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderUpcomingLaunchedShelf();
+};
+
+// 8. Cars by Fuel Type Carousel
+let currentFuelTab = 'ev';
+
+function renderFuelTypeShelf() {
+  const container = document.getElementById('fuelTypeShelf');
+  const link = document.getElementById('fuelTypeViewAllLink');
+  if (!container) return;
+
+  const all = getAllCars();
+  let matched = [];
+  let label = 'Electric';
+
+  if (currentFuelTab === 'ev') {
+    matched = all.filter(c => c.fuelTypes.includes('EV'));
+    label = 'Electric';
+  } else if (currentFuelTab === 'hybrid') {
+    matched = all.filter(c => c.fuelTypes.includes('Hybrid') || (c.tagline && c.tagline.toLowerCase().includes('hybrid')));
+    label = 'Hybrid';
+  } else if (currentFuelTab === 'cng') {
+    matched = all.filter(c => c.fuelTypes.includes('CNG'));
+    label = 'CNG';
+  }
+
+  if (link) {
+    link.href = `/cars.html?fuel=${currentFuelTab}`;
+    link.textContent = `All ${label} Cars ›`;
+  }
+
+  let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  html += createShelfViewMoreCard(`/cars.html?fuel=${currentFuelTab}`, `View All ${label} Cars`, `${matched.length} Models &rsaquo;`);
+  container.innerHTML = html;
+}
+
+window.switchFuelTab = function(fuelKey, btn) {
+  currentFuelTab = fuelKey;
+  document.querySelectorAll('#fuelTabsRow .fuel-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderFuelTypeShelf();
+};
+
+// Override navigateToCar to track recently viewed cars in localStorage
+const originalNavigateToCar = window.navigateToCar;
+window.navigateToCar = function(carId) {
+  try {
+    let viewed = JSON.parse(localStorage.getItem('cmv_recently_viewed') || '[]');
+    viewed = viewed.filter(id => id !== carId);
+    viewed.unshift(carId);
+    if (viewed.length > 12) viewed = viewed.slice(0, 12);
+    localStorage.setItem('cmv_recently_viewed', JSON.stringify(viewed));
+  } catch(e) {}
+  window.location.href = `/cars/${carId}.html`;
+};

@@ -269,253 +269,347 @@
     </div>
   </section>
 
-  <!-- 1. 🏢 EXPLORE BY POPULAR BRANDS SHELF -->
-  <section id="brandsSection" class="brands-section">
+  <!-- 2. 🕒 RECENTLY VIEWED CARS SECTION (HORIZONTAL) -->
+  <section id="recentlyViewedSection" class="section-container" style="margin-top:20px; display:none;">
+    <div class="section-heading-row">
+      <div>
+        <span class="section-badge" style="background:#F1F5F9; color:#475569;">🕒 YOUR HISTORY</span>
+        <h2 class="section-main-title">Recently Viewed Cars</h2>
+        <p class="section-sub-title">Pick up right where you left off. Direct access to your inspected models.</p>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('recentlyViewedShelf', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('recentlyViewedShelf', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+    <div class="horizontal-shelf" id="recentlyViewedShelf">
+      <!-- Injected dynamically by app.js from localStorage -->
+    </div>
+  </section>
+
+  <!-- 3. ⭐ RECOMMENDED FOR YOU SECTION (HORIZONTAL) -->
+  <section id="recommendedSection" class="section-container" style="margin-top:30px;">
+    <div class="section-heading-row">
+      <div>
+        <span class="section-badge" style="background:#FFF4EE; color:var(--primary); border:1px solid #FFD4C2;">⭐ HANDPICKED RADAR</span>
+        <h2 class="section-main-title">Recommended For You</h2>
+        <p class="section-sub-title">Top consumer picks with 5-star Bharat NCAP safety, high resale retention, and best-in-class value for money.</p>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('recommendedShelf', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('recommendedShelf', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+    <div class="horizontal-shelf" id="recommendedShelf">
+      <!-- Injected dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- 4. 🔥 SMALL TRENDING CARS SECTION (HORIZONTAL) -->
+  <section id="trendingSection" class="section-container" style="margin-top:30px;">
+    <div class="section-heading-row">
+      <div>
+        <span class="section-badge" style="background:#FEF2F2; color:#DC2626; border:1px solid #FECACA;">🔥 JUST LAUNCHED</span>
+        <h2 class="section-main-title">Trending Cars (2024–2026)</h2>
+        <p class="section-sub-title">The hottest new market entries with verified on-road pricing and official studio renders.</p>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('trendingShelfContainer', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('trendingShelfContainer', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+    <div class="horizontal-shelf" id="trendingShelfContainer">
+      <!-- Injected dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- 5. 💰 POPULAR CARS BY BUDGET SECTION (WITH SUB-SECTIONS) -->
+  <section id="popularBudgetSection" class="section-container" style="margin-top:36px;">
+    <div style="border-bottom: 2px solid #F1F5F9; padding-bottom: 12px; margin-bottom: 20px;">
+      <span class="section-badge" style="background:#EFF6FF; color:#2563EB; border:1px solid #BFDBFE;">🏷️ BUDGET RADAR</span>
+      <h2 class="section-main-title">Popular Cars By Budget</h2>
+      <p class="section-sub-title">Explore India's most popular cars segmented by price bracket and body style.</p>
+    </div>
+
+    <!-- 5A. Sub-section: Cars Under 10 Lakh (Matching User Uploaded Image 1) -->
+    <div id="carsUnder10LSection" style="margin-bottom:34px;">
+      <h3 class="brand-font" style="font-size:22px; color:#0F172A; display:flex; align-items:center; gap:8px;">
+        <span style="display:inline-block; width:4px; height:18px; background:var(--primary); border-radius:2px;"></span>
+        Cars Under 10 Lakh
+      </h3>
+      
+      <!-- Filter Pills: Sub Compact SUV, Hatchback, Sedan & Others -->
+      <div class="sub-filter-row" id="under10LPills">
+        <button type="button" class="sub-pill-btn active" data-filter="all" onclick="window.filterUnder10L('all', this)">All Under 10L</button>
+        <button type="button" class="sub-pill-btn" data-filter="sub-compact-suv" onclick="window.filterUnder10L('sub-compact-suv', this)">Sub Compact SUV</button>
+        <button type="button" class="sub-pill-btn" data-filter="hatchback" onclick="window.filterUnder10L('hatchback', this)">Hatchback</button>
+        <button type="button" class="sub-pill-btn" data-filter="sedan" onclick="window.filterUnder10L('sedan', this)">Sedan & Others</button>
+      </div>
+
+      <div class="horizontal-shelf" id="under10LShelf">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+
+    <!-- 5B. Sub-section: Cars Above 10 Lakh (Matching User Uploaded Image 2) -->
+    <div id="carsAbove10LSection">
+      <h3 class="brand-font" style="font-size:22px; color:#0F172A; display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <span style="display:inline-block; width:4px; height:18px; background:var(--primary); border-radius:2px;"></span>
+        Cars Above 10 Lakh
+      </h3>
+
+      <!-- Budget Range Tabs: 10 - 20 Lakh, 20 - 30 Lakh, Luxury Cars -->
+      <div class="budget-tabs-row" id="above10LTabs">
+        <button type="button" class="budget-tab-btn active" data-tab="10-20l" onclick="window.switchAbove10LTab('10-20l', this)">10 - 20 Lakh</button>
+        <button type="button" class="budget-tab-btn" data-tab="20-30l" onclick="window.switchAbove10LTab('20-30l', this)">20 - 30 Lakh</button>
+        <button type="button" class="budget-tab-btn" data-tab="luxury" onclick="window.switchAbove10LTab('luxury', this)">Luxury Cars</button>
+      </div>
+
+      <!-- Filter Pills: SUV, Sub Compact SUV, Sedan & Others -->
+      <div class="sub-filter-row" id="above10LPills">
+        <button type="button" class="sub-pill-btn active" data-filter="all" onclick="window.filterAbove10L('all', this)">All</button>
+        <button type="button" class="sub-pill-btn" data-filter="suv" onclick="window.filterAbove10L('suv', this)">SUV</button>
+        <button type="button" class="sub-pill-btn" data-filter="sub-compact-suv" onclick="window.filterAbove10L('sub-compact-suv', this)">Sub Compact SUV</button>
+        <button type="button" class="sub-pill-btn" data-filter="sedan" onclick="window.filterAbove10L('sedan', this)">Sedan & Others</button>
+      </div>
+
+      <div class="horizontal-shelf" id="above10LShelf">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 🎁 GET OFFERS ON POPULAR CARS SECTION -->
+  <section id="offersSection" class="section-container" style="margin-top:36px;">
+    <div class="section-heading-row">
+      <div>
+        <span class="section-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🎁 DISCOUNTS & BENEFITS</span>
+        <h2 class="section-main-title">Get Offers on Popular Cars</h2>
+        <p class="section-sub-title">Save up to ₹2.5 Lakh with verified OEM consumer discounts, exchange bonuses, and festive corporate offers.</p>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('offersShelf', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('offersShelf', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+    <div class="horizontal-shelf" id="offersShelf">
+      <!-- Injected dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- 7. 🏢 ALL BRANDS SECTION -->
+  <section id="brandsSection" class="brands-section" style="margin-top:36px;">
     <div class="section-container">
       <div class="section-heading-row">
         <div>
-          <h2 class="section-main-title">🏢 Explore by Popular Brands</h2>
-          <p class="section-sub-title">Select an automaker to instantly view all active car models and variant lineups.</p>
+          <span class="section-badge" style="background:#F1F5F9; color:#475569;">🏢 AUTOMAKERS</span>
+          <h2 class="section-main-title">All Brands</h2>
+          <p class="section-sub-title">Select an automaker to instantly browse all active models and variant lineups.</p>
         </div>
-        <button id="clearBrandBtn" class="btn-text-action" style="display:none;" onclick="window.selectBrand('all')">
-          ✕ Show All Brands
-        </button>
       </div>
-      
       <div class="brands-shelf-scroll" id="brandsShelfContainer">
         <!-- Rendered by app.js with official brand logos -->
       </div>
     </div>
   </section>
 
-  <!-- 2. 🔥 HOT & TRENDING NEW LAUNCHES SHOWCASE (NEW CAR SECTION) -->
-  <section id="trendingSection" class="trending-section">
-    <div class="section-container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-badge">🔥 JUST LAUNCHED</span>
-          <h2 class="section-main-title">Trending 2024–2026 Launches</h2>
-          <p class="section-sub-title">Top highlighted newly launched SUVs, Coupes & EVs with verified on-road pricing.</p>
+  <!-- 8. 📍 CHECK NEW CAR ON-ROAD PRICE SECTION (MATCHING USER UPLOADED IMAGE 3) -->
+  <section id="onRoadCheckerSection" class="section-container" style="margin-top:36px;">
+    <div class="onroad-checker-card">
+      <h3 class="brand-font" style="font-size:22px; color:#0F172A; margin-bottom:4px;">Check New Car On-Road Price</h3>
+      <div class="onroad-checker-inputs">
+        <div class="checker-input-box" onclick="document.getElementById('quickCarSearchInput').focus()">
+          <span style="font-size:16px; margin-right:8px;">🔍</span>
+          <input type="text" id="quickCarSearchInput" placeholder="Type to select car name (e.g. Creta, Curvv, Kylaq)..." oninput="window.handleQuickPriceSearch(this.value)" autocomplete="off">
+        </div>
+        <div class="checker-input-box" onclick="window.openCityModal()">
+          <span style="display:flex; align-items:center; gap:8px;">
+            <span>📍</span>
+            <span id="quickCheckerCityLabel" style="font-size:14px; font-weight:700; color:#0F172A;">Delhi NCR</span>
+          </span>
+          <span style="font-size:16px; color:#94A3B8;">&rsaquo;</span>
         </div>
       </div>
-
-      <div class="trending-shelf-scroll" id="trendingShelfContainer">
-        <!-- Rendered by app.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- 2B. ⚖️ CARWALE-STYLE HEAD-TO-HEAD COMPARE CARS SHELF -->
-  <section id="compareSection" class="compare-showcase-section">
-    <div class="section-container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-badge" style="background:#EFF6FF; color:#0284C7; border:1px solid #BFDBFE;">⚖️ HEAD-TO-HEAD MATCHUPS</span>
-          <h2 class="section-main-title">Compare Cars</h2>
-          <p class="section-sub-title">Confused between rivals? Compare on-road price, dimensions, safety ratings, mileage, and features side-by-side.</p>
-        </div>
-        <div class="shelf-controls">
-          <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', -360)" title="Scroll left">‹</button>
-          <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', 360)" title="Scroll right">›</button>
-        </div>
-      </div>
-
-      <div class="compare-shelf-scroll" id="compareShelfContainer">
-        <!-- Injected dynamically by app.js -->
-      </div>
-
-      <div class="compare-shelf-bottom-link">
-        <button type="button" class="link-compare-choice" onclick="window.openCompareModal()">
-          Compare Cars of Your Choice &rsaquo;
-        </button>
+      <p style="font-size:12.5px; color:#64748B;">
+        Accurate On-Road prices across 1538 cities, sourced directly from verified manufacturer ex-showroom rates and exact state RTO calculators.
+      </p>
+      <div id="quickSearchResultsList" style="display:none; margin-top:12px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:10px;">
+        <!-- Injected dynamically on search -->
       </div>
     </div>
   </section>
 
-  <!-- 3. 🎯 MULTI-FACET FILTER DASHBOARD & MAIN CAR CATALOG -->
-  <section id="catalogSection" class="catalog-section">
-    <div class="section-container">
-      <!-- Filter Dashboard Card -->
-      <div class="filter-dashboard-card">
-        <!-- Category (Body Type) Segmented Tabs -->
-        <div class="filter-row-categories">
-          <span class="filter-row-label">Category:</span>
-          <div class="filter-chips-scroll" id="categoryChips">
-            <button class="filter-chip active" data-category="all">🚗 All Categories</button>
-            <button class="filter-chip" data-category="suv">🚙 SUVs & Coupes</button>
-            <button class="filter-chip" data-category="sedan">🚘 Sedans</button>
-            <button class="filter-chip" data-category="hatchback">🏎️ Hatchbacks</button>
-            <button class="filter-chip" data-category="mpv">🚐 MPVs / 7-Seaters</button>
-            <button class="filter-chip" data-category="ev">⚡ Electric (EV)</button>
-            <button class="filter-chip" data-category="luxury">💎 Luxury (₹25L+)</button>
-            <button class="filter-chip" data-category="used">🏷️ Used Cars (Soon)</button>
-          </div>
-        </div>
-
-        <!-- Facets Row: Fuel, Price Range, Sort -->
-        <div class="filter-facets-row">
-          <!-- Fuel Filter -->
-          <div class="facet-group">
-            <span class="facet-label">Fuel:</span>
-            <div class="facet-pills" id="fuelChips">
-              <button class="facet-pill active" data-fuel="all">All</button>
-              <button class="facet-pill" data-fuel="EV">⚡ EV</button>
-              <button class="facet-pill" data-fuel="Petrol">⛽ Petrol</button>
-              <button class="facet-pill" data-fuel="Diesel">🛢️ Diesel</button>
-              <button class="facet-pill" data-fuel="CNG">🌱 CNG</button>
-            </div>
-          </div>
-
-          <!-- Price Range Filter -->
-          <div class="facet-group">
-            <span class="facet-label">Budget:</span>
-            <select id="priceSelectFilter" class="facet-select" onchange="window.handlePriceSelect(this.value)">
-              <option value="all">All Budgets</option>
-              <option value="under-6l">Under ₹6 Lakh</option>
-              <option value="6-10l">₹6 – ₹10 Lakh</option>
-              <option value="10-15l">₹10 – ₹15 Lakh</option>
-              <option value="15-25l">₹15 – ₹25 Lakh</option>
-              <option value="above-25l">Above ₹25 Lakh</option>
-            </select>
-          </div>
-
-          <!-- Sort Selector -->
-          <div class="facet-group" style="margin-left:auto;">
-            <span class="facet-label">Sort:</span>
-            <select id="sortSelect" class="facet-select" onchange="window.handleSortSelect(this.value)">
-              <option value="newest">🔥 Latest Launches First</option>
-              <option value="price-asc">💰 Price: Low to High</option>
-              <option value="price-desc">💎 Price: High to Low</option>
-              <option value="safety">🛡️ Highest Safety Rating</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Active Filter Tags Bar -->
-        <div class="active-filters-bar" id="activeFiltersBar" style="display:none;">
-          <div class="active-tags-list" id="activeTagsList"></div>
-          <button class="btn-clear-all" onclick="window.resetAllFilters()">✕ Reset All Filters</button>
-        </div>
-
-        <div class="catalog-status-bar">
-          <div class="results-count-text" id="resultsCountDisplay">Showing <strong>...</strong> new car models</div>
+  <!-- 9. 🎯 FIND THE CARS OF YOUR CHOICE SECTION (MATCHING USER UPLOADED IMAGE 3) -->
+  <section id="choiceFinderSection" class="section-container" style="margin-top:36px;">
+    <div class="choice-finder-card">
+      <h3 class="brand-font" style="font-size:22px; color:#0F172A; margin-bottom:18px;">Find The Cars Of Your Choice</h3>
+      
+      <!-- Budget Row -->
+      <div class="choice-row">
+        <span class="choice-label">Budget:</span>
+        <div class="choice-pills">
+          <a href="/cars.html?budget=under-5l" class="choice-pill">💰 Under 5 Lakh</a>
+          <a href="/cars.html?budget=under-10l" class="choice-pill">💰 Under 10 Lakh</a>
+          <a href="/cars.html?budget=under-15l" class="choice-pill">💰 Under 15 Lakh</a>
         </div>
       </div>
 
-      <!-- Main Cars Grid -->
-      <main class="main-content" style="padding:0; margin:0; max-width:100%;">
-        <div id="carsContainer" class="cars-grid">
-          <!-- Injected reactively by app.js -->
-        </div>
-      </main>
-    </div>
-  </section>
-
-  <!-- 3B. 🚗 POPULAR USED CARS IN INDIA -->
-  <section id="popularUsedCarsSection" class="popular-used-section">
-    <div class="section-container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-badge" style="background:#FEF3C7; color:#D97706; border:1px solid #FDE68A;">⭐ HIGH RESALE RETENTION</span>
-          <h2 class="section-main-title">Popular Used Cars in India</h2>
-          <p class="section-sub-title">India’s most trusted pre-owned models with verified market prices, low maintenance costs, and exceptional resale value.</p>
+      <!-- Body Type Row -->
+      <div class="choice-row">
+        <span class="choice-label">Body Type:</span>
+        <div class="choice-pills">
+          <a href="/cars.html?category=suv" class="choice-pill">🚙 SUV</a>
+          <a href="/cars.html?category=hatchback" class="choice-pill">🏎️ Hatchback</a>
+          <a href="/cars.html?category=sedan" class="choice-pill">🚘 Sedan</a>
         </div>
       </div>
 
-      <div class="popular-used-grid" id="popularUsedGridContainer">
-        <!-- Injected dynamically by app.js -->
+      <!-- Fuel Type & Others Row -->
+      <div class="choice-row">
+        <span class="choice-label">Fuel & Others:</span>
+        <div class="choice-pills">
+          <a href="/cars.html?fuel=ev" class="choice-pill">⚡ Electric</a>
+          <a href="/cars.html?fuel=hybrid" class="choice-pill">🔋 Hybrid</a>
+          <a href="/cars.html?fuel=cng" class="choice-pill">🌱 CNG</a>
+          <a href="/cars.html?category=mpv" class="choice-pill">💺 7 Seater</a>
+          <a href="/cars.html?search=automatic" class="choice-pill">🕹️ Automatic</a>
+        </div>
+      </div>
+
+      <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F1F5F9;">
+        <a href="/cars.html" style="color:var(--primary); font-size:13.5px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
+          View More Filters &rsaquo;
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- 3C. 🏙️ USED CARS BY CITY (CARWALE-STYLE MONUMENT CARDS) -->
-  <section id="usedCarsByCitySection" class="used-city-section">
+  <!-- 10. 🚀 UPCOMING AND RECENTLY LAUNCHED CARS SECTION (MATCHING USER UPLOADED IMAGE 3) -->
+  <section id="upcomingLaunchedSection" class="section-container" style="margin-top:36px;">
+    <div class="section-heading-row">
+      <div>
+        <h2 class="section-main-title">Upcoming and Recently Launched Cars</h2>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('upcomingLaunchedShelf', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('upcomingLaunchedShelf', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+
+    <!-- Tabs: Upcoming Cars | Just Launched Cars -->
+    <div class="fuel-tabs-row" id="upcomingTabs">
+      <button type="button" class="fuel-tab-btn active" data-tab="upcoming" onclick="window.switchUpcomingTab('upcoming', this)">Upcoming Cars</button>
+      <button type="button" class="fuel-tab-btn" data-tab="launched" onclick="window.switchUpcomingTab('launched', this)">Just Launched Cars</button>
+    </div>
+
+    <div class="horizontal-shelf" id="upcomingLaunchedShelf">
+      <!-- Injected dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- 11. ⚡ CARS BY FUEL TYPE SECTION (MATCHING USER UPLOADED IMAGE 4) -->
+  <section id="fuelTypeSection" class="section-container" style="margin-top:36px;">
+    <div class="section-heading-row">
+      <div>
+        <h2 class="section-main-title">Cars by Fuel Type</h2>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('fuelTypeShelf', -320)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('fuelTypeShelf', 320)" title="Scroll right">›</button>
+      </div>
+    </div>
+
+    <!-- Tabs: Electric Cars | Hybrid Cars | CNG Cars -->
+    <div class="fuel-tabs-row" id="fuelTabsRow">
+      <button type="button" class="fuel-tab-btn active" data-tab="ev" onclick="window.switchFuelTab('ev', this)">Electric Cars</button>
+      <button type="button" class="fuel-tab-btn" data-tab="hybrid" onclick="window.switchFuelTab('hybrid', this)">Hybrid Cars</button>
+      <button type="button" class="fuel-tab-btn" data-tab="cng" onclick="window.switchFuelTab('cng', this)">CNG Cars</button>
+    </div>
+
+    <div class="horizontal-shelf" id="fuelTypeShelf">
+      <!-- Injected dynamically by app.js -->
+    </div>
+
+    <div style="margin-top:14px;">
+      <a href="/cars.html?fuel=ev" id="fuelTypeViewAllLink" style="color:var(--primary); font-size:14px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
+        All Electric Cars &rsaquo;
+      </a>
+    </div>
+  </section>
+
+  <!-- 12. ⚖️ COMPARE CARS SECTION (MATCHING USER UPLOADED IMAGE 4) -->
+  <section id="compareSection" class="section-container" style="margin-top:36px;">
+    <div class="section-heading-row">
+      <div>
+        <span class="section-badge" style="background:#EFF6FF; color:#0284C7; border:1px solid #BFDBFE;">⚖️ HEAD-TO-HEAD MATCHUPS</span>
+        <h2 class="section-main-title">Compare Cars</h2>
+      </div>
+      <div class="shelf-controls">
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', -360)" title="Scroll left">‹</button>
+        <button class="shelf-scroll-btn" onclick="window.scrollShelf('compareShelfContainer', 360)" title="Scroll right">›</button>
+      </div>
+    </div>
+
+    <div class="horizontal-shelf" id="compareShelfContainer">
+      <!-- Injected dynamically by app.js -->
+    </div>
+
+    <div style="margin-top:14px;">
+      <button type="button" class="link-compare-choice" onclick="window.openCompareModal()" style="color:var(--primary); font-size:14px; font-weight:800; background:none; border:none; cursor:pointer; font-family:inherit;">
+        Compare Cars of Your Choice &rsaquo;
+      </button>
+    </div>
+  </section>
+
+  <!-- 13. 🏙️ USED CARS BY CITY SECTION -->
+  <section id="usedCarsByCitySection" class="used-city-section" style="margin-top:36px;">
     <div class="section-container">
       <div class="section-heading-row">
         <div>
-          <span class="section-badge" style="background:#F0FDFA; color:#0D9488; border:1px solid #99F6E4;">📍 CERTIFIED PRE-OWNED METROS</span>
+          <span class="section-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 LAUNCHING SOON</span>
           <h2 class="section-main-title">Used Cars By City</h2>
-          <p class="section-sub-title">Find verified, inspection-certified second-hand cars across India’s top metropolitan cities.</p>
-        </div>
-        <div class="shelf-controls">
-          <button class="shelf-scroll-btn" onclick="window.scrollShelf('usedCityShelfContainer', -300)" title="Scroll left">‹</button>
-          <button class="shelf-scroll-btn" onclick="window.scrollShelf('usedCityShelfContainer', 300)" title="Scroll right">›</button>
+          <p class="section-sub-title">100% spam-free certified second-hand car marketplace coming soon across top metros.</p>
         </div>
       </div>
-
       <div class="used-city-shelf-scroll" id="usedCityShelfContainer">
         <!-- Injected dynamically by app.js -->
       </div>
     </div>
   </section>
 
-  <!-- 4. 📰 EXPERT REVIEWS & AUTOMOTIVE NEWS SECTION -->
-  <section id="newsSection" class="news-section">
+  <!-- 14. 🚗 POPULAR USED CARS IN INDIA SECTION -->
+  <section id="popularUsedCarsSection" class="popular-used-section" style="margin-top:36px;">
     <div class="section-container">
       <div class="section-heading-row">
         <div>
-          <span class="section-badge badge-editorial">📰 EDITORIAL RADAR</span>
-          <h2 class="section-main-title">Expert Car Reviews & Buying Guides</h2>
-          <p class="section-sub-title">100% independent automotive testing, variant comparisons, and real-world range reports.</p>
+          <span class="section-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 LAUNCHING SOON</span>
+          <h2 class="section-main-title">Popular Used Cars in India <span class="used-soon-pill">Coming Soon</span></h2>
+          <p class="section-sub-title">India’s most trusted pre-owned models with verified market prices and exceptional resale value.</p>
         </div>
       </div>
-
-      <div class="news-grid" id="newsContainer">
-        <!-- Rendered by app.js from newsData.js -->
+      <div class="popular-used-grid" id="popularUsedGridContainer">
+        <!-- Injected dynamically by app.js -->
       </div>
     </div>
   </section>
 
-  <!-- 5. 📖 ARTICLE READER MODAL -->
-  <div id="articleModal" class="modal-overlay">
-    <div class="modal-sheet" style="max-width:760px;">
-      <div id="articleModalContent">
-        <!-- Injected dynamically -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 6. 🚗 CAR DETAIL & VARIANT MODAL -->
-  <div id="carDetailModal" class="modal-overlay">
-    <div class="modal-sheet">
-      <div id="carModalContent">
-        <!-- Injected reactively by app.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. 📍 CITY SELECTION MODAL -->
-  <div id="cityModal" class="modal-overlay">
-    <div class="modal-sheet" style="max-width: 480px;">
-      <div class="modal-header">
+  <!-- 15. 📰 LATEST CAR UPDATES SECTION -->
+  <section id="newsSection" class="news-section" style="margin-top:36px;">
+    <div class="section-container">
+      <div class="section-heading-row">
         <div>
-          <h3 style="font-size:18px; font-weight:800; color:var(--text-main);">📍 Select Your City</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">Exact State RTO & Taxes updated in real-time</p>
+          <span class="section-badge badge-editorial">📰 EDITORIAL RADAR</span>
+          <h2 class="section-main-title">Latest Car Updates & Expert Reviews</h2>
+          <p class="section-sub-title">100% independent automotive testing, variant comparisons, and real-world range reports.</p>
         </div>
-        <button class="modal-close-btn" onclick="closeModal('cityModal')">&times;</button>
       </div>
-
-      <!-- Detect My Location Feature Button -->
-      <button type="button" id="detectLocationBtn" class="btn-detect-location" onclick="window.detectUserLocation()">
-        <span class="detect-spinner" id="detectSpinner" style="display:none;">⏳</span>
-        <span id="detectIcon" style="font-size:18px;">🎯</span>
-        <span id="detectLabel">Detect My Location (Auto RTO)</span>
-      </button>
-
-      <!-- Search Cities input -->
-      <div class="city-search-box">
-        <input type="text" id="citySearchInput" placeholder="🔍 Search city (e.g. Pune, Jaipur, Kolkata)..." oninput="window.filterCitiesList(this.value)">
-      </div>
-
-      <!-- Cities Grid Container -->
-      <div class="city-grid-scroll" id="citiesListContainer">
-        <!-- Rendered dynamically by app.js with RTO tags -->
+      <div class="news-grid" id="newsContainer">
+        <!-- Injected dynamically by app.js -->
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Site Footer with Full Legal Compliance Disclaimer -->
-    <!-- ==========================================================================
+  <!-- ==========================================================================
        TRAVOMINT EXACT FOOTER (MATCHING USER SCREENSHOT)
        ========================================================================== -->
   <footer class="travomint-footer">
