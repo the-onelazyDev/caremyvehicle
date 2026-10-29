@@ -2466,7 +2466,12 @@ window.selectHeroPrice = function(val) {
 };
 
 window.triggerHeroSearch = function() {
-  const catalog = document.getElementById('catalogSection');
+  const query = (document.getElementById('globalSearchInput')?.value || '').trim();
+  if (query) {
+    window.location.href = 'cars.html?q=' + encodeURIComponent(query);
+    return;
+  }
+  const catalog = document.getElementById('catalogSection') || document.getElementById('popularBudgetSection');
   if (catalog) {
     catalog.scrollIntoView({ behavior: 'smooth' });
   }
@@ -2824,4 +2829,22 @@ window.navigateToCar = function(carId) {
     localStorage.setItem('cmv_recently_viewed', JSON.stringify(viewed));
   } catch(e) {}
   window.location.href = `/cars/${carId}.html`;
+};
+
+
+// CarWale Hero Pill Switcher (New vs Used)
+window.setCarTypeMode = function(mode) {
+  const pillNew = document.getElementById('pillNewCars');
+  const pillUsed = document.getElementById('pillUsedCars');
+  if (mode === 'used') {
+    if (pillNew) pillNew.classList.remove('active');
+    if (pillUsed) pillUsed.classList.add('active');
+    window.showUsedCarsComingSoon();
+  } else {
+    if (pillUsed) pillUsed.classList.remove('active');
+    if (pillNew) pillNew.classList.add('active');
+    if (typeof window.selectHeroType === 'function') {
+      window.selectHeroType('all');
+    }
+  }
 };

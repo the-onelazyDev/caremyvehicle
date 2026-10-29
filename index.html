@@ -93,8 +93,8 @@
         <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
           <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
           <div>
-            <div class="brand-name brand-font" style="font-size:24px; font-weight:900; color:var(--primary); line-height:1;">Care My <span style="color:#1E293B;">Vehicle</span></div>
-            <div class="brand-tagline" style="font-size:10.5px; font-weight:700; color:var(--text-muted);">100% Spam-Free Vehicle Radar</div>
+            <div class="brand-name brand-font" style="font-size:24px; font-weight:900; color:#FFFFFF; line-height:1;">Care My <span style="color:var(--primary);">Vehicle</span></div>
+            <div class="brand-tagline" style="font-size:10.5px; font-weight:700; color:#94A3B8;">100% Spam-Free Vehicle Radar</div>
           </div>
         </a>
       </div>
@@ -138,89 +138,92 @@
     </div>
   </header>
 
-  <!-- Hero Section & Live Search Radar -->
-    <!-- Hero Section & Live Search Radar -->
-  <section class="hero-section" id="heroSection">
-    <div style="text-align:center; max-width:760px; margin:0 auto 20px;">
-      <div class="hero-pill">⚡ 2024–2026 Live Automotive Radar</div>
-      <h1 class="hero-title brand-font" style="font-size:38px; line-height:1.2; margin-bottom:10px;">Every New Car Launch.<br>Every Variant. <span style="color:var(--primary);">Zero Spam.</span></h1>
-      <p class="hero-desc" style="max-width:620px; margin:0 auto;">
-        Zero dealer spam calls. Zero hidden dealer markups. Check exact city on-road prices, value-for-money picks, and official manufacturer colors in real-time.
-      </p>
-    </div>
-
-    <!-- Travomint Signature Search Hero Box -->
-    <div class="hero-search-card">
-      <div class="search-radios-bar">
-        <label class="radio-pill">
-          <input type="radio" name="hero_vehicle_type" value="all" checked onchange="window.selectHeroType('all')">
-          <span>All Launches</span>
-        </label>
-        <label class="radio-pill">
-          <input type="radio" name="hero_vehicle_type" value="suv" onchange="window.selectHeroType('suv')">
-          <span>SUVs & Coupes</span>
-        </label>
-        <label class="radio-pill">
-          <input type="radio" name="hero_vehicle_type" value="ev" onchange="window.selectHeroType('ev')">
-          <span>Electric (EV)</span>
-        </label>
-        <label class="radio-pill">
-          <input type="radio" name="hero_vehicle_type" value="used" onchange="window.selectHeroType('used')">
-          <span>Used Cars <span style="font-size:9px; background:#FEF3C7; color:#B45309; padding:1px 5px; border-radius:8px;">SOON</span></span>
-        </label>
-        <div class="ai-mode-chip">
-          <span>✨ Smart Radar</span>
+  <!-- CarWale-Style Hero Banner Section with Lifestyle Road Trip & Overlapping Search Card -->
+  <section class="carwale-hero-section" id="heroSection">
+    <div class="carwale-hero-container">
+      <!-- Lifestyle Road Trip Photographic Banner -->
+      <div class="carwale-banner-frame">
+        <picture>
+          <source srcset="assets/hero-banner.webp" type="image/webp">
+          <img src="assets/hero-banner.jpg" alt="Find Your Right Car - Lifestyle Road Trip" class="carwale-banner-img" fetchpriority="high">
+        </picture>
+        <div class="carwale-banner-overlay">
+          <div class="carwale-banner-badge">
+            <span class="live-dot"></span>
+            <span>2024–2026 LIVE AUTOMOTIVE RADAR</span>
+          </div>
+          <h1 class="carwale-banner-heading brand-font">Find Your Right Car</h1>
+          <p class="carwale-banner-sub">Zero dealer spam calls. Accurate city on-road prices & transparent variant analysis.</p>
         </div>
       </div>
 
-      <div class="search-fields-grid">
-        <div class="search-field-cell">
-          <div class="cell-label">Which Car or Brand?</div>
-          <input type="text" id="globalSearchInput" class="cell-input" placeholder="e.g. Magnite, Curvv, Creta, Thar..." autocomplete="off">
-          <button id="clearSearchBtn" class="search-clear-btn" style="display:none;" onclick="window.clearSearch()">&times;</button>
-        </div>
-
-        <div class="search-field-cell" onclick="window.openCityModal()" style="cursor:pointer;">
-          <div class="cell-label" style="display:flex; justify-content:space-between; align-items:center;">
-            <span>City RTO / Location</span>
-            <button type="button" class="btn-cell-detect" onclick="event.stopPropagation(); window.detectUserLocation()" title="Auto detect location">🎯 Detect</button>
-          </div>
-          <div class="cell-input" style="display:flex; align-items:center; justify-content:space-between; margin-top:2px;">
-            <span id="heroCityName">Delhi NCR (10% RTO)</span>
-            <span style="font-size:12px; color:var(--primary);">▼</span>
+      <!-- Overlapping "Find Your Right Car" Floating Card -->
+      <div class="carwale-floating-card">
+        <div class="carwale-card-header">
+          <h2 class="carwale-card-title brand-font">Find Your Right Car</h2>
+          <div class="carwale-city-selector" onclick="window.openCityModal()" title="Change city for on-road prices">
+            <span class="city-lead-text">Select City</span>
+            <span class="city-val-pill">📍 <span id="heroCityName">Delhi NCR</span></span>
+            <button type="button" class="btn-detect-chip" onclick="event.stopPropagation(); window.detectUserLocation()" title="Auto detect location">🎯 Detect</button>
           </div>
         </div>
 
-        <div class="search-field-cell">
-          <div class="cell-label">Budget Range</div>
-          <select id="heroPriceSelect" class="cell-input" style="cursor:pointer;" onchange="window.selectHeroPrice(this.value)">
-            <option value="all">Any Budget</option>
-            <option value="under-6l">Under ₹6 Lakh</option>
-            <option value="6-10l">₹6 – ₹10 Lakh</option>
-            <option value="10-15l">₹10 – ₹15 Lakh</option>
-            <option value="15-25l">₹15 – ₹25 Lakh</option>
-            <option value="above-25l">Above ₹25 Lakh</option>
-          </select>
+        <!-- New / Used switch pills -->
+        <div class="carwale-type-row">
+          <button type="button" class="cw-type-btn active" id="pillNewCars" onclick="window.setCarTypeMode('new')">
+            New
+          </button>
+          <button type="button" class="cw-type-btn" id="pillUsedCars" onclick="window.setCarTypeMode('used')">
+            Used <span class="cw-soon-tag">SOON</span>
+          </button>
         </div>
 
-        <button type="button" id="heroSearchBtn" class="btn-search-cta" onclick="window.triggerHeroSearch()">
-          <span>🔍 SEARCH</span>
-        </button>
-      </div>
+        <!-- Search Bar with Live Input -->
+        <div class="carwale-search-box-row">
+          <div class="cw-input-wrap">
+            <svg class="cw-search-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="globalSearchInput" class="cw-main-input" placeholder="Type to select car name (e.g. Creta, Curvv, Thar, Nexon...)" autocomplete="off">
+            <button id="clearSearchBtn" class="search-clear-btn" style="display:none;" onclick="window.clearSearch()">&times;</button>
+          </div>
+          <button type="button" id="heroSearchBtn" class="cw-btn-cta" onclick="window.triggerHeroSearch()">
+            <span>SEARCH</span>
+          </button>
+        </div>
 
-      <!-- Trust Strip -->
-      <div class="hero-trust-strip">
-        <div class="trust-strip-item">
-          <span class="trust-icon">🛡️</span>
-          <span>100% Spam-Free: No Mobile Number Needed</span>
+        <!-- CarWale Quick Filter Chips -->
+        <div class="carwale-quick-chips">
+          <a href="#popularBudgetSection" class="cw-chip">
+            <span class="cw-chip-icon">🏷️</span>
+            <span>Budget</span>
+          </a>
+          <a href="#findChoiceSection" class="cw-chip">
+            <span class="cw-chip-icon">🚗</span>
+            <span>Body Type</span>
+          </a>
+          <a href="#fuelTypeSection" class="cw-chip">
+            <span class="cw-chip-icon">⚡</span>
+            <span>Fuel Type</span>
+          </a>
+          <a href="cars.html?transmission=Automatic" class="cw-chip">
+            <span class="cw-chip-icon">⚙️</span>
+            <span>Transmission</span>
+          </a>
+          <a href="cars.html" class="cw-chip cw-chip-primary">
+            <span class="cw-chip-icon">🎛️</span>
+            <span>All Filters</span>
+          </a>
         </div>
-        <div class="trust-strip-item">
-          <span class="trust-icon">📍</span>
-          <span>Accurate State RTO & Tax Breakdown</span>
-        </div>
-        <div class="trust-strip-item">
-          <span class="trust-icon">🎨</span>
-          <span>Official OEM Studio 360° Renders</span>
+
+        <!-- Trust Badges Strip -->
+        <div class="carwale-card-trust">
+          <span class="cw-trust-item">🛡️ 100% Spam-Free: No Mobile Number Needed</span>
+          <span class="cw-trust-dot">•</span>
+          <span class="cw-trust-item">📍 Real-Time State RTO Rates</span>
+          <span class="cw-trust-dot">•</span>
+          <span class="cw-trust-item">🚗 91+ 2024–2026 Verified Launches</span>
         </div>
       </div>
     </div>
