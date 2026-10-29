@@ -406,6 +406,31 @@ function renderCars() {
 
   renderActiveFilterTags();
 
+  const isUsedSearch = filters.category === 'used' || (filters.search && /used|second\s*hand|pre-?owned|purani/i.test(filters.search));
+  if (isUsedSearch) {
+    if (countDisplay) {
+      countDisplay.innerHTML = `Certified Used Cars &bull; <strong>Marketplace Launching Soon</strong>`;
+    }
+    carsContainer.innerHTML = `
+      <div class="used-cars-coming-soon-card">
+        <span class="coming-soon-badge">🚀 LAUNCHING SOON</span>
+        <div style="font-size: 52px; margin: 14px 0 8px;">🏷️🚗</div>
+        <h3 class="brand-font" style="font-size: 26px; color: #0F172A; margin-bottom: 8px;">Certified Used Cars Marketplace is Coming Soon!</h3>
+        <p style="font-size: 14px; color: var(--text-muted); max-width: 540px; margin: 0 auto 20px; line-height: 1.6;">
+          Looking for verified pre-owned cars? We are building India's 100% spam-free used car radar with 200+ point inspection records and zero dealer spam calls.
+        </p>
+        <div class="coming-soon-subscribe">
+          <input type="email" id="usedCarNotifyEmail" placeholder="Enter your email to get early access...">
+          <button type="button" class="btn-orange-pill" onclick="window.subscribeUsedCars('usedCarNotifyEmail')">Notify Me</button>
+        </div>
+        <div style="margin-top: 14px; font-size: 12px; color: #64748B;">
+          🛡️ Guaranteed: Zero dealer spam &bull; First priority when launched in your city
+        </div>
+      </div>
+    `;
+    return;
+  }
+
   if (filteredCars.length === 0) {
     carsContainer.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 20px; border: 1.5px dashed var(--border); margin: 20px 0;">
@@ -2214,10 +2239,10 @@ function renderPopularUsedCars() {
   if (!container) return;
 
   container.innerHTML = POPULAR_USED_CARS.map(car => `
-    <article class="popular-used-card" onclick="window.exploreUsedCarModel('${car.id}')">
+    <article class="popular-used-card" onclick="window.showUsedCarsComingSoon(event)">
       <div class="popular-used-media">
         <div class="popular-used-badge-row">
-          <span class="popular-used-demand-badge">${car.retentionScore}</span>
+          <span class="popular-used-demand-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 COMING SOON</span>
           <span class="popular-used-years-badge">📅 ${car.topYears}</span>
         </div>
         <img src="${car.image}" alt="${car.name}" class="popular-used-img" loading="lazy">
@@ -2227,15 +2252,15 @@ function renderPopularUsedCars() {
         <h3 class="popular-used-title">${car.name}</h3>
         <div class="popular-used-price-tag">
           <span class="popular-used-price-val">${car.usedPriceRange}</span>
-          <span class="popular-used-price-lbl">(Est. Used Price)</span>
+          <span class="popular-used-price-lbl">(Est. Used Benchmark)</span>
         </div>
         <div class="popular-used-specs-mini">
           <span class="used-spec-chip">⛽ ${car.fuelTypes.join('/')}</span>
           <span class="used-spec-chip">⚡ ${car.mileage}</span>
         </div>
         <p class="popular-used-highlight">${car.highlight}</p>
-        <button type="button" class="btn-explore-used" onclick="event.stopPropagation(); window.exploreUsedCarModel('${car.id}')">
-          View Used & New Specs &rsaquo;
+        <button type="button" class="btn-explore-used" onclick="window.showUsedCarsComingSoon(event)">
+          <span>🚀 Used Marketplace: Coming Soon &rsaquo;</span>
         </button>
       </div>
     </article>
@@ -2243,13 +2268,7 @@ function renderPopularUsedCars() {
 }
 
 window.exploreUsedCarModel = function(carId) {
-  const allCars = getAllCars();
-  const car = allCars.find(c => c.id === carId);
-  if (car) {
-    window.openCarModal(car.id);
-  } else {
-    showToast('Viewing specifications for ' + carId);
-  }
+  window.showUsedCarsComingSoon();
 };
 
 // ==========================================================================
@@ -2335,21 +2354,17 @@ function renderUsedCarsByCity() {
   if (!container) return;
 
   container.innerHTML = USED_CARS_CITIES.map(c => `
-    <div class="used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.selectUsedCity('${c.id}', '${c.name}')">
+    <div class="used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.showUsedCarsComingSoon(event)">
       <div class="used-city-icon-wrap">${c.iconSvg}</div>
       <div class="used-city-name">${c.name}</div>
       <div class="used-city-count">${c.count}</div>
-      <div class="used-city-price">${c.fromPrice}</div>
+      <div class="used-city-price" style="color:var(--primary); font-weight:800;">Launching Soon</div>
     </div>
   `).join('');
 }
 
 window.selectUsedCity = function(cityId, cityName) {
-  const matched = CITIES.find(c => c.id === cityId);
-  if (matched) {
-    window.selectCity(matched.id);
-  }
-  showToast(`📍 Selected ${cityName} — On-road RTO & local specs updated!`);
+  window.showUsedCarsComingSoon();
 };
 
 // CarWale Card Action Helpers
@@ -2379,6 +2394,15 @@ window.checkOnRoadPrice = function(carId) {
 
 // Travomint Hero Search & Navigation Helpers
 window.selectHeroType = function(type) {
+  if (type === 'used') {
+    filters.category = 'used';
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'used'));
+    renderCars();
+    const catalog = document.getElementById('catalogSection');
+    if (catalog) catalog.scrollIntoView({ behavior: 'smooth' });
+    window.showUsedCarsComingSoon();
+    return;
+  }
   filters.category = type;
   document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.category === type));
   renderCars();
@@ -2386,6 +2410,31 @@ window.selectHeroType = function(type) {
   if (catalog && type !== 'all') {
     catalog.scrollIntoView({ behavior: 'smooth' });
   }
+};
+
+window.showUsedCarsComingSoon = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const modal = document.getElementById('usedCarsModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    const input = document.getElementById('usedCarModalEmail');
+    if (input) setTimeout(() => input.focus(), 120);
+  }
+};
+
+window.subscribeUsedCars = function(inputId = 'usedCarModalEmail') {
+  const input = document.getElementById(inputId) || document.getElementById('usedCarModalEmail');
+  const email = (input ? input.value : '').trim();
+  if (!email || !email.includes('@')) {
+    window.showToast('⚠️ Please enter a valid email address.');
+    return;
+  }
+  window.showToast('🎉 You are on the VIP Early Access list for Used Cars!');
+  if (input) input.value = '';
+  setTimeout(() => {
+    window.closeModal('usedCarsModal');
+  }, 1200);
 };
 
 window.selectHeroPrice = function(val) {
