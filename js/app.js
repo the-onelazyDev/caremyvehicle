@@ -1,3 +1,10 @@
+
+// Direct Dedicated Car Landing Page Navigation (CarWale Style)
+window.navigateToCar = function(carId, hash) {
+  const targetUrl = '/cars/' + encodeURIComponent(carId) + '.html' + (hash ? '#' + hash : '');
+  window.location.href = targetUrl;
+};
+
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './carData.js';
 import { ARTICLES } from './newsData.js';
 
@@ -206,7 +213,7 @@ function renderTrendingLaunches() {
   container.innerHTML = displayList.map(car => {
     const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
     return `
-      <div class="trending-card" onclick="window.openCarModal('${car.id}')" style="cursor:pointer;">
+      <div class="trending-card" onclick="window.navigateToCar('${car.id}')" style="cursor:pointer;">
         <div class="trending-card-media">
           <div class="trending-badge-row">
             <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
@@ -418,7 +425,7 @@ function renderCars() {
     const colorCount = car.colors ? car.colors.length : 0;
     
     return `
-      <article class="car-card" data-car-id="${car.id}" onclick="window.openCarModal('${car.id}')" title="Click anywhere on card for full 360° studio & variants">
+      <article class="car-card" data-car-id="${car.id}" onclick="window.navigateToCar('${car.id}')" title="Click anywhere on card for full 360° studio & variants">
         <div class="card-media">
           <div class="card-badge-row">
             <span class="card-badge badge-launch">${formatLaunchBadge(car.launchDate)}</span>

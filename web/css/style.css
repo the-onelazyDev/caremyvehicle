@@ -3146,3 +3146,185 @@ a {
     font-weight: 600 !important;
   }
 }
+
+/* ==========================================================================
+   CARWALE-STYLE HOMEPAGE COMPACTNESS & INSTAGRAM STYLES
+   ========================================================================== */
+
+/* Header Instagram Gradient Button */
+.nav-insta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+  color: #FFFFFF !important;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(221, 42, 123, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-insta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(221, 42, 123, 0.4);
+}
+
+@media (max-width: 480px) {
+  .insta-label {
+    display: none;
+  }
+  .nav-insta-btn {
+    padding: 6px 10px;
+  }
+}
+
+/* Footer Instagram Showcase Card */
+.footer-insta-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 12px 18px;
+  text-decoration: none;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+}
+
+.footer-insta-card:hover {
+  border-color: #DD2A7B;
+  box-shadow: 0 4px 16px rgba(221, 42, 123, 0.12);
+  transform: translateY(-2px);
+}
+
+.insta-icon-badge {
+  font-size: 26px;
+  background: #FDF2F8;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insta-follow-pill {
+  margin-left: auto;
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+  color: #FFFFFF;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Compact Mobile Sections — CarWale-style Horizontal Carousel Shelves */
+@media (max-width: 640px) {
+  /* Reduce excessive section heights */
+  .section-container {
+    padding: 0 14px;
+  }
+
+  /* Catalog section: compact grid on mobile */
+  .catalog-section {
+    padding: 24px 0 32px 0 !important;
+  }
+
+  .catalog-header-bar {
+    margin-bottom: 12px !important;
+  }
+
+  /* Reduce filter dashboard vertical height */
+  .filter-dashboard-card {
+    padding: 12px 14px !important;
+    margin-bottom: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .filter-row-categories {
+    margin-bottom: 8px !important;
+  }
+
+  .filter-facets-row {
+    gap: 8px !important;
+  }
+
+  /* Compact 1-column mobile catalog cards */
+  .cars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .car-card {
+    border-radius: 18px !important;
+    padding: 14px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  }
+
+  .card-media {
+    height: 160px !important;
+  }
+
+  .card-img {
+    max-height: 140px !important;
+  }
+
+  .card-name {
+    font-size: 17px !important;
+  }
+
+  .card-price-value {
+    font-size: 18px !important;
+  }
+
+  /* Hide huge descriptive body copy on mobile card to make screen short & clean */
+  .card-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .card-specs-row {
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .card-actions-carwale {
+    gap: 6px !important;
+  }
+
+  .btn-check-onroad,
+  .btn-price-breakup {
+    padding: 9px 12px !important;
+    font-size: 12.5px !important;
+  }
+
+  /* Dedicated Car Landing Page Mobile Fixes */
+  .car-landing-main {
+    padding: 14px !important;
+  }
+
+  .car-hero-stage {
+    padding: 16px 12px !important;
+    border-radius: 20px !important;
+  }
+
+  #mainHeroImage {
+    max-height: 200px !important;
+  }
+
+  .car-title-box h1 {
+    font-size: 24px !important;
+  }
+}
