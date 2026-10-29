@@ -2824,3 +2824,325 @@ a {
     min-width: 290px;
   }
 }
+
+/* ==========================================================================
+   CARWALE & CARDEKHO BENCHMARK MOBILE STYLES (MATCHING & BEATING INDUSTRY LEADERS)
+   ========================================================================== */
+
+/* 1. Modal Hero Car Showcase (Full-bleed studio presentation) */
+.modal-hero-showcase {
+  position: relative;
+  background: radial-gradient(circle at 50% 60%, #FFFFFF 20%, #F1F5F9 100%);
+  border-radius: 20px;
+  padding: 14px 14px 12px;
+  margin: -6px -6px 16px -6px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+.modal-hero-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-hero-badge {
+  font-size: 11.5px;
+  font-weight: 800;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal-pill-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.modal-close-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.modal-hero-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-hero-car-img {
+  max-width: 92%;
+  max-height: 190px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 14px 20px rgba(15, 23, 42, 0.16));
+  transition: transform 0.3s ease;
+}
+
+.modal-hero-chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-chip-pill {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border: 1px solid #CBD5E1;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1E293B;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: all 0.15s ease;
+}
+
+.hero-chip-pill:hover,
+.hero-chip-pill:active {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+}
+
+/* 2. Car Identity Header */
+.modal-title-header {
+  margin-bottom: 16px;
+}
+
+.modal-brand-tag {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2563EB;
+  margin-bottom: 4px;
+}
+
+.modal-car-name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modal-car-name {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.modal-car-price {
+  font-size: 19px;
+  font-weight: 900;
+  color: #2563EB;
+  letter-spacing: -0.3px;
+}
+
+.modal-car-tagline {
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 4px 0 12px 0;
+  line-height: 1.4;
+}
+
+/* 3. Quick Specs Row */
+.modal-quick-specs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 10px 8px;
+}
+
+.quick-spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #E2E8F0;
+}
+
+.quick-spec-item:last-child {
+  border-right: none;
+}
+
+.qspec-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.qspec-val {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0F172A;
+  white-space: nowrap;
+}
+
+/* 4. City On-Road Selector */
+.modal-city-box {
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-city-dropdown {
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  font-weight: 800;
+  font-size: 13px;
+  color: #0F172A;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+/* 5. Variant Cards & Itemized Breakdown */
+.variant-chips-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px 0;
+}
+
+.vchip {
+  font-size: 11px;
+  font-weight: 700;
+  background: #F1F5F9;
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+}
+
+.price-breakdown-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.pbreak-row {
+  display: flex;
+  justify-content: space-between;
+  color: #64748B;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.pbreak-val {
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.pbreak-total {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #CBD5E1;
+  font-weight: 900;
+  font-size: 13.5px;
+  color: #2563EB;
+}
+
+/* 6. Homepage Mobile Layout Polish */
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 24px 14px 20px !important;
+  }
+  .hero-pill {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+    margin-bottom: 8px !important;
+  }
+  .hero-title {
+    font-size: 23px !important;
+    margin-bottom: 6px !important;
+  }
+  .hero-desc {
+    display: none; /* Hide heavy paragraph on mobile for high-density app feel */
+  }
+  .search-bar-wrapper {
+    margin: 14px auto 10px !important;
+  }
+  .trust-badges {
+    display: none; /* Hide trust chips on mobile — cleaner look like CarWale */
+  }
+  .section-header {
+    margin-bottom: 14px !important;
+  }
+  .section-title {
+    font-size: 19px !important;
+    letter-spacing: -0.3px !important;
+  }
+  .section-subtitle {
+    font-size: 12px !important;
+  }
+  .brands-shelf-scroll {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .brands-shelf-scroll .brand-pill-card {
+    height: 84px !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+  }
+  .brands-shelf-scroll .brand-pill-logo {
+    height: 32px !important;
+    max-width: 58px !important;
+  }
+  .brands-shelf-scroll .brand-pill-name {
+    font-size: 10.5px !important;
+    font-weight: 600 !important;
+  }
+}

@@ -1125,41 +1125,77 @@ function _renderCarModalContent(car, modalBody) {
   const gallery = car.gallery || [];
   const specs = car.specs || {};
   const activePalette = (colors.length > 0) ? colors : (spin360 ? spin360.colors : []);
+  const heroImg = car.heroImage || (colors.length > 0 ? colors[0].image : '');
 
   modalBody.innerHTML = `
-    <div class="modal-header">
-      <div>
+    <!-- Premium CarWale/CarDekho Mobile Hero Showcase -->
+    <div class="modal-hero-showcase">
+      <div class="modal-hero-topbar">
+        <span class="modal-hero-badge">⭐ ${car.safetyRating || '5-Star Safety'}</span>
         <div style="display:flex; align-items:center; gap:8px;">
-          <span class="card-brand">${car.brand} • ${car.bodyType}</span>
-          <span class="badge-safety" style="position:static; font-size:11px; padding:2px 8px;">🛡️ ${car.safetyRating}</span>
+          <button class="modal-pill-btn" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
+            🔗 Share
+          </button>
+          <button class="modal-close-circle" onclick="closeModal('carDetailModal')" title="Close">&times;</button>
         </div>
-        <div style="display:flex; align-items:baseline; gap:10px; margin-top:2px;">
-          <h2 style="font-size:21px; font-weight:900; letter-spacing:-0.5px; margin:0;">${car.name}</h2>
-          <span style="font-size:14px; font-weight:800; color:var(--primary);">${car.priceRange}</span>
-        </div>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:2px; margin-bottom:0; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${car.tagline || car.summary}</p>
       </div>
-      <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
-      <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="window.shareCarLink('${car.id}')" title="Share direct link">
-          🔗 Share
-        </button>
-        <button class="modal-close-btn" onclick="closeModal('carDetailModal')" title="Close">&times;</button>
+
+      <div class="modal-hero-media">
+        <img id="modalHeroImg" src="${heroImg}" alt="${car.name}" class="modal-hero-car-img">
+      </div>
+
+      <!-- Quick Action Pills over Car Photo -->
+      <div class="modal-hero-chips">
+        ${spin360 ? `<button type="button" class="hero-chip-pill" onclick="switchModalTab('colors')">🔄 360° Studio</button>` : ''}
+        ${colors.length > 0 ? `<button type="button" class="hero-chip-pill" onclick="switchModalTab('colors')">🎨 ${colors.length} Colors</button>` : ''}
+        ${gallery.length > 0 ? `<button type="button" class="hero-chip-pill" onclick="switchModalTab('gallery')">📸 ${gallery.length} Photos</button>` : ''}
+        <button type="button" class="hero-chip-pill" onclick="switchModalTab('specs')">⚙️ Specs</button>
+      </div>
+    </div>
+
+    <!-- Car Identity & Price Header -->
+    <div class="modal-title-header">
+      <div class="modal-brand-tag">${car.brand} • ${car.bodyType}</div>
+      <div class="modal-car-name-row">
+        <h2 class="modal-car-name">${car.name}</h2>
+        <div class="modal-car-price">${car.priceRange}</div>
+      </div>
+      <p class="modal-car-tagline">${car.tagline || car.summary}</p>
+
+      <!-- Key Highlights Pills Row -->
+      <div class="modal-quick-specs-row">
+        <div class="quick-spec-item">
+          <span class="qspec-label">Ground Clr.</span>
+          <span class="qspec-val">${car.groundClearance}</span>
+        </div>
+        <div class="quick-spec-item">
+          <span class="qspec-label">Boot Space</span>
+          <span class="qspec-val">${car.bootSpace}</span>
+        </div>
+        <div class="quick-spec-item">
+          <span class="qspec-label">Wait Period</span>
+          <span class="qspec-val">${car.waitingPeriod}</span>
+        </div>
+        <div class="quick-spec-item">
+          <span class="qspec-label">Variants</span>
+          <span class="qspec-val">${car.variants.length} Options</span>
+        </div>
       </div>
     </div>
 
     <!-- Navigation Tabs -->
     <div class="modal-nav-tabs">
       <button class="modal-tab-btn active" data-tab="variants" onclick="switchModalTab('variants')">
-        🏷️ Variants & On-Road Price (${car.variants.length})
+        🏷️ Variants & Price (${car.variants.length})
       </button>
       ${(spin360 || colors.length > 0 || angles.length > 0) ? `
         <button class="modal-tab-btn" data-tab="colors" onclick="switchModalTab('colors')">
-          ${spin360 ? '🎨 Colors & 360° Studio 🔄' : `🎨 Official Colors (${colors.length})`}
+          ${spin360 ? '🎨 Colors & 360° Studio 🔄' : `🎨 Colors (${colors.length})`}
         </button>
       ` : ''}
       ${gallery.length > 0 ? `
         <button class="modal-tab-btn" data-tab="gallery" onclick="switchModalTab('gallery')">
-          📸 Photo Gallery (${gallery.length})
+          📸 Photos (${gallery.length})
         </button>
       ` : ''}
       <button class="modal-tab-btn" data-tab="specs" onclick="switchModalTab('specs')">
@@ -1170,9 +1206,12 @@ function _renderCarModalContent(car, modalBody) {
     <!-- TAB 1: VARIANTS & ON-ROAD PRICES -->
     <div id="tab-pane-variants" class="tab-pane active">
       <!-- City Pricing Selector -->
-      <div style="background:#F1F5F9; border-radius:12px; padding:12px 16px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between;">
-        <span style="font-size:13px; font-weight:700; color:var(--text-secondary)">Calculate On-Road Price for City:</span>
-        <select onchange="window.selectCity(this.value)" style="padding:6px 12px; border-radius:8px; border:1px solid #CBD5E1; font-weight:700; background:#FFF; cursor:pointer;">
+      <div class="modal-city-box">
+        <div>
+          <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase; letter-spacing:0.5px;">Selected City</div>
+          <div style="font-size:14px; font-weight:800; color:#0F172A;">On-Road Price in ${city.name}</div>
+        </div>
+        <select onchange="window.selectCity(this.value)" class="modal-city-dropdown">
           ${CITIES.map(c => `<option value="${c.id}" ${c.id === selectedCityId ? 'selected' : ''}>${c.name}</option>`).join('')}
         </select>
       </div>
@@ -1183,41 +1222,41 @@ function _renderCarModalContent(car, modalBody) {
 
           return `
             <div class="variant-card ${v.isVFM ? 'vfm' : ''}">
-              ${v.isVFM ? `<span class="vfm-chip">${v.vfmBadge}</span>` : ''}
+              ${v.isVFM ? `<span class="vfm-chip">⭐ ${v.vfmBadge}</span>` : ''}
               
               <div class="variant-title-row">
                 <div class="variant-name">${v.name}</div>
                 <div class="variant-price">${formatLakh(quote.total)}</div>
               </div>
 
-              <div style="display:flex; gap:12px; font-size:12px; color:var(--text-secondary); margin-bottom:8px;">
-                <span><strong>Engine:</strong> ${v.engine}</span>
-                <span><strong>Mileage:</strong> ${v.mileage}</span>
-                <span><strong>Fuel:</strong> ${v.fuel}</span>
-                <span><strong>Trans:</strong> ${v.trans}</span>
+              <div class="variant-chips-bar">
+                <span class="vchip">⛽ ${v.fuel}</span>
+                <span class="vchip">⚙️ ${v.trans}</span>
+                <span class="vchip">⚡ ${v.mileage}</span>
+                <span class="vchip">🔧 ${v.engine}</span>
               </div>
 
               <!-- Itemized Price Transparency Breakdown -->
-              <div style="background:rgba(255,255,255,0.7); border:1px solid var(--border); border-radius:8px; padding:8px 12px; font-size:12px; margin-top:8px;">
-                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                  <span style="color:var(--text-muted)">Ex-Showroom Price:</span>
-                  <span>${formatINR(quote.exShowroom)}</span>
+              <div class="price-breakdown-card">
+                <div class="pbreak-row">
+                  <span>Ex-Showroom Price</span>
+                  <span class="pbreak-val">${formatINR(quote.exShowroom)}</span>
                 </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                  <span style="color:var(--text-muted)">State RTO & Road Tax:</span>
-                  <span>${formatINR(quote.rto)}</span>
+                <div class="pbreak-row">
+                  <span>State RTO & Road Tax</span>
+                  <span class="pbreak-val">${formatINR(quote.rto)}</span>
                 </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                  <span style="color:var(--text-muted)">Zero-Dep Insurance (Fair Est.):</span>
-                  <span>${formatINR(quote.insurance)}</span>
+                <div class="pbreak-row">
+                  <span>Zero-Dep Insurance (Fair Est.)</span>
+                  <span class="pbreak-val">${formatINR(quote.insurance)}</span>
                 </div>
                 ${quote.tcs > 0 ? `
-                <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
-                  <span style="color:var(--text-muted)">1% TCS Tax:</span>
-                  <span>${formatINR(quote.tcs)}</span>
+                <div class="pbreak-row">
+                  <span>1% TCS Tax</span>
+                  <span class="pbreak-val">${formatINR(quote.tcs)}</span>
                 </div>` : ''}
-                <div style="display:flex; justify-content:space-between; margin-top:4px; padding-top:4px; border-top:1px dashed #CBD5E1; font-weight:800; color:var(--primary);">
-                  <span>Total On-Road (${city.name}):</span>
+                <div class="pbreak-row pbreak-total">
+                  <span>Total On-Road (${city.name})</span>
                   <span>${formatINR(quote.total)}</span>
                 </div>
               </div>
@@ -1238,26 +1277,21 @@ function _renderCarModalContent(car, modalBody) {
           ${spin360 ? `
             <!-- 360 Interactive Drag & Spin Turntable & Unified Studio Stage -->
             <div class="spin360-container" id="spin360Container">
-              <!-- Top Left Badge -->
               <div class="spin360-badge" id="spin360Badge">
                 <span>🔄</span>
-                <span id="spin360BadgeText">Drag / Swipe to Spin 360°</span>
+                <span id="spin360BadgeText">Swipe horizontally to Spin 360°</span>
               </div>
 
-              <!-- Top Right Floating Return Button (Visible in 2D Shade mode) -->
               <button type="button" id="btnReturnToSpin" class="spin-return-pill" onclick="window.returnTo360Spin()" style="display:none;" title="Switch back to 360° Turntable">
                 🔄 360° Spin Studio
               </button>
 
-              <!-- 360 Turntable Canvas -->
               <canvas id="spin360Canvas" width="1056" height="594" class="spin360-canvas"></canvas>
 
-              <!-- 2D High-Res Official Shade (Seamlessly integrated inside same frame) -->
               <div id="spinColorStage" class="spin2d-stage" style="display:none;">
                 <img id="spinColorDisplayImg" src="" alt="${car.name}" class="spin2d-img">
               </div>
 
-              <!-- Bottom 360 Controls Bar -->
               <div class="spin360-controls" id="spin360Controls">
                 <button type="button" id="btnAutoSpin" class="spin-ctrl-btn" onclick="window.toggleAutoSpin()">
                   ▶ Auto-Spin
@@ -1270,7 +1304,6 @@ function _renderCarModalContent(car, modalBody) {
                 <span id="spinAngleBadge" style="font-size:12px; font-weight:800; color:var(--text-main); min-width:40px; text-align:right;">0°</span>
               </div>
 
-              <!-- Bottom 2D Shade Controls Bar -->
               <div class="spin360-controls" id="spin2dControls" style="display:none; justify-content:space-between; align-items:center;">
                 <span style="font-size:12px; font-weight:700; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px;">
                   <span>🎨</span> Official Paint Shade (Studio View)
@@ -1306,12 +1339,10 @@ function _renderCarModalContent(car, modalBody) {
               </div>
             </div>
           ` : `
-            <!-- Multi-Angle / Color Fallback for Cars without 360 spin -->
             ${angles.length > 0 ? `
-              <!-- 360° / Multi-Angle Selector Toolbar -->
               <div style="margin-bottom:16px;">
                 <div style="font-size:11px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
-                  🔄 360° Multi-Angle Studio View
+                  🔄 Multi-Angle Studio View
                 </div>
                 <div class="studio-angle-bar">
                   ${angles.map((ang, aIdx) => `
@@ -1408,44 +1439,38 @@ function _renderCarModalContent(car, modalBody) {
           <tr>
             <td class="spec-col-label">Engine Powertrains</td>
             <td class="spec-col-val">${specs.engineOptions}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
           ${specs.transmissions ? `
           <tr>
             <td class="spec-col-label">Transmissions</td>
             <td class="spec-col-val">${specs.transmissions}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
           ${specs.dimensions ? `
           <tr>
             <td class="spec-col-label">Dimensions (L × W × H)</td>
             <td class="spec-col-val">${specs.dimensions}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
           ${specs.wheelbase ? `
           <tr>
             <td class="spec-col-label">Wheelbase</td>
             <td class="spec-col-val">${specs.wheelbase}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
           ${specs.fuelTank ? `
           <tr>
             <td class="spec-col-label">Fuel Tank Capacity</td>
             <td class="spec-col-val">${specs.fuelTank}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
           ${specs.seatingCapacity ? `
           <tr>
             <td class="spec-col-label">Seating Capacity</td>
             <td class="spec-col-val">${specs.seatingCapacity}</td>
-          </tr>
-          ` : ''}
+          </tr>` : ''}
         </tbody>
       </table>
     </div>
   `;
 
-  // Scroll sheet to top so user sees header first
+    // Scroll sheet to top so user sees header first
   const sheet = document.querySelector('#carDetailModal .modal-sheet');
   if (sheet) { sheet.scrollTop = 0; }
 
