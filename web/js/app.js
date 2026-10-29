@@ -1245,16 +1245,22 @@ window.shareCarLink = function(carId) {
 
 // Close Any Modal Drawer
 window.closeModal = function(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) modal.classList.remove('active');
+  if (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('active');
+  } else {
+    document.querySelectorAll('.modal-overlay.active, .modal.active').forEach(m => m.classList.remove('active'));
+  }
   if (modalId === 'carDetailModal') {
     currentModalCar = null;
-    history.pushState(null, '', window.location.pathname);
-    // Restore body scroll
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
+    try {
+      history.pushState(null, '', window.location.pathname);
+    } catch(e) {}
   }
+  // UNCONDITIONALLY restore body scroll on any modal close
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
 };
 
 // Global Toast Notification Helper
@@ -2848,3 +2854,16 @@ window.setCarTypeMode = function(mode) {
     }
   }
 };
+
+/* Global Modal Backdrop & Escape Key Handlers */
+window.addEventListener('click', (e) => {
+  if (e.target && e.target.classList && e.target.classList.contains('modal-overlay')) {
+    window.closeModal(e.target.id);
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeModal();
+  }
+});

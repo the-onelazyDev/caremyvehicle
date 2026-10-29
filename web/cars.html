@@ -305,5 +305,41 @@
   </footer>
 
   <script type="module" src="js/catalog.js"></script>
+  <!-- City Selector & RTO Modal -->
+  <div id="cityModal" class="modal-overlay" onclick="if(event.target === this) window.closeModal('cityModal')">
+    <div class="modal-sheet" style="max-width: 580px; padding: 26px 24px; position: relative;">
+      <button class="modal-close-btn" style="position:absolute; top:16px; right:16px;" onclick="window.closeModal('cityModal')">&times;</button>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <span style="font-size:24px;">📍</span>
+        <div>
+          <h3 class="brand-font" style="font-size:22px; color:#0F172A; margin:0;">Select Your City</h3>
+          <p style="font-size:12.5px; color:#64748B; margin:2px 0 0;">Accurate state RTO tax & on-road calculations across India</p>
+        </div>
+      </div>
+      <div style="position:relative; margin-bottom:16px;">
+        <input type="text" id="citySearchInput" class="cell-input" placeholder="Search city (e.g. Mumbai, Bengaluru, Delhi, Pune...)" oninput="window.filterCitiesList(this.value)" style="width:100%; padding:10px 14px 10px 36px; border:1.5px solid #CBD5E1; border-radius:10px; font-size:14px; color:#0F172A; background:#FFFFFF;">
+        <span style="position:absolute; left:12px; top:50%; transform:translateY(-50%); color:#94A3B8; font-size:14px;">🔍</span>
+      </div>
+      <div id="citiesListContainer" class="cities-select-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:10px; max-height:300px; overflow-y:auto; padding-right:4px;"></div>
+    </div>
+  </div>
+
+  <!-- Used Cars Modal -->
+  <div id="usedCarsModal" class="modal-overlay" onclick="if(event.target === this) window.closeModal('usedCarsModal')">
+    <div class="modal-sheet" style="max-width: 500px; text-align: center; padding: 36px 24px; position:relative;">
+      <button class="modal-close-btn" style="position:absolute; top:16px; right:16px;" onclick="window.closeModal('usedCarsModal')">&times;</button>
+      <div style="font-size: 52px; margin-bottom: 8px;">🚗✨</div>
+      <span class="coming-soon-badge" style="margin-bottom: 12px;">🚀 MARKETPLACE LAUNCHING SOON</span>
+      <h3 class="brand-font" style="font-size: 26px; color: #0F172A; margin: 10px 0 8px;">Certified Used Cars Radar</h3>
+      <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; max-width: 420px; margin: 0 auto 22px;">
+        Care My Vehicle is launching India's first 100% spam-free, verified second-hand car marketplace. 200+ point inspection checks, transparent valuation, and zero dealer spam calls.
+      </p>
+      <div class="coming-soon-subscribe">
+        <input type="email" id="usedCarModalEmail" placeholder="Enter your email to get early access...">
+        <button type="button" class="btn-orange-pill" onclick="window.subscribeUsedCars()">Notify Me</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

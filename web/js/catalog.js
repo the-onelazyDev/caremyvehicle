@@ -363,3 +363,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCatalog();
 });
+
+
+// City Modal & Filter Handlers for catalog.js
+window.openCityModal = function() {
+  const modal = document.getElementById('cityModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    renderCatalogCityModalList();
+    const input = document.getElementById('citySearchInput');
+    if (input) {
+      input.value = '';
+      setTimeout(() => input.focus(), 120);
+    }
+  }
+};
+
+window.closeModal = function(modalId) {
+  if (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('active');
+  } else {
+    document.querySelectorAll('.modal-overlay.active, .modal.active').forEach(m => m.classList.remove('active'));
+  }
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
+};
+
+window.filterCitiesList = function(val) {
+  renderCatalogCityModalList(val);
+};
+
+function renderCatalogCityModalList(filterText = '') {
+  const container = document.getElementById('citiesListContainer');
+  if (!container) return;
+  const q = (filterText || '').toLowerCase().trim();
+  const matched = CITIES.filter(c => c.name.toLowerCase().includes(q) || c.id.includes(q));
+
+  if (matched.length === 0) {
+    container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:20px; color:#64748B; font-size:13px;">No city found</div>';
+    return;
+  }
+
+  container.innerHTML = matched.map(c => {
+    const isSel = c.id === currentCityId;
+    const rtoPct = Math.round(c.rtoRate * 100);
+    return '<button type="button" class="city-select-card ' + (isSel ? 'active' : '') + '" onclick="window.selectCity(\'' + c.id + '\')">' +
+      '<div class="city-name-text">' + c.name + (isSel ? ' ✓' : '') + '</div>' +
+      '<div class="city-rto-tag">' + rtoPct + '% State RTO + Cess</div>' +
+    '</button>';
+  }).join('');
+}
+
+window.selectCity = function(cityId) {
+  currentCityId = cityId;
+  try {
+    localStorage.setItem('cmv_user_city', cityId);
+  } catch(e) {}
+  const city = CITIES.find(c => c.id === cityId);
+  const cityDisplay = document.getElementById('cityNameDisplay');
+  if (cityDisplay && city) cityDisplay.textContent = city.name;
+  const catLabel = document.getElementById('catalogCityLabel');
+  if (catLabel && city) catLabel.textContent = city.name;
+  window.closeModal('cityModal');
+  renderCatalog();
+};
+
+window.showUsedCarsComingSoon = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const modal = document.getElementById('usedCarsModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    const input = document.getElementById('usedCarModalEmail');
+    if (input) setTimeout(() => input.focus(), 120);
+  }
+};
+
+window.subscribeUsedCars = function() {
+  const input = document.getElementById('usedCarModalEmail');
+  const email = (input ? input.value : '').trim();
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  alert('🎉 You are on the VIP Early Access list for Used Cars!');
+  if (input) input.value = '';
+  window.closeModal('usedCarsModal');
+};
+
+/* Global Backdrop & Escape Key Handlers */
+window.addEventListener('click', (e) => {
+  if (e.target && e.target.classList && e.target.classList.contains('modal-overlay')) {
+    window.closeModal(e.target.id);
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeModal();
+  }
+});
