@@ -46,7 +46,7 @@
     <div class="header-inner">
       <div class="brand-lockup">
         <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-          <img src="assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
+          <img src="/assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
           <div>
             <div class="brand-name brand-font" style="font-size:24px; font-weight:900; color:#FFFFFF; line-height:1;">Care My <span style="color:var(--primary);">Vehicle</span></div>
             <div class="brand-tagline" style="font-size:10.5px; font-weight:700; color:#94A3B8;">100% Spam-Free Car Finder</div>
@@ -54,34 +54,41 @@
         </a>
       </div>
 
-      <!-- Navigation Bar -->
-      <nav class="nav-tabs-bar">
-        <a href="/" class="nav-tab-item">
-          <span>🏠</span>
-          <span>Home</span>
-        </a>
-        <a href="/cars.html" class="nav-tab-item active">
+      <!-- Travomint Tab Bar Navigation -->
+      <nav class="nav-tabs-bar" id="mainNavTabs">
+        <a href="/cars.html" class="nav-tab-item active" data-nav="new-cars">
           <span>🚗</span>
-          <span>All Cars</span>
+          <span>New Cars</span>
         </a>
-        <a href="/cars.html?fuel=ev" class="nav-tab-item">
+        <a href="/cars.html?fuel=ev" class="nav-tab-item" data-nav="ev" onclick="window.filterCatalogByFuel ? window.filterCatalogByFuel('ev', event) : null">
           <span>⚡</span>
-          <span>EVs</span>
+          <span>EVs & Hybrids</span>
         </a>
-        <a href="/#compareSection" class="nav-tab-item">
+        <a href="/#compareSection" class="nav-tab-item" data-nav="compare">
           <span>⚖️</span>
           <span>Compare</span>
         </a>
-        <a href="/#newsSection" class="nav-tab-item">
+        <a href="/#onRoadCheckerSection" class="nav-tab-item" data-nav="on-road">
+          <span>🏷️</span>
+          <span>On-Road Price</span>
+        </a>
+        <a href="#usedCarsModal" class="nav-tab-item" data-nav="used-cars" onclick="window.showUsedCarsComingSoon ? window.showUsedCarsComingSoon(event) : null">
+          <span>🚗</span>
+          <span>Used Cars <span style="font-size:9px; background:#FEF3C7; color:#B45309; padding:1px 5px; border-radius:8px;">SOON</span></span>
+        </a>
+        <a href="/#newsSection" class="nav-tab-item" data-nav="reviews">
           <span>📰</span>
           <span>Reviews</span>
         </a>
       </nav>
 
       <div class="header-actions-right">
-        <a href="/" class="btn-orange-pill" style="text-decoration:none;">
-          <span>&larr; Back to Home</span>
-        </a>
+        <button id="citySelectorBtn" class="btn-orange-pill" aria-label="Select City" onclick="window.openCityModal()">
+          <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </header>

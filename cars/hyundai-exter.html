@@ -704,7 +704,7 @@
     </div>
   </div>
 
-  <!-- Header with Brand & Back Link -->
+  <!-- Top Sticky Navigation Bar -->
   <header class="site-header">
     <div class="header-inner">
       <div class="brand-lockup">
@@ -717,10 +717,41 @@
         </a>
       </div>
 
-      <div class="header-actions-right">
-        <a href="/cars.html" class="btn-orange-pill" style="text-decoration:none;">
-          <span>&larr; All Cars</span>
+      <!-- Travomint Tab Bar Navigation -->
+      <nav class="nav-tabs-bar" id="mainNavTabs">
+        <a href="/cars.html" class="nav-tab-item" data-nav="new-cars">
+          <span>🚗</span>
+          <span>New Cars</span>
         </a>
+        <a href="/cars.html?fuel=ev" class="nav-tab-item" data-nav="ev">
+          <span>⚡</span>
+          <span>EVs & Hybrids</span>
+        </a>
+        <a href="/#compareSection" class="nav-tab-item" data-nav="compare">
+          <span>⚖️</span>
+          <span>Compare</span>
+        </a>
+        <a href="#carVariantsSection" class="nav-tab-item" data-nav="on-road" onclick="window.scrollToCarSection ? window.scrollToCarSection('carVariantsSection', event) : null">
+          <span>🏷️</span>
+          <span>On-Road Price</span>
+        </a>
+        <a href="#usedCarsModal" class="nav-tab-item" data-nav="used-cars" onclick="window.showUsedCarsComingSoon ? window.showUsedCarsComingSoon(event) : null">
+          <span>🚗</span>
+          <span>Used Cars <span style="font-size:9px; background:#FEF3C7; color:#B45309; padding:1px 5px; border-radius:8px;">SOON</span></span>
+        </a>
+        <a href="#userReviewsSection" class="nav-tab-item" data-nav="reviews" onclick="window.scrollToCarSection ? window.scrollToCarSection('userReviewsSection', event) : null">
+          <span>📰</span>
+          <span>Reviews</span>
+        </a>
+      </nav>
+
+      <div class="header-actions-right">
+        <button id="citySelectorBtn" class="btn-orange-pill" aria-label="Select City" onclick="window.openCityModal ? window.openCityModal() : null">
+          <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -1560,31 +1591,180 @@
     </div>
   </div>
 
-  <script>
-    // City Switching
-    const CITY_RATES = {
-      delhi: 1.10,
-      mumbai: 1.14,
-      bengaluru: 1.17,
-      hyderabad: 1.15,
-      chennai: 1.13
-    };
+  <!-- City Selector & RTO Modal -->
+  <div id="cityModal" class="modal-overlay" onclick="if(event.target === this) window.closeModal('cityModal')">
+    <div class="modal-sheet" style="max-width: 580px; padding: 26px 24px; position: relative;">
+      <button class="modal-close-btn" style="position:absolute; top:16px; right:16px;" onclick="window.closeModal('cityModal')">&times;</button>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <span style="font-size:24px;">📍</span>
+        <div>
+          <h3 class="brand-font" style="font-size:22px; color:#0F172A; margin:0;">Select Your City</h3>
+          <p style="font-size:12.5px; color:#64748B; margin:2px 0 0;">Accurate state RTO tax & on-road calculations across India</p>
+        </div>
+      </div>
+      <div style="position:relative; margin-bottom:16px;">
+        <input type="text" id="citySearchInput" class="cell-input" placeholder="Search city (e.g. Mumbai, Bengaluru, Delhi, Pune...)" oninput="window.filterCitiesList(this.value)" style="width:100%; padding:10px 14px 10px 36px; border:1.5px solid #CBD5E1; border-radius:10px; font-size:14px; color:#0F172A; background:#FFFFFF;">
+        <span style="position:absolute; left:12px; top:50%; transform:translateY(-50%); color:#94A3B8; font-size:14px;">🔍</span>
+      </div>
+      <div id="citiesListContainer" class="cities-select-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:10px; max-height:300px; overflow-y:auto; padding-right:4px;"></div>
+    </div>
+  </div>
 
-    function switchCity(cityKey, btn) {
-      document.querySelectorAll('.city-pill-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
-      const rate = CITY_RATES[cityKey] || 1.12;
+  <!-- Used Cars Modal -->
+  <div id="usedCarsModal" class="modal-overlay" onclick="if(event.target === this) window.closeModal('usedCarsModal')">
+    <div class="modal-sheet" style="max-width: 500px; text-align: center; padding: 36px 24px; position:relative;">
+      <button class="modal-close-btn" style="position:absolute; top:16px; right:16px;" onclick="window.closeModal('usedCarsModal')">&times;</button>
+      <div style="font-size: 52px; margin-bottom: 8px;">🚗✨</div>
+      <span class="coming-soon-badge" style="margin-bottom: 12px;">🚀 MARKETPLACE LAUNCHING SOON</span>
+      <h3 class="brand-font" style="font-size: 26px; color: #0F172A; margin: 10px 0 8px;">Certified Pre-Owned Cars</h3>
+      <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; max-width: 420px; margin: 0 auto 22px;">
+        Care My Vehicle is launching India's first 100% spam-free, verified second-hand car marketplace. 200+ point inspection checks, transparent valuation, and zero dealer spam calls.
+      </p>
+      <div class="coming-soon-subscribe">
+        <input type="email" id="usedCarModalEmail" placeholder="Enter your email to get early access...">
+        <button type="button" class="btn-orange-pill" onclick="window.subscribeUsedCars ? window.subscribeUsedCars() : null">Notify Me</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // City Switching & RTO State Tax Logic
+    const CITIES_LIST = [{"id":"delhi","name":"Delhi NCR","rtoRate":0.1,"cess":500,"fastag":500,"lat":28.6139,"lon":77.209},{"id":"mumbai","name":"Mumbai","rtoRate":0.12,"cess":1500,"fastag":500,"lat":19.076,"lon":72.8777},{"id":"bengaluru","name":"Bengaluru","rtoRate":0.15,"cess":2000,"fastag":500,"lat":12.9716,"lon":77.5946},{"id":"hyderabad","name":"Hyderabad","rtoRate":0.14,"cess":1200,"fastag":500,"lat":17.385,"lon":78.4867},{"id":"pune","name":"Pune","rtoRate":0.12,"cess":1500,"fastag":500,"lat":18.5204,"lon":73.8567},{"id":"chennai","name":"Chennai","rtoRate":0.13,"cess":1000,"fastag":500,"lat":13.0827,"lon":80.2707},{"id":"ahmedabad","name":"Ahmedabad","rtoRate":0.06,"cess":800,"fastag":500,"lat":23.0225,"lon":72.5714},{"id":"kolkata","name":"Kolkata","rtoRate":0.1,"cess":1000,"fastag":500,"lat":22.5726,"lon":88.3639},{"id":"jaipur","name":"Jaipur","rtoRate":0.1,"cess":800,"fastag":500,"lat":26.9124,"lon":75.7873},{"id":"lucknow","name":"Lucknow","rtoRate":0.1,"cess":800,"fastag":500,"lat":26.8467,"lon":80.9462},{"id":"chandigarh","name":"Chandigarh","rtoRate":0.08,"cess":600,"fastag":500,"lat":30.7333,"lon":76.7794},{"id":"kochi","name":"Kochi","rtoRate":0.12,"cess":1200,"fastag":500,"lat":9.9312,"lon":76.2673}];
+    let currentCityId = 'delhi';
+    try {
+      const saved = localStorage.getItem('cmv_user_city');
+      if (saved && CITIES_LIST.some(c => c.id === saved)) {
+        currentCityId = saved;
+      }
+    } catch(e) {}
+
+    function applyCityToPage(cityId) {
+      const city = CITIES_LIST.find(c => c.id === cityId) || CITIES_LIST[0];
+      currentCityId = city.id;
+      try {
+        localStorage.setItem('cmv_user_city', city.id);
+      } catch(e) {}
+
+      // Update header button
+      const cityDisplay = document.getElementById('cityNameDisplay');
+      if (cityDisplay) cityDisplay.textContent = city.name;
+
+      // Update hero city label
+      const label = document.getElementById('selectedCityLabel');
+      if (label) label.textContent = city.name;
+
+      // Update table headers
+      const tableHeaders = document.querySelectorAll('.tableCityHeader');
+      tableHeaders.forEach(th => th.textContent = city.name);
+
+      // Highlight active pill button if present
+      document.querySelectorAll('.city-pill-btn').forEach(b => {
+        const onc = b.getAttribute('onclick') || '';
+        b.classList.toggle('active', onc.includes(city.id));
+      });
+
+      // Recalculate price
+      const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 612800;
       const newPrice = Math.round(baseMin * rate);
       const disp = document.getElementById('onRoadPriceDisplay');
-      if (disp) {
+      if (disp && baseMin > 0) {
         disp.textContent = '₹' + (newPrice / 100000).toFixed(2) + ' Lakh';
       }
-      const label = document.getElementById('selectedCityLabel');
-      if (label) {
-        label.textContent = cityKey.charAt(0).toUpperCase() + cityKey.slice(1);
-      }
     }
+
+    function switchCity(cityKey, btn) {
+      applyCityToPage(cityKey);
+    }
+
+    window.openCityModal = function() {
+      const modal = document.getElementById('cityModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        renderCityModalList();
+        const input = document.getElementById('citySearchInput');
+        if (input) {
+          input.value = '';
+          setTimeout(() => input.focus(), 120);
+        }
+      }
+    };
+
+    window.closeModal = function(modalId) {
+      if (modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) modal.classList.remove('active');
+      } else {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active'));
+      }
+      document.body.style.overflow = '';
+    };
+
+    window.filterCitiesList = function(val) {
+      renderCityModalList(val);
+    };
+
+    function renderCityModalList(filterText = '') {
+      const container = document.getElementById('citiesListContainer');
+      if (!container) return;
+      const q = (filterText || '').toLowerCase().trim();
+      const matched = CITIES_LIST.filter(c => c.name.toLowerCase().includes(q) || c.id.includes(q));
+      if (matched.length === 0) {
+        container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:20px; color:#64748B; font-size:13px;">No city found</div>';
+        return;
+      }
+      container.innerHTML = matched.map(c => {
+        const isSel = c.id === currentCityId;
+        const rtoPct = Math.round(c.rtoRate * 100);
+        return '<button type="button" class="city-select-card ' + (isSel ? 'active' : '') + '" onclick="window.selectCity(\'' + c.id + '\')">' +
+          '<div class="city-name-text">' + c.name + (isSel ? ' ✓' : '') + '</div>' +
+          '<div class="city-rto-tag">' + rtoPct + '% State RTO + Cess</div>' +
+        '</button>';
+      }).join('');
+    }
+
+    window.selectCity = function(cityId) {
+      applyCityToPage(cityId);
+      window.closeModal('cityModal');
+    };
+
+    window.showUsedCarsComingSoon = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const modal = document.getElementById('usedCarsModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        const input = document.getElementById('usedCarModalEmail');
+        if (input) setTimeout(() => input.focus(), 120);
+      }
+    };
+
+    window.subscribeUsedCars = function() {
+      const input = document.getElementById('usedCarModalEmail');
+      const email = (input ? input.value : '').trim();
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      alert('🎉 You are on the VIP Early Access list for Used Cars!');
+      if (input) input.value = '';
+      window.closeModal('usedCarsModal');
+    };
+
+    window.scrollToCarSection = function(targetId, e) {
+      const el = document.getElementById(targetId);
+      if (el) {
+        if (e && e.preventDefault) e.preventDefault();
+        const offset = 80;
+        const pos = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: pos, behavior: 'smooth' });
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      applyCityToPage(currentCityId);
+    });
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

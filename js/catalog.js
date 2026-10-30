@@ -360,9 +360,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const city = CITIES.find(c => c.id === currentCityId);
   const cityLabel = document.getElementById('catalogCityLabel');
   if (cityLabel && city) cityLabel.textContent = city.name;
+  const cityDisplay = document.getElementById('cityNameDisplay');
+  if (cityDisplay && city) cityDisplay.textContent = city.name;
+
+  if (filters.fuel === 'ev' || filters.category === 'ev') {
+    const navItems = document.querySelectorAll('#mainNavTabs .nav-tab-item');
+    navItems.forEach(i => i.classList.remove('active'));
+    const evTab = document.querySelector('#mainNavTabs [data-nav="ev"]');
+    if (evTab) evTab.classList.add('active');
+  }
 
   renderCatalog();
 });
+
+window.filterCatalogByFuel = function(fuelKey, e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const navItems = document.querySelectorAll('#mainNavTabs .nav-tab-item');
+  navItems.forEach(i => i.classList.remove('active'));
+  const evTab = document.querySelector('#mainNavTabs [data-nav="ev"]');
+  if (evTab) evTab.classList.add('active');
+  window.setCategory('ev');
+  const fuelSel = document.getElementById('fuelFilterSelect');
+  if (fuelSel) {
+    fuelSel.value = 'ev';
+    window.setFuel('ev');
+  }
+};
 
 
 
