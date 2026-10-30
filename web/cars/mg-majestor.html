@@ -69,42 +69,193 @@
     }
     .car-hero-card {
       background: #FFFFFF;
-      border: 1px solid var(--border);
+      border: 1px solid #E5E7EB;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       margin-bottom: 32px;
     }
     .car-hero-media-box {
       position: relative;
-      background: radial-gradient(ellipse at center 60%, #FFFFFF 40%, #F8FAFC 100%);
-      padding: 30px 20px 20px;
+      background: #FFFFFF;
+      padding: 24px 24px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 280px;
-    }
-    .car-hero-img-wrap {
       width: 100%;
+    }
+    .car-hero-stage-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 220px;
-      padding: 10px 0;
+      background: #FFFFFF;
+    }
+    .car-hero-img-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-shadow: none;
     }
     .car-hero-main-img {
       max-width: 90%;
+      max-height: 340px;
+      width: auto;
       height: auto;
-      max-height: 260px;
       object-fit: contain;
       mix-blend-mode: multiply;
-      filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.12));
-      transition: transform 0.3s ease;
+      filter: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
       display: block;
+      cursor: pointer;
     }
     .car-hero-main-img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
+    }
+    /* Gallery Arrow Navigation Buttons */
+    .hero-gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0F172A;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      z-index: 20;
+      transition: all 0.2s ease;
+      font-size: 20px;
+    }
+    .hero-gallery-arrow:hover {
+      background: #0F172A;
+      color: #FFFFFF;
+      border-color: #0F172A;
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+    .hero-gallery-arrow.arrow-prev {
+      left: 12px;
+    }
+    .hero-gallery-arrow.arrow-next {
+      right: 12px;
+    }
+    /* Photo Counter Pill */
+    .hero-gallery-counter {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .hero-gallery-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #1E293B;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #E2E8F0;
+      max-width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      z-index: 10;
+    }
+    /* Clean Thumbnail Strip */
+    .hero-gallery-strip {
+      width: 100%;
+      margin-top: 14px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 10px 14px;
+    }
+    .strip-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+    .view-all-link {
+      color: #0284C7;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .view-all-link:hover {
+      text-decoration: underline;
+    }
+    .gallery-thumbnails-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+    .thumb-pill-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 4px 10px 4px 4px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    .thumb-pill-btn img {
+      width: 38px;
+      height: 26px;
+      object-fit: contain;
+      background: #FFFFFF;
+      border-radius: 6px;
+    }
+    .thumb-pill-btn:hover {
+      border-color: #0284C7;
+      color: #0284C7;
+      background: #F0F9FF;
+    }
+    .thumb-pill-btn.active {
+      background: #F0F9FF;
+      border-color: #0284C7;
+      color: #0369A1;
+      box-shadow: 0 0 0 1px #0284C7;
     }
     .car-hero-details {
       padding: 28px;
@@ -450,7 +601,7 @@
   <!-- Top Utility Bar (Travomint style) -->
   <div class="top-utility-bar">
     <div>
-      ✉️ thinksmart2108@gmail.com &bull; 100% Spam-Free Automotive Radar
+      ✉️ <a href="mailto:thinksmart2108@gmail.com" style="color:inherit; text-decoration:none;">thinksmart2108@gmail.com</a> &bull; 📞 <a href="tel:+917417174025" style="color:#FFF; font-weight:700; text-decoration:none;">+91-7417174025</a> &bull; 100% Spam-Free Automotive Radar
     </div>
     <div class="top-utility-links">
       <a href="/#trendingSection">⭐ Trending Launches</a>
@@ -468,8 +619,8 @@
         <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
           <img src="/assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
           <div>
-            <div class="brand-name brand-font" style="font-size:22px; font-weight:900; color:var(--primary); line-height:1;">Care My <span style="color:#1E293B;">Vehicle</span></div>
-            <div class="brand-tagline" style="font-size:10px; font-weight:700; color:var(--text-muted);">100% Spam-Free Vehicle Radar</div>
+            <div class="brand-name brand-font" style="font-size:22px; font-weight:900; color:#FFFFFF; line-height:1;">Care My <span style="color:var(--primary);">Vehicle</span></div>
+            <div class="brand-tagline" style="font-size:10px; font-weight:700; color:#94A3B8;">100% Spam-Free Vehicle Radar</div>
           </div>
         </a>
       </div>
@@ -495,57 +646,88 @@
         <div class="card-badge-row">
           <span class="card-badge badge-safety">⭐ 5-Star Safety</span>
         </div>
-        <div class="car-hero-img-wrap">
-          <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/metal-black.webp" alt="MG Majestor (Gloster Next-Gen)" class="car-hero-main-img">
+        
+        <!-- Interactive CarWale-Style Hero Stage with Arrow Navigation -->
+        <div class="car-hero-stage-container">
+          <button type="button" class="hero-gallery-arrow arrow-prev" onclick="stepHeroGallery(-1)" aria-label="Previous Photo" title="Previous Image">&#10094;</button>
+          
+          <div class="car-hero-img-wrap">
+            <img id="mainHeroImage" src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/colors/metal-black.webp" alt="MG Majestor (Gloster Next-Gen)" class="car-hero-main-img" onclick="openLightboxFromHero()">
+          </div>
+
+          <button type="button" class="hero-gallery-arrow arrow-next" onclick="stepHeroGallery(1)" aria-label="Next Photo" title="Next Image">&#10095;</button>
+
+          <div id="heroCaptionBadge" class="hero-gallery-caption">MG Majestor (Gloster Next-Gen) Studio Shot</div>
+          <div id="heroCounterBadge" class="hero-gallery-counter">1 / 12</div>
         </div>
         
         
-        <!-- CarWale-style Quick Photo Strip under Hero Image -->
+        <!-- Quick Photo Strip under Hero Image -->
         <div class="hero-gallery-strip">
           <div class="strip-header">
-            <span>📸 Official Exterior & Interior Showcase (12 HD Photos)</span>
-            <a href="#gallerySection" class="view-all-link">View All 12 &rarr;</a>
+            <span>📸 Official Exterior &amp; Interior Showcase (12 HD Photos)</span>
+            <a href="#gallerySection" class="view-all-link">View All 12 Photos &rarr;</a>
           </div>
-          <div class="gallery-thumbnails-scroll">
+          <div class="gallery-thumbnails-scroll" id="galleryThumbScroll">
             
-              <button type="button" class="thumb-pill-btn active" onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mosaic-matrix-grille.webp', 'Commanding Mosaic Matrix Front Grille', this)">
+              <button type="button" class="thumb-pill-btn active" data-idx="0" onclick="selectGalleryPhoto(0)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mosaic-matrix-grille.webp" alt="Commanding Mosaic Matrix Front Grille" loading="lazy">
                 <span>Commanding Mosaic</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dragon-eye-drls.webp', 'Dragon Eye LED DRLs with Tri-Beam Headlights', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="1" onclick="selectGalleryPhoto(1)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dragon-eye-drls.webp" alt="Dragon Eye LED DRLs with Tri-Beam Headlights" loading="lazy">
                 <span>Dragon Eye</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-shade-alloys.webp', 'R19 Dual-Shade Machined Alloy Wheels', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="2" onclick="selectGalleryPhoto(2)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-shade-alloys.webp" alt="R19 Dual-Shade Machined Alloy Wheels" loading="lazy">
                 <span>R19 Dual-Shade</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/connected-tail-lamps.webp', 'Full-Width Connected LED Tail Lamps &amp; Twin Exhausts', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="3" onclick="selectGalleryPhoto(3)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/connected-tail-lamps.webp" alt="Full-Width Connected LED Tail Lamps &amp; Twin Exhausts" loading="lazy">
                 <span>Full-Width Connected</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mlounge-galaxy-roof.webp', 'M-Lounge Cabin with Galaxy View Panoramic Roof', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="4" onclick="selectGalleryPhoto(4)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mlounge-galaxy-roof.webp" alt="M-Lounge Cabin with Galaxy View Panoramic Roof" loading="lazy">
                 <span>M-Lounge Cabin</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/massage-ventiluxe-seats.webp', 'Multi-Mode Massage &amp; Ventiluxe Heated/Cooled Seats', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="5" onclick="selectGalleryPhoto(5)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/massage-ventiluxe-seats.webp" alt="Multi-Mode Massage &amp; Ventiluxe Heated/Cooled Seats" loading="lazy">
                 <span>Multi-Mode Massage</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/jbl-studio-12-sound.webp', 'JBL Studio 12-Speaker Surround Audio System', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="6" onclick="selectGalleryPhoto(6)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/jbl-studio-12-sound.webp" alt="JBL Studio 12-Speaker Surround Audio System" loading="lazy">
                 <span>JBL Studio</span>
               </button>
             
-              <button type="button" class="thumb-pill-btn " onclick="switchHeroPhoto('https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ambient-lighting-64.webp', '64-Color Rhythmic Ambient Cabin Lighting', this)">
+              <button type="button" class="thumb-pill-btn " data-idx="7" onclick="selectGalleryPhoto(7)">
                 <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ambient-lighting-64.webp" alt="64-Color Rhythmic Ambient Cabin Lighting" loading="lazy">
                 <span>64-Color Rhythmic</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " data-idx="8" onclick="selectGalleryPhoto(8)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-wireless-charging.webp" alt="Dual 50W Wireless Chargers &amp; Column Gear Shifter" loading="lazy">
+                <span>Dual 50W</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " data-idx="9" onclick="selectGalleryPhoto(9)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/digital-cockpit-screens.webp" alt="Dual 12.3-inch HD Screens with i-SMART 2.0" loading="lazy">
+                <span>Dual 12.3-inch</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " data-idx="10" onclick="selectGalleryPhoto(10)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ladder-frame-chassis.webp" alt="High-Tensile Ladder-Frame Chassis &amp; Triple Diff-Locks" loading="lazy">
+                <span>High-Tensile Ladder-Frame</span>
+              </button>
+            
+              <button type="button" class="thumb-pill-btn " data-idx="11" onclick="selectGalleryPhoto(11)">
+                <img src="https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/level2-adas-360-cam.webp" alt="Level-2 ADAS Suite &amp; 360° HD Off-Road Camera" loading="lazy">
+                <span>Level-2 ADAS</span>
               </button>
             
           </div>
@@ -1031,7 +1213,7 @@
       <!-- Contact Pill Strip (Helpline, Email, Instagram) -->
       <div class="footer-contact-pill">
         <div class="contact-item">
-          <span>📞</span> Helpline: +91-7417174025
+          <span>📞</span> Helpline: <a href="tel:+917417174025" style="color:#FFF; text-decoration:underline; font-weight:700;">+91-7417174025</a>
         </div>
         <div>or, simply</div>
         <div class="contact-item">
@@ -1114,18 +1296,72 @@
       });
     }
 
-    function switchHeroPhoto(imgUrl, title, btn) {
+    const CAR_GALLERY = [{"id":"mosaic-matrix-grille","title":"Commanding Mosaic Matrix Front Grille","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mosaic-matrix-grille.webp"},{"id":"dragon-eye-drls","title":"Dragon Eye LED DRLs with Tri-Beam Headlights","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dragon-eye-drls.webp"},{"id":"dual-shade-alloys","title":"R19 Dual-Shade Machined Alloy Wheels","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-shade-alloys.webp"},{"id":"connected-tail-lamps","title":"Full-Width Connected LED Tail Lamps & Twin Exhausts","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/connected-tail-lamps.webp"},{"id":"mlounge-galaxy-roof","title":"M-Lounge Cabin with Galaxy View Panoramic Roof","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/mlounge-galaxy-roof.webp"},{"id":"massage-ventiluxe-seats","title":"Multi-Mode Massage & Ventiluxe Heated/Cooled Seats","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/massage-ventiluxe-seats.webp"},{"id":"jbl-studio-12-sound","title":"JBL Studio 12-Speaker Surround Audio System","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/jbl-studio-12-sound.webp"},{"id":"ambient-lighting-64","title":"64-Color Rhythmic Ambient Cabin Lighting","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ambient-lighting-64.webp"},{"id":"dual-wireless-charging","title":"Dual 50W Wireless Chargers & Column Gear Shifter","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/dual-wireless-charging.webp"},{"id":"digital-cockpit-screens","title":"Dual 12.3-inch HD Screens with i-SMART 2.0","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/digital-cockpit-screens.webp"},{"id":"ladder-frame-chassis","title":"High-Tensile Ladder-Frame Chassis & Triple Diff-Locks","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/ladder-frame-chassis.webp"},{"id":"level2-adas-360-cam","title":"Level-2 ADAS Suite & 360° HD Off-Road Camera","url":"https://ik.imagekit.io/2908vvlod/cars/mg-majestor/gallery/level2-adas-360-cam.webp"}];
+    let currentPhotoIdx = 0;
+
+    function updateHeroView(idx) {
+      if (!CAR_GALLERY || CAR_GALLERY.length === 0) return;
+      currentPhotoIdx = (idx + CAR_GALLERY.length) % CAR_GALLERY.length;
+      const photo = CAR_GALLERY[currentPhotoIdx];
       const hero = document.getElementById('mainHeroImage');
       if (hero) {
         hero.style.opacity = '0.3';
         setTimeout(() => {
-          hero.src = imgUrl;
+          hero.src = photo.url;
+          hero.alt = photo.title;
           hero.style.opacity = '1';
         }, 120);
       }
-      document.querySelectorAll('.thumb-pill-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
+      const caption = document.getElementById('heroCaptionBadge');
+      if (caption) caption.textContent = photo.title;
+      const counter = document.getElementById('heroCounterBadge');
+      if (counter) counter.textContent = (currentPhotoIdx + 1) + ' / ' + CAR_GALLERY.length;
+
+      // Update active thumbnail
+      document.querySelectorAll('.thumb-pill-btn').forEach((b, i) => {
+        const isActive = (i === currentPhotoIdx);
+        b.classList.toggle('active', isActive);
+        if (isActive) {
+          b.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
     }
+
+    function stepHeroGallery(step) {
+      updateHeroView(currentPhotoIdx + step);
+    }
+
+    function selectGalleryPhoto(idx) {
+      updateHeroView(idx);
+    }
+
+    function openLightboxFromHero() {
+      if (CAR_GALLERY[currentPhotoIdx]) {
+        openLightbox(CAR_GALLERY[currentPhotoIdx].url, CAR_GALLERY[currentPhotoIdx].title);
+      }
+    }
+
+    // Touch swipe support for hero stage
+    (function initSwipe() {
+      let startX = 0;
+      const stage = document.querySelector('.car-hero-stage-container');
+      if (!stage) return;
+      stage.addEventListener('touchstart', e => {
+        startX = e.changedTouches[0].clientX;
+      }, { passive: true });
+      stage.addEventListener('touchend', e => {
+        const diffX = e.changedTouches[0].clientX - startX;
+        if (Math.abs(diffX) > 40) {
+          stepHeroGallery(diffX < 0 ? 1 : -1);
+        }
+      }, { passive: true });
+    })();
+
+    // Keyboard arrow keys navigation
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') stepHeroGallery(-1);
+      if (e.key === 'ArrowRight') stepHeroGallery(1);
+    });
 
     function openLightbox(imgUrl, caption) {
       let lb = document.getElementById('cmvLightbox');
@@ -1154,9 +1390,18 @@
     }
 
     function switchColor(imgUrl, colorName, btn) {
-      document.getElementById('mainHeroImage').src = imgUrl;
+      const hero = document.getElementById('mainHeroImage');
+      if (hero) {
+        hero.style.opacity = '0.3';
+        setTimeout(() => {
+          hero.src = imgUrl;
+          hero.style.opacity = '1';
+        }, 120);
+      }
       const nameEl = document.getElementById('colorNameDisplay');
       if (nameEl) nameEl.textContent = colorName;
+      const caption = document.getElementById('heroCaptionBadge');
+      if (caption) caption.textContent = colorName + ' (Official Color)';
       document.querySelectorAll('.swatch-item-btn').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
     }
