@@ -3539,6 +3539,7 @@ a {
 }
 
 /* Lightbox Modal */
+.lightbox-modal,
 .cmv-lightbox-modal {
   position: fixed;
   inset: 0;
@@ -3549,6 +3550,7 @@ a {
   padding: 16px;
 }
 
+.lightbox-modal.active,
 .cmv-lightbox-modal.active {
   display: flex;
 }

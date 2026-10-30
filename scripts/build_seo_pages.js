@@ -327,6 +327,20 @@ CARS.forEach(car => {
       margin-bottom: 32px;
       box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.06);
     }
+    .lightbox-modal,
+    .cmv-lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .lightbox-modal.active,
+    .cmv-lightbox-modal.active {
+      display: flex;
+    }
     .car-hero-media-box {
       background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
       padding: 30px 20px 16px;
