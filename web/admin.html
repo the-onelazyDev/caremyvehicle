@@ -729,7 +729,129 @@
       align-items: center;
       gap: 10px;
     }
-</style>
+
+    /* =========================================================================
+       🛠️ CAR DETAIL PAGE & MEDIA STUDIO STYLES
+       ========================================================================= */
+    .switch-wrap {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+    .switch-wrap input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #CBD5E1;
+      transition: .3s;
+      border-radius: 26px;
+    }
+    .switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .switch-wrap input:checked + .switch-slider {
+      background-color: #16A34A;
+    }
+    .switch-wrap input:checked + .switch-slider:before {
+      transform: translateX(22px);
+    }
+    .switch-status-label {
+      font-size: 12px;
+      font-weight: 800;
+      color: #64748B;
+    }
+    .editor-sec-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+    .editor-sec-header {
+      padding: 18px 24px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .editor-sec-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+    .editor-sec-body {
+      padding: 24px;
+    }
+    .editor-sec-card.disabled-sec {
+      background: #FAFAFA;
+      border-color: #E2E8F0;
+    }
+    .editor-sec-card.disabled-sec .editor-sec-body {
+      display: none;
+    }
+    .editor-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .editor-img-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .editor-img-thumb {
+      height: 140px;
+      width: 100%;
+      object-fit: contain;
+      background: #F8FAFC;
+      padding: 8px;
+    }
+    .editor-floating-bar {
+      position: sticky;
+      bottom: 20px;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 100;
+      margin-top: 30px;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -1089,6 +1211,443 @@
         <div id="outputContainer" class="output-box"></div>
       </div>
       </div><!-- end viewAddCar -->
+
+      <!-- VIEW 3: CAR DETAIL PAGE & MEDIA STUDIO -->
+      <div id="viewCarEditor" style="display:none;">
+        <!-- Top Car Selector Bar -->
+        <div class="section-card" style="margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h3 class="section-title">🛠️ Car Detail Page & Media Studio</h3>
+              <p class="section-desc">
+                Select any car to directly change its hero image, add/delete gallery photos, or toggle, edit, add and delete sections on its dedicated car landing page.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-act btn-act-show" onclick="saveAllCarChanges()">
+                💾 Save Changes (Live Update)
+              </button>
+              <button type="button" class="btn-act btn-act-outline" onclick="openLiveCarPage()">
+                👁️ View Live Page ↗
+              </button>
+              <button type="button" class="btn-act btn-act-outline" onclick="exportCarJson()">
+                📋 Copy JSON
+              </button>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetCarToDefaults()">
+                🔄 Reset Defaults
+              </button>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 2fr; gap:16px; margin-top:18px;">
+            <div>
+              <label class="form-label">🔍 Fast Car Search</label>
+              <input type="text" id="editorCarSearchInput" class="form-input" placeholder="Type car name (e.g. Curvv, Creta, Brezza, Thar...)" oninput="filterEditorCarSelect(this.value)">
+            </div>
+            <div>
+              <label class="form-label">🚗 Select Car to Edit</label>
+              <select id="editorCarSelect" class="form-select" onchange="loadCarIntoEditor(this.value)">
+                <!-- Injected dynamically -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Active Car Summary Pill -->
+          <div id="editorCarSummaryBadge" style="margin-top:16px; padding:12px 18px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- 1. HERO IMAGE STUDIO -->
+        <div class="editor-sec-card">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">📸 Hero Image Studio</h4>
+            <span style="font-size:12px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 10px; border-radius:12px;">Primary Vehicle Showcase</span>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:center;">
+              <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:16px; text-align:center; min-height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <img id="edHeroPreview" src="" alt="Hero Preview" style="max-width:100%; max-height:140px; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.1));">
+                <span id="edHeroMissingTag" style="display:none; color:#EF4444; font-size:12px; font-weight:700;">No Hero Image Set</span>
+              </div>
+              <div>
+                <label class="form-label">Hero Image Direct CDN / ImageKit URL</label>
+                <div style="display:flex; gap:10px;">
+                  <input type="url" id="edHeroUrlInput" class="form-input" placeholder="https://ik.imagekit.io/..." oninput="updateHeroPreview(this.value)">
+                  <button type="button" class="btn-act btn-act-show" onclick="applyHeroUrlFromInput()">Set URL</button>
+                  <button type="button" class="btn-act btn-act-hide" onclick="removeHeroImage()">Remove</button>
+                </div>
+                <div style="margin-top:12px; font-size:12.5px; color:#64748B;">
+                  💡 <em>Tip: You can also click "Make Hero" on any gallery image below to set it as the hero image immediately.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. HIGH-RES PHOTO GALLERY & ANGLES -->
+        <div class="editor-sec-card">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">🖼️ Photo Gallery & Angles Manager (<span id="edGalleryCount">0</span> Images)</h4>
+            <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="toggleAddImageForm()">
+              ➕ Add New Image
+            </button>
+          </div>
+          <div class="editor-sec-body">
+            <!-- Add Image Drawer -->
+            <div id="addImageDrawer" style="display:none; background:#F0F9FF; border:1px solid #BAE6FD; border-radius:14px; padding:18px; margin-bottom:20px;">
+              <h5 style="margin:0 0 12px; font-size:14px; color:#0369A1; font-weight:800;">➕ Add Image to This Car</h5>
+              <div style="display:grid; grid-template-columns: 2fr 2fr 1fr auto; gap:12px; align-items:flex-end;">
+                <div>
+                  <label class="form-label" style="font-size:11px;">Image URL</label>
+                  <input type="url" id="newImgUrl" class="form-input" placeholder="https://ik.imagekit.io/...">
+                </div>
+                <div>
+                  <label class="form-label" style="font-size:11px;">Caption / Title</label>
+                  <input type="text" id="newImgTitle" class="form-input" placeholder="e.g. Front Three-Quarter Stance">
+                </div>
+                <div>
+                  <label class="form-label" style="font-size:11px;">Category</label>
+                  <select id="newImgCat" class="form-select">
+                    <option value="Exterior">Exterior</option>
+                    <option value="Cabin">Cabin</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Engine">Engine</option>
+                    <option value="360">360 Render</option>
+                  </select>
+                </div>
+                <button type="button" class="btn-submit" style="padding:10px 18px; font-size:13px;" onclick="addGalleryImageFromDrawer()">
+                  Add Photo
+                </button>
+              </div>
+            </div>
+
+            <!-- Existing Gallery Grid -->
+            <div class="editor-gallery-grid" id="edGalleryGrid">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. CAR DETAIL PAGE SECTIONS (ADD / REMOVE / EDIT / DELETE / TOGGLE) -->
+        <div style="margin-bottom:16px;">
+          <h3 class="section-title">🧩 Car Detail Page Sections Manager</h3>
+          <p class="section-desc">Toggle any section ON or OFF to show or delete/hide it from the car's page. Click into any section to edit, add, or delete items directly.</p>
+        </div>
+
+        <!-- SECTION 1: CAR VARIANTS -->
+        <div class="editor-sec-card" id="cardSecVariants">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">📋 1. Car Variants Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecVariants">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecVariants" checked onchange="handleSecToggle('variants', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Active Variant Lineup</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addVariantPrompt()">
+                ➕ Add Variant
+              </button>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="admin-table" id="edVariantsTable">
+                <thead>
+                  <tr>
+                    <th>Variant Name</th>
+                    <th>Powertrain</th>
+                    <th>Ex-Showroom Price</th>
+                    <th>VFM Badge</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="edVariantsTbody">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: CAR LATEST UPDATES -->
+        <div class="editor-sec-card" id="cardSecUpdates">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">⚡ 2. Car Latest Updates Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecUpdates">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecUpdates" checked onchange="handleSecToggle('updates', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="margin-bottom:14px;">
+              <label class="form-label">Headline</label>
+              <input type="text" id="edUpdatesHeadline" class="form-input">
+            </div>
+            <div style="margin-bottom:14px;">
+              <label class="form-label">Date Badge</label>
+              <input type="text" id="edUpdatesDate" class="form-input" style="max-width:240px;">
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <label class="form-label" style="margin:0;">Update Highlights (Bullet Points)</label>
+                <button type="button" class="btn-act btn-act-show" style="padding:3px 10px; font-size:11px;" onclick="addUpdateBulletPrompt()">➕ Add Point</button>
+              </div>
+              <div id="edUpdatesBulletsList" style="display:flex; flex-direction:column; gap:8px;">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: HOW IS THE CAR? (PROS & CONS) -->
+        <div class="editor-sec-card" id="cardSecProscons">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">⚖️ 3. How is the car? (Pros and Cons Table)</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecProscons">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecProscons" checked onchange="handleSecToggle('proscons', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div class="pros-cons-grid" style="margin-top:0;">
+              <div class="pro-con-col pro-col">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span class="pro-con-header pro-header" style="margin:0;">✔ Things We Love (Pros)</span>
+                  <button type="button" class="btn-act btn-act-show" style="padding:3px 10px; font-size:11px;" onclick="addProPrompt()">➕ Add Pro</button>
+                </div>
+                <div id="edProsList" style="display:flex; flex-direction:column; gap:8px;"></div>
+              </div>
+              <div class="pro-con-col con-col">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span class="pro-con-header con-header" style="margin:0;">✖ Things to Consider (Cons)</span>
+                  <button type="button" class="btn-act btn-act-hide" style="padding:3px 10px; font-size:11px;" onclick="addConPrompt()">➕ Add Con</button>
+                </div>
+                <div id="edConsList" style="display:flex; flex-direction:column; gap:8px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: CAR ENGINE & PERFORMANCE -->
+        <div class="editor-sec-card" id="cardSecPerformance">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">🚀 4. Car Engine and Performance (with Powertrain Filters)</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecPerformance">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecPerformance" checked onchange="handleSecToggle('performance', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Powertrain Filters (e.g. 1.0L Turbo, CNG 1.0L, 1.5L Diesel...)</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addPowertrainPrompt()">
+                ➕ Add Powertrain Filter
+              </button>
+            </div>
+            <div id="edEngineList" style="display:flex; flex-direction:column; gap:16px;">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: CAR KEY SPECIFICATIONS -->
+        <div class="editor-sec-card" id="cardSecSpecs">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">📊 5. Car Key Specifications Table</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecSpecs">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecSpecs" checked onchange="handleSecToggle('specs', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Granular Technical Specifications</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addSpecPrompt()">
+                ➕ Add Custom Spec Row
+              </button>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Specification Label</th>
+                    <th>Value</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="edSpecsTbody">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: CAR COLOURS WITH SLIDE -->
+        <div class="editor-sec-card" id="cardSecColours">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">🎨 6. Car Colours Section with Slide Carousel</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecColours">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecColours" checked onchange="handleSecToggle('colours', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Official Palette & Slide Images</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addColorPrompt()">
+                ➕ Add Color Swatch
+              </button>
+            </div>
+            <div id="edColorsList" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px;">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7: CAR MILEAGE -->
+        <div class="editor-sec-card" id="cardSecMileage">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">⛽ 7. Car Mileage Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecMileage">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecMileage" checked onchange="handleSecToggle('mileage', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Powertrain Mileage Rows</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addMileageRowPrompt()">
+                ➕ Add Mileage Row
+              </button>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Engine & Transmission</th>
+                    <th>ARAI Claimed</th>
+                    <th>City Real-World</th>
+                    <th>Highway Real-World</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="edMileageTbody">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 8: CAR USER REVIEWS -->
+        <div class="editor-sec-card" id="cardSecReviews">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">⭐ 8. Car User Reviews Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecReviews">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecReviews" checked onchange="handleSecToggle('reviews', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <label class="form-label" style="margin:0;">Overall Rating Score:</label>
+                <input type="number" id="edReviewOverallScore" class="form-input" style="width:90px;" step="0.1" min="1" max="5">
+              </div>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addUserReviewPrompt()">
+                ➕ Add User Review
+              </button>
+            </div>
+            <div id="edReviewsList" style="display:flex; flex-direction:column; gap:12px;">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 9: CAR 2026 NEWS -->
+        <div class="editor-sec-card" id="cardSecNews">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">📰 9. Car 2026 News Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecNews">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecNews" checked onchange="handleSecToggle('news', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <p style="font-size:13px; color:#64748B; margin-bottom:14px;">Automatically pulls verified 2026 news articles related to this vehicle. Toggle off if you want to hide the news section for this specific model.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 10: FAQS ABOUT CAR -->
+        <div class="editor-sec-card" id="cardSecFaqs">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">❓ 10. FAQs About Car Section</h4>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="switch-status-label" id="labelSecFaqs">Active</span>
+              <label class="switch-wrap">
+                <input type="checkbox" id="toggleSecFaqs" checked onchange="handleSecToggle('faqs', this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-sec-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#475569;">Accordion Questions & Answers</span>
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 12px; font-size:12px;" onclick="addFaqPrompt()">
+                ➕ Add FAQ Item
+              </button>
+            </div>
+            <div id="edFaqsList" style="display:flex; flex-direction:column; gap:10px;">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Bottom Save Bar -->
+        <div class="editor-floating-bar">
+          <div style="color:#FFFFFF; font-size:13px; font-weight:700;">
+            Editing: <span id="barCarName" style="color:#60A5FA;">--</span>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <button type="button" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none;" onclick="openLiveCarPage()">
+              👁️ View Live Page
+            </button>
+            <button type="button" class="btn-submit" style="padding:10px 22px; font-size:14px; box-shadow:none;" onclick="saveAllCarChanges()">
+              💾 Save All Changes (Instant Live)
+            </button>
+          </div>
+        </div>
+      </div><!-- end viewCarEditor -->
+
     </div>
   </div>
 
@@ -1595,20 +2154,36 @@
     function switchAdminTab(tabName) {
       const tabVis = document.getElementById('tabBtnVisibility');
       const tabAdd = document.getElementById('tabBtnAddCar');
+      const tabEditor = document.getElementById('tabBtnCarEditor');
       const viewVis = document.getElementById('viewVisibility');
       const viewAdd = document.getElementById('viewAddCar');
+      const viewEditor = document.getElementById('viewCarEditor');
 
       if (tabName === 'visibility') {
         tabVis.classList.add('active');
-        tabAdd.classList.remove('active');
-        viewVis.style.display = 'block';
-        viewAdd.style.display = 'none';
+        if (tabAdd) tabAdd.classList.remove('active');
+        if (tabEditor) tabEditor.classList.remove('active');
+        if (viewVis) viewVis.style.display = 'block';
+        if (viewAdd) viewAdd.style.display = 'none';
+        if (viewEditor) viewEditor.style.display = 'none';
         renderVisibilityManager();
-      } else {
-        tabAdd.classList.add('active');
-        tabVis.classList.remove('active');
-        viewVis.style.display = 'none';
-        viewAdd.style.display = 'block';
+      } else if (tabName === 'addCar') {
+        if (tabAdd) tabAdd.classList.add('active');
+        if (tabVis) tabVis.classList.remove('active');
+        if (tabEditor) tabEditor.classList.remove('active');
+        if (viewVis) viewVis.style.display = 'none';
+        if (viewAdd) viewAdd.style.display = 'block';
+        if (viewEditor) viewEditor.style.display = 'none';
+      } else if (tabName === 'carEditor') {
+        if (tabEditor) tabEditor.classList.add('active');
+        if (tabVis) tabVis.classList.remove('active');
+        if (tabAdd) tabAdd.classList.remove('active');
+        if (viewVis) viewVis.style.display = 'none';
+        if (viewAdd) viewAdd.style.display = 'none';
+        if (viewEditor) viewEditor.style.display = 'block';
+        if (typeof window.initCarEditor === 'function') {
+          window.initCarEditor();
+        }
       }
     }
 
@@ -2063,6 +2638,183 @@
       filterCarsTable();
     }
     window.setCarTableFilter = setCarTableFilter;
+
+    // =========================================================================
+    // 🛠️ CAR DETAIL PAGE & MEDIA STUDIO (DIRECT HERO & SECTIONS MANAGER)
+    // =========================================================================
+    let currentEditorCarId = null;
+    let editorCarData = null;
+
+    function initCarEditor() {
+      const select = document.getElementById('editorCarSelect');
+      if (!select) return;
+
+      const cars = getCatalogCars();
+      if (!cars || cars.length === 0) return;
+
+      // Sort alphabetically by brand and name
+      const sorted = [...cars].sort((a, b) => (a.brand + ' ' + a.name).localeCompare(b.brand + ' ' + b.name));
+
+      select.innerHTML = sorted.map(c => \`<option value="\${c.id}">\${c.brand} \${c.name} (\${c.priceRange || ''})</option>\`).join('');
+
+      // Default select Curvv or first
+      const defaultId = sorted.find(c => c.id === 'tata-curvv') ? 'tata-curvv' : sorted[0].id;
+      select.value = defaultId;
+      loadCarIntoEditor(defaultId);
+    }
+
+    function filterEditorCarSelect(query) {
+      const q = (query || '').toLowerCase().trim();
+      const select = document.getElementById('editorCarSelect');
+      if (!select) return;
+
+      const cars = getCatalogCars();
+      const matched = cars.filter(c => (c.name || '').toLowerCase().includes(q) || (c.brand || '').toLowerCase().includes(q));
+
+      if (matched.length > 0) {
+        select.innerHTML = matched.map(c => \`<option value="\${c.id}">\${c.brand} \${c.name} (\${c.priceRange || ''})</option>\`).join('');
+        loadCarIntoEditor(matched[0].id);
+      }
+    }
+
+    function getCustomizations() {
+      try {
+        return JSON.parse(localStorage.getItem('cmv_car_customizations') || '{}');
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function loadCarIntoEditor(carId) {
+      currentEditorCarId = carId;
+      const allCars = getCatalogCars();
+      const baseCar = allCars.find(c => c.id === carId);
+      if (!baseCar) return;
+
+      const allCustom = getCustomizations();
+      const saved = allCustom[carId] || {};
+
+      // Clone or build active working copy
+      editorCarData = {
+        id: baseCar.id,
+        name: baseCar.name,
+        brand: baseCar.brand,
+        priceRange: baseCar.priceRange,
+        safetyRating: baseCar.safetyRating,
+        heroImage: saved.heroImage || baseCar.heroImage || '',
+        gallery: saved.gallery || (baseCar.gallery ? JSON.parse(JSON.stringify(baseCar.gallery)) : []),
+        sectionsEnabled: Object.assign({
+          variants: true,
+          updates: true,
+          proscons: true,
+          performance: true,
+          specs: true,
+          colours: true,
+          mileage: true,
+          reviews: true,
+          news: true,
+          faqs: true
+        }, saved.sectionsEnabled || {}),
+        variants: saved.variants || (baseCar.variants ? JSON.parse(JSON.stringify(baseCar.variants)) : []),
+        latestUpdates: saved.latestUpdates || {
+          headline: \`\${baseCar.name} 2025–2026 Lineup: Price Revisions & Waiting Period Updates\`,
+          date: 'October 2026',
+          highlights: [
+            \`Deliveries underway with average waiting period of \${baseCar.waitingPeriod || '3 to 6 weeks'}.\`,
+            \`Safety certified with \${baseCar.safetyRating || 'top crash-test safety credentials'}.\`,
+            \`Enhanced feature packaging introduced with wireless phone charging & connected car tech.\`
+          ]
+        },
+        pros: saved.pros || [
+          \`Striking road presence with bold LED illumination and sculpted exterior styling.\`,
+          baseCar.safetyRating && baseCar.safetyRating.includes('5') ? \`Top safety credentials: \${baseCar.safetyRating}\` : \`Comprehensive 6 airbags and electronic stability control standard.\`,
+          baseCar.bootSpace ? \`Generous luggage room of \${baseCar.bootSpace} for family road trips.\` : \`Ergonomically planned passenger cabin with generous utility storage.\`,
+          baseCar.groundClearance ? \`Confidence-inspiring ground clearance of \${baseCar.groundClearance} for uneven terrain.\` : \`Comfortable ride tuned for varied Indian road surfaces.\`
+        ],
+        cons: saved.cons || [
+          baseCar.waitingPeriod ? \`Showroom waiting period of approximately \${baseCar.waitingPeriod} on popular trims.\` : \`High market demand resulting in wait times on popular color finishes.\`,
+          \`Urban stop-and-go fuel efficiency drops noticeably compared to official ARAI test figures.\`,
+          \`Low-speed ride can feel slightly firm over sharp potholes.\`
+        ],
+        engines: saved.engines || [
+          {
+            id: 'engine-1',
+            label: (baseCar.specs && baseCar.specs.engineOptions && typeof baseCar.specs.engineOptions === 'string' && baseCar.specs.engineOptions.includes('1.0L')) ? '1.0L Turbo Petrol' : '1.2L / 1.5L Petrol',
+            power: '120 PS @ 5500 RPM',
+            torque: '172 Nm @ 1750 RPM',
+            trans: '6-Speed MT / 7-Speed Automatic',
+            positives: [
+              'Strong mid-range punch providing effortless highway overtakes.',
+              'Refined engine NVH characteristics with low cruising vibrations.'
+            ],
+            negatives: [
+              'Noticeable turbo lag below 1,600 RPM in slow crawling city traffic.',
+              'Fuel economy is sensitive to aggressive throttle inputs.'
+            ]
+          },
+          {
+            id: 'engine-2',
+            label: (baseCar.fuelTypes || []).includes('CNG') ? '1.0L / 1.2L Bi-Fuel CNG' : ((baseCar.fuelTypes || []).includes('Diesel') ? '1.5L Turbo Diesel' : '1.0L / 1.2L Naturally Aspirated'),
+            power: '88 PS @ 6000 RPM',
+            torque: '115 Nm @ 4200 RPM',
+            trans: '5-Speed Manual',
+            positives: [
+              'Extremely pocket-friendly running costs under ₹2.50 per kilometre.',
+              'Clean dual-cylinder technology preserving practical luggage room.'
+            ],
+            negatives: [
+              'Noticeable drop in peak horsepower when fully loaded with 5 passengers.',
+              'Queues at urban CNG pumps during morning rush hours.'
+            ]
+          }
+        ],
+        specsList: saved.specsList || [
+          { label: 'Fuel Types', value: (baseCar.fuelTypes || []).join(', ') },
+          { label: 'Ground Clearance', value: baseCar.groundClearance || 'N/A' },
+          { label: 'Boot Space', value: baseCar.bootSpace || 'N/A' },
+          { label: 'Safety Rating', value: baseCar.safetyRating || '5-Star Safety' },
+          { label: 'Waiting Period', value: baseCar.waitingPeriod || '2 - 6 Weeks' },
+          { label: 'Body Style', value: baseCar.bodyType || 'SUV' }
+        ],
+        colors: saved.colors || (baseCar.colors ? JSON.parse(JSON.stringify(baseCar.colors)) : []),
+        mileageRows: saved.mileageRows || [
+          { powertrain: 'Manual Transmission', arai: '18.2 kmpl', city: '13.4 kmpl', highway: '17.6 kmpl' },
+          { powertrain: 'Automatic Transmission', arai: '17.5 kmpl', city: '12.8 kmpl', highway: '16.9 kmpl' }
+        ],
+        reviewScore: saved.reviewScore || 4.8,
+        userReviews: saved.userReviews || [
+          { name: 'Vikram Malhotra', city: 'Delhi NCR', rating: 5, date: 'October 2026', title: 'Outstanding driving dynamics & comfort', comment: \`We completed a 1,200 km road trip with 4 adults. The \${baseCar.name} handled twisty mountain climbs effortlessly.\` },
+          { name: 'Pooja Sharma', city: 'Bengaluru', rating: 5, date: 'September 2026', title: 'Best safety and high-tech cabin', comment: \`The high-resolution touchscreen and 360-degree camera make city driving stress-free.\` }
+        ],
+        faqs: saved.faqs || [
+          { q: \`What is the ex-showroom and on-road price of \${baseCar.name} in India?\`, a: \`Ex-showroom price starts from \${baseCar.priceRange}. On-road prices in Delhi NCR start from approximately \${(baseCar.minPrice * 1.12 / 100000).toFixed(2)} Lakh including state RTO taxes & insurance.\` },
+          { q: \`What is the real-world mileage of \${baseCar.name}?\`, a: \`Under mixed driving conditions, it achieves approximately 12.5 to 14.5 kmpl in city traffic and 17 to 19.5 kmpl on open expressways.\` },
+          { q: \`What is the safety rating of \${baseCar.name}?\`, a: \`It comes rated \${baseCar.safetyRating || 'with 5-star crash safety credentials'}, featuring 6 airbags standard, ESP, and ISOFIX child anchors.\` }
+        ]
+      };
+
+      renderEditorUI();
+    }
+
+    function renderEditorUI() {
+      if (!editorCarData) return;
+
+      // 1. Summary Badge
+      const summaryEl = document.getElementById('editorCarSummaryBadge');
+      if (summaryEl) {
+        summaryEl.innerHTML = \`
+          <div style="display:flex; align-items:center; gap:12px;">
+            <img src="\${editorCarData.heroImage || 'assets/logo.png'}" style="width:48px; height:36px; object-fit:contain; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:6px; padding:2px;">
+            <div>
+              <strong style="font-size:15px; color:#0F172A;">\${editorCarData.brand} \${editorCarData.name}</strong>
+              <div style="font-size:12px; color:#64748B;">Price: \${editorCarData.priceRange} &bull; Rating: \${editorCarData.safetyRating || 'High Safety'}</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:11px; font-weight:800; background:#DCFCE7; color:#15803D; padding:4px 10px; border-radius:12px;">LIVE READY</span>
+            <a href="/cars/\${editorCarData.id}.html" target="_blank" style="font-size:12.5px; font-weight:800; color:#0284C7; text-decoration:none;">Open Live Car Page ↗</a>
+          </div>
+        \
 </script>
 
   <!-- Admin Toast Notification -->
