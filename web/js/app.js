@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderUsedCarsByCity();
   renderNewsSection();
   setupEventListeners();
+  initHeaderScrollSpy();
   checkDeepLink();
 });
 
@@ -431,7 +432,7 @@ function renderCars() {
         <div style="font-size: 52px; margin: 14px 0 8px;">🏷️🚗</div>
         <h3 class="brand-font" style="font-size: 26px; color: #0F172A; margin-bottom: 8px;">Certified Used Cars Marketplace is Coming Soon!</h3>
         <p style="font-size: 14px; color: var(--text-muted); max-width: 540px; margin: 0 auto 20px; line-height: 1.6;">
-          Looking for verified pre-owned cars? We are building India's 100% spam-free used car radar with 200+ point inspection records and zero dealer spam calls.
+          Looking for verified pre-owned cars? We are building India's 100% spam-free used car platform with 200+ point inspection records and zero dealer spam calls.
         </p>
         <div class="coming-soon-subscribe">
           <input type="email" id="usedCarNotifyEmail" placeholder="Enter your email to get early access...">
@@ -583,7 +584,7 @@ window.openArticleModal = function(articleId) {
     </div>
 
     <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
-      <span style="font-size:12px; color:var(--text-muted);">Care My Vehicle Editorial Radar</span>
+      <span style="font-size:12px; color:var(--text-muted);">Care My Vehicle Editorial Reviews</span>
       <button class="city-selector-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Review Link Copied!');">
         🔗 Share Article
       </button>
@@ -2515,12 +2516,12 @@ function createShelfCarCard(car) {
   `;
 }
 
-function createShelfViewMoreCard(href, title, countText) {
+function createShelfViewMoreCard(href, title) {
   return `
-    <a href="${href}" class="shelf-view-more-card" title="${title}">
+    <a href="${href}" class="shelf-view-more-card" title="${title || 'View More'}">
       <div class="view-more-circle">&rarr;</div>
-      <div class="view-more-title">${title}</div>
-      <div class="view-more-count">${countText}</div>
+      <div class="view-more-title">${title || 'View More'}</div>
+      <div class="view-more-count">View More &rsaquo;</div>
     </a>
   `;
 }
@@ -2546,7 +2547,7 @@ function renderRecentlyViewed() {
   const matched = viewedIds.map(id => all.find(c => c.id === id)).filter(Boolean);
 
   let html = matched.map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard('/cars.html', 'View All Cars', '91+ Models &rsaquo;');
+  html += createShelfViewMoreCard('/cars.html', 'View All Cars');
   container.innerHTML = html;
 }
 
@@ -2560,7 +2561,7 @@ function renderRecommendedShelf() {
   const matched = recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
 
   let html = matched.map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard('/cars.html?category=recommended', 'View All Recommended', 'Top Picks &rsaquo;');
+  html += createShelfViewMoreCard('/cars.html?category=recommended', 'View Recommended');
   container.innerHTML = html;
 }
 
@@ -2574,7 +2575,7 @@ function renderTrendingShelf() {
   const matched = trendIds.map(id => all.find(c => c.id === id)).filter(Boolean);
 
   let html = matched.map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches', '2024–2026 Models &rsaquo;');
+  html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches');
   container.innerHTML = html;
 }
 
@@ -2597,7 +2598,7 @@ function renderUnder10LShelf() {
   }
 
   let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard(`/cars.html?budget=under-10l&category=${currentUnder10LFilter}`, 'View All Under 10L', `${filtered.length} Cars &rsaquo;`);
+  html += createShelfViewMoreCard(`/cars.html?budget=under-10l&category=${currentUnder10LFilter}`, 'View Under 10L');
   container.innerHTML = html;
 }
 
@@ -2637,7 +2638,7 @@ function renderAbove10LShelf() {
   }
 
   let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard(`/cars.html?budget=${currentAbove10LTab}&category=${currentAbove10LFilter}`, 'View All Above 10L', `${filtered.length} Cars &rsaquo;`);
+  html += createShelfViewMoreCard(`/cars.html?budget=${currentAbove10LTab}&category=${currentAbove10LFilter}`, 'View Above 10L');
   container.innerHTML = html;
 }
 
@@ -2766,7 +2767,7 @@ function renderUpcomingLaunchedShelf() {
   }
 
   let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard(`/cars.html?category=${currentUpcomingTab}`, 'View All', `${matched.length} Models &rsaquo;`);
+  html += createShelfViewMoreCard(`/cars.html?category=${currentUpcomingTab}`, 'View All');
   container.innerHTML = html;
 }
 
@@ -2801,11 +2802,11 @@ function renderFuelTypeShelf() {
 
   if (link) {
     link.href = `/cars.html?fuel=${currentFuelTab}`;
-    link.textContent = `All ${label} Cars ›`;
+    link.textContent = 'View More ›';
   }
 
   let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard(`/cars.html?fuel=${currentFuelTab}`, `View All ${label} Cars`, `${matched.length} Models &rsaquo;`);
+  html += createShelfViewMoreCard(`/cars.html?fuel=${currentFuelTab}`, `View More ${label} Cars`);
   container.innerHTML = html;
 }
 
@@ -2858,3 +2859,84 @@ document.addEventListener('keydown', (e) => {
     window.closeModal();
   }
 });
+
+
+// ==========================================================================
+// HEADER NAVIGATION TAB SWITCHER & SMOOTH SCROLLER
+// ==========================================================================
+window.switchNavTab = function(e, tabEl, targetId, subParam) {
+  if (e) {
+    try { e.preventDefault(); } catch(err) {}
+  }
+
+  // 1. Immediately toggle active class on nav tabs
+  const navContainer = tabEl ? tabEl.closest('.nav-tabs-bar') : document.getElementById('mainNavTabs');
+  if (navContainer) {
+    navContainer.querySelectorAll('.nav-tab-item').forEach(el => el.classList.remove('active'));
+    if (tabEl) tabEl.classList.add('active');
+  }
+
+  // 2. If EV & Hybrids tab clicked, switch the fuel shelf to EV
+  if (targetId === 'fuelTypeSection') {
+    const fuelKey = subParam || 'ev';
+    if (typeof window.switchFuelTab === 'function') {
+      const fuelTabsRow = document.getElementById('fuelTabsRow');
+      const targetBtn = fuelTabsRow ? fuelTabsRow.querySelector(`[data-tab="${fuelKey}"]`) : null;
+      window.switchFuelTab(fuelKey, targetBtn);
+    }
+  }
+
+  // 3. Smooth scroll to target section with header offset
+  const targetSection = document.getElementById(targetId);
+  if (targetSection) {
+    const headerOffset = 80;
+    const elementPosition = targetSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
+window.selectCategory = function(catKey) {
+  if (catKey === 'ev') {
+    const evTab = document.querySelector('#mainNavTabs [data-nav="ev"]') || document.querySelectorAll('#mainNavTabs .nav-tab-item')[1];
+    window.switchNavTab(null, evTab, 'fuelTypeSection', 'ev');
+  }
+};
+
+function initHeaderScrollSpy() {
+  const sections = [
+    { id: 'heroSection', tabIndex: 0 },
+    { id: 'popularBudgetSection', tabIndex: 0 },
+    { id: 'fuelTypeSection', tabIndex: 1 },
+    { id: 'compareSection', tabIndex: 2 },
+    { id: 'onRoadCheckerSection', tabIndex: 3 },
+    { id: 'popularUsedCarsSection', tabIndex: 4 },
+    { id: 'newsSection', tabIndex: 5 }
+  ];
+
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+      scrollTimeout = null;
+      const scrollPos = window.pageYOffset + 120;
+      const navTabs = document.querySelectorAll('#mainNavTabs .nav-tab-item');
+      if (!navTabs.length) return;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sec = document.getElementById(sections[i].id);
+        if (sec && sec.offsetTop <= scrollPos) {
+          const targetTab = navTabs[sections[i].tabIndex];
+          if (targetTab && !targetTab.classList.contains('active')) {
+            navTabs.forEach(t => t.classList.remove('active'));
+            targetTab.classList.add('active');
+          }
+          break;
+        }
+      }
+    }, 100);
+  }, { passive: true });
+}
