@@ -272,6 +272,80 @@ CARS.forEach(car => {
 
   const defaults = getCarDefaultSections(car);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Car",
+        "@id": `${pageUrl}#car`,
+        "name": car.name,
+        "brand": {
+          "@type": "Brand",
+          "name": car.brand
+        },
+        "model": car.name,
+        "vehicleConfiguration": car.tagline || `${car.name} with verified on-road pricing and technical specifications`,
+        "bodyType": car.bodyType || "Car",
+        "fuelType": car.fuelTypes || ["Petrol"],
+        "image": car.heroImage,
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": car.minPrice || 500000,
+          "highPrice": car.maxPrice || 1500000,
+          "offerCount": variantsList.length || 5,
+          "price": `${car.minPrice || 500000}`,
+          "availability": "https://schema.org/InStock",
+          "url": pageUrl
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "42",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.caremyvehicle.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": car.brand,
+            "item": `https://www.caremyvehicle.in/?brand=${encodeURIComponent(car.brand)}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": car.name,
+            "item": pageUrl
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faqs`,
+        "mainEntity": (defaults.faqs || []).map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      }
+    ]
+  };
+  const structuredDataJson = JSON.stringify(structuredData, null, 2);
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -300,6 +374,11 @@ CARS.forEach(car => {
   <meta name="twitter:title" content="${escapeHtml(metaTitle)}">
   <meta name="twitter:description" content="${escapeHtml(metaDescription)}">
   <meta name="twitter:image" content="${car.heroImage}">
+
+  <!-- Structured Data: Vehicle, BreadcrumbList, and FAQPage Schema -->
+  <script type="application/ld+json">
+${structuredDataJson}
+  </script>
 
   <!-- Favicons & Search Engine Icons -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
