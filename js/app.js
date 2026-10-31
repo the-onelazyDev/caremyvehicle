@@ -119,6 +119,7 @@ function safeExec(fn, label) {
 
 // Initialize Application (Fault-Tolerant Per-Section Rendering)
 document.addEventListener('DOMContentLoaded', () => {
+  safeExec(applyHomepageLayoutConfig, 'applyHomepageLayoutConfig');
   safeExec(renderBrandsShelf, 'renderBrandsShelf');
   safeExec(renderRecentlyViewed, 'renderRecentlyViewed');
   safeExec(renderRecommendedShelf, 'renderRecommendedShelf');
@@ -134,10 +135,158 @@ document.addEventListener('DOMContentLoaded', () => {
   safeExec(renderPopularUsedCars, 'renderPopularUsedCars');
   safeExec(renderUsedCarsByCity, 'renderUsedCarsByCity');
   safeExec(renderNewsSection, 'renderNewsSection');
+  safeExec(applyHomepageLayoutConfig, 'applyHomepageLayoutConfigPost');
   safeExec(setupEventListeners, 'setupEventListeners');
   safeExec(initHeaderScrollSpy, 'initHeaderScrollSpy');
   safeExec(checkDeepLink, 'checkDeepLink');
 });
+
+const DEFAULT_HOMEPAGE_SECTIONS = [
+  { key: 'recentlyViewed', domId: 'recentlyViewedSection', title: 'Recently Viewed Cars', visible: true, cardStyle: 'compact', layout: 'carousel' },
+  { key: 'recommended', domId: 'recommendedSection', title: 'Recommended For You', visible: true, cardStyle: 'compact', layout: 'carousel' },
+  { key: 'trending', domId: 'trendingSection', title: 'Trending Cars (2024–2026)', visible: true, cardStyle: 'big', layout: 'carousel' },
+  { key: 'popularBudget', domId: 'popularBudgetSection', title: 'Popular Cars By Budget', visible: true, cardStyle: 'compact', layout: 'carousel', showUnder10L: true, showAbove10L: true, under10LCardStyle: 'compact', under10LLayout: 'carousel', above10LCardStyle: 'compact', above10LLayout: 'carousel' },
+  { key: 'offers', domId: 'offersSection', title: 'Get Offers on Popular Cars', visible: true, cardStyle: 'medium', layout: 'carousel' },
+  { key: 'brands', domId: 'brandsSection', title: 'All Brands', visible: true, cardStyle: 'compact', layout: 'grid' },
+  { key: 'onRoadChecker', domId: 'onRoadCheckerSection', title: 'Check New Car On-Road Price', visible: true, cardStyle: 'big', layout: 'grid' },
+  { key: 'choiceFinder', domId: 'choiceFinderSection', title: 'Find The Cars Of Your Choice', visible: true, cardStyle: 'medium', layout: 'grid' },
+  { key: 'upcomingLaunched', domId: 'upcomingLaunchedSection', title: 'Upcoming and Recently Launched Cars', visible: true, cardStyle: 'compact', layout: 'carousel' },
+  { key: 'fuelType', domId: 'fuelTypeSection', title: 'Cars by Fuel Type', visible: true, cardStyle: 'compact', layout: 'carousel' },
+  { key: 'compare', domId: 'compareSection', title: 'Compare Cars', visible: true, cardStyle: 'medium', layout: 'carousel' },
+  { key: 'usedCarsByCity', domId: 'usedCarsByCitySection', title: 'Used Cars By City', visible: true, cardStyle: 'compact', layout: 'carousel' },
+  { key: 'popularUsedCars', domId: 'popularUsedCarsSection', title: 'Popular Used Cars in India', visible: true, cardStyle: 'medium', layout: 'grid' },
+  { key: 'news', domId: 'newsSection', title: 'Latest Car Updates & Expert Reviews', visible: true, cardStyle: 'medium', layout: 'grid' }
+];
+
+function getHomepageConfig() {
+  try {
+    const raw = JSON.parse(localStorage.getItem('cmv_homepage_config') || 'null');
+    if (raw && typeof raw === 'object') {
+      const savedSections = Array.isArray(raw.sections) ? raw.sections : [];
+      const mergedSections = [];
+      const seen = new Set();
+      savedSections.forEach(s => {
+        const def = DEFAULT_HOMEPAGE_SECTIONS.find(d => d.key === s.key || d.domId === s.domId);
+        if (def && !seen.has(def.key)) {
+          seen.add(def.key);
+          mergedSections.push(Object.assign({}, def, s, { key: def.key, domId: def.domId }));
+        }
+      });
+      DEFAULT_HOMEPAGE_SECTIONS.forEach(def => {
+        if (!seen.has(def.key)) {
+          mergedSections.push(Object.assign({}, def));
+        }
+      });
+      return {
+        sections: mergedSections,
+        carOrders: (raw.carOrders && typeof raw.carOrders === 'object') ? raw.carOrders : {},
+        excludedFromSection: (raw.excludedFromSection && typeof raw.excludedFromSection === 'object') ? raw.excludedFromSection : {}
+      };
+    }
+  } catch (e) {}
+  return {
+    sections: DEFAULT_HOMEPAGE_SECTIONS.map(d => Object.assign({}, d)),
+    carOrders: {},
+    excludedFromSection: {}
+  };
+}
+
+function getHomepageSectionConfig(sectionKey) {
+  const cfg = getHomepageConfig();
+  return cfg.sections.find(s => s.key === sectionKey) || DEFAULT_HOMEPAGE_SECTIONS.find(d => d.key === sectionKey) || { visible: true, cardStyle: 'compact', layout: 'carousel' };
+}
+
+function getOrderedCarsForSection(orderKey, defaultCars, allowAnyPinned = true) {
+  const cfg = getHomepageConfig();
+  const excluded = new Set((cfg.excludedFromSection && Array.isArray(cfg.excludedFromSection[orderKey])) ? cfg.excludedFromSection[orderKey] : []);
+  const customOrder = (cfg.carOrders && Array.isArray(cfg.carOrders[orderKey])) ? cfg.carOrders[orderKey] : [];
+  const allCars = getAllCars();
+
+  if (!customOrder.length && !excluded.size) {
+    return defaultCars;
+  }
+
+  const result = [];
+  const seen = new Set();
+
+  customOrder.forEach(id => {
+    if (excluded.has(id) || seen.has(id)) return;
+    const found = defaultCars.find(c => c.id === id) || (allowAnyPinned ? allCars.find(c => c.id === id) : null);
+    if (found) {
+      seen.add(found.id);
+      result.push(found);
+    }
+  });
+
+  defaultCars.forEach(car => {
+    if (!car || excluded.has(car.id) || seen.has(car.id)) return;
+    seen.add(car.id);
+    result.push(car);
+  });
+
+  return result;
+}
+
+function applyShelfLayoutClasses(containerEl, layoutMode, cardStyle) {
+  if (!containerEl) return;
+  containerEl.classList.remove('shelf-layout-grid', 'grid-cards-compact', 'grid-cards-big');
+  const secEl = containerEl.closest('section');
+  const controlsEl = secEl ? secEl.querySelector('.shelf-controls') : null;
+  if (layoutMode === 'grid') {
+    containerEl.classList.add('shelf-layout-grid');
+    if (cardStyle === 'compact') containerEl.classList.add('grid-cards-compact');
+    if (cardStyle === 'big') containerEl.classList.add('grid-cards-big');
+    if (controlsEl) controlsEl.style.display = 'none';
+  } else {
+    if (controlsEl) controlsEl.style.display = '';
+  }
+}
+
+function applyHomepageLayoutConfig() {
+  const cfg = getHomepageConfig();
+  const footer = document.querySelector('footer.travomint-footer');
+  if (!footer || !footer.parentElement) return;
+  const parent = footer.parentElement;
+
+  cfg.sections.forEach(secCfg => {
+    const el = document.getElementById(secCfg.domId);
+    if (!el) return;
+
+    // 1. Move section in DOM order right before footer
+    parent.insertBefore(el, footer);
+
+    // 2. Apply visibility
+    if (secCfg.visible === false) {
+      el.style.display = 'none';
+      el.setAttribute('data-admin-hidden', 'true');
+    } else {
+      el.removeAttribute('data-admin-hidden');
+      if (secCfg.key !== 'recentlyViewed') {
+        el.style.display = '';
+      }
+    }
+
+    // 3. Apply custom section heading title if customized
+    if (secCfg.title && secCfg.title.trim()) {
+      const heading = el.querySelector('.section-main-title') || el.querySelector('h3.brand-font');
+      if (heading) {
+        if (secCfg.key === 'popularUsedCars' && heading.querySelector('.used-soon-pill')) {
+          heading.innerHTML = `${secCfg.title.trim()} <span class="used-soon-pill">Coming Soon</span>`;
+        } else {
+          heading.textContent = secCfg.title.trim();
+        }
+      }
+    }
+
+    // 4. Sub-sections inside Popular Cars By Budget
+    if (secCfg.key === 'popularBudget') {
+      const u10 = document.getElementById('carsUnder10LSection');
+      const a10 = document.getElementById('carsAbove10LSection');
+      if (u10) u10.style.display = secCfg.showUnder10L === false ? 'none' : '';
+      if (a10) a10.style.display = secCfg.showAbove10L === false ? 'none' : '';
+    }
+  });
+}
 
 function normalizeCarRecord(car) {
   if (!car || typeof car !== 'object') return car;
@@ -278,10 +427,14 @@ function renderBrandsShelf() {
   if (!container) return;
 
   const allCarsList = getAllCars();
-  const BRAND_ORDER = ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD','Land Rover','Maserati','Mercedes-Benz','BMW','Audi','Porsche','Volvo','Lexus','Jeep'];
-  const uniqueBrands = [...new Set(allCarsList.map(c => brandKey(c.brand)))].filter(Boolean).sort((a, b) => {
-    const ia = BRAND_ORDER.indexOf(a), ib = BRAND_ORDER.indexOf(b);
-    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
+  const cfg = getHomepageConfig();
+  const customBrandOrder = (cfg.carOrders && Array.isArray(cfg.carOrders.brands) && cfg.carOrders.brands.length > 0)
+    ? cfg.carOrders.brands
+    : ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD','Land Rover','Maserati','Mercedes-Benz','BMW','Audi','Porsche','Volvo','Lexus','Jeep'];
+  const excludedBrands = new Set((cfg.excludedFromSection && Array.isArray(cfg.excludedFromSection.brands)) ? cfg.excludedFromSection.brands : []);
+  const uniqueBrands = [...new Set(allCarsList.map(c => brandKey(c.brand)))].filter(b => b && !excludedBrands.has(b)).sort((a, b) => {
+    const ia = customBrandOrder.indexOf(a), ib = customBrandOrder.indexOf(b);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib) || a.localeCompare(b);
   });
 
   container.innerHTML = uniqueBrands.map(b => {
@@ -380,40 +533,17 @@ function renderTrendingLaunches() {
     }
   });
 
-  const displayList = trendingCars.length >= 4 ? trendingCars : allCars.slice(0, 8);
+  const baseList = trendingCars.length >= 4 ? trendingCars : allCars.slice(0, 8);
+  const displayList = getOrderedCarsForSection('trending', baseList, true);
+  const secCfg = getHomepageSectionConfig('trending');
+  const cardStyle = secCfg.cardStyle || 'big';
+  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
 
-  container.innerHTML = displayList.map(car => {
-    const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
-    return `
-      <div class="trending-card" onclick="window.navigateToCar('${car.id}')" style="cursor:pointer;">
-        <div class="trending-card-media">
-          <div class="trending-badge-row">
-            <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
-            <span class="trending-safety-badge">${formatSafetyBadge(car.safetyRating)}</span>
-          </div>
-          <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
-        </div>
-        <div class="trending-card-body">
-          <span class="trending-brand">${car.brand} • ${car.bodyType}</span>
-          <h3 class="trending-title"><a href="javascript:void(0)" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" class="car-seo-title-link">${car.name}</a></h3>
-          <div class="trending-specs-mini">
-            <span>⛽ ${(car.fuelTypes || []).join('/')}</span>
-            <span>•</span>
-            <span>📐 ${car.groundClearance}</span>
-          </div>
-          <div class="trending-price">
-            ${car.priceRange}
-            <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road (${onRoadEstimate.cityName}): ${formatLakh(onRoadEstimate.total)}</div>
-          </div>
-          <div class="trending-actions-carwale">
-      <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" title="View variant price breakup">
-        View Price Breakup
-      </button>
-    </div>
-        </div>
-      </div>
-    `;
-  }).join('');
+  let html = displayList.map(car => createShelfCarCard(car, cardStyle)).join('');
+  if (cardStyle !== 'big') {
+    html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches');
+  }
+  container.innerHTML = html;
 }
 
 // 3. Multi-Facet Filtering Engine
@@ -710,6 +840,22 @@ window.swapNewsCardImg = function(event, articleId, imgUrl, thumbBtn) {
 function renderNewsSection() {
   const container = document.getElementById('newsContainer');
   if (!container) return;
+
+  const secCfg = getHomepageSectionConfig('news');
+  container.classList.remove('card-style-compact', 'card-style-big');
+  if (secCfg.cardStyle === 'compact') container.classList.add('card-style-compact');
+  if (secCfg.cardStyle === 'big') container.classList.add('card-style-big');
+  if (secCfg.layout === 'carousel') {
+    container.style.display = 'flex';
+    container.style.overflowX = 'auto';
+    container.style.gap = '20px';
+    container.style.paddingBottom = '12px';
+  } else {
+    container.style.display = '';
+    container.style.overflowX = '';
+    container.style.gap = '';
+    container.style.paddingBottom = '';
+  }
 
   const list = getActiveArticles().filter(a => a.enabled !== false);
 
@@ -2496,6 +2642,22 @@ function renderPopularUsedCars() {
   const container = document.getElementById('popularUsedGridContainer');
   if (!container) return;
 
+  const secCfg = getHomepageSectionConfig('popularUsedCars');
+  container.classList.remove('card-style-compact', 'card-style-big');
+  if (secCfg.cardStyle === 'compact') container.classList.add('card-style-compact');
+  if (secCfg.cardStyle === 'big') container.classList.add('card-style-big');
+  if (secCfg.layout === 'carousel') {
+    container.style.display = 'flex';
+    container.style.overflowX = 'auto';
+    container.style.gap = '18px';
+    container.style.paddingBottom = '12px';
+  } else {
+    container.style.display = '';
+    container.style.overflowX = '';
+    container.style.gap = '';
+    container.style.paddingBottom = '';
+  }
+
   const list = getActivePopularUsedCars().filter(c => c.enabled !== false);
 
   container.innerHTML = list.map(car => {
@@ -2757,10 +2919,63 @@ try {
 // MODULAR HOMEPAGE HORIZONTAL SHELVES ENGINE
 // ==========================================================================
 
-function createShelfCarCard(car) {
+function createShelfCarCard(car, cardStyle = 'compact') {
   const priceDisplay = car.priceRange ? car.priceRange.replace('₹', 'Rs. ') : ('Rs. ' + car.minPrice + ' - ' + car.maxPrice + ' Lakh');
+  const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
+
+  if (cardStyle === 'big') {
+    return `
+      <div class="trending-card card-size-big" onclick="window.navigateToCar('${car.id}')" style="cursor:pointer;">
+        <div class="trending-card-media">
+          <div class="trending-badge-row">
+            <span class="trending-hot-badge">${formatLaunchBadge(car.launchDate)}</span>
+            <span class="trending-safety-badge">${formatSafetyBadge(car.safetyRating)}</span>
+          </div>
+          <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
+        </div>
+        <div class="trending-card-body">
+          <span class="trending-brand">${car.brand} • ${car.bodyType}</span>
+          <h3 class="trending-title"><a href="javascript:void(0)" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" class="car-seo-title-link">${car.name}</a></h3>
+          <div class="trending-specs-mini">
+            <span>⛽ ${(car.fuelTypes || []).join('/')}</span>
+            <span>•</span>
+            <span>📐 ${car.groundClearance}</span>
+          </div>
+          <div class="trending-price">
+            ${car.priceRange}
+            <div style="font-size:11px; font-weight:600; color:var(--text-muted); margin-top:2px;">Est. On-Road (${onRoadEstimate.cityName}): ${formatLakh(onRoadEstimate.total)}</div>
+          </div>
+          <div class="trending-actions-carwale">
+            <button type="button" class="btn-price-breakup" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" title="View variant price breakup">
+              View Price Breakup
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  if (cardStyle === 'medium') {
+    return `
+      <article class="shelf-car-card card-size-medium" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
+        <div class="shelf-car-media" style="position:relative;">
+          <span style="position:absolute; top:8px; right:8px; background:rgba(255,255,255,0.94); color:#0F172A; font-size:10px; font-weight:800; padding:3px 8px; border-radius:20px; border:1px solid #E2E8F0; z-index:2;">${formatSafetyBadge(car.safetyRating)}</span>
+          <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
+        </div>
+        <div style="font-size:10.5px; font-weight:800; color:#64748B; text-transform:uppercase; letter-spacing:0.4px; margin-bottom:2px;">${car.brand} • ${car.bodyType}</div>
+        <h4 class="shelf-car-name">${car.name}</h4>
+        <div style="font-size:11.5px; color:#475569; font-weight:600; margin-bottom:6px;">⛽ ${(car.fuelTypes || []).join('/')} • 📐 ${car.groundClearance}</div>
+        <div class="shelf-car-price">${priceDisplay}</div>
+        <div style="font-size:11px; color:#64748B; font-weight:600; margin-bottom:8px;">Est. On-Road (${onRoadEstimate.cityName}): ${formatLakh(onRoadEstimate.total)}</div>
+        <div class="shelf-car-action">
+          <span class="view-breakup-link">View Price Breakup &rsaquo;</span>
+        </div>
+      </article>
+    `;
+  }
+
   return `
-    <article class="shelf-car-card" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
+    <article class="shelf-car-card card-size-compact" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
       <div class="shelf-car-media">
         <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
       </div>
@@ -2789,21 +3004,28 @@ function renderRecentlyViewed() {
   const section = document.getElementById('recentlyViewedSection');
   if (!container || !section) return;
 
+  const secCfg = getHomepageSectionConfig('recentlyViewed');
+  if (secCfg.visible === false) {
+    section.style.display = 'none';
+    return;
+  }
+
   let viewedIds = [];
   try {
     viewedIds = JSON.parse(localStorage.getItem('cmv_recently_viewed') || '[]');
   } catch(e) {}
 
   if (viewedIds.length === 0) {
-    // Show top trending as default so section is useful on first visit
     viewedIds = ['tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx'];
   }
 
   section.style.display = 'block';
   const all = getAllCars();
   const matched = viewedIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+  const cardStyle = secCfg.cardStyle || 'compact';
+  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
 
-  let html = matched.map(car => createShelfCarCard(car)).join('');
+  let html = matched.map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard('/cars.html', 'View All Cars');
   container.innerHTML = html;
 }
@@ -2820,30 +3042,21 @@ function renderRecommendedShelf() {
 
   const recIds = [...new Set([...customIds, 'tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx', 'maruti-brezza', 'mg-windsor-ev', 'tata-punch', 'nissan-magnite'])];
   const all = getAllCars();
-  const matched = recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+  const baseMatched = recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+  const matched = getOrderedCarsForSection('recommended', baseMatched, true);
 
-  let html = matched.map(car => createShelfCarCard(car)).join('');
+  const secCfg = getHomepageSectionConfig('recommended');
+  const cardStyle = secCfg.cardStyle || 'compact';
+  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
+
+  let html = matched.map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard('/cars.html?category=recommended', 'View Recommended');
   container.innerHTML = html;
 }
 
 // 3. Trending 2024-2026 Launches Shelf
 function renderTrendingShelf() {
-  const container = document.getElementById('trendingShelfContainer');
-  if (!container) return;
-
-  let customIds = [];
-  try {
-    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
-  } catch (e) {}
-
-  const trendIds = [...new Set([...customIds, 'skoda-kylaq', 'tata-curvv', 'mahindra-thar-roxx', 'nissan-magnite', 'hyundai-alcazar', 'tata-nexon', 'mg-windsor-ev', 'kia-ev9'])];
-  const all = getAllCars();
-  const matched = trendIds.map(id => all.find(c => c.id === id)).filter(Boolean);
-
-  let html = matched.map(car => createShelfCarCard(car)).join('');
-  html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches');
-  container.innerHTML = html;
+  renderTrendingLaunches();
 }
 
 // 4A. Popular Cars Under 10 Lakh
@@ -2864,7 +3077,13 @@ function renderUnder10LShelf() {
     filtered = all.filter(c => (c.bodyType || '').includes('Sedan') || (c.bodyType || '').includes('MPV'));
   }
 
-  let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  const ordered = getOrderedCarsForSection('under10L', filtered, currentUnder10LFilter === 'all');
+  const secCfg = getHomepageSectionConfig('popularBudget');
+  const cardStyle = secCfg.under10LCardStyle || secCfg.cardStyle || 'compact';
+  const layoutMode = secCfg.under10LLayout || secCfg.layout || 'carousel';
+  applyShelfLayoutClasses(container, layoutMode, cardStyle);
+
+  let html = ordered.slice(0, 12).map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard(`/cars.html?budget=under-10l&category=${currentUnder10LFilter}`, 'View Under 10L');
   container.innerHTML = html;
 }
@@ -2904,7 +3123,13 @@ function renderAbove10LShelf() {
     filtered = filtered.filter(c => (c.bodyType || '').includes('Sedan') || (c.bodyType || '').includes('MPV'));
   }
 
-  let html = filtered.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  const ordered = getOrderedCarsForSection('above10L', filtered, currentAbove10LFilter === 'all');
+  const secCfg = getHomepageSectionConfig('popularBudget');
+  const cardStyle = secCfg.above10LCardStyle || secCfg.cardStyle || 'compact';
+  const layoutMode = secCfg.above10LLayout || secCfg.layout || 'carousel';
+  applyShelfLayoutClasses(container, layoutMode, cardStyle);
+
+  let html = ordered.slice(0, 12).map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard(`/cars.html?budget=${currentAbove10LTab}&category=${currentAbove10LFilter}`, 'View Above 10L');
   container.innerHTML = html;
 }
@@ -3039,7 +3264,12 @@ function renderUpcomingLaunchedShelf() {
     });
   }
 
-  let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  const ordered = getOrderedCarsForSection('upcomingLaunched', matched, true);
+  const secCfg = getHomepageSectionConfig('upcomingLaunched');
+  const cardStyle = secCfg.cardStyle || 'compact';
+  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
+
+  let html = ordered.slice(0, 12).map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard(`/cars.html?category=${currentUpcomingTab}`, 'View All');
   container.innerHTML = html;
 }
@@ -3078,7 +3308,12 @@ function renderFuelTypeShelf() {
     link.textContent = 'View More ›';
   }
 
-  let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
+  const ordered = getOrderedCarsForSection('fuelType', matched, false);
+  const secCfg = getHomepageSectionConfig('fuelType');
+  const cardStyle = secCfg.cardStyle || 'compact';
+  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
+
+  let html = ordered.slice(0, 12).map(car => createShelfCarCard(car, cardStyle)).join('');
   html += createShelfViewMoreCard(`/cars.html?fuel=${currentFuelTab}`, `View More ${label} Cars`);
   container.innerHTML = html;
 }

@@ -1165,6 +1165,9 @@
         <button type="button" class="admin-tab-btn" id="tabBtnUrlImporter" onclick="switchAdminTab('urlImporter')" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); color:#1D4ED8; border:1px solid #93C5FD;">
           🌐 Auto-Fetch Car from Link & Live Preview
         </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnHomepageBuilder" onclick="switchAdminTab('homepageBuilder')" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5); color:#C2410C; border:1px solid #FDBA74;">
+          🎛️ Home Page Layout & Card Studio
+        </button>
       </div>
 
       <!-- VIEW 1: CATALOG & VISIBILITY CONTROL -->
@@ -2546,6 +2549,139 @@
         </div>
       </div><!-- end viewUrlImporter -->
 
+      <!-- VIEW 7: HOME PAGE LAYOUT, SECTION REARRANGER, CARD DESIGN & CAR POSITION SWAPPER -->
+      <div id="viewHomepageBuilder" style="display:none;">
+        <!-- Top Action Banner -->
+        <div class="editor-top-bar" style="background:linear-gradient(135deg,#0F172A,#1E293B); color:#FFF; border:none;">
+          <div>
+            <div style="font-size:11px; font-weight:800; color:#FDBA74; text-transform:uppercase; letter-spacing:0.8px;">🎛️ HOME PAGE VISUAL CUSTOMIZER & POSITION SWAPPER</div>
+            <div style="font-size:19px; font-weight:800; color:#FFF; margin-top:2px;">Rearrange Sections, Swap Car Positions, Pick Card Designs (Small / Medium / Big) & Hide Sections</div>
+            <div style="font-size:12.5px; color:#CBD5E1; margin-top:3px;">All changes save directly to your live Home Page (<code style="color:#FDE68A;">index.html</code>) in real time.</div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+            <button type="button" class="btn-save-editor" onclick="saveHomepageBuilderConfig()" style="background:linear-gradient(135deg,#16A34A,#15803D); box-shadow:0 6px 18px rgba(22,163,74,0.35);">
+              💾 Save Home Page Layout (Instant Live)
+            </button>
+            <a href="index.html" target="_blank" class="btn-reset-editor" style="background:#FFF; color:#0F172A; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+              👁️ Preview Live Home Page ↗
+            </a>
+            <button type="button" class="btn-reset-editor" onclick="resetHomepageBuilderAll()" style="background:rgba(255,255,255,0.1); color:#FCA5A5; border-color:rgba(248,113,113,0.4);">
+              🔄 Reset Default Layout
+            </button>
+          </div>
+        </div>
+
+        <!-- Card Size Visual Reference Strip -->
+        <div class="editor-sec-card" style="margin-bottom:20px;">
+          <div class="editor-sec-header">
+            <h4 class="editor-sec-title">🎨 Card Design Reference Guide (Choose per Section Below)</h4>
+            <span style="font-size:12px; color:#64748B; font-weight:600;">Switch any section between Small Compact, Medium Balanced, or Big Feature Card + Carousel or Grid</span>
+          </div>
+          <div class="editor-sec-body" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px;">
+            <div style="border:1.5px solid #E2E8F0; border-radius:12px; padding:14px; background:#F8FAFC;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-size:13.5px; color:#0F172A;">🃏 Small / Compact Card</strong>
+                <span style="font-size:10.5px; font-weight:800; background:#E2E8F0; color:#334155; padding:2px 8px; border-radius:12px;">235px Compact</span>
+              </div>
+              <p style="font-size:12px; color:#64748B; margin:0;">Clean CarWale-style compact shelf card with car image, model name, price range, and View Price Breakup link. Ideal for fitting more cars on screen.</p>
+            </div>
+            <div style="border:1.5px solid #BFDBFE; border-radius:12px; padding:14px; background:#EFF6FF;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-size:13.5px; color:#1E40AF;">🎴 Medium Balanced Card</strong>
+                <span style="font-size:10.5px; font-weight:800; background:#DBEAFE; color:#1D4ED8; padding:2px 8px; border-radius:12px;">285px Rich Spec</span>
+              </div>
+              <p style="font-size:12px; color:#1E3A8A; margin:0;">Adds Safety Rating badge, Brand & Body Type tag, Fuel & Ground Clearance specs, and Estimated City On-Road Price alongside Ex-Showroom price.</p>
+            </div>
+            <div style="border:1.5px solid #FED7AA; border-radius:12px; padding:14px; background:#FFF7ED;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-size:13.5px; color:#9A3412;">🖼️ Big Feature Showcase Card</strong>
+                <span style="font-size:10.5px; font-weight:800; background:#FFEDD5; color:#C2410C; padding:2px 8px; border-radius:12px;">340px Hero Card</span>
+              </div>
+              <p style="font-size:12px; color:#7C2D12; margin:0;">Large showroom card with Just Launched + Safety badges, large hero image, full specs, On-Road price, and prominent orange CTA button.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PART 1: HOME PAGE SECTIONS ORDER, VISIBILITY & CARD DESIGN -->
+        <div class="editor-sec-card" style="margin-bottom:24px;">
+          <div class="editor-sec-header">
+            <div>
+              <h4 class="editor-sec-title">📐 1. Rearrange Home Page Sections, Select Card Design & Show/Hide Sections</h4>
+              <div style="font-size:12px; color:#64748B; margin-top:2px;">Use <strong>⬆️ / ⬇️</strong> or <strong>Swap Position #</strong> to reorder sections on the Home Page, pick <strong>Small / Medium / Big Card</strong>, choose <strong>Carousel vs Grid</strong>, or hide any section.</div>
+            </div>
+            <span class="tab-counter-badge" id="hpVisibleSectionsBadge" style="background:#DCFCE7; color:#166534; font-size:12px; padding:4px 10px;">14 / 14 Visible</span>
+          </div>
+          <div class="editor-sec-body" style="padding:0; overflow-x:auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width:70px;">Order</th>
+                  <th style="width:200px;">Position Swap / Move</th>
+                  <th>Home Page Section & Custom Heading</th>
+                  <th style="width:210px;">Card Design (Small / Big)</th>
+                  <th style="width:185px;">Display Layout</th>
+                  <th style="width:140px;">Arrange Cars</th>
+                  <th style="width:130px; text-align:right;">Visibility</th>
+                </tr>
+              </thead>
+              <tbody id="hpSectionsTableBody">
+                <!-- Populated by renderHpSectionsTable() -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PART 2: ARRANGE & SWAP CARS INSIDE ANY SECTION -->
+        <div class="editor-sec-card" id="hpCarPositionSwapperCard">
+          <div class="editor-sec-header" style="flex-wrap:wrap; gap:12px;">
+            <div>
+              <h4 class="editor-sec-title">🚗 2. Arrange & Swap Car Positions Inside Section</h4>
+              <div style="font-size:12px; color:#64748B; margin-top:2px;">Select any Home Page section below to swap car positions (<strong>⬅️ Swap Left</strong>, <strong>➡️ Swap Right</strong>, <strong>🥇 Pin #1</strong>, or <strong>Swap with Position #N</strong>), add any car, or remove a car.</div>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button type="button" class="btn-act" onclick="reverseHpCarOrder()" style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE;">
+                ⇄ Reverse Order
+              </button>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetHpSectionCarOrder()">
+                🔄 Reset This Section's Cars
+              </button>
+            </div>
+          </div>
+
+          <div class="editor-sec-body">
+            <!-- Section Selector Pills -->
+            <div id="hpCarOrderTabs" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid #E2E8F0;">
+              <button type="button" class="filter-pill active" data-sec="recommended" onclick="switchHpCarOrderTab('recommended')">⭐ Recommended For You</button>
+              <button type="button" class="filter-pill" data-sec="trending" onclick="switchHpCarOrderTab('trending')">🔥 Trending Cars (2024–2026)</button>
+              <button type="button" class="filter-pill" data-sec="under10L" onclick="switchHpCarOrderTab('under10L')">💰 Cars Under 10 Lakh</button>
+              <button type="button" class="filter-pill" data-sec="above10L" onclick="switchHpCarOrderTab('above10L')">💎 Cars Above 10 Lakh</button>
+              <button type="button" class="filter-pill" data-sec="upcomingLaunched" onclick="switchHpCarOrderTab('upcomingLaunched')">🚀 Upcoming & Launched</button>
+              <button type="button" class="filter-pill" data-sec="fuelType" onclick="switchHpCarOrderTab('fuelType')">⚡ Cars by Fuel Type</button>
+              <button type="button" class="filter-pill" data-sec="brands" onclick="switchHpCarOrderTab('brands')">🏢 All Brands Order</button>
+            </div>
+
+            <!-- Add Car to Section Bar -->
+            <div id="hpAddCarBar" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; background:#F8FAFC; border:1px solid #E2E8F0; padding:12px 14px; border-radius:12px; margin-bottom:16px;">
+              <strong style="font-size:12.5px; color:#0F172A;">➕ Add / Pin Car to <span id="hpCurrentSecLabel" style="color:var(--primary);">Recommended For You</span>:</strong>
+              <select id="hpAddCarSelect" class="form-select" style="max-width:320px; padding:7px 12px; font-size:13px;">
+                <!-- Populated dynamically -->
+              </select>
+              <button type="button" class="btn-act btn-act-show" onclick="addHpCarToSection('start')" style="padding:7px 12px;">
+                🥇 Add at Position #1
+              </button>
+              <button type="button" class="btn-act" onclick="addHpCarToSection('end')" style="padding:7px 12px; background:#FFF; border:1px solid #CBD5E1; color:#0F172A;">
+                ➕ Add at End
+              </button>
+            </div>
+
+            <!-- Visual Car Position Swapper Grid -->
+            <div id="hpCarOrderGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(235px, 1fr)); gap:14px;">
+              <!-- Populated by renderHpSectionCarOrderGrid() -->
+            </div>
+          </div>
+        </div>
+      </div><!-- end viewHomepageBuilder -->
+
     </div>
   </div>
 
@@ -3056,7 +3192,8 @@
         reviewsManager: document.getElementById('tabBtnReviewsManager'),
         usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
         addCar: document.getElementById('tabBtnAddCar'),
-        urlImporter: document.getElementById('tabBtnUrlImporter')
+        urlImporter: document.getElementById('tabBtnUrlImporter'),
+        homepageBuilder: document.getElementById('tabBtnHomepageBuilder')
       };
       const views = {
         visibility: document.getElementById('viewVisibility'),
@@ -3064,7 +3201,8 @@
         reviewsManager: document.getElementById('viewReviewsManager'),
         usedCarsManager: document.getElementById('viewUsedCarsManager'),
         addCar: document.getElementById('viewAddCar'),
-        urlImporter: document.getElementById('viewUrlImporter')
+        urlImporter: document.getElementById('viewUrlImporter'),
+        homepageBuilder: document.getElementById('viewHomepageBuilder')
       };
 
       Object.keys(tabs).forEach(k => {
@@ -3082,6 +3220,8 @@
         initUsedCarsManager();
       } else if (tabName === 'urlImporter') {
         initUrlImporter();
+      } else if (tabName === 'homepageBuilder') {
+        initHomepageBuilder();
       }
     }
     window.switchAdminTab = switchAdminTab;
@@ -6069,6 +6209,538 @@
       a.click();
     }
     window.downloadImporterJsonFile = downloadImporterJsonFile;
+
+    // =========================================================================
+    // 🎛️ HOME PAGE LAYOUT, CARD DESIGN & CAR POSITION SWAPPER STUDIO
+    // =========================================================================
+    const ADMIN_DEFAULT_HP_SECTIONS = [
+      { key: 'recentlyViewed', domId: 'recentlyViewedSection', title: 'Recently Viewed Cars', badge: '🕒 YOUR HISTORY', visible: true, cardStyle: 'compact', layout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: null },
+      { key: 'recommended', domId: 'recommendedSection', title: 'Recommended For You', badge: '⭐ HANDPICKED FOR YOU', visible: true, cardStyle: 'compact', layout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: 'recommended' },
+      { key: 'trending', domId: 'trendingSection', title: 'Trending Cars (2024–2026)', badge: '🔥 JUST LAUNCHED', visible: true, cardStyle: 'big', layout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: 'trending' },
+      { key: 'popularBudget', domId: 'popularBudgetSection', title: 'Popular Cars By Budget', badge: '🏷️ POPULAR BY BUDGET', visible: true, cardStyle: 'compact', layout: 'carousel', showUnder10L: true, showAbove10L: true, under10LCardStyle: 'compact', under10LLayout: 'carousel', above10LCardStyle: 'compact', above10LLayout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: 'under10L' },
+      { key: 'offers', domId: 'offersSection', title: 'Get Offers on Popular Cars', badge: '🎁 DISCOUNTS & BENEFITS', visible: true, cardStyle: 'medium', layout: 'carousel', supportsCardStyle: false, supportsLayout: true, orderKey: null },
+      { key: 'brands', domId: 'brandsSection', title: 'All Brands', badge: '🏢 AUTOMAKERS', visible: true, cardStyle: 'compact', layout: 'grid', supportsCardStyle: false, supportsLayout: false, orderKey: 'brands' },
+      { key: 'onRoadChecker', domId: 'onRoadCheckerSection', title: 'Check New Car On-Road Price', badge: '📍 ON-ROAD CALCULATOR', visible: true, cardStyle: 'big', layout: 'grid', supportsCardStyle: false, supportsLayout: false, orderKey: null },
+      { key: 'choiceFinder', domId: 'choiceFinderSection', title: 'Find The Cars Of Your Choice', badge: '🎯 SMART CHOICE FINDER', visible: true, cardStyle: 'medium', layout: 'grid', supportsCardStyle: false, supportsLayout: false, orderKey: null },
+      { key: 'upcomingLaunched', domId: 'upcomingLaunchedSection', title: 'Upcoming and Recently Launched Cars', badge: '🚀 UPCOMING & LAUNCHED', visible: true, cardStyle: 'compact', layout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: 'upcomingLaunched' },
+      { key: 'fuelType', domId: 'fuelTypeSection', title: 'Cars by Fuel Type', badge: '⚡ EV / HYBRID / CNG', visible: true, cardStyle: 'compact', layout: 'carousel', supportsCardStyle: true, supportsLayout: true, orderKey: 'fuelType' },
+      { key: 'compare', domId: 'compareSection', title: 'Compare Cars', badge: '⚖️ HEAD-TO-HEAD MATCHUPS', visible: true, cardStyle: 'medium', layout: 'carousel', supportsCardStyle: false, supportsLayout: true, orderKey: null },
+      { key: 'usedCarsByCity', domId: 'usedCarsByCitySection', title: 'Used Cars By City', badge: '🏙️ USED BY CITY', visible: true, cardStyle: 'compact', layout: 'carousel', supportsCardStyle: false, supportsLayout: false, orderKey: null },
+      { key: 'popularUsedCars', domId: 'popularUsedCarsSection', title: 'Popular Used Cars in India', badge: '🚗 POPULAR USED CARS', visible: true, cardStyle: 'medium', layout: 'grid', supportsCardStyle: true, supportsLayout: true, orderKey: null },
+      { key: 'news', domId: 'newsSection', title: 'Latest Car Updates & Expert Reviews', badge: '📰 EXPERT REVIEWS', visible: true, cardStyle: 'medium', layout: 'grid', supportsCardStyle: true, supportsLayout: true, orderKey: null }
+    ];
+
+    let hpBuilderState = null;
+    let currentHpCarOrderKey = 'recommended';
+
+    function loadHpBuilderState() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('cmv_homepage_config') || 'null');
+        if (saved && typeof saved === 'object') {
+          const mergedSections = [];
+          const seen = new Set();
+          (Array.isArray(saved.sections) ? saved.sections : []).forEach(s => {
+            const def = ADMIN_DEFAULT_HP_SECTIONS.find(d => d.key === s.key || d.domId === s.domId);
+            if (def && !seen.has(def.key)) {
+              seen.add(def.key);
+              mergedSections.push(Object.assign({}, def, s, {
+                key: def.key,
+                domId: def.domId,
+                badge: def.badge,
+                supportsCardStyle: def.supportsCardStyle,
+                supportsLayout: def.supportsLayout,
+                orderKey: def.orderKey
+              }));
+            }
+          });
+          ADMIN_DEFAULT_HP_SECTIONS.forEach(def => {
+            if (!seen.has(def.key)) mergedSections.push(Object.assign({}, def));
+          });
+          hpBuilderState = {
+            sections: mergedSections,
+            carOrders: Object.assign({}, saved.carOrders || {}),
+            excludedFromSection: Object.assign({}, saved.excludedFromSection || {})
+          };
+          return hpBuilderState;
+        }
+      } catch (e) {}
+      hpBuilderState = {
+        sections: ADMIN_DEFAULT_HP_SECTIONS.map(d => Object.assign({}, d)),
+        carOrders: {},
+        excludedFromSection: {}
+      };
+      return hpBuilderState;
+    }
+
+    function persistHpBuilderState(silent) {
+      if (!hpBuilderState) loadHpBuilderState();
+      localStorage.setItem('cmv_homepage_config', JSON.stringify(hpBuilderState));
+      if (!silent) {
+        showAdminToast('✅ Home Page Layout, Card Design & Car Positions Saved Live!');
+      }
+    }
+
+    function getDefaultCarsForOrderKey(orderKey) {
+      const all = getCatalogCars();
+      let customIds = [];
+      try {
+        customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
+      } catch (e) {}
+
+      if (orderKey === 'recommended') {
+        const recIds = [...new Set([...customIds, 'tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx', 'maruti-brezza', 'mg-windsor-ev', 'tata-punch', 'nissan-magnite'])];
+        return recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+      }
+      if (orderKey === 'trending') {
+        const trendIds = [...new Set([...customIds, 'nissan-magnite', 'tata-curvv', 'thar-roxx', 'skoda-kylaq', 'hyundai-creta', 'mg-windsor-ev', 'nissan-tekton', 'toyota-innova-hycross', 'maruti-swift'])];
+        return trendIds.map(id => all.find(c => c.id === id)).filter(Boolean);
+      }
+      if (orderKey === 'under10L') {
+        return all.filter(c => (Number(c.minPrice) || 0) < 1000000).slice(0, 12);
+      }
+      if (orderKey === 'above10L') {
+        return all.filter(c => (Number(c.minPrice) || 0) >= 1000000 && (Number(c.minPrice) || 0) <= 2000000).slice(0, 12);
+      }
+      if (orderKey === 'upcomingLaunched') {
+        return all.filter(c => {
+          const ld = String(c.launchDate || '2026 Launched');
+          return ld.includes('2025') || ld.includes('2026') || ld.includes('Upcoming') || ld.includes('2024') || ld.includes('Launched');
+        }).slice(0, 12);
+      }
+      if (orderKey === 'fuelType') {
+        return all.filter(c => Array.isArray(c.fuelTypes) && (c.fuelTypes.includes('EV') || c.fuelTypes.includes('Hybrid') || c.fuelTypes.includes('CNG'))).slice(0, 12);
+      }
+      if (orderKey === 'brands') {
+        const defaultBrandOrder = ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD','Land Rover','Maserati','Mercedes-Benz','BMW','Audi','Porsche','Volvo','Lexus','Jeep'];
+        const unique = [...new Set(all.map(c => (c.brand || '').replace(/\s*\(Nexa\)\s*$/i, '').trim()))].filter(Boolean);
+        return unique.sort((a, b) => {
+          const ia = defaultBrandOrder.indexOf(a), ib = defaultBrandOrder.indexOf(b);
+          return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib) || a.localeCompare(b);
+        });
+      }
+      return all.slice(0, 10);
+    }
+
+    function getActiveOrderedItemsForSection(orderKey) {
+      if (!hpBuilderState) loadHpBuilderState();
+      const excluded = new Set(hpBuilderState.excludedFromSection[orderKey] || []);
+      const customOrder = hpBuilderState.carOrders[orderKey] || [];
+
+      if (orderKey === 'brands') {
+        const defBrands = getDefaultCarsForOrderKey('brands');
+        const res = [];
+        const seen = new Set();
+        customOrder.forEach(b => {
+          if (b && !excluded.has(b) && !seen.has(b)) {
+            seen.add(b);
+            res.push(b);
+          }
+        });
+        defBrands.forEach(b => {
+          if (b && !excluded.has(b) && !seen.has(b)) {
+            seen.add(b);
+            res.push(b);
+          }
+        });
+        return res;
+      }
+
+      const allCars = getCatalogCars();
+      const defCars = getDefaultCarsForOrderKey(orderKey);
+      const res = [];
+      const seen = new Set();
+
+      customOrder.forEach(id => {
+        if (excluded.has(id) || seen.has(id)) return;
+        const found = allCars.find(c => c.id === id);
+        if (found) {
+          seen.add(found.id);
+          res.push(found);
+        }
+      });
+
+      defCars.forEach(c => {
+        if (!c || excluded.has(c.id) || seen.has(c.id)) return;
+        seen.add(c.id);
+        res.push(c);
+      });
+
+      return res;
+    }
+
+    function initHomepageBuilder() {
+      loadHpBuilderState();
+      renderHpSectionsTable();
+      renderHpSectionCarOrderGrid();
+    }
+    window.initHomepageBuilder = initHomepageBuilder;
+
+    function renderHpSectionsTable() {
+      if (!hpBuilderState) loadHpBuilderState();
+      const tbody = document.getElementById('hpSectionsTableBody');
+      if (!tbody) return;
+
+      const total = hpBuilderState.sections.length;
+      const visibleCount = hpBuilderState.sections.filter(s => s.visible !== false).length;
+      const badgeEl = document.getElementById('hpVisibleSectionsBadge');
+      if (badgeEl) {
+        badgeEl.textContent = `${visibleCount} / ${total} Sections Visible`;
+      }
+
+      tbody.innerHTML = hpBuilderState.sections.map((sec, idx) => {
+        const isVis = sec.visible !== false;
+        const posOptions = hpBuilderState.sections.map((_, i) =>
+          `<option value="${i}" ${i === idx ? 'selected' : ''}>Position #${i + 1}</option>`
+        ).join('');
+
+        let subControlsHtml = '';
+        if (sec.key === 'popularBudget') {
+          subControlsHtml = `
+            <div style="margin-top:8px; padding:8px 10px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+              <label style="font-size:11.5px; font-weight:700; color:#0F172A; display:inline-flex; align-items:center; gap:5px; cursor:pointer;">
+                <input type="checkbox" ${sec.showUnder10L !== false ? 'checked' : ''} onchange="updateHpSectionProp('${sec.key}', 'showUnder10L', this.checked)">
+                Show "Under 10 Lakh"
+              </label>
+              <select class="form-select" style="width:auto; padding:3px 8px; font-size:11px;" onchange="updateHpSectionProp('${sec.key}', 'under10LCardStyle', this.value)">
+                <option value="compact" ${(sec.under10LCardStyle || sec.cardStyle) === 'compact' ? 'selected' : ''}>Under 10L: Small Card</option>
+                <option value="medium" ${(sec.under10LCardStyle || sec.cardStyle) === 'medium' ? 'selected' : ''}>Under 10L: Medium Card</option>
+                <option value="big" ${(sec.under10LCardStyle || sec.cardStyle) === 'big' ? 'selected' : ''}>Under 10L: Big Card</option>
+              </select>
+              <span style="color:#CBD5E1;">|</span>
+              <label style="font-size:11.5px; font-weight:700; color:#0F172A; display:inline-flex; align-items:center; gap:5px; cursor:pointer;">
+                <input type="checkbox" ${sec.showAbove10L !== false ? 'checked' : ''} onchange="updateHpSectionProp('${sec.key}', 'showAbove10L', this.checked)">
+                Show "Above 10 Lakh"
+              </label>
+              <select class="form-select" style="width:auto; padding:3px 8px; font-size:11px;" onchange="updateHpSectionProp('${sec.key}', 'above10LCardStyle', this.value)">
+                <option value="compact" ${(sec.above10LCardStyle || sec.cardStyle) === 'compact' ? 'selected' : ''}>Above 10L: Small Card</option>
+                <option value="medium" ${(sec.above10LCardStyle || sec.cardStyle) === 'medium' ? 'selected' : ''}>Above 10L: Medium Card</option>
+                <option value="big" ${(sec.above10LCardStyle || sec.cardStyle) === 'big' ? 'selected' : ''}>Above 10L: Big Card</option>
+              </select>
+            </div>
+          `;
+        }
+
+        return `
+          <tr class="${isVis ? '' : 'is-hidden-row'}">
+            <td>
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:10px; background:${idx < 3 ? '#FFF7ED' : '#F1F5F9'}; color:${idx < 3 ? '#EA580C' : '#334155'}; font-weight:900; font-size:13px; border:1px solid ${idx < 3 ? '#FDBA74' : '#E2E8F0'};">
+                #${idx + 1}
+              </span>
+            </td>
+            <td>
+              <div style="display:flex; align-items:center; gap:5px;">
+                <button type="button" class="btn-act" style="padding:5px 8px;" onclick="moveHpSection(${idx}, -1)" ${idx === 0 ? 'disabled style="opacity:0.4;cursor:not-allowed;"' : ''} title="Move Section Up">⬆️</button>
+                <button type="button" class="btn-act" style="padding:5px 8px;" onclick="moveHpSection(${idx}, 1)" ${idx === total - 1 ? 'disabled style="opacity:0.4;cursor:not-allowed;"' : ''} title="Move Section Down">⬇️</button>
+                <select class="form-select" style="padding:5px 8px; font-size:11.5px; font-weight:700; width:115px;" onchange="swapHpSectionPosition(${idx}, parseInt(this.value, 10))" title="Swap position with another section">
+                  ${posOptions}
+                </select>
+              </div>
+            </td>
+            <td>
+              <div style="font-size:10px; font-weight:800; color:#64748B; letter-spacing:0.5px; margin-bottom:3px;">${sec.badge || sec.domId}</div>
+              <input type="text" class="form-input" value="${(sec.title || '').replace(/"/g, '&quot;')}" onchange="updateHpSectionProp('${sec.key}', 'title', this.value)" style="padding:6px 10px; font-size:13.5px; font-weight:800; max-width:340px;">
+              ${subControlsHtml}
+            </td>
+            <td>
+              ${sec.supportsCardStyle ? `
+                <select class="form-select" style="padding:7px 10px; font-size:12px; font-weight:700;" onchange="updateHpSectionProp('${sec.key}', 'cardStyle', this.value)">
+                  <option value="compact" ${sec.cardStyle === 'compact' ? 'selected' : ''}>🃏 Small / Compact Card</option>
+                  <option value="medium" ${sec.cardStyle === 'medium' ? 'selected' : ''}>🎴 Medium Balanced Card</option>
+                  <option value="big" ${sec.cardStyle === 'big' ? 'selected' : ''}>🖼️ Big Feature Card</option>
+                </select>
+              ` : `<span style="font-size:11.5px; color:#94A3B8; font-weight:600;">Fixed Widget Design</span>`}
+            </td>
+            <td>
+              ${sec.supportsLayout ? `
+                <select class="form-select" style="padding:7px 10px; font-size:12px; font-weight:700;" onchange="updateHpSectionProp('${sec.key}', 'layout', this.value)">
+                  <option value="carousel" ${sec.layout === 'carousel' ? 'selected' : ''}>↔️ Horizontal Carousel</option>
+                  <option value="grid" ${sec.layout === 'grid' ? 'selected' : ''}>⊞ Multi-Card Grid</option>
+                </select>
+              ` : `<span style="font-size:11.5px; color:#94A3B8; font-weight:600;">Standard Layout</span>`}
+            </td>
+            <td>
+              ${sec.orderKey ? `
+                <button type="button" class="btn-act btn-act-edit" style="padding:6px 10px; font-size:11.5px;" onclick="jumpToHpCarSwapper('${sec.orderKey}')">
+                  🚗 Arrange Cars
+                </button>
+              ` : `<span style="font-size:11px; color:#94A3B8;">—</span>`}
+            </td>
+            <td style="text-align:right;">
+              <button type="button" class="btn-act ${isVis ? 'btn-act-hide' : 'btn-act-show'}" onclick="toggleHpSectionVisibility('${sec.key}')">
+                ${isVis ? '🟢 Visible (Hide)' : '🔴 Hidden (Show)'}
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function moveHpSection(index, delta) {
+      if (!hpBuilderState) loadHpBuilderState();
+      const target = index + delta;
+      if (target < 0 || target >= hpBuilderState.sections.length) return;
+      const temp = hpBuilderState.sections[index];
+      hpBuilderState.sections[index] = hpBuilderState.sections[target];
+      hpBuilderState.sections[target] = temp;
+      persistHpBuilderState(false);
+      renderHpSectionsTable();
+    }
+    window.moveHpSection = moveHpSection;
+
+    function swapHpSectionPosition(fromIndex, toIndex) {
+      if (!hpBuilderState) loadHpBuilderState();
+      if (fromIndex === toIndex || toIndex < 0 || toIndex >= hpBuilderState.sections.length) return;
+      const temp = hpBuilderState.sections[fromIndex];
+      hpBuilderState.sections[fromIndex] = hpBuilderState.sections[toIndex];
+      hpBuilderState.sections[toIndex] = temp;
+      persistHpBuilderState(false);
+      renderHpSectionsTable();
+    }
+    window.swapHpSectionPosition = swapHpSectionPosition;
+
+    function updateHpSectionProp(sectionKey, prop, val) {
+      if (!hpBuilderState) loadHpBuilderState();
+      const sec = hpBuilderState.sections.find(s => s.key === sectionKey);
+      if (!sec) return;
+      sec[prop] = val;
+      if (sectionKey === 'popularBudget' && prop === 'cardStyle') {
+        sec.under10LCardStyle = val;
+        sec.above10LCardStyle = val;
+      }
+      if (sectionKey === 'popularBudget' && prop === 'layout') {
+        sec.under10LLayout = val;
+        sec.above10LLayout = val;
+      }
+      persistHpBuilderState(false);
+      renderHpSectionsTable();
+    }
+    window.updateHpSectionProp = updateHpSectionProp;
+
+    function toggleHpSectionVisibility(sectionKey) {
+      if (!hpBuilderState) loadHpBuilderState();
+      const sec = hpBuilderState.sections.find(s => s.key === sectionKey);
+      if (!sec) return;
+      sec.visible = sec.visible === false ? true : false;
+      persistHpBuilderState(false);
+      renderHpSectionsTable();
+    }
+    window.toggleHpSectionVisibility = toggleHpSectionVisibility;
+
+    function jumpToHpCarSwapper(orderKey) {
+      switchHpCarOrderTab(orderKey);
+      const card = document.getElementById('hpCarPositionSwapperCard');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    window.jumpToHpCarSwapper = jumpToHpCarSwapper;
+
+    const HP_ORDER_TAB_LABELS = {
+      recommended: 'Recommended For You',
+      trending: 'Trending Cars (2024–2026)',
+      under10L: 'Cars Under 10 Lakh',
+      above10L: 'Cars Above 10 Lakh',
+      upcomingLaunched: 'Upcoming & Recently Launched',
+      fuelType: 'Cars by Fuel Type (EV / Hybrid / CNG)',
+      brands: 'All Brands Shelf'
+    };
+
+    function switchHpCarOrderTab(orderKey) {
+      currentHpCarOrderKey = orderKey;
+      document.querySelectorAll('#hpCarOrderTabs .filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-sec') === orderKey);
+      });
+      const lbl = document.getElementById('hpCurrentSecLabel');
+      if (lbl) lbl.textContent = HP_ORDER_TAB_LABELS[orderKey] || orderKey;
+      renderHpSectionCarOrderGrid();
+    }
+    window.switchHpCarOrderTab = switchHpCarOrderTab;
+
+    function renderHpSectionCarOrderGrid() {
+      if (!hpBuilderState) loadHpBuilderState();
+      const grid = document.getElementById('hpCarOrderGrid');
+      const addSelect = document.getElementById('hpAddCarSelect');
+      const addBar = document.getElementById('hpAddCarBar');
+      if (!grid) return;
+
+      const items = getActiveOrderedItemsForSection(currentHpCarOrderKey);
+
+      if (currentHpCarOrderKey === 'brands') {
+        if (addBar) addBar.style.display = 'none';
+        grid.innerHTML = items.map((brandName, idx) => {
+          const swapOpts = items.map((_, i) =>
+            `<option value="${i}" ${i === idx ? 'selected' : ''}>Swap with #${i + 1}</option>`
+          ).join('');
+          const logoUrl = resolveImporterBrandLogo(brandName);
+          return `
+            <div style="background:#FFF; border:1.5px solid #E2E8F0; border-radius:14px; padding:14px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 6px rgba(15,23,42,0.04);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span style="background:${idx === 0 ? '#EA580C' : '#0F172A'}; color:#FFF; font-size:11.5px; font-weight:900; padding:3px 9px; border-radius:20px;">Position #${idx + 1}</span>
+                <button type="button" onclick="removeHpCarFromSection('${brandName.replace(/'/g, "\\'")}')" style="background:#FEE2E2; color:#B91C1C; border:none; border-radius:6px; padding:3px 8px; font-size:11px; font-weight:800; cursor:pointer;" title="Hide Brand from Shelf">🗑️ Hide</button>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                <img src="${logoUrl}" alt="${brandName}" style="width:48px; height:36px; object-fit:contain; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:4px;" onerror="this.src='assets/logo.png'">
+                <div>
+                  <div style="font-size:15px; font-weight:800; color:#0F172A;">${brandName}</div>
+                  <div style="font-size:11px; color:#64748B;">Official Brand Tile</div>
+                </div>
+              </div>
+              <div style="display:flex; gap:5px; flex-wrap:wrap; align-items:center; padding-top:10px; border-top:1px solid #F1F5F9;">
+                <button type="button" class="btn-act" style="padding:4px 8px; font-size:11px;" onclick="pinHpCarFirst(${idx})" ${idx === 0 ? 'disabled style="opacity:0.4;"' : ''} title="Pin to #1">🥇 #1</button>
+                <button type="button" class="btn-act" style="padding:4px 8px; font-size:11px;" onclick="swapHpCarOrder(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled style="opacity:0.4;"' : ''} title="Swap Left">⬅️</button>
+                <button type="button" class="btn-act" style="padding:4px 8px; font-size:11px;" onclick="swapHpCarOrder(${idx}, ${idx + 1})" ${idx === items.length - 1 ? 'disabled style="opacity:0.4;"' : ''} title="Swap Right">➡️</button>
+                <select class="form-select" style="padding:4px 6px; font-size:11px; font-weight:700; flex:1; min-width:95px;" onchange="swapHpCarOrder(${idx}, parseInt(this.value, 10))">
+                  ${swapOpts}
+                </select>
+              </div>
+            </div>
+          `;
+        }).join('');
+        return;
+      }
+
+      if (addBar) addBar.style.display = 'flex';
+      if (addSelect) {
+        const allCars = getCatalogCars();
+        const inSecIds = new Set(items.map(c => c.id));
+        addSelect.innerHTML = allCars.map(c =>
+          `<option value="${c.id}">${inSecIds.has(c.id) ? '📌 [In Section] ' : ''}${c.brand} — ${c.name} (${c.priceRange || ''})</option>`
+        ).join('');
+      }
+
+      grid.innerHTML = items.map((car, idx) => {
+        const swapOpts = items.map((_, i) =>
+          `<option value="${i}" ${i === idx ? 'selected' : ''}>Swap with #${i + 1}</option>`
+        ).join('');
+        return `
+          <div style="background:#FFF; border:1.5px solid ${idx === 0 ? '#FDBA74' : '#E2E8F0'}; border-radius:14px; padding:12px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(15,23,42,0.05);">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="background:${idx === 0 ? '#EA580C' : '#0F172A'}; color:#FFF; font-size:11.5px; font-weight:900; padding:3px 9px; border-radius:20px;">
+                  #${idx + 1} ${idx === 0 ? '★ First Card' : ''}
+                </span>
+                <button type="button" onclick="removeHpCarFromSection('${car.id}')" style="background:#FEE2E2; color:#B91C1C; border:none; border-radius:6px; padding:3px 8px; font-size:11px; font-weight:800; cursor:pointer;" title="Remove car from this section">
+                  🗑️ Remove
+                </button>
+              </div>
+              <div style="height:110px; background:#F8FAFC; border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom:8px; border:1px solid #F1F5F9;">
+                <img src="${car.heroImage || 'assets/logo.png'}" alt="${car.name}" style="max-width:92%; max-height:98px; object-fit:contain;" onerror="this.src='assets/logo.png'">
+              </div>
+              <div style="font-size:10.5px; font-weight:800; color:#64748B; text-transform:uppercase;">${car.brand} • ${car.bodyType || 'SUV'}</div>
+              <div style="font-size:14.5px; font-weight:800; color:#0F172A; margin:2px 0;">${car.name}</div>
+              <div style="font-size:12.5px; font-weight:800; color:#EA580C; margin-bottom:10px;">${car.priceRange || ''}</div>
+            </div>
+
+            <div style="display:flex; gap:5px; flex-wrap:wrap; align-items:center; padding-top:10px; border-top:1px solid #F1F5F9;">
+              <button type="button" class="btn-act" style="padding:4px 7px; font-size:11px;" onclick="pinHpCarFirst(${idx})" ${idx === 0 ? 'disabled style="opacity:0.4;"' : ''} title="Move to Position #1">🥇 #1</button>
+              <button type="button" class="btn-act" style="padding:4px 7px; font-size:11px;" onclick="swapHpCarOrder(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled style="opacity:0.4;"' : ''} title="Swap Left">⬅️</button>
+              <button type="button" class="btn-act" style="padding:4px 7px; font-size:11px;" onclick="swapHpCarOrder(${idx}, ${idx + 1})" ${idx === items.length - 1 ? 'disabled style="opacity:0.4;"' : ''} title="Swap Right">➡️</button>
+              <select class="form-select" style="padding:4px 6px; font-size:11px; font-weight:700; flex:1; min-width:95px;" onchange="swapHpCarOrder(${idx}, parseInt(this.value, 10))" title="Swap position with #N">
+                ${swapOpts}
+              </select>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function commitSectionItemOrder(items) {
+      if (!hpBuilderState) loadHpBuilderState();
+      if (currentHpCarOrderKey === 'brands') {
+        hpBuilderState.carOrders.brands = items.slice();
+      } else {
+        hpBuilderState.carOrders[currentHpCarOrderKey] = items.map(c => typeof c === 'string' ? c : c.id);
+      }
+      persistHpBuilderState(false);
+      renderHpSectionCarOrderGrid();
+    }
+
+    function swapHpCarOrder(fromIdx, toIdx) {
+      const items = getActiveOrderedItemsForSection(currentHpCarOrderKey);
+      if (toIdx < 0 || toIdx >= items.length || fromIdx === toIdx) return;
+      const temp = items[fromIdx];
+      items[fromIdx] = items[toIdx];
+      items[toIdx] = temp;
+      commitSectionItemOrder(items);
+    }
+    window.swapHpCarOrder = swapHpCarOrder;
+
+    function pinHpCarFirst(fromIdx) {
+      const items = getActiveOrderedItemsForSection(currentHpCarOrderKey);
+      if (fromIdx <= 0 || fromIdx >= items.length) return;
+      const [picked] = items.splice(fromIdx, 1);
+      items.unshift(picked);
+      commitSectionItemOrder(items);
+    }
+    window.pinHpCarFirst = pinHpCarFirst;
+
+    function addHpCarToSection(where) {
+      const select = document.getElementById('hpAddCarSelect');
+      if (!select || !select.value) return;
+      const carId = select.value;
+      const allCars = getCatalogCars();
+      const carObj = allCars.find(c => c.id === carId);
+      if (!carObj) return;
+
+      if (!hpBuilderState) loadHpBuilderState();
+      // Remove from excluded if previously removed
+      if (Array.isArray(hpBuilderState.excludedFromSection[currentHpCarOrderKey])) {
+        hpBuilderState.excludedFromSection[currentHpCarOrderKey] = hpBuilderState.excludedFromSection[currentHpCarOrderKey].filter(id => id !== carId);
+      }
+
+      let items = getActiveOrderedItemsForSection(currentHpCarOrderKey).filter(c => c.id !== carId);
+      if (where === 'start') {
+        items.unshift(carObj);
+      } else {
+        items.push(carObj);
+      }
+      commitSectionItemOrder(items);
+    }
+    window.addHpCarToSection = addHpCarToSection;
+
+    function removeHpCarFromSection(idOrBrand) {
+      if (!hpBuilderState) loadHpBuilderState();
+      if (!Array.isArray(hpBuilderState.excludedFromSection[currentHpCarOrderKey])) {
+        hpBuilderState.excludedFromSection[currentHpCarOrderKey] = [];
+      }
+      if (!hpBuilderState.excludedFromSection[currentHpCarOrderKey].includes(idOrBrand)) {
+        hpBuilderState.excludedFromSection[currentHpCarOrderKey].push(idOrBrand);
+      }
+      const items = getActiveOrderedItemsForSection(currentHpCarOrderKey).filter(item =>
+        (typeof item === 'string' ? item : item.id) !== idOrBrand
+      );
+      commitSectionItemOrder(items);
+    }
+    window.removeHpCarFromSection = removeHpCarFromSection;
+
+    function reverseHpCarOrder() {
+      const items = getActiveOrderedItemsForSection(currentHpCarOrderKey).reverse();
+      commitSectionItemOrder(items);
+    }
+    window.reverseHpCarOrder = reverseHpCarOrder;
+
+    function resetHpSectionCarOrder() {
+      if (!hpBuilderState) loadHpBuilderState();
+      delete hpBuilderState.carOrders[currentHpCarOrderKey];
+      delete hpBuilderState.excludedFromSection[currentHpCarOrderKey];
+      persistHpBuilderState(false);
+      renderHpSectionCarOrderGrid();
+    }
+    window.resetHpSectionCarOrder = resetHpSectionCarOrder;
+
+    function saveHomepageBuilderConfig() {
+      persistHpBuilderState(false);
+    }
+    window.saveHomepageBuilderConfig = saveHomepageBuilderConfig;
+
+    function resetHomepageBuilderAll() {
+      if (!confirm('Reset all Home Page sections, card designs, and car positions back to default?')) return;
+      localStorage.removeItem('cmv_homepage_config');
+      hpBuilderState = null;
+      loadHpBuilderState();
+      renderHpSectionsTable();
+      renderHpSectionCarOrderGrid();
+      showAdminToast('🔄 Home Page Layout & Card Studio reset to default!');
+    }
+    window.resetHomepageBuilderAll = resetHomepageBuilderAll;
 
   </script>
 

@@ -5787,6 +5787,112 @@ h1, h2, h3, .brand-font {
 }
 
 /* ==========================================================================
+   ADMIN HOMEPAGE LAYOUT & CARD DESIGN STUDIO MODIFIERS
+   ========================================================================== */
+.horizontal-shelf.shelf-layout-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)) !important;
+  overflow-x: visible !important;
+  gap: 18px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid.grid-cards-compact {
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid.grid-cards-big {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid > .shelf-car-card,
+.horizontal-shelf.shelf-layout-grid > .trending-card,
+.horizontal-shelf.shelf-layout-grid > .offer-card,
+.horizontal-shelf.shelf-layout-grid > .compare-match-card {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Small / Compact Card Variant */
+.shelf-car-card.card-size-compact {
+  min-width: 215px !important;
+  max-width: 225px !important;
+  padding: 12px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-media {
+  height: 112px !important;
+  margin-bottom: 8px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-img {
+  max-height: 98px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-name {
+  font-size: 14.5px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-price {
+  font-size: 13px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Medium Balanced Card Variant */
+.shelf-car-card.card-size-medium {
+  min-width: 275px !important;
+  max-width: 288px !important;
+  padding: 15px !important;
+}
+
+.shelf-car-card.card-size-medium .shelf-car-media {
+  height: 148px !important;
+}
+
+.shelf-car-card.card-size-medium .shelf-car-img {
+  max-height: 132px !important;
+}
+
+/* Big Feature Showcase Card Variant */
+.trending-card.card-size-big {
+  min-width: 335px !important;
+  max-width: 350px !important;
+  flex-shrink: 0;
+}
+
+/* Used Cars & News Card Size Modifiers */
+.popular-used-grid.card-style-compact,
+.news-grid.card-style-compact {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.popular-used-grid.card-style-compact .popular-used-media,
+.news-grid.card-style-compact .news-card-media {
+  height: 140px !important;
+}
+
+.popular-used-grid.card-style-big,
+.news-grid.card-style-big {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 640px) {
+  .horizontal-shelf.shelf-layout-grid,
+  .horizontal-shelf.shelf-layout-grid.grid-cards-compact,
+  .horizontal-shelf.shelf-layout-grid.grid-cards-big {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .horizontal-shelf.shelf-layout-grid.grid-cards-big {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
    CAR DETAIL PAGE MOBILE RESPONSIVE DESIGN (SCREENS <= 768px)
    Desktop (> 768px) remains 100% unchanged.
    ========================================================================== */
@@ -6471,4 +6577,110 @@ h1, h2, h3, .brand-font {
   display: block !important;
   grid-template-columns: 1fr !important;
   margin-top: 10px !important;
+}
+
+/* ==========================================================================
+   ADMIN HOMEPAGE LAYOUT & CARD DESIGN STUDIO MODIFIERS
+   ========================================================================== */
+.horizontal-shelf.shelf-layout-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)) !important;
+  overflow-x: visible !important;
+  gap: 18px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid.grid-cards-compact {
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid.grid-cards-big {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.horizontal-shelf.shelf-layout-grid > .shelf-car-card,
+.horizontal-shelf.shelf-layout-grid > .trending-card,
+.horizontal-shelf.shelf-layout-grid > .offer-card,
+.horizontal-shelf.shelf-layout-grid > .compare-match-card {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Small / Compact Card Variant */
+.shelf-car-card.card-size-compact {
+  min-width: 215px !important;
+  max-width: 225px !important;
+  padding: 12px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-media {
+  height: 112px !important;
+  margin-bottom: 8px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-img {
+  max-height: 98px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-name {
+  font-size: 14.5px !important;
+}
+
+.shelf-car-card.card-size-compact .shelf-car-price {
+  font-size: 13px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Medium Balanced Card Variant */
+.shelf-car-card.card-size-medium {
+  min-width: 275px !important;
+  max-width: 288px !important;
+  padding: 15px !important;
+}
+
+.shelf-car-card.card-size-medium .shelf-car-media {
+  height: 148px !important;
+}
+
+.shelf-car-card.card-size-medium .shelf-car-img {
+  max-height: 132px !important;
+}
+
+/* Big Feature Showcase Card Variant */
+.trending-card.card-size-big {
+  min-width: 335px !important;
+  max-width: 350px !important;
+  flex-shrink: 0;
+}
+
+/* Used Cars & News Card Size Modifiers */
+.popular-used-grid.card-style-compact,
+.news-grid.card-style-compact {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.popular-used-grid.card-style-compact .popular-used-media,
+.news-grid.card-style-compact .news-card-media {
+  height: 140px !important;
+}
+
+.popular-used-grid.card-style-big,
+.news-grid.card-style-big {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 640px) {
+  .horizontal-shelf.shelf-layout-grid,
+  .horizontal-shelf.shelf-layout-grid.grid-cards-compact,
+  .horizontal-shelf.shelf-layout-grid.grid-cards-big {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .horizontal-shelf.shelf-layout-grid.grid-cards-big {
+    grid-template-columns: 1fr !important;
+  }
 }
