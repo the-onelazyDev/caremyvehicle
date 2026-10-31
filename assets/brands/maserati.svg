@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140">
+    <ellipse cx="100" cy="70" rx="64" ry="62" fill="#0C2340" stroke="#CBD5E1" stroke-width="4"/>
+    <path d="M100 22 L92 38 L97 36 L97 82 L80 68 L80 44 L85 46 L76 30 L68 46 L73 44 L73 74 L97 92 L97 108 L103 108 L103 92 L127 74 L127 44 L132 46 L124 30 L115 46 L120 44 L120 68 L103 82 L103 36 L108 38 Z" fill="#FFFFFF"/>
+    <text x="100" y="123" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-weight="bold" font-size="12" letter-spacing="2">MASERATI</text>
+  </svg>

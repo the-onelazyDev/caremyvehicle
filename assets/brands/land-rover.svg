@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
+    <defs>
+      <linearGradient id="lrG" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0B6E3B"/>
+        <stop offset="100%" stop-color="#004220"/>
+      </linearGradient>
+    </defs>
+    <ellipse cx="120" cy="60" rx="112" ry="52" fill="url(#lrG)" stroke="#D1D5DB" stroke-width="5"/>
+    <ellipse cx="120" cy="60" rx="103" ry="44" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="120" y="53" text-anchor="middle" fill="#FFFFFF" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="25" letter-spacing="2">LAND-</text>
+    <text x="120" y="81" text-anchor="middle" fill="#FFFFFF" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="25" letter-spacing="2">-ROVER</text>
+  </svg>

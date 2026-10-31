@@ -2335,7 +2335,7 @@
               <span style="font-size:12px; font-weight:700; color:#2563EB;">Live Sync with Preview</span>
             </div>
             <div class="editor-sec-body">
-              <div class="form-grid-3" style="margin-bottom:14px;">
+              <div style="display:grid; grid-template-columns: 1.3fr 1fr 1.6fr 0.9fr; gap:12px; margin-bottom:14px; align-items:flex-end;">
                 <div>
                   <label class="form-label">Car Full Name *</label>
                   <input type="text" id="impCarName" class="form-input" oninput="syncImporterEdits()">
@@ -2343,6 +2343,13 @@
                 <div>
                   <label class="form-label">Brand *</label>
                   <input type="text" id="impBrand" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">🏢 Brand Logo URL (Auto-Fetched & Editable)</label>
+                  <div style="display:flex; gap:8px; align-items:center;">
+                    <img id="impBrandLogoPreview" src="assets/brands/maserati.svg" alt="Brand Logo" referrerpolicy="no-referrer" style="width:48px; height:38px; object-fit:contain; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:8px; padding:3px; flex-shrink:0;" onerror="this.src='assets/logo.png'">
+                    <input type="text" id="impBrandLogo" class="form-input" placeholder="assets/brands/land-rover.svg or https://..." oninput="syncImporterEdits()">
+                  </div>
                 </div>
                 <div>
                   <label class="form-label">Body Type</label>
@@ -4711,12 +4718,76 @@
     }
     window.initUrlImporter = initUrlImporter;
 
+    const OFFICIAL_BRAND_LOGOS_MAP = {
+      'Maruti Suzuki': 'assets/brands/maruti-suzuki.png',
+      'Hyundai': 'assets/brands/hyundai.png',
+      'Tata': 'assets/brands/tata.png',
+      'Mahindra': 'assets/brands/mahindra.png',
+      'Kia': 'assets/brands/kia.png',
+      'Toyota': 'assets/brands/toyota.png',
+      'MG Motor': 'assets/brands/mg-motor.png',
+      'Honda': 'assets/brands/honda.png',
+      'Skoda': 'assets/brands/skoda.png',
+      'Volkswagen': 'assets/brands/volkswagen.png',
+      'Renault': 'assets/brands/renault.png',
+      'Citroën': 'assets/brands/citroen.png',
+      'Citroen': 'assets/brands/citroen.png',
+      'BYD': 'assets/brands/byd.png',
+      'Nissan': 'assets/brands/nissan.png',
+      'Land Rover': 'assets/brands/land-rover.svg',
+      'Range Rover': 'assets/brands/range-rover.svg',
+      'Maserati': 'assets/brands/maserati.svg',
+      'Mercedes-Benz': 'assets/brands/mercedes-benz.svg',
+      'Mercedes': 'assets/brands/mercedes-benz.svg',
+      'BMW': 'assets/brands/bmw.svg',
+      'Audi': 'assets/brands/audi.svg',
+      'Porsche': 'assets/brands/porsche.svg',
+      'Volvo': 'assets/brands/volvo.svg',
+      'Lexus': 'assets/brands/lexus.svg',
+      'Jeep': 'assets/brands/jeep.svg',
+      'Jaguar': 'assets/brands/jaguar.svg',
+      'Ferrari': 'assets/brands/ferrari.svg',
+      'Lamborghini': 'assets/brands/lamborghini.svg'
+    };
+
+    function resolveImporterBrandLogo(brandName, pageUrl, parsedDoc) {
+      const cleanBrand = (brandName || '').trim();
+      if (OFFICIAL_BRAND_LOGOS_MAP[cleanBrand]) {
+        return OFFICIAL_BRAND_LOGOS_MAP[cleanBrand];
+      }
+      const lowerMatch = Object.keys(OFFICIAL_BRAND_LOGOS_MAP).find(k => k.toLowerCase() === cleanBrand.toLowerCase());
+      if (lowerMatch) return OFFICIAL_BRAND_LOGOS_MAP[lowerMatch];
+
+      // Try extracting brand logo from parsed HTML DOM if available
+      if (parsedDoc) {
+        const logoEl = parsedDoc.querySelector('header img[alt*="logo" i], nav img[alt*="logo" i], img[class*="logo" i], link[rel="apple-touch-icon"]');
+        const rawLogo = logoEl ? (logoEl.getAttribute('src') || logoEl.getAttribute('href')) : '';
+        if (rawLogo && !rawLogo.startsWith('data:')) {
+          try {
+            return new URL(rawLogo, pageUrl).href;
+          } catch (e) {}
+        }
+      }
+
+      // Fallback to high-res Google domain favicon or dynamic SVG emblem
+      try {
+        const u = new URL(pageUrl);
+        const host = u.hostname.replace(/^www\./i, '');
+        if (host) {
+          return 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(host) + '&sz=128';
+        }
+      } catch (e) {}
+
+      return 'assets/brands/land-rover.svg';
+    }
+
     function loadSampleMaseratiIntoImporter(silent) {
       impData = {
         sourceUrl: 'https://www.maserati.com/in/en/models/grancabrio',
         id: 'maserati-grancabrio',
         name: 'Maserati GranCabrio',
         brand: 'Maserati',
+        brandLogo: 'assets/brands/maserati.svg',
         bodyType: 'Luxury',
         priceRange: '₹2.46 - ₹3.10 Cr',
         minPrice: 24600000,
@@ -5102,9 +5173,11 @@
         bodyText += ' ' + fetched.jinaText;
       }
 
+      let parsedHtmlDoc = null;
       if (fetched.htmlText) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(fetched.htmlText, 'text/html');
+        parsedHtmlDoc = doc;
         if (!rawTitle) {
           rawTitle = doc.querySelector('meta[property="og:title"]')?.getAttribute('content') || doc.title || '';
         }
@@ -5146,6 +5219,7 @@
         { match: /lamborghini|urus|revuelto/i, brand: 'Lamborghini' },
         { match: /volvo|xc90|xc60/i, brand: 'Volvo' },
         { match: /lexus/i, brand: 'Lexus' },
+        { match: /jaguar/i, brand: 'Jaguar' },
         { match: /byd|seal|atto/i, brand: 'BYD' },
         { match: /maruti|suzuki|brezza|swift|baleno|ertiga|grand vitara|fronx|jimny/i, brand: 'Maruti Suzuki' },
         { match: /hyundai|creta|venue|verna|alcazar|exter|ioniq/i, brand: 'Hyundai' },
@@ -5172,7 +5246,8 @@
         }
       }
 
-      const isLuxuryBrand = ['Land Rover', 'Maserati', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'Ferrari', 'Lamborghini', 'Volvo', 'Lexus', 'Luxury'].includes(brand);
+      const resolvedBrandLogo = resolveImporterBrandLogo(brand, pageUrl, parsedHtmlDoc);
+      const isLuxuryBrand = ['Land Rover', 'Maserati', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'Ferrari', 'Lamborghini', 'Volvo', 'Lexus', 'Jaguar', 'Luxury'].includes(brand);
 
       const priceMatch = bodyText.match(/(?:₹|Rs\.?|INR)\s*(\d+(?:\.\d+)?)\s*(?:-|to|–)?\s*(\d+(?:\.\d+)?)?\s*(Lakh|Cr|Crore)/i);
       let priceRange = isLuxuryBrand ? '₹2.39 - ₹4.98 Cr' : '₹11.50 - ₹18.90 Lakh';
@@ -5232,6 +5307,7 @@
         id: carId,
         name: finalCarName,
         brand: brand,
+        brandLogo: resolvedBrandLogo,
         bodyType: isLuxuryBrand ? 'Luxury' : 'SUV',
         priceRange: priceRange,
         minPrice: minPrice,
@@ -5293,11 +5369,13 @@
           if (nc.heroImage && (!imgs.length || imgs[0].url !== nc.heroImage)) {
             imgs.unshift({ url: nc.heroImage, caption: (nc.name || 'Car') + ' Hero', category: 'Exterior' });
           }
+          const importedBrand = nc.brand || 'Luxury';
           impData = {
             sourceUrl: parsed.source_url || '',
             id: nc.id || 'custom-car',
             name: nc.name || 'Imported Car',
-            brand: nc.brand || 'Luxury',
+            brand: importedBrand,
+            brandLogo: nc.brandLogo || resolveImporterBrandLogo(importedBrand, parsed.source_url || '', null),
             bodyType: nc.bodyType || 'SUV',
             priceRange: nc.priceRange || '₹10.00 - ₹15.00 Lakh',
             minPrice: nc.minPrice || 1000000,
@@ -5345,6 +5423,9 @@
       setVal('impSourceUrlInput', impData.sourceUrl);
       setVal('impCarName', impData.name);
       setVal('impBrand', impData.brand);
+      setVal('impBrandLogo', impData.brandLogo || resolveImporterBrandLogo(impData.brand, impData.sourceUrl, null));
+      const logoPrev = document.getElementById('impBrandLogoPreview');
+      if (logoPrev) logoPrev.src = impData.brandLogo || resolveImporterBrandLogo(impData.brand, impData.sourceUrl, null);
       setVal('impBodyType', impData.bodyType);
       setVal('impPriceRange', impData.priceRange);
       setVal('impMinPrice', impData.minPrice);
@@ -5371,9 +5452,19 @@
     function syncImporterEdits() {
       if (!impData) return;
       const getVal = id => document.getElementById(id)?.value || '';
+      const prevBrand = impData.brand;
       impData.name = getVal('impCarName');
       impData.id = impData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'custom-car';
       impData.brand = getVal('impBrand');
+      let logoInputVal = getVal('impBrandLogo').trim();
+      if (!logoInputVal || (impData.brand !== prevBrand && OFFICIAL_BRAND_LOGOS_MAP[impData.brand])) {
+        logoInputVal = resolveImporterBrandLogo(impData.brand, impData.sourceUrl, null);
+        const logoIn = document.getElementById('impBrandLogo');
+        if (logoIn) logoIn.value = logoInputVal;
+      }
+      impData.brandLogo = logoInputVal;
+      const logoPrev = document.getElementById('impBrandLogoPreview');
+      if (logoPrev && logoInputVal) logoPrev.src = logoInputVal;
       impData.bodyType = getVal('impBodyType') || 'SUV';
       impData.priceRange = getVal('impPriceRange');
       impData.minPrice = parseInt(getVal('impMinPrice'), 10) || 1000000;
@@ -5691,7 +5782,10 @@
 
             <!-- Right: Car Hero Details & Variants Preview -->
             <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:16px; padding:18px; box-shadow:0 4px 14px rgba(15,23,42,0.05); min-width:0; overflow:hidden;">
-              <div style="font-size:11.5px; font-weight:800; color:#FF5A1F; text-transform:uppercase; letter-spacing:0.5px;">${impData.brand} • ${impData.bodyType}</div>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <img src="${impData.brandLogo || resolveImporterBrandLogo(impData.brand, impData.sourceUrl, null)}" alt="${impData.brand} Logo" referrerpolicy="no-referrer" style="width:36px; height:24px; object-fit:contain; border-radius:4px; background:#F8FAFC; border:1px solid #E2E8F0; padding:2px;" onerror="this.src='assets/logo.png'">
+                <div style="font-size:11.5px; font-weight:800; color:#FF5A1F; text-transform:uppercase; letter-spacing:0.5px;">${impData.brand} • ${impData.bodyType}</div>
+              </div>
               <h2 style="margin:4px 0 8px; font-size:21px; font-weight:900; color:#0F172A; line-height:1.25;">${impData.name}</h2>
               <p style="font-size:12.5px; color:#475569; line-height:1.5; margin-bottom:12px;">${impData.description}</p>
 
@@ -5778,12 +5872,15 @@
       const heroUrl = imgs[0].url;
       const otherImgs = imgs.slice(1).map(g => ({ url: g.url, caption: g.caption || impData.name }));
 
+      const finalBrandLogo = impData.brandLogo || resolveImporterBrandLogo(impData.brand, impData.sourceUrl, null);
       const newCarObj = {
         id: impData.id,
         name: impData.name,
         brand: impData.brand,
+        brandLogo: finalBrandLogo,
         bodyType: impData.bodyType,
         tagline: impData.engineOptions,
+        summary: impData.description,
         heroImage: heroUrl,
         priceRange: impData.priceRange,
         minPrice: impData.minPrice,
@@ -5795,6 +5892,7 @@
         groundClearance: impData.groundClearance,
         bootSpace: impData.bootSpace,
         waitingPeriod: impData.waitingPeriod,
+        launchDate: '2026 Launched',
         launchTag: 'New 2026 Model',
         uspHighlight: impData.engineOptions,
         description: impData.description,
@@ -5853,9 +5951,18 @@
       customCars.unshift(newCarObj);
       localStorage.setItem('cmv_custom_cars', JSON.stringify(customCars));
 
+      try {
+        const customBrandLogos = JSON.parse(localStorage.getItem('cmv_custom_brand_logos') || '{}');
+        if (newCarObj.brand && newCarObj.brandLogo) {
+          customBrandLogos[newCarObj.brand.trim()] = newCarObj.brandLogo;
+          localStorage.setItem('cmv_custom_brand_logos', JSON.stringify(customBrandLogos));
+        }
+      } catch (e) {}
+
       const allCustom = getCustomizations();
       allCustom[newCarObj.id] = Object.assign(allCustom[newCarObj.id] || {}, {
         heroImage: newCarObj.heroImage,
+        brandLogo: newCarObj.brandLogo,
         gallery: newCarObj.gallery,
         variants: newCarObj.variants,
         pros: newCarObj.pros,
@@ -5864,7 +5971,7 @@
       });
       localStorage.setItem('cmv_car_customizations', JSON.stringify(allCustom));
 
-      if (!silent) showToast('➕ Published "' + newCarObj.name + '" (with ' + (newCarObj.colors || []).length + ' colours) to Newly Launched Cars!');
+      if (!silent) showToast('➕ Published "' + newCarObj.name + '" (with Brand Logo & ' + (newCarObj.colors || []).length + ' colours) to Newly Launched Cars!');
     }
     window.publishImporterNewCar = publishImporterNewCar;
 

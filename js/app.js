@@ -13,7 +13,7 @@ window.navigateToCar = function(carId, hash) {
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './carData.js';
 import { ARTICLES, POPULAR_USED_CARS as DEFAULT_POPULAR_USED_CARS } from './newsData.js';
 
-// Official Brand Logos Mapping
+// Official Brand Logos Mapping (Mass-Market + Luxury & Global OEMs)
 export const BRAND_LOGOS = {
   'Maruti Suzuki': 'assets/brands/maruti-suzuki.png',
   'Hyundai': 'assets/brands/hyundai.png',
@@ -27,9 +27,51 @@ export const BRAND_LOGOS = {
   'Volkswagen': 'assets/brands/volkswagen.png',
   'Renault': 'assets/brands/renault.png',
   'Citroën': 'assets/brands/citroen.png',
+  'Citroen': 'assets/brands/citroen.png',
   'BYD': 'assets/brands/byd.png',
-  'Nissan': 'assets/brands/nissan.png'
+  'Nissan': 'assets/brands/nissan.png',
+  'Land Rover': 'assets/brands/land-rover.svg',
+  'Range Rover': 'assets/brands/range-rover.svg',
+  'Maserati': 'assets/brands/maserati.svg',
+  'Mercedes-Benz': 'assets/brands/mercedes-benz.svg',
+  'Mercedes': 'assets/brands/mercedes-benz.svg',
+  'BMW': 'assets/brands/bmw.svg',
+  'Audi': 'assets/brands/audi.svg',
+  'Porsche': 'assets/brands/porsche.svg',
+  'Volvo': 'assets/brands/volvo.svg',
+  'Lexus': 'assets/brands/lexus.svg',
+  'Jeep': 'assets/brands/jeep.svg',
+  'Jaguar': 'assets/brands/jaguar.svg',
+  'Ferrari': 'assets/brands/ferrari.svg',
+  'Lamborghini': 'assets/brands/lamborghini.svg'
 };
+
+export function createBrandFallbackSvg(brandName) {
+  const clean = (brandName || 'OEM').toUpperCase().replace(/[^A-Z0-9 -]/g, '').slice(0, 12);
+  const fontSize = clean.length > 7 ? 20 : 26;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110"><rect x="8" y="14" width="204" height="82" rx="18" fill="#0F172A" stroke="#CBD5E1" stroke-width="4"/><text x="110" y="64" text-anchor="middle" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-weight="900" font-size="${fontSize}" letter-spacing="2">${clean}</text></svg>`;
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+export function resolveBrandLogoUrl(brandName, allCarsList) {
+  const b = brandKey(brandName);
+  try {
+    const customBrandLogos = JSON.parse(localStorage.getItem('cmv_custom_brand_logos') || '{}');
+    if (customBrandLogos[b]) return customBrandLogos[b];
+  } catch (e) {}
+
+  if (Array.isArray(allCarsList)) {
+    const carWithLogo = allCarsList.find(c => brandKey(c.brand) === b && c.brandLogo);
+    if (carWithLogo && carWithLogo.brandLogo) return carWithLogo.brandLogo;
+  }
+
+  if (BRAND_LOGOS[b]) return BRAND_LOGOS[b];
+
+  const lowerMatch = Object.keys(BRAND_LOGOS).find(k => k.toLowerCase() === b.toLowerCase());
+  if (lowerMatch) return BRAND_LOGOS[lowerMatch];
+
+  return createBrandFallbackSvg(b);
+}
 
 // Multi-Facet Filter State
 let filters = {
@@ -67,36 +109,116 @@ const compareDock = document.getElementById('compareDock');
 const globalSearchInput = document.getElementById('globalSearchInput');
 const clearSearchBtn = document.getElementById('clearSearchBtn');
 
-// Initialize Application
+function safeExec(fn, label) {
+  try {
+    fn();
+  } catch (err) {
+    console.error('[CMV Render Warning]', label || fn.name, err);
+  }
+}
+
+// Initialize Application (Fault-Tolerant Per-Section Rendering)
 document.addEventListener('DOMContentLoaded', () => {
-  renderBrandsShelf();
-  renderRecentlyViewed();
-  renderRecommendedShelf();
-  renderTrendingShelf();
-  renderUnder10LShelf();
-  renderAbove10LShelf();
-  renderUpcomingLaunchedShelf();
-  renderFuelTypeShelf();
-  renderTrendingLaunches();
-
-  renderRecentlyViewed();
-  renderRecommendedShelf();
-  renderTrendingShelf();
-  renderUnder10LShelf();
-  renderAbove10LShelf();
-  renderOffersShelf();
-  renderUpcomingLaunchedShelf();
-  renderFuelTypeShelf();
-
-  renderCompareShelf();
-  renderCars();
-  renderPopularUsedCars();
-  renderUsedCarsByCity();
-  renderNewsSection();
-  setupEventListeners();
-  initHeaderScrollSpy();
-  checkDeepLink();
+  safeExec(renderBrandsShelf, 'renderBrandsShelf');
+  safeExec(renderRecentlyViewed, 'renderRecentlyViewed');
+  safeExec(renderRecommendedShelf, 'renderRecommendedShelf');
+  safeExec(renderTrendingShelf, 'renderTrendingShelf');
+  safeExec(renderUnder10LShelf, 'renderUnder10LShelf');
+  safeExec(renderAbove10LShelf, 'renderAbove10LShelf');
+  safeExec(renderOffersShelf, 'renderOffersShelf');
+  safeExec(renderUpcomingLaunchedShelf, 'renderUpcomingLaunchedShelf');
+  safeExec(renderFuelTypeShelf, 'renderFuelTypeShelf');
+  safeExec(renderTrendingLaunches, 'renderTrendingLaunches');
+  safeExec(renderCompareShelf, 'renderCompareShelf');
+  safeExec(renderCars, 'renderCars');
+  safeExec(renderPopularUsedCars, 'renderPopularUsedCars');
+  safeExec(renderUsedCarsByCity, 'renderUsedCarsByCity');
+  safeExec(renderNewsSection, 'renderNewsSection');
+  safeExec(setupEventListeners, 'setupEventListeners');
+  safeExec(initHeaderScrollSpy, 'initHeaderScrollSpy');
+  safeExec(checkDeepLink, 'checkDeepLink');
 });
+
+function normalizeCarRecord(car) {
+  if (!car || typeof car !== 'object') return car;
+  const minP = Number(car.minPrice) || 1000000;
+  const maxP = Number(car.maxPrice) || minP || 1500000;
+  const fuels = Array.isArray(car.fuelTypes) && car.fuelTypes.length > 0
+    ? car.fuelTypes.map(f => String(f || 'Petrol'))
+    : (typeof car.fuelTypes === 'string' && car.fuelTypes.trim() ? car.fuelTypes.split(',').map(s => s.trim()) : ['Petrol']);
+  const summaryText = car.summary || car.description || car.tagline || car.uspHighlight || `${car.name || 'New Car'} official India specifications and on-road price.`;
+  const taglineText = car.tagline || car.uspHighlight || car.description || summaryText;
+  const launchStr = String(car.launchDate || car.launchTag || (car.launchYear ? `${car.launchYear} Launched` : '2026 Launched'));
+  const specsObj = Object.assign({
+    engineOptions: car.engineOptions || '2.0L Turbo Powertrain',
+    transmissions: Array.isArray(car.transmissions) ? car.transmissions.join(', ') : (car.transmissions || 'Automatic'),
+    dimensions: car.dimensions || '4500 mm × 1850 mm × 1630 mm',
+    wheelbase: car.wheelbase || '2700 mm',
+    fuelTank: '60 Litres',
+    seatingCapacity: '5 Passengers'
+  }, car.specs || {});
+
+  const variantsArr = Array.isArray(car.variants) && car.variants.length > 0
+    ? car.variants.map(v => ({
+        ...v,
+        name: v.name || (car.name + ' Standard'),
+        fuel: v.fuel || fuels[0] || 'Petrol',
+        trans: v.trans || v.transmission || 'Automatic',
+        transmission: v.transmission || v.trans || 'Automatic',
+        exShowroom: Number(v.exShowroom || v.price) || minP,
+        mileage: v.mileage || car.mileage || '15.0 kmpl',
+        engine: v.engine || specsObj.engineOptions || '2.0L Turbo',
+        vfmBadge: v.vfmBadge || 'Best Value Pick',
+        keyFeatures: Array.isArray(v.keyFeatures)
+          ? v.keyFeatures
+          : (typeof v.features === 'string' ? v.features.split(',').map(s => s.trim()).filter(Boolean) : ['6 Airbags Standard', 'Touchscreen Infotainment'])
+      }))
+    : [{
+        name: (car.name || 'Car') + ' Standard',
+        fuel: fuels[0] || 'Petrol',
+        trans: 'Automatic',
+        transmission: 'Automatic',
+        exShowroom: minP,
+        isVFM: true,
+        vfmBadge: 'Best Value Pick',
+        mileage: car.mileage || '15.0 kmpl',
+        engine: specsObj.engineOptions,
+        keyFeatures: ['6 Airbags Standard', 'Touchscreen Infotainment', 'Alloy Wheels']
+      }];
+
+  return Object.assign({}, car, {
+    id: car.id || 'custom-car',
+    name: car.name || 'New Car',
+    brand: car.brand || 'Luxury',
+    brandLogo: car.brandLogo || BRAND_LOGOS[brandKey(car.brand)] || '',
+    bodyType: car.bodyType || 'SUV',
+    heroImage: car.heroImage || 'assets/logo.png',
+    minPrice: minP,
+    maxPrice: maxP,
+    priceRange: car.priceRange || `${formatLakh(minP)} – ${formatLakh(maxP)}`,
+    fuelTypes: fuels,
+    launchDate: launchStr,
+    safetyRating: String(car.safetyRating || '5-Star Safety'),
+    groundClearance: String(car.groundClearance || '195 mm'),
+    bootSpace: String(car.bootSpace || '420 Litres'),
+    waitingPeriod: String(car.waitingPeriod || '4 - 6 Weeks'),
+    tagline: String(taglineText),
+    summary: String(summaryText),
+    specs: specsObj,
+    variants: variantsArr,
+    colors: Array.isArray(car.colors) ? car.colors.map(col => ({
+      ...col,
+      name: col.name || 'Official Finish',
+      hex: col.hex || '#1E293B',
+      image: col.image || col.url || car.heroImage || 'assets/logo.png'
+    })) : [],
+    gallery: Array.isArray(car.gallery) ? car.gallery.map(g => ({
+      ...g,
+      url: g.url || g.image || car.heroImage || 'assets/logo.png',
+      title: g.title || g.caption || car.name || 'Photo'
+    })) : []
+  });
+}
 
 // Helper to retrieve both built-in dataset and locally added custom cars with visibility filters
 function getAllCars() {
@@ -107,21 +229,23 @@ function getAllCars() {
     const customizations = JSON.parse(localStorage.getItem('cmv_car_customizations') || '{}');
     const customIds = new Set(custom.map(c => c.id));
     const base = CARS.filter(c => !customIds.has(c.id));
-    const all = [...custom, ...base].map(car => {
+    const all = [...custom, ...base].map(rawCar => {
+      const car = normalizeCarRecord(rawCar);
       const ov = customizations[car.id];
       if (!ov) return car;
-      return Object.assign({}, car, {
+      return normalizeCarRecord(Object.assign({}, car, {
         heroImage: ov.heroImage || car.heroImage,
         gallery: ov.gallery || car.gallery,
         variants: ov.variants || car.variants,
         colors: ov.colors || car.colors,
         pros: ov.pros || car.pros,
-        cons: ov.cons || car.cons
-      });
+        cons: ov.cons || car.cons,
+        brandLogo: ov.brandLogo || car.brandLogo
+      }));
     });
     return all.filter(c => !hiddenCars.has(c.id) && !hiddenBrands.has(c.brand));
   } catch (e) {
-    return CARS;
+    return CARS.map(normalizeCarRecord);
   }
 }
 
@@ -153,18 +277,20 @@ function renderBrandsShelf() {
   const container = document.getElementById('brandsShelfContainer');
   if (!container) return;
 
-  const BRAND_ORDER = ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD'];
-  const uniqueBrands = [...new Set(getAllCars().map(c => brandKey(c.brand)))].sort((a, b) => {
+  const allCarsList = getAllCars();
+  const BRAND_ORDER = ['Hyundai','Tata','Maruti Suzuki','Mahindra','Toyota','Kia','Skoda','MG Motor','Renault','Honda','Volkswagen','Citroën','Nissan','BYD','Land Rover','Maserati','Mercedes-Benz','BMW','Audi','Porsche','Volvo','Lexus','Jeep'];
+  const uniqueBrands = [...new Set(allCarsList.map(c => brandKey(c.brand)))].filter(Boolean).sort((a, b) => {
     const ia = BRAND_ORDER.indexOf(a), ib = BRAND_ORDER.indexOf(b);
     return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
   });
 
   container.innerHTML = uniqueBrands.map(b => {
-    const logoUrl = BRAND_LOGOS[b] || `assets/brands/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
+    const logoUrl = resolveBrandLogoUrl(b, allCarsList);
+    const fallbackSvgUri = createBrandFallbackSvg(b).replace(/'/g, "\\'");
     const isActive = filters.brand === b;
     return `
       <button class="brand-pill-card ${isActive ? 'active' : ''}" onclick="window.selectBrand('${b.replace(/'/g, "\\'")}')" title="${b}">
-        <img src="${logoUrl}" alt="${b} Logo" class="brand-pill-logo" onerror="this.src='assets/logo.png'">
+        <img src="${logoUrl}" alt="${b} Logo" class="brand-pill-logo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackSvgUri}'">
         <div class="brand-pill-name">${b}</div>
       </button>
     `;
@@ -225,7 +351,13 @@ function renderTrendingLaunches() {
   if (!container) return;
 
   const allCars = getAllCars();
+  let customIds = [];
+  try {
+    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
+  } catch (e) {}
+
   const trendingIds = [
+    ...customIds,
     'nissan-magnite',
     'tata-curvv',
     'thar-roxx',
@@ -238,9 +370,14 @@ function renderTrendingLaunches() {
   ];
 
   const trendingCars = [];
+  const seenIds = new Set();
   trendingIds.forEach(id => {
+    if (seenIds.has(id)) return;
     const found = allCars.find(c => c.id === id);
-    if (found) trendingCars.push(found);
+    if (found) {
+      seenIds.add(id);
+      trendingCars.push(found);
+    }
   });
 
   const displayList = trendingCars.length >= 4 ? trendingCars : allCars.slice(0, 8);
@@ -254,11 +391,11 @@ function renderTrendingLaunches() {
             <span class="trending-hot-badge">🔥 JUST LAUNCHED</span>
             <span class="trending-safety-badge">${formatSafetyBadge(car.safetyRating)}</span>
           </div>
-          <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy">
+          <img src="${car.heroImage}" alt="${car.name}" class="trending-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
         </div>
         <div class="trending-card-body">
           <span class="trending-brand">${car.brand} • ${car.bodyType}</span>
-          <h3 class="trending-title"><a href="/cars/${car.id}" class="car-seo-title-link">${car.name}</a></h3>
+          <h3 class="trending-title"><a href="javascript:void(0)" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" class="car-seo-title-link">${car.name}</a></h3>
           <div class="trending-specs-mini">
             <span>⛽ ${(car.fuelTypes || []).join('/')}</span>
             <span>•</span>
@@ -488,7 +625,7 @@ function renderCars() {
             <span class="card-badge badge-launch">${formatLaunchBadge(car.launchDate)}</span>
             <span class="card-badge badge-safety">${formatSafetyBadge(car.safetyRating)}</span>
           </div>
-          <img src="${car.heroImage}" alt="${car.name}" class="card-img" loading="lazy">
+          <img src="${car.heroImage}" alt="${car.name}" class="card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
         </div>
 
         <div class="card-body">
@@ -498,7 +635,7 @@ function renderCars() {
               ${compareList.includes(car.id) ? '✓ Compare' : '⚖️ Compare'}
             </button>
           </div>
-          <h3 class="card-title"><a href="/cars/${car.id}" class="car-seo-title-link">${car.name}</a></h3>
+          <h3 class="card-title"><a href="javascript:void(0)" onclick="event.stopPropagation(); window.navigateToCar('${car.id}')" class="car-seo-title-link">${car.name}</a></h3>
           <p class="card-tagline">${car.tagline}</p>
 
           <div class="card-specs-row">
@@ -2625,7 +2762,7 @@ function createShelfCarCard(car) {
   return `
     <article class="shelf-car-card" onclick="window.navigateToCar('${car.id}')" title="${car.name}">
       <div class="shelf-car-media">
-        <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy">
+        <img src="${car.heroImage}" alt="${car.name}" class="shelf-car-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
       </div>
       <h4 class="shelf-car-name">${car.name}</h4>
       <div class="shelf-car-price">${priceDisplay}</div>
@@ -2676,7 +2813,12 @@ function renderRecommendedShelf() {
   const container = document.getElementById('recommendedShelf');
   if (!container) return;
 
-  const recIds = ['tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx', 'maruti-brezza', 'mg-windsor-ev', 'tata-punch', 'nissan-magnite'];
+  let customIds = [];
+  try {
+    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
+  } catch (e) {}
+
+  const recIds = [...new Set([...customIds, 'tata-curvv', 'hyundai-creta', 'skoda-kylaq', 'mahindra-thar-roxx', 'maruti-brezza', 'mg-windsor-ev', 'tata-punch', 'nissan-magnite'])];
   const all = getAllCars();
   const matched = recIds.map(id => all.find(c => c.id === id)).filter(Boolean);
 
@@ -2690,7 +2832,12 @@ function renderTrendingShelf() {
   const container = document.getElementById('trendingShelfContainer');
   if (!container) return;
 
-  const trendIds = ['skoda-kylaq', 'tata-curvv', 'mahindra-thar-roxx', 'nissan-magnite', 'hyundai-alcazar', 'tata-nexon', 'mg-windsor-ev', 'kia-ev9'];
+  let customIds = [];
+  try {
+    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
+  } catch (e) {}
+
+  const trendIds = [...new Set([...customIds, 'skoda-kylaq', 'tata-curvv', 'mahindra-thar-roxx', 'nissan-magnite', 'hyundai-alcazar', 'tata-nexon', 'mg-windsor-ev', 'kia-ev9'])];
   const all = getAllCars();
   const matched = trendIds.map(id => all.find(c => c.id === id)).filter(Boolean);
 
@@ -2881,9 +3028,15 @@ function renderUpcomingLaunchedShelf() {
   let matched = [];
 
   if (currentUpcomingTab === 'upcoming') {
-    matched = all.filter(c => c.launchDate.includes('2025') || c.launchDate.includes('2026') || c.launchDate.includes('Upcoming'));
+    matched = all.filter(c => {
+      const ld = String(c.launchDate || '');
+      return ld.includes('2025') || ld.includes('2026') || ld.includes('Upcoming');
+    });
   } else {
-    matched = all.filter(c => c.launchDate.includes('2024') || c.launchDate.includes('Facelift') || c.launchDate.includes('Launched'));
+    matched = all.filter(c => {
+      const ld = String(c.launchDate || '');
+      return ld.includes('2024') || ld.includes('Facelift') || ld.includes('Launched');
+    });
   }
 
   let html = matched.slice(0, 10).map(car => createShelfCarCard(car)).join('');
@@ -2910,13 +3063,13 @@ function renderFuelTypeShelf() {
   let label = 'Electric';
 
   if (currentFuelTab === 'ev') {
-    matched = all.filter(c => c.fuelTypes.includes('EV'));
+    matched = all.filter(c => Array.isArray(c.fuelTypes) && c.fuelTypes.includes('EV'));
     label = 'Electric';
   } else if (currentFuelTab === 'hybrid') {
-    matched = all.filter(c => c.fuelTypes.includes('Hybrid') || (c.tagline && c.tagline.toLowerCase().includes('hybrid')));
+    matched = all.filter(c => (Array.isArray(c.fuelTypes) && c.fuelTypes.includes('Hybrid')) || (c.tagline && c.tagline.toLowerCase().includes('hybrid')));
     label = 'Hybrid';
   } else if (currentFuelTab === 'cng') {
-    matched = all.filter(c => c.fuelTypes.includes('CNG'));
+    matched = all.filter(c => Array.isArray(c.fuelTypes) && c.fuelTypes.includes('CNG'));
     label = 'CNG';
   }
 
@@ -2936,9 +3089,9 @@ window.switchFuelTab = function(fuelKey, btn) {
   renderFuelTypeShelf();
 };
 
-// Override navigateToCar to track recently viewed cars in localStorage
+// Override navigateToCar to track recently viewed cars in localStorage & handle custom cars gracefully
 const originalNavigateToCar = window.navigateToCar;
-window.navigateToCar = function(carId) {
+window.navigateToCar = function(carId, hash) {
   try {
     let viewed = JSON.parse(localStorage.getItem('cmv_recently_viewed') || '[]');
     viewed = viewed.filter(id => id !== carId);
@@ -2946,7 +3099,11 @@ window.navigateToCar = function(carId) {
     if (viewed.length > 12) viewed = viewed.slice(0, 12);
     localStorage.setItem('cmv_recently_viewed', JSON.stringify(viewed));
   } catch(e) {}
-  window.location.href = `/cars/${carId}.html`;
+  if (typeof originalNavigateToCar === 'function') {
+    originalNavigateToCar(carId, hash);
+  } else {
+    window.location.href = `/cars/${carId}.html`;
+  }
 };
 
 
