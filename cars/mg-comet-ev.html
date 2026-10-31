@@ -165,42 +165,6 @@
   <link rel="stylesheet" href="/css/style.css">
 
   <style>
-    .back-nav-container {
-      max-width: 1180px;
-      margin: 16px auto 4px;
-      padding: 0 20px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: left;
-    }
-    .back-arrow-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      color: #0F172A;
-      background: transparent;
-      border: none;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      border-radius: 50%;
-    }
-    .back-arrow-icon:hover {
-      color: var(--primary, #E15B2D);
-      background: rgba(225, 91, 45, 0.08);
-      transform: translateX(-3px);
-    }
-    .back-arrow-icon svg {
-      transition: transform 0.2s ease;
-    }
-    .back-arrow-icon:hover svg {
-      transform: translateX(-2px);
-    }
     .car-hero-wrap {
       background: #FFFFFF;
       border: 1px solid var(--border);
@@ -911,16 +875,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Back Arrow Navigation (Icon Only, Left-Aligned) -->
-  <div class="back-nav-container">
-    <a href="javascript:void(0)" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = '/cars.html'; }" class="back-arrow-icon" aria-label="Go Back" title="Go Back">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-      </svg>
-    </a>
-  </div>
 
   <main class="page-container" style="max-width: 1180px; margin: 0 auto; padding: 16px 20px 60px;">
 

@@ -5786,50 +5786,6 @@ h1, h2, h3, .brand-font {
   margin-top: 10px !important;
 }
 
-/* ==========================================================================
-   BACK ARROW NAVIGATION (MINIMALIST ICON ONLY, LEFT-ALIGNED)
-   ========================================================================== */
-.back-nav-container {
-  max-width: 1180px;
-  margin: 16px auto 4px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-}
-
-.back-arrow-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  color: #0F172A;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-}
-
-.back-arrow-icon:hover {
-  color: var(--primary, #E15B2D);
-  background: rgba(225, 91, 45, 0.08);
-  transform: translateX(-3px);
-}
-
-.back-arrow-icon svg {
-  transition: transform 0.2s ease;
-}
-
-.back-arrow-icon:hover svg {
-  transform: translateX(-2px);
-}
-
 
 .btn-price-breakup {
   width: 100% !important;
@@ -5972,49 +5928,5 @@ h1, h2, h3, .brand-font {
   display: block !important;
   grid-template-columns: 1fr !important;
   margin-top: 10px !important;
-}
-
-/* ==========================================================================
-   BACK ARROW NAVIGATION (MINIMALIST ICON ONLY, LEFT-ALIGNED)
-   ========================================================================== */
-.back-nav-container {
-  max-width: 1180px;
-  margin: 16px auto 4px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-}
-
-.back-arrow-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  color: #0F172A;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-}
-
-.back-arrow-icon:hover {
-  color: var(--primary, #E15B2D);
-  background: rgba(225, 91, 45, 0.08);
-  transform: translateX(-3px);
-}
-
-.back-arrow-icon svg {
-  transition: transform 0.2s ease;
-}
-
-.back-arrow-icon:hover svg {
-  transform: translateX(-2px);
 }
 
