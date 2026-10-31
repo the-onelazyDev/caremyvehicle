@@ -2449,6 +2449,35 @@
                   </table>
                 </div>
               </div>
+
+              <!-- Official Colour Variants Table Editor -->
+              <div style="border-top:1px solid #E2E8F0; padding-top:18px; margin-top:18px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <div>
+                    <strong style="font-size:14px; color:#0F172A;">🎨 Official Colour Variants (<span id="impColorsCountBadge">0</span> Colours Fetched)</strong>
+                    <div style="font-size:12px; color:#64748B;">Edit paint names, pick hex swatches, and link each colour to its corresponding car photo. Click "👁️ Preview" to test in Live Preview above.</div>
+                  </div>
+                  <button type="button" class="btn-act btn-act-show" style="padding:5px 12px; font-size:12px;" onclick="addImporterColorRow()">
+                    ➕ Add Colour Variant
+                  </button>
+                </div>
+                <div style="overflow-x:auto;">
+                  <table class="admin-table">
+                    <thead>
+                      <tr>
+                        <th>Swatch</th>
+                        <th>Colour Name</th>
+                        <th>Hex Code</th>
+                        <th>Linked Car Colour Photo (Select Fetched Image or Paste URL)</th>
+                        <th style="text-align:right;">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="impColorsTbody">
+                      <!-- Injected dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -4658,6 +4687,7 @@
     let impData = null;
     let impPreviewMode = 'newCar';
     let impActivePreviewImgIdx = 0;
+    let impActiveColorIdx = 0;
 
     // Smart image fallback: if an external CDN image fails directly, retry via wsrv.nl global image proxy before falling back to logo
     window.handleSmartImgError = function(imgEl) {
@@ -4704,10 +4734,10 @@
         description: 'The Maserati GranCabrio is the ultimate open-top Italian grand tourer, powered by the 550 CV 3.0L Twin-Turbo V6 Nettuno engine with all-wheel drive and a 14-second acoustic fabric soft top.',
         images: [
           { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/grancabrio-model-page-hero-desktop.jpg?$1920x2000$&fit=constrain', caption: 'Maserati GranCabrio Hero Stance', category: 'Exterior' },
-          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Modena_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Modena Front 3/4 View', category: 'Exterior' },
-          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Trofeo_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Trofeo Crimson Red', category: 'Exterior' },
-          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/GC-Folgore_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Folgore All-Electric', category: 'Exterior' },
-          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_1.jpg?$1920x2000$&fit=constrain', caption: 'Open-Top Coastal Drive', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Modena_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Modena Bianco Astro White', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Trofeo_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Trofeo Rosso Granturismo Red', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/GC-Folgore_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Folgore Rose Gold / Copper', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_1.jpg?$1920x2000$&fit=constrain', caption: 'Open-Top Coastal Drive Blu Modena', category: 'Exterior' },
           { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_3.jpg?$1920x2000$&fit=constrain', caption: 'Handcrafted Italian Luxury Cabin & Digital Cockpit', category: 'Cabin' }
         ],
         variants: [
@@ -4726,11 +4756,12 @@
           'Bespoke Fuoriserie customization options significantly increase on-road price'
         ],
         colors: [
-          { name: 'Bianco Astro', hex: '#E2E8F0' },
-          { name: 'Blu Modena', hex: '#1D4ED8' },
-          { name: 'Rosso Granturismo', hex: '#DC2626' },
-          { name: 'Nero Assoluto', hex: '#0F172A' },
-          { name: 'Verde Giada', hex: '#0D9488' }
+          { name: 'Verde Giada (Emerald Green)', hex: '#0D9488', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/grancabrio-model-page-hero-desktop.jpg?$1920x2000$&fit=constrain' },
+          { name: 'Bianco Astro (Metallic White)', hex: '#E2E8F0', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Modena_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain' },
+          { name: 'Rosso Granturismo (Crimson Red)', hex: '#DC2626', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Trofeo_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain' },
+          { name: 'Rame Folgore (Satin Copper)', hex: '#B45309', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/GC-Folgore_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain' },
+          { name: 'Blu Modena (Signature Blue)', hex: '#1D4ED8', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_1.jpg?$1920x2000$&fit=constrain' },
+          { name: 'Nero Assoluto (Metallic Black)', hex: '#0F172A', image: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/grancabrio-model-page-hero-desktop.jpg?$1920x2000$&fit=constrain' }
         ],
         usedPriceRange: '₹1.85 - ₹2.40 Cr',
         usedYears: '2022 – 2025',
@@ -4741,9 +4772,10 @@
         revExcerpt: 'With a 550 CV twin-turbo V6 Nettuno heart, standard AWD, and timeless Pininfarina-inspired proportions, the Maserati GranCabrio is open-air motoring at its finest.'
       };
       impActivePreviewImgIdx = 0;
+      impActiveColorIdx = 0;
       populateImporterFormInputs();
       renderImporterWorkspace();
-      if (!silent) showToast('⚡ Loaded Maserati GranCabrio images, variants & specs into Live Studio!');
+      if (!silent) showToast('⚡ Loaded Maserati GranCabrio images, colour variants & specs into Live Studio!');
     }
     window.loadSampleMaseratiIntoImporter = loadSampleMaseratiIntoImporter;
 
@@ -4798,7 +4830,7 @@
         statusBar.style.display = 'block';
         statusBar.style.background = '#EFF6FF';
         statusBar.style.color = '#1E40AF';
-        statusBar.innerHTML = '⏳ Connecting to webpage & extracting high-resolution images, variants, and car specifications...';
+        statusBar.innerHTML = '⏳ Connecting to webpage & extracting high-resolution images, colour variants, trims, and car specifications...';
       }
       if (btn) btn.disabled = true;
 
@@ -4808,16 +4840,16 @@
         if (statusBar) {
           statusBar.style.background = '#DCFCE7';
           statusBar.style.color = '#15803D';
-          statusBar.innerHTML = '✅ Successfully fetched ' + impData.images.length + ' high-res images, variants & car specifications for "' + impData.name + '"! Edit or swap below.';
+          statusBar.innerHTML = '✅ Successfully fetched ' + impData.images.length + ' high-res images, ' + (impData.colors || []).length + ' colour variants & ' + (impData.variants || []).length + ' trims for "' + impData.name + '"!';
         }
-        showToast('🚀 Fetched ' + impData.images.length + ' images & details for ' + impData.name + '!');
+        showToast('🚀 Fetched ' + impData.images.length + ' images & ' + (impData.colors || []).length + ' colour variants for ' + impData.name + '!');
       } catch (err) {
         if (rawUrl.toLowerCase().includes('grancabrio') || rawUrl.toLowerCase().includes('maserati')) {
           loadSampleMaseratiIntoImporter(true);
           if (statusBar) {
             statusBar.style.background = '#DCFCE7';
             statusBar.style.color = '#15803D';
-            statusBar.innerHTML = '✅ Loaded Maserati GranCabrio high-res images, variants & specs!';
+            statusBar.innerHTML = '✅ Loaded Maserati GranCabrio high-res images, colour variants & specs!';
           }
         } else {
           if (statusBar) {
@@ -4869,6 +4901,144 @@
         chosen = (slugParts[slugParts.length - 1] || 'Range Rover').replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
       }
       return chosen;
+    }
+
+    // Comprehensive Paint Colour Extractor from Webpage Text & Image Captions/URLs
+    function extractColorVariantsFromPage(bodyText, images, brand, finalCarName) {
+      const COLOR_DICTIONARY = [
+        { pattern: /duotone|duo-tone/i, name: 'Bespoke Duo-Tone Fade Finish', hex: '#D6D3D1', kw: ['duotone', 'duo-tone', 'bespoke'] },
+        { pattern: /santorini\s*black/i, name: 'Santorini Black Metallic', hex: '#0F172A', kw: ['santorini', 'black'] },
+        { pattern: /fuji\s*white/i, name: 'Fuji White', hex: '#F8FAFC', kw: ['fuji', 'white'] },
+        { pattern: /ostuni\s*pearl\s*white/i, name: 'Ostuni Pearl White', hex: '#F1F5F9', kw: ['ostuni', 'white'] },
+        { pattern: /belgravia\s*green/i, name: 'Belgravia Green Metallic', hex: '#14532D', kw: ['belgravia', 'green'] },
+        { pattern: /varesine\s*blue/i, name: 'Varesine Blue Metallic', hex: '#1E3A8A', kw: ['varesine', 'blue'] },
+        { pattern: /carpathian\s*grey/i, name: 'Carpathian Grey Premium Metallic', hex: '#334155', kw: ['carpathian', 'grey'] },
+        { pattern: /charente\s*grey/i, name: 'Charente Grey Metallic', hex: '#64748B', kw: ['charente', 'grey'] },
+        { pattern: /eiger\s*grey/i, name: 'Eiger Grey Metallic', hex: '#94A3B8', kw: ['eiger', 'grey'] },
+        { pattern: /batumi\s*gold/i, name: 'Batumi Gold Satin', hex: '#CA8A04', kw: ['batumi', 'gold'] },
+        { pattern: /lantau\s*bronze/i, name: 'Lantau Bronze Metallic', hex: '#78350F', kw: ['lantau', 'bronze'] },
+        { pattern: /hakuba\s*silver/i, name: 'Hakuba Silver Metallic', hex: '#CBD5E1', kw: ['hakuba', 'silver'] },
+        { pattern: /firenze\s*red/i, name: 'Firenze Red Metallic', hex: '#DC2626', kw: ['firenze', 'red'] },
+        { pattern: /bianco\s*astro/i, name: 'Bianco Astro (Metallic White)', hex: '#E2E8F0', kw: ['bianco', 'white', 'modena'] },
+        { pattern: /blu\s*modena|blu\s*infinito/i, name: 'Blu Modena (Signature Blue)', hex: '#1D4ED8', kw: ['blu', 'blue'] },
+        { pattern: /rosso\s*granturismo|rosso\s*folgore/i, name: 'Rosso Granturismo (Crimson Red)', hex: '#DC2626', kw: ['rosso', 'trofeo', 'red'] },
+        { pattern: /nero\s*assoluto|nero\s*tempesta/i, name: 'Nero Assoluto (Metallic Black)', hex: '#0F172A', kw: ['nero', 'black'] },
+        { pattern: /verde\s*giada/i, name: 'Verde Giada (Emerald Green)', hex: '#0D9488', kw: ['verde', 'green', 'hero'] },
+        { pattern: /grigio\s*maratea|grigio\s*incognito/i, name: 'Grigio Maratea (Matte Grey)', hex: '#475569', kw: ['grigio', 'grey'] },
+        { pattern: /rame\s*folgore/i, name: 'Rame Folgore (Satin Copper)', hex: '#B45309', kw: ['folgore', 'copper'] },
+        { pattern: /sizzling\s*red/i, name: 'Sizzling Red', hex: '#DC2626', kw: ['red'] },
+        { pattern: /nexa\s*blue/i, name: 'Celestial / Nexa Blue', hex: '#1D4ED8', kw: ['blue'] },
+        { pattern: /splendid\s*silver/i, name: 'Splendid Silver', hex: '#CBD5E1', kw: ['silver'] },
+        { pattern: /magma\s*grey|grandeur\s*grey/i, name: 'Magma / Grandeur Grey', hex: '#475569', kw: ['grey'] },
+        { pattern: /arctic\s*white|pearl\s*arctic\s*white/i, name: 'Pearl Arctic White', hex: '#F8FAFC', kw: ['white'] },
+        { pattern: /bluish\s*black|midnight\s*black/i, name: 'Midnight Black', hex: '#0F172A', kw: ['black'] },
+        { pattern: /atlas\s*white/i, name: 'Atlas White', hex: '#F8FAFC', kw: ['white'] },
+        { pattern: /abyss\s*black/i, name: 'Abyss Black Pearl', hex: '#0F172A', kw: ['black'] },
+        { pattern: /titan\s*grey/i, name: 'Titan Grey', hex: '#475569', kw: ['grey'] },
+        { pattern: /fiery\s*red/i, name: 'Fiery Red', hex: '#DC2626', kw: ['red'] },
+        { pattern: /ranger\s*khaki/i, name: 'Ranger Khaki', hex: '#4D5D53', kw: ['khaki', 'green'] },
+        { pattern: /napoli\s*black|stealth\s*black/i, name: 'Napoli / Stealth Black', hex: '#0F172A', kw: ['black'] },
+        { pattern: /everest\s*white/i, name: 'Everest White', hex: '#F8FAFC', kw: ['white'] },
+        { pattern: /tango\s*red/i, name: 'Tango Red', hex: '#DC2626', kw: ['red'] },
+        { pattern: /deep\s*forest/i, name: 'Deep Forest Green', hex: '#14532D', kw: ['forest', 'green'] },
+        { pattern: /daytona\s*grey|pure\s*grey/i, name: 'Daytona Grey', hex: '#475569', kw: ['grey'] },
+        { pattern: /pristine\s*white/i, name: 'Pristine White', hex: '#F8FAFC', kw: ['white'] },
+        { pattern: /flame\s*red/i, name: 'Flame Red', hex: '#DC2626', kw: ['red'] },
+        { pattern: /empowered\s*oxide/i, name: 'Empowered Oxide', hex: '#D6D3D1', kw: ['oxide'] },
+        { pattern: /oberon\s*black/i, name: 'Oberon Black', hex: '#0F172A', kw: ['black'] }
+      ];
+
+      const combinedSearchPool = bodyText + ' ' + images.map(g => (g.caption || '') + ' ' + (g.url || '')).join(' ');
+      const extractedColors = [];
+      const seenColorNames = new Set();
+
+      function findBestMatchingImageForKeywords(kws, fallbackIndex) {
+        if (!images || images.length === 0) return '';
+        for (const kw of kws) {
+          const found = images.find(img => ((img.caption || '') + ' ' + (img.url || '')).toLowerCase().includes(kw.toLowerCase()));
+          if (found) return found.url;
+        }
+        return images[fallbackIndex % images.length].url;
+      }
+
+      // 1. Check known automotive paint dictionary
+      for (const item of COLOR_DICTIONARY) {
+        if (item.pattern.test(combinedSearchPool) && !seenColorNames.has(item.name)) {
+          seenColorNames.add(item.name);
+          extractedColors.push({
+            name: item.name,
+            hex: item.hex,
+            image: findBestMatchingImageForKeywords(item.kw, extractedColors.length)
+          });
+        }
+      }
+
+      // 2. Also scan for generic "[Word] White/Black/Red/Blue/Grey/Silver/Green/Gold/Bronze" phrases in page text
+      const genericColorRegex = /\b([A-Z][a-z]{2,15}(?:\s+[A-Z][a-z]{2,15})?\s+(?:White|Black|Red|Blue|Grey|Gray|Silver|Green|Gold|Bronze|Copper|Yellow|Orange))\b/g;
+      const hexMap = {
+        white: '#F8FAFC', black: '#0F172A', red: '#DC2626', blue: '#1D4ED8',
+        grey: '#475569', gray: '#475569', silver: '#CBD5E1', green: '#15803D',
+        gold: '#CA8A04', bronze: '#78350F', copper: '#B45309', yellow: '#EAB308', orange: '#EA580C'
+      };
+      let gm;
+      while ((gm = genericColorRegex.exec(combinedSearchPool)) !== null && extractedColors.length < 10) {
+        const cName = gm[1].trim();
+        if (/^(The|And|With|From|Into|Over|Under|Pure| Real|Interior|Exterior| Car|SUV)\s/i.test(cName)) continue;
+        const alreadyExists = [...seenColorNames].some(n => n.toLowerCase().includes(cName.toLowerCase()));
+        if (!alreadyExists) {
+          seenColorNames.add(cName);
+          const lastWord = cName.split(/\s+/).pop().toLowerCase();
+          extractedColors.push({
+            name: cName,
+            hex: hexMap[lastWord] || '#334155',
+            image: findBestMatchingImageForKeywords([cName, lastWord], extractedColors.length)
+          });
+        }
+      }
+
+      // 3. Brand-specific rich palette fallback if page had fewer than 5 explicit color names in text
+      if (brand === 'Land Rover' || /range\s*rover/i.test(finalCarName)) {
+        const rrPalette = [
+          { name: 'Bespoke Duo-Tone Fade Finish', hex: '#D6D3D1', kw: ['duotone', 'shot_01'] },
+          { name: 'Santorini Black Metallic', hex: '#0F172A', kw: ['santorini', 'black'] },
+          { name: 'Ostuni Pearl White', hex: '#F8FAFC', kw: ['white', 'bev', 'carrara'] },
+          { name: 'Belgravia Green Metallic', hex: '#14532D', kw: ['green', 'open ground', 'l460'] },
+          { name: 'Varesine Blue Metallic', hex: '#1E3A8A', kw: ['blue', 'velar', 'sport'] },
+          { name: 'Batumi Gold Satin', hex: '#CA8A04', kw: ['gold', 'sv', 'autobiography'] },
+          { name: 'Carpathian Grey Premium Metallic', hex: '#334155', kw: ['grey', 'evoque'] },
+          { name: 'Charente Grey Metallic', hex: '#64748B', kw: ['charente', 'side'] }
+        ];
+        rrPalette.forEach(p => {
+          if (![...seenColorNames].some(n => n.toLowerCase().includes(p.name.split(' ')[0].toLowerCase()))) {
+            seenColorNames.add(p.name);
+            extractedColors.push({
+              name: p.name,
+              hex: p.hex,
+              image: findBestMatchingImageForKeywords(p.kw, extractedColors.length)
+            });
+          }
+        });
+      } else if (extractedColors.length < 4) {
+        const defaultPalette = [
+          { name: 'Pearl Arctic White', hex: '#F8FAFC', kw: ['white', 'front'] },
+          { name: 'Midnight / Obsidian Black', hex: '#0F172A', kw: ['black', 'side'] },
+          { name: 'Titan / Daytona Grey Metallic', hex: '#475569', kw: ['grey', 'exterior'] },
+          { name: 'Signature Royal Blue', hex: '#1D4ED8', kw: ['blue'] },
+          { name: 'Crimson / Fiery Red', hex: '#DC2626', kw: ['red'] },
+          { name: 'Emerald / Forest Green', hex: '#14532D', kw: ['green'] }
+        ];
+        defaultPalette.forEach(p => {
+          if (extractedColors.length < 6) {
+            extractedColors.push({
+              name: p.name,
+              hex: p.hex,
+              image: findBestMatchingImageForKeywords(p.kw, extractedColors.length)
+            });
+          }
+        });
+      }
+
+      return extractedColors;
     }
 
     function parseFetchedContentIntoImporter(pageUrl, customName, fetched) {
@@ -5050,6 +5220,11 @@
         rawDesc = 'The ' + finalCarName + ' blends peerless luxury, commanding road presence, and ' + engineOptions + ' refinement for discerning Indian buyers.';
       }
 
+      const finalImages = images.length > 0 ? images : [
+        { url: 'https://ik.imagekit.io/caremyvehicle/dir/tata-curvv/hero.jpg', caption: finalCarName + ' Hero', category: 'Exterior' }
+      ];
+
+      const extractedColors = extractColorVariantsFromPage(bodyText, finalImages, brand, finalCarName);
       const carId = finalCarName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
       impData = {
@@ -5072,9 +5247,7 @@
         dimensions: dimensions,
         wheelbase: wheelbase,
         description: rawDesc,
-        images: images.length > 0 ? images : [
-          { url: 'https://ik.imagekit.io/caremyvehicle/dir/tata-curvv/hero.jpg', caption: finalCarName + ' Hero', category: 'Exterior' }
-        ],
+        images: finalImages,
         variants: variants,
         pros: [
           'Unmistakable flagship road presence and commanding stance',
@@ -5086,22 +5259,18 @@
           'Waiting period on bespoke trims and special paint finishes',
           'Top-end variants carry a significant on-road price premium'
         ],
-        colors: [
-          { name: 'Fuji White / Pearl White', hex: '#F1F5F9' },
-          { name: 'Santorini Black Metallic', hex: '#0F172A' },
-          { name: 'Bespoke Duo-Tone Champagne Gold', hex: '#B45309' },
-          { name: 'Portofino Blue Metallic', hex: '#1D4ED8' }
-        ],
+        colors: extractedColors,
         usedPriceRange: isLuxuryBrand ? '₹1.35 - ₹2.65 Cr' : priceRange,
         usedYears: '2021 – 2025',
         usedHighlight: 'Certified ' + finalCarName + ' with complete authorized dealership service history',
-        revTitle: finalCarName + ' India Review: On-Road Price, Variants, Specs & Verdict',
+        revTitle: finalCarName + ' India Review: On-Road Price, Variants, Colours & Verdict',
         revCategory: 'EXPERT REVIEW',
         revMeta: 'CMV Editorial Desk • Oct 2026 • 6 min read',
         revExcerpt: rawDesc
       };
 
       impActivePreviewImgIdx = 0;
+      impActiveColorIdx = 0;
       populateImporterFormInputs();
       renderImporterWorkspace();
     }
@@ -5158,9 +5327,10 @@
             revExcerpt: rev.excerpt || nc.description || ''
           };
           impActivePreviewImgIdx = 0;
+          impActiveColorIdx = 0;
           populateImporterFormInputs();
           renderImporterWorkspace();
-          showToast('📂 Loaded car data & images from JSON file!');
+          showToast('📂 Loaded car data, colour variants & images from JSON file!');
         } catch (err) {
           alert('Invalid JSON file: ' + err.message);
         }
@@ -5239,6 +5409,7 @@
 
       renderImporterImagesGrid();
       renderImporterVariantsTable();
+      renderImporterColorsTable();
       renderImporterLivePreview();
     }
 
@@ -5364,6 +5535,78 @@
     }
     window.addImporterVariantRow = addImporterVariantRow;
 
+    // Colour Variants Editor Table
+    function renderImporterColorsTable() {
+      const tbody = document.getElementById('impColorsTbody');
+      const countBadge = document.getElementById('impColorsCountBadge');
+      if (countBadge && impData) countBadge.textContent = (impData.colors || []).length;
+      if (!tbody || !impData) return;
+
+      const galleryOpts = (impData.images || []).map((img, gIdx) =>
+        `<option value="${img.url.replace(/"/g, '&quot;')}">Photo #${gIdx + 1}: ${(img.caption || '').slice(0, 35)}</option>`
+      ).join('');
+
+      tbody.innerHTML = (impData.colors || []).map((c, i) => {
+        const currentImg = c.image || (impData.images[i % impData.images.length]?.url || '');
+        return `
+          <tr>
+            <td style="width:46px; text-align:center;">
+              <input type="color" value="${(c.hex && c.hex.startsWith('#') && c.hex.length === 7) ? c.hex : '#1D4ED8'}" style="width:34px; height:34px; border:1px solid #CBD5E1; border-radius:8px; cursor:pointer; padding:2px;" oninput="impData.colors[${i}].hex = this.value; renderImporterColorsTable(); renderImporterLivePreview();">
+            </td>
+            <td>
+              <input type="text" class="form-input" style="padding:6px 10px; font-size:12.5px; font-weight:700;" value="${(c.name || '').replace(/"/g, '&quot;')}" placeholder="e.g. Santorini Black Metallic" oninput="impData.colors[${i}].name = this.value; renderImporterLivePreview();">
+            </td>
+            <td style="width:110px;">
+              <input type="text" class="form-input" style="padding:6px 8px; font-size:12px; font-family:monospace;" value="${c.hex || '#0F172A'}" oninput="impData.colors[${i}].hex = this.value; renderImporterLivePreview();">
+            </td>
+            <td>
+              <div style="display:flex; gap:6px; align-items:center;">
+                <img src="${currentImg}" alt="${c.name}" referrerpolicy="no-referrer" style="width:48px; height:34px; object-fit:cover; border-radius:6px; border:1px solid #CBD5E1; flex-shrink:0;" onerror="window.handleSmartImgError(this)">
+                <select class="form-select" style="padding:5px 8px; font-size:11.5px; max-width:170px;" onchange="impData.colors[${i}].image = this.value; renderImporterColorsTable(); selectImporterColorPreview(${i});">
+                  <option value="">-- Pick Fetched Photo --</option>
+                  ${galleryOpts}
+                </select>
+                <input type="url" class="form-input" style="padding:5px 8px; font-size:11.5px; flex:1;" value="${currentImg.replace(/"/g, '&quot;')}" placeholder="Or paste colour image URL" oninput="impData.colors[${i}].image = this.value; renderImporterLivePreview();">
+              </div>
+            </td>
+            <td style="text-align:right; white-space:nowrap;">
+              <button type="button" class="btn-act btn-act-show" style="padding:4px 8px; font-size:11px;" onclick="selectImporterColorPreview(${i})">👁️ Preview</button>
+              <button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick="impData.colors.splice(${i},1); renderImporterWorkspace();">🗑️</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+    window.renderImporterColorsTable = renderImporterColorsTable;
+
+    function addImporterColorRow() {
+      if (!impData) return;
+      impData.colors = impData.colors || [];
+      const defaultImg = impData.images && impData.images.length ? impData.images[impData.colors.length % impData.images.length].url : '';
+      impData.colors.push({
+        name: 'New Official Paint Finish',
+        hex: '#2563EB',
+        image: defaultImg
+      });
+      renderImporterWorkspace();
+      showToast('🎨 Added new Colour Variant!');
+    }
+    window.addImporterColorRow = addImporterColorRow;
+
+    function selectImporterColorPreview(colorIdx) {
+      if (!impData || !impData.colors || !impData.colors[colorIdx]) return;
+      impActiveColorIdx = colorIdx;
+      const chosenColor = impData.colors[colorIdx];
+      if (chosenColor.image) {
+        const matchImgIdx = (impData.images || []).findIndex(img => img.url === chosenColor.image);
+        if (matchImgIdx !== -1) {
+          impActivePreviewImgIdx = matchImgIdx;
+        }
+      }
+      renderImporterLivePreview();
+    }
+    window.selectImporterColorPreview = selectImporterColorPreview;
+
     function setImporterPreviewMode(mode) {
       impPreviewMode = mode;
       ['NewCar', 'UsedCar', 'Review'].forEach(k => {
@@ -5396,16 +5639,24 @@
       if (impActivePreviewImgIdx >= imgs.length) impActivePreviewImgIdx = 0;
       const activeImg = imgs[impActivePreviewImgIdx];
 
+      const colors = impData.colors || [];
+      if (impActiveColorIdx >= colors.length) impActiveColorIdx = 0;
+      const activeColor = colors[impActiveColorIdx] || { name: 'Standard Finish', hex: '#0F172A' };
+
       const thumbsHtml = imgs.map((g, idx) => `
         <button type="button" class="preview-thumb-btn ${idx === impActivePreviewImgIdx ? 'active' : ''}" onclick="selectImporterPreviewImg(${idx})" title="${g.caption || ''}">
           <img src="${g.url}" alt="Thumb ${idx + 1}" referrerpolicy="no-referrer" onerror="window.handleSmartImgError(this)">
         </button>
       `).join('');
 
+      const colorSwatchesHtml = colors.map((c, cIdx) => `
+        <button type="button" onclick="selectImporterColorPreview(${cIdx})" title="${c.name}" style="width:28px; height:28px; border-radius:50%; background:${c.hex || '#0F172A'}; border:${cIdx === impActiveColorIdx ? '3px solid #FF5A1F' : '2px solid #CBD5E1'}; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.12); transition:transform 0.15s ease; transform:${cIdx === impActiveColorIdx ? 'scale(1.14)' : 'scale(1)'};"></button>
+      `).join('');
+
       if (impPreviewMode === 'newCar') {
         stage.innerHTML = `
           <div class="preview-grid-2col">
-            <!-- Left: Interactive Media Stage (min-width:0 prevents overflow) -->
+            <!-- Left: Interactive Media + Colour Swatches Stage -->
             <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:16px; padding:16px; box-shadow:0 4px 14px rgba(15,23,42,0.05); min-width:0; overflow:hidden;">
               <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
                 <span style="background:#FEF3C7; color:#B45309; font-size:11px; font-weight:800; padding:4px 10px; border-radius:12px;">⭐ ${impData.safetyRating}</span>
@@ -5424,6 +5675,17 @@
               </div>
               <div class="preview-thumb-strip">
                 ${thumbsHtml}
+              </div>
+
+              <!-- Interactive Colour Variant Switcher in Live Preview -->
+              <div style="margin-top:10px; padding:12px 14px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                  <span style="font-size:11.5px; font-weight:800; color:#0F172A;">🎨 Official Colour Variants (${colors.length}):</span>
+                  <span style="font-size:11.5px; font-weight:800; color:#2563EB;">${activeColor.name}</span>
+                </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                  ${colorSwatchesHtml}
+                </div>
               </div>
             </div>
 
@@ -5602,7 +5864,7 @@
       });
       localStorage.setItem('cmv_car_customizations', JSON.stringify(allCustom));
 
-      if (!silent) showToast('➕ Published "' + newCarObj.name + '" to Newly Launched Cars & Catalog!');
+      if (!silent) showToast('➕ Published "' + newCarObj.name + '" (with ' + (newCarObj.colors || []).length + ' colours) to Newly Launched Cars!');
     }
     window.publishImporterNewCar = publishImporterNewCar;
 
@@ -5657,8 +5919,11 @@
         '  Hero Image URL     : ' + newCarObj.heroImage,
         '  Description        : ' + newCarObj.description,
         '',
-        '  VARIANTS:',
+        '  VARIANTS (' + newCarObj.variants.length + ' TRIMS):',
         ...newCarObj.variants.map((v, i) => '    ' + (i + 1) + '. ' + v.name + ' | ' + v.fuel + ' | ' + v.transmission + ' | ₹' + v.exShowroom + ' | Features: ' + (v.keyFeatures || []).join(', ')),
+        '',
+        '  COLOUR VARIANTS (' + (newCarObj.colors || []).length + ' COLOURS):',
+        ...(newCarObj.colors || []).map((c, i) => '    ' + (i + 1) + '. ' + c.name + ' (' + c.hex + ') -> Image: ' + (c.image || 'N/A')),
         '',
         '2. POPULAR USED CARS IN INDIA:',
         '  Used Price Range   : ' + usedCarObj.usedPriceRange,
