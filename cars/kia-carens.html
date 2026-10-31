@@ -1172,6 +1172,198 @@
       .city-rto-tag {
         font-size: 10px !important;
       }
+
+  /* ---------- MOBILE FIX V2 ---------- */
+
+  /* A. Header: stop tagline colliding with city button */
+  .car-detail-page .header-inner {
+    padding: 8px 10px !important;
+    gap: 8px !important;
+  }
+  .car-detail-page .brand-lockup {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+  .car-detail-page .brand-lockup a {
+    gap: 8px !important;
+    min-width: 0 !important;
+  }
+  .car-detail-page .brand-icon {
+    width: 32px !important;
+    height: 32px !important;
+    flex-shrink: 0 !important;
+  }
+  .car-detail-page .brand-name {
+    font-size: 18px !important;
+    white-space: nowrap !important;
+  }
+  .car-detail-page .brand-tagline {
+    font-size: 8.5px !important;
+    letter-spacing: 0.1px !important;
+    white-space: nowrap !important;
+  }
+  .car-detail-page .header-actions-right {
+    flex-shrink: 0 !important;
+  }
+  .car-detail-page .btn-orange-pill {
+    white-space: nowrap !important;
+    padding: 7px 11px !important;
+    font-size: 12px !important;
+    gap: 4px !important;
+  }
+
+
+  .car-detail-page .copyright-text {
+    font-size: 11.5px !important;
+    line-height: 1.5 !important;
+  }
+  .car-detail-page .footer-bottom-flex {
+    padding-top: 14px !important;
+    margin-top: 10px !important;
+  }
+  /* B. Remove the empty strip below the footer (bottom-nav padding is not needed here) */
+  body.car-detail-page {
+    padding-bottom: 0 !important;
+  }
+  .car-detail-page .travomint-footer {
+    margin-bottom: 0 !important;
+  }
+  .car-detail-page .footer-copyright {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* C. Use more screen width (less card-in-card padding) */
+  .car-detail-page .page-container {
+    padding: 8px 8px 32px !important;
+  }
+  .detail-section-card {
+    padding: 14px 10px !important;
+    margin-bottom: 12px !important;
+  }
+  .car-hero-details {
+    padding: 14px 10px !important;
+  }
+  .car-hero-tagline {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+  .updates-box,
+  .engine-perf-card,
+  .pro-con-col,
+  .reviews-score-banner {
+    padding: 12px 10px !important;
+  }
+
+  /* D. Hero: caption / counter no longer overlap the photo strip */
+  .car-hero-media-box {
+    padding: 34px 8px 10px !important;
+    min-height: 0 !important;
+  }
+  .car-hero-img-wrap {
+    min-height: 0 !important;
+  }
+  .car-hero-main-img {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 210px !important;
+  }
+  .hero-gallery-counter {
+    top: 8px !important;
+    bottom: auto !important;
+    right: 8px !important;
+  }
+  .hero-gallery-caption {
+    position: static !important;
+    max-width: 100% !important;
+    margin: 8px 0 0 !important;
+    align-self: center !important;
+    text-align: center !important;
+  }
+  .hero-gallery-strip {
+    margin-top: 8px !important;
+  }
+
+  /* E. Price box: keep everything inside the card */
+  .price-box-card {
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+  .price-box-card > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .price-box-card > div > div[style*="font-size: 12px"] {
+    white-space: normal !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+  }
+  .onroad-badge {
+    white-space: normal !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+  .city-picker-row {
+    max-width: 100% !important;
+  }
+
+  /* F. Variants table: compact rows */
+  .variants-seo-table-container {
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+  }
+  .variants-seo-table {
+    min-width: 0 !important;
+    width: max-content !important;
+  }
+  .variants-seo-table th {
+    padding: 8px 10px !important;
+    font-size: 10.5px !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.2px !important;
+  }
+  .variants-seo-table td {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    vertical-align: middle !important;
+    white-space: nowrap !important;
+  }
+  .variants-seo-table td:first-child {
+    white-space: normal !important;
+    min-width: 150px !important;
+    max-width: 175px !important;
+  }
+  .variants-seo-table td:last-child {
+    white-space: nowrap !important;
+    max-width: none !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+  .variants-seo-table th:first-child,
+  .variants-seo-table td:first-child {
+    position: sticky !important;
+    left: 0 !important;
+    background: #FFFFFF !important;
+    z-index: 2 !important;
+    box-shadow: 1px 0 0 #E2E8F0 !important;
+  }
+  .variants-seo-table th:first-child {
+    background: #F8FAFC !important;
+  }
+  .vfm-chip {
+    display: inline-block !important;
+    margin: 3px 0 0 0 !important;
+    font-size: 9px !important;
+  }
+
     }
   </style>
 </head>
