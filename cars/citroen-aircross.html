@@ -165,6 +165,41 @@
   <link rel="stylesheet" href="/css/style.css">
 
   <style>
+    .back-nav-container {
+      max-width: 1180px;
+      margin: 14px auto 0;
+      padding: 0 20px;
+    }
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      color: #334155;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+      font-family: inherit;
+      text-decoration: none;
+    }
+    .back-nav-btn:hover {
+      background: #F8FAFC;
+      border-color: #CBD5E1;
+      color: var(--primary, #E15B2D);
+      transform: translateX(-3px);
+      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.08);
+    }
+    .back-nav-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .back-nav-btn:hover svg {
+      transform: translateX(-2px);
+    }
     .car-hero-wrap {
       background: #FFFFFF;
       border: 1px solid var(--border);
@@ -876,15 +911,15 @@
     </div>
   </header>
 
-  <!-- Breadcrumbs Bar -->
-  <div class="breadcrumbs-container">
-    <nav class="breadcrumbs-nav" aria-label="Breadcrumbs">
-      <a href="/">Home</a>
-      <span>&rsaquo;</span>
-      <a href="/?brand=Citro%C3%ABn">Citroën</a>
-      <span>&rsaquo;</span>
-      <span class="active-crumb">Citroën Aircross</span>
-    </nav>
+  <!-- Back Arrow Navigation Bar -->
+  <div class="back-nav-container">
+    <button type="button" class="back-nav-btn" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = '/cars.html'; }" aria-label="Go Back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Back</span>
+    </button>
   </div>
 
   <main class="page-container" style="max-width: 1180px; margin: 0 auto; padding: 16px 20px 60px;">

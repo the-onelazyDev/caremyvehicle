@@ -95,10 +95,16 @@
 
   <!-- Page Header Container -->
   <div class="section-container" style="padding-top:24px;" id="catalogTopAnchor">
-    <nav class="car-breadcrumb" style="margin-bottom:12px;">
-      <a href="/">Home</a> &rsaquo;
-      <span>All Car Models Catalog</span>
-    </nav>
+    <!-- Back Arrow Navigation -->
+    <div style="margin-bottom:14px;">
+      <button type="button" class="back-nav-btn" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = '/'; }" aria-label="Go Back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back</span>
+      </button>
+    </div>
 
     <div style="margin-bottom:20px;">
       <h1 class="brand-font" style="font-size:32px; color:#0F172A; margin-bottom:6px;">All New Cars in India (2024–2026)</h1>
