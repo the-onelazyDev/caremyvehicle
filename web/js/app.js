@@ -6,7 +6,7 @@ window.navigateToCar = function(carId, hash) {
 };
 
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './carData.js';
-import { ARTICLES } from './newsData.js';
+import { ARTICLES, POPULAR_USED_CARS as DEFAULT_POPULAR_USED_CARS } from './newsData.js';
 
 // Official Brand Logos Mapping
 export const BRAND_LOGOS = {
@@ -533,16 +533,53 @@ function renderCars() {
 }
 
 // 5. 📰 Render Automotive Reviews & News Section
+function getActiveArticles() {
+  try {
+    const custom = JSON.parse(localStorage.getItem('cmv_custom_articles') || 'null');
+    if (Array.isArray(custom) && custom.length > 0) return custom;
+  } catch (e) {}
+  return ARTICLES;
+}
+
+window.swapNewsCardImg = function(event, articleId, imgUrl, thumbBtn) {
+  if (event) event.stopPropagation();
+  const imgEl = document.getElementById('newsHeroImg_' + articleId);
+  if (imgEl) imgEl.src = imgUrl;
+  if (thumbBtn && thumbBtn.parentElement) {
+    thumbBtn.parentElement.querySelectorAll('.news-mini-thumb').forEach(b => {
+      b.style.borderColor = '#E2E8F0';
+    });
+    thumbBtn.style.borderColor = 'var(--primary)';
+  }
+};
+
 function renderNewsSection() {
   const container = document.getElementById('newsContainer');
   if (!container) return;
 
-  container.innerHTML = ARTICLES.map(article => `
+  const list = getActiveArticles().filter(a => a.enabled !== false);
+
+  container.innerHTML = list.map(article => {
+    const heroUrl = article.heroImage || article.image || 'assets/logo.png';
+    const otherImgs = Array.isArray(article.gallery) ? article.gallery.filter(g => g && g.url) : [];
+    const allPhotos = [{ url: heroUrl, caption: 'Hero Image' }, ...otherImgs];
+
+    return `
     <article class="news-card" onclick="window.openArticleModal('${article.id}')">
-      <div class="news-card-media">
-        <img src="${article.image}" alt="${article.title}" class="news-card-img" loading="lazy">
-        <span class="news-cat-badge ${article.badgeClass}">${article.category}</span>
+      <div class="news-card-media" style="position:relative;">
+        <img id="newsHeroImg_${article.id}" src="${heroUrl}" alt="${article.title}" class="news-card-img" loading="lazy" onerror="this.src='assets/logo.png'">
+        <span class="news-cat-badge ${article.badgeClass || 'badge-review'}">${article.category || 'EXPERT REVIEW'}</span>
+        ${otherImgs.length > 0 ? `<span style="position:absolute; bottom:10px; right:10px; background:rgba(15,23,42,0.82); color:#FFF; font-size:10.5px; font-weight:800; padding:3px 9px; border-radius:20px; backdrop-filter:blur(4px);">📷 ${allPhotos.length} Photos</span>` : ''}
       </div>
+      ${otherImgs.length > 0 ? `
+      <div style="display:flex; gap:6px; padding:8px 14px 0; overflow-x:auto; scrollbar-width:none;" onclick="event.stopPropagation()">
+        ${allPhotos.map((p, idx) => `
+          <button type="button" class="news-mini-thumb" onclick="window.swapNewsCardImg(event, '${article.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? 'var(--primary)' : '#E2E8F0'}; border-radius:6px; padding:1px; background:#FFF; cursor:pointer; flex-shrink:0; width:44px; height:30px; overflow:hidden;" title="${p.caption || ''}">
+            <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+          </button>
+        `).join('')}
+      </div>
+      ` : ''}
       <div class="news-card-body">
         <h3 class="news-card-title">${article.title}</h3>
         <p class="news-card-excerpt">${article.excerpt}</p>
@@ -552,21 +589,40 @@ function renderNewsSection() {
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
 }
 
+window.swapArticleModalPhoto = function(imgUrl, captionText, btnEl) {
+  const mainImg = document.getElementById('articleModalMainImg');
+  const capEl = document.getElementById('articleModalImgCaption');
+  if (mainImg) mainImg.src = imgUrl;
+  if (capEl) capEl.textContent = captionText || '';
+  if (btnEl && btnEl.parentElement) {
+    btnEl.parentElement.querySelectorAll('button').forEach(b => {
+      b.style.borderColor = '#E2E8F0';
+    });
+    btnEl.style.borderColor = '#FF5100';
+  }
+};
+
 window.openArticleModal = function(articleId) {
-  const article = ARTICLES.find(a => a.id === articleId);
+  const list = getActiveArticles();
+  const article = list.find(a => a.id === articleId);
   if (!article) return;
 
   const modal = document.getElementById('articleModal');
   const content = document.getElementById('articleModalContent');
   if (!modal || !content) return;
 
+  const heroUrl = article.heroImage || article.image || 'assets/logo.png';
+  const otherImgs = Array.isArray(article.gallery) ? article.gallery.filter(g => g && g.url) : [];
+  const allPhotos = [{ url: heroUrl, caption: article.title + ' (Hero Image)' }, ...otherImgs];
+
   content.innerHTML = `
     <div class="modal-header">
       <div>
-        <span class="news-cat-badge ${article.badgeClass}" style="position:static;">${article.category}</span>
+        <span class="news-cat-badge ${article.badgeClass || 'badge-review'}" style="position:static;">${article.category || 'EXPERT REVIEW'}</span>
         <h2 style="font-size:21px; font-weight:900; margin-top:8px; line-height:1.35; color:var(--text-main);">${article.title}</h2>
         <div style="font-size:12px; color:var(--text-muted); margin-top:6px;">
           By <strong>${article.author}</strong> • ${article.date} • ⏱️ ${article.readTime}
@@ -576,7 +632,17 @@ window.openArticleModal = function(articleId) {
     </div>
 
     <div style="padding:16px 0; border-bottom:1px solid var(--border); margin-bottom:20px;">
-      <img src="${article.image}" alt="${article.title}" onerror="this.src='assets/logo.png'" style="width:100%; max-height:360px; object-fit:cover; border-radius:14px;">
+      <img id="articleModalMainImg" src="${heroUrl}" alt="${article.title}" onerror="this.src='assets/logo.png'" style="width:100%; max-height:380px; object-fit:cover; border-radius:14px;">
+      <div id="articleModalImgCaption" style="font-size:12px; font-weight:700; color:#64748B; margin-top:6px; text-align:center;">${allPhotos[0].caption || ''}</div>
+      ${allPhotos.length > 1 ? `
+        <div style="display:flex; gap:10px; overflow-x:auto; margin-top:12px; padding-bottom:4px;">
+          ${allPhotos.map((p, idx) => `
+            <button type="button" onclick="window.swapArticleModalPhoto('${p.url.replace(/'/g, "\\'")}', '${(p.caption || '').replace(/'/g, "\\'")}', this)" style="border:2.5px solid ${idx === 0 ? '#FF5100' : '#E2E8F0'}; border-radius:10px; padding:2px; background:#FFF; cursor:pointer; flex-shrink:0; width:82px; height:56px; overflow:hidden;">
+              <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:cover; border-radius:7px;">
+            </button>
+          `).join('')}
+        </div>
+      ` : ''}
     </div>
 
     <div style="font-size:15px; line-height:1.75; color:var(--text-main);" class="article-body-text">
@@ -2252,37 +2318,76 @@ const POPULAR_USED_CARS = [
   }
 ];
 
+function getActivePopularUsedCars() {
+  try {
+    const custom = JSON.parse(localStorage.getItem('cmv_popular_used_cars') || 'null');
+    if (Array.isArray(custom) && custom.length > 0) return custom;
+  } catch (e) {}
+  return typeof DEFAULT_POPULAR_USED_CARS !== 'undefined' ? DEFAULT_POPULAR_USED_CARS : POPULAR_USED_CARS;
+}
+
+window.swapUsedCardImg = function(event, carId, imgUrl, thumbBtn) {
+  if (event) event.stopPropagation();
+  const imgEl = document.getElementById('usedHeroImg_' + carId);
+  if (imgEl) imgEl.src = imgUrl;
+  if (thumbBtn && thumbBtn.parentElement) {
+    thumbBtn.parentElement.querySelectorAll('.used-mini-thumb').forEach(b => {
+      b.style.borderColor = '#E2E8F0';
+    });
+    thumbBtn.style.borderColor = 'var(--primary)';
+  }
+};
+
 function renderPopularUsedCars() {
   const container = document.getElementById('popularUsedGridContainer');
   if (!container) return;
 
-  container.innerHTML = POPULAR_USED_CARS.map(car => `
+  const list = getActivePopularUsedCars().filter(c => c.enabled !== false);
+
+  container.innerHTML = list.map(car => {
+    const heroUrl = car.heroImage || car.image || 'assets/logo.png';
+    const otherImgs = Array.isArray(car.gallery) ? car.gallery.filter(g => g && g.url) : [];
+    const allPhotos = [{ url: heroUrl, caption: car.name + ' Hero' }, ...otherImgs];
+    const fuels = Array.isArray(car.fuelTypes) ? car.fuelTypes.join('/') : (car.fuelTypes || 'Petrol');
+
+    return `
     <article class="popular-used-card" onclick="window.showUsedCarsComingSoon(event)">
-      <div class="popular-used-media">
+      <div class="popular-used-media" style="position:relative;">
         <div class="popular-used-badge-row">
           <span class="popular-used-demand-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 COMING SOON</span>
-          <span class="popular-used-years-badge">📅 ${car.topYears}</span>
+          <span class="popular-used-years-badge">📅 ${car.topYears || '2018 – 2024'}</span>
         </div>
-        <img src="${car.image}" alt="${car.name}" class="popular-used-img" loading="lazy">
+        <img id="usedHeroImg_${car.id}" src="${heroUrl}" alt="${car.name}" class="popular-used-img" loading="lazy" onerror="this.src='assets/logo.png'">
+        ${otherImgs.length > 0 ? `<span style="position:absolute; bottom:8px; right:10px; background:rgba(15,23,42,0.78); color:#FFF; font-size:10px; font-weight:800; padding:2px 8px; border-radius:16px;">📷 ${allPhotos.length} Photos</span>` : ''}
       </div>
+      ${otherImgs.length > 0 ? `
+      <div style="display:flex; gap:6px; padding:8px 14px 2px; overflow-x:auto; scrollbar-width:none; background:#F8FAFC; border-bottom:1px solid #F1F5F9;" onclick="event.stopPropagation()">
+        ${allPhotos.map((p, idx) => `
+          <button type="button" class="used-mini-thumb" onclick="window.swapUsedCardImg(event, '${car.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? 'var(--primary)' : '#E2E8F0'}; border-radius:6px; padding:1px; background:#FFF; cursor:pointer; flex-shrink:0; width:44px; height:30px; overflow:hidden;" title="${p.caption || ''}">
+            <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:contain; border-radius:4px;">
+          </button>
+        `).join('')}
+      </div>
+      ` : ''}
       <div class="popular-used-body">
-        <span class="popular-used-brand">${car.brand} • ${car.bodyType}</span>
+        <span class="popular-used-brand">${car.brand} • ${car.bodyType || 'SUV'}</span>
         <h3 class="popular-used-title">${car.name}</h3>
         <div class="popular-used-price-tag">
           <span class="popular-used-price-val">${car.usedPriceRange}</span>
           <span class="popular-used-price-lbl">(Est. Used Benchmark)</span>
         </div>
         <div class="popular-used-specs-mini">
-          <span class="used-spec-chip">⛽ ${car.fuelTypes.join('/')}</span>
-          <span class="used-spec-chip">⚡ ${car.mileage}</span>
+          <span class="used-spec-chip">⛽ ${fuels}</span>
+          <span class="used-spec-chip">⚡ ${car.mileage || '18+ km/l'}</span>
         </div>
-        <p class="popular-used-highlight">${car.highlight}</p>
+        <p class="popular-used-highlight">${car.highlight || ''}</p>
         <button type="button" class="btn-explore-used" onclick="window.showUsedCarsComingSoon(event)">
           <span>🚀 Used Marketplace: Coming Soon &rsaquo;</span>
         </button>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
 }
 
 window.exploreUsedCarModel = function(carId) {
@@ -2375,8 +2480,6 @@ function renderUsedCarsByCity() {
     <div class="used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.showUsedCarsComingSoon(event)">
       <div class="used-city-icon-wrap">${c.iconSvg}</div>
       <div class="used-city-name">${c.name}</div>
-      <div class="used-city-count">${c.count}</div>
-      <div class="used-city-price" style="color:var(--primary); font-weight:800;">Launching Soon</div>
     </div>
   `).join('');
 }

@@ -1,4 +1,4 @@
-// Care My Vehicle — Automotive News, In-Depth Reviews & Buying Guides Dataset
+// Care My Vehicle — Automotive News, In-Depth Reviews, Buying Guides & Popular Used Cars Dataset
 export const ARTICLES = [
   {
     id: 'nissan-magnite-facelift-review-2025',
@@ -7,9 +7,14 @@ export const ARTICLES = [
     title: 'New Nissan Magnite Facelift: 320+ Upgrades Tested — Is It the Best Compact SUV Under ₹10 Lakh?',
     excerpt: 'We drove the updated Nissan Magnite across city traffic and highways to test its reinforced body shell, 6 standard airbags, and refined Turbo CVT powertrain.',
     author: 'Care My Vehicle Editorial Team',
-    date: 'Updated October 2025',
+    date: 'Updated October 2026',
     readTime: '5 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/blade-silver.webp', caption: 'Blade Silver Side Profile' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/vivid-blue.webp', caption: 'Vivid Blue Dual-Tone Exterior' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/pearl-white.webp', caption: 'Storm White Studio Stance' }
+    ],
     content: `
       <h3>The Sub-Compact SUV With 320+ Thoughtful Upgrades</h3>
       <p>The Nissan Magnite has always been known as the car that democratized turbo-petrol engines in the sub-4 meter SUV segment. With the newly launched facelift, Nissan India has made over 320 granular engineering and design upgrades, focusing on safety, cabin insulation, and interior ergonomics.</p>
@@ -32,9 +37,14 @@ export const ARTICLES = [
     title: 'Mahindra Thar Roxx 4x4 vs 4x2: Complete Variant Breakdown & Best Value-For-Money Pick',
     excerpt: 'Confused between MX3, AX5L, and AX7L? Here is our clear, no-nonsense buying guide comparing real on-road prices, features, and diesel vs petrol engines.',
     author: 'CMV Car Buying Desk',
-    date: 'Updated October 2025',
+    date: 'Updated October 2026',
     readTime: '6 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/hero.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/tango-red.webp', caption: 'Tango Red 5-Door Stance' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/everest-white.webp', caption: 'Everest White Signature Profile' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp', caption: 'Stealth Black 4x4 Presence' }
+    ],
     content: `
       <h3>5 Doors, 5 Seats, and True Everyday Practicality</h3>
       <p>The Mahindra Thar Roxx transformed the rugged Thar formula into a genuine family SUV with 5 doors, a spacious second row, a 644L boot space, and a refined multi-link rear suspension with Watt's linkage.</p>
@@ -57,9 +67,14 @@ export const ARTICLES = [
     title: 'Tata Curvv ICE vs Curvv EV: Real-World Highway Range, Running Costs & Feature Comparison',
     excerpt: 'Detailed analysis of India’s first mass-market SUV Coupe. We calculate true 5-year running costs between the Hyperion Turbo Petrol and 55 kWh Long Range EV.',
     author: 'CMV EV Special Lab',
-    date: 'Updated October 2025',
+    date: 'Updated October 2026',
     readTime: '7 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pristine-white.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp', caption: 'Empowered Oxide EV Trim' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/hero.webp', caption: 'Tata Curvv ICE Coupe Profile' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/virtual-sunrise.webp', caption: 'Virtual Sunrise Aerodynamic Finish' }
+    ],
     content: `
       <h3>SUV Coupe Styling Meets Pure Practicality</h3>
       <p>The Tata Curvv introduces striking aerodynamic fastback styling to the midsize SUV segment, achieving a 500-litre boot space and an ultra-commanding 208 mm ground clearance.</p>
@@ -82,9 +97,13 @@ export const ARTICLES = [
     title: 'Skoda Kylaq vs Maruti Brezza & Hyundai Venue: German Engineering at ₹7.89 Lakh',
     excerpt: 'Built on the robust MQB-A0-IN platform, the Kylaq brings European chassis tuning, 6 standard airbags, and a 1.0 TSI engine to the fiercely contested sub-4M segment.',
     author: 'CMV Automotive Reviewers',
-    date: 'Updated October 2025',
+    date: 'Updated October 2026',
     readTime: '6 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/hero.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/colors/olive-gold.webp', caption: 'Olive Gold Launch Edition' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/colors/tornado-red.webp', caption: 'Tornado Red Sporty Stance' }
+    ],
     content: `
       <h3>Democratizing German Ride and Handling</h3>
       <p>Skoda’s third made-for-India offering after the Kushaq and Slavia brings European driving dynamics, robust build quality, and a 5-Star crash safety heritage to the sub-₹10 Lakh bracket.</p>
@@ -99,14 +118,18 @@ export const ARTICLES = [
   },
   {
     id: 'bharat-ncap-safety-radar-2025',
-    category: 'SAFETY RADAR',
+    category: 'SAFETY GUIDE',
     badgeClass: 'badge-safety-news',
-    title: 'Bharat NCAP 2025 Safety Ratings Guide: The Safest Family Cars You Can Buy in India Today',
+    title: 'Bharat NCAP 2025–2026 Safety Ratings Guide: The Safest Family Cars You Can Buy in India Today',
     excerpt: 'A comprehensive consumer guide to genuine 5-star crash safety ratings, child protection scores, and standard electronic aids across all top manufacturers.',
-    author: 'CMV Safety Radar',
-    date: 'Updated October 2025',
+    author: 'CMV Safety Desk',
+    date: 'Updated October 2026',
     readTime: '4 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/hero.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/fearless-purple/1.webp', caption: 'Tata Nexon 5-Star B-NCAP' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp', caption: 'Mahindra XUV700 Safety Flagship' }
+    ],
     content: `
       <h3>Safety is No Longer an Optional Luxury</h3>
       <p>With Indian consumers prioritizing structural integrity and occupant safety above all else, Bharat NCAP has established transparent crash testing protocols for adult occupant and child occupant protection.</p>
@@ -126,9 +149,13 @@ export const ARTICLES = [
     title: 'MG Windsor EV & Battery-as-a-Service (BaaS): How the ₹3.5/km Subscription Model Actually Works',
     excerpt: 'Breaking down the revolutionary BaaS ownership model: upfront acquisition cost, monthly battery rental, fast charging, and real-world lounge seating comfort.',
     author: 'CMV Financial & EV Desk',
-    date: 'Updated October 2025',
+    date: 'Updated October 2026',
     readTime: '5 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp', caption: 'Turquoise Green Aero Lounge' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/pearl-white.webp', caption: 'Pearl White Side Stance' }
+    ],
     content: `
       <h3>Lounge Aerocabin Comfort with Flexible Battery Rental</h3>
       <p>The MG Windsor EV introduces India’s first large-scale Battery-as-a-Service (BaaS) ownership program, allowing customers to purchase the car without paying upfront for the battery pack.</p>
@@ -143,3 +170,150 @@ export const ARTICLES = [
   }
 ];
 
+export const POPULAR_USED_CARS = [
+  {
+    id: 'maruti-swift',
+    name: 'Maruti Suzuki Swift',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/luster-blue/4.webp', caption: 'Luster Blue Exterior' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/pearl-arctic-white/4.webp', caption: 'Pearl Arctic White' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/magma-grey/4.webp', caption: 'Magma Grey Profile' }
+    ],
+    usedPriceRange: '₹2.50 – ₹7.20 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG', 'Diesel'],
+    bodyType: 'Hatchback',
+    mileage: '22.56 – 32.85 km/l',
+    topYears: '2018 – 2024',
+    badge: 'India’s #1 Resale Hatchback',
+    highlight: 'Lowest cost per km, ubiquitous spare parts, instant buyer liquidity across India.'
+  },
+  {
+    id: 'honda-city',
+    name: 'Honda City',
+    brand: 'Honda',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/radiant-red-metallic.webp', caption: 'Radiant Red Metallic' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/platinum-white-pearl.webp', caption: 'Platinum White Pearl' }
+    ],
+    usedPriceRange: '₹3.20 – ₹9.80 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Executive Sedan',
+    mileage: '17.8 – 24.1 km/l',
+    topYears: '2016 – 2023',
+    badge: 'Timeless Japanese Reliability',
+    highlight: 'Legendary 1.5L i-VTEC engine easily exceeds 250,000 km without major overhaul.'
+  },
+  {
+    id: 'hyundai-i20',
+    name: 'Hyundai i20',
+    brand: 'Hyundai',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/fiery-red/1.webp', caption: 'Fiery Red Exterior' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/atlas-white/1.webp', caption: 'Atlas White Finish' }
+    ],
+    usedPriceRange: '₹2.80 – ₹7.50 Lakh',
+    retentionScore: '⭐ 4.7/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Premium Hatchback',
+    mileage: '19.8 – 25.2 km/l',
+    topYears: '2017 – 2024',
+    badge: 'Feature-Rich Premium Cabin',
+    highlight: 'High quality European fit & finish, sunroof, touchscreen, and great city driveability.'
+  },
+  {
+    id: 'mahindra-scorpio-n',
+    name: 'Mahindra Scorpio',
+    brand: 'Mahindra',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/napoli-black.webp', caption: 'Napoli Black Stance' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/everest-white.webp', caption: 'Everest White 7-Seater' }
+    ],
+    usedPriceRange: '₹4.50 – ₹12.00 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Diesel'],
+    bodyType: 'Rugged 7-Seater SUV',
+    mileage: '15.0 – 16.5 km/l',
+    topYears: '2016 – 2023',
+    badge: 'Unstoppable Resale Retention',
+    highlight: 'Commanding road presence, indestructible ladder chassis, and massive rural + tier-2 demand.'
+  },
+  {
+    id: 'toyota-innova-hycross',
+    name: 'Toyota Innova / Crysta',
+    brand: 'Toyota',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/blackish-ageha-glass-flake.webp?v=2', caption: 'Blackish Ageha Glass Flake' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/attitude-black-mica.webp?v=2', caption: 'Attitude Black Mica' }
+    ],
+    usedPriceRange: '₹5.50 – ₹16.50 Lakh',
+    retentionScore: '⭐ 5.0/5 The Resale King',
+    fuelTypes: ['Diesel', 'Petrol'],
+    bodyType: '7-Seater MPV',
+    mileage: '14.5 – 21.1 km/l',
+    topYears: '2015 – 2024',
+    badge: 'Highest Value Retention in India',
+    highlight: 'Often sells at near original invoice price after 5 years. Renowned for 500,000+ km longevity.'
+  },
+  {
+    id: 'hyundai-creta',
+    name: 'Hyundai Creta',
+    brand: 'Hyundai',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/abyss-black/1.webp', caption: 'Abyss Black Facelift' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/atlas-white/1.webp', caption: 'Atlas White SUV' }
+    ],
+    usedPriceRange: '₹6.50 – ₹13.50 Lakh',
+    retentionScore: '⭐ 4.9/5 Resale Demand',
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Midsize SUV',
+    mileage: '17.4 – 21.8 km/l',
+    topYears: '2018 – 2024',
+    badge: 'India’s #1 Used SUV',
+    highlight: 'Dominates the used SUV market with rapid turnover and premium resale value in all cities.'
+  },
+  {
+    id: 'maruti-baleno',
+    name: 'Maruti Suzuki Baleno',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/opulent-red/4.webp', caption: 'Opulent Red' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/grandeur-grey/4.webp', caption: 'Grandeur Grey' }
+    ],
+    usedPriceRange: '₹3.80 – ₹7.40 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG'],
+    bodyType: 'Premium Hatchback',
+    mileage: '22.35 – 30.61 km/kg',
+    topYears: '2019 – 2024',
+    badge: 'Best Family Commuter Value',
+    highlight: 'Extremely spacious rear legroom, 22+ km/l real-world mileage, hassle-free maintenance.'
+  },
+  {
+    id: 'maruti-dzire',
+    name: 'Maruti Suzuki Dzire',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/gallant-red/4.webp', caption: 'Gallant Red Sedan' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/arctic-white/4.webp', caption: 'Arctic White Profile' }
+    ],
+    usedPriceRange: '₹3.10 – ₹7.20 Lakh',
+    retentionScore: '⭐ 4.8/5 Resale Demand',
+    fuelTypes: ['Petrol', 'CNG'],
+    bodyType: 'Compact Sedan',
+    mileage: '22.61 – 31.12 km/kg',
+    topYears: '2018 – 2024',
+    badge: 'Most Economical Boot Sedan',
+    highlight: '378L boot space, unmatched fuel efficiency, and lowest depreciation rate in the compact sedan class.'
+  }
+];

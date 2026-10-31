@@ -851,6 +851,88 @@
       margin-top: 30px;
     }
 
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-family: inherit;
+      color: #0F172A;
+      background: #FFFFFF;
+      box-sizing: border-box;
+      transition: all 0.15s ease;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .admin-table th {
+      background: #F8FAFC;
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 800;
+      color: #475569;
+      text-transform: uppercase;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .admin-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #F1F5F9;
+      vertical-align: middle;
+    }
+    .studio-item-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .studio-item-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 14px;
+      background: #FFFFFF;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: left;
+    }
+    .studio-item-pill:hover {
+      border-color: #93C5FD;
+      background: #F8FAFC;
+    }
+    .studio-item-pill.active {
+      border-color: var(--primary);
+      background: #EFF6FF;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+    .studio-item-pill img {
+      width: 56px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #F1F5F9;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -923,10 +1005,19 @@
 
         <div class="admin-container">
       <!-- Top Navigation Tabs -->
-      <div class="admin-nav-tabs">
+      <div class="admin-nav-tabs" style="flex-wrap:wrap;">
         <button type="button" class="admin-tab-btn active" id="tabBtnVisibility" onclick="switchAdminTab('visibility')">
-          👁️ Car & Brand Visibility Control
+          👁️ Car & Brand Visibility
           <span class="tab-counter-badge" id="tabHiddenBadge" style="display:none;">0 hidden</span>
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnCarEditor" onclick="switchAdminTab('carEditor')">
+          🛠️ Car Detail Page & Media Studio
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnReviewsManager" onclick="switchAdminTab('reviewsManager')">
+          📰 Latest Car Updates & Expert Reviews
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnUsedCarsManager" onclick="switchAdminTab('usedCarsManager')">
+          🚗 Popular Used Cars in India
         </button>
         <button type="button" class="admin-tab-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
           ➕ Add Newly Launched Car
@@ -1648,6 +1739,312 @@
         </div>
       </div><!-- end viewCarEditor -->
 
+      <!-- VIEW 4: LATEST CAR UPDATES & EXPERT REVIEWS STUDIO -->
+      <div id="viewReviewsManager" style="display:none;">
+        <div class="section-card" style="margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h3 class="section-title">📰 Latest Car Updates & Expert Reviews Studio</h3>
+              <p class="section-desc">
+                Select any review/update article below to edit its Hero Image (1 main image), add or remove Other Images (gallery), edit text, or create a brand new review.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-act btn-act-show" onclick="createNewReviewArticle()">
+                ➕ Add New Review / Update
+              </button>
+              <button type="button" class="btn-act btn-act-show" style="background:#2563EB;" onclick="saveAllReviewsToLive()">
+                💾 Save All Reviews (Live Update)
+              </button>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetReviewsToDefaults()">
+                🔄 Reset Defaults
+              </button>
+            </div>
+          </div>
+
+          <div class="studio-item-list" id="reviewsSelectorList">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Review Editor Workspace -->
+        <div id="reviewEditorWorkspace">
+          <!-- 1. Review Hero Image Studio -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">📸 1. Review Hero Image (Main Thumbnail & Cover Photo)</h4>
+              <span style="font-size:12px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 10px; border-radius:12px;">1 Hero Image</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:center;">
+                <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:12px; text-align:center; min-height:150px; display:flex; align-items:center; justify-content:center;">
+                  <img id="revHeroPreview" src="" alt="Review Hero Preview" style="max-width:100%; max-height:140px; object-fit:cover; border-radius:10px;" onerror="this.src='assets/logo.png'">
+                </div>
+                <div>
+                  <label class="form-label">Hero Image Direct URL</label>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <input type="url" id="revHeroUrlInput" class="form-input" style="flex:1; min-width:240px;" placeholder="https://ik.imagekit.io/..." oninput="previewReviewHero(this.value)">
+                    <button type="button" class="btn-act btn-act-show" onclick="setReviewHeroFromInput()">Set Hero Image</button>
+                    <button type="button" class="btn-act btn-act-hide" onclick="removeReviewHeroImage()">Remove</button>
+                  </div>
+                  <div style="margin-top:10px; font-size:12px; color:#64748B;">
+                    💡 <em>Tip: Paste any image URL above or click "Make Hero" on any of the Other Images below.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Review Other Images (Gallery) -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">🖼️ 2. Other Images of Review / Car (<span id="revGalleryCount">0</span> Other Images)</h4>
+              <span style="font-size:12px; font-weight:700; color:#0284C7; background:#E0F2FE; padding:3px 10px; border-radius:12px;">Multiple Photos Supported</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="background:#F0F9FF; border:1px solid #BAE6FD; border-radius:14px; padding:16px; margin-bottom:18px;">
+                <h5 style="margin:0 0 10px; font-size:13.5px; color:#0369A1; font-weight:800;">➕ Add Another Image to This Review</h5>
+                <div style="display:grid; grid-template-columns: 2fr 1.5fr auto; gap:12px; align-items:flex-end;">
+                  <div>
+                    <label class="form-label" style="font-size:11px;">Image URL</label>
+                    <input type="url" id="revNewGalleryUrl" class="form-input" placeholder="https://ik.imagekit.io/...">
+                  </div>
+                  <div>
+                    <label class="form-label" style="font-size:11px;">Caption / Angle Name</label>
+                    <input type="text" id="revNewGalleryCaption" class="form-input" placeholder="e.g. Cabin Dashboard / Side Profile">
+                  </div>
+                  <button type="button" class="btn-submit" style="padding:10px 18px; font-size:13px;" onclick="addReviewOtherImage()">
+                    ➕ Add Image
+                  </button>
+                </div>
+              </div>
+
+              <div class="editor-gallery-grid" id="revGalleryGrid">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Review Article Details & Content -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">✍️ 3. Review / Update Headline & Editorial Content</h4>
+              <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentReviewArticle()">🗑️ Delete This Review</button>
+            </div>
+            <div class="editor-sec-body">
+              <div class="form-grid-2" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Review / Update Title *</label>
+                  <input type="text" id="revTitleInput" class="form-input" oninput="syncCurrentReviewFields()">
+                </div>
+                <div>
+                  <label class="form-label">Category Badge</label>
+                  <select id="revCategoryInput" class="form-select" onchange="syncCurrentReviewFields()">
+                    <option value="EXPERT REVIEW">EXPERT REVIEW</option>
+                    <option value="BUYING GUIDE">BUYING GUIDE</option>
+                    <option value="COMPARISON">COMPARISON</option>
+                    <option value="TEST DRIVE">TEST DRIVE</option>
+                    <option value="SAFETY GUIDE">SAFETY GUIDE</option>
+                    <option value="EV SPECIAL">EV SPECIAL</option>
+                    <option value="LATEST UPDATE">LATEST UPDATE</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-grid-2" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Author / Desk</label>
+                  <input type="text" id="revAuthorInput" class="form-input" oninput="syncCurrentReviewFields()">
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                  <div>
+                    <label class="form-label">Date Label</label>
+                    <input type="text" id="revDateInput" class="form-input" oninput="syncCurrentReviewFields()">
+                  </div>
+                  <div>
+                    <label class="form-label">Read Time</label>
+                    <input type="text" id="revReadTimeInput" class="form-input" oninput="syncCurrentReviewFields()">
+                  </div>
+                </div>
+              </div>
+              <div style="margin-bottom:14px;">
+                <label class="form-label">Short Card Summary / Excerpt</label>
+                <textarea id="revExcerptInput" class="form-textarea" rows="2" oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+              <div>
+                <label class="form-label">Full Review Content (HTML or Paragraphs)</label>
+                <textarea id="revContentInput" class="form-textarea" rows="6" oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="editor-floating-bar">
+            <div style="color:#FFFFFF; font-size:13px; font-weight:700;">
+              Editing Review: <span id="barReviewTitle" style="color:#60A5FA;">--</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <a href="index.html#newsSection" target="_blank" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; text-decoration:none;">
+                👁️ View on Home Page ↗
+              </a>
+              <button type="button" class="btn-submit" style="padding:10px 22px; font-size:14px; box-shadow:none;" onclick="saveAllReviewsToLive()">
+                💾 Save All Reviews (Instant Live)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div><!-- end viewReviewsManager -->
+
+      <!-- VIEW 5: POPULAR USED CARS IN INDIA STUDIO -->
+      <div id="viewUsedCarsManager" style="display:none;">
+        <div class="section-card" style="margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h3 class="section-title">🚗 Popular Used Cars in India Studio</h3>
+              <p class="section-desc">
+                Select any Popular Used Car below to edit its Hero Image (1 main image), add or remove Other Images (gallery), update used price range, or add a new popular used car.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-act btn-act-show" onclick="createNewPopularUsedCar()">
+                ➕ Add Popular Used Car
+              </button>
+              <button type="button" class="btn-act btn-act-show" style="background:#2563EB;" onclick="saveAllUsedCarsToLive()">
+                💾 Save Used Cars (Live Update)
+              </button>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetUsedCarsToDefaults()">
+                🔄 Reset Defaults
+              </button>
+            </div>
+          </div>
+
+          <div class="studio-item-list" id="usedCarsSelectorList">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Used Car Editor Workspace -->
+        <div id="usedCarEditorWorkspace">
+          <!-- 1. Used Car Hero Image Studio -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">📸 1. Used Car Hero Image (Primary Card Photo)</h4>
+              <span style="font-size:12px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 10px; border-radius:12px;">1 Hero Image</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:center;">
+                <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:12px; text-align:center; min-height:150px; display:flex; align-items:center; justify-content:center;">
+                  <img id="usedHeroPreview" src="" alt="Used Car Hero Preview" style="max-width:100%; max-height:140px; object-fit:contain;" onerror="this.src='assets/logo.png'">
+                </div>
+                <div>
+                  <label class="form-label">Hero Image Direct URL</label>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <input type="url" id="usedHeroUrlInput" class="form-input" style="flex:1; min-width:240px;" placeholder="https://ik.imagekit.io/..." oninput="previewUsedCarHero(this.value)">
+                    <button type="button" class="btn-act btn-act-show" onclick="setUsedCarHeroFromInput()">Set Hero Image</button>
+                    <button type="button" class="btn-act btn-act-hide" onclick="removeUsedCarHeroImage()">Remove</button>
+                  </div>
+                  <div style="margin-top:10px; font-size:12px; color:#64748B;">
+                    💡 <em>Tip: Paste any image URL above or click "Make Hero" on any of the Other Images below.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Used Car Other Images (Gallery) -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">🖼️ 2. Other Images of This Used Car (<span id="usedGalleryCount">0</span> Other Images)</h4>
+              <span style="font-size:12px; font-weight:700; color:#0284C7; background:#E0F2FE; padding:3px 10px; border-radius:12px;">Interactive Card Thumbnails</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="background:#F0F9FF; border:1px solid #BAE6FD; border-radius:14px; padding:16px; margin-bottom:18px;">
+                <h5 style="margin:0 0 10px; font-size:13.5px; color:#0369A1; font-weight:800;">➕ Add Another Image to This Used Car</h5>
+                <div style="display:grid; grid-template-columns: 2fr 1.5fr auto; gap:12px; align-items:flex-end;">
+                  <div>
+                    <label class="form-label" style="font-size:11px;">Image URL</label>
+                    <input type="url" id="usedNewGalleryUrl" class="form-input" placeholder="https://ik.imagekit.io/...">
+                  </div>
+                  <div>
+                    <label class="form-label" style="font-size:11px;">Caption / Angle Name</label>
+                    <input type="text" id="usedNewGalleryCaption" class="form-input" placeholder="e.g. Rear Quarter / Interior Cabin">
+                  </div>
+                  <button type="button" class="btn-submit" style="padding:10px 18px; font-size:13px;" onclick="addUsedCarOtherImage()">
+                    ➕ Add Image
+                  </button>
+                </div>
+              </div>
+
+              <div class="editor-gallery-grid" id="usedGalleryGrid">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Used Car Details & Pricing -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">📋 3. Used Car Pricing, Years & Highlights</h4>
+              <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentPopularUsedCar()">🗑️ Delete This Used Car</button>
+            </div>
+            <div class="editor-sec-body">
+              <div class="form-grid-2" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Car Model Name *</label>
+                  <input type="text" id="usedNameInput" class="form-input" placeholder="e.g. Maruti Suzuki Swift" oninput="syncCurrentUsedCarFields()">
+                </div>
+                <div>
+                  <label class="form-label">Brand *</label>
+                  <input type="text" id="usedBrandInput" class="form-input" placeholder="e.g. Maruti Suzuki" oninput="syncCurrentUsedCarFields()">
+                </div>
+              </div>
+              <div class="form-grid-2" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Used Price Range Benchmark *</label>
+                  <input type="text" id="usedPriceInput" class="form-input" placeholder="e.g. ₹2.50 – ₹7.20 Lakh" oninput="syncCurrentUsedCarFields()">
+                </div>
+                <div>
+                  <label class="form-label">Recommended Model Years</label>
+                  <input type="text" id="usedYearsInput" class="form-input" placeholder="e.g. 2018 – 2024" oninput="syncCurrentUsedCarFields()">
+                </div>
+              </div>
+              <div class="form-grid-2" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Body Type</label>
+                  <input type="text" id="usedBodyTypeInput" class="form-input" placeholder="e.g. Hatchback / Midsize SUV" oninput="syncCurrentUsedCarFields()">
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                  <div>
+                    <label class="form-label">Fuel Types (comma-separated)</label>
+                    <input type="text" id="usedFuelsInput" class="form-input" placeholder="Petrol, CNG, Diesel" oninput="syncCurrentUsedCarFields()">
+                  </div>
+                  <div>
+                    <label class="form-label">Real-World Mileage</label>
+                    <input type="text" id="usedMileageInput" class="form-input" placeholder="e.g. 22.5 – 32.8 km/l" oninput="syncCurrentUsedCarFields()">
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Resale Value Highlight / Buying Advice</label>
+                <textarea id="usedHighlightInput" class="form-textarea" rows="2" oninput="syncCurrentUsedCarFields()"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="editor-floating-bar">
+            <div style="color:#FFFFFF; font-size:13px; font-weight:700;">
+              Editing Used Car: <span id="barUsedCarName" style="color:#60A5FA;">--</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <a href="index.html#popularUsedCarsSection" target="_blank" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; text-decoration:none;">
+                👁️ View on Home Page ↗
+              </a>
+              <button type="button" class="btn-submit" style="padding:10px 22px; font-size:14px; box-shadow:none;" onclick="saveAllUsedCarsToLive()">
+                💾 Save Used Cars (Instant Live)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div><!-- end viewUsedCarsManager -->
+
     </div>
   </div>
 
@@ -2152,47 +2549,63 @@
     let activeCarTableFilter = 'all';
 
     function switchAdminTab(tabName) {
-      const tabVis = document.getElementById('tabBtnVisibility');
-      const tabAdd = document.getElementById('tabBtnAddCar');
-      const tabEditor = document.getElementById('tabBtnCarEditor');
-      const viewVis = document.getElementById('viewVisibility');
-      const viewAdd = document.getElementById('viewAddCar');
-      const viewEditor = document.getElementById('viewCarEditor');
+      const tabs = {
+        visibility: document.getElementById('tabBtnVisibility'),
+        carEditor: document.getElementById('tabBtnCarEditor'),
+        reviewsManager: document.getElementById('tabBtnReviewsManager'),
+        usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
+        addCar: document.getElementById('tabBtnAddCar')
+      };
+      const views = {
+        visibility: document.getElementById('viewVisibility'),
+        carEditor: document.getElementById('viewCarEditor'),
+        reviewsManager: document.getElementById('viewReviewsManager'),
+        usedCarsManager: document.getElementById('viewUsedCarsManager'),
+        addCar: document.getElementById('viewAddCar')
+      };
+
+      Object.keys(tabs).forEach(k => {
+        if (tabs[k]) tabs[k].classList.toggle('active', k === tabName);
+        if (views[k]) views[k].style.display = (k === tabName) ? 'block' : 'none';
+      });
 
       if (tabName === 'visibility') {
-        tabVis.classList.add('active');
-        if (tabAdd) tabAdd.classList.remove('active');
-        if (tabEditor) tabEditor.classList.remove('active');
-        if (viewVis) viewVis.style.display = 'block';
-        if (viewAdd) viewAdd.style.display = 'none';
-        if (viewEditor) viewEditor.style.display = 'none';
         renderVisibilityManager();
-      } else if (tabName === 'addCar') {
-        if (tabAdd) tabAdd.classList.add('active');
-        if (tabVis) tabVis.classList.remove('active');
-        if (tabEditor) tabEditor.classList.remove('active');
-        if (viewVis) viewVis.style.display = 'none';
-        if (viewAdd) viewAdd.style.display = 'block';
-        if (viewEditor) viewEditor.style.display = 'none';
       } else if (tabName === 'carEditor') {
-        if (tabEditor) tabEditor.classList.add('active');
-        if (tabVis) tabVis.classList.remove('active');
-        if (tabAdd) tabAdd.classList.remove('active');
-        if (viewVis) viewVis.style.display = 'none';
-        if (viewAdd) viewAdd.style.display = 'none';
-        if (viewEditor) viewEditor.style.display = 'block';
-        if (typeof window.initCarEditor === 'function') {
-          window.initCarEditor();
-        }
+        initCarEditor();
+      } else if (tabName === 'reviewsManager') {
+        initReviewsManager();
+      } else if (tabName === 'usedCarsManager') {
+        initUsedCarsManager();
       }
     }
+    window.switchAdminTab = switchAdminTab;
+
+    function openCarInEditor(carId) {
+      switchAdminTab('carEditor');
+      const select = document.getElementById('editorCarSelect');
+      if (select) {
+        select.value = carId;
+      }
+      loadCarIntoEditor(carId);
+    }
+    window.openCarInEditor = openCarInEditor;
 
     function getCatalogCars() {
       try {
         const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
         const customIds = new Set(custom.map(c => c.id));
         const base = (window.APP_CARS || []).filter(c => !customIds.has(c.id));
-        return [...custom, ...base];
+        const all = [...custom, ...base];
+        const customizations = JSON.parse(localStorage.getItem('cmv_car_customizations') || '{}');
+        return all.map(car => {
+          const ov = customizations[car.id];
+          if (!ov) return car;
+          return Object.assign({}, car, {
+            heroImage: ov.heroImage || car.heroImage,
+            gallery: ov.gallery || car.gallery
+          });
+        });
       } catch (e) {
         return window.APP_CARS || [];
       }
@@ -2232,6 +2645,7 @@
         toast.style.display = 'none';
       }, 3500);
     }
+    window.showToast = showToast;
 
     function initVisibilityManager() {
       renderVisibilityManager();
@@ -2245,11 +2659,11 @@
       const hiddenBrands = getHiddenBrands();
 
       if (!cars || cars.length === 0) {
-        document.getElementById('metricTotalCars').textContent = '...';
+        const mTotal = document.getElementById('metricTotalCars');
+        if (mTotal) mTotal.textContent = '...';
         return;
       }
 
-      // 1. Group cars by brand
       const brandMap = new Map();
       cars.forEach(car => {
         if (!brandMap.has(car.brand)) {
@@ -2258,7 +2672,6 @@
         brandMap.get(car.brand).push(car);
       });
 
-      // 2. Compute Metric Counters
       let totalCarsCount = cars.length;
       let hiddenCarsCount = 0;
 
@@ -2279,20 +2692,18 @@
       document.getElementById('metricHiddenBrands').textContent = hiddenBrandsCount;
 
       const tabBadge = document.getElementById('tabHiddenBadge');
-      if (hiddenCarsCount > 0) {
-        tabBadge.style.display = 'inline-block';
-        tabBadge.textContent = `${hiddenCarsCount} hidden`;
-      } else {
-        tabBadge.style.display = 'none';
+      if (tabBadge) {
+        if (hiddenCarsCount > 0) {
+          tabBadge.style.display = 'inline-block';
+          tabBadge.textContent = `${hiddenCarsCount} hidden`;
+        } else {
+          tabBadge.style.display = 'none';
+        }
       }
 
-      // 3. Render Brands Grid
       renderBrandsGrid(brandMap, hiddenBrands, hiddenCars);
-
-      // 4. Render Cars Table
       renderCarsTable(cars, hiddenCars, hiddenBrands);
 
-      // 5. Update pill counts
       document.getElementById('pillCountAll').textContent = totalCarsCount;
       document.getElementById('pillCountVisible').textContent = visibleCarsCount;
       document.getElementById('pillCountHidden').textContent = hiddenCarsCount;
@@ -2309,7 +2720,6 @@
         const models = brandMap.get(brand);
         const isBrandHidden = hiddenBrands.has(brand);
 
-        // Check if individual cars are hidden
         const hiddenInBrand = models.filter(c => hiddenCars.has(c.id)).length;
         let statusBadge = '';
         if (isBrandHidden) {
@@ -2337,7 +2747,7 @@
             </div>
             <div>
               <button type="button" 
-                      class="btn-brand-toggle ${isBrandHidden ? 'btn-brand-toggle btn-show' : 'btn-brand-toggle btn-hide'}" 
+                      class="btn-brand-toggle ${isBrandHidden ? 'btn-show' : 'btn-hide'}" 
                       onclick="toggleBrandVisibility('${brand.replace(/'/g, "\\'")}')">
                 ${isBrandHidden ? '👁️ Show All Brand Cars' : '🙈 Hide All Brand Cars'}
               </button>
@@ -2359,22 +2769,15 @@
 
       const filtered = allCars.filter(car => {
         const isHidden = hiddenCars.has(car.id) || hiddenBrands.has(car.brand);
-        
-        // Tab filter
         if (activeCarTableFilter === 'visible' && isHidden) return false;
         if (activeCarTableFilter === 'hidden' && !isHidden) return false;
-
-        // Brand dropdown filter
         if (selectedBrand !== 'all' && car.brand !== selectedBrand) return false;
-
-        // Search input filter
         if (searchVal) {
           const matchName = car.name.toLowerCase().includes(searchVal);
           const matchBrand = car.brand.toLowerCase().includes(searchVal);
           const matchBody = (car.bodyType || '').toLowerCase().includes(searchVal);
           if (!matchName && !matchBrand && !matchBody) return false;
         }
-
         return true;
       });
 
@@ -2427,7 +2830,10 @@
             </td>
             <td style="font-weight:700; color:var(--primary);">${car.priceRange || 'N/A'}</td>
             <td>${statusPill}</td>
-            <td style="text-align:right;">${actionBtn}</td>
+            <td style="text-align:right; display:flex; gap:6px; justify-content:flex-end; align-items:center;">
+              <button type="button" class="btn-car-act" style="background:#EFF6FF; color:#2563EB; border:1px solid #BFDBFE;" onclick="openCarInEditor('${car.id}')">🛠️ Edit Images & Page</button>
+              ${actionBtn}
+            </td>
           </tr>
         `;
       });
@@ -2441,16 +2847,14 @@
       if (!select) return;
       const cars = getCatalogCars();
       const brands = [...new Set(cars.map(c => c.brand))].sort();
-      
       const currentVal = select.value;
-      select.innerHTML = '<option value="all">All Brands</option>' + 
+      select.innerHTML = '<option value="all">All Brands</option>' +
         brands.map(b => `<option value="${b}">${b}</option>`).join('');
       if (brands.includes(currentVal)) {
         select.value = currentVal;
       }
     }
 
-    // Toggle Single Car Visibility
     function toggleCarVisibility(carId) {
       const hiddenCars = getHiddenCars();
       const hiddenBrands = getHiddenBrands();
@@ -2461,7 +2865,6 @@
       if (hiddenCars.has(carId)) {
         hiddenCars.delete(carId);
         saveHiddenCars(hiddenCars);
-        // If brand was hidden, prompt/unhide brand too
         if (car && hiddenBrands.has(car.brand)) {
           hiddenBrands.delete(car.brand);
           saveHiddenBrands(hiddenBrands);
@@ -2474,12 +2877,10 @@
         saveHiddenCars(hiddenCars);
         showToast(`🙈 "${carName}" is now hidden from live website!`);
       }
-
       renderVisibilityManager();
     }
     window.toggleCarVisibility = toggleCarVisibility;
 
-    // Toggle Brand Visibility
     function toggleBrandVisibility(brandName) {
       const hiddenBrands = getHiddenBrands();
       const hiddenCars = getHiddenCars();
@@ -2488,7 +2889,6 @@
       if (hiddenBrands.has(brandName)) {
         hiddenBrands.delete(brandName);
         saveHiddenBrands(hiddenBrands);
-        // Also unhide individual cars under this brand for a clean restore
         cars.filter(c => c.brand === brandName).forEach(c => hiddenCars.delete(c.id));
         saveHiddenCars(hiddenCars);
         showToast(`👁️ All models for "${brandName}" are now visible!`);
@@ -2497,15 +2897,12 @@
         saveHiddenBrands(hiddenBrands);
         showToast(`🙈 All models for "${brandName}" are now hidden!`);
       }
-
       renderVisibilityManager();
     }
     window.toggleBrandVisibility = toggleBrandVisibility;
 
-    // Bulk Brand Selection Handlers
     function toggleSelectAllBrands(checked) {
-      const checks = document.querySelectorAll('.brand-item-check');
-      checks.forEach(c => c.checked = checked);
+      document.querySelectorAll('.brand-item-check').forEach(c => c.checked = checked);
       updateSelectedBrandsCount();
     }
     window.toggleSelectAllBrands = toggleSelectAllBrands;
@@ -2554,10 +2951,8 @@
     }
     window.showSelectedBrands = showSelectedBrands;
 
-    // Bulk Car Selection Handlers
     function toggleSelectAllCars(checked) {
-      const checks = document.querySelectorAll('.car-item-check');
-      checks.forEach(c => c.checked = checked);
+      document.querySelectorAll('.car-item-check').forEach(c => c.checked = checked);
       updateSelectedCarsCount();
     }
     window.toggleSelectAllCars = toggleSelectAllCars;
@@ -2609,7 +3004,6 @@
     }
     window.showSelectedCars = showSelectedCars;
 
-    // Reset All Visibility
     function resetAllVisibility() {
       if (!confirm('Are you sure you want to make ALL cars and brands visible on the public website?')) {
         return;
@@ -2621,7 +3015,6 @@
     }
     window.resetAllVisibility = resetAllVisibility;
 
-    // Filter Cars Table
     function filterCarsTable() {
       const cars = getCatalogCars();
       const hiddenCars = getHiddenCars();
@@ -2652,16 +3045,16 @@
       const cars = getCatalogCars();
       if (!cars || cars.length === 0) return;
 
-      // Sort alphabetically by brand and name
       const sorted = [...cars].sort((a, b) => (a.brand + ' ' + a.name).localeCompare(b.brand + ' ' + b.name));
+      select.innerHTML = sorted.map(c => `<option value="${c.id}">${c.brand} ${c.name} (${c.priceRange || ''})</option>`).join('');
 
-      select.innerHTML = sorted.map(c => \`<option value="\${c.id}">\${c.brand} \${c.name} (\${c.priceRange || ''})</option>\`).join('');
-
-      // Default select Curvv or first
-      const defaultId = sorted.find(c => c.id === 'tata-curvv') ? 'tata-curvv' : sorted[0].id;
+      const defaultId = (currentEditorCarId && sorted.find(c => c.id === currentEditorCarId))
+        ? currentEditorCarId
+        : (sorted.find(c => c.id === 'tata-curvv') ? 'tata-curvv' : sorted[0].id);
       select.value = defaultId;
       loadCarIntoEditor(defaultId);
     }
+    window.initCarEditor = initCarEditor;
 
     function filterEditorCarSelect(query) {
       const q = (query || '').toLowerCase().trim();
@@ -2672,10 +3065,11 @@
       const matched = cars.filter(c => (c.name || '').toLowerCase().includes(q) || (c.brand || '').toLowerCase().includes(q));
 
       if (matched.length > 0) {
-        select.innerHTML = matched.map(c => \`<option value="\${c.id}">\${c.brand} \${c.name} (\${c.priceRange || ''})</option>\`).join('');
+        select.innerHTML = matched.map(c => `<option value="${c.id}">${c.brand} ${c.name} (${c.priceRange || ''})</option>`).join('');
         loadCarIntoEditor(matched[0].id);
       }
     }
+    window.filterEditorCarSelect = filterEditorCarSelect;
 
     function getCustomizations() {
       try {
@@ -2687,21 +3081,20 @@
 
     function loadCarIntoEditor(carId) {
       currentEditorCarId = carId;
-      const allCars = getCatalogCars();
-      const baseCar = allCars.find(c => c.id === carId);
+      const allCars = window.APP_CARS || [];
+      const baseCar = allCars.find(c => c.id === carId) || getCatalogCars().find(c => c.id === carId);
       if (!baseCar) return;
 
       const allCustom = getCustomizations();
       const saved = allCustom[carId] || {};
 
-      // Clone or build active working copy
       editorCarData = {
         id: baseCar.id,
         name: baseCar.name,
         brand: baseCar.brand,
         priceRange: baseCar.priceRange,
         safetyRating: baseCar.safetyRating,
-        heroImage: saved.heroImage || baseCar.heroImage || '',
+        heroImage: saved.heroImage !== undefined ? saved.heroImage : (baseCar.heroImage || ''),
         gallery: saved.gallery || (baseCar.gallery ? JSON.parse(JSON.stringify(baseCar.gallery)) : []),
         sectionsEnabled: Object.assign({
           variants: true,
@@ -2717,32 +3110,32 @@
         }, saved.sectionsEnabled || {}),
         variants: saved.variants || (baseCar.variants ? JSON.parse(JSON.stringify(baseCar.variants)) : []),
         latestUpdates: saved.latestUpdates || {
-          headline: \`\${baseCar.name} 2025–2026 Lineup: Price Revisions & Waiting Period Updates\`,
+          headline: `${baseCar.name} 2025–2026 Lineup: Price Revisions & Waiting Period Updates`,
           date: 'October 2026',
           highlights: [
-            \`Deliveries underway with average waiting period of \${baseCar.waitingPeriod || '3 to 6 weeks'}.\`,
-            \`Safety certified with \${baseCar.safetyRating || 'top crash-test safety credentials'}.\`,
-            \`Enhanced feature packaging introduced with wireless phone charging & connected car tech.\`
+            `Deliveries underway with average waiting period of ${baseCar.waitingPeriod || '3 to 6 weeks'}.`,
+            `Safety certified with ${baseCar.safetyRating || 'top crash-test safety credentials'}.`,
+            `Enhanced feature packaging introduced with wireless phone charging & connected car tech.`
           ]
         },
         pros: saved.pros || [
-          \`Striking road presence with bold LED illumination and sculpted exterior styling.\`,
-          baseCar.safetyRating && baseCar.safetyRating.includes('5') ? \`Top safety credentials: \${baseCar.safetyRating}\` : \`Comprehensive 6 airbags and electronic stability control standard.\`,
-          baseCar.bootSpace ? \`Generous luggage room of \${baseCar.bootSpace} for family road trips.\` : \`Ergonomically planned passenger cabin with generous utility storage.\`,
-          baseCar.groundClearance ? \`Confidence-inspiring ground clearance of \${baseCar.groundClearance} for uneven terrain.\` : \`Comfortable ride tuned for varied Indian road surfaces.\`
+          `Striking road presence with bold LED illumination and sculpted exterior styling.`,
+          baseCar.safetyRating && baseCar.safetyRating.includes('5') ? `Top safety credentials: ${baseCar.safetyRating}` : `Comprehensive 6 airbags and electronic stability control standard.`,
+          baseCar.bootSpace ? `Generous luggage room of ${baseCar.bootSpace} for family road trips.` : `Ergonomically planned passenger cabin with generous utility storage.`,
+          baseCar.groundClearance ? `Confidence-inspiring ground clearance of ${baseCar.groundClearance} for uneven terrain.` : `Comfortable ride tuned for varied Indian road surfaces.`
         ],
         cons: saved.cons || [
-          baseCar.waitingPeriod ? \`Showroom waiting period of approximately \${baseCar.waitingPeriod} on popular trims.\` : \`High market demand resulting in wait times on popular color finishes.\`,
-          \`Urban stop-and-go fuel efficiency drops noticeably compared to official ARAI test figures.\`,
-          \`Low-speed ride can feel slightly firm over sharp potholes.\`
+          baseCar.waitingPeriod ? `Showroom waiting period of approximately ${baseCar.waitingPeriod} on popular trims.` : `High market demand resulting in wait times on popular color finishes.`,
+          `Urban stop-and-go fuel efficiency drops noticeably compared to official ARAI test figures.`,
+          `Low-speed ride can feel slightly firm over sharp potholes.`
         ],
         engines: saved.engines || [
           {
             id: 'engine-1',
-            label: (baseCar.specs && baseCar.specs.engineOptions && typeof baseCar.specs.engineOptions === 'string' && baseCar.specs.engineOptions.includes('1.0L')) ? '1.0L Turbo Petrol' : '1.2L / 1.5L Petrol',
+            label: '1.2L / 1.5L Petrol',
             power: '120 PS @ 5500 RPM',
             torque: '172 Nm @ 1750 RPM',
-            trans: '6-Speed MT / 7-Speed Automatic',
+            trans: '6-Speed MT / Automatic',
             positives: [
               'Strong mid-range punch providing effortless highway overtakes.',
               'Refined engine NVH characteristics with low cruising vibrations.'
@@ -2750,21 +3143,6 @@
             negatives: [
               'Noticeable turbo lag below 1,600 RPM in slow crawling city traffic.',
               'Fuel economy is sensitive to aggressive throttle inputs.'
-            ]
-          },
-          {
-            id: 'engine-2',
-            label: (baseCar.fuelTypes || []).includes('CNG') ? '1.0L / 1.2L Bi-Fuel CNG' : ((baseCar.fuelTypes || []).includes('Diesel') ? '1.5L Turbo Diesel' : '1.0L / 1.2L Naturally Aspirated'),
-            power: '88 PS @ 6000 RPM',
-            torque: '115 Nm @ 4200 RPM',
-            trans: '5-Speed Manual',
-            positives: [
-              'Extremely pocket-friendly running costs under ₹2.50 per kilometre.',
-              'Clean dual-cylinder technology preserving practical luggage room.'
-            ],
-            negatives: [
-              'Noticeable drop in peak horsepower when fully loaded with 5 passengers.',
-              'Queues at urban CNG pumps during morning rush hours.'
             ]
           }
         ],
@@ -2783,39 +3161,1028 @@
         ],
         reviewScore: saved.reviewScore || 4.8,
         userReviews: saved.userReviews || [
-          { name: 'Vikram Malhotra', city: 'Delhi NCR', rating: 5, date: 'October 2026', title: 'Outstanding driving dynamics & comfort', comment: \`We completed a 1,200 km road trip with 4 adults. The \${baseCar.name} handled twisty mountain climbs effortlessly.\` },
-          { name: 'Pooja Sharma', city: 'Bengaluru', rating: 5, date: 'September 2026', title: 'Best safety and high-tech cabin', comment: \`The high-resolution touchscreen and 360-degree camera make city driving stress-free.\` }
+          { name: 'Vikram Malhotra', city: 'Delhi NCR', rating: 5, date: 'October 2026', title: 'Outstanding driving dynamics & comfort', comment: `We completed a 1,200 km road trip with 4 adults. The ${baseCar.name} handled twisty mountain climbs effortlessly.` },
+          { name: 'Pooja Sharma', city: 'Bengaluru', rating: 5, date: 'September 2026', title: 'Best safety and high-tech cabin', comment: `The high-resolution touchscreen and 360-degree camera make city driving stress-free.` }
         ],
         faqs: saved.faqs || [
-          { q: \`What is the ex-showroom and on-road price of \${baseCar.name} in India?\`, a: \`Ex-showroom price starts from \${baseCar.priceRange}. On-road prices in Delhi NCR start from approximately \${(baseCar.minPrice * 1.12 / 100000).toFixed(2)} Lakh including state RTO taxes & insurance.\` },
-          { q: \`What is the real-world mileage of \${baseCar.name}?\`, a: \`Under mixed driving conditions, it achieves approximately 12.5 to 14.5 kmpl in city traffic and 17 to 19.5 kmpl on open expressways.\` },
-          { q: \`What is the safety rating of \${baseCar.name}?\`, a: \`It comes rated \${baseCar.safetyRating || 'with 5-star crash safety credentials'}, featuring 6 airbags standard, ESP, and ISOFIX child anchors.\` }
+          { q: `What is the ex-showroom and on-road price of ${baseCar.name} in India?`, a: `Ex-showroom price starts from ${baseCar.priceRange}.` },
+          { q: `What is the real-world mileage of ${baseCar.name}?`, a: `Under mixed driving conditions, it achieves approximately 13 to 15 kmpl in city traffic and 17 to 19.5 kmpl on expressways.` },
+          { q: `What is the safety rating of ${baseCar.name}?`, a: `It comes rated ${baseCar.safetyRating || 'with 5-star crash safety credentials'}, featuring 6 airbags standard.` }
         ]
       };
 
       renderEditorUI();
     }
+    window.loadCarIntoEditor = loadCarIntoEditor;
 
     function renderEditorUI() {
       if (!editorCarData) return;
 
-      // 1. Summary Badge
       const summaryEl = document.getElementById('editorCarSummaryBadge');
       if (summaryEl) {
-        summaryEl.innerHTML = \`
+        summaryEl.innerHTML = `
           <div style="display:flex; align-items:center; gap:12px;">
-            <img src="\${editorCarData.heroImage || 'assets/logo.png'}" style="width:48px; height:36px; object-fit:contain; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:6px; padding:2px;">
+            <img src="${editorCarData.heroImage || 'assets/logo.png'}" style="width:52px; height:38px; object-fit:contain; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:6px; padding:2px;" onerror="this.src='assets/logo.png'">
             <div>
-              <strong style="font-size:15px; color:#0F172A;">\${editorCarData.brand} \${editorCarData.name}</strong>
-              <div style="font-size:12px; color:#64748B;">Price: \${editorCarData.priceRange} &bull; Rating: \${editorCarData.safetyRating || 'High Safety'}</div>
+              <strong style="font-size:15px; color:#0F172A;">${editorCarData.brand} ${editorCarData.name}</strong>
+              <div style="font-size:12px; color:#64748B;">Price: ${editorCarData.priceRange} &bull; Rating: ${editorCarData.safetyRating || 'High Safety'}</div>
             </div>
           </div>
           <div style="display:flex; align-items:center; gap:10px;">
             <span style="font-size:11px; font-weight:800; background:#DCFCE7; color:#15803D; padding:4px 10px; border-radius:12px;">LIVE READY</span>
-            <a href="/cars/\${editorCarData.id}.html" target="_blank" style="font-size:12.5px; font-weight:800; color:#0284C7; text-decoration:none;">Open Live Car Page ↗</a>
+            <a href="cars/${editorCarData.id}.html" target="_blank" style="font-size:12.5px; font-weight:800; color:#0284C7; text-decoration:none;">Open Live Car Page ↗</a>
           </div>
-        \
-</script>
+        `;
+      }
+
+      const barName = document.getElementById('barCarName');
+      if (barName) barName.textContent = `${editorCarData.brand} ${editorCarData.name}`;
+
+      // Hero Image
+      const heroImg = document.getElementById('edHeroPreview');
+      const heroInput = document.getElementById('edHeroUrlInput');
+      const heroMissing = document.getElementById('edHeroMissingTag');
+      if (heroInput) heroInput.value = editorCarData.heroImage || '';
+      if (heroImg) {
+        if (editorCarData.heroImage) {
+          heroImg.src = editorCarData.heroImage;
+          heroImg.style.display = 'block';
+          if (heroMissing) heroMissing.style.display = 'none';
+        } else {
+          heroImg.style.display = 'none';
+          if (heroMissing) heroMissing.style.display = 'block';
+        }
+      }
+
+      // Gallery Grid
+      const galCount = document.getElementById('edGalleryCount');
+      const galGrid = document.getElementById('edGalleryGrid');
+      if (galCount) galCount.textContent = (editorCarData.gallery || []).length;
+      if (galGrid) {
+        if (!editorCarData.gallery || editorCarData.gallery.length === 0) {
+          galGrid.innerHTML = `<div style="grid-column:1/-1; padding:24px; text-align:center; color:#64748B;">No additional gallery images yet. Click "+ Add New Image" above to add angles.</div>`;
+        } else {
+          galGrid.innerHTML = editorCarData.gallery.map((g, idx) => `
+            <div class="editor-gallery-item">
+              <img src="${g.url}" alt="${g.title || 'Photo'}" onerror="this.src='assets/logo.png'">
+              <div class="editor-gallery-meta">
+                <div style="font-size:12px; font-weight:800; color:#0F172A; margin-bottom:2px;">${g.title || `Photo #${idx + 1}`}</div>
+                <div style="font-size:11px; color:#64748B; margin-bottom:8px;">${g.category || 'Exterior'}</div>
+                <div class="editor-gallery-actions">
+                  <button type="button" class="btn-act btn-act-show" style="padding:4px 8px; font-size:11px; flex:1;" onclick="makeGalleryImgHero(${idx})">⭐ Make Hero</button>
+                  <button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick="deleteGalleryImg(${idx})">🗑️</button>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Section Toggles
+      const secKeys = ['variants', 'updates', 'proscons', 'performance', 'specs', 'colours', 'mileage', 'reviews', 'news', 'faqs'];
+      secKeys.forEach(k => {
+        const cap = k.charAt(0).toUpperCase() + k.slice(1);
+        const toggle = document.getElementById('toggleSec' + cap);
+        const label = document.getElementById('labelSec' + cap);
+        const card = document.getElementById('cardSec' + cap);
+        const enabled = editorCarData.sectionsEnabled[k] !== false;
+        if (toggle) toggle.checked = enabled;
+        if (label) {
+          label.textContent = enabled ? 'Active' : 'Hidden';
+          label.style.color = enabled ? '#16A34A' : '#EF4444';
+        }
+        if (card) card.classList.toggle('sec-disabled', !enabled);
+      });
+
+      // 1. Variants Table
+      const varTbody = document.getElementById('edVariantsTbody');
+      if (varTbody) {
+        varTbody.innerHTML = (editorCarData.variants || []).map((v, i) => `
+          <tr>
+            <td style="font-weight:700;">${v.name}</td>
+            <td>${v.fuel || 'Petrol'} &bull; ${v.transmission || 'Manual'}</td>
+            <td style="font-weight:800; color:var(--primary);">₹${Number(v.exShowroom || 0).toLocaleString('en-IN')}</td>
+            <td>${v.isVFM ? '<span style="background:#DCFCE7; color:#15803D; font-size:11px; font-weight:800; padding:2px 8px; border-radius:10px;">⭐ VFM</span>' : '-'}</td>
+            <td><button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteEditorVariant(${i})">🗑️ Delete</button></td>
+          </tr>
+        `).join('');
+      }
+
+      // 2. Updates
+      const upHead = document.getElementById('edUpdatesHeadline');
+      const upDate = document.getElementById('edUpdatesDate');
+      const upList = document.getElementById('edUpdatesBulletsList');
+      if (upHead) upHead.value = editorCarData.latestUpdates?.headline || '';
+      if (upDate) upDate.value = editorCarData.latestUpdates?.date || '';
+      if (upList) {
+        upList.innerHTML = (editorCarData.latestUpdates?.highlights || []).map((b, i) => `
+          <div style="display:flex; gap:8px; align-items:center;">
+            <input type="text" class="form-input" value="${(b || '').replace(/"/g, '&quot;')}" oninput="editorCarData.latestUpdates.highlights[${i}] = this.value">
+            <button type="button" class="btn-act btn-act-hide" style="padding:6px 10px;" onclick="deleteUpdateBullet(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+
+      // 3. Pros & Cons
+      const prosList = document.getElementById('edProsList');
+      const consList = document.getElementById('edConsList');
+      if (prosList) {
+        prosList.innerHTML = (editorCarData.pros || []).map((p, i) => `
+          <div style="display:flex; gap:8px; align-items:center;">
+            <input type="text" class="form-input" value="${(p || '').replace(/"/g, '&quot;')}" oninput="editorCarData.pros[${i}] = this.value">
+            <button type="button" class="btn-act btn-act-hide" style="padding:6px 10px;" onclick="deletePro(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+      if (consList) {
+        consList.innerHTML = (editorCarData.cons || []).map((c, i) => `
+          <div style="display:flex; gap:8px; align-items:center;">
+            <input type="text" class="form-input" value="${(c || '').replace(/"/g, '&quot;')}" oninput="editorCarData.cons[${i}] = this.value">
+            <button type="button" class="btn-act btn-act-hide" style="padding:6px 10px;" onclick="deleteCon(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+
+      // 4. Engine & Performance
+      const engList = document.getElementById('edEngineList');
+      if (engList) {
+        engList.innerHTML = (editorCarData.engines || []).map((eng, i) => `
+          <div style="border:1px solid #E2E8F0; border-radius:12px; padding:14px; background:#F8FAFC;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:13.5px; color:#0F172A;">🔧 ${eng.label}</strong>
+              <button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deletePowertrain(${i})">🗑️ Remove</button>
+            </div>
+            <div style="font-size:12px; color:#475569;">Power: ${eng.power} &bull; Torque: ${eng.torque} &bull; Trans: ${eng.trans}</div>
+          </div>
+        `).join('');
+      }
+
+      // 5. Specs
+      const specsTbody = document.getElementById('edSpecsTbody');
+      if (specsTbody) {
+        specsTbody.innerHTML = (editorCarData.specsList || []).map((s, i) => `
+          <tr>
+            <td style="font-weight:700;">${s.label}</td>
+            <td><input type="text" class="form-input" value="${(s.value || '').replace(/"/g, '&quot;')}" oninput="editorCarData.specsList[${i}].value = this.value"></td>
+            <td><button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteSpecRow(${i})">🗑️</button></td>
+          </tr>
+        `).join('');
+      }
+
+      // 6. Colours
+      const colList = document.getElementById('edColorsList');
+      if (colList) {
+        colList.innerHTML = (editorCarData.colors || []).map((c, i) => `
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border:1px solid #E2E8F0; border-radius:10px; background:#FFFFFF;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="width:24px; height:24px; border-radius:50%; background:${c.hex || '#2563EB'}; border:1px solid #CBD5E1; display:inline-block;"></span>
+              <div>
+                <div style="font-size:13px; font-weight:700;">${c.name}</div>
+                <div style="font-size:11px; color:#64748B;">${c.hex || ''}</div>
+              </div>
+            </div>
+            <button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteColorSwatch(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+
+      // 7. Mileage
+      const milTbody = document.getElementById('edMileageTbody');
+      if (milTbody) {
+        milTbody.innerHTML = (editorCarData.mileageRows || []).map((m, i) => `
+          <tr>
+            <td style="font-weight:700;">${m.powertrain}</td>
+            <td>${m.arai}</td>
+            <td>${m.city}</td>
+            <td>${m.highway}</td>
+            <td><button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteMileageRow(${i})">🗑️</button></td>
+          </tr>
+        `).join('');
+      }
+
+      // 8. Reviews
+      const revScore = document.getElementById('edReviewOverallScore');
+      const revList = document.getElementById('edReviewsList');
+      if (revScore) revScore.value = editorCarData.reviewScore || 4.8;
+      if (revList) {
+        revList.innerHTML = (editorCarData.userReviews || []).map((r, i) => `
+          <div style="border:1px solid #E2E8F0; border-radius:10px; padding:12px; background:#F8FAFC; display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+            <div>
+              <div style="font-size:13px; font-weight:800; color:#0F172A;">${r.title} (${r.rating}★)</div>
+              <div style="font-size:11.5px; color:#64748B; margin-bottom:4px;">By ${r.name} &bull; ${r.city}</div>
+              <div style="font-size:12.5px; color:#334155;">${r.comment}</div>
+            </div>
+            <button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteUserReview(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+
+      // 10. FAQs
+      const faqsList = document.getElementById('edFaqsList');
+      if (faqsList) {
+        faqsList.innerHTML = (editorCarData.faqs || []).map((f, i) => `
+          <div style="border:1px solid #E2E8F0; border-radius:10px; padding:12px; background:#F8FAFC; display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+            <div style="flex:1;">
+              <div style="font-size:13px; font-weight:800; color:#0F172A; margin-bottom:4px;">Q: ${f.q}</div>
+              <div style="font-size:12.5px; color:#475569;">A: ${f.a}</div>
+            </div>
+            <button type="button" class="btn-act btn-act-hide" style="padding:3px 8px; font-size:11px;" onclick="deleteFaqItem(${i})">🗑️</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function updateHeroPreview(url) {
+      const heroImg = document.getElementById('edHeroPreview');
+      const heroMissing = document.getElementById('edHeroMissingTag');
+      if (!heroImg) return;
+      if (url && url.trim()) {
+        heroImg.src = url.trim();
+        heroImg.style.display = 'block';
+        if (heroMissing) heroMissing.style.display = 'none';
+      } else {
+        heroImg.style.display = 'none';
+        if (heroMissing) heroMissing.style.display = 'block';
+      }
+    }
+    window.updateHeroPreview = updateHeroPreview;
+
+    function applyHeroUrlFromInput() {
+      if (!editorCarData) return;
+      const url = document.getElementById('edHeroUrlInput')?.value.trim() || '';
+      editorCarData.heroImage = url;
+      renderEditorUI();
+      showToast('📸 Hero image updated! Click "Save All Changes" to publish.');
+    }
+    window.applyHeroUrlFromInput = applyHeroUrlFromInput;
+
+    function removeHeroImage() {
+      if (!editorCarData) return;
+      editorCarData.heroImage = '';
+      renderEditorUI();
+      showToast('🗑️ Hero image cleared.');
+    }
+    window.removeHeroImage = removeHeroImage;
+
+    function toggleAddImageForm() {
+      const drawer = document.getElementById('addImageDrawer');
+      if (drawer) {
+        drawer.style.display = drawer.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+    window.toggleAddImageForm = toggleAddImageForm;
+
+    function addGalleryImageFromDrawer() {
+      if (!editorCarData) return;
+      const url = document.getElementById('newImgUrl')?.value.trim();
+      const title = document.getElementById('newImgTitle')?.value.trim() || 'Gallery View';
+      const category = document.getElementById('newImgCat')?.value || 'Exterior';
+      if (!url) {
+        alert('Please enter an Image URL.');
+        return;
+      }
+      editorCarData.gallery = editorCarData.gallery || [];
+      editorCarData.gallery.push({ url, title, category });
+      document.getElementById('newImgUrl').value = '';
+      document.getElementById('newImgTitle').value = '';
+      renderEditorUI();
+      showToast('🖼️ Image added to car gallery!');
+    }
+    window.addGalleryImageFromDrawer = addGalleryImageFromDrawer;
+
+    function makeGalleryImgHero(idx) {
+      if (!editorCarData || !editorCarData.gallery[idx]) return;
+      editorCarData.heroImage = editorCarData.gallery[idx].url;
+      renderEditorUI();
+      showToast('⭐ Set selected gallery photo as main Hero Image!');
+    }
+    window.makeGalleryImgHero = makeGalleryImgHero;
+
+    function deleteGalleryImg(idx) {
+      if (!editorCarData || !editorCarData.gallery) return;
+      editorCarData.gallery.splice(idx, 1);
+      renderEditorUI();
+      showToast('🗑️ Gallery image removed.');
+    }
+    window.deleteGalleryImg = deleteGalleryImg;
+
+    function handleSecToggle(secKey, isChecked) {
+      if (!editorCarData) return;
+      editorCarData.sectionsEnabled[secKey] = isChecked;
+      renderEditorUI();
+    }
+    window.handleSecToggle = handleSecToggle;
+
+    function addVariantPrompt() {
+      if (!editorCarData) return;
+      const name = prompt('Enter Variant Name (e.g. Smart+ 1.2 Revotron):');
+      if (!name) return;
+      const fuel = prompt('Enter Fuel Type (Petrol / Diesel / CNG / EV):', 'Petrol') || 'Petrol';
+      const transmission = prompt('Enter Transmission (Manual / Automatic):', 'Manual') || 'Manual';
+      const exShowroom = parseInt(prompt('Enter Ex-Showroom Price in ₹ (e.g. 999990):', '999000') || '999000', 10);
+      editorCarData.variants.push({ name, fuel, transmission, exShowroom, isVFM: false, keyFeatures: ['6 Airbags', 'Touchscreen'] });
+      renderEditorUI();
+    }
+    window.addVariantPrompt = addVariantPrompt;
+
+    function deleteEditorVariant(idx) {
+      if (!editorCarData) return;
+      editorCarData.variants.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteEditorVariant = deleteEditorVariant;
+
+    function addUpdateBulletPrompt() {
+      if (!editorCarData) return;
+      const text = prompt('Enter new update highlight point:');
+      if (!text) return;
+      editorCarData.latestUpdates.highlights.push(text);
+      renderEditorUI();
+    }
+    window.addUpdateBulletPrompt = addUpdateBulletPrompt;
+
+    function deleteUpdateBullet(idx) {
+      if (!editorCarData) return;
+      editorCarData.latestUpdates.highlights.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteUpdateBullet = deleteUpdateBullet;
+
+    function addProPrompt() {
+      if (!editorCarData) return;
+      const text = prompt('Enter Pro (Thing We Love):');
+      if (!text) return;
+      editorCarData.pros.push(text);
+      renderEditorUI();
+    }
+    window.addProPrompt = addProPrompt;
+
+    function deletePro(idx) {
+      if (!editorCarData) return;
+      editorCarData.pros.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deletePro = deletePro;
+
+    function addConPrompt() {
+      if (!editorCarData) return;
+      const text = prompt('Enter Con (Thing to Consider):');
+      if (!text) return;
+      editorCarData.cons.push(text);
+      renderEditorUI();
+    }
+    window.addConPrompt = addConPrompt;
+
+    function deleteCon(idx) {
+      if (!editorCarData) return;
+      editorCarData.cons.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteCon = deleteCon;
+
+    function addPowertrainPrompt() {
+      if (!editorCarData) return;
+      const label = prompt('Enter Powertrain Label (e.g. 1.5L Kryotec Diesel):');
+      if (!label) return;
+      const power = prompt('Enter Power (e.g. 115 PS @ 3750 RPM):', '115 PS');
+      const torque = prompt('Enter Torque (e.g. 260 Nm @ 1500 RPM):', '250 Nm');
+      const trans = prompt('Enter Transmission (e.g. 6-Speed MT / 7-Speed DCA):', '6-Speed MT');
+      editorCarData.engines.push({ id: 'eng-' + Date.now(), label, power, torque, trans, positives: [], negatives: [] });
+      renderEditorUI();
+    }
+    window.addPowertrainPrompt = addPowertrainPrompt;
+
+    function deletePowertrain(idx) {
+      if (!editorCarData) return;
+      editorCarData.engines.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deletePowertrain = deletePowertrain;
+
+    function addSpecPrompt() {
+      if (!editorCarData) return;
+      const label = prompt('Enter Specification Name (e.g. Sunroof Type):');
+      if (!label) return;
+      const value = prompt('Enter Specification Value (e.g. Voice-Assisted Panoramic):', '');
+      editorCarData.specsList.push({ label, value });
+      renderEditorUI();
+    }
+    window.addSpecPrompt = addSpecPrompt;
+
+    function deleteSpecRow(idx) {
+      if (!editorCarData) return;
+      editorCarData.specsList.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteSpecRow = deleteSpecRow;
+
+    function addColorPrompt() {
+      if (!editorCarData) return;
+      const name = prompt('Enter Color Name (e.g. Flame Red Dual Tone):');
+      if (!name) return;
+      const hex = prompt('Enter Hex Code (e.g. #DC2626):', '#DC2626') || '#DC2626';
+      editorCarData.colors.push({ name, hex });
+      renderEditorUI();
+    }
+    window.addColorPrompt = addColorPrompt;
+
+    function deleteColorSwatch(idx) {
+      if (!editorCarData) return;
+      editorCarData.colors.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteColorSwatch = deleteColorSwatch;
+
+    function addMileageRowPrompt() {
+      if (!editorCarData) return;
+      const powertrain = prompt('Enter Engine & Transmission (e.g. 1.2L Turbo Petrol DCA):');
+      if (!powertrain) return;
+      const arai = prompt('Enter ARAI Claimed Mileage:', '18.5 kmpl') || '18.5 kmpl';
+      const city = prompt('Enter City Real-World Mileage:', '13.5 kmpl') || '13.5 kmpl';
+      const highway = prompt('Enter Highway Real-World Mileage:', '17.8 kmpl') || '17.8 kmpl';
+      editorCarData.mileageRows.push({ powertrain, arai, city, highway });
+      renderEditorUI();
+    }
+    window.addMileageRowPrompt = addMileageRowPrompt;
+
+    function deleteMileageRow(idx) {
+      if (!editorCarData) return;
+      editorCarData.mileageRows.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteMileageRow = deleteMileageRow;
+
+    function addUserReviewPrompt() {
+      if (!editorCarData) return;
+      const name = prompt('Reviewer Name:', 'Rahul Verma');
+      if (!name) return;
+      const city = prompt('City:', 'Mumbai') || 'Delhi NCR';
+      const title = prompt('Review Headline:', 'Great family SUV with solid safety') || 'Great car';
+      const comment = prompt('Review Comment:', 'Very comfortable and smooth on highways.') || '';
+      editorCarData.userReviews.push({ name, city, rating: 5, date: 'October 2026', title, comment });
+      renderEditorUI();
+    }
+    window.addUserReviewPrompt = addUserReviewPrompt;
+
+    function deleteUserReview(idx) {
+      if (!editorCarData) return;
+      editorCarData.userReviews.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteUserReview = deleteUserReview;
+
+    function addFaqPrompt() {
+      if (!editorCarData) return;
+      const q = prompt('Enter Question:');
+      if (!q) return;
+      const a = prompt('Enter Answer:') || '';
+      editorCarData.faqs.push({ q, a });
+      renderEditorUI();
+    }
+    window.addFaqPrompt = addFaqPrompt;
+
+    function deleteFaqItem(idx) {
+      if (!editorCarData) return;
+      editorCarData.faqs.splice(idx, 1);
+      renderEditorUI();
+    }
+    window.deleteFaqItem = deleteFaqItem;
+
+    function saveAllCarChanges() {
+      if (!editorCarData || !currentEditorCarId) return;
+      const upHead = document.getElementById('edUpdatesHeadline');
+      const upDate = document.getElementById('edUpdatesDate');
+      const revScore = document.getElementById('edReviewOverallScore');
+      if (upHead) editorCarData.latestUpdates.headline = upHead.value;
+      if (upDate) editorCarData.latestUpdates.date = upDate.value;
+      if (revScore) editorCarData.reviewScore = parseFloat(revScore.value) || 4.8;
+
+      const allCustom = getCustomizations();
+      allCustom[currentEditorCarId] = editorCarData;
+      localStorage.setItem('cmv_car_customizations', JSON.stringify(allCustom));
+      showToast(`💾 Saved all changes for ${editorCarData.brand} ${editorCarData.name}! Live on website.`);
+    }
+    window.saveAllCarChanges = saveAllCarChanges;
+
+    function openLiveCarPage() {
+      if (!currentEditorCarId) return;
+      window.open(`cars/${currentEditorCarId}.html`, '_blank');
+    }
+    window.openLiveCarPage = openLiveCarPage;
+
+    function exportCarJson() {
+      if (!editorCarData) return;
+      navigator.clipboard.writeText(JSON.stringify(editorCarData, null, 2));
+      showToast('📋 Car customization JSON copied to clipboard!');
+    }
+    window.exportCarJson = exportCarJson;
+
+    function resetCarToDefaults() {
+      if (!currentEditorCarId) return;
+      if (!confirm('Reset this car back to default factory images and data?')) return;
+      const allCustom = getCustomizations();
+      delete allCustom[currentEditorCarId];
+      localStorage.setItem('cmv_car_customizations', JSON.stringify(allCustom));
+      loadCarIntoEditor(currentEditorCarId);
+      showToast('🔄 Car restored to factory defaults!');
+    }
+    window.resetCarToDefaults = resetCarToDefaults;
+
+    // =========================================================================
+    // 📰 LATEST CAR UPDATES & EXPERT REVIEWS STUDIO (1 HERO IMAGE + OTHER IMAGES)
+    // =========================================================================
+    let adminReviewsList = [];
+    let currentReviewIndex = 0;
+
+    function getWorkingReviews() {
+      try {
+        const saved = localStorage.getItem('cmv_custom_articles');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(window.DEFAULT_ARTICLES || []));
+    }
+
+    function initReviewsManager() {
+      adminReviewsList = getWorkingReviews();
+      if (currentReviewIndex >= adminReviewsList.length) currentReviewIndex = 0;
+      renderReviewsSelector();
+      renderReviewEditor();
+    }
+    window.initReviewsManager = initReviewsManager;
+
+    function renderReviewsSelector() {
+      const container = document.getElementById('reviewsSelectorList');
+      if (!container) return;
+      container.innerHTML = adminReviewsList.map((art, idx) => {
+        const hero = art.heroImage || art.image || 'assets/logo.png';
+        const galleryCount = Array.isArray(art.gallery) ? art.gallery.length : 0;
+        return `
+          <button type="button" class="studio-item-pill ${idx === currentReviewIndex ? 'active' : ''}" onclick="selectReviewToEdit(${idx})">
+            <img src="${hero}" alt="${art.title}" onerror="this.src='assets/logo.png'">
+            <div style="overflow:hidden;">
+              <div style="font-size:10px; font-weight:800; color:#2563EB; text-transform:uppercase;">${art.category || 'EXPERT REVIEW'} &bull; 1 Hero + ${galleryCount} Other</div>
+              <div style="font-size:12.5px; font-weight:800; color:#0F172A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${art.title}</div>
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectReviewToEdit(idx) {
+      currentReviewIndex = idx;
+      renderReviewsSelector();
+      renderReviewEditor();
+    }
+    window.selectReviewToEdit = selectReviewToEdit;
+
+    function renderReviewEditor() {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art) return;
+
+      const heroUrl = art.heroImage || art.image || '';
+      const heroPreview = document.getElementById('revHeroPreview');
+      const heroInput = document.getElementById('revHeroUrlInput');
+      if (heroPreview) heroPreview.src = heroUrl || 'assets/logo.png';
+      if (heroInput) heroInput.value = heroUrl;
+
+      art.gallery = Array.isArray(art.gallery) ? art.gallery : [];
+      const galCount = document.getElementById('revGalleryCount');
+      const galGrid = document.getElementById('revGalleryGrid');
+      if (galCount) galCount.textContent = art.gallery.length;
+
+      if (galGrid) {
+        if (art.gallery.length === 0) {
+          galGrid.innerHTML = `<div style="grid-column:1/-1; padding:20px; text-align:center; color:#64748B;">No other images added yet. Use the form above to add additional photos for this review.</div>`;
+        } else {
+          galGrid.innerHTML = art.gallery.map((g, i) => `
+            <div class="editor-gallery-item">
+              <img src="${g.url}" alt="${g.caption || 'Other Image'}" onerror="this.src='assets/logo.png'">
+              <div class="editor-gallery-meta">
+                <input type="text" class="form-input" style="padding:5px 8px; font-size:11.5px; margin-bottom:8px;" value="${(g.caption || '').replace(/"/g, '&quot;')}" placeholder="Image caption" oninput="updateReviewGalleryCaption(${i}, this.value)">
+                <div class="editor-gallery-actions">
+                  <button type="button" class="btn-act btn-act-show" style="padding:4px 8px; font-size:11px; flex:1;" onclick="makeReviewGalleryHero(${i})">⭐ Make Hero</button>
+                  <button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick="deleteReviewGalleryImg(${i})">🗑️ Delete</button>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      document.getElementById('revTitleInput').value = art.title || '';
+      document.getElementById('revCategoryInput').value = art.category || 'EXPERT REVIEW';
+      document.getElementById('revAuthorInput').value = art.author || 'CMV Editorial Desk';
+      document.getElementById('revDateInput').value = art.date || 'Oct 2026';
+      document.getElementById('revReadTimeInput').value = art.readTime || '5 min read';
+      document.getElementById('revExcerptInput').value = art.excerpt || '';
+      document.getElementById('revContentInput').value = art.content || '';
+      const barTitle = document.getElementById('barReviewTitle');
+      if (barTitle) barTitle.textContent = art.title || 'Untitled Review';
+    }
+
+    function previewReviewHero(url) {
+      const heroPreview = document.getElementById('revHeroPreview');
+      if (heroPreview) heroPreview.src = (url || '').trim() || 'assets/logo.png';
+    }
+    window.previewReviewHero = previewReviewHero;
+
+    function setReviewHeroFromInput() {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art) return;
+      const url = document.getElementById('revHeroUrlInput')?.value.trim() || '';
+      art.heroImage = url;
+      art.image = url;
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('📸 Review Hero Image updated!');
+    }
+    window.setReviewHeroFromInput = setReviewHeroFromInput;
+
+    function removeReviewHeroImage() {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art) return;
+      art.heroImage = '';
+      art.image = '';
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('🗑️ Review Hero Image cleared.');
+    }
+    window.removeReviewHeroImage = removeReviewHeroImage;
+
+    function addReviewOtherImage() {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art) return;
+      const urlInput = document.getElementById('revNewGalleryUrl');
+      const capInput = document.getElementById('revNewGalleryCaption');
+      const url = urlInput?.value.trim();
+      const caption = capInput?.value.trim() || 'Review Gallery View';
+      if (!url) {
+        alert('Please enter an Image URL to add.');
+        return;
+      }
+      art.gallery = Array.isArray(art.gallery) ? art.gallery : [];
+      art.gallery.push({ url, caption });
+      urlInput.value = '';
+      capInput.value = '';
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('🖼️ Added image to Review Other Images!');
+    }
+    window.addReviewOtherImage = addReviewOtherImage;
+
+    function makeReviewGalleryHero(imgIdx) {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art || !art.gallery || !art.gallery[imgIdx]) return;
+      const chosenUrl = art.gallery[imgIdx].url;
+      art.heroImage = chosenUrl;
+      art.image = chosenUrl;
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('⭐ Set selected image as Review Hero Image!');
+    }
+    window.makeReviewGalleryHero = makeReviewGalleryHero;
+
+    function deleteReviewGalleryImg(imgIdx) {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art || !art.gallery) return;
+      art.gallery.splice(imgIdx, 1);
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('🗑️ Other image removed from review.');
+    }
+    window.deleteReviewGalleryImg = deleteReviewGalleryImg;
+
+    function updateReviewGalleryCaption(imgIdx, val) {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art || !art.gallery || !art.gallery[imgIdx]) return;
+      art.gallery[imgIdx].caption = val;
+    }
+    window.updateReviewGalleryCaption = updateReviewGalleryCaption;
+
+    function syncCurrentReviewFields() {
+      const art = adminReviewsList[currentReviewIndex];
+      if (!art) return;
+      art.title = document.getElementById('revTitleInput')?.value || '';
+      art.category = document.getElementById('revCategoryInput')?.value || 'EXPERT REVIEW';
+      art.author = document.getElementById('revAuthorInput')?.value || '';
+      art.date = document.getElementById('revDateInput')?.value || '';
+      art.readTime = document.getElementById('revReadTimeInput')?.value || '';
+      art.excerpt = document.getElementById('revExcerptInput')?.value || '';
+      art.content = document.getElementById('revContentInput')?.value || '';
+      const barTitle = document.getElementById('barReviewTitle');
+      if (barTitle) barTitle.textContent = art.title || 'Untitled Review';
+      renderReviewsSelector();
+    }
+    window.syncCurrentReviewFields = syncCurrentReviewFields;
+
+    function createNewReviewArticle() {
+      const newArt = {
+        id: 'art-' + Date.now(),
+        category: 'EXPERT REVIEW',
+        badgeClass: 'badge-guide',
+        title: 'New Car Review / Latest Update 2026',
+        excerpt: 'Write a crisp summary of the car update or expert review here.',
+        author: 'CMV Editorial Desk',
+        date: 'Oct 2026',
+        readTime: '5 min read',
+        image: 'https://ik.imagekit.io/caremyvehicle/dir/tata-curvv/hero.jpg',
+        heroImage: 'https://ik.imagekit.io/caremyvehicle/dir/tata-curvv/hero.jpg',
+        gallery: [
+          { url: 'https://ik.imagekit.io/caremyvehicle/dir/hyundai-creta/hero.jpg', caption: 'Exterior Stance' },
+          { url: 'https://ik.imagekit.io/caremyvehicle/dir/mahindra-xuv-3xo/hero.jpg', caption: 'Cabin & Features' }
+        ],
+        content: '<p>Enter the full expert review or car update details here.</p>'
+      };
+      adminReviewsList.unshift(newArt);
+      currentReviewIndex = 0;
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('➕ New Review created! Customize its Hero Image, Other Images, and text below.');
+    }
+    window.createNewReviewArticle = createNewReviewArticle;
+
+    function deleteCurrentReviewArticle() {
+      if (adminReviewsList.length <= 1) {
+        alert('At least one review article must remain.');
+        return;
+      }
+      if (!confirm('Delete this review article?')) return;
+      adminReviewsList.splice(currentReviewIndex, 1);
+      currentReviewIndex = 0;
+      renderReviewsSelector();
+      renderReviewEditor();
+      showToast('🗑️ Review deleted. Click "Save All Reviews" to update live site.');
+    }
+    window.deleteCurrentReviewArticle = deleteCurrentReviewArticle;
+
+    function saveAllReviewsToLive() {
+      syncCurrentReviewFields();
+      localStorage.setItem('cmv_custom_articles', JSON.stringify(adminReviewsList));
+      showToast('💾 Saved Latest Car Updates & Expert Reviews (with Hero + Other Images) to live website!');
+    }
+    window.saveAllReviewsToLive = saveAllReviewsToLive;
+
+    function resetReviewsToDefaults() {
+      if (!confirm('Reset all Latest Car Updates & Expert Reviews back to default articles?')) return;
+      localStorage.removeItem('cmv_custom_articles');
+      currentReviewIndex = 0;
+      initReviewsManager();
+      showToast('🔄 Restored default Latest Car Updates & Expert Reviews!');
+    }
+    window.resetReviewsToDefaults = resetReviewsToDefaults;
+
+    // =========================================================================
+    // 🚗 POPULAR USED CARS IN INDIA STUDIO (1 HERO IMAGE + OTHER IMAGES)
+    // =========================================================================
+    let adminUsedCarsList = [];
+    let currentUsedCarIndex = 0;
+
+    function getWorkingUsedCars() {
+      try {
+        const saved = localStorage.getItem('cmv_popular_used_cars');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(window.DEFAULT_POPULAR_USED_CARS || []));
+    }
+
+    function initUsedCarsManager() {
+      adminUsedCarsList = getWorkingUsedCars();
+      if (currentUsedCarIndex >= adminUsedCarsList.length) currentUsedCarIndex = 0;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+    }
+    window.initUsedCarsManager = initUsedCarsManager;
+
+    function renderUsedCarsSelector() {
+      const container = document.getElementById('usedCarsSelectorList');
+      if (!container) return;
+      container.innerHTML = adminUsedCarsList.map((car, idx) => {
+        const hero = car.heroImage || car.image || 'assets/logo.png';
+        const galleryCount = Array.isArray(car.gallery) ? car.gallery.length : 0;
+        return `
+          <button type="button" class="studio-item-pill ${idx === currentUsedCarIndex ? 'active' : ''}" onclick="selectUsedCarToEdit(${idx})">
+            <img src="${hero}" alt="${car.name}" onerror="this.src='assets/logo.png'">
+            <div style="overflow:hidden;">
+              <div style="font-size:10px; font-weight:800; color:#16A34A; text-transform:uppercase;">${car.usedPriceRange || ''} &bull; 1 Hero + ${galleryCount} Other</div>
+              <div style="font-size:12.5px; font-weight:800; color:#0F172A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${car.name}</div>
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectUsedCarToEdit(idx) {
+      currentUsedCarIndex = idx;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+    }
+    window.selectUsedCarToEdit = selectUsedCarToEdit;
+
+    function renderUsedCarEditor() {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car) return;
+
+      const heroUrl = car.heroImage || car.image || '';
+      const heroPreview = document.getElementById('usedHeroPreview');
+      const heroInput = document.getElementById('usedHeroUrlInput');
+      if (heroPreview) heroPreview.src = heroUrl || 'assets/logo.png';
+      if (heroInput) heroInput.value = heroUrl;
+
+      car.gallery = Array.isArray(car.gallery) ? car.gallery : [];
+      const galCount = document.getElementById('usedGalleryCount');
+      const galGrid = document.getElementById('usedGalleryGrid');
+      if (galCount) galCount.textContent = car.gallery.length;
+
+      if (galGrid) {
+        if (car.gallery.length === 0) {
+          galGrid.innerHTML = `<div style="grid-column:1/-1; padding:20px; text-align:center; color:#64748B;">No other images added yet. Use the form above to add additional photos for this used car.</div>`;
+        } else {
+          galGrid.innerHTML = car.gallery.map((g, i) => `
+            <div class="editor-gallery-item">
+              <img src="${g.url}" alt="${g.caption || 'Other Image'}" onerror="this.src='assets/logo.png'">
+              <div class="editor-gallery-meta">
+                <input type="text" class="form-input" style="padding:5px 8px; font-size:11.5px; margin-bottom:8px;" value="${(g.caption || '').replace(/"/g, '&quot;')}" placeholder="Image caption" oninput="updateUsedCarGalleryCaption(${i}, this.value)">
+                <div class="editor-gallery-actions">
+                  <button type="button" class="btn-act btn-act-show" style="padding:4px 8px; font-size:11px; flex:1;" onclick="makeUsedCarGalleryHero(${i})">⭐ Make Hero</button>
+                  <button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick="deleteUsedCarGalleryImg(${i})">🗑️ Delete</button>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      document.getElementById('usedNameInput').value = car.name || '';
+      document.getElementById('usedBrandInput').value = car.brand || '';
+      document.getElementById('usedBodyTypeInput').value = car.bodyType || 'SUV';
+      document.getElementById('usedPriceRangeInput').value = car.usedPriceRange || '';
+      document.getElementById('usedYearsInput').value = car.topYears || '';
+      document.getElementById('usedFuelsInput').value = Array.isArray(car.fuelTypes) ? car.fuelTypes.join(', ') : (car.fuelTypes || 'Petrol');
+      document.getElementById('usedMileageInput').value = car.mileage || '';
+      document.getElementById('usedHighlightInput').value = car.highlight || '';
+      const barName = document.getElementById('barUsedCarName');
+      if (barName) barName.textContent = car.name || 'Untitled Used Car';
+    }
+
+    function previewUsedCarHero(url) {
+      const heroPreview = document.getElementById('usedHeroPreview');
+      if (heroPreview) heroPreview.src = (url || '').trim() || 'assets/logo.png';
+    }
+    window.previewUsedCarHero = previewUsedCarHero;
+
+    function setUsedCarHeroFromInput() {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car) return;
+      const url = document.getElementById('usedHeroUrlInput')?.value.trim() || '';
+      car.heroImage = url;
+      car.image = url;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('📸 Popular Used Car Hero Image updated!');
+    }
+    window.setUsedCarHeroFromInput = setUsedCarHeroFromInput;
+
+    function removeUsedCarHeroImage() {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car) return;
+      car.heroImage = '';
+      car.image = '';
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('🗑️ Used Car Hero Image cleared.');
+    }
+    window.removeUsedCarHeroImage = removeUsedCarHeroImage;
+
+    function addUsedCarOtherImage() {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car) return;
+      const urlInput = document.getElementById('usedNewGalleryUrl');
+      const capInput = document.getElementById('usedNewGalleryCaption');
+      const url = urlInput?.value.trim();
+      const caption = capInput?.value.trim() || 'Additional Angle';
+      if (!url) {
+        alert('Please enter an Image URL to add.');
+        return;
+      }
+      car.gallery = Array.isArray(car.gallery) ? car.gallery : [];
+      car.gallery.push({ url, caption });
+      urlInput.value = '';
+      capInput.value = '';
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('🖼️ Added image to Popular Used Car Other Images!');
+    }
+    window.addUsedCarOtherImage = addUsedCarOtherImage;
+
+    function makeUsedCarGalleryHero(imgIdx) {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car || !car.gallery || !car.gallery[imgIdx]) return;
+      const chosenUrl = car.gallery[imgIdx].url;
+      car.heroImage = chosenUrl;
+      car.image = chosenUrl;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('⭐ Set selected image as Used Car Hero Image!');
+    }
+    window.makeUsedCarGalleryHero = makeUsedCarGalleryHero;
+
+    function deleteUsedCarGalleryImg(imgIdx) {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car || !car.gallery) return;
+      car.gallery.splice(imgIdx, 1);
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('🗑️ Other image removed from used car.');
+    }
+    window.deleteUsedCarGalleryImg = deleteUsedCarGalleryImg;
+
+    function updateUsedCarGalleryCaption(imgIdx, val) {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car || !car.gallery || !car.gallery[imgIdx]) return;
+      car.gallery[imgIdx].caption = val;
+    }
+    window.updateUsedCarGalleryCaption = updateUsedCarGalleryCaption;
+
+    function syncCurrentUsedCarFields() {
+      const car = adminUsedCarsList[currentUsedCarIndex];
+      if (!car) return;
+      car.name = document.getElementById('usedNameInput')?.value || '';
+      car.brand = document.getElementById('usedBrandInput')?.value || '';
+      car.bodyType = document.getElementById('usedBodyTypeInput')?.value || 'SUV';
+      car.usedPriceRange = document.getElementById('usedPriceRangeInput')?.value || '';
+      car.topYears = document.getElementById('usedYearsInput')?.value || '';
+      const fuelsRaw = document.getElementById('usedFuelsInput')?.value || 'Petrol';
+      car.fuelTypes = fuelsRaw.split(',').map(s => s.trim()).filter(Boolean);
+      car.mileage = document.getElementById('usedMileageInput')?.value || '';
+      car.highlight = document.getElementById('usedHighlightInput')?.value || '';
+      const barName = document.getElementById('barUsedCarName');
+      if (barName) barName.textContent = car.name || 'Untitled Used Car';
+      renderUsedCarsSelector();
+    }
+    window.syncCurrentUsedCarFields = syncCurrentUsedCarFields;
+
+    function createNewPopularUsedCar() {
+      const newCar = {
+        id: 'used-' + Date.now(),
+        name: 'Maruti Suzuki Brezza',
+        brand: 'Maruti Suzuki',
+        image: 'https://ik.imagekit.io/caremyvehicle/dir/maruti-brezza/hero.jpg',
+        heroImage: 'https://ik.imagekit.io/caremyvehicle/dir/maruti-brezza/hero.jpg',
+        gallery: [
+          { url: 'https://ik.imagekit.io/caremyvehicle/dir/maruti-swift/hero.jpg', caption: 'Side Profile' },
+          { url: 'https://ik.imagekit.io/caremyvehicle/dir/maruti-baleno/hero.jpg', caption: 'Interior Cabin' }
+        ],
+        usedPriceRange: '₹5.50 - ₹9.20 Lakh',
+        topYears: '2020 – 2024',
+        bodyType: 'SUV',
+        fuelTypes: ['Petrol', 'CNG'],
+        mileage: '19-25 kmpl',
+        highlight: 'High resale value & bulletproof 1.5L K-Series reliability'
+      };
+      adminUsedCarsList.unshift(newCar);
+      currentUsedCarIndex = 0;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('➕ Added new Popular Used Car! Set its Hero Image, Other Images & details below.');
+    }
+    window.createNewPopularUsedCar = createNewPopularUsedCar;
+
+    function deleteCurrentPopularUsedCar() {
+      if (adminUsedCarsList.length <= 1) {
+        alert('At least one popular used car must remain.');
+        return;
+      }
+      if (!confirm('Delete this car from Popular Used Cars in India?')) return;
+      adminUsedCarsList.splice(currentUsedCarIndex, 1);
+      currentUsedCarIndex = 0;
+      renderUsedCarsSelector();
+      renderUsedCarEditor();
+      showToast('🗑️ Used Car removed. Click "Save Used Cars" to update live site.');
+    }
+    window.deleteCurrentPopularUsedCar = deleteCurrentPopularUsedCar;
+
+    function saveAllUsedCarsToLive() {
+      syncCurrentUsedCarFields();
+      localStorage.setItem('cmv_popular_used_cars', JSON.stringify(adminUsedCarsList));
+      showToast('💾 Saved Popular Used Cars in India (with Hero + Other Images) to live website!');
+    }
+    window.saveAllUsedCarsToLive = saveAllUsedCarsToLive;
+
+    function resetUsedCarsToDefaults() {
+      if (!confirm('Reset Popular Used Cars in India back to default list?')) return;
+      localStorage.removeItem('cmv_popular_used_cars');
+      currentUsedCarIndex = 0;
+      initUsedCarsManager();
+      showToast('🔄 Restored default Popular Used Cars in India!');
+    }
+    window.resetUsedCarsToDefaults = resetUsedCarsToDefaults;
+  </script>
 
   <!-- Admin Toast Notification -->
   <div id="adminToast" class="admin-toast"></div>
@@ -2823,7 +4190,10 @@
   <!-- Load Dataset into Admin Panel Window -->
   <script type="module">
     import { CARS } from './js/carData.js';
+    import { ARTICLES, POPULAR_USED_CARS } from './js/newsData.js';
     window.APP_CARS = CARS;
+    window.DEFAULT_ARTICLES = ARTICLES;
+    window.DEFAULT_POPULAR_USED_CARS = POPULAR_USED_CARS;
     if (typeof window.initVisibilityManager === 'function') {
       window.initVisibilityManager();
     }
