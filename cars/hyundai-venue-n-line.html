@@ -1363,6 +1363,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1664,104 +1728,123 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Hyundai Venue N Line Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="1066000">
-                  <td>
-                    <strong>N6 1.0L Turbo 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹10,66,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.25 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 1.0L Turbo GDi Petrol (120 PS / 172 Nm)<br>&check; 6-Speed Manual Gearbox<br>&check; All 4 Disc Brakes with Red Calipers
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1084000">
-                  <td>
-                    <strong>N6 1.0L Turbo 6MT (Dual Tone)</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹10,84,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.45 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Dual Tone Styling with Shadow Black Roof<br>&check; 1.0L Turbo GDi (120 PS / 172 Nm)<br>&check; 6-Speed Manual Gearbox
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1156000">
-                  <td>
-                    <strong>N6 1.0L Turbo 7DCT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹11,56,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹13.28 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 7-Speed Dual Clutch Transmission (7DCT)<br>&check; Steering Wheel Paddle Shifters<br>&check; All 4 Disc Brakes with Red Calipers
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1174000">
-                  <td>
-                    <strong>N6 1.0L Turbo 7DCT (Dual Tone)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹11,74,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹13.49 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Dual Tone Finish with Shadow Black Contrast Roof<br>&check; 7-Speed DCT with Paddle Shifters<br>&check; All 4 Disc Brakes with Red Calipers
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1549000">
-                  <td>
-                    <strong>N10 1.0L Turbo 7DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹15,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.79 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Full Level 2 Hyundai SmartSense ADAS (FCA-JT, BCA, LKA, SCC with Stop &amp; Go)<br>&check; Dual Curved Panoramic Displays (Dual 12.3-inch ccNC Navigation + Digital Cluster)<br>&check; Bose Premium 8-Speaker Audio System
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1567000">
-                  <td>
-                    <strong>N10 1.0L Turbo 7DCT (Dual Tone)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹15,67,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹18.00 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Flagship Dual Tone Exterior with Shadow Black Roof<br>&check; Full Level 2 Hyundai SmartSense ADAS with Stop &amp; Go<br>&check; Dual Curved Panoramic Displays (Dual 12.3-inch Displays)
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Hyundai Venue N Line Variants</h2>
+      <p class="vr-intro" id="vrIntro">Hyundai Venue N Line price for the base model starts at Rs. 10.66 Lakh and the top model price goes up to Rs. 15.67 Lakh (ex-showroom). Hyundai Venue N Line price for 6 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Venue N Line N6</span>
+            <span class="vr-trim-price">₹ 10.66 - 11.74 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 1.0L Turbo GDi Petrol (120 PS / 172 Nm)<i class="vr-sep">|</i>6-Speed Manual Gearbox<i class="vr-sep">|</i>All 4 Disc Brakes with Red Calipers<i class="vr-sep">|</i>6 Airbags Standard<i class="vr-sep">|</i>26.03 cm (10.25&quot;) ccNC Infotainment with Wireless Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>R17 Diamond Cut N Alloys<i class="vr-sep">|</i>Twin Tip Sports Exhaust with Tuned Note<i class="vr-sep">|</i>Electric Parking Brake with Auto Hold</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1066000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">N6 1.0L Turbo 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.0 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.66 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.25 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1084000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">N6 1.0L Turbo 6MT (Dual Tone)</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.0 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.84 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.45 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1156000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">N6 1.0L Turbo 7DCT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.3 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.56 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 13.28 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1174000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">N6 1.0L Turbo 7DCT (Dual Tone)</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.3 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.74 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 13.49 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Venue N Line N10</span>
+            <span class="vr-trim-price">₹ 15.49 - 15.67 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over N6:</strong> Full Level 2 Hyundai SmartSense ADAS (FCA-JT, BCA, LKA, SCC with Stop &amp; Go)<i class="vr-sep">|</i>Dual Curved Panoramic Displays (Dual 12.3-inch ccNC Navigation + Digital Cluster)<i class="vr-sep">|</i>Bose Premium 8-Speaker Audio System<i class="vr-sep">|</i>Dual Dashcam<i class="vr-sep">|</i>Voice-Enabled Smart Electric Sunroof<i class="vr-sep">|</i>Front Ventilated Seats &amp; 4-Way Power Driver Seat<i class="vr-sep">|</i>Surround View 360° Monitor &amp; Blind Spot View Monitor<i class="vr-sep">|</i>Smart Aroma Diffuser &amp; Drive/Traction Modes</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1549000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">N10 1.0L Turbo 7DCT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.3 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.79 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1567000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">N10 1.0L Turbo 7DCT (Dual Tone)</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 172 Nm</span><span>&bull; 18.3 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.67 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 18.00 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2180,6 +2263,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 1066000;
@@ -2282,6 +2367,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

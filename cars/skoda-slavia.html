@@ -1363,6 +1363,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1684,130 +1748,213 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Škoda Slavia Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="999900">
-                  <td>
-                    <strong>Classic 1.0 TSI MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹9,99,900</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹11.39 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags, ESC, Multi-Collision Brake &amp; 5-Star Global NCAP Safety Standard<br>&check; 179 mm SUV-Like Ground Clearance &amp; Massive 521-Litre Boot Space<br>&check; 17.7 cm Touchscreen, LED DRLs, Rear Parking Sensors &amp; Auto Engine Start-Stop
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1099000">
-                  <td>
-                    <strong>Classic+ 1.0 TSI MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹10,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.63 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Electric Sunroof &amp; R16 Alloy Wheels<br>&check; Cruise Control, Rear View Camera &amp; Automatic Headlamps<br>&check; 6 Airbags, TPMS &amp; Hill Hold Control
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1299000">
-                  <td>
-                    <strong>Signature 1.0 TSI MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 25.6 cm (10.1-inch) Touchscreen with Wireless Apple CarPlay &amp; Android Auto<br>&check; Climatronic Auto AC, Cruise Control, Ambient Lighting &amp; R16 Alloy Wheels<br>&check; LED Tail Lamps, Chrome Window Garnish &amp; 60:40 Split Rear Seats
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1409000">
-                  <td>
-                    <strong>Signature 1.0 TSI AT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹14,09,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.19 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; All-New 8-Speed Torque Converter Automatic with Paddle Shifters<br>&check; 25.6 cm Touchscreen, Climatronic Auto AC &amp; Rear View Camera<br>&check; Hill Hold Control, TPMS &amp; 6 Airbags
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1499000">
-                  <td>
-                    <strong>Sportline 1.0 TSI AT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹14,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.22 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Electric Sunroof, Glossy Black R16 Alloys &amp; Blacked-Out Exterior Styling<br>&check; Aluminium Pedals, Sporty Grey Fabric/Leatherette Cabin &amp; Rain-Sensing Wipers<br>&check; Crystalline LED Headlamps &amp; Sequential LED Tail Lamps
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1679000">
-                  <td>
-                    <strong>Sportline 1.5 TSI DSG</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic (DSG)</td>
-                  <td><strong>₹16,79,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.28 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)<br>&check; 7-Speed DSG Dual-Clutch Automatic &amp; Sporty Black Exterior Package<br>&check; Electric Sunroof, 25.6 cm Infotainment &amp; Sequential LED Tail Lamps
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1829000">
-                  <td>
-                    <strong>Prestige 1.5 TSI DSG</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic (DSG)</td>
-                  <td><strong>₹18,29,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.01 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 360° Area View Camera, Rear-Seat Massagers &amp; Electric Sunroof<br>&check; 6-Way Electrically Adjustable &amp; Ventilated Front Leatherette Seats<br>&check; 26.03 cm Virtual Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1869000">
-                  <td>
-                    <strong>Monte Carlo 1.5 TSI DSG</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic (DSG)</td>
-                  <td><strong>₹18,69,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.47 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Monte Carlo Red Grille Accents, Red Brake Calipers &amp; Glossy Black Spoiler<br>&check; Ruby Red &amp; Black Ventilated Electric Seats with Monte Carlo Badging<br>&check; 360° Area View Camera, Rear-Seat Massagers &amp; 26.03 cm Red-Themed Virtual Cockpit
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Škoda Slavia Variants</h2>
+      <p class="vr-intro" id="vrIntro">Škoda Slavia price for the base model starts at Rs. 10.00 Lakh and the top model price goes up to Rs. 18.69 Lakh (ex-showroom). Škoda Slavia price for 8 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Classic</span>
+            <span class="vr-trim-price">₹ 10.00 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags, ESC, Multi-Collision Brake &amp; 5-Star Global NCAP Safety Standard<i class="vr-sep">|</i>179 mm SUV-Like Ground Clearance &amp; Massive 521-Litre Boot Space<i class="vr-sep">|</i>17.7 cm Touchscreen, LED DRLs, Rear Parking Sensors &amp; Auto Engine Start-Stop</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="999900">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Classic 1.0 TSI MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 20.32 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.00 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 11.39 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Classic+</span>
+            <span class="vr-trim-price">₹ 10.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Classic:</strong> Electric Sunroof &amp; R16 Alloy Wheels<i class="vr-sep">|</i>Cruise Control, Rear View Camera &amp; Automatic Headlamps<i class="vr-sep">|</i>6 Airbags, TPMS &amp; Hill Hold Control</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1099000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Classic+ 1.0 TSI MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 20.32 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.63 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Signature</span>
+            <span class="vr-trim-price">₹ 12.99 - 14.09 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Classic+:</strong> 25.6 cm (10.1-inch) Touchscreen with Wireless Apple CarPlay &amp; Android Auto<i class="vr-sep">|</i>Climatronic Auto AC, Cruise Control, Ambient Lighting &amp; R16 Alloy Wheels<i class="vr-sep">|</i>LED Tail Lamps, Chrome Window Garnish &amp; 60:40 Split Rear Seats<i class="vr-sep">|</i>All-New 8-Speed Torque Converter Automatic with Paddle Shifters<i class="vr-sep">|</i>25.6 cm Touchscreen, Climatronic Auto AC &amp; Rear View Camera<i class="vr-sep">|</i>Hill Hold Control, TPMS &amp; 6 Airbags</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1299000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Signature 1.0 TSI MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 20.32 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.92 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1409000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">Signature 1.0 TSI AT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 18.73 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.09 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.19 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Sportline</span>
+            <span class="vr-trim-price">₹ 14.99 - 16.79 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Signature:</strong> Electric Sunroof, Glossy Black R16 Alloys &amp; Blacked-Out Exterior Styling<i class="vr-sep">|</i>Aluminium Pedals, Sporty Grey Fabric/Leatherette Cabin &amp; Rain-Sensing Wipers<i class="vr-sep">|</i>Crystalline LED Headlamps &amp; Sequential LED Tail Lamps<i class="vr-sep">|</i>150 PS / 250 Nm 1.5L TSI EVO with Active Cylinder Technology (ACT)<i class="vr-sep">|</i>7-Speed DSG Dual-Clutch Automatic &amp; Sporty Black Exterior Package<i class="vr-sep">|</i>Electric Sunroof, 25.6 cm Infotainment &amp; Sequential LED Tail Lamps</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1499000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">Sportline 1.0 TSI AT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 18.73 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.22 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1679000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic (DSG) <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Sportline 1.5 TSI DSG</div>
+              <div class="vr-var-specs"><span>&bull; 150 PS</span><span>&bull; 19.36 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.79 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.28 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Prestige</span>
+            <span class="vr-trim-price">₹ 18.29 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Sportline:</strong> 360° Area View Camera, Rear-Seat Massagers &amp; Electric Sunroof<i class="vr-sep">|</i>6-Way Electrically Adjustable &amp; Ventilated Front Leatherette Seats<i class="vr-sep">|</i>26.03 cm Virtual Cockpit + 25.6 cm Touchscreen with Google Cloud AI Assistant<i class="vr-sep">|</i>8-Speaker Škoda Sound System with Subwoofer &amp; Footwell Illumination</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1829000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic (DSG)</div>
+              <div class="vr-var-name">Prestige 1.5 TSI DSG</div>
+              <div class="vr-var-specs"><span>&bull; 150 PS</span><span>&bull; 19.36 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.29 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.01 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Škoda Slavia Monte Carlo</span>
+            <span class="vr-trim-price">₹ 18.69 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Prestige:</strong> Monte Carlo Red Grille Accents, Red Brake Calipers &amp; Glossy Black Spoiler<i class="vr-sep">|</i>Ruby Red &amp; Black Ventilated Electric Seats with Monte Carlo Badging<i class="vr-sep">|</i>360° Area View Camera, Rear-Seat Massagers &amp; 26.03 cm Red-Themed Virtual Cockpit<i class="vr-sep">|</i>150 PS 1.5L TSI EVO with 7-Speed DSG</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1869000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic (DSG)</div>
+              <div class="vr-var-name">Monte Carlo 1.5 TSI DSG</div>
+              <div class="vr-var-specs"><span>&bull; 150 PS</span><span>&bull; 19.36 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.69 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.47 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2241,6 +2388,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 999900;
@@ -2343,6 +2492,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

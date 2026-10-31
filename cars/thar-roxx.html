@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1721,182 +1785,257 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Mahindra Thar Roxx Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="1299000">
-                  <td>
-                    <strong>MX1 2.0 Petrol MT (RWD)</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard Across Trims<br>&check; 26.03 cm (10.25&quot;) Touchscreen Infotainment<br>&check; All 4 Disc Brakes &amp; Electronic Stability Program (ESP)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1399000">
-                  <td>
-                    <strong>MX1 2.2 Diesel MT (RWD)</strong>
-                    
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹13,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.07 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; High-Torque 152 PS mHawk Diesel<br>&check; 6 Airbags &amp; ISOFIX Child Mounts<br>&check; Push Button Start/Stop
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1499000">
-                  <td>
-                    <strong>MX3 2.0 Petrol AT (RWD)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹14,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.22 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Smooth 6-Speed AISIN Automatic<br>&check; High-Output 177 PS / 380 Nm Petrol<br>&check; Wireless Android Auto &amp; Apple CarPlay
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1599000">
-                  <td>
-                    <strong>MX3 2.2 Diesel MT (RWD)</strong>
-                    
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹15,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹18.37 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Rear View Camera with Dynamic Guidelines<br>&check; Cruise Control<br>&check; Terrain Modes (Snow, Sand, Mud)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1699000">
-                  <td>
-                    <strong>MX5 2.2 Diesel MT (RWD)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹16,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Single-Pane Sunroof<br>&check; 18-inch Diamond-Cut Precision Alloys<br>&check; LED DRLs &amp; Bi-LED Projector Headlamps
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1879000">
-                  <td>
-                    <strong>MX5 2.2 Diesel MT (4x4)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹18,79,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.58 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 4XPLOR 4WD System with Low Range<br>&check; Electronic Locking Rear Differential (e-BLD)<br>&check; Crawl Smart Assist &amp; Intelli-Turn Assist
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1699000">
-                  <td>
-                    <strong>AX3L 2.2 Diesel MT (RWD)</strong>
-                    
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹16,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Level 2 ADAS Suite with 10 Functions<br>&check; Dual 26.03 cm HD Digital Superscreens<br>&check; Electronic Parking Brake (EPB) with Auto Hold
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1899000">
-                  <td>
-                    <strong>AX5L 2.2 Diesel AT (RWD)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹18,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.81 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6-Speed Automatic with 175 PS High-Output Diesel<br>&check; Level 2 ADAS Suite with Adaptive Cruise Control<br>&check; Smart Pilot Assist &amp; Lane Keep Assist
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1999000">
-                  <td>
-                    <strong>AX7L 2.0 Petrol AT (RWD)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹19,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹22.96 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Panoramic Skyroof with Dual Glass Panes<br>&check; 19-inch Diamond-Cut Precision Alloys<br>&check; Harman Kardon 9-Speaker QuantumLogic Audio
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2049000">
-                  <td>
-                    <strong>AX7L 2.2 Diesel AT (RWD)</strong>
-                    
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹20,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹23.53 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 175 PS High-Output Diesel with 6-Speed AT<br>&check; Panoramic Skyroof<br>&check; 540-Degree Surround Camera with Transparent Hood
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2099000">
-                  <td>
-                    <strong>AX7L 2.2 Diesel MT (4x4)</strong>
-                    
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹20,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹24.11 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 4XPLOR 4WD with Electronic Locking Rear Diff<br>&check; Panoramic Skyroof &amp; 19-inch Alloys<br>&check; Ventilated Front Seats &amp; Level 2 ADAS
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2249000">
-                  <td>
-                    <strong>AX7L 2.2 Diesel AT (4x4)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹22,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹25.83 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Top-Spec 4XPLOR 4WD with 6-Speed Automatic (175 PS / 370 Nm)<br>&check; Expansive Panoramic Skyroof<br>&check; Level 2 ADAS Suite with Smart Pilot Assist
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Mahindra Thar Roxx Variants</h2>
+      <p class="vr-intro" id="vrIntro">Mahindra Thar Roxx price for the base model starts at Rs. 12.99 Lakh and the top model price goes up to Rs. 22.49 Lakh (ex-showroom). Mahindra Thar Roxx price for 12 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="Diesel" onclick="vrFilter(this)">Diesel</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx MX1</span>
+            <span class="vr-trim-price">₹ 12.99 - 13.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags Standard Across Trims<i class="vr-sep">|</i>26.03 cm (10.25&quot;) Touchscreen Infotainment<i class="vr-sep">|</i>All 4 Disc Brakes &amp; Electronic Stability Program (ESP)<i class="vr-sep">|</i>Rear AC Vents &amp; LED Projector Headlamps<i class="vr-sep">|</i>High-Torque 152 PS mHawk Diesel<i class="vr-sep">|</i>6 Airbags &amp; ISOFIX Child Mounts<i class="vr-sep">|</i>Push Button Start/Stop<i class="vr-sep">|</i>Rear Parking Sensors &amp; Electronic Power Steering</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1299000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 2.0L | Manual</div>
+              <div class="vr-var-name">MX1 2.0 Petrol MT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 162 PS</span><span>&bull; 330 Nm</span><span>&bull; 12.40 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.92 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1399000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual</div>
+              <div class="vr-var-name">MX1 2.2 Diesel MT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 15.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 13.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.07 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx MX3</span>
+            <span class="vr-trim-price">₹ 14.99 - 15.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over MX1:</strong> Smooth 6-Speed AISIN Automatic<i class="vr-sep">|</i>High-Output 177 PS / 380 Nm Petrol<i class="vr-sep">|</i>Wireless Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>Reverse Parking Camera &amp; Drive Modes (Zip, Zoom)<i class="vr-sep">|</i>Rear View Camera with Dynamic Guidelines<i class="vr-sep">|</i>Cruise Control<i class="vr-sep">|</i>Terrain Modes (Snow, Sand, Mud)<i class="vr-sep">|</i>Wireless Smartphone Charger</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1499000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 2.0L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">MX3 2.0 Petrol AT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 177 PS</span><span>&bull; 380 Nm</span><span>&bull; 11.80 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.22 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1599000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual</div>
+              <div class="vr-var-name">MX3 2.2 Diesel MT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 15.20 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 18.37 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx MX5</span>
+            <span class="vr-trim-price">₹ 16.99 - 18.79 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over MX3:</strong> Single-Pane Sunroof<i class="vr-sep">|</i>18-inch Diamond-Cut Precision Alloys<i class="vr-sep">|</i>LED DRLs &amp; Bi-LED Projector Headlamps<i class="vr-sep">|</i>Leatherette Seats &amp; Acoustic Glass<i class="vr-sep">|</i>4XPLOR 4WD System with Low Range<i class="vr-sep">|</i>Electronic Locking Rear Differential (e-BLD)<i class="vr-sep">|</i>Crawl Smart Assist &amp; Intelli-Turn Assist<i class="vr-sep">|</i>Terrain Modes &amp; 18-inch Alloys</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1699000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">MX5 2.2 Diesel MT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 15.20 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.51 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1879000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">MX5 2.2 Diesel MT (4x4)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 14.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.79 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.58 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx AX3L</span>
+            <span class="vr-trim-price">₹ 16.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over MX5:</strong> Level 2 ADAS Suite with 10 Functions<i class="vr-sep">|</i>Dual 26.03 cm HD Digital Superscreens<i class="vr-sep">|</i>Electronic Parking Brake (EPB) with Auto Hold<i class="vr-sep">|</i>Connected Vehicle Tech with Alexa</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1699000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual</div>
+              <div class="vr-var-name">AX3L 2.2 Diesel MT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 15.20 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.51 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx AX5L</span>
+            <span class="vr-trim-price">₹ 18.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over AX3L:</strong> 6-Speed Automatic with 175 PS High-Output Diesel<i class="vr-sep">|</i>Level 2 ADAS Suite with Adaptive Cruise Control<i class="vr-sep">|</i>Smart Pilot Assist &amp; Lane Keep Assist<i class="vr-sep">|</i>Electronic Parking Brake with Auto Hold</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="1899000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">AX5L 2.2 Diesel AT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 175 PS</span><span>&bull; 370 Nm</span><span>&bull; 14.80 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.81 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Mahindra Thar Roxx AX7L</span>
+            <span class="vr-trim-price">₹ 19.99 - 22.49 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over AX5L:</strong> Panoramic Skyroof with Dual Glass Panes<i class="vr-sep">|</i>19-inch Diamond-Cut Precision Alloys<i class="vr-sep">|</i>Harman Kardon 9-Speaker QuantumLogic Audio<i class="vr-sep">|</i>Ventilated Front Seats &amp; 6-Way Powered Driver Seat<i class="vr-sep">|</i>175 PS High-Output Diesel with 6-Speed AT<i class="vr-sep">|</i>Panoramic Skyroof<i class="vr-sep">|</i>540-Degree Surround Camera with Transparent Hood<i class="vr-sep">|</i>Harman Kardon 9-Speaker Audio with Subwoofer</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 4 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1999000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 2.0L | Automatic</div>
+              <div class="vr-var-name">AX7L 2.0 Petrol AT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 177 PS</span><span>&bull; 380 Nm</span><span>&bull; 11.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 19.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 22.96 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="2049000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Automatic</div>
+              <div class="vr-var-name">AX7L 2.2 Diesel AT (RWD)</div>
+              <div class="vr-var-specs"><span>&bull; 175 PS</span><span>&bull; 370 Nm</span><span>&bull; 14.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 20.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 23.53 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="2099000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Manual</div>
+              <div class="vr-var-name">AX7L 2.2 Diesel MT (4x4)</div>
+              <div class="vr-var-specs"><span>&bull; 152 PS</span><span>&bull; 330 Nm</span><span>&bull; 14.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 20.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 24.11 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="2249000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 2.2L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">AX7L 2.2 Diesel AT (4x4)</div>
+              <div class="vr-var-specs"><span>&bull; 175 PS</span><span>&bull; 370 Nm</span><span>&bull; 13.50 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 22.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 25.83 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2315,6 +2454,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 1299000;
@@ -2417,6 +2558,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

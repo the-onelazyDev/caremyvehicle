@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1721,182 +1785,359 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Tata Tiago Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="564900">
-                  <td>
-                    <strong>XE 1.2 Petrol MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹5,64,900</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.44 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 4-Star Global NCAP Safety Rating<br>&check; Dual Front Airbags &amp; ABS with EBD<br>&check; Corner Stability Control (CSC)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="600000">
-                  <td>
-                    <strong>XM 1.2 Petrol MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,00,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.84 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Front Power Windows<br>&check; Central Locking with Key<br>&check; Manual Day/Night IRVM
-                  </td>
-                </tr>
-              
-                <tr data-base-price="640000">
-                  <td>
-                    <strong>XT 1.2 Petrol MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,40,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.29 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 14-inch Hyperstyle Wheels<br>&check; Electrically Adjustable ORVMs with Turn Indicators<br>&check; Steering-Mounted Audio Controls
-                  </td>
-                </tr>
-              
-                <tr data-base-price="670000">
-                  <td>
-                    <strong>XT Rhythm 1.2 Petrol MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,70,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.63 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 17.78 cm Touchscreen Infotainment by HARMAN<br>&check; 4 Speakers &amp; 4 Tweeters Sound System<br>&check; Reverse Parking Camera with Guidelines
-                  </td>
-                </tr>
-              
-                <tr data-base-price="695000">
-                  <td>
-                    <strong>XTA 1.2 Petrol AMT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹6,95,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Smooth Smart Automated Manual Transmission (AMT)<br>&check; Creep Function for Bumper-to-Bumper Traffic<br>&check; Electrically Foldable ORVMs
-                  </td>
-                </tr>
-              
-                <tr data-base-price="730000">
-                  <td>
-                    <strong>XZ Plus 1.2 Petrol MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,30,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.32 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 15-inch Dual-Tone Diamond-Cut Alloy Wheels<br>&check; Fully Automatic Temperature Control (FATC)<br>&check; Projector Headlamps with Signature LED DRLs
-                  </td>
-                </tr>
-              
-                <tr data-base-price="785000">
-                  <td>
-                    <strong>XZA Plus 1.2 Petrol AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹7,85,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.94 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Convenient 5-Speed AMT Automatic<br>&check; 15-inch Diamond-Cut Alloys<br>&check; Rear Wiper &amp; Washer with Defogger
-                  </td>
-                </tr>
-              
-                <tr data-base-price="659900">
-                  <td>
-                    <strong>XE iCNG (Twin-Cylinder)</strong>
-                    
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹6,59,900</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.52 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Patented Twin-Cylinder Underfloor CNG Technology<br>&check; Direct Start in CNG Mode<br>&check; Single Advanced ECU for Seamless Petrol/CNG Transition
-                  </td>
-                </tr>
-              
-                <tr data-base-price="695000">
-                  <td>
-                    <strong>XM iCNG (Twin-Cylinder)</strong>
-                    
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹6,95,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Underfloor Dual CNG Tanks with Usable Luggage Boot<br>&check; Front Power Windows &amp; Central Locking<br>&check; Direct Start in CNG Mode
-                  </td>
-                </tr>
-              
-                <tr data-base-price="735000">
-                  <td>
-                    <strong>XT iCNG (Twin-Cylinder)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹7,35,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.37 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Patented Twin-Cylinder Tech with Preserved Boot Area<br>&check; Electrically Adjustable ORVMs<br>&check; Steering Mounted Controls
-                  </td>
-                </tr>
-              
-                <tr data-base-price="835000">
-                  <td>
-                    <strong>XZ Plus iCNG (Twin-Cylinder)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹8,35,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 15-inch Precision Alloys on CNG Variant<br>&check; Automatic Climate Control<br>&check; 17.78 cm Touchscreen with Android Auto &amp; Apple CarPlay
-                  </td>
-                </tr>
-              
-                <tr data-base-price="889900">
-                  <td>
-                    <strong>XZA Plus iCNG AMT (Twin-Cylinder Automatic)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Automatic</td>
-                  <td><strong>₹8,89,900</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.14 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; India’s First Factory-Fitted Automated Manual (AMT) CNG Car<br>&check; Twin Underfloor CNG Tanks<br>&check; Zero Clutch Fatigue in City Traffic
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Tata Tiago Variants</h2>
+      <p class="vr-intro" id="vrIntro">Tata Tiago price for the base model starts at Rs. 5.65 Lakh and the top model price goes up to Rs. 8.90 Lakh (ex-showroom). Tata Tiago price for 12 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="CNG" onclick="vrFilter(this)">CNG</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XE</span>
+            <span class="vr-trim-price">₹ 5.65 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 4-Star Global NCAP Safety Rating<i class="vr-sep">|</i>Dual Front Airbags &amp; ABS with EBD<i class="vr-sep">|</i>Corner Stability Control (CSC)<i class="vr-sep">|</i>Immobilizer &amp; Body-Colored Bumpers</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="564900">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">XE 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.01 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 5.65 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.44 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XM</span>
+            <span class="vr-trim-price">₹ 6.00 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XE:</strong> Front Power Windows<i class="vr-sep">|</i>Central Locking with Key<i class="vr-sep">|</i>Manual Day/Night IRVM<i class="vr-sep">|</i>Integrated Rear Headrests</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="600000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">XM 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.01 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.00 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.84 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XT</span>
+            <span class="vr-trim-price">₹ 6.40 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XM:</strong> 14-inch Hyperstyle Wheels<i class="vr-sep">|</i>Electrically Adjustable ORVMs with Turn Indicators<i class="vr-sep">|</i>Steering-Mounted Audio Controls<i class="vr-sep">|</i>Front &amp; Rear Power Windows</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="640000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XT 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.01 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.40 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.29 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XE iCNG</span>
+            <span class="vr-trim-price">₹ 6.60 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XT:</strong> Patented Twin-Cylinder Underfloor CNG Technology<i class="vr-sep">|</i>Direct Start in CNG Mode<i class="vr-sep">|</i>Single Advanced ECU for Seamless Petrol/CNG Transition<i class="vr-sep">|</i>Leak Detection &amp; Thermal Incident Cutoff</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="659900">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual</div>
+              <div class="vr-var-name">XE iCNG (Twin-Cylinder)</div>
+              <div class="vr-var-specs"><span>&bull; 73.5 PS</span><span>&bull; 95 Nm</span><span>&bull; 26.49 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.60 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.52 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XT Rhythm</span>
+            <span class="vr-trim-price">₹ 6.70 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XE iCNG:</strong> 17.78 cm Touchscreen Infotainment by HARMAN<i class="vr-sep">|</i>4 Speakers &amp; 4 Tweeters Sound System<i class="vr-sep">|</i>Reverse Parking Camera with Guidelines<i class="vr-sep">|</i>Voice Commands Support</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="670000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">XT Rhythm 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.01 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.70 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.63 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XTA</span>
+            <span class="vr-trim-price">₹ 6.95 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XT Rhythm:</strong> Smooth Smart Automated Manual Transmission (AMT)<i class="vr-sep">|</i>Creep Function for Bumper-to-Bumper Traffic<i class="vr-sep">|</i>Electrically Foldable ORVMs<i class="vr-sep">|</i>Steering Mounted Controls</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="695000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XTA 1.2 Petrol AMT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.00 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.95 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.92 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XM iCNG</span>
+            <span class="vr-trim-price">₹ 6.95 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XTA:</strong> Underfloor Dual CNG Tanks with Usable Luggage Boot<i class="vr-sep">|</i>Front Power Windows &amp; Central Locking<i class="vr-sep">|</i>Direct Start in CNG Mode<i class="vr-sep">|</i>Micro-Switch Safety Sensor on Fuel Flap</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="695000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual</div>
+              <div class="vr-var-name">XM iCNG (Twin-Cylinder)</div>
+              <div class="vr-var-specs"><span>&bull; 73.5 PS</span><span>&bull; 95 Nm</span><span>&bull; 26.49 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.95 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.92 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XZ Plus</span>
+            <span class="vr-trim-price">₹ 7.30 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XM iCNG:</strong> 15-inch Dual-Tone Diamond-Cut Alloy Wheels<i class="vr-sep">|</i>Fully Automatic Temperature Control (FATC)<i class="vr-sep">|</i>Projector Headlamps with Signature LED DRLs<i class="vr-sep">|</i>7-inch Touchscreen with Apple CarPlay &amp; Android Auto</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="730000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XZ Plus 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.01 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.30 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.32 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XT iCNG</span>
+            <span class="vr-trim-price">₹ 7.35 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XZ Plus:</strong> Patented Twin-Cylinder Tech with Preserved Boot Area<i class="vr-sep">|</i>Electrically Adjustable ORVMs<i class="vr-sep">|</i>Steering Mounted Controls<i class="vr-sep">|</i>Puncture Repair Kit with Underbody Spare Wheel</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="735000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XT iCNG (Twin-Cylinder)</div>
+              <div class="vr-var-specs"><span>&bull; 73.5 PS</span><span>&bull; 95 Nm</span><span>&bull; 26.49 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.35 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.37 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XZA Plus</span>
+            <span class="vr-trim-price">₹ 7.85 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XT iCNG:</strong> Convenient 5-Speed AMT Automatic<i class="vr-sep">|</i>15-inch Diamond-Cut Alloys<i class="vr-sep">|</i>Rear Wiper &amp; Washer with Defogger<i class="vr-sep">|</i>Height-Adjustable Driver Seat</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="785000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">XZA Plus 1.2 Petrol AMT</div>
+              <div class="vr-var-specs"><span>&bull; 86 PS</span><span>&bull; 113 Nm</span><span>&bull; 19.00 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.85 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.94 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XZ Plus iCNG</span>
+            <span class="vr-trim-price">₹ 8.35 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XZA Plus:</strong> 15-inch Precision Alloys on CNG Variant<i class="vr-sep">|</i>Automatic Climate Control<i class="vr-sep">|</i>17.78 cm Touchscreen with Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>Projector Headlamps with LED DRLs</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="835000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XZ Plus iCNG (Twin-Cylinder)</div>
+              <div class="vr-var-specs"><span>&bull; 73.5 PS</span><span>&bull; 95 Nm</span><span>&bull; 26.49 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.35 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.51 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Tiago XZA Plus iCNG</span>
+            <span class="vr-trim-price">₹ 8.90 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over XZ Plus iCNG:</strong> India’s First Factory-Fitted Automated Manual (AMT) CNG Car<i class="vr-sep">|</i>Twin Underfloor CNG Tanks<i class="vr-sep">|</i>Zero Clutch Fatigue in City Traffic<i class="vr-sep">|</i>Automatic Temperature Control &amp; HARMAN Audio</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Automatic" data-price="889900">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">XZA Plus iCNG AMT (Twin-Cylinder Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 73.5 PS</span><span>&bull; 95 Nm</span><span>&bull; 26.49 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.90 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.14 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2310,6 +2551,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 564900;
@@ -2412,6 +2655,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

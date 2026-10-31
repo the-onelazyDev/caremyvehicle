@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1681,234 +1745,284 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Hyundai Exter Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="612800">
-                  <td>
-                    <strong>EX 1.2L Petrol 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,12,800</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.98 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard<br>&check; ABS with EBD<br>&check; Central Locking
-                  </td>
-                </tr>
-              
-                <tr data-base-price="648200">
-                  <td>
-                    <strong>EX (O) 1.2L Petrol 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,48,200</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.39 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard<br>&check; Electronic Stability Control (ESC)<br>&check; Vehicle Stability Management (VSM)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="750000">
-                  <td>
-                    <strong>S 1.2L Petrol 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,50,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.54 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 8-inch Touchscreen Infotainment<br>&check; Apple CarPlay &amp; Android Auto<br>&check; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="786000">
-                  <td>
-                    <strong>S (O)+ 1.2L Petrol 5MT (Sunroof)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,86,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.95 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Voice-enabled Smart Electric Sunroof<br>&check; 8-inch Touchscreen with Navigation<br>&check; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="815000">
-                  <td>
-                    <strong>S 1.2L Smart Auto AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹8,15,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.28 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Smart Auto AMT with Steering Paddle Shifters<br>&check; 8-inch Touchscreen Infotainment<br>&check; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="850000">
-                  <td>
-                    <strong>S (O)+ Hy-CNG Duo 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹8,50,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.68 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Hy-CNG Duo Dual Cylinder Technology<br>&check; Practical Usable Boot Space<br>&check; Voice-enabled Electric Sunroof
-                  </td>
-                </tr>
-              
-                <tr data-base-price="823000">
-                  <td>
-                    <strong>SX 1.2L Petrol 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹8,23,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.38 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Voice-enabled Electric Sunroof<br>&check; Projector Headlamps<br>&check; Shark Fin Antenna
-                  </td>
-                </tr>
-              
-                <tr data-base-price="890000">
-                  <td>
-                    <strong>SX 1.2L Smart Auto AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹8,90,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.14 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Electric Sunroof<br>&check; Steering Mounted Paddle Shifters<br>&check; Automatic Temperature Control (FATC)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="838000">
-                  <td>
-                    <strong>SX Knight 1.2L Petrol 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹8,38,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.55 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Blackout Knight Edition Styling<br>&check; Red Brake Calipers<br>&check; All-Black Interior with Red Accents &amp; Stitching
-                  </td>
-                </tr>
-              
-                <tr data-base-price="905000">
-                  <td>
-                    <strong>SX Knight 1.2L Smart Auto AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹9,05,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.31 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Knight Edition Black Package<br>&check; Smart Auto AMT with Paddle Shifters<br>&check; Voice Sunroof
-                  </td>
-                </tr>
-              
-                <tr data-base-price="916000">
-                  <td>
-                    <strong>SX Hy-CNG Duo 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹9,16,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.43 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Hy-CNG Duo Dual Cylinder Tech<br>&check; Voice-enabled Electric Sunroof<br>&check; Rear Camera with Guidelines
-                  </td>
-                </tr>
-              
-                <tr data-base-price="887000">
-                  <td>
-                    <strong>SX (O) 1.2L Petrol 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹8,87,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.10 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 15-inch Diamond Cut Alloy Wheels<br>&check; Smart Key with Push Button Start/Stop<br>&check; Wireless Smartphone Charger
-                  </td>
-                </tr>
-              
-                <tr data-base-price="954000">
-                  <td>
-                    <strong>SX (O) 1.2L Smart Auto AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹9,54,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.87 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 15-inch Diamond Cut Alloys<br>&check; Smart Auto AMT with Paddle Shifters<br>&check; Wireless Phone Charger
-                  </td>
-                </tr>
-              
-                <tr data-base-price="956000">
-                  <td>
-                    <strong>SX (O) Connect 1.2L Petrol 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹9,56,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.89 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Factory Dual Dashcam (Front &amp; Cabin/Rear Recording)<br>&check; Hyundai Bluelink Connected Car Tech (60+ Features)<br>&check; Ambient Sounds of Nature
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1028000">
-                  <td>
-                    <strong>SX (O) Connect 1.2L Smart Auto AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹10,28,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹11.81 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Dual Dashcam Recording System<br>&check; Bluelink Connected Car Tech<br>&check; Paddle Shifters
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1043000">
-                  <td>
-                    <strong>SX (O) Connect Knight 1.2L AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹10,43,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹11.98 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Top-of-the-Line Knight Edition Styling<br>&check; Factory Dual Dashcam<br>&check; Bluelink Connected Car Tech
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Hyundai Exter Variants</h2>
+      <p class="vr-intro" id="vrIntro">Hyundai Exter price for the base model starts at Rs. 6.13 Lakh and the top model price goes up to Rs. 10.43 Lakh (ex-showroom). Hyundai Exter price for 16 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="CNG" onclick="vrFilter(this)">CNG</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Exter EX</span>
+            <span class="vr-trim-price">₹ 6.13 - 6.48 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags Standard<i class="vr-sep">|</i>ABS with EBD<i class="vr-sep">|</i>Central Locking<i class="vr-sep">|</i>Digital Cluster with 4.2&quot; Color TFT MID<i class="vr-sep">|</i>Front Power Windows<i class="vr-sep">|</i>Driver Seat Height Adjust<i class="vr-sep">|</i>Electronic Stability Control (ESC)<i class="vr-sep">|</i>Vehicle Stability Management (VSM)</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="612800">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">EX 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.13 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.98 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="648200">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">EX (O) 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.48 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.39 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Exter S</span>
+            <span class="vr-trim-price">₹ 7.50 - 8.50 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over EX:</strong> 8-inch Touchscreen Infotainment<i class="vr-sep">|</i>Apple CarPlay &amp; Android Auto<i class="vr-sep">|</i>Rear AC Vents<i class="vr-sep">|</i>Electrically Adjustable ORVMs<i class="vr-sep">|</i>Steering Mounted Audio Controls<i class="vr-sep">|</i>H-LED DRLs<i class="vr-sep">|</i>Voice-enabled Smart Electric Sunroof<i class="vr-sep">|</i>8-inch Touchscreen with Navigation</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 4 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="750000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">S 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.50 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.54 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="786000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">S (O)+ 1.2L Petrol 5MT (Sunroof)</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.86 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.95 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="815000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">S 1.2L Smart Auto AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.15 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.28 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="850000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">S (O)+ Hy-CNG Duo 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 69 PS</span><span>&bull; 27.1 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.50 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.68 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Exter SX</span>
+            <span class="vr-trim-price">₹ 8.23 - 10.43 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over S:</strong> Projector Headlamps<i class="vr-sep">|</i>Shark Fin Antenna<i class="vr-sep">|</i>Rear View Camera with Guidelines<i class="vr-sep">|</i>15-inch Dual Tone Styled Wheels<i class="vr-sep">|</i>Cruise Control<i class="vr-sep">|</i>15-inch Diamond Cut Alloy Wheels<i class="vr-sep">|</i>Smart Key with Push Button Start/Stop<i class="vr-sep">|</i>Wireless Smartphone Charger</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 7 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="823000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.23 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.38 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="887000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">SX (O) 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.87 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.10 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="890000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">SX 1.2L Smart Auto AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.90 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.14 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="954000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">SX (O) 1.2L Smart Auto AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.54 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.87 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="956000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX (O) Connect 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.56 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.89 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1028000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">SX (O) Connect 1.2L Smart Auto AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.28 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 11.81 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1043000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">SX (O) Connect Knight 1.2L AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.43 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 11.98 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Exter SX Knight</span>
+            <span class="vr-trim-price">₹ 8.38 - 9.05 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over SX:</strong> Blackout Knight Edition Styling<i class="vr-sep">|</i>Red Brake Calipers<i class="vr-sep">|</i>All-Black Interior with Red Accents &amp; Stitching<i class="vr-sep">|</i>Diamond Cut Black Alloys<i class="vr-sep">|</i>Knight Edition Black Package<i class="vr-sep">|</i>FATC Auto AC<i class="vr-sep">|</i>Red Interior Accents</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="838000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">SX Knight 1.2L Petrol 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.38 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.55 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="905000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">SX Knight 1.2L Smart Auto AMT</div>
+              <div class="vr-var-specs"><span>&bull; 83 PS</span><span>&bull; 19.2 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.05 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.31 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Exter SX Hy-CNG Duo</span>
+            <span class="vr-trim-price">₹ 9.16 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over SX Knight:</strong> Hy-CNG Duo Dual Cylinder Tech<i class="vr-sep">|</i>Voice-enabled Electric Sunroof<i class="vr-sep">|</i>Rear Camera with Guidelines<i class="vr-sep">|</i>Projector Headlamps<i class="vr-sep">|</i>Automatic Climate Control<i class="vr-sep">|</i>6 Airbags</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="916000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX Hy-CNG Duo 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 69 PS</span><span>&bull; 27.1 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.16 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.43 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2332,6 +2446,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 612800;
@@ -2434,6 +2550,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

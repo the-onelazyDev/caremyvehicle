@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1681,130 +1745,179 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Maruti Suzuki Celerio Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="536500">
-                  <td>
-                    <strong>LXi 1.0L 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹5,36,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.12 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Engine Idle Start-Stop<br>&check; Dual Airbags<br>&check; ABS with EBD
-                  </td>
-                </tr>
-              
-                <tr data-base-price="583500">
-                  <td>
-                    <strong>VXi 1.0L 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹5,83,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.65 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; All 4 Power Windows<br>&check; Central Locking<br>&check; Body Coloured Door Handles
-                  </td>
-                </tr>
-              
-                <tr data-base-price="638500">
-                  <td>
-                    <strong>VXi 1.0L AGS (Automatic)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹6,38,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.28 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Auto Gear Shift (AGS)<br>&check; 26.68 km/l (India’s Most Fuel-Efficient Petrol)<br>&check; Hill Hold Assist
-                  </td>
-                </tr>
-              
-                <tr data-base-price="673500">
-                  <td>
-                    <strong>VXi 1.0L S-CNG 5MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>CNG • Manual</td>
-                  <td><strong>₹6,73,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.67 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Factory S-CNG (34.43 km/kg)<br>&check; Dual Interdependent ECUs<br>&check; Micro-Switch Fuel Lid Cutoff
-                  </td>
-                </tr>
-              
-                <tr data-base-price="611500">
-                  <td>
-                    <strong>ZXi 1.0L 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,11,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.97 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; SmartPlay Audio with Bluetooth<br>&check; Steering Mounted Audio Controls<br>&check; Tilt Adjustable Steering
-                  </td>
-                </tr>
-              
-                <tr data-base-price="666500">
-                  <td>
-                    <strong>ZXi 1.0L AGS (Automatic)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹6,66,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.59 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 5-Speed AGS Automatic<br>&check; Hill Hold Assist<br>&check; Steering Audio Controls
-                  </td>
-                </tr>
-              
-                <tr data-base-price="659500">
-                  <td>
-                    <strong>ZXi+ 1.0L 5MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,59,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.52 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 7-inch SmartPlay Studio Touchscreen<br>&check; Apple CarPlay &amp; Android Auto<br>&check; Engine Push Start/Stop with Smart Key
-                  </td>
-                </tr>
-              
-                <tr data-base-price="709500">
-                  <td>
-                    <strong>ZXi+ 1.0L AGS (Automatic)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹7,09,500</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.08 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Top-Spec AGS Automatic<br>&check; 15-inch Black Alloys<br>&check; Push Button Start
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Maruti Suzuki Celerio Variants</h2>
+      <p class="vr-intro" id="vrIntro">Maruti Suzuki Celerio price for the base model starts at Rs. 5.37 Lakh and the top model price goes up to Rs. 7.09 Lakh (ex-showroom). Maruti Suzuki Celerio price for 8 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="CNG" onclick="vrFilter(this)">CNG</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Maruti Suzuki Celerio LXi</span>
+            <span class="vr-trim-price">₹ 5.37 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> Engine Idle Start-Stop<i class="vr-sep">|</i>Dual Airbags<i class="vr-sep">|</i>ABS with EBD<i class="vr-sep">|</i>Reverse Parking Sensors<i class="vr-sep">|</i>Manual AC with Heater</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="536500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">LXi 1.0L 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 25.24 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 5.37 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.12 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Maruti Suzuki Celerio VXi</span>
+            <span class="vr-trim-price">₹ 5.83 - 6.74 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over LXi:</strong> All 4 Power Windows<i class="vr-sep">|</i>Central Locking<i class="vr-sep">|</i>Body Coloured Door Handles<i class="vr-sep">|</i>Rear Parcel Shelf<i class="vr-sep">|</i>Day/Night IRVM<i class="vr-sep">|</i>Auto Gear Shift (AGS)<i class="vr-sep">|</i>26.68 km/l (India’s Most Fuel-Efficient Petrol)<i class="vr-sep">|</i>Hill Hold Assist</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="583500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">VXi 1.0L 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 25.24 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 5.83 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.65 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="638500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">VXi 1.0L AGS (Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 26.68 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.38 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.28 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="CNG" data-trans="Manual" data-price="673500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">CNG 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">VXi 1.0L S-CNG 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 56.7 PS</span><span>&bull; 34.43 km/kg</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.74 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.67 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Maruti Suzuki Celerio ZXi</span>
+            <span class="vr-trim-price">₹ 6.12 - 6.67 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over VXi:</strong> SmartPlay Audio with Bluetooth<i class="vr-sep">|</i>Steering Mounted Audio Controls<i class="vr-sep">|</i>Tilt Adjustable Steering<i class="vr-sep">|</i>Rear Defogger<i class="vr-sep">|</i>Remote Keyless Entry<i class="vr-sep">|</i>5-Speed AGS Automatic<i class="vr-sep">|</i>Steering Audio Controls<i class="vr-sep">|</i>SmartPlay Audio</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="611500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">ZXi 1.0L 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 24.97 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.12 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.97 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="666500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">ZXi 1.0L AGS (Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 26.00 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.67 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.59 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Maruti Suzuki Celerio ZXi+</span>
+            <span class="vr-trim-price">₹ 6.59 - 7.09 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over ZXi:</strong> 7-inch SmartPlay Studio Touchscreen<i class="vr-sep">|</i>Apple CarPlay &amp; Android Auto<i class="vr-sep">|</i>Engine Push Start/Stop with Smart Key<i class="vr-sep">|</i>15-inch Black Alloy Wheels<i class="vr-sep">|</i>Electrically Folding ORVMs<i class="vr-sep">|</i>Top-Spec AGS Automatic<i class="vr-sep">|</i>15-inch Black Alloys<i class="vr-sep">|</i>Push Button Start</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="659500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">ZXi+ 1.0L 5MT</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 24.97 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.59 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.52 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="709500">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Automatic</div>
+              <div class="vr-var-name">ZXi+ 1.0L AGS (Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 67 PS</span><span>&bull; 26.00 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.09 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.08 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2213,6 +2326,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 536500;
@@ -2315,6 +2430,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

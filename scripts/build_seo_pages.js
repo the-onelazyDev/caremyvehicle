@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from '../js/carData.js';
 import { ARTICLES } from '../js/newsData.js';
+import { buildVariantsSection, VARIANTS_CLIENT_JS, VARIANTS_CSS } from './variantsSection.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1596,6 +1597,7 @@ ${structuredDataJson}
   }
 
     }
+${VARIANTS_CSS}
   </style>
 </head>
 <body class="car-detail-page">
@@ -1836,43 +1838,7 @@ ${structuredDataJson}
     </section>
 
     <!-- 5. Car Variants Breakdown Table -->
-    ${variantsList.length > 0 ? `
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 ${escapeHtml(car.name)} Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${variantsList.map(v => {
-              const varOnRoad = calculateOnRoadPrice(v.exShowroom, 'delhi');
-              return `
-                <tr data-base-price="${v.exShowroom}">
-                  <td>
-                    <strong>${escapeHtml(v.name)}</strong>
-                    ${v.isVFM ? '<span class="vfm-chip">⭐ Best VFM</span>' : ''}
-                  </td>
-                  <td>${escapeHtml(v.fuel || '')} ${escapeHtml(v.trans ? '• ' + v.trans : '')}</td>
-                  <td><strong>${formatINR(v.exShowroom)}</strong></td>
-                  <td class="variant-onroad-cell"><strong>${formatLakh(varOnRoad.total)}</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    ${(v.keyFeatures || []).slice(0, 3).map(f => `&check; ${escapeHtml(f)}`).join('<br>')}
-                  </td>
-                </tr>
-              `;
-            }).join('')}
-          </tbody>
-        </table>
-      </div>
-    </section>
-    ` : ''}
+    ${buildVariantsSection(car, variantsList)}
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2180,6 +2146,8 @@ ${structuredDataJson}
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = ${car.minPrice || 0};
@@ -2283,6 +2251,7 @@ ${structuredDataJson}
       applyCityToPage(currentCityId);
     });
 
+${VARIANTS_CLIENT_JS}
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [
       { url: "${car.heroImage}", title: "${escapeHtml(car.name)} Official Studio Render" },

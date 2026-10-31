@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1711,182 +1775,274 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Hyundai Creta (Facelift) Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="1100000">
-                  <td>
-                    <strong>E 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹11,00,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.64 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard<br>&check; All 4 Disc Brakes<br>&check; ESC &amp; Hill-Start Assist
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1221000">
-                  <td>
-                    <strong>EX 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,21,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.03 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 8-inch Touchscreen Infotainment<br>&check; Wireless Android Auto &amp; Apple CarPlay<br>&check; Steering Mounted Controls
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1343000">
-                  <td>
-                    <strong>S 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹13,43,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹15.43 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Horizon LED DRLs<br>&check; Rear Parking Camera with Guidelines<br>&check; Cruise Control
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1436000">
-                  <td>
-                    <strong>S(O) 1.5L Petrol 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹14,36,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.50 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Voice-Enabled Panoramic Sunroof<br>&check; Dual-Zone Automatic Climate Control<br>&check; 17-inch Diamond-Cut Alloys
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1586000">
-                  <td>
-                    <strong>S(O) 1.5L Petrol IVT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹15,86,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹18.22 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Ultra-Smooth IVT Automatic<br>&check; Paddle Shifters &amp; Drive Modes<br>&check; Panoramic Sunroof
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1530000">
-                  <td>
-                    <strong>SX 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹15,30,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.57 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Dual 10.25-inch Integrated Screens (Infotainment + Cluster)<br>&check; Connected Horizon LED Taillamps<br>&check; Ambient Lighting (64 Colors)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1873000">
-                  <td>
-                    <strong>SX(O) 1.5L Petrol IVT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹18,73,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Hyundai SmartSense Level 2 ADAS (19 Features)<br>&check; Bose Premium 8-Speaker Audio<br>&check; Surround View 360° Monitor &amp; Blind View
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2015000">
-                  <td>
-                    <strong>SX(O) 1.5L Turbo 7DCT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹20,15,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹23.14 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 160 PS / 253 Nm Turbo GDi Power<br>&check; Lightning 7-Speed Dual Clutch (DCT)<br>&check; Full Level 2 ADAS Highway Suite
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2030000">
-                  <td>
-                    <strong>SX(O) Knight Edition 1.5L Turbo 7DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹20,30,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹23.31 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Knight All-Black Aesthetic Package<br>&check; Matte Black Exterior with Red Brake Calipers<br>&check; Dark Chrome Badging &amp; Grille
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1256000">
-                  <td>
-                    <strong>E 1.5L Diesel 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹12,56,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.43 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Frugal 1.5L Diesel (21.8 km/l)<br>&check; All 4 Disc Brakes<br>&check; 6 Airbags Standard
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1590000">
-                  <td>
-                    <strong>S(O) 1.5L Diesel 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹15,90,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹18.26 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Panoramic Sunroof<br>&check; Dual-Zone Climate Control<br>&check; 17-inch Diamond-Cut Alloys
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2015000">
-                  <td>
-                    <strong>SX(O) 1.5L Diesel 6AT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹20,15,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹23.14 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Smooth 6-Speed Torque Converter Auto<br>&check; Full Level 2 ADAS Suite<br>&check; Bose Premium 8-Speaker Audio
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Hyundai Creta (Facelift) Variants</h2>
+      <p class="vr-intro" id="vrIntro">Hyundai Creta (Facelift) price for the base model starts at Rs. 11.00 Lakh and the top model price goes up to Rs. 20.30 Lakh (ex-showroom). Hyundai Creta (Facelift) price for 12 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="Diesel" onclick="vrFilter(this)">Diesel</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta E</span>
+            <span class="vr-trim-price">₹ 11.00 - 12.56 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags Standard<i class="vr-sep">|</i>All 4 Disc Brakes<i class="vr-sep">|</i>ESC &amp; Hill-Start Assist<i class="vr-sep">|</i>Manual AC<i class="vr-sep">|</i>Tire Pressure Monitor (TPMS)<i class="vr-sep">|</i>Dual-Tone Interior<i class="vr-sep">|</i>Frugal 1.5L Diesel (21.8 km/l)<i class="vr-sep">|</i>ESC &amp; Hill-Start Assist Control</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1100000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">E 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.00 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.64 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1256000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">E 1.5L Diesel 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 116 PS</span><span>&bull; 21.8 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.56 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.43 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta EX</span>
+            <span class="vr-trim-price">₹ 12.21 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over E:</strong> 8-inch Touchscreen Infotainment<i class="vr-sep">|</i>Wireless Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>Steering Mounted Controls<i class="vr-sep">|</i>Shark Fin Antenna<i class="vr-sep">|</i>Front &amp; Rear USB-C Ports</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1221000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">EX 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.21 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.03 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta S</span>
+            <span class="vr-trim-price">₹ 13.43 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over EX:</strong> Horizon LED DRLs<i class="vr-sep">|</i>Rear Parking Camera with Guidelines<i class="vr-sep">|</i>Cruise Control<i class="vr-sep">|</i>Rear Window Sunshades<i class="vr-sep">|</i>Automatic Headlamps<i class="vr-sep">|</i>Dual-Tone Styled Wheels</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1343000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">S 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 13.43 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 15.43 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta S(O)</span>
+            <span class="vr-trim-price">₹ 14.36 - 15.90 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over S:</strong> Voice-Enabled Panoramic Sunroof<i class="vr-sep">|</i>Dual-Zone Automatic Climate Control<i class="vr-sep">|</i>17-inch Diamond-Cut Alloys<i class="vr-sep">|</i>Electronic Parking Brake (EPB) with Auto Hold<i class="vr-sep">|</i>Push Button Start<i class="vr-sep">|</i>Ultra-Smooth IVT Automatic<i class="vr-sep">|</i>Paddle Shifters &amp; Drive Modes<i class="vr-sep">|</i>Panoramic Sunroof</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1436000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">S(O) 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.36 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.50 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1586000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">S(O) 1.5L Petrol IVT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.7 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.86 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 18.22 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1590000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">S(O) 1.5L Diesel 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 116 PS</span><span>&bull; 21.8 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.90 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 18.26 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta SX</span>
+            <span class="vr-trim-price">₹ 15.30 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over S(O):</strong> Dual 10.25-inch Integrated Screens (Infotainment + Cluster)<i class="vr-sep">|</i>Connected Horizon LED Taillamps<i class="vr-sep">|</i>Ambient Lighting (64 Colors)<i class="vr-sep">|</i>Rear Seat Headrest Cushions<i class="vr-sep">|</i>Smart Key with Remote Engine Start</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1530000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">SX 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.30 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.57 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta SX(O)</span>
+            <span class="vr-trim-price">₹ 18.73 - 20.15 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over SX:</strong> Hyundai SmartSense Level 2 ADAS (19 Features)<i class="vr-sep">|</i>Bose Premium 8-Speaker Audio<i class="vr-sep">|</i>Surround View 360° Monitor &amp; Blind View<i class="vr-sep">|</i>Front Ventilated Seats<i class="vr-sep">|</i>8-Way Power Driver Seat<i class="vr-sep">|</i>160 PS / 253 Nm Turbo GDi Power<i class="vr-sep">|</i>Lightning 7-Speed Dual Clutch (DCT)<i class="vr-sep">|</i>Full Level 2 ADAS Highway Suite</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1873000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX(O) 1.5L Petrol IVT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 17.7 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.73 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.51 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="2015000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX(O) 1.5L Turbo 7DCT</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 18.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 20.15 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 23.14 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="2015000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">SX(O) 1.5L Diesel 6AT</div>
+              <div class="vr-var-specs"><span>&bull; 116 PS</span><span>&bull; 19.1 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 20.15 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 23.14 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Hyundai Creta SX(O) Knight Edition</span>
+            <span class="vr-trim-price">₹ 20.30 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over SX(O):</strong> Knight All-Black Aesthetic Package<i class="vr-sep">|</i>Matte Black Exterior with Red Brake Calipers<i class="vr-sep">|</i>Dark Chrome Badging &amp; Grille<i class="vr-sep">|</i>Black Leatherette Seats with Brass Piping<i class="vr-sep">|</i>Flagship Level 2 ADAS &amp; Bose Audio</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="2030000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic</div>
+              <div class="vr-var-name">SX(O) Knight Edition 1.5L Turbo 7DCT</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 18.4 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 20.30 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 23.31 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2320,6 +2476,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 1100000;
@@ -2422,6 +2580,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

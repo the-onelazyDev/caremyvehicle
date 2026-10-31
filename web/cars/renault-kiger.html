@@ -1363,6 +1363,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1684,195 +1748,251 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Renault Kiger Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="581000">
-                  <td>
-                    <strong>Authentic 1.0L MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹5,81,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹6.62 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags (Front, Side &amp; Curtain), ESP, Hill Start Assist, TCS &amp; TPMS Standard<br>&check; LED DRLs, C-Shaped Signature LED Tail Lamps &amp; Rear Spoiler<br>&check; All 4 Power Windows, Remote Keyless Entry &amp; 3.5-inch LED Instrument Cluster
-                  </td>
-                </tr>
-              
-                <tr data-base-price="659000">
-                  <td>
-                    <strong>Evolution 1.0L MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹6,59,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹7.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Rear AC Vents, Electrically Adjustable ORVMs &amp; Shark Fin Antenna<br>&check; R400 Audio System with Bluetooth, USB, 4 Speakers &amp; Steering Audio Controls<br>&check; 60:40 Split Folding Rear Seats with Adjustable Headrests &amp; Center Armrest
-                  </td>
-                </tr>
-              
-                <tr data-base-price="703000">
-                  <td>
-                    <strong>Evolution 1.0L Easy-R AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • AMT</td>
-                  <td><strong>₹7,03,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.01 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 5-Speed Easy-R AMT Automatic with Traffic Crawl Assist &amp; Hill Start Assist<br>&check; Rear AC Vents, Electric ORVMs, Shark Fin Antenna &amp; 4-Speaker Audio<br>&check; 6 Airbags, Electronic Stability Program (ESP) &amp; Real-Time TPMS
-                  </td>
-                </tr>
-              
-                <tr data-base-price="703000">
-                  <td>
-                    <strong>Evolution+ 1.0L MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,03,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.01 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 20.32 cm (8-inch) Floating Touchscreen with Android Auto &amp; Apple CarPlay<br>&check; Reverse Parking Camera with Guidelines &amp; Functional 50 kg Roof Bars<br>&check; Rear AC Vents, Electric ORVMs, Shark Fin Antenna &amp; Steering Controls
-                  </td>
-                </tr>
-              
-                <tr data-base-price="749000">
-                  <td>
-                    <strong>Evolution+ 1.0L Easy-R AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • AMT</td>
-                  <td><strong>₹7,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.53 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 5-Speed Easy-R AMT Automatic with 20.32 cm Floating Touchscreen<br>&check; Reverse Parking Camera, Android Auto, Apple CarPlay &amp; Functional Roof Bars<br>&check; Rear AC Vents, Electric ORVMs &amp; 6 Airbags Standard
-                  </td>
-                </tr>
-              
-                <tr data-base-price="760000">
-                  <td>
-                    <strong>Techno 1.0L MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,60,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹8.66 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Tri-Octa Pure Vision LED Headlamps &amp; R16 Dual-Tone Flex Wheels<br>&check; Smart Access Card with Walk-Away Lock &amp; Push Button Start/Stop<br>&check; Auto AC, Rear Wiper &amp; Washer, Driver Seat Height Adjust &amp; Upper Glovebox
-                  </td>
-                </tr>
-              
-                <tr data-base-price="793000">
-                  <td>
-                    <strong>Evolution+ 1.0L Turbo MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹7,93,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.03 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 100 PS &amp; 160 Nm 1.0L Turbocharged Petrol Engine with 5-Speed Manual<br>&check; 20.32 cm Floating Touchscreen, Rear View Camera &amp; Functional Roof Bars<br>&check; 6 Airbags, ESP, Hill Start Assist, Traction Control &amp; TPMS
-                  </td>
-                </tr>
-              
-                <tr data-base-price="810000">
-                  <td>
-                    <strong>Techno 1.0L Easy-R AMT</strong>
-                    
-                  </td>
-                  <td>Petrol • AMT</td>
-                  <td><strong>₹8,10,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.23 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 5-Speed Easy-R AMT with Tri-Octa Pure Vision LED Headlamps &amp; Auto AC<br>&check; Smart Access Card, Push Button Start &amp; Wireless Android Auto / Apple CarPlay<br>&check; R16 Dual-Tone Flex Wheels, Rear Wiper/Washer &amp; 6-Speaker Audio
-                  </td>
-                </tr>
-              
-                <tr data-base-price="850000">
-                  <td>
-                    <strong>Techno 1.0L Turbo MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹8,50,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.68 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 100 PS / 160 Nm 1.0L Turbo Engine with Tri-Octa Pure Vision LED Headlamps<br>&check; Smart Access Card, Push Start, Auto AC &amp; Wireless Smartphone Replication<br>&check; R16 Dual-Tone Flex Wheels &amp; 6 Airbags
-                  </td>
-                </tr>
-              
-                <tr data-base-price="850000">
-                  <td>
-                    <strong>Emotion 1.0L MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹8,50,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹9.68 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; R16 Diamond-Cut Alloy Wheels, Auto Headlamps &amp; Rain-Sensing Wipers<br>&check; 17.78 cm Multi-Skin TFT Digital Cluster &amp; 3D Sound by Arkamys (8 Speakers)<br>&check; Multi-Sense Drive Modes, Cruise Control, Cooled Lower Glovebox &amp; Ambient Lighting
-                  </td>
-                </tr>
-              
-                <tr data-base-price="940000">
-                  <td>
-                    <strong>Techno 1.0L Turbo X-Tronic CVT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • CVT</td>
-                  <td><strong>₹9,40,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.71 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 100 PS 1.0L Turbo Engine with Smooth X-Tronic D-Step CVT Automatic<br>&check; Tri-Octa Pure Vision LED Headlamps, Auto AC &amp; Smart Access Card<br>&check; 20.32 cm Touchscreen with Wireless Android Auto &amp; Apple CarPlay
-                  </td>
-                </tr>
-              
-                <tr data-base-price="940000">
-                  <td>
-                    <strong>Emotion 1.0L Turbo MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹9,40,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹10.71 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 100 PS / 160 Nm Turbo MT with R16 Diamond-Cut Alloys &amp; Red Brake Calipers<br>&check; Wireless Smartphone Charger, Cruise Control, Auto Headlamps &amp; Rain Wipers<br>&check; 17.78 cm Multi-Skin TFT Cluster, 8-Speaker 3D Arkamys Audio &amp; Multi-Sense Modes
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1040000">
-                  <td>
-                    <strong>Emotion 1.0L Turbo X-Tronic CVT</strong>
-                    
-                  </td>
-                  <td>Petrol • CVT</td>
-                  <td><strong>₹10,40,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹11.95 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Flagship 100 PS Turbo X-Tronic CVT with Multi-Sense Drive Modes (Eco, Normal, Sport)<br>&check; R16 Diamond-Cut Alloys with Red Calipers, Wireless Charger &amp; Remote Engine Start<br>&check; 17.78 cm TFT Digital Cluster, 8-Speaker 3D Arkamys Sound &amp; Dual-Tone Roof Options
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Renault Kiger Variants</h2>
+      <p class="vr-intro" id="vrIntro">Renault Kiger price for the base model starts at Rs. 5.81 Lakh and the top model price goes up to Rs. 10.40 Lakh (ex-showroom). Renault Kiger price for 13 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Kiger Authentic</span>
+            <span class="vr-trim-price">₹ 5.81 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags (Front, Side &amp; Curtain), ESP, Hill Start Assist, TCS &amp; TPMS Standard<i class="vr-sep">|</i>LED DRLs, C-Shaped Signature LED Tail Lamps &amp; Rear Spoiler<i class="vr-sep">|</i>All 4 Power Windows, Remote Keyless Entry &amp; 3.5-inch LED Instrument Cluster<i class="vr-sep">|</i>405-Litre Boot Space, 205 mm Ground Clearance &amp; R16 Steel Wheels with Covers</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="581000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Authentic 1.0L MT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.17 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 5.81 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 6.62 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Kiger Evolution</span>
+            <span class="vr-trim-price">₹ 6.59 - 7.03 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Authentic:</strong> Rear AC Vents, Electrically Adjustable ORVMs &amp; Shark Fin Antenna<i class="vr-sep">|</i>R400 Audio System with Bluetooth, USB, 4 Speakers &amp; Steering Audio Controls<i class="vr-sep">|</i>60:40 Split Folding Rear Seats with Adjustable Headrests &amp; Center Armrest<i class="vr-sep">|</i>Height-Adjustable Tilt Steering &amp; Front Center Armrest with Storage<i class="vr-sep">|</i>5-Speed Easy-R AMT Automatic with Traffic Crawl Assist &amp; Hill Start Assist<i class="vr-sep">|</i>Rear AC Vents, Electric ORVMs, Shark Fin Antenna &amp; 4-Speaker Audio<i class="vr-sep">|</i>6 Airbags, Electronic Stability Program (ESP) &amp; Real-Time TPMS<i class="vr-sep">|</i>60:40 Split Rear Seats &amp; 405-Litre Boot</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="659000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Evolution 1.0L MT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.17 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 6.59 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 7.51 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="703000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | AMT</div>
+              <div class="vr-var-name">Evolution 1.0L Easy-R AMT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.03 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.03 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.01 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Kiger Evolution+</span>
+            <span class="vr-trim-price">₹ 7.03 - 7.93 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Evolution:</strong> 20.32 cm (8-inch) Floating Touchscreen with Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>Reverse Parking Camera with Guidelines &amp; Functional 50 kg Roof Bars<i class="vr-sep">|</i>Rear AC Vents, Electric ORVMs, Shark Fin Antenna &amp; Steering Controls<i class="vr-sep">|</i>6 Airbags, ESP, Hill Start Assist &amp; TPMS<i class="vr-sep">|</i>5-Speed Easy-R AMT Automatic with 20.32 cm Floating Touchscreen<i class="vr-sep">|</i>Reverse Parking Camera, Android Auto, Apple CarPlay &amp; Functional Roof Bars<i class="vr-sep">|</i>Rear AC Vents, Electric ORVMs &amp; 6 Airbags Standard<i class="vr-sep">|</i>100 PS &amp; 160 Nm 1.0L Turbocharged Petrol Engine with 5-Speed Manual</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="703000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Evolution+ 1.0L MT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.17 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.03 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.01 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="749000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | AMT</div>
+              <div class="vr-var-name">Evolution+ 1.0L Easy-R AMT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.03 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.53 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="793000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Evolution+ 1.0L Turbo MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 160 Nm</span><span>&bull; 20.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.93 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.03 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Kiger Techno</span>
+            <span class="vr-trim-price">₹ 7.60 - 9.40 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Evolution+:</strong> Tri-Octa Pure Vision LED Headlamps &amp; R16 Dual-Tone Flex Wheels<i class="vr-sep">|</i>Smart Access Card with Walk-Away Lock &amp; Push Button Start/Stop<i class="vr-sep">|</i>Auto AC, Rear Wiper &amp; Washer, Driver Seat Height Adjust &amp; Upper Glovebox<i class="vr-sep">|</i>20.32 cm Touchscreen with Wireless Smartphone Replication &amp; 4 Speakers + 2 Tweeters<i class="vr-sep">|</i>5-Speed Easy-R AMT with Tri-Octa Pure Vision LED Headlamps &amp; Auto AC<i class="vr-sep">|</i>Smart Access Card, Push Button Start &amp; Wireless Android Auto / Apple CarPlay<i class="vr-sep">|</i>R16 Dual-Tone Flex Wheels, Rear Wiper/Washer &amp; 6-Speaker Audio<i class="vr-sep">|</i>100 PS / 160 Nm 1.0L Turbo Engine with Tri-Octa Pure Vision LED Headlamps</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 4 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="760000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Techno 1.0L MT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.17 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 7.60 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 8.66 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="810000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | AMT</div>
+              <div class="vr-var-name">Techno 1.0L Easy-R AMT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.03 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.10 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.23 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="850000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Techno 1.0L Turbo MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 160 Nm</span><span>&bull; 20.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.50 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.68 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="940000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | CVT <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Techno 1.0L Turbo X-Tronic CVT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 152 Nm</span><span>&bull; 18.24 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.40 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.71 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Kiger Emotion</span>
+            <span class="vr-trim-price">₹ 8.50 - 10.40 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Techno:</strong> R16 Diamond-Cut Alloy Wheels, Auto Headlamps &amp; Rain-Sensing Wipers<i class="vr-sep">|</i>17.78 cm Multi-Skin TFT Digital Cluster &amp; 3D Sound by Arkamys (8 Speakers)<i class="vr-sep">|</i>Multi-Sense Drive Modes, Cruise Control, Cooled Lower Glovebox &amp; Ambient Lighting<i class="vr-sep">|</i>Leatherette Steering Wheel, Semi-Leatherette Seats &amp; Power-Folding ORVMs<i class="vr-sep">|</i>100 PS / 160 Nm Turbo MT with R16 Diamond-Cut Alloys &amp; Red Brake Calipers<i class="vr-sep">|</i>Wireless Smartphone Charger, Cruise Control, Auto Headlamps &amp; Rain Wipers<i class="vr-sep">|</i>17.78 cm Multi-Skin TFT Cluster, 8-Speaker 3D Arkamys Audio &amp; Multi-Sense Modes<i class="vr-sep">|</i>Flagship 100 PS Turbo X-Tronic CVT with Multi-Sense Drive Modes (Eco, Normal, Sport)</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="850000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Emotion 1.0L MT</div>
+              <div class="vr-var-specs"><span>&bull; 72 PS</span><span>&bull; 19.17 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 8.50 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 9.68 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="940000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Emotion 1.0L Turbo MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 160 Nm</span><span>&bull; 20.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 9.40 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 10.71 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1040000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | CVT</div>
+              <div class="vr-var-name">Emotion 1.0L Turbo X-Tronic CVT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 152 Nm</span><span>&bull; 18.24 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.40 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 11.95 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2311,6 +2431,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 581000;
@@ -2413,6 +2535,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

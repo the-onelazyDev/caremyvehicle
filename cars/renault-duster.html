@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1685,234 +1749,335 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Renault Duster Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="1049000">
-                  <td>
-                    <strong>Authentic Turbo TCe 100 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹10,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.05 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 5-Star Bharat NCAP Safety Rating with 6 Airbags, ESP, Hill Start Assist &amp; TPMS<br>&check; 100 PS &amp; 166 Nm Turbo TCe 100 Engine with 6-Speed Manual Transmission<br>&check; Full-LED Headlamps with Y-Shaped LED DRLs, 212 mm Ground Clearance &amp; Roof Bars
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1169000">
-                  <td>
-                    <strong>Evolution Turbo TCe 100 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹11,69,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹13.43 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 25.65 cm (10.1-inch) OpenR Touchscreen with Wireless Android Auto &amp; Apple CarPlay<br>&check; 17.78 cm Digital Driver Display, Reverse Parking Camera &amp; Rear AC Vents<br>&check; Electrically Adjustable ORVMs, Steering Controls &amp; YouClip Attachment Points
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1299000">
-                  <td>
-                    <strong>Adventure Turbo TCe 100 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; R17 Adventure Alloy Wheels, Modular Roof Bars &amp; Starkle Protective Cladding<br>&check; Auto Climate Control, Smart Keyless Entry, Push Button Start &amp; Cruise Control<br>&check; 25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio &amp; Washable Adventure Upholstery
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1299000">
-                  <td>
-                    <strong>Evolution Turbo TCe 160 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.92 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS &amp; 280 Nm 1.3L Direct-Injection Turbo TCe 160 Engine with 6-Speed Manual<br>&check; 25.65 cm OpenR Touchscreen with Wireless Smartphone Replication &amp; Rear Camera<br>&check; All-4 Disc Brakes, 6 Airbags, ESP, Hill Start Assist &amp; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1399000">
-                  <td>
-                    <strong>Adventure Turbo TCe 160 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹13,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.07 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS / 280 Nm 1.3L Turbo TCe 160 with R17 Adventure Alloy Wheels<br>&check; Modular Roof Bars (80 kg), Auto Climate Control, Smart Card &amp; Push Start<br>&check; 25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio &amp; Electronic Parking Brake
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1449000">
-                  <td>
-                    <strong>Evolution Turbo TCe 160 6DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • DCT</td>
-                  <td><strong>₹14,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.64 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS / 280 Nm 1.3L Turbo Engine with 6-Speed Wet Dual-Clutch Automatic (DCT)<br>&check; 25.65 cm OpenR Touchscreen, Wireless Android Auto/CarPlay &amp; Reverse Camera<br>&check; Paddle Shifters, Electronic Parking Brake with Auto Hold &amp; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1529000">
-                  <td>
-                    <strong>Techno+ Turbo TCe 160 6MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹15,29,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.56 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Electric Panoramic Sunroof &amp; 26.03 cm (10.25-inch) Full Digital Driver Display<br>&check; 25.65 cm OpenR Link Touchscreen with Google Built-In &amp; Wireless Charger<br>&check; R18 Diamond-Cut Alloy Wheels, 360° Around View Camera &amp; Front/Rear Sensors
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1539000">
-                  <td>
-                    <strong>Adventure Turbo TCe 160 6DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • DCT</td>
-                  <td><strong>₹15,39,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.68 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS / 280 Nm 1.3L Turbo with 6-Speed Wet DCT &amp; Multi-Sense Drive Modes<br>&check; R17 Adventure Alloy Wheels, Modular Roof Bars &amp; Washable MicroCloud Upholstery<br>&check; 25.65 cm OpenR Touchscreen, Wireless Charger &amp; Electronic Parking Brake
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1669000">
-                  <td>
-                    <strong>Techno+ Turbo TCe 160 6DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • DCT</td>
-                  <td><strong>₹16,69,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.17 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Electric Panoramic Sunroof<br>&check; Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera &amp; R18 Alloys<br>&check; Wireless Smartphone Charger, Dual-Zone AC &amp; Arkamys 3D Sound System
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1699000">
-                  <td>
-                    <strong>Evolution Strong Hybrid E-Tech 160</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Hybrid • Automatic</td>
-                  <td><strong>₹16,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 160 PS 1.6L Strong Hybrid E-Tech Powertrain with 1.4 kWh Battery &amp; Up to 80% City EV Drive<br>&check; Multi-Mode Clutchless Dog-Box Automatic Transmission with Regenerative Braking<br>&check; 25.65 cm OpenR Touchscreen, 26.03 cm Digital Cluster &amp; Electronic Parking Brake
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1719000">
-                  <td>
-                    <strong>Iconic Launch Edition Turbo TCe 160 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹17,19,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.74 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Level 2 ADAS Suite (Adaptive Cruise Control, AEB, Lane Keep Assist, Blind Spot Warning)<br>&check; Electric Panoramic Sunroof, Ventilated Front Seats &amp; 6-Way Power Driver Seat<br>&check; Iconic Yellow-Stitched Leatherette Interior, Powered Tailgate &amp; R18 Diamond-Cut Alloys
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1849000">
-                  <td>
-                    <strong>Iconic Turbo TCe 160 6DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • DCT</td>
-                  <td><strong>₹18,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.24 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Level 2 ADAS (17 Autonomous Features)<br>&check; Electric Panoramic Sunroof, Ventilated Front Seats, Powered Tailgate &amp; R18 Alloys<br>&check; Dual OpenR Link Screens with Google Built-In, 360° Camera &amp; Arkamys 3D Sound
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1869000">
-                  <td>
-                    <strong>Iconic Launch Edition Turbo TCe 160 6DCT</strong>
-                    
-                  </td>
-                  <td>Petrol • DCT</td>
-                  <td><strong>₹18,69,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.47 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Exclusive Iconic Launch Edition Decals, Dual-Tone Stealth Black Roof &amp; Yellow Accents<br>&check; 163 PS Turbo 6DCT, Level 2 ADAS, Panoramic Sunroof &amp; Ventilated Front Seats<br>&check; Powered Tailgate, 360° Around View Camera &amp; Dual OpenR Link Screens
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1899000">
-                  <td>
-                    <strong>Iconic Turbo TCe 160 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹18,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.81 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Top-Spec Iconic Trim with 163 PS / 280 Nm 6-Speed Manual &amp; Level 2 ADAS<br>&check; Electric Panoramic Sunroof, Ventilated Leatherette Seats &amp; Powered Tailgate<br>&check; Dual OpenR Link Screens, 360° Camera &amp; R18 Diamond-Cut Alloys
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1899000">
-                  <td>
-                    <strong>Techno Strong Hybrid E-Tech 160</strong>
-                    
-                  </td>
-                  <td>Hybrid • Automatic</td>
-                  <td><strong>₹18,99,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.81 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 160 PS Strong Hybrid E-Tech Powertrain with Electric Panoramic Sunroof<br>&check; Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera &amp; R18 Alloys<br>&check; Wireless Charger, Dual-Zone Auto Climate Control &amp; Arkamys 3D Sound
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1949000">
-                  <td>
-                    <strong>Emotion Strong Hybrid E-Tech 160</strong>
-                    
-                  </td>
-                  <td>Hybrid • Automatic</td>
-                  <td><strong>₹19,49,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹22.38 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Flagship 160 PS Strong Hybrid E-Tech 160 with Level 2 ADAS (17 Autonomous Features)<br>&check; Electric Panoramic Sunroof, Ventilated Front Seats, 6-Way Power Seat &amp; Powered Tailgate<br>&check; Dual OpenR Link Screens with Google Built-In, 360° Camera &amp; Dual-Tone Roof Options
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Renault Duster Variants</h2>
+      <p class="vr-intro" id="vrIntro">Renault Duster price for the base model starts at Rs. 10.49 Lakh and the top model price goes up to Rs. 19.49 Lakh (ex-showroom). Renault Duster price for 16 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="Hybrid" onclick="vrFilter(this)">Hybrid</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Authentic</span>
+            <span class="vr-trim-price">₹ 10.49 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 5-Star Bharat NCAP Safety Rating with 6 Airbags, ESP, Hill Start Assist &amp; TPMS<i class="vr-sep">|</i>100 PS &amp; 166 Nm Turbo TCe 100 Engine with 6-Speed Manual Transmission<i class="vr-sep">|</i>Full-LED Headlamps with Y-Shaped LED DRLs, 212 mm Ground Clearance &amp; Roof Bars<i class="vr-sep">|</i>All 4 Power Windows, Rear Parking Sensors, Auto Headlamps &amp; Digital Cluster</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1049000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Authentic Turbo TCe 100 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 166 Nm</span><span>&bull; 17.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.05 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Evolution</span>
+            <span class="vr-trim-price">₹ 11.69 - 16.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Authentic:</strong> 25.65 cm (10.1-inch) OpenR Touchscreen with Wireless Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>17.78 cm Digital Driver Display, Reverse Parking Camera &amp; Rear AC Vents<i class="vr-sep">|</i>Electrically Adjustable ORVMs, Steering Controls &amp; YouClip Attachment Points<i class="vr-sep">|</i>Connected LED Tail Lamps &amp; 517-Litre Boot Space<i class="vr-sep">|</i>163 PS &amp; 280 Nm 1.3L Direct-Injection Turbo TCe 160 Engine with 6-Speed Manual<i class="vr-sep">|</i>25.65 cm OpenR Touchscreen with Wireless Smartphone Replication &amp; Rear Camera<i class="vr-sep">|</i>All-4 Disc Brakes, 6 Airbags, ESP, Hill Start Assist &amp; Rear AC Vents<i class="vr-sep">|</i>163 PS / 280 Nm 1.3L Turbo Engine with 6-Speed Wet Dual-Clutch Automatic (DCT)</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 4 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1169000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Evolution Turbo TCe 100 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 166 Nm</span><span>&bull; 17.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.69 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 13.43 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1299000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Evolution Turbo TCe 160 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.92 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1449000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | DCT</div>
+              <div class="vr-var-name">Evolution Turbo TCe 160 6DCT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.64 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Hybrid" data-trans="Automatic" data-price="1699000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Hybrid 1.6L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Evolution Strong Hybrid E-Tech 160</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 24.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.51 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Adventure</span>
+            <span class="vr-trim-price">₹ 12.99 - 15.39 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Evolution:</strong> R17 Adventure Alloy Wheels, Modular Roof Bars &amp; Starkle Protective Cladding<i class="vr-sep">|</i>Auto Climate Control, Smart Keyless Entry, Push Button Start &amp; Cruise Control<i class="vr-sep">|</i>25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio &amp; Washable Adventure Upholstery<i class="vr-sep">|</i>163 PS / 280 Nm 1.3L Turbo TCe 160 with R17 Adventure Alloy Wheels<i class="vr-sep">|</i>Modular Roof Bars (80 kg), Auto Climate Control, Smart Card &amp; Push Start<i class="vr-sep">|</i>25.65 cm OpenR Touchscreen, 6-Speaker Arkamys 3D Audio &amp; Electronic Parking Brake<i class="vr-sep">|</i>163 PS / 280 Nm 1.3L Turbo with 6-Speed Wet DCT &amp; Multi-Sense Drive Modes<i class="vr-sep">|</i>R17 Adventure Alloy Wheels, Modular Roof Bars &amp; Washable MicroCloud Upholstery</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1299000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.0L | Manual</div>
+              <div class="vr-var-name">Adventure Turbo TCe 100 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 100 PS</span><span>&bull; 166 Nm</span><span>&bull; 17.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.92 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1399000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | Manual</div>
+              <div class="vr-var-name">Adventure Turbo TCe 160 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 13.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.07 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1539000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | DCT</div>
+              <div class="vr-var-name">Adventure Turbo TCe 160 6DCT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.39 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.68 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Techno+</span>
+            <span class="vr-trim-price">₹ 15.29 - 16.69 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Adventure:</strong> Electric Panoramic Sunroof &amp; 26.03 cm (10.25-inch) Full Digital Driver Display<i class="vr-sep">|</i>25.65 cm OpenR Link Touchscreen with Google Built-In &amp; Wireless Charger<i class="vr-sep">|</i>R18 Diamond-Cut Alloy Wheels, 360° Around View Camera &amp; Front/Rear Sensors<i class="vr-sep">|</i>Dual-Zone Auto Climate Control, Power-Folding ORVMs &amp; Arkamys 3D Sound<i class="vr-sep">|</i>163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Electric Panoramic Sunroof<i class="vr-sep">|</i>Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera &amp; R18 Alloys<i class="vr-sep">|</i>Wireless Smartphone Charger, Dual-Zone AC &amp; Arkamys 3D Sound System</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1529000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Techno+ Turbo TCe 160 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.29 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.56 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1669000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | DCT</div>
+              <div class="vr-var-name">Techno+ Turbo TCe 160 6DCT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.69 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.17 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Iconic Launch Edition</span>
+            <span class="vr-trim-price">₹ 17.19 - 18.69 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Techno+:</strong> Level 2 ADAS Suite (Adaptive Cruise Control, AEB, Lane Keep Assist, Blind Spot Warning)<i class="vr-sep">|</i>Electric Panoramic Sunroof, Ventilated Front Seats &amp; 6-Way Power Driver Seat<i class="vr-sep">|</i>Iconic Yellow-Stitched Leatherette Interior, Powered Tailgate &amp; R18 Diamond-Cut Alloys<i class="vr-sep">|</i>Exclusive Iconic Launch Edition Decals, Dual-Tone Stealth Black Roof &amp; Yellow Accents<i class="vr-sep">|</i>163 PS Turbo 6DCT, Level 2 ADAS, Panoramic Sunroof &amp; Ventilated Front Seats<i class="vr-sep">|</i>Powered Tailgate, 360° Around View Camera &amp; Dual OpenR Link Screens</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1719000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | Manual</div>
+              <div class="vr-var-name">Iconic Launch Edition Turbo TCe 160 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 17.19 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.74 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1869000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | DCT</div>
+              <div class="vr-var-name">Iconic Launch Edition Turbo TCe 160 6DCT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.69 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.47 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Iconic</span>
+            <span class="vr-trim-price">₹ 18.49 - 18.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Iconic Launch Edition:</strong> 163 PS / 280 Nm 1.3L Turbo 6-Speed DCT with Level 2 ADAS (17 Autonomous Features)<i class="vr-sep">|</i>Electric Panoramic Sunroof, Ventilated Front Seats, Powered Tailgate &amp; R18 Alloys<i class="vr-sep">|</i>Dual OpenR Link Screens with Google Built-In, 360° Camera &amp; Arkamys 3D Sound<i class="vr-sep">|</i>Top-Spec Iconic Trim with 163 PS / 280 Nm 6-Speed Manual &amp; Level 2 ADAS<i class="vr-sep">|</i>Electric Panoramic Sunroof, Ventilated Leatherette Seats &amp; Powered Tailgate<i class="vr-sep">|</i>Dual OpenR Link Screens, 360° Camera &amp; R18 Diamond-Cut Alloys</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1849000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | DCT</div>
+              <div class="vr-var-name">Iconic Turbo TCe 160 6DCT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.24 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1899000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.3L | Manual</div>
+              <div class="vr-var-name">Iconic Turbo TCe 160 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 163 PS</span><span>&bull; 280 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.81 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Techno</span>
+            <span class="vr-trim-price">₹ 18.99 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Iconic:</strong> 160 PS Strong Hybrid E-Tech Powertrain with Electric Panoramic Sunroof<i class="vr-sep">|</i>Dual OpenR Link Screens (25.65 cm + 26.03 cm), 360° Camera &amp; R18 Alloys<i class="vr-sep">|</i>Wireless Charger, Dual-Zone Auto Climate Control &amp; Arkamys 3D Sound</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Hybrid" data-trans="Automatic" data-price="1899000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Hybrid 1.6L | Automatic</div>
+              <div class="vr-var-name">Techno Strong Hybrid E-Tech 160</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 24.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.99 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.81 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Renault Duster Emotion</span>
+            <span class="vr-trim-price">₹ 19.49 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Techno:</strong> Flagship 160 PS Strong Hybrid E-Tech 160 with Level 2 ADAS (17 Autonomous Features)<i class="vr-sep">|</i>Electric Panoramic Sunroof, Ventilated Front Seats, 6-Way Power Seat &amp; Powered Tailgate<i class="vr-sep">|</i>Dual OpenR Link Screens with Google Built-In, 360° Camera &amp; Dual-Tone Roof Options</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Hybrid" data-trans="Automatic" data-price="1949000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Hybrid 1.6L | Automatic</div>
+              <div class="vr-var-name">Emotion Strong Hybrid E-Tech 160</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 24.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 19.49 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 22.38 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2336,6 +2501,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 1049000;
@@ -2438,6 +2605,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1701,117 +1765,219 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Kia Seltos Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="1125000">
-                  <td>
-                    <strong>HTE 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹11,25,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹12.93 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard<br>&check; All 4 Disc Brakes<br>&check; Electronic Stability Control (ESC) &amp; VSM
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1342000">
-                  <td>
-                    <strong>HTK 1.5L Petrol 6MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹13,42,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹15.42 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 20.32 cm (8&quot;) Touchscreen with Wireless Android Auto &amp; Apple CarPlay<br>&check; R16 Style Wheels<br>&check; Rear View Camera with Dynamic Guidelines
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1540000">
-                  <td>
-                    <strong>HTK+ 1.5L Turbo Petrol 6iMT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹15,40,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹17.69 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 160 PS Turbo GDi Engine with Clutchless 6iMT<br>&check; Boundless Dual-Pane Panoramic Sunroof<br>&check; R17 Crystal Cut Alloy Wheels
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1692000">
-                  <td>
-                    <strong>HTX 1.5L Petrol IVT (Automatic)</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹16,92,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹19.43 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Smooth Smartstream IVT Automatic with Paddle Shifters<br>&check; Boundless Dual-Pane Panoramic Sunroof<br>&check; Command-Centric Trinity Panoramic Displays (Dual 10.25-inch Screens)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1960000">
-                  <td>
-                    <strong>HTX+ 1.5L Diesel 6AT (Automatic)</strong>
-                    
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹19,60,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹22.51 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 1.5L CRDi Diesel with Smooth 6-Speed Torque Converter AT<br>&check; Bose Premium 8-Speaker Sound System<br>&check; 8-Way Power Driver Seat with Relaxation Position
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2135000">
-                  <td>
-                    <strong>GTX+ 1.5L Turbo Petrol 7DCT (GT-Line)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹21,35,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹24.52 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Flagship GT-Line Styling with Glossy Tiger Nose Grille &amp; Dual Exhaust<br>&check; Full Level 2+ ADAS Intelligence (28 Autonomous Features)<br>&check; Smart Cruise Control with Stop &amp; Go (SCC)
-                  </td>
-                </tr>
-              
-                <tr data-base-price="2182000">
-                  <td>
-                    <strong>X-Line 1.5L Turbo Petrol 7DCT (Matte Graphite)</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹21,82,000</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹25.06 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Exclusive Matte Graphite Signature Exterior Paint Finish<br>&check; Splendid Sage Green / Glossy Black Exclusive X-Line Interiors<br>&check; R18 Crystal Cut Glossy Black Alloy Wheels
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Kia Seltos Variants</h2>
+      <p class="vr-intro" id="vrIntro">Kia Seltos price for the base model starts at Rs. 11.25 Lakh and the top model price goes up to Rs. 21.82 Lakh (ex-showroom). Kia Seltos price for 7 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="Diesel" onclick="vrFilter(this)">Diesel</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos HTE</span>
+            <span class="vr-trim-price">₹ 11.25 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags Standard<i class="vr-sep">|</i>All 4 Disc Brakes<i class="vr-sep">|</i>Electronic Stability Control (ESC) &amp; VSM<i class="vr-sep">|</i>10.25-inch Digital Cluster<i class="vr-sep">|</i>Keyless Entry &amp; Central Locking<i class="vr-sep">|</i>Halogen Projector Headlamps &amp; Shark Fin Antenna<i class="vr-sep">|</i>Front &amp; Rear Skid Plates</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1125000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">HTE 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 144 Nm</span><span>&bull; 17.0 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.25 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 12.93 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos HTK</span>
+            <span class="vr-trim-price">₹ 13.42 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over HTE:</strong> 20.32 cm (8&quot;) Touchscreen with Wireless Android Auto &amp; Apple CarPlay<i class="vr-sep">|</i>R16 Style Wheels<i class="vr-sep">|</i>Rear View Camera with Dynamic Guidelines<i class="vr-sep">|</i>Electric Folding Outside Mirrors<i class="vr-sep">|</i>Push Button Start / Stop with Smart Key<i class="vr-sep">|</i>Rear Door Sunshade Curtains</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1342000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">HTK 1.5L Petrol 6MT</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 144 Nm</span><span>&bull; 17.0 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 13.42 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 15.42 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos HTK+</span>
+            <span class="vr-trim-price">₹ 15.40 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over HTK:</strong> 160 PS Turbo GDi Engine with Clutchless 6iMT<i class="vr-sep">|</i>Boundless Dual-Pane Panoramic Sunroof<i class="vr-sep">|</i>R17 Crystal Cut Alloy Wheels<i class="vr-sep">|</i>Star Map LED Sweeping Light Guide DRLs<i class="vr-sep">|</i>Smart Smartphone Wireless Charger<i class="vr-sep">|</i>Auto Cruise Control &amp; LED Ambient Mood Lighting</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1540000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Manual</div>
+              <div class="vr-var-name">HTK+ 1.5L Turbo Petrol 6iMT</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 253 Nm</span><span>&bull; 17.7 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 15.40 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 17.69 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos HTX</span>
+            <span class="vr-trim-price">₹ 16.92 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over HTK+:</strong> Smooth Smartstream IVT Automatic with Paddle Shifters<i class="vr-sep">|</i>Command-Centric Trinity Panoramic Displays (Dual 10.25-inch Screens)<i class="vr-sep">|</i>Crown Jewel LED Headlamps &amp; Star Map LED Tail Lamps<i class="vr-sep">|</i>Dual Zone FATC with Touch AC Panel<i class="vr-sep">|</i>Front Ventilated Seats<i class="vr-sep">|</i>64-Color Ambient Mood Lighting</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1692000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">HTX 1.5L Petrol IVT (Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 115 PS</span><span>&bull; 144 Nm</span><span>&bull; 17.7 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 16.92 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 19.43 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos HTX+</span>
+            <span class="vr-trim-price">₹ 19.60 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over HTX:</strong> 1.5L CRDi Diesel with Smooth 6-Speed Torque Converter AT<i class="vr-sep">|</i>Bose Premium 8-Speaker Sound System<i class="vr-sep">|</i>8-Way Power Driver Seat with Relaxation Position<i class="vr-sep">|</i>Trinity Panoramic Dual 10.25-inch Curved Displays<i class="vr-sep">|</i>Boundless Panoramic Sunroof<i class="vr-sep">|</i>Kia Connect 2.0 with 85+ Features</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="1960000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Automatic</div>
+              <div class="vr-var-name">HTX+ 1.5L Diesel 6AT (Automatic)</div>
+              <div class="vr-var-specs"><span>&bull; 116 PS</span><span>&bull; 250 Nm</span><span>&bull; 19.1 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 19.60 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 22.51 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos GTX+</span>
+            <span class="vr-trim-price">₹ 21.35 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over HTX+:</strong> Flagship GT-Line Styling with Glossy Tiger Nose Grille &amp; Dual Exhaust<i class="vr-sep">|</i>Full Level 2+ ADAS Intelligence (28 Autonomous Features)<i class="vr-sep">|</i>Smart Cruise Control with Stop &amp; Go (SCC)<i class="vr-sep">|</i>360° Surround View Monitor with Blind View Monitor (BVM)<i class="vr-sep">|</i>R18 (215/55 R18) Crystal Cut Alloys<i class="vr-sep">|</i>Windshield Projected Head-Up Display (HUD)<i class="vr-sep">|</i>Bose 8-Speaker Audio System<i class="vr-sep">|</i>Dual-Pane Panoramic Sunroof</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="2135000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic</div>
+              <div class="vr-var-name">GTX+ 1.5L Turbo Petrol 7DCT (GT-Line)</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 253 Nm</span><span>&bull; 17.9 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 21.35 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 24.52 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Kia Seltos X-Line</span>
+            <span class="vr-trim-price">₹ 21.82 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over GTX+:</strong> Exclusive Matte Graphite Signature Exterior Paint Finish<i class="vr-sep">|</i>Splendid Sage Green / Glossy Black Exclusive X-Line Interiors<i class="vr-sep">|</i>R18 Crystal Cut Glossy Black Alloy Wheels<i class="vr-sep">|</i>Full Level 2+ ADAS Suite (28 Autonomous Features)<i class="vr-sep">|</i>Head-Up Display &amp; 360° Surround View Monitor<i class="vr-sep">|</i>Bose Premium 8-Speaker Audio<i class="vr-sep">|</i>Boundless Panoramic Sunroof</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="2182000">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.5L | Automatic</div>
+              <div class="vr-var-name">X-Line 1.5L Turbo Petrol 7DCT (Matte Graphite)</div>
+              <div class="vr-var-specs"><span>&bull; 160 PS</span><span>&bull; 253 Nm</span><span>&bull; 17.9 km/l</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 21.82 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 25.06 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2240,6 +2406,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 1125000;
@@ -2342,6 +2510,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [

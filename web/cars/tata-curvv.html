@@ -1364,6 +1364,70 @@
   }
 
     }
+
+    /* ===== CarWale-style Variants ===== */
+    .vr-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: -4px 0 14px; }
+    .vr-filter-label { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .vr-filter-ico { font-size: 14px; }
+    .vr-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .vr-chip-group { display: flex; gap: 8px; flex-wrap: wrap; padding-right: 10px; margin-right: 2px; border-right: 1px solid #E2E8F0; }
+    .vr-chip-group:last-child { border-right: 0; }
+    .vr-chip { background: #FFFFFF; border: 1px solid #94A3B8; color: #1E293B; border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .vr-chip:hover { border-color: #0284C7; color: #0284C7; }
+    .vr-chip.active { background: #0F172A; border-color: #0F172A; color: #FFFFFF; }
+    .vr-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 4px 18px 10px; }
+    .vr-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; color: #0F172A; padding: 14px 0 12px; border-bottom: 1px solid #E2E8F0; }
+    .vr-trim { padding: 14px 0 6px; border-bottom: 1px solid #EEF2F6; }
+    .vr-trim:last-of-type { border-bottom: 0; }
+    .vr-trim-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .vr-trim-name { color: #1B76B8; font-size: 16px; font-weight: 700; line-height: 1.3; }
+    .vr-trim-price { font-size: 15px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+    .vr-trim-mid { display: flex; align-items: center; gap: 22px; margin: 8px 0 8px; font-size: 13px; }
+    .vr-compare { display: inline-flex; align-items: center; gap: 7px; color: #1E293B; cursor: pointer; font-weight: 500; }
+    .vr-compare input { width: 16px; height: 16px; accent-color: #0F172A; margin: 0; cursor: pointer; }
+    .vr-link { color: #1B76B8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .vr-link:hover { text-decoration: underline; }
+    .vr-feat { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .vr-feat strong { color: #0F172A; font-weight: 800; }
+    .vr-sep { font-style: normal; color: #CBD5E1; margin: 0 7px; }
+    .vr-trim.open .vr-feat { -webkit-line-clamp: unset; display: block; overflow: visible; }
+    .vr-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0 8px; font-size: 12.5px; font-weight: 600; color: #475569; cursor: pointer; font-family: inherit; }
+    .vr-toggle-ico { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1.5px solid #475569; border-radius: 50%; box-sizing: border-box; }
+    .vr-toggle-ico::after { content: ''; width: 5px; height: 5px; border-right: 1.5px solid #475569; border-bottom: 1.5px solid #475569; transform: translateY(-1px) rotate(45deg); transition: transform .2s; }
+    .vr-trim.open .vr-toggle-ico::after { transform: translateY(1px) rotate(225deg); }
+    .vr-variants { display: none; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px; padding: 4px 14px; margin-bottom: 10px; }
+    .vr-trim.open .vr-variants { display: block; }
+    .vr-var { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #E2E8F0; }
+    .vr-var:last-child { border-bottom: 0; }
+    .vr-var-title { font-size: 13.5px; font-weight: 700; color: #0F172A; }
+    .vr-var-name { font-size: 11.5px; color: #64748B; margin-top: 2px; }
+    .vr-var-specs { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11.5px; color: #64748B; margin-top: 6px; }
+    .vr-var-right { text-align: right; flex-shrink: 0; }
+    .vr-var-price { font-size: 13.5px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .vr-var-right .vr-link { font-size: 12px; }
+    .vr-vfm { background: #FEF3C7; color: #92400E; font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; white-space: nowrap; }
+    .vr-hidden { display: none !important; }
+    .vr-empty { text-align: center; color: #64748B; font-size: 13px; padding: 24px 0; }
+    .vr-foot { font-size: 11.5px; color: #64748B; padding: 10px 0 4px; border-top: 1px solid #EEF2F6; }
+    .vr-compare-bar { display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); background: #0F172A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(15,23,42,.35); z-index: 90; text-decoration: none; white-space: nowrap; }
+    .vr-compare-bar.show { display: block; }
+    @media (max-width: 768px) {
+      .vr-intro { font-size: 13px; margin-bottom: 12px; }
+      .vr-chips { gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -2px; padding-bottom: 2px; }
+      .vr-chips::-webkit-scrollbar { display: none; }
+      .vr-chip-group { flex-wrap: nowrap; flex-shrink: 0; padding-right: 8px; }
+      .vr-chip { padding: 7px 14px; font-size: 12.5px; white-space: nowrap; }
+      .vr-card { padding: 2px 12px 8px; border-radius: 12px; }
+      .vr-head { padding: 12px 0 10px; }
+      .vr-trim-name { font-size: 15px; }
+      .vr-trim-price { font-size: 14px; }
+      .vr-trim-mid { justify-content: space-between; gap: 10px; }
+      .vr-toggle { justify-content: center; }
+      .vr-variants { padding: 2px 10px; }
+      .vr-var { padding: 10px 0; }
+      .vr-var-name { display: none; }
+    }
+
   </style>
 </head>
 <body class="car-detail-page">
@@ -1721,143 +1785,224 @@
 
     <!-- 5. Car Variants Breakdown Table -->
     
-    <section id="sec-variants" class="detail-section-card">
-      <h2 class="section-heading-seo">📋 Tata Curvv Variant-by-Variant Price List</h2>
-      <div class="variants-seo-table-container">
-        <table class="variants-seo-table">
-          <thead>
-            <tr>
-              <th>Variant Name</th>
-              <th>Powertrain</th>
-              <th>Ex-Showroom</th>
-              <th>Est. On-Road (<span class="tableCityHeader">Delhi NCR</span>)</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr data-base-price="999990">
-                  <td>
-                    <strong>Smart 1.2 Petrol MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹9,99,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹11.39 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 6 Airbags Standard<br>&check; LED Headlamps &amp; Horizon DRLs<br>&check; Capacitive Flush Door Handles
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1179990">
-                  <td>
-                    <strong>Pure+ 1.2 Petrol MT</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹11,79,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹13.56 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 7-inch HARMAN Touchscreen with Wireless Carplay/Android Auto<br>&check; Cruise Control<br>&check; Reverse Camera with Dynamic Guidelines
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1229990">
-                  <td>
-                    <strong>Pure+ 1.2 Petrol DCA</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹12,29,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.13 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 7-Speed Wet Dual-Clutch Automatic (DCA)<br>&check; E-Shifter with Paddle Shifters<br>&check; Hill Start &amp; Descent Assist
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1309990">
-                  <td>
-                    <strong>Pure+ 1.5 Diesel MT</strong>
-                    
-                  </td>
-                  <td>Diesel • Manual</td>
-                  <td><strong>₹13,09,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹15.05 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; High-Torque Kryojet Diesel Engine<br>&check; Multi-Drive Modes (Eco, City, Sport)<br>&check; Rear AC Vents
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1290990">
-                  <td>
-                    <strong>Creative+ 1.2 Petrol MT</strong>
-                    
-                  </td>
-                  <td>Petrol • Manual</td>
-                  <td><strong>₹12,90,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹14.83 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; 10.25-inch High-Definition Cinematic Touchscreen<br>&check; Voice-Assisted Panoramic Sunroof<br>&check; 17-inch Diamond-Cut Alloy Wheels
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1420990">
-                  <td>
-                    <strong>Creative+ S 1.2 Petrol DCA</strong>
-                    <span class="vfm-chip">⭐ Best VFM</span>
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹14,20,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.32 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Panoramic Sunroof with Mood Lighting<br>&check; 7-Speed Dual-Clutch DCA<br>&check; 10.25-inch HARMAN Infotainment
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1445990">
-                  <td>
-                    <strong>Creative+ 1.5 Diesel DCA</strong>
-                    
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹14,45,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹16.61 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Segment-Exclusive Diesel DCA Automatic<br>&check; Paddle Shifters<br>&check; Panoramic Glass Sunroof
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1849990">
-                  <td>
-                    <strong>Accomplished+ 1.2 Hyperion GDi DCA</strong>
-                    
-                  </td>
-                  <td>Petrol • Automatic</td>
-                  <td><strong>₹18,49,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.25 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; High-Performance Hyperion GDi Turbo Engine<br>&check; Level 2 ADAS (20 Safety Features)<br>&check; Gesture Powered Smart Tailgate
-                  </td>
-                </tr>
-              
-                <tr data-base-price="1899990">
-                  <td>
-                    <strong>Accomplished+ A 1.5 Diesel DCA</strong>
-                    
-                  </td>
-                  <td>Diesel • Automatic</td>
-                  <td><strong>₹18,99,990</strong></td>
-                  <td class="variant-onroad-cell"><strong>₹21.82 Lakh</strong></td>
-                  <td style="font-size:12px; color:var(--text-secondary); max-width:280px;">
-                    &check; Level 2 ADAS Suite with Adaptive Cruise Control<br>&check; Ventilated Front Executive Seats<br>&check; 6-Way Power Driver Seat
-                  </td>
-                </tr>
-              
-          </tbody>
-        </table>
+    <section id="sec-variants" class="detail-section-card vr-section">
+      <h2 class="section-heading-seo">📋 Tata Curvv Variants</h2>
+      <p class="vr-intro" id="vrIntro">Tata Curvv price for the base model starts at Rs. 10.00 Lakh and the top model price goes up to Rs. 19.00 Lakh (ex-showroom). Tata Curvv price for 9 variants is listed below.</p>
+      
+      <div class="vr-filter-label"><span class="vr-filter-ico">&#9881;</span> Filter by Fuel type &amp; Transmission</div>
+      <div class="vr-chips">
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="fuel" data-val="Petrol" onclick="vrFilter(this)">Petrol</button><button type="button" class="vr-chip" data-kind="fuel" data-val="Diesel" onclick="vrFilter(this)">Diesel</button></div>
+        <div class="vr-chip-group"><button type="button" class="vr-chip" data-kind="trans" data-val="Manual" onclick="vrFilter(this)">Manual</button><button type="button" class="vr-chip" data-kind="trans" data-val="Automatic" onclick="vrFilter(this)">Automatic</button></div>
       </div>
+      <div class="vr-card">
+        <div class="vr-head"><span>Variants</span><span>Ex-Showroom Price</span></div>
+        
+        <div class="vr-trim open">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Smart</span>
+            <span class="vr-trim-price">₹ 10.00 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Key Features:</strong> 6 Airbags Standard<i class="vr-sep">|</i>LED Headlamps &amp; Horizon DRLs<i class="vr-sep">|</i>Capacitive Flush Door Handles<i class="vr-sep">|</i>Electronic Stability Program (ESP)</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">Collapse</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="999990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">Smart 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 18.1 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 10.00 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 11.39 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Pure+</span>
+            <span class="vr-trim-price">₹ 11.80 - 13.10 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Smart:</strong> 7-inch HARMAN Touchscreen with Wireless Carplay/Android Auto<i class="vr-sep">|</i>Cruise Control<i class="vr-sep">|</i>Reverse Camera with Dynamic Guidelines<i class="vr-sep">|</i>Shark Fin Antenna &amp; 16-inch Wheels<i class="vr-sep">|</i>7-Speed Wet Dual-Clutch Automatic (DCA)<i class="vr-sep">|</i>E-Shifter with Paddle Shifters<i class="vr-sep">|</i>Hill Start &amp; Descent Assist<i class="vr-sep">|</i>Front Sliding Armrest</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 3 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1179990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Pure+ 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 18.1 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 11.80 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 13.56 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1229990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">Pure+ 1.2 Petrol DCA</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 17.2 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.30 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.13 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Manual" data-price="1309990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Manual</div>
+              <div class="vr-var-name">Pure+ 1.5 Diesel MT</div>
+              <div class="vr-var-specs"><span>&bull; 118 PS</span><span>&bull; 260 Nm</span><span>&bull; 22.4 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 13.10 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 15.05 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Creative+</span>
+            <span class="vr-trim-price">₹ 12.91 - 14.46 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Pure+:</strong> 10.25-inch High-Definition Cinematic Touchscreen<i class="vr-sep">|</i>Voice-Assisted Panoramic Sunroof<i class="vr-sep">|</i>17-inch Diamond-Cut Alloy Wheels<i class="vr-sep">|</i>Sequential Front &amp; Rear LED Indicators<i class="vr-sep">|</i>Segment-Exclusive Diesel DCA Automatic<i class="vr-sep">|</i>Paddle Shifters<i class="vr-sep">|</i>Panoramic Glass Sunroof<i class="vr-sep">|</i>Auto Headlamps &amp; Rain-Sensing Wipers</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 2 Variants</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Manual" data-price="1290990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Manual</div>
+              <div class="vr-var-name">Creative+ 1.2 Petrol MT</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 18.1 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 12.91 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 14.83 Lakh</span></a>
+            </div>
+          </div>
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="1445990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Automatic</div>
+              <div class="vr-var-name">Creative+ 1.5 Diesel DCA</div>
+              <div class="vr-var-specs"><span>&bull; 118 PS</span><span>&bull; 21.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.46 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.61 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Creative+ S</span>
+            <span class="vr-trim-price">₹ 14.21 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Creative+:</strong> Panoramic Sunroof with Mood Lighting<i class="vr-sep">|</i>7-Speed Dual-Clutch DCA<i class="vr-sep">|</i>10.25-inch HARMAN Infotainment<i class="vr-sep">|</i>360° Surround View Camera with Blind View Monitor</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1420990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic <span class="vr-vfm">&#11088; Best VFM</span></div>
+              <div class="vr-var-name">Creative+ S 1.2 Petrol DCA</div>
+              <div class="vr-var-specs"><span>&bull; 120 PS</span><span>&bull; 17.2 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 14.21 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 16.32 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Accomplished+</span>
+            <span class="vr-trim-price">₹ 18.50 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Creative+ S:</strong> High-Performance Hyperion GDi Turbo Engine<i class="vr-sep">|</i>Level 2 ADAS (20 Safety Features)<i class="vr-sep">|</i>Gesture Powered Smart Tailgate<i class="vr-sep">|</i>JBL 9-Speaker Acoustic Audio with Subwoofer</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Petrol" data-trans="Automatic" data-price="1849990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Petrol 1.2L | Automatic</div>
+              <div class="vr-var-name">Accomplished+ 1.2 Hyperion GDi DCA</div>
+              <div class="vr-var-specs"><span>&bull; 125 PS</span><span>&bull; 225 Nm</span><span>&bull; 16.8 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 18.50 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.25 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-trim">
+          <div class="vr-trim-top">
+            <span class="vr-trim-name">Tata Curvv Accomplished+ A</span>
+            <span class="vr-trim-price">₹ 19.00 Lakh</span>
+          </div>
+          <div class="vr-trim-mid">
+            <label class="vr-compare"><input type="checkbox" onchange="vrCompare()"> <span>Compare</span></label>
+            <a href="#" class="vr-link vr-offers" onclick="window.openCityModal && window.openCityModal(); return false;">Get On-Road Price</a>
+          </div>
+          <p class="vr-feat"><strong>Features over Accomplished+:</strong> Level 2 ADAS Suite with Adaptive Cruise Control<i class="vr-sep">|</i>Ventilated Front Executive Seats<i class="vr-sep">|</i>6-Way Power Driver Seat<i class="vr-sep">|</i>Electronic Parking Brake with Auto Hold</p>
+          <button type="button" class="vr-toggle" onclick="vrToggleTrim(this)">
+            <span class="vr-toggle-label">View 1 Variant</span>
+            <span class="vr-toggle-ico"></span>
+          </button>
+          <div class="vr-variants">
+          <div class="vr-var" data-fuel="Diesel" data-trans="Automatic" data-price="1899990">
+            <div class="vr-var-left">
+              <div class="vr-var-title">Diesel 1.5L | Automatic</div>
+              <div class="vr-var-name">Accomplished+ A 1.5 Diesel DCA</div>
+              <div class="vr-var-specs"><span>&bull; 118 PS</span><span>&bull; 21.5 kmpl</span></div>
+            </div>
+            <div class="vr-var-right">
+              <div class="vr-var-price">₹ 19.00 Lakh</div>
+              <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">On-Road: <span class="vr-onroad-val">₹ 21.82 Lakh</span></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="vr-empty" id="vrEmpty" style="display:none;">No variants match the selected filters.</div>
+        <div class="vr-foot">Showing ex-showroom prices. Est. on-road price shown for <strong class="vr-city-name">Delhi NCR</strong> &mdash; <a href="#" class="vr-link" onclick="window.openCityModal && window.openCityModal(); return false;">change city</a></div>
+      </div>
+      <a href="/#compareSection" class="vr-compare-bar" id="vrCompareBar">&#9878;&#65039; <span id="vrCmpN">0</span> selected &mdash; Compare Now &rarr;</a>
     </section>
-    
 
     <!-- 6. Car Key Specifications Table -->
     <section id="sec-specs" class="detail-section-card">
@@ -2276,6 +2421,8 @@
         b.classList.toggle('active', onc.includes(city.id));
       });
 
+      if (window.updateVariantOnRoad) window.updateVariantOnRoad(city);
+
       // Recalculate price
       const rate = 1 + (city.rtoRate || 0.10);
       const baseMin = 999990;
@@ -2378,6 +2525,75 @@
     document.addEventListener('DOMContentLoaded', () => {
       applyCityToPage(currentCityId);
     });
+
+
+    // ---- Variants section (CarWale style) ----
+    var VR_STATE = { fuel: [], trans: [] };
+    function vrFmt(v) {
+      if (v >= 10000000) return '₹ ' + (v / 10000000).toFixed(2) + ' Cr';
+      return '₹ ' + (v / 100000).toFixed(2) + ' Lakh';
+    }
+    function vrRange(a, b) {
+      if (a === b) return vrFmt(a);
+      if (b < 10000000) return '₹ ' + (a / 100000).toFixed(2) + ' - ' + (b / 100000).toFixed(2) + ' Lakh';
+      return vrFmt(a) + ' - ' + vrFmt(b);
+    }
+    function vrOnRoad(ex, city) {
+      var rto = Math.round(ex * city.rtoRate);
+      var ins = Math.round(ex * 0.038);
+      var tcs = ex >= 1000000 ? Math.round(ex * 0.01) : 0;
+      return ex + rto + ins + tcs + (city.cess || 0) + (city.fastag || 0);
+    }
+    window.updateVariantOnRoad = function(city) {
+      document.querySelectorAll('.vr-var').forEach(function(r) {
+        var el = r.querySelector('.vr-onroad-val');
+        if (el) el.textContent = vrFmt(vrOnRoad(Number(r.getAttribute('data-price')), city));
+      });
+      document.querySelectorAll('.vr-city-name').forEach(function(el) { el.textContent = city.name; });
+    };
+    function vrSync(t) {
+      var n = t.querySelectorAll('.vr-var:not(.vr-hidden)').length;
+      var lbl = t.querySelector('.vr-toggle-label');
+      if (lbl) lbl.textContent = t.classList.contains('open') ? 'Collapse' : ('View ' + n + (n === 1 ? ' Variant' : ' Variants'));
+    }
+    window.vrToggleTrim = function(btn) {
+      var t = btn.closest('.vr-trim');
+      t.classList.toggle('open');
+      vrSync(t);
+    };
+    window.vrFilter = function(btn) {
+      var kind = btn.getAttribute('data-kind');
+      var val = btn.getAttribute('data-val');
+      var arr = VR_STATE[kind];
+      var i = arr.indexOf(val);
+      if (i > -1) arr.splice(i, 1); else arr.push(val);
+      btn.classList.toggle('active', i === -1);
+      var anyShown = false;
+      document.querySelectorAll('.vr-trim').forEach(function(t) {
+        var shown = 0, min = Infinity, max = 0;
+        t.querySelectorAll('.vr-var').forEach(function(r) {
+          var f = r.getAttribute('data-fuel'), tr = r.getAttribute('data-trans');
+          var ok = (!VR_STATE.fuel.length || VR_STATE.fuel.indexOf(f) > -1) && (!VR_STATE.trans.length || VR_STATE.trans.indexOf(tr) > -1);
+          r.classList.toggle('vr-hidden', !ok);
+          if (ok) { shown++; var p = Number(r.getAttribute('data-price')); if (p < min) min = p; if (p > max) max = p; }
+        });
+        t.style.display = shown ? '' : 'none';
+        if (shown) {
+          anyShown = true;
+          t.querySelector('.vr-trim-price').textContent = vrRange(min, max);
+          vrSync(t);
+        }
+      });
+      var empty = document.getElementById('vrEmpty');
+      if (empty) empty.style.display = anyShown ? 'none' : 'block';
+    };
+    window.vrCompare = function() {
+      var n = document.querySelectorAll('.vr-compare input:checked').length;
+      var bar = document.getElementById('vrCompareBar');
+      var c = document.getElementById('vrCmpN');
+      if (c) c.textContent = n;
+      if (bar) bar.classList.toggle('show', n > 0);
+    };
 
     // Hero Gallery Navigation
     const GALLERY_ITEMS = [
