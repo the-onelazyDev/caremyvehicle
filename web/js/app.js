@@ -1,6 +1,11 @@
 
 // Direct Dedicated Car Landing Page Navigation (CarWale Style)
 window.navigateToCar = function(carId, hash) {
+  const isBuiltIn = Array.isArray(CARS) && CARS.some(c => c.id === carId);
+  if (!isBuiltIn && typeof window.openCarModal === 'function') {
+    window.openCarModal(carId);
+    return;
+  }
   const targetUrl = '/cars/' + encodeURIComponent(carId) + '.html' + (hash ? '#' + hash : '');
   window.location.href = targetUrl;
 };
@@ -99,9 +104,21 @@ function getAllCars() {
     const hiddenCars = new Set(JSON.parse(localStorage.getItem('cmv_hidden_cars') || '[]'));
     const hiddenBrands = new Set(JSON.parse(localStorage.getItem('cmv_hidden_brands') || '[]'));
     const custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+    const customizations = JSON.parse(localStorage.getItem('cmv_car_customizations') || '{}');
     const customIds = new Set(custom.map(c => c.id));
     const base = CARS.filter(c => !customIds.has(c.id));
-    const all = [...custom, ...base];
+    const all = [...custom, ...base].map(car => {
+      const ov = customizations[car.id];
+      if (!ov) return car;
+      return Object.assign({}, car, {
+        heroImage: ov.heroImage || car.heroImage,
+        gallery: ov.gallery || car.gallery,
+        variants: ov.variants || car.variants,
+        colors: ov.colors || car.colors,
+        pros: ov.pros || car.pros,
+        cons: ov.cons || car.cons
+      });
+    });
     return all.filter(c => !hiddenCars.has(c.id) && !hiddenBrands.has(c.brand));
   } catch (e) {
     return CARS;

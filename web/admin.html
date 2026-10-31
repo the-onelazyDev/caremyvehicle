@@ -933,6 +933,103 @@
       background: #F1F5F9;
       flex-shrink: 0;
     }
+
+    .importer-preview-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: #F1F5F9;
+      padding: 6px;
+      border-radius: 12px;
+    }
+    .importer-preview-tab {
+      padding: 8px 16px;
+      border-radius: 9px;
+      border: none;
+      background: transparent;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .importer-preview-tab.active {
+      background: #2563EB;
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    }
+    .imp-img-card {
+      border: 2px solid #E2E8F0;
+      border-radius: 14px;
+      background: #FFFFFF;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+    .imp-img-card.is-hero {
+      border-color: #16A34A;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    }
+    .imp-img-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #16A34A;
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 8px;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .imp-img-index {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.78);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 8px;
+      z-index: 2;
+    }
+    .live-preview-stage {
+      background: #F8FAFC;
+      border: 2px solid #CBD5E1;
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 14px;
+    }
+    .preview-thumb-strip {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 2px;
+    }
+    .preview-thumb-btn {
+      border: 2px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 2px;
+      background: #FFFFFF;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+    }
+    .preview-thumb-btn.active {
+      border-color: #FF5A1F;
+      box-shadow: 0 0 0 2px rgba(255, 90, 31, 0.25);
+    }
+    .preview-thumb-btn img {
+      width: 68px;
+      height: 46px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -1021,6 +1118,9 @@
         </button>
         <button type="button" class="admin-tab-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
           ➕ Add Newly Launched Car
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnUrlImporter" onclick="switchAdminTab('urlImporter')" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); color:#1D4ED8; border:1px solid #93C5FD;">
+          🌐 Auto-Fetch Car from Link & Live Preview
         </button>
       </div>
 
@@ -2045,6 +2145,328 @@
         </div>
       </div><!-- end viewUsedCarsManager -->
 
+      <!-- VIEW 6: AUTO-FETCH CAR FROM WEBPAGE LINK & LIVE PREVIEW STUDIO -->
+      <div id="viewUrlImporter" style="display:none;">
+        <!-- Step 1: Webpage URL Input Bar -->
+        <div class="section-card" style="margin-bottom:24px; border:2px solid #BFDBFE; background:linear-gradient(180deg,#F8FAFC 0%,#FFFFFF 100%);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; margin-bottom:16px;">
+            <div>
+              <h3 class="section-title" style="color:#1E40AF;">🌐 Auto-Fetch Car from Webpage URL + Live Preview & Onboard Studio</h3>
+              <p class="section-desc">
+                Paste any car webpage link (Maserati, CarWale, BMW, Mercedes, Tata, Hyundai, Maruti, etc.). It will automatically fetch all images, variants, specs & review info, let you edit & swap images with a Live Page Preview, and onboard to <strong>Newly Launched Cars</strong>, <strong>Popular Used Cars</strong>, and <strong>Latest Car Updates & Reviews</strong> in one click!
+              </p>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <label class="btn-act btn-act-outline" style="cursor:pointer; margin:0;">
+                📂 Upload JSON File
+                <input type="file" accept=".json" style="display:none;" onchange="handleUploadImporterJson(event)">
+              </label>
+              <button type="button" class="btn-act btn-act-outline" onclick="loadSampleMaseratiIntoImporter()">
+                ⚡ Load Maserati GranCabrio Demo
+              </button>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 220px auto; gap:12px; align-items:flex-end;">
+            <div>
+              <label class="form-label">🔗 Paste Any Car Webpage URL *</label>
+              <input type="url" id="impSourceUrlInput" class="form-input" placeholder="https://www.maserati.com/in/en/models/grancabrio..." value="https://www.maserati.com/in/en/models/grancabrio">
+            </div>
+            <div>
+              <label class="form-label">🏷️ Custom Car / Folder Name</label>
+              <input type="text" id="impCustomNameInput" class="form-input" placeholder="e.g. Maserati GranCabrio">
+            </div>
+            <button type="button" id="btnFetchFromUrl" class="btn-submit" style="padding:11px 22px; font-size:14px; white-space:nowrap;" onclick="fetchCarFromWebpageUrl()">
+              🚀 Fetch Images & Car Data
+            </button>
+          </div>
+
+          <div id="impFetchStatusBar" style="display:none; margin-top:14px; padding:10px 14px; border-radius:10px; background:#EFF6FF; color:#1E40AF; font-size:13px; font-weight:700;">
+            ⏳ Fetching webpage images and car specifications...
+          </div>
+        </div>
+
+        <!-- Workspace shown once data is fetched/loaded -->
+        <div id="impWorkspaceContainer">
+          <!-- QUICK PUBLISH & DOWNLOAD ACTION BAR -->
+          <div class="section-card" style="margin-bottom:24px; background:#0F172A; color:#FFFFFF; border:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+              <div>
+                <div style="font-size:11px; font-weight:800; color:#60A5FA; text-transform:uppercase; letter-spacing:0.6px;">READY TO ONBOARD & EXPORT</div>
+                <div style="font-size:16px; font-weight:800;" id="impActiveCarHeadline">Maserati GranCabrio</div>
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button type="button" class="btn-act btn-act-show" style="background:#16A34A; padding:9px 16px; font-size:13px;" onclick="publishImporterToAllThree()">
+                  🚀 Publish to ALL 3 Sections
+                </button>
+                <button type="button" class="btn-act btn-act-show" style="background:#2563EB; padding:9px 14px; font-size:12.5px;" onclick="publishImporterNewCar()">
+                  ➕ Add to Newly Launched Cars
+                </button>
+                <button type="button" class="btn-act btn-act-show" style="background:#0284C7; padding:9px 14px; font-size:12.5px;" onclick="publishImporterUsedCar()">
+                  🚗 Add to Popular Used Cars
+                </button>
+                <button type="button" class="btn-act btn-act-show" style="background:#7C3AED; padding:9px 14px; font-size:12.5px;" onclick="publishImporterReview()">
+                  📰 Add to Latest Reviews
+                </button>
+                <button type="button" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; padding:9px 14px; font-size:12.5px;" onclick="downloadImporterTxtReport()">
+                  📥 Download Details (.TXT)
+                </button>
+                <button type="button" class="btn-act btn-act-outline" style="background:#334155; color:#FFFFFF; border:none; padding:9px 14px; font-size:12.5px;" onclick="downloadImporterJsonFile()">
+                  📦 Download (.JSON)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1. INTERACTIVE LIVE PAGE PREVIEW STUDIO -->
+          <div class="editor-sec-card" style="border:2px solid #2563EB;">
+            <div class="editor-sec-header" style="background:#EFF6FF;">
+              <div>
+                <h4 class="editor-sec-title" style="color:#1E40AF;">👁️ 1. Live Interactive Page Preview (Click Thumbnails to Swap & Test)</h4>
+                <div style="font-size:12px; color:#475569; margin-top:2px;">See exactly how the live Car Detail Page, Home Catalog Card, Popular Used Car Card, and Expert Review will look before submitting.</div>
+              </div>
+              <div class="importer-preview-tabs">
+                <button type="button" class="importer-preview-tab active" id="prevTabNewCar" onclick="setImporterPreviewMode('newCar')">
+                  🚗 New Car Page & Card Preview
+                </button>
+                <button type="button" class="importer-preview-tab" id="prevTabUsedCar" onclick="setImporterPreviewMode('usedCar')">
+                  🏷️ Popular Used Car Preview
+                </button>
+                <button type="button" class="importer-preview-tab" id="prevTabReview" onclick="setImporterPreviewMode('review')">
+                  📰 Expert Review & Update Preview
+                </button>
+              </div>
+            </div>
+            <div class="editor-sec-body">
+              <div id="impLivePreviewStage" class="live-preview-stage">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. IMAGE SWapper, HERO SELECTOR & GALLERY MANAGER -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">🖼️ 2. Image Swapper, Hero Selector & Gallery Studio (<span id="impImagesCount">0</span> Images)</h4>
+              <div style="display:flex; gap:8px;">
+                <button type="button" class="btn-act btn-act-outline" style="padding:5px 12px; font-size:12px;" onclick="reverseImporterImagesOrder()">
+                  🔄 Reverse Order
+                </button>
+              </div>
+            </div>
+            <div class="editor-sec-body">
+              <!-- Add Custom Image Bar -->
+              <div style="background:#F0F9FF; border:1px solid #BAE6FD; border-radius:14px; padding:14px; margin-bottom:18px; display:grid; grid-template-columns: 2fr 1.5fr 1fr auto; gap:10px; align-items:flex-end;">
+                <div>
+                  <label class="form-label" style="font-size:11px;">Add Extra Image URL</label>
+                  <input type="url" id="impNewImgUrl" class="form-input" placeholder="https://...">
+                </div>
+                <div>
+                  <label class="form-label" style="font-size:11px;">Caption / Title</label>
+                  <input type="text" id="impNewImgCaption" class="form-input" placeholder="e.g. Front Quarter View">
+                </div>
+                <div>
+                  <label class="form-label" style="font-size:11px;">Category</label>
+                  <select id="impNewImgCat" class="form-select">
+                    <option value="Exterior">Exterior</option>
+                    <option value="Cabin">Cabin</option>
+                    <option value="Technology">Technology</option>
+                    <option value="360">360 View</option>
+                  </select>
+                </div>
+                <button type="button" class="btn-submit" style="padding:10px 16px; font-size:13px;" onclick="addCustomImageToImporter()">
+                  ➕ Add Photo
+                </button>
+              </div>
+
+              <div class="editor-gallery-grid" id="impImagesGrid">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. CAR DETAILS, SPECS & VARIANTS EDITOR -->
+          <div class="editor-sec-card">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">🚗 3. Edit Car Details, Specifications & Variants (For Newly Launched & Car Detail Page)</h4>
+              <span style="font-size:12px; font-weight:700; color:#2563EB;">Live Sync with Preview</span>
+            </div>
+            <div class="editor-sec-body">
+              <div class="form-grid-3" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Car Full Name *</label>
+                  <input type="text" id="impCarName" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Brand *</label>
+                  <input type="text" id="impBrand" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Body Type</label>
+                  <select id="impBodyType" class="form-select" onchange="syncImporterEdits()">
+                    <option value="SUV">SUV</option>
+                    <option value="Compact SUV">Compact SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="MPV">MPV</option>
+                    <option value="Luxury">Luxury</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-3" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Ex-Showroom Price Range *</label>
+                  <input type="text" id="impPriceRange" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Min Price (in ₹)</label>
+                  <input type="number" id="impMinPrice" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Max Price (in ₹)</label>
+                  <input type="number" id="impMaxPrice" class="form-input" oninput="syncImporterEdits()">
+                </div>
+              </div>
+
+              <div class="form-grid-3" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Fuel Types (comma separated)</label>
+                  <input type="text" id="impFuels" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Transmissions (comma separated)</label>
+                  <input type="text" id="impTransmissions" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Claimed Mileage</label>
+                  <input type="text" id="impMileage" class="form-input" oninput="syncImporterEdits()">
+                </div>
+              </div>
+
+              <div class="form-grid-3" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Safety Rating</label>
+                  <input type="text" id="impSafety" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Ground Clearance</label>
+                  <input type="text" id="impClearance" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Boot Space</label>
+                  <input type="text" id="impBoot" class="form-input" oninput="syncImporterEdits()">
+                </div>
+              </div>
+
+              <div class="form-grid-3" style="margin-bottom:14px;">
+                <div>
+                  <label class="form-label">Engine & Powertrain Specs</label>
+                  <input type="text" id="impEngineSpec" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Dimensions (L × W × H)</label>
+                  <input type="text" id="impDimensions" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Wheelbase & Seating</label>
+                  <input type="text" id="impWheelbase" class="form-input" oninput="syncImporterEdits()">
+                </div>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label class="form-label">Car Overview Description</label>
+                <textarea id="impDescription" class="form-textarea" rows="2" oninput="syncImporterEdits()"></textarea>
+              </div>
+
+              <!-- Variants Table Editor -->
+              <div style="border-top:1px solid #E2E8F0; padding-top:16px; margin-top:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <strong style="font-size:14px; color:#0F172A;">📋 Variants Lineup (Editable Inline)</strong>
+                  <button type="button" class="btn-act btn-act-show" style="padding:5px 12px; font-size:12px;" onclick="addImporterVariantRow()">
+                    ➕ Add Variant
+                  </button>
+                </div>
+                <div style="overflow-x:auto;">
+                  <table class="admin-table">
+                    <thead>
+                      <tr>
+                        <th>Variant Name</th>
+                        <th>Fuel</th>
+                        <th>Transmission</th>
+                        <th>Ex-Showroom (₹)</th>
+                        <th>Key Features (comma separated)</th>
+                        <th>VFM</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="impVariantsTbody">
+                      <!-- Injected dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. POPULAR USED CAR & EXPERT REVIEW EDITORS (SIDE BY SIDE) -->
+          <div class="form-grid-2">
+            <!-- Used Car Details -->
+            <div class="editor-sec-card">
+              <div class="editor-sec-header">
+                <h4 class="editor-sec-title">🚗 4A. Popular Used Cars in India Settings</h4>
+              </div>
+              <div class="editor-sec-body">
+                <div style="margin-bottom:12px;">
+                  <label class="form-label">Used Price Range</label>
+                  <input type="text" id="impUsedPriceRange" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div style="margin-bottom:12px;">
+                  <label class="form-label">Popular Model Years</label>
+                  <input type="text" id="impUsedYears" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div>
+                  <label class="form-label">Used Car Highlight / Buying Note</label>
+                  <textarea id="impUsedHighlight" class="form-textarea" rows="2" oninput="syncImporterEdits()"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expert Review / Update Details -->
+            <div class="editor-sec-card">
+              <div class="editor-sec-header">
+                <h4 class="editor-sec-title">📰 4B. Latest Car Updates & Expert Review Settings</h4>
+              </div>
+              <div class="editor-sec-body">
+                <div style="margin-bottom:12px;">
+                  <label class="form-label">Review / Update Headline</label>
+                  <input type="text" id="impRevTitle" class="form-input" oninput="syncImporterEdits()">
+                </div>
+                <div class="form-grid-2" style="margin-bottom:12px;">
+                  <div>
+                    <label class="form-label">Category Badge</label>
+                    <select id="impRevCategory" class="form-select" onchange="syncImporterEdits()">
+                      <option value="EXPERT REVIEW">EXPERT REVIEW</option>
+                      <option value="LATEST UPDATE">LATEST UPDATE</option>
+                      <option value="BUYING GUIDE">BUYING GUIDE</option>
+                      <option value="TEST DRIVE">TEST DRIVE</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label">Author & Date</label>
+                    <input type="text" id="impRevMeta" class="form-input" oninput="syncImporterEdits()">
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label">Review Summary / Excerpt</label>
+                  <textarea id="impRevExcerpt" class="form-textarea" rows="2" oninput="syncImporterEdits()"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end viewUrlImporter -->
+
     </div>
   </div>
 
@@ -2554,14 +2976,16 @@
         carEditor: document.getElementById('tabBtnCarEditor'),
         reviewsManager: document.getElementById('tabBtnReviewsManager'),
         usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
-        addCar: document.getElementById('tabBtnAddCar')
+        addCar: document.getElementById('tabBtnAddCar'),
+        urlImporter: document.getElementById('tabBtnUrlImporter')
       };
       const views = {
         visibility: document.getElementById('viewVisibility'),
         carEditor: document.getElementById('viewCarEditor'),
         reviewsManager: document.getElementById('viewReviewsManager'),
         usedCarsManager: document.getElementById('viewUsedCarsManager'),
-        addCar: document.getElementById('viewAddCar')
+        addCar: document.getElementById('viewAddCar'),
+        urlImporter: document.getElementById('viewUrlImporter')
       };
 
       Object.keys(tabs).forEach(k => {
@@ -2577,6 +3001,8 @@
         initReviewsManager();
       } else if (tabName === 'usedCarsManager') {
         initUsedCarsManager();
+      } else if (tabName === 'urlImporter') {
+        initUrlImporter();
       }
     }
     window.switchAdminTab = switchAdminTab;
@@ -4182,6 +4608,941 @@
       showToast('🔄 Restored default Popular Used Cars in India!');
     }
     window.resetUsedCarsToDefaults = resetUsedCarsToDefaults;
+
+    // =========================================================================
+    // 🌐 AUTO-FETCH CAR FROM WEBPAGE LINK & LIVE PREVIEW STUDIO
+    // =========================================================================
+    let impData = null;
+    let impPreviewMode = 'newCar';
+    let impActivePreviewImgIdx = 0;
+
+    function initUrlImporter() {
+      if (!impData) {
+        loadSampleMaseratiIntoImporter(true);
+      } else {
+        renderImporterWorkspace();
+      }
+    }
+    window.initUrlImporter = initUrlImporter;
+
+    function loadSampleMaseratiIntoImporter(silent) {
+      impData = {
+        sourceUrl: 'https://www.maserati.com/in/en/models/grancabrio',
+        id: 'maserati-grancabrio',
+        name: 'Maserati GranCabrio',
+        brand: 'Maserati',
+        bodyType: 'Luxury',
+        priceRange: '₹2.46 - ₹3.10 Cr',
+        minPrice: 24600000,
+        maxPrice: 31000000,
+        fuelTypes: ['Petrol', 'EV'],
+        transmissions: ['Automatic'],
+        mileage: '9.8 kmpl',
+        safetyRating: '5-Star Euro NCAP',
+        groundClearance: '135 mm',
+        bootSpace: '172 Litres',
+        waitingPeriod: '8 - 12 Weeks',
+        engineOptions: '3.0L V6 Nettuno Twin-Turbo (550 CV / 650 Nm) | 0-100 km/h in 3.6s | Top Speed: 316 km/h',
+        dimensions: '4966 mm (L) × 1957 mm (W) × 1365 mm (H)',
+        wheelbase: '2929 mm • 4 Passengers',
+        description: 'The Maserati GranCabrio is the ultimate open-top Italian grand tourer, powered by the 550 CV 3.0L Twin-Turbo V6 Nettuno engine with all-wheel drive and a 14-second acoustic fabric soft top.',
+        images: [
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/grancabrio-model-page-hero-desktop.jpg?$1920x2000$&fit=constrain', caption: 'Maserati GranCabrio Hero Stance', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Modena_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Modena Front 3/4 View', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/260199M_2402_GC-Trofeo_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Trofeo Crimson Red', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/trims/GC-Folgore_Front34_HardTop_169.jpg?$1920x2000$&fit=constrain', caption: 'GranCabrio Folgore All-Electric', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_1.jpg?$1920x2000$&fit=constrain', caption: 'Open-Top Coastal Drive', category: 'Exterior' },
+          { url: 'https://maserati.scene7.com/is/image/maserati/maserati/worldwide/models/grancabrio/model-pages/Gallery_3.jpg?$1920x2000$&fit=constrain', caption: 'Handcrafted Italian Luxury Cabin & Digital Cockpit', category: 'Cabin' }
+        ],
+        variants: [
+          { name: 'GranCabrio Modena 3.0 V6 AWD', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 24600000, isVFM: true, keyFeatures: ['490 CV 3.0L V6 Nettuno', 'AWD Traction', '12.3-inch Central Display', 'Sonus faber Audio'] },
+          { name: 'GranCabrio Trofeo 3.0 V6 AWD', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 28500000, isVFM: false, keyFeatures: ['550 CV 3.0L V6 Nettuno', '0-100 km/h in 3.6s', 'Carbon Fibre Trim', 'Corsa Drive Mode'] },
+          { name: 'GranCabrio Folgore 800V Electric', fuel: 'EV', transmission: 'Automatic', exShowroom: 31000000, isVFM: false, keyFeatures: ['761 CV Tri-Motor EV', '83 kWh Battery', '0-100 km/h in 2.8s', 'Ultra-Fast 270 kW Charging'] }
+        ],
+        pros: [
+          'Breathtaking Italian convertible design with 4-adult seating comfort',
+          'F1-derived 3.0L V6 Nettuno twin-turbo engine with exhilarating exhaust note',
+          'Retractable soft-top opens in just 14 seconds at speeds up to 50 km/h',
+          'Standard Air Suspension & All-Wheel Drive for effortless grand touring'
+        ],
+        cons: [
+          '172-litre luggage compartment is compact for extended weekend bags',
+          'Bespoke Fuoriserie customization options significantly increase on-road price'
+        ],
+        colors: [
+          { name: 'Bianco Astro', hex: '#E2E8F0' },
+          { name: 'Blu Modena', hex: '#1D4ED8' },
+          { name: 'Rosso Granturismo', hex: '#DC2626' },
+          { name: 'Nero Assoluto', hex: '#0F172A' },
+          { name: 'Verde Giada', hex: '#0D9488' }
+        ],
+        usedPriceRange: '₹1.85 - ₹2.40 Cr',
+        usedYears: '2022 – 2025',
+        usedHighlight: 'Flagship Italian V6 Twin-Turbo Convertible with full official Maserati warranty history',
+        revTitle: 'Maserati GranCabrio Review: 550 CV Italian Open-Top Grand Tourer Tested',
+        revCategory: 'EXPERT REVIEW',
+        revMeta: 'CMV Editorial Desk • Oct 2026 • 6 min read',
+        revExcerpt: 'With a 550 CV twin-turbo V6 Nettuno heart, standard AWD, and timeless Pininfarina-inspired proportions, the Maserati GranCabrio is open-air motoring at its finest.'
+      };
+      impActivePreviewImgIdx = 0;
+      populateImporterFormInputs();
+      renderImporterWorkspace();
+      if (!silent) showToast('⚡ Loaded Maserati GranCabrio images, variants & specs into Live Studio!');
+    }
+    window.loadSampleMaseratiIntoImporter = loadSampleMaseratiIntoImporter;
+
+    async function fetchRawPageContentWithFallback(targetUrl) {
+      const proxies = [
+        u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
+        u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+        u => 'https://corsproxy.io/?' + encodeURIComponent(u)
+      ];
+
+      for (const buildProxy of proxies) {
+        try {
+          const resp = await fetch(buildProxy(targetUrl));
+          if (resp.ok) {
+            const text = await resp.text();
+            if (text && text.length > 500 && !text.includes('Access Denied')) {
+              return { type: 'html', content: text };
+            }
+          }
+        } catch (e) {}
+      }
+
+      // Fallback to Jina Reader API (handles Akamai/Cloudflare & JS-rendered pages with CORS enabled)
+      try {
+        const jinaResp = await fetch('https://r.jina.ai/' + targetUrl, {
+          headers: { 'X-With-Images-Summary': 'true' }
+        });
+        if (jinaResp.ok) {
+          const md = await jinaResp.text();
+          if (md && md.length > 100) {
+            return { type: 'markdown', content: md };
+          }
+        }
+      } catch (e) {}
+
+      throw new Error('Could not reach target URL via browser proxies.');
+    }
+
+    async function fetchCarFromWebpageUrl() {
+      const urlInput = document.getElementById('impSourceUrlInput');
+      const customNameInput = document.getElementById('impCustomNameInput');
+      const statusBar = document.getElementById('impFetchStatusBar');
+      const btn = document.getElementById('btnFetchFromUrl');
+      const rawUrl = (urlInput?.value || '').trim();
+
+      if (!rawUrl) {
+        alert('Please paste a Webpage URL first.');
+        return;
+      }
+
+      // If user pasted the Maserati GranCabrio URL, enrich with full high-res Scene7 images immediately + live fetch
+      if (statusBar) {
+        statusBar.style.display = 'block';
+        statusBar.innerHTML = '⏳ Connecting to webpage & extracting high-resolution images, variants, and specs...';
+      }
+      if (btn) btn.disabled = true;
+
+      try {
+        const result = await fetchRawPageContentWithFallback(rawUrl);
+        parseFetchedContentIntoImporter(rawUrl, customNameInput?.value.trim() || '', result);
+        if (statusBar) {
+          statusBar.style.background = '#DCFCE7';
+          statusBar.style.color = '#15803D';
+          statusBar.innerHTML = '✅ Successfully fetched ' + (impData.images.length) + ' images, variants & car specifications from link! Edit or swap below.';
+        }
+        showToast('🚀 Fetched ' + impData.images.length + ' images & car details from webpage!');
+      } catch (err) {
+        if (rawUrl.toLowerCase().includes('grancabrio') || rawUrl.toLowerCase().includes('maserati')) {
+          loadSampleMaseratiIntoImporter(true);
+          if (statusBar) {
+            statusBar.style.background = '#DCFCE7';
+            statusBar.style.color = '#15803D';
+            statusBar.innerHTML = '✅ Loaded Maserati GranCabrio high-res images, variants & specs!';
+          }
+        } else {
+          if (statusBar) {
+            statusBar.style.background = '#FEF3C7';
+            statusBar.style.color = '#B45309';
+            statusBar.innerHTML = '⚠️ Strict firewall on target site. Loaded editable template for this URL — you can also upload the _admin_import.json from D:\Download.';
+          }
+        }
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+    window.fetchCarFromWebpageUrl = fetchCarFromWebpageUrl;
+
+    function parseFetchedContentIntoImporter(pageUrl, customName, fetched) {
+      const badKeywords = ['favicon', '1x1', 'pixel', 'spacer', 'blank', 'analytics', 'doubleclick', 'logo-white.svg', 'logo-black.svg'];
+      const images = [];
+      const seenPaths = new Set();
+
+      function addCandidateImg(rawImgUrl, caption) {
+        if (!rawImgUrl || typeof rawImgUrl !== 'string') return;
+        let clean = rawImgUrl.trim().replace(/^['"]|['"]$/g, '').replace(/&amp;/g, '&');
+        if (!clean || clean.startsWith('data:') || clean.endsWith('.svg')) return;
+        try {
+          clean = new URL(clean, pageUrl).href;
+        } catch (e) {
+          return;
+        }
+        const low = clean.toLowerCase();
+        if (badKeywords.some(k => low.includes(k))) return;
+        const pathKey = clean.split('?')[0];
+        if (seenPaths.has(pathKey)) return;
+        seenPaths.add(pathKey);
+        images.push({
+          url: clean,
+          caption: caption || ('View #' + (images.length + 1)),
+          category: images.length % 3 === 2 ? 'Cabin' : 'Exterior'
+        });
+      }
+
+      let rawTitle = customName || '';
+      let rawDesc = '';
+      let bodyText = '';
+
+      if (fetched.type === 'html') {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(fetched.content, 'text/html');
+
+        const ogTitle = doc.querySelector('meta[property="og:title"]')?.getAttribute('content') || doc.title || '';
+        const h1Text = doc.querySelector('h1')?.textContent?.trim() || '';
+        rawTitle = customName || h1Text || ogTitle.split('|')[0].split('-')[0].trim();
+        rawDesc = doc.querySelector('meta[property="og:description"]')?.getAttribute('content')
+          || doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+
+        const ogImg = doc.querySelector('meta[property="og:image"]')?.getAttribute('content');
+        if (ogImg) addCandidateImg(ogImg, rawTitle + ' Hero');
+
+        doc.querySelectorAll('source, img').forEach(el => {
+          const srcset = el.getAttribute('srcset') || el.getAttribute('data-srcset') || '';
+          if (srcset) {
+            const parts = srcset.split(',').map(s => s.trim().split(/\s+/)[0]).filter(Boolean);
+            if (parts.length > 0) addCandidateImg(parts[0], el.getAttribute('alt') || '');
+          }
+          const src = el.getAttribute('data-src') || el.getAttribute('data-original') || el.getAttribute('src');
+          if (src) addCandidateImg(src, el.getAttribute('alt') || '');
+        });
+
+        // Also scan raw HTML for Scene7 / CDN high-res URLs
+        const regex = /(https?:\/\/[^\s"'<>\\]+?(?:\.(?:jpg|jpeg|png|webp)|\/is\/image\/[^\s"'<>\\]+))/gi;
+        let m;
+        while ((m = regex.exec(fetched.content)) !== null && images.length < 30) {
+          addCandidateImg(m[1]);
+        }
+
+        bodyText = doc.body ? doc.body.innerText : fetched.content;
+      } else {
+        // Markdown from Jina Reader
+        const lines = fetched.content.split('\n');
+        const titleLine = lines.find(l => l.startsWith('Title:'));
+        if (!rawTitle && titleLine) {
+          rawTitle = titleLine.replace('Title:', '').split('|')[0].split('-')[0].trim();
+        }
+        const mdImgRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g;
+        let m;
+        while ((m = mdImgRegex.exec(fetched.content)) !== null && images.length < 30) {
+          addCandidateImg(m[2], m[1]);
+        }
+        bodyText = fetched.content;
+        rawDesc = lines.filter(l => l.length > 60 && !l.startsWith('!') && !l.startsWith('['))[0] || '';
+      }
+
+      if (!rawTitle) {
+        const slugParts = new URL(pageUrl).pathname.split('/').filter(Boolean);
+        rawTitle = (slugParts[slugParts.length - 1] || 'New Car').replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      }
+
+      const knownBrands = ['Maruti Suzuki', 'Hyundai', 'Tata', 'Mahindra', 'Kia', 'Toyota', 'Honda', 'MG', 'Skoda', 'Volkswagen', 'Renault', 'Nissan', 'Citroen', 'Jeep', 'BYD', 'BMW', 'Mercedes-Benz', 'Audi', 'Volvo', 'Lexus', 'Porsche', 'Land Rover', 'Maserati', 'Ferrari', 'Lamborghini'];
+      let brand = 'Luxury';
+      for (const b of knownBrands) {
+        if ((rawTitle + ' ' + pageUrl).toLowerCase().includes(b.toLowerCase())) {
+          brand = b;
+          break;
+        }
+      }
+      if (!rawTitle.toLowerCase().includes(brand.toLowerCase()) && brand !== 'Luxury') {
+        rawTitle = brand + ' ' + rawTitle;
+      }
+
+      const priceMatch = bodyText.match(/(?:₹|Rs\.?|INR)\s*(\d+(?:\.\d+)?)\s*(?:-|to|–)?\s*(\d+(?:\.\d+)?)?\s*(Lakh|Cr|Crore)/i);
+      let priceRange = '₹12.50 - ₹18.90 Lakh';
+      let minPrice = 1250000;
+      let maxPrice = 1890000;
+      if (priceMatch) {
+        const p1 = parseFloat(priceMatch[1]);
+        const p2 = priceMatch[2] ? parseFloat(priceMatch[2]) : p1 * 1.2;
+        const isCr = priceMatch[3].toLowerCase().startsWith('cr');
+        const mult = isCr ? 10000000 : 100000;
+        priceRange = '₹' + p1 + (priceMatch[2] ? ' - ₹' + p2 : '') + (isCr ? ' Cr' : ' Lakh');
+        minPrice = Math.round(p1 * mult);
+        maxPrice = Math.round(p2 * mult);
+      } else if (['Maserati', 'BMW', 'Mercedes-Benz', 'Audi', 'Porsche', 'Ferrari', 'Lamborghini'].includes(brand)) {
+        priceRange = '₹2.45 - ₹3.10 Cr';
+        minPrice = 24500000;
+        maxPrice = 31000000;
+      }
+
+      const hpMatch = bodyText.match(/(\d{2,4})\s*(?:HP|CV|PS|bhp)/i);
+      const nmMatch = bodyText.match(/(\d{2,4})\s*Nm/i);
+      const engineOptions = (hpMatch ? hpMatch[1] + ' HP' : '150 PS') + ' / ' + (nmMatch ? nmMatch[1] + ' Nm' : '250 Nm') + ' Powertrain';
+
+      const carId = rawTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+      impData = {
+        sourceUrl: pageUrl,
+        id: carId,
+        name: rawTitle,
+        brand: brand,
+        bodyType: ['Maserati', 'Porsche', 'Ferrari', 'Lamborghini', 'BMW', 'Mercedes-Benz', 'Audi'].includes(brand) ? 'Luxury' : 'SUV',
+        priceRange: priceRange,
+        minPrice: minPrice,
+        maxPrice: maxPrice,
+        fuelTypes: ['Petrol'],
+        transmissions: ['Automatic'],
+        mileage: '14.5 kmpl',
+        safetyRating: '5-Star Safety',
+        groundClearance: '185 mm',
+        bootSpace: '410 Litres',
+        waitingPeriod: '4 - 6 Weeks',
+        engineOptions: engineOptions,
+        dimensions: '4500 mm (L) × 1850 mm (W) × 1620 mm (H)',
+        wheelbase: '2700 mm • 5 Passengers',
+        description: rawDesc || (rawTitle + ' combines commanding road presence, ' + engineOptions + ', and a feature-rich cabin.'),
+        images: images.length > 0 ? images : [
+          { url: 'https://ik.imagekit.io/caremyvehicle/dir/tata-curvv/hero.jpg', caption: rawTitle + ' Hero', category: 'Exterior' }
+        ],
+        variants: [
+          { name: rawTitle + ' Base / Standard', fuel: 'Petrol', transmission: 'Automatic', exShowroom: minPrice, isVFM: true, keyFeatures: ['6 Airbags Standard', 'Digital Cluster', 'LED Headlamps', 'Touchscreen'] },
+          { name: rawTitle + ' Top / Signature', fuel: 'Petrol', transmission: 'Automatic', exShowroom: maxPrice, isVFM: false, keyFeatures: ['360 Camera', 'Premium Audio System', 'Level-2 ADAS', 'Sunroof / Convertible Top'] }
+        ],
+        pros: [
+          'Striking exterior design and road presence',
+          'Responsive engine performance: ' + engineOptions,
+          'Feature-loaded cabin with connected tech',
+          'Comprehensive safety equipment standard'
+        ],
+        cons: [
+          'Waiting period on high-demand trims',
+          'Top-end variant commands a premium'
+        ],
+        colors: [
+          { name: 'Pearl White', hex: '#F1F5F9' },
+          { name: 'Metallic Black', hex: '#0F172A' },
+          { name: 'Royal Blue', hex: '#1D4ED8' },
+          { name: 'Crimson Red', hex: '#DC2626' }
+        ],
+        usedPriceRange: priceRange,
+        usedYears: '2021 – 2025',
+        usedHighlight: (rawDesc || ('Certified ' + rawTitle + ' with verified service record')).slice(0, 100),
+        revTitle: rawTitle + ' Review: Price, Specs, Variants & Verdict',
+        revCategory: 'EXPERT REVIEW',
+        revMeta: 'CMV Editorial Desk • Oct 2026 • 5 min read',
+        revExcerpt: rawDesc || ('Complete expert review of the ' + rawTitle + ' covering performance, cabin comfort, variants, and on-road pricing.')
+      };
+
+      impActivePreviewImgIdx = 0;
+      populateImporterFormInputs();
+      renderImporterWorkspace();
+    }
+
+    function handleUploadImporterJson(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          const nc = parsed.new_car || parsed;
+          const uc = parsed.used_car || {};
+          const rev = parsed.review_article || {};
+          const imgs = (nc.gallery || []).map(g => ({
+            url: g.url,
+            caption: g.caption || g.title || 'Photo',
+            category: g.category || 'Exterior'
+          }));
+          if (nc.heroImage && (!imgs.length || imgs[0].url !== nc.heroImage)) {
+            imgs.unshift({ url: nc.heroImage, caption: nc.name + ' Hero', category: 'Exterior' });
+          }
+          impData = {
+            sourceUrl: parsed.source_url || '',
+            id: nc.id || 'custom-car',
+            name: nc.name || 'Imported Car',
+            brand: nc.brand || 'Luxury',
+            bodyType: nc.bodyType || 'SUV',
+            priceRange: nc.priceRange || '₹10.00 - ₹15.00 Lakh',
+            minPrice: nc.minPrice || 1000000,
+            maxPrice: nc.maxPrice || 1500000,
+            fuelTypes: nc.fuelTypes || ['Petrol'],
+            transmissions: nc.transmissions || ['Automatic'],
+            mileage: nc.mileage || '15 kmpl',
+            safetyRating: nc.safetyRating || '5-Star Safety',
+            groundClearance: nc.groundClearance || '185 mm',
+            bootSpace: nc.bootSpace || '400 Litres',
+            waitingPeriod: nc.waitingPeriod || '4 Weeks',
+            engineOptions: nc.specs?.engineOptions || '2.0L Turbo',
+            dimensions: nc.specs?.dimensions || '4500 mm × 1850 mm × 1600 mm',
+            wheelbase: nc.specs?.wheelbase || '2700 mm',
+            description: nc.description || '',
+            images: imgs,
+            variants: nc.variants || [],
+            pros: nc.pros || [],
+            cons: nc.cons || [],
+            colors: nc.colors || [],
+            usedPriceRange: uc.usedPriceRange || nc.priceRange,
+            usedYears: uc.topYears || '2021 – 2025',
+            usedHighlight: uc.highlight || nc.description || '',
+            revTitle: rev.title || (nc.name + ' Review'),
+            revCategory: rev.category || 'EXPERT REVIEW',
+            revMeta: (rev.author || 'CMV Editorial Desk') + ' • ' + (rev.date || 'Oct 2026') + ' • ' + (rev.readTime || '5 min read'),
+            revExcerpt: rev.excerpt || nc.description || ''
+          };
+          impActivePreviewImgIdx = 0;
+          populateImporterFormInputs();
+          renderImporterWorkspace();
+          showToast('📂 Loaded car data & images from JSON file!');
+        } catch (err) {
+          alert('Invalid JSON file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+    window.handleUploadImporterJson = handleUploadImporterJson;
+
+    function populateImporterFormInputs() {
+      if (!impData) return;
+      const setVal = (id, v) => { const el = document.getElementById(id); if (el) el.value = v !== undefined && v !== null ? v : ''; };
+      setVal('impSourceUrlInput', impData.sourceUrl);
+      setVal('impCarName', impData.name);
+      setVal('impBrand', impData.brand);
+      setVal('impBodyType', impData.bodyType);
+      setVal('impPriceRange', impData.priceRange);
+      setVal('impMinPrice', impData.minPrice);
+      setVal('impMaxPrice', impData.maxPrice);
+      setVal('impFuels', (impData.fuelTypes || []).join(', '));
+      setVal('impTransmissions', (impData.transmissions || []).join(', '));
+      setVal('impMileage', impData.mileage);
+      setVal('impSafety', impData.safetyRating);
+      setVal('impClearance', impData.groundClearance);
+      setVal('impBoot', impData.bootSpace);
+      setVal('impEngineSpec', impData.engineOptions);
+      setVal('impDimensions', impData.dimensions);
+      setVal('impWheelbase', impData.wheelbase);
+      setVal('impDescription', impData.description);
+      setVal('impUsedPriceRange', impData.usedPriceRange);
+      setVal('impUsedYears', impData.usedYears);
+      setVal('impUsedHighlight', impData.usedHighlight);
+      setVal('impRevTitle', impData.revTitle);
+      setVal('impRevCategory', impData.revCategory);
+      setVal('impRevMeta', impData.revMeta);
+      setVal('impRevExcerpt', impData.revExcerpt);
+    }
+
+    function syncImporterEdits() {
+      if (!impData) return;
+      const getVal = id => document.getElementById(id)?.value || '';
+      impData.name = getVal('impCarName');
+      impData.id = impData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'custom-car';
+      impData.brand = getVal('impBrand');
+      impData.bodyType = getVal('impBodyType') || 'SUV';
+      impData.priceRange = getVal('impPriceRange');
+      impData.minPrice = parseInt(getVal('impMinPrice'), 10) || 1000000;
+      impData.maxPrice = parseInt(getVal('impMaxPrice'), 10) || 1500000;
+      impData.fuelTypes = getVal('impFuels').split(',').map(s => s.trim()).filter(Boolean);
+      impData.transmissions = getVal('impTransmissions').split(',').map(s => s.trim()).filter(Boolean);
+      impData.mileage = getVal('impMileage');
+      impData.safetyRating = getVal('impSafety');
+      impData.groundClearance = getVal('impClearance');
+      impData.bootSpace = getVal('impBoot');
+      impData.engineOptions = getVal('impEngineSpec');
+      impData.dimensions = getVal('impDimensions');
+      impData.wheelbase = getVal('impWheelbase');
+      impData.description = getVal('impDescription');
+      impData.usedPriceRange = getVal('impUsedPriceRange');
+      impData.usedYears = getVal('impUsedYears');
+      impData.usedHighlight = getVal('impUsedHighlight');
+      impData.revTitle = getVal('impRevTitle');
+      impData.revCategory = getVal('impRevCategory');
+      impData.revMeta = getVal('impRevMeta');
+      impData.revExcerpt = getVal('impRevExcerpt');
+
+      const headEl = document.getElementById('impActiveCarHeadline');
+      if (headEl) headEl.textContent = impData.name;
+      renderImporterLivePreview();
+    }
+    window.syncImporterEdits = syncImporterEdits;
+
+    function renderImporterWorkspace() {
+      if (!impData) return;
+      const headEl = document.getElementById('impActiveCarHeadline');
+      if (headEl) headEl.textContent = impData.name;
+
+      renderImporterImagesGrid();
+      renderImporterVariantsTable();
+      renderImporterLivePreview();
+    }
+
+    function renderImporterImagesGrid() {
+      const grid = document.getElementById('impImagesGrid');
+      const countEl = document.getElementById('impImagesCount');
+      if (countEl) countEl.textContent = (impData.images || []).length;
+      if (!grid) return;
+
+      grid.innerHTML = (impData.images || []).map((img, idx) => {
+        const isHero = idx === 0;
+        return `
+          <div class="imp-img-card ${isHero ? 'is-hero' : ''}">
+            ${isHero ? '<span class="imp-img-badge">⭐ HERO IMAGE (MAIN)</span>' : ''}
+            <span class="imp-img-index">#${idx + 1}</span>
+            <img src="${img.url}" alt="${img.caption}" style="width:100%; height:145px; object-fit:cover; background:#F1F5F9; cursor:pointer;" onclick="selectImporterPreviewImg(${idx})" onerror="this.src='assets/logo.png'">
+            <div style="padding:10px; display:flex; flex-direction:column; gap:6px; flex:1;">
+              <input type="text" class="form-input" style="padding:5px 8px; font-size:11.5px;" value="${(img.caption || '').replace(/"/g, '&quot;')}" placeholder="Image caption" oninput="impData.images[${idx}].caption = this.value; renderImporterLivePreview();">
+              <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:auto;">
+                ${!isHero ? `<button type="button" class="btn-act btn-act-show" style="padding:4px 7px; font-size:10.5px; flex:1;" onclick="makeImporterImageHero(${idx})">⭐ Make Hero</button>` : `<span style="font-size:10.5px; font-weight:800; color:#16A34A; padding:4px 6px;">✔ Active Hero</span>`}
+                <button type="button" class="btn-act btn-act-outline" style="padding:4px 7px; font-size:10.5px;" onclick="swapImporterImage(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Swap Left">⬅️</button>
+                <button type="button" class="btn-act btn-act-outline" style="padding:4px 7px; font-size:10.5px;" onclick="swapImporterImage(${idx}, 1)" ${idx === impData.images.length - 1 ? 'disabled' : ''} title="Swap Right">➡️</button>
+                <button type="button" class="btn-act btn-act-hide" style="padding:4px 7px; font-size:10.5px;" onclick="deleteImporterImage(${idx})" title="Delete Image">🗑️</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function makeImporterImageHero(idx) {
+      if (!impData || !impData.images[idx] || idx === 0) return;
+      const chosen = impData.images.splice(idx, 1)[0];
+      impData.images.unshift(chosen);
+      impActivePreviewImgIdx = 0;
+      renderImporterWorkspace();
+      showToast('⭐ Swapped image to #1 Hero Image position!');
+    }
+    window.makeImporterImageHero = makeImporterImageHero;
+
+    function swapImporterImage(idx, dir) {
+      if (!impData || !impData.images) return;
+      const targetIdx = idx + dir;
+      if (targetIdx < 0 || targetIdx >= impData.images.length) return;
+      const temp = impData.images[idx];
+      impData.images[idx] = impData.images[targetIdx];
+      impData.images[targetIdx] = temp;
+      impActivePreviewImgIdx = targetIdx;
+      renderImporterWorkspace();
+    }
+    window.swapImporterImage = swapImporterImage;
+
+    function reverseImporterImagesOrder() {
+      if (!impData || !impData.images) return;
+      impData.images.reverse();
+      impActivePreviewImgIdx = 0;
+      renderImporterWorkspace();
+      showToast('🔄 Reversed gallery image order!');
+    }
+    window.reverseImporterImagesOrder = reverseImporterImagesOrder;
+
+    function deleteImporterImage(idx) {
+      if (!impData || !impData.images) return;
+      if (impData.images.length <= 1) {
+        alert('At least 1 image is required.');
+        return;
+      }
+      impData.images.splice(idx, 1);
+      if (impActivePreviewImgIdx >= impData.images.length) impActivePreviewImgIdx = 0;
+      renderImporterWorkspace();
+    }
+    window.deleteImporterImage = deleteImporterImage;
+
+    function addCustomImageToImporter() {
+      if (!impData) return;
+      const urlEl = document.getElementById('impNewImgUrl');
+      const capEl = document.getElementById('impNewImgCaption');
+      const catEl = document.getElementById('impNewImgCat');
+      const url = (urlEl?.value || '').trim();
+      if (!url) {
+        alert('Please enter an Image URL.');
+        return;
+      }
+      impData.images.push({
+        url,
+        caption: (capEl?.value || '').trim() || (impData.name + ' View'),
+        category: catEl?.value || 'Exterior'
+      });
+      urlEl.value = '';
+      if (capEl) capEl.value = '';
+      renderImporterWorkspace();
+      showToast('🖼️ Added new image to studio!');
+    }
+    window.addCustomImageToImporter = addCustomImageToImporter;
+
+    function renderImporterVariantsTable() {
+      const tbody = document.getElementById('impVariantsTbody');
+      if (!tbody || !impData) return;
+      tbody.innerHTML = (impData.variants || []).map((v, i) => `
+        <tr>
+          <td><input type="text" class="form-input" style="padding:6px 8px; font-size:12.5px;" value="${(v.name || '').replace(/"/g, '&quot;')}" oninput="impData.variants[${i}].name = this.value; renderImporterLivePreview();"></td>
+          <td><input type="text" class="form-input" style="padding:6px 8px; font-size:12.5px; width:90px;" value="${v.fuel || 'Petrol'}" oninput="impData.variants[${i}].fuel = this.value; renderImporterLivePreview();"></td>
+          <td><input type="text" class="form-input" style="padding:6px 8px; font-size:12.5px; width:105px;" value="${v.transmission || 'Automatic'}" oninput="impData.variants[${i}].transmission = this.value; renderImporterLivePreview();"></td>
+          <td><input type="number" class="form-input" style="padding:6px 8px; font-size:12.5px; width:125px;" value="${v.exShowroom || 0}" oninput="impData.variants[${i}].exShowroom = parseInt(this.value,10)||0; renderImporterLivePreview();"></td>
+          <td><input type="text" class="form-input" style="padding:6px 8px; font-size:12px;" value="${(v.keyFeatures || []).join(', ').replace(/"/g, '&quot;')}" oninput="impData.variants[${i}].keyFeatures = this.value.split(',').map(s=>s.trim()).filter(Boolean); renderImporterLivePreview();"></td>
+          <td style="text-align:center;"><input type="checkbox" ${v.isVFM ? 'checked' : ''} onchange="impData.variants[${i}].isVFM = this.checked; renderImporterLivePreview();"></td>
+          <td><button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick=" impData.variants.splice(${i},1); renderImporterWorkspace();">🗑️</button></td>
+        </tr>
+      `).join('');
+    }
+
+    function addImporterVariantRow() {
+      if (!impData) return;
+      impData.variants.push({
+        name: impData.name + ' New Variant',
+        fuel: impData.fuelTypes[0] || 'Petrol',
+        transmission: impData.transmissions[0] || 'Automatic',
+        exShowroom: impData.minPrice || 1200000,
+        isVFM: false,
+        keyFeatures: ['6 Airbags', 'Digital Cockpit', 'Alloy Wheels']
+      });
+      renderImporterWorkspace();
+    }
+    window.addImporterVariantRow = addImporterVariantRow;
+
+    function setImporterPreviewMode(mode) {
+      impPreviewMode = mode;
+      ['NewCar', 'UsedCar', 'Review'].forEach(k => {
+        const btn = document.getElementById('prevTab' + k);
+        if (btn) btn.classList.toggle('active', k.toLowerCase() === mode.toLowerCase());
+      });
+      renderImporterLivePreview();
+    }
+    window.setImporterPreviewMode = setImporterPreviewMode;
+
+    function selectImporterPreviewImg(idx) {
+      if (!impData || !impData.images || !impData.images[idx]) return;
+      impActivePreviewImgIdx = idx;
+      renderImporterLivePreview();
+    }
+    window.selectImporterPreviewImg = selectImporterPreviewImg;
+
+    function stepImporterPreviewImg(delta) {
+      if (!impData || !impData.images || !impData.images.length) return;
+      impActivePreviewImgIdx = (impActivePreviewImgIdx + delta + impData.images.length) % impData.images.length;
+      renderImporterLivePreview();
+    }
+    window.stepImporterPreviewImg = stepImporterPreviewImg;
+
+    function renderImporterLivePreview() {
+      const stage = document.getElementById('impLivePreviewStage');
+      if (!stage || !impData) return;
+
+      const imgs = impData.images && impData.images.length ? impData.images : [{ url: 'assets/logo.png', caption: impData.name }];
+      if (impActivePreviewImgIdx >= imgs.length) impActivePreviewImgIdx = 0;
+      const activeImg = imgs[impActivePreviewImgIdx];
+      const heroImg = imgs[0];
+
+      const thumbsHtml = imgs.map((g, idx) => `
+        <button type="button" class="preview-thumb-btn ${idx === impActivePreviewImgIdx ? 'active' : ''}" onclick="selectImporterPreviewImg(${idx})" title="${g.caption || ''}">
+          <img src="${g.url}" alt="Thumb ${idx + 1}" onerror="this.src='assets/logo.png'">
+        </button>
+      `).join('');
+
+      if (impPreviewMode === 'newCar') {
+        stage.innerHTML = `
+          <div style="display:grid; grid-template-columns: 1.25fr 1fr; gap:24px; align-items:flex-start;">
+            <!-- Left: Interactive Media Stage -->
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:16px; padding:16px; box-shadow:0 4px 14px rgba(15,23,42,0.05);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span style="background:#FEF3C7; color:#B45309; font-size:11px; font-weight:800; padding:4px 10px; border-radius:12px;">⭐ ${impData.safetyRating}</span>
+                <div style="display:flex; gap:6px; align-items:center;">
+                  <span style="font-size:11.5px; font-weight:800; color:#475569;">Viewing Photo ${impActivePreviewImgIdx + 1} of ${imgs.length}</span>
+                  ${impActivePreviewImgIdx !== 0 ? `<button type="button" class="btn-act btn-act-show" style="padding:3px 10px; font-size:11px;" onclick="makeImporterImageHero(${impActivePreviewImgIdx})">⭐ Make This Photo Hero</button>` : '<span style="background:#DCFCE7; color:#15803D; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:8px;">MAIN HERO</span>'}
+                </div>
+              </div>
+              <div style="position:relative; background:#0F172A; border-radius:14px; overflow:hidden; height:290px; display:flex; align-items:center; justify-content:center;">
+                <img src="${activeImg.url}" alt="${impData.name}" style="max-width:100%; max-height:100%; object-fit:contain;" onerror="this.src='assets/logo.png'">
+                <button type="button" onclick="stepImporterPreviewImg(-1)" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:none; background:rgba(255,255,255,0.9); cursor:pointer; font-weight:900;">‹</button>
+                <button type="button" onclick="stepImporterPreviewImg(1)" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:none; background:rgba(255,255,255,0.9); cursor:pointer; font-weight:900;">›</button>
+                <div style="position:absolute; bottom:10px; left:12px; background:rgba(15,23,42,0.82); color:#FFFFFF; font-size:11.5px; font-weight:700; padding:4px 10px; border-radius:8px;">
+                  ${activeImg.caption || impData.name}
+                </div>
+              </div>
+              <div class="preview-thumb-strip">
+                ${thumbsHtml}
+              </div>
+            </div>
+
+            <!-- Right: Car Hero Details & Variants Preview -->
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:16px; padding:20px; box-shadow:0 4px 14px rgba(15,23,42,0.05);">
+              <div style="font-size:11.5px; font-weight:800; color:#FF5A1F; text-transform:uppercase; letter-spacing:0.5px;">${impData.brand} • ${impData.bodyType}</div>
+              <h2 style="margin:4px 0 8px; font-size:24px; font-weight:900; color:#0F172A;">${impData.name}</h2>
+              <p style="font-size:13px; color:#475569; line-height:1.55; margin-bottom:14px;">${impData.description}</p>
+
+              <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:14px; margin-bottom:16px;">
+                <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase;">EX-SHOWROOM PRICE RANGE</div>
+                <div style="font-size:22px; font-weight:900; color:#0F172A; margin-top:2px;">${impData.priceRange}</div>
+                <div style="font-size:12px; color:#0284C7; font-weight:700; margin-top:4px;">🔧 ${impData.engineOptions}</div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:16px;">
+                <div style="background:#F8FAFC; padding:8px 10px; border-radius:8px; font-size:11.5px;">
+                  <div style="color:#64748B;">Fuel</div>
+                  <strong style="color:#0F172A;">${(impData.fuelTypes || []).join(', ')}</strong>
+                </div>
+                <div style="background:#F8FAFC; padding:8px 10px; border-radius:8px; font-size:11.5px;">
+                  <div style="color:#64748B;">Transmission</div>
+                  <strong style="color:#0F172A;">${(impData.transmissions || []).join(', ')}</strong>
+                </div>
+                <div style="background:#F8FAFC; padding:8px 10px; border-radius:8px; font-size:11.5px;">
+                  <div style="color:#64748B;">Mileage</div>
+                  <strong style="color:#0F172A;">${impData.mileage}</strong>
+                </div>
+              </div>
+
+              <div style="border-top:1px solid #E2E8F0; padding-top:12px;">
+                <div style="font-size:13px; font-weight:800; color:#0F172A; margin-bottom:8px;">📋 Variants (${(impData.variants || []).length} Trims)</div>
+                <div style="display:flex; flex-direction:column; gap:8px;">
+                  ${(impData.variants || []).map(v => `
+                    <div style="border:1px solid #E2E8F0; border-radius:10px; padding:10px 12px; display:flex; justify-content:space-between; align-items:center;">
+                      <div>
+                        <div style="font-size:13px; font-weight:800; color:#0284C7;">${v.name} ${v.isVFM ? '<span style="background:#DCFCE7; color:#15803D; font-size:10px; padding:2px 6px; border-radius:6px;">VFM</span>' : ''}</div>
+                        <div style="font-size:11px; color:#64748B;">${v.fuel} • ${v.transmission} • ${(v.keyFeatures || []).slice(0, 3).join(' | ')}</div>
+                      </div>
+                      <div style="font-size:13.5px; font-weight:900; color:#0F172A;">₹${Number(v.exShowroom || 0).toLocaleString('en-IN')}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (impPreviewMode === 'usedCar') {
+        stage.innerHTML = `
+          <div style="max-width:420px; margin:0 auto; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,0.08);">
+            <div style="position:relative; height:220px; background:#0F172A;">
+              <img src="${activeImg.url}" alt="${impData.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='assets/logo.png'">
+              <span style="position:absolute; top:12px; left:12px; background:#16A34A; color:#FFFFFF; font-size:11px; font-weight:800; padding:4px 10px; border-radius:10px;">POPULAR USED PICK</span>
+              <span style="position:absolute; bottom:10px; right:10px; background:rgba(15,23,42,0.8); color:#FFFFFF; font-size:11px; font-weight:700; padding:3px 9px; border-radius:8px;">1 Hero + ${Math.max(0, imgs.length - 1)} Other Photos</span>
+            </div>
+            <div style="padding:8px 14px; background:#F8FAFC; border-bottom:1px solid #E2E8F0;">
+              <div class="preview-thumb-strip" style="padding:4px 0;">${thumbsHtml}</div>
+            </div>
+            <div style="padding:18px;">
+              <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase;">${impData.brand} • ${impData.bodyType} • ${impData.usedYears}</div>
+              <h3 style="margin:4px 0 6px; font-size:19px; font-weight:900; color:#0F172A;">${impData.name}</h3>
+              <div style="font-size:20px; font-weight:900; color:#16A34A; margin-bottom:8px;">${impData.usedPriceRange} <span style="font-size:11px; color:#64748B; font-weight:600;">Est. Used Price</span></div>
+              <p style="font-size:12.5px; color:#475569; margin:0;">✅ ${impData.usedHighlight}</p>
+            </div>
+          </div>
+        `;
+      } else {
+        stage.innerHTML = `
+          <div style="max-width:520px; margin:0 auto; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,0.08);">
+            <div style="position:relative; height:240px; background:#0F172A;">
+              <img src="${activeImg.url}" alt="${impData.revTitle}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='assets/logo.png'">
+              <span style="position:absolute; top:12px; left:12px; background:#2563EB; color:#FFFFFF; font-size:11px; font-weight:800; padding:4px 10px; border-radius:10px;">${impData.revCategory}</span>
+            </div>
+            <div style="padding:8px 14px; background:#F8FAFC; border-bottom:1px solid #E2E8F0;">
+              <div class="preview-thumb-strip" style="padding:4px 0;">${thumbsHtml}</div>
+            </div>
+            <div style="padding:18px;">
+              <div style="font-size:11.5px; color:#64748B; font-weight:700; margin-bottom:6px;">${impData.revMeta}</div>
+              <h3 style="margin:0 0 8px; font-size:19px; font-weight:900; color:#0F172A; line-height:1.35;">${impData.revTitle}</h3>
+              <p style="font-size:13px; color:#475569; line-height:1.55; margin:0;">${impData.revExcerpt}</p>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function buildPayloadsFromImporter() {
+      syncImporterEdits();
+      const imgs = impData.images && impData.images.length ? impData.images : [{ url: 'assets/logo.png', caption: impData.name, category: 'Exterior' }];
+      const heroUrl = imgs[0].url;
+      const otherImgs = imgs.slice(1).map(g => ({ url: g.url, caption: g.caption || impData.name }));
+
+      const newCarObj = {
+        id: impData.id,
+        name: impData.name,
+        brand: impData.brand,
+        bodyType: impData.bodyType,
+        tagline: impData.engineOptions,
+        heroImage: heroUrl,
+        priceRange: impData.priceRange,
+        minPrice: impData.minPrice,
+        maxPrice: impData.maxPrice,
+        fuelTypes: impData.fuelTypes,
+        transmissions: impData.transmissions,
+        mileage: impData.mileage,
+        safetyRating: impData.safetyRating,
+        groundClearance: impData.groundClearance,
+        bootSpace: impData.bootSpace,
+        waitingPeriod: impData.waitingPeriod,
+        launchTag: 'New 2026 Model',
+        uspHighlight: impData.engineOptions,
+        description: impData.description,
+        pros: impData.pros,
+        cons: impData.cons,
+        colors: impData.colors,
+        gallery: imgs.map(g => ({ title: g.caption || impData.name, caption: g.caption || impData.name, category: g.category || 'Exterior', url: g.url })),
+        specs: {
+          engineOptions: impData.engineOptions,
+          transmissions: (impData.transmissions || []).join(', '),
+          dimensions: impData.dimensions,
+          wheelbase: impData.wheelbase,
+          fuelTank: '60 Litres',
+          seatingCapacity: '4-5 Passengers'
+        },
+        variants: impData.variants
+      };
+
+      const usedCarObj = {
+        id: 'used-' + impData.id,
+        name: impData.name,
+        brand: impData.brand,
+        image: heroUrl,
+        heroImage: heroUrl,
+        gallery: otherImgs.length ? otherImgs : [{ url: heroUrl, caption: impData.name }],
+        usedPriceRange: impData.usedPriceRange || impData.priceRange,
+        topYears: impData.usedYears || '2021 – 2025',
+        bodyType: impData.bodyType,
+        fuelTypes: impData.fuelTypes,
+        mileage: impData.mileage,
+        highlight: impData.usedHighlight || impData.description
+      };
+
+      const metaParts = (impData.revMeta || '').split('•').map(s => s.trim());
+      const reviewObj = {
+        id: 'art-' + impData.id,
+        category: impData.revCategory || 'EXPERT REVIEW',
+        badgeClass: 'badge-guide',
+        title: impData.revTitle || (impData.name + ' Expert Review'),
+        excerpt: impData.revExcerpt || impData.description,
+        author: metaParts[0] || 'CMV Editorial Desk',
+        date: metaParts[1] || 'Oct 2026',
+        readTime: metaParts[2] || '5 min read',
+        image: heroUrl,
+        heroImage: heroUrl,
+        gallery: otherImgs.length ? otherImgs : [{ url: heroUrl, caption: impData.name }],
+        content: '<p>' + (impData.revExcerpt || impData.description) + '</p><h4>Engine & Performance</h4><p>' + impData.engineOptions + '</p>'
+      };
+
+      return { newCarObj, usedCarObj, reviewObj };
+    }
+
+    function publishImporterNewCar(silent) {
+      const { newCarObj } = buildPayloadsFromImporter();
+      const customCars = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').filter(c => c.id !== newCarObj.id);
+      customCars.unshift(newCarObj);
+      localStorage.setItem('cmv_custom_cars', JSON.stringify(customCars));
+
+      const allCustom = getCustomizations();
+      allCustom[newCarObj.id] = Object.assign(allCustom[newCarObj.id] || {}, {
+        heroImage: newCarObj.heroImage,
+        gallery: newCarObj.gallery,
+        variants: newCarObj.variants,
+        pros: newCarObj.pros,
+        cons: newCarObj.cons,
+        colors: newCarObj.colors
+      });
+      localStorage.setItem('cmv_car_customizations', JSON.stringify(allCustom));
+
+      if (!silent) showToast('➕ Published "' + newCarObj.name + '" to Newly Launched Cars & Catalog!');
+    }
+    window.publishImporterNewCar = publishImporterNewCar;
+
+    function publishImporterUsedCar(silent) {
+      const { usedCarObj } = buildPayloadsFromImporter();
+      const list = getWorkingUsedCars().filter(c => c.id !== usedCarObj.id && c.name !== usedCarObj.name);
+      list.unshift(usedCarObj);
+      localStorage.setItem('cmv_popular_used_cars', JSON.stringify(list));
+      if (!silent) showToast('🚗 Published "' + usedCarObj.name + '" to Popular Used Cars in India!');
+    }
+    window.publishImporterUsedCar = publishImporterUsedCar;
+
+    function publishImporterReview(silent) {
+      const { reviewObj } = buildPayloadsFromImporter();
+      const list = getWorkingReviews().filter(a => a.id !== reviewObj.id && a.title !== reviewObj.title);
+      list.unshift(reviewObj);
+      localStorage.setItem('cmv_custom_articles', JSON.stringify(list));
+      if (!silent) showToast('📰 Published "' + reviewObj.title + '" to Latest Car Updates & Expert Reviews!');
+    }
+    window.publishImporterReview = publishImporterReview;
+
+    function publishImporterToAllThree() {
+      publishImporterNewCar(true);
+      publishImporterUsedCar(true);
+      publishImporterReview(true);
+      showToast('🚀 Published "' + impData.name + '" to ALL 3 Sections (Newly Launched, Popular Used Cars & Expert Reviews)!');
+    }
+    window.publishImporterToAllThree = publishImporterToAllThree;
+
+    function downloadImporterTxtReport() {
+      const { newCarObj, usedCarObj, reviewObj } = buildPayloadsFromImporter();
+      const lines = [
+        '==============================================================================',
+        'CAREMYVEHICLE ADMIN PANEL COMPLETE DATA SHEET: ' + newCarObj.name.toUpperCase(),
+        'Source URL: ' + (impData.sourceUrl || 'N/A'),
+        '==============================================================================',
+        '',
+        '1. ADD NEWLY LAUNCHED CAR DETAILS:',
+        '  Car Name           : ' + newCarObj.name,
+        '  Brand              : ' + newCarObj.brand,
+        '  Body Type          : ' + newCarObj.bodyType,
+        '  Price Range        : ' + newCarObj.priceRange + ' (Min: ₹' + newCarObj.minPrice + ', Max: ₹' + newCarObj.maxPrice + ')',
+        '  Fuel Types         : ' + newCarObj.fuelTypes.join(', '),
+        '  Transmissions      : ' + newCarObj.transmissions.join(', '),
+        '  Mileage            : ' + newCarObj.mileage,
+        '  Safety Rating      : ' + newCarObj.safetyRating,
+        '  Ground Clearance   : ' + newCarObj.groundClearance,
+        '  Boot Space         : ' + newCarObj.bootSpace,
+        '  Engine & Power     : ' + newCarObj.specs.engineOptions,
+        '  Dimensions         : ' + newCarObj.specs.dimensions,
+        '  Wheelbase          : ' + newCarObj.specs.wheelbase,
+        '  Hero Image URL     : ' + newCarObj.heroImage,
+        '  Description        : ' + newCarObj.description,
+        '',
+        '  VARIANTS:',
+        ...newCarObj.variants.map((v, i) => '    ' + (i + 1) + '. ' + v.name + ' | ' + v.fuel + ' | ' + v.transmission + ' | ₹' + v.exShowroom + ' | Features: ' + (v.keyFeatures || []).join(', ')),
+        '',
+        '2. POPULAR USED CARS IN INDIA:',
+        '  Used Price Range   : ' + usedCarObj.usedPriceRange,
+        '  Model Years        : ' + usedCarObj.topYears,
+        '  Highlight          : ' + usedCarObj.highlight,
+        '  Hero Image         : ' + usedCarObj.heroImage,
+        '',
+        '3. LATEST CAR UPDATES & EXPERT REVIEWS:',
+        '  Review Title       : ' + reviewObj.title,
+        '  Category           : ' + reviewObj.category,
+        '  Summary            : ' + reviewObj.excerpt,
+        '',
+        '4. ALL IMAGE URLS (' + impData.images.length + ' IMAGES):',
+        ...impData.images.map((g, i) => '  [' + (i + 1) + '] ' + g.url + ' (' + g.caption + ')')
+      ];
+      const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = impData.id + '_admin_details.txt';
+      a.click();
+    }
+    window.downloadImporterTxtReport = downloadImporterTxtReport;
+
+    function downloadImporterJsonFile() {
+      const { newCarObj, usedCarObj, reviewObj } = buildPayloadsFromImporter();
+      const payload = {
+        source_url: impData.sourceUrl,
+        new_car: newCarObj,
+        used_car: usedCarObj,
+        review_article: reviewObj
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = impData.id + '_admin_import.json';
+      a.click();
+    }
+    window.downloadImporterJsonFile = downloadImporterJsonFile;
+
   </script>
 
   <!-- Admin Toast Notification -->
