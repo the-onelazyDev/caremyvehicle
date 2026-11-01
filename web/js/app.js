@@ -12,6 +12,109 @@ window.navigateToCar = function(carId, hash) {
 
 import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './carData.js';
 import { ARTICLES, POPULAR_USED_CARS as DEFAULT_POPULAR_USED_CARS } from './newsData.js';
+import { saveCustomerLead } from './firebaseConfig.js';
+
+// Global Buyer Lead Modal Trigger
+window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', savingsText = '') {
+  const modal = document.getElementById('buyerOfferModal');
+  if (!modal) return;
+  
+  const titleEl = document.getElementById('offerModalCarTitle');
+  const badgeEl = document.getElementById('offerModalBadge');
+  const hiddenCar = document.getElementById('offerLeadCarName');
+  const hiddenContext = document.getElementById('offerLeadContext');
+  const formBox = document.getElementById('offerLeadForm');
+  const successBox = document.getElementById('offerLeadSuccess');
+  
+  if (formBox) formBox.style.display = 'block';
+  if (successBox) successBox.style.display = 'none';
+
+  if (titleEl) titleEl.textContent = carName || 'Your Selected Car';
+  if (badgeEl) badgeEl.textContent = savingsText || '🎁 Verified Festive Offer';
+  if (hiddenCar) hiddenCar.value = carName || '';
+  if (hiddenContext) hiddenContext.value = context;
+
+  // Auto-fill city
+  const cityInput = document.getElementById('offerLeadCity');
+  if (cityInput && !cityInput.value) {
+    cityInput.value = (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
+  }
+
+  modal.style.display = 'flex';
+};
+
+window.closeBuyerOfferModal = function() {
+  const modal = document.getElementById('buyerOfferModal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.submitBuyerLeadForm = async function(e) {
+  if (e) e.preventDefault();
+  const btn = document.getElementById('btnSubmitLead');
+  const errorMsg = document.getElementById('offerLeadError');
+  const successBox = document.getElementById('offerLeadSuccess');
+  const formBox = document.getElementById('offerLeadForm');
+
+  if (errorMsg) errorMsg.style.display = 'none';
+
+  const name = document.getElementById('offerLeadName')?.value.trim();
+  const phone = document.getElementById('offerLeadPhone')?.value.trim();
+  const city = document.getElementById('offerLeadCity')?.value.trim() || (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
+  const carName = document.getElementById('offerLeadCarName')?.value.trim() || 'General Inquiry';
+  const context = document.getElementById('offerLeadContext')?.value.trim() || 'Website Inquiries';
+  const timeline = document.querySelector('input[name="offerTimeline"]:checked')?.value || 'Within 15 Days';
+  
+  const wantLoan = document.getElementById('offerCbLoan')?.checked || false;
+  const wantTestDrive = document.getElementById('offerCbTestDrive')?.checked || false;
+  const wantInsurance = document.getElementById('offerCbInsurance')?.checked || false;
+
+  if (!name) {
+    if (errorMsg) { errorMsg.textContent = 'Please enter your full name.'; errorMsg.style.display = 'block'; }
+    return;
+  }
+  const cleanPhone = phone ? phone.replace(/\D/g, '') : '';
+  if (!cleanPhone || cleanPhone.length < 10) {
+    if (errorMsg) { errorMsg.textContent = 'Please enter a valid 10-digit mobile number.'; errorMsg.style.display = 'block'; }
+    return;
+  }
+
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '⏳ Submitting securely to Firebase...';
+  }
+
+  const leadPayload = {
+    customerName: name,
+    mobileNumber: cleanPhone,
+    city: city,
+    carModel: carName,
+    inquiryContext: context,
+    purchaseTimeline: timeline,
+    servicesInterested: {
+      loan: wantLoan,
+      testDrive: wantTestDrive,
+      insurance: wantInsurance
+    },
+    pageUrl: window.location.href,
+    source: 'Care My Vehicle Web'
+  };
+
+  try {
+    await saveCustomerLead(leadPayload);
+    if (formBox) formBox.style.display = 'none';
+    if (successBox) successBox.style.display = 'block';
+  } catch (err) {
+    console.warn('Saved via fallback queue:', err);
+    if (formBox) formBox.style.display = 'none';
+    if (successBox) successBox.style.display = 'block';
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '🚀 Unlock Official Offers & Price';
+    }
+  }
+};
+
 
 // Official Brand Logos Mapping (Mass-Market + Luxury & Global OEMs)
 export const BRAND_LOGOS = {
@@ -3312,14 +3415,14 @@ function renderOffersShelf() {
   const allOffers = getActiveOffersList().filter(o => o.enabled !== false);
 
   container.innerHTML = allOffers.map(o => `
-    <div class="offer-card" onclick="window.navigateToCar('${o.carId || ''}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
+    <div class="offer-card" onclick="window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
       <span class="offer-savings-badge">${o.savings || 'Special Offer'}</span>
       <div class="offer-img-stage" style="position:relative; width:100%; height:165px; border-radius:12px; overflow:hidden; background:#E2E8F0; margin:10px 0 12px;">
         <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='assets/logo.png'" style="width:100%; height:100%; object-fit:cover; display:block;">
       </div>
       <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name || 'Special Offer'}</h4>
       <p style="font-size:12px; color:#64748B; margin-bottom:12px; line-height:1.4;">${o.highlight || ''}</p>
-      <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;">
+      <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;" onclick="event.stopPropagation(); window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}')">
         View Offer & Price &rsaquo;
       </button>
     </div>
