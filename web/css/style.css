@@ -3835,8 +3835,12 @@ a {
    TRAVOMINT DESIGN SYSTEM EXTENSIONS & COMPONENTS
    ========================================================================== */
 
-h1, h2, h3, .brand-font {
-  font-family: 'Overlock', cursive, sans-serif;
+.brand-font {
+  font-family: 'Overlock', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Top Utility Bar */

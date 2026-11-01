@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Car News & Expert Reviews in India (2024–2026) | Care My Vehicle</title>
   <meta name="description" content="Read car news of all models in India. All latest cars have a number of news about its launch, updates, specs, comparisons and more.">
-  <meta name="theme-color" content="#0D9488">
+  <meta name="theme-color" content="#13253B">
 
   <!-- Canonical & Robots -->
   <link rel="canonical" href="https://www.caremyvehicle.in/news.html">
@@ -16,103 +16,73 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans, Mulish & Overlock (Identical to Homepage) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Overlock:wght@700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* CarWale Dedicated News Hub & Article View Styles */
     body {
       background: #F8FAFC;
       color: #0F172A;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .cw-news-header {
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .cw-news-header-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .cw-header-nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-    .cw-header-nav-links a {
-      color: #475569;
-      font-size: 13.5px;
-      font-weight: 700;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-      transition: color 0.15s ease;
-    }
-    .cw-header-nav-links a:hover,
-    .cw-header-nav-links a.active {
-      color: #0F172A;
-    }
-    .cw-header-search-box {
-      display: flex;
-      align-items: center;
-      background: #F1F5F9;
-      border: 1px solid #CBD5E1;
-      border-radius: 8px;
-      padding: 6px 14px;
-      width: 280px;
-    }
-    .cw-header-search-box input {
-      border: none;
-      background: transparent;
-      outline: none;
-      width: 100%;
-      font-size: 13px;
-      font-family: inherit;
-      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-    /* Container */
+    h1, h2, h3, h4, h5, h6,
+    .cw-news-hero-title,
+    .cw-article-headline,
+    .cw-news-card-title,
+    .cw-sidebar-title,
+    .section-main-title {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    .brand-font {
+      font-family: 'Overlock', 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Container matching homepage */
     .cw-news-container {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 24px 20px 60px;
+      padding: 32px 20px 80px;
     }
 
-    /* News Hub Main View */
+    /* News Hub Main View Header */
     .cw-news-hero-title {
-      font-size: 26px;
-      font-weight: 800;
+      font-size: 28px;
+      font-weight: 900;
       color: #0F172A;
-      margin: 0 0 4px;
+      letter-spacing: -0.5px;
+      margin: 0 0 6px;
     }
     .cw-news-hero-sub {
       font-size: 14px;
       color: #64748B;
-      margin: 0 0 20px;
+      margin: 0 0 24px;
+      line-height: 1.5;
     }
+
+    /* Filter Search Input */
     .cw-news-filter-search {
-      max-width: 440px;
+      max-width: 460px;
       background: #FFFFFF;
       border: 1.5px solid #CBD5E1;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px 16px;
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 22px;
       box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      transition: all 0.2s ease;
+    }
+    .cw-news-filter-search:focus-within {
+      border-color: var(--primary, #FF5100);
+      box-shadow: 0 0 0 3px rgba(255, 81, 0, 0.12);
     }
     .cw-news-filter-search input {
       border: none;
@@ -122,12 +92,14 @@
       font-family: inherit;
       color: #0F172A;
     }
+
+    /* Navigation Tabs matching homepage cw-updates-tabs-bar */
     .cw-news-tabs {
       display: flex;
       align-items: center;
       gap: 28px;
       border-bottom: 1px solid #E2E8F0;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -137,20 +109,19 @@
       border-bottom: 3px solid transparent;
       padding: 8px 4px 12px;
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
       color: #64748B;
       cursor: pointer;
       font-family: inherit;
       margin-bottom: -1px;
       white-space: nowrap;
-      transition: all 0.15s ease;
+      transition: all 0.18s ease;
     }
     .cw-news-tab-item:hover {
       color: #0F172A;
     }
     .cw-news-tab-item.active {
       color: #0D9488;
-      font-weight: 800;
       border-bottom-color: #0D9488;
     }
 
@@ -158,64 +129,19 @@
     .cw-news-grid-3col {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 24px;
     }
-    .cw-news-grid-card {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
+
+    /* Full compatibility with homepage .cw-news-card */
+    .cw-news-grid-3col .cw-news-card {
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
     }
-    .cw-news-grid-card:hover {
-      border-color: #CBD5E1;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    }
-    .cw-news-grid-card-media {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      background: #E2E8F0;
-      overflow: hidden;
-    }
-    .cw-news-grid-card-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.25s ease;
-    }
-    .cw-news-grid-card:hover .cw-news-grid-card-img {
-      transform: scale(1.03);
-    }
-    .cw-news-grid-card-body {
-      padding: 16px 18px 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .cw-news-grid-card-title {
-      font-size: 15.5px;
-      font-weight: 700;
-      color: #0F172A;
-      line-height: 1.4;
-      margin: 0 0 10px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .cw-news-grid-card-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: #94A3B8;
-      margin-top: auto;
+    .cw-news-grid-3col .cw-news-card-media {
+      height: 190px;
     }
 
     /* Article Detail View */
@@ -226,15 +152,18 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 12.5px;
+      font-size: 13px;
       color: #64748B;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
     .cw-article-breadcrumb a {
       color: #0284C7;
       text-decoration: none;
       font-weight: 600;
+    }
+    .cw-article-breadcrumb a:hover {
+      text-decoration: underline;
     }
     .cw-article-layout-grid {
       display: grid;
@@ -243,10 +172,11 @@
       align-items: flex-start;
     }
     .cw-article-headline {
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 800;
       color: #0F172A;
       line-height: 1.35;
+      letter-spacing: -0.5px;
       margin: 0 0 16px;
     }
     .cw-article-byline-row {
@@ -257,7 +187,7 @@
       gap: 14px;
       padding-bottom: 18px;
       border-bottom: 1px solid #E2E8F0;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
     .cw-author-wrap {
       display: flex;
@@ -277,7 +207,7 @@
       font-size: 15px;
     }
     .cw-author-name {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 700;
       color: #0F172A;
     }
@@ -293,29 +223,49 @@
       font-weight: 700;
       color: #64748B;
       background: #F1F5F9;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
     }
+    .cw-btn-share {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0F172A;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cw-btn-share:hover {
+      border-color: #0F172A;
+      background: #F8FAFC;
+    }
 
-    /* Main Featured Image */
+    /* Main Featured Image Box */
     .cw-article-hero-box {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       margin-bottom: 24px;
-      text-align: center;
-      position: relative;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
     }
     .cw-article-hero-img {
       width: 100%;
       max-height: 480px;
       object-fit: cover;
+      display: block;
     }
+
     .cw-article-bullet-card {
-      background: #FFFFFF;
+      background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 16px;
+      border-left: 4px solid #0D9488;
+      border-radius: 14px;
       padding: 20px 24px;
       margin-bottom: 24px;
     }
@@ -327,66 +277,18 @@
       font-size: 14.5px;
       line-height: 1.7;
       color: #334155;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    .cw-article-bullet-card li:last-child {
+      margin-bottom: 0;
     }
     .cw-article-prose {
-      font-size: 15.5px;
+      font-size: 16px;
       line-height: 1.85;
-      color: #1E293B;
+      color: #334155;
     }
     .cw-article-prose p {
       margin: 0 0 18px;
-    }
-
-    /* Article Sidebar */
-    .cw-sidebar-card {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .cw-sidebar-title {
-      font-size: 16px;
-      font-weight: 800;
-      color: #0F172A;
-      margin: 0 0 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .cw-sidebar-car-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid #F1F5F9;
-      cursor: pointer;
-    }
-    .cw-sidebar-car-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .cw-sidebar-car-img {
-      width: 82px;
-      height: 56px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .cw-sidebar-car-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: #0F172A;
-      margin-bottom: 2px;
-    }
-    .cw-sidebar-car-price {
-      font-size: 13px;
-      font-weight: 800;
-      color: #EA580C;
-    }
-    .cw-sidebar-car-note {
-      font-size: 11px;
-      color: #64748B;
     }
 
     /* Featured Cars Strip in Article */
@@ -415,11 +317,68 @@
     .cw-featured-car-card:hover {
       border-color: #CBD5E1;
       box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+      transform: translateY(-2px);
     }
     .cw-featured-car-img {
       width: 120px;
       height: 76px;
       object-fit: contain;
+    }
+
+    /* Article Sidebar */
+    .cw-sidebar-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+    .cw-sidebar-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cw-sidebar-car-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #F1F5F9;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .cw-sidebar-car-item:hover {
+      transform: translateX(4px);
+    }
+    .cw-sidebar-car-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .cw-sidebar-car-img {
+      width: 82px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .cw-sidebar-car-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+    .cw-sidebar-car-price {
+      font-size: 13px;
+      font-weight: 800;
+      color: #EA580C;
+    }
+    .cw-sidebar-car-note {
+      font-size: 11px;
+      color: #64748B;
     }
 
     @media (max-width: 992px) {
@@ -434,14 +393,8 @@
       .cw-news-grid-3col {
         grid-template-columns: 1fr;
       }
-      .cw-header-nav-links {
-        display: none;
-      }
-      .cw-header-search-box {
-        width: 180px;
-      }
       .cw-article-headline {
-        font-size: 21px;
+        font-size: 22px;
       }
       .cw-featured-cars-grid {
         grid-template-columns: 1fr;
@@ -451,29 +404,68 @@
 </head>
 <body>
 
-  <!-- Top Sticky Navigation Bar -->
-  <header class="cw-news-header">
-    <div class="cw-news-header-inner">
-      <div style="display:flex; align-items:center; gap:24px;">
+  <!-- Top Utility Bar (Identical to Homepage) -->
+  <div class="top-utility-bar">
+    <div>
+      ✉️ <a href="mailto:thinksmart2108@gmail.com" style="color:inherit; text-decoration:none;">thinksmart2108@gmail.com</a> &bull; 📞 <a href="tel:+917417174025" style="color:#FFF; font-weight:700; text-decoration:none;">+91-7417174025</a> &bull; 100% Spam-Free Automotive Guide
+    </div>
+    <div class="top-utility-links">
+      <a href="/#trendingSection">⭐ Trending Launches</a>
+      <a href="/#compareSection">⚖️ Compare Rivals</a>
+      <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:800;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; display:inline-block;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> @caremyvehicle
+      </a>
+    </div>
+  </div>
+
+  <!-- Top Sticky Navigation Bar (Identical to Homepage) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-lockup">
         <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-          <img src="/assets/logo.png" alt="Care My Vehicle" style="width:36px; height:36px; border-radius:50%;">
-          <span style="font-weight:900; font-size:18px; color:#0F172A; letter-spacing:-0.4px;">Care<span style="color:#0D9488;">My</span>Vehicle</span>
+          <img src="/assets/logo.png" alt="Care My Vehicle Logo" class="brand-icon" style="width:38px; height:38px; border-radius:50%;">
+          <div>
+            <div class="brand-name brand-font" style="font-size:24px; font-weight:900; color:#FFFFFF; line-height:1;">Care My <span style="color:var(--primary);">Vehicle</span></div>
+            <div class="brand-tagline" style="font-size:10.5px; font-weight:700; color:#94A3B8;">100% Spam-Free Car Finder</div>
+          </div>
         </a>
-        <nav class="cw-header-nav-links">
-          <a href="/cars.html">New Cars</a>
-          <a href="/#popularUsedCarsSection">Used Cars</a>
-          <a href="/news.html" class="active">Reviews & News</a>
-        </nav>
       </div>
 
-      <div style="display:flex; align-items:center; gap:14px;">
-        <div class="cw-header-search-box">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="headerNewsSearchInput" placeholder="Search news & cars..." oninput="handleHeaderNewsSearch(this.value)">
-        </div>
-        <a href="/" class="btn-orange-pill" style="padding:6px 14px; font-size:12.5px; text-decoration:none;">
-          <span>Home</span>
+      <!-- Travomint Tab Bar Navigation -->
+      <nav class="nav-tabs-bar" id="mainNavTabs">
+        <a href="/#popularBudgetSection" class="nav-tab-item" data-nav="new-cars">
+          <span>🚗</span>
+          <span>New Cars</span>
         </a>
+        <a href="/#fuelTypeSection" class="nav-tab-item" data-nav="ev">
+          <span>⚡</span>
+          <span>EVs & Hybrids</span>
+        </a>
+        <a href="/#compareSection" class="nav-tab-item" data-nav="compare">
+          <span>⚖️</span>
+          <span>Compare</span>
+        </a>
+        <a href="/#onRoadCheckerSection" class="nav-tab-item" data-nav="on-road">
+          <span>🏷️</span>
+          <span>On-Road Price</span>
+        </a>
+        <a href="/#popularUsedCarsSection" class="nav-tab-item" data-nav="used-cars">
+          <span>🚗</span>
+          <span>Used Cars <span style="font-size:9px; background:#FEF3C7; color:#B45309; padding:1px 5px; border-radius:8px;">SOON</span></span>
+        </a>
+        <a href="/news.html" class="nav-tab-item active" data-nav="reviews">
+          <span>📰</span>
+          <span>Reviews & News</span>
+        </a>
+      </nav>
+
+      <div class="header-actions-right">
+        <button id="citySelectorBtn" class="btn-orange-pill" aria-label="Select City" onclick="window.location.href='/'">
+          <span>📍 <span id="cityNameDisplay">Delhi NCR</span></span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -481,16 +473,16 @@
   <main class="cw-news-container">
     <!-- VIEW 1: CAR NEWS HUB (LISTING) -->
     <div id="newsHubView">
-      <h1 class="cw-news-hero-title">Car News</h1>
+      <h1 class="cw-news-hero-title">Car News & Expert Reviews</h1>
       <p class="cw-news-hero-sub">Read car news of all models in India. All latest cars have a number of news about its launch, updates, specs, comparisons and more.</p>
 
       <!-- Filter Search Input -->
       <div class="cw-news-filter-search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="newsFilterInput" placeholder="Type to select car name..." oninput="filterNewsByText(this.value)">
+        <input type="text" id="newsFilterInput" placeholder="Type to select car name or search news..." oninput="filterNewsByText(this.value)">
       </div>
 
-      <!-- Navigation Tabs: News | Reviews | Special Reports | Images | Videos -->
+      <!-- Navigation Tabs: All | News | Reviews | Special Reports | Images | Videos -->
       <div class="cw-news-tabs" id="newsCategoryTabs">
         <button type="button" class="cw-news-tab-item active" data-tab="all" onclick="selectNewsTab('all', this)">All</button>
         <button type="button" class="cw-news-tab-item" data-tab="news" onclick="selectNewsTab('news', this)">News</button>
@@ -500,38 +492,38 @@
         <button type="button" class="cw-news-tab-item" data-tab="videos" onclick="selectNewsTab('videos', this)">Videos</button>
       </div>
 
-      <!-- 3-Column Grid Container -->
+      <!-- 3-Column Grid Container (Matches Homepage Card Design) -->
       <div class="cw-news-grid-3col" id="newsCardsGrid">
         <!-- Injected dynamically by JavaScript -->
       </div>
     </div>
 
-    <!-- VIEW 2: ARTICLE DETAIL PAGE (CarWale EXACT LAYOUT) -->
+    <!-- VIEW 2: ARTICLE DETAIL PAGE (CarWale EXACT MODERN LAYOUT) -->
     <article id="articleDetailView" class="cw-article-detail-view">
       <div class="cw-article-breadcrumb">
         <a href="/">Home</a>
         <span>&rsaquo;</span>
         <a href="javascript:void(0)" onclick="closeArticleDetail()">News</a>
         <span>&rsaquo;</span>
-        <span id="breadcrumbArticleTitle" style="color:#0F172A; font-weight:700;">Vinfast VF 5 Facelift Patented in India: Launch Around The Corner?</span>
+        <span id="breadcrumbArticleTitle" style="color:#0F172A; font-weight:700;">Article</span>
       </div>
 
       <div class="cw-article-layout-grid">
         <!-- Left Main Article Column -->
         <div>
-          <h1 class="cw-article-headline" id="artDetailHeadline">Vinfast VF 5 Facelift Patented in India: Launch Around The Corner?</h1>
+          <h1 class="cw-article-headline" id="artDetailHeadline">Article Headline</h1>
           
           <div class="cw-article-byline-row">
             <div class="cw-author-wrap">
-              <div class="cw-author-avatar" id="artAuthorAvatar">AN</div>
+              <div class="cw-author-avatar" id="artAuthorAvatar">CMV</div>
               <div>
-                <div class="cw-author-name" id="artAuthorName">Aditya Nadkarni</div>
+                <div class="cw-author-name" id="artAuthorName">CMV Editorial Desk</div>
                 <div class="cw-author-meta" id="artAuthorDate">November 01, 2026, 10:30 AM IST</div>
               </div>
             </div>
             <div style="display:flex; align-items:center; gap:10px;">
-              <span class="cw-article-views-badge" id="artViewsBadge">👁️ 292 Views</span>
-              <button type="button" onclick="shareCurrentArticle()" style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:20px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer;">
+              <span class="cw-article-views-badge" id="artViewsBadge">👁️ 480 Views</span>
+              <button type="button" class="cw-btn-share" onclick="shareCurrentArticle()">
                 🔗 Share
               </button>
             </div>
@@ -599,6 +591,148 @@
     </article>
   </main>
 
+  <!-- ==========================================================================
+       TRAVOMINT EXACT FOOTER (MATCHING HOMEPAGE)
+       ========================================================================== -->
+  <footer class="travomint-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: About Us -->
+        <div>
+          <div class="footer-col-title">About Us</div>
+          <ul class="footer-links-list">
+            <li><a href="/#heroSection">About Care My Vehicle</a></li>
+            <li><a href="/#trendingSection">Our Research & Methodology</a></li>
+            <li><a href="/#compareSection">Editorial Team</a></li>
+            <li><a href="mailto:thinksmart2108@gmail.com">Contact Us</a></li>
+            <li><a href="/news.html">Media & Press</a></li>
+            <li><a href="/#brandsSection">Automotive Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Vehicle Guide -->
+        <div>
+          <div class="footer-col-title">Vehicle Guide</div>
+          <ul class="footer-links-list">
+            <li><a href="/#popularBudgetSection">New Car Launches (2024–2026)</a></li>
+            <li><a href="/#popularBudgetSection">City On-Road Price Calculator</a></li>
+            <li><a href="/#compareSection">Compare Car Specs Side-by-Side</a></li>
+            <li><a href="/#popularBudgetSection">Electric Vehicles (EV) Hub</a></li>
+            <li><a href="/#trendingSection">Value For Money (VFM) Variants</a></li>
+            <li><a href="/#popularUsedCarsSection">Used Car Valuation Hub</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter, 100% Transparent, App & Social Icons -->
+        <div>
+          <div class="footer-col-title">Stay Updated</div>
+          
+          <div class="newsletter-input-box">
+            <input type="email" placeholder="Enter your email address" id="footerNewsletterEmail">
+            <button class="newsletter-btn" type="button" onclick="alert('Thank you for subscribing to Care My Vehicle updates!')">✈️</button>
+          </div>
+
+          <div class="secure-pay-banner">
+            <div>
+              <div class="secure-pay-title">100% Transparent</div>
+              <div class="secure-pay-sub">- Zero Dealer Spam Guaranteed</div>
+            </div>
+            <div style="font-size:22px;">🛡️</div>
+          </div>
+
+          <!-- App Badges & QR Code -->
+          <div class="app-download-card">
+            <div class="app-badges-col">
+              <a href="#" class="app-badge-btn" onclick="alert('Care My Vehicle Mobile App coming soon to Apple App Store!')">
+                <span style="font-size:16px;">🍏</span>
+                <div>
+                  <div style="font-size:8px; opacity:0.8;">Download on the</div>
+                  <div>App Store</div>
+                </div>
+              </a>
+              <a href="#" class="app-badge-btn" onclick="alert('Care My Vehicle Mobile App coming soon to Google Play Store!')">
+                <span style="font-size:14px;">▶</span>
+                <div>
+                  <div style="font-size:8px; opacity:0.8;">GET IT ON</div>
+                  <div>Google Play</div>
+                </div>
+              </a>
+            </div>
+
+            <div style="font-size:11px; font-weight:800; color:#64748B;">OR</div>
+
+            <div class="qr-box">
+              <div class="qr-code-img">📱</div>
+              <div>Scan to Explore</div>
+            </div>
+          </div>
+
+          <!-- 5 Square Social Buttons -->
+          <div class="social-icons-row">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-sq-btn soc-fb" title="Facebook">f</a>
+            <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" class="social-sq-btn soc-insta" title="Instagram @caremyvehicle"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF" style="vertical-align:middle; display:inline-block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-sq-btn soc-x" title="X (Twitter)">𝕏</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-sq-btn soc-in" title="LinkedIn">in</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-sq-btn soc-yt" title="YouTube">▶</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mid Brand Logo & Copyright -->
+      <div class="footer-mid-brand">
+        <div class="footer-brand-logo brand-font">Care My <span style="color:#FFF;">Vehicle</span></div>
+        <div class="footer-copyright">&copy; 2024–2026 Care My Vehicle. All Rights Reserved.</div>
+      </div>
+
+      <!-- Contact Pill Strip -->
+      <div class="footer-contact-pill">
+        <div class="contact-item">
+          <span>📞</span> Helpline: <a href="tel:+917417174025" style="color:#FFF; text-decoration:underline; font-weight:700;">+91-7417174025</a>
+        </div>
+        <div>or, simply</div>
+        <div class="contact-item">
+          <span>✉️</span> Email: thinksmart2108@gmail.com
+        </div>
+        <div class="contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; display:inline-block;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram: <a href="https://www.instagram.com/caremyvehicle/" target="_blank" rel="noopener" style="color:#FFF; text-decoration:underline;">@caremyvehicle</a>
+        </div>
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <p class="footer-disclaimer-text">
+        Legal & Editorial Disclaimer: Care My Vehicle is an independent automotive research, variant analysis, and consumer education platform. All brand names, model trademarks, logos, and vehicle photographs belong to their respective automotive manufacturers (OEMs) and are utilized here strictly under Indian Fair Dealing copyright laws (Section 52 of the Indian Copyright Act, 1957) for editorial reporting, vehicle comparison, and consumer awareness.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- App-like Mobile Sticky Bottom Nav (Identical to Homepage) -->
+  <nav class="mobile-bottom-nav">
+    <a href="/" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🏠</span>
+      <span class="mobile-nav-label">Home</span>
+    </a>
+    <a href="/#brandsSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🏢</span>
+      <span class="mobile-nav-label">Brands</span>
+    </a>
+    <a href="/#trendingSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">⚡</span>
+      <span class="mobile-nav-label">Trending</span>
+    </a>
+    <a href="/#popularBudgetSection" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🚗</span>
+      <span class="mobile-nav-label">Cars</span>
+    </a>
+    <a href="/news.html" class="mobile-nav-item active">
+      <span class="mobile-nav-icon">📰</span>
+      <span class="mobile-nav-label">News</span>
+    </a>
+  </nav>
+
   <!-- Scripts -->
   <script type="module">
     import { ARTICLES } from './js/newsData.js';
@@ -663,18 +797,6 @@
     }
     window.filterNewsByText = filterNewsByText;
 
-    function handleHeaderNewsSearch(val) {
-      const q = (val || '').toLowerCase().trim();
-      const input = document.getElementById('newsFilterInput');
-      if (input) input.value = val;
-      currentSearchText = q;
-      if (document.getElementById('articleDetailView').style.display === 'block') {
-        closeArticleDetail();
-      }
-      renderNewsGrid();
-    }
-    window.handleHeaderNewsSearch = handleHeaderNewsSearch;
-
     function renderNewsGrid() {
       const grid = document.getElementById('newsCardsGrid');
       if (!grid) return;
@@ -713,20 +835,22 @@
 
       grid.innerHTML = list.map(art => {
         const heroUrl = art.heroImage || art.image || 'assets/logo.png';
-        const cleanAuthor = String(art.author || 'CMV Editorial Desk').replace(/^By\\s+/i, '').trim();
+        const cleanAuthor = String(art.author || 'CMV Editorial Desk').replace(/^By\s+/i, '').trim();
         const cleanDate = art.timeAgo || art.date || 'Recent';
 
         return `
-          <article class="cw-news-grid-card" onclick="openArticleDetail('${art.id}')">
-            <div class="cw-news-grid-card-media">
-              <img src="${heroUrl}" alt="${art.title}" class="cw-news-grid-card-img" loading="lazy" onerror="this.src='assets/logo.png'">
+          <article class="cw-news-card" onclick="openArticleDetail('${art.id}')">
+            <div class="cw-news-card-media">
+              <img src="${heroUrl}" alt="${art.title}" class="cw-news-card-img" loading="lazy" onerror="this.src='assets/logo.png'">
+              ${art.isVideo ? '<div class="cw-news-video-play">▶</div>' : ''}
             </div>
-            <div class="cw-news-grid-card-body">
-              <h3 class="cw-news-grid-card-title">${art.title}</h3>
-              <div class="cw-news-grid-card-meta">
+            <div class="cw-news-card-body">
+              <h3 class="cw-news-card-title">${art.title}</h3>
+              <div class="cw-news-card-meta">
                 <span>By ${cleanAuthor}</span>
                 <span>${cleanDate}</span>
               </div>
+              <p class="cw-news-card-excerpt">${art.excerpt || ''}</p>
             </div>
           </article>
         `;
@@ -748,7 +872,7 @@
       // Fill in Article Info
       document.getElementById('breadcrumbArticleTitle').textContent = art.title;
       document.getElementById('artDetailHeadline').textContent = art.title;
-      document.getElementById('artAuthorName').textContent = String(art.author || 'CMV Editorial Desk').replace(/^By\\s+/i, '');
+      document.getElementById('artAuthorName').textContent = String(art.author || 'CMV Editorial Desk').replace(/^By\s+/i, '');
       document.getElementById('artAuthorDate').textContent = `${art.date || 'November 01, 2026'} • ${art.readTime || '4 min read'}`;
       document.getElementById('artAuthorAvatar').textContent = (art.author || 'CMV').split(' ').map(s => s[0]).slice(0, 2).join('').toUpperCase();
       document.getElementById('artViewsBadge').textContent = `👁️ ${art.viewsCount || '480 Views'}`;
@@ -813,7 +937,7 @@
       popList.innerHTML = otherUpdates.map(o => `
         <div style="padding:10px 0; border-bottom:1px solid #F1F5F9; cursor:pointer;" onclick="openArticleDetail('${o.id}')">
           <div style="font-size:13.5px; font-weight:700; color:#0F172A; line-height:1.35; margin-bottom:4px;">${o.title}</div>
-          <div style="font-size:11.5px; color:#94A3B8;">${o.timeAgo || o.date || 'Recent'} &bull; By ${String(o.author || '').replace(/^By\\s+/i, '')}</div>
+          <div style="font-size:11.5px; color:#94A3B8;">${o.timeAgo || o.date || 'Recent'} &bull; By ${String(o.author || '').replace(/^By\s+/i, '')}</div>
         </div>
       `).join('');
     }
@@ -850,4 +974,3 @@
   </script>
 </body>
 </html>
-
