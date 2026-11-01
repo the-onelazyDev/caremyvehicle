@@ -3030,6 +3030,19 @@
   </div>
 
   <script>
+
+    // HTML Sanitizer
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+    window.escapeHtml = escapeHtml;
+
     // ==========================================
     // 🔒 AUTHENTICATION & SECURITY CONTROLLER
     // ==========================================
@@ -7099,7 +7112,9 @@
 
     function extractImageKitAssets() {
       const assets = [];
-      const cars = Array.isArray(window.APP_CARS) ? window.APP_CARS : [];
+      const cars = (Array.isArray(window.APP_CARS) && window.APP_CARS.length > 0)
+        ? window.APP_CARS
+        : (typeof getAllCars === 'function' ? getAllCars() : []);
       
       // Also include custom cars from localStorage
       let customCars = [];
