@@ -1073,7 +1073,155 @@
       opacity: 0.94;
       transform: translateY(-1px);
     }
-  </style>
+  
+    /* ==========================================================================
+       MODERN ADMIN SIDEBAR & WORKSPACE SYSTEM
+       ========================================================================== */
+    .admin-layout-wrapper {
+      display: flex;
+      min-height: calc(100vh - 72px);
+      background: #F8FAFC;
+    }
+    .admin-sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      background: #FFFFFF;
+      border-right: 1px solid #E2E8F0;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: sticky;
+      top: 72px;
+      height: calc(100vh - 72px);
+      overflow-y: auto;
+      box-sizing: border-box;
+      z-index: 10;
+    }
+    .sidebar-section-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 12px 14px 6px;
+    }
+    .admin-sidebar-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #475569;
+      background: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.3;
+    }
+    .admin-sidebar-btn:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+      transform: translateX(2px);
+    }
+    .admin-sidebar-btn.active {
+      background: #EFF6FF;
+      color: #2563EB;
+      border-color: #BFDBFE;
+      font-weight: 800;
+      box-shadow: 0 1px 3px rgba(37, 99, 235, 0.08);
+    }
+    .admin-sidebar-btn .sidebar-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .admin-sidebar-btn .sidebar-label {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .admin-main-viewport {
+      flex: 1;
+      min-width: 0;
+      padding: 30px;
+      max-width: 1320px;
+      box-sizing: border-box;
+    }
+
+    /* Small Modern Admin Footer */
+    .admin-mini-footer {
+      border-top: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      padding: 16px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12.5px;
+      color: #64748B;
+    }
+    .admin-footer-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .admin-mini-btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid #CBD5E1;
+      background: #FFFFFF;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .admin-mini-btn:hover {
+      background: #F8FAFC;
+      border-color: #94A3B8;
+      color: #0F172A;
+    }
+
+    /* Responsive Mobile Admin */
+    @media (max-width: 900px) {
+      .admin-layout-wrapper {
+        flex-direction: column;
+      }
+      .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px;
+        gap: 8px;
+      }
+      .sidebar-section-label {
+        display: none;
+      }
+      .admin-sidebar-btn {
+        width: auto;
+        white-space: nowrap;
+        padding: 8px 14px;
+        font-size: 12.5px;
+      }
+      .admin-main-viewport {
+        padding: 16px;
+      }
+    }
+
+</style>
 </head>
 <body>
 
@@ -1143,35 +1291,64 @@
       </div>
     </header>
 
-        <div class="admin-container">
-      <!-- Top Navigation Tabs -->
-      <div class="admin-nav-tabs" style="flex-wrap:wrap;">
-        <button type="button" class="admin-tab-btn active" id="tabBtnVisibility" onclick="switchAdminTab('visibility')">
-          👁️ Car & Brand Visibility
-          <span class="tab-counter-badge" id="tabHiddenBadge" style="display:none;">0 hidden</span>
+            <div class="admin-layout-wrapper">
+      <!-- 🧭 MODERN SIDEBAR NAVIGATION (ALL TABS IN SIDEBAR / SIDER) -->
+      <aside class="admin-sidebar">
+        <div class="sidebar-section-label">Management Studio</div>
+        <button type="button" class="admin-sidebar-btn active" id="tabBtnVisibility" onclick="switchAdminTab('visibility')">
+          <span class="sidebar-icon">👁️</span>
+          <span class="sidebar-label">Car & Brand Visibility</span>
+          <span class="tab-counter-badge" id="tabHiddenBadge" style="display:none;">0</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnCarEditor" onclick="switchAdminTab('carEditor')">
-          🛠️ Car Detail Page & Media Studio
+        <button type="button" class="admin-sidebar-btn" id="tabBtnCarEditor" onclick="switchAdminTab('carEditor')">
+          <span class="sidebar-icon">🛠️</span>
+          <span class="sidebar-label">Car Detail & Media Studio</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnReviewsManager" onclick="switchAdminTab('reviewsManager')">
-          📰 Latest Car Updates & Expert Reviews
+        <button type="button" class="admin-sidebar-btn" id="tabBtnReviewsManager" onclick="switchAdminTab('reviewsManager')">
+          <span class="sidebar-icon">📰</span>
+          <span class="sidebar-label">Latest Updates & Reviews</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnUsedCarsManager" onclick="switchAdminTab('usedCarsManager')">
-          🚗 Popular Used Cars in India
+        <button type="button" class="admin-sidebar-btn" id="tabBtnUsedCarsManager" onclick="switchAdminTab('usedCarsManager')">
+          <span class="sidebar-icon">🚗</span>
+          <span class="sidebar-label">Popular Used Cars</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
-          ➕ Add Newly Launched Car
+
+        <div class="sidebar-section-label" style="margin-top:10px;">Tools & Imports</div>
+        <button type="button" class="admin-sidebar-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
+          <span class="sidebar-icon">➕</span>
+          <span class="sidebar-label">Add Newly Launched Car</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnUrlImporter" onclick="switchAdminTab('urlImporter')" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); color:#1D4ED8; border:1px solid #93C5FD;">
-          🌐 Auto-Fetch Car from Link & Live Preview
+        <button type="button" class="admin-sidebar-btn" id="tabBtnUrlImporter" onclick="switchAdminTab('urlImporter')" style="color:#1D4ED8;">
+          <span class="sidebar-icon">🌐</span>
+          <span class="sidebar-label">Auto-Fetch Car from URL</span>
         </button>
-        <button type="button" class="admin-tab-btn" id="tabBtnHomepageBuilder" onclick="switchAdminTab('homepageBuilder')" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5); color:#C2410C; border:1px solid #FDBA74;">
-          🎛️ Home Page Layout & Card Studio
+        <button type="button" class="admin-sidebar-btn" id="tabBtnHomepageBuilder" onclick="switchAdminTab('homepageBuilder')" style="color:#C2410C;">
+          <span class="sidebar-icon">🎛️</span>
+          <span class="sidebar-label">Home Page Layout Studio</span>
         </button>
-      <button type="button" class="admin-tab-btn" id="tabBtnImageKitExplorer" onclick="switchAdminTab('imageKitExplorer')" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7); color:#15803D; border:1px solid #86EFAC;">
-        🖼️ ImageKit Asset Library & Folder Explorer
-      </button>
-      </div>
+        <button type="button" class="admin-sidebar-btn" id="tabBtnImageKitExplorer" onclick="switchAdminTab('imageKitExplorer')" style="color:#15803D;">
+          <span class="sidebar-icon">🖼️</span>
+          <span class="sidebar-label">ImageKit Asset Explorer</span>
+        </button>
+
+        <div style="margin-top:auto; padding-top:20px; border-top:1px solid #E2E8F0;">
+          <a href="index.html" class="admin-sidebar-btn" style="color:#0284C7;">
+            <span class="sidebar-icon">↗️</span>
+            <span class="sidebar-label">View Live Website</span>
+          </a>
+          <button type="button" class="admin-sidebar-btn" onclick="openChangePasswordModal()" style="color:#64748B;">
+            <span class="sidebar-icon">🔑</span>
+            <span class="sidebar-label">Change Password</span>
+          </button>
+          <button type="button" class="admin-sidebar-btn" onclick="handleLogout()" style="color:#DC2626;">
+            <span class="sidebar-icon">🚪</span>
+            <span class="sidebar-label">Sign Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- 🖥️ MAIN WORKSPACE VIEWPORT -->
+      <main class="admin-main-viewport">
 
       <!-- VIEW 1: CATALOG & VISIBILITY CONTROL -->
       <div id="viewVisibility">
@@ -1890,163 +2067,205 @@
 
       <!-- VIEW 4: LATEST CAR UPDATES & EXPERT REVIEWS STUDIO -->
       <div id="viewReviewsManager" style="display:none;">
-        <div class="section-card" style="margin-bottom:24px;">
+        <!-- Header Banner with Action Buttons -->
+        <div class="section-card" style="margin-bottom:20px; background:linear-gradient(135deg, #FFFFFF, #F8FAFC); border:1px solid #E2E8F0;">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
             <div>
-              <h3 class="section-title">📰 Latest Car Updates & Expert Reviews Studio</h3>
-              <p class="section-desc">
-                Select any review/update article below to edit its Hero Image (1 main image), add or remove Other Images (gallery), edit text, or create a brand new review.
+              <div style="display:inline-flex; align-items:center; gap:6px; background:#EFF6FF; color:#2563EB; padding:3px 10px; border-radius:20px; font-size:11.5px; font-weight:800; margin-bottom:6px;">
+                📰 EDITORIAL & NEWS STUDIO
+              </div>
+              <h3 class="section-title" style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0F172A;">Latest Car Updates, News & Reviews Manager</h3>
+              <p class="section-desc" style="margin:0; font-size:13px; color:#64748B;">
+                Easily update, add, or delete images and content for all articles across Car News, Expert Reviews, Videos, and Special Reports.
               </p>
             </div>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
-              <button type="button" class="btn-act btn-act-show" onclick="createNewReviewArticle()">
-                ➕ Add New Review / Update
+              <button type="button" class="btn-act btn-act-show" onclick="createNewReviewArticle()" style="background:#10B981; padding:9px 16px; font-size:13px;">
+                ➕ Create New Article
               </button>
-              <button type="button" class="btn-act btn-act-show" style="background:#2563EB;" onclick="saveAllReviewsToLive()">
-                💾 Save All Reviews (Live Update)
+              <button type="button" class="btn-act btn-act-show" style="background:#2563EB; padding:9px 18px; font-size:13px;" onclick="saveAllReviewsToLive()">
+                💾 Save All Changes (Live)
               </button>
-              <button type="button" class="btn-act btn-act-hide" onclick="resetReviewsToDefaults()">
+              <a href="news.html" target="_blank" class="btn-act" style="background:#F1F5F9; color:#334155; text-decoration:none; padding:9px 14px; font-size:13px; border-radius:10px;">
+                👁️ View Live News Hub ↗
+              </a>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetReviewsToDefaults()" style="padding:9px 12px; font-size:12px;">
                 🔄 Reset Defaults
               </button>
             </div>
           </div>
 
-          <div class="studio-item-list" id="reviewsSelectorList">
-            <!-- Injected dynamically -->
+          <!-- Fast Article Selector Filter & Strip -->
+          <div style="margin-top:18px; padding-top:16px; border-top:1px solid #E2E8F0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+              <span style="font-size:12.5px; font-weight:700; color:#475569;">
+                Select Article to Edit:
+              </span>
+              <div style="display:flex; gap:6px;">
+                <button type="button" class="sub-pill-btn active" id="pillRevFilterAll" onclick="filterReviewsCategory('ALL', this)">All</button>
+                <button type="button" class="sub-pill-btn" onclick="filterReviewsCategory('News', this)">Car News</button>
+                <button type="button" class="sub-pill-btn" onclick="filterReviewsCategory('Reviews', this)">Expert Reviews</button>
+                <button type="button" class="sub-pill-btn" onclick="filterReviewsCategory('Videos', this)">Videos</button>
+              </div>
+            </div>
+            <div class="studio-item-list" id="reviewsSelectorList" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:12px; max-height:260px; overflow-y:auto; padding-right:4px;">
+              <!-- Injected dynamically -->
+            </div>
           </div>
         </div>
 
-        <!-- Review Editor Workspace -->
+        <!-- Active Article Editor Workspace -->
         <div id="reviewEditorWorkspace">
-          <!-- 1. Review Hero Image Studio -->
-          <div class="editor-sec-card">
+          <!-- Active Editing Bar -->
+          <div style="background:#0F172A; color:#FFFFFF; border-radius:14px; padding:14px 20px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="font-size:22px;">✍️</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:#94A3B8; text-transform:uppercase;">Currently Editing</div>
+                <div id="barReviewTitle" style="font-size:16px; font-weight:800; color:#FFFFFF;">Article Title</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <button type="button" class="btn-act btn-act-show" onclick="saveAllReviewsToLive()" style="background:#2563EB;">💾 Save Live</button>
+              <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentReviewArticle()">🗑️ Delete Article</button>
+            </div>
+          </div>
+
+          <!-- Section 1: Hero Cover Image (Main Thumbnail) -->
+          <div class="editor-sec-card" style="margin-bottom:20px;">
             <div class="editor-sec-header">
-              <h4 class="editor-sec-title">📸 1. Review Hero Image (Main Thumbnail & Cover Photo)</h4>
-              <span style="font-size:12px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 10px; border-radius:12px;">1 Hero Image</span>
+              <div>
+                <h4 class="editor-sec-title">📸 1. Hero Cover Image (Main Thumbnail & Headline Photo)</h4>
+                <div style="font-size:12px; color:#64748B;">This is the primary image shown on the Home Page and News Hub cards.</div>
+              </div>
+              <span style="font-size:12px; font-weight:800; color:#16A34A; background:#DCFCE7; padding:4px 12px; border-radius:20px;">1 Main Hero Photo</span>
             </div>
             <div class="editor-sec-body">
-              <div style="display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:center;">
-                <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:12px; text-align:center; min-height:150px; display:flex; align-items:center; justify-content:center;">
-                  <img id="revHeroPreview" src="" alt="Review Hero Preview" style="max-width:100%; max-height:140px; object-fit:cover; border-radius:10px;" onerror="this.src='assets/logo.png'">
+              <div style="display:grid; grid-template-columns: 320px 1fr; gap:24px; align-items:start;">
+                <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:12px; text-align:center;">
+                  <img id="revHeroPreview" src="" alt="Hero Preview" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:8px;" onerror="this.src='assets/logo.png'">
+                  <div style="font-size:11px; color:#94A3B8;">Live Cover Preview</div>
                 </div>
                 <div>
-                  <label class="form-label">Hero Image Direct URL</label>
-                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <input type="url" id="revHeroUrlInput" class="form-input" style="flex:1; min-width:240px;" placeholder="https://ik.imagekit.io/..." oninput="previewReviewHero(this.value)">
-                    <button type="button" class="btn-act btn-act-show" onclick="setReviewHeroFromInput()">Set Hero Image</button>
-                    <button type="button" class="btn-act btn-act-hide" onclick="removeReviewHeroImage()">Remove</button>
+                  <label class="form-label" style="font-weight:700;">Direct Image URL (ImageKit CDN or Web URL)</label>
+                  <div style="display:flex; gap:8px; margin-bottom:12px;">
+                    <input type="url" id="revHeroUrlInput" class="form-input" style="flex:1;" placeholder="https://ik.imagekit.io/..." oninput="previewReviewHero(this.value)">
+                    <button type="button" class="btn-act btn-act-show" onclick="setReviewHeroFromInput()">Update Image</button>
                   </div>
-                  <div style="margin-top:10px; font-size:12px; color:#64748B;">
-                    💡 <em>Tip: Paste any image URL above or click "Make Hero" on any of the Other Images below.</em>
+                  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <button type="button" class="btn-act" style="background:#F0FDF4; color:#15803D; border:1px solid #86EFAC;" onclick="switchAdminTab('imageKitExplorer')">
+                      🖼️ Browse ImageKit Asset Library to Copy Photo
+                    </button>
+                    <button type="button" class="btn-act btn-act-hide" onclick="removeReviewHeroImage()">
+                      Clear Image
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 2. Review Other Images (Gallery) -->
-          <div class="editor-sec-card">
+          <!-- Section 2: Article Highlights & Editorial Text -->
+          <div class="editor-sec-card" style="margin-bottom:20px;">
             <div class="editor-sec-header">
-              <h4 class="editor-sec-title">🖼️ 2. Other Images of Review / Car (<span id="revGalleryCount">0</span> Other Images)</h4>
-              <span style="font-size:12px; font-weight:700; color:#0284C7; background:#E0F2FE; padding:3px 10px; border-radius:12px;">Multiple Photos Supported</span>
+              <h4 class="editor-sec-title">📝 2. Article Title, Category, Author & High-Impact Bullets</h4>
             </div>
             <div class="editor-sec-body">
-              <div style="background:#F0F9FF; border:1px solid #BAE6FD; border-radius:14px; padding:16px; margin-bottom:18px;">
-                <h5 style="margin:0 0 10px; font-size:13.5px; color:#0369A1; font-weight:800;">➕ Add Another Image to This Review</h5>
+              <div class="form-grid-2" style="margin-bottom:16px;">
+                <div>
+                  <label class="form-label">Headline / Title *</label>
+                  <input type="text" id="revTitleInput" class="form-input" placeholder="Enter headline..." oninput="syncCurrentReviewFields()">
+                </div>
+                <div>
+                  <label class="form-label">Category Section / Hub Tab *</label>
+                  <select id="revCategoryInput" class="form-select" onchange="syncCurrentReviewFields()">
+                    <option value="LATEST UPDATE">LATEST UPDATE (Car News Tab)</option>
+                    <option value="EXPERT REVIEW">EXPERT REVIEW (Expert Reviews Tab)</option>
+                    <option value="BUYING GUIDE">BUYING GUIDE (Car News Tab)</option>
+                    <option value="COMPARISON">COMPARISON (Car News Tab)</option>
+                    <option value="TEST DRIVE">TEST DRIVE (Expert Reviews Tab)</option>
+                    <option value="SPECIAL REPORT">SPECIAL REPORT (Special Reports Tab)</option>
+                    <option value="VIDEO REVIEW">VIDEO REVIEW (Videos Tab)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:16px;">
+                <div>
+                  <label class="form-label">Author / Editorial Desk</label>
+                  <input type="text" id="revAuthorInput" class="form-input" placeholder="e.g. Care My Vehicle Team" oninput="syncCurrentReviewFields()">
+                </div>
+                <div>
+                  <label class="form-label">Publish Date / Time</label>
+                  <input type="text" id="revDateInput" class="form-input" placeholder="e.g. 01 Nov 2026 / 2 hours ago" oninput="syncCurrentReviewFields()">
+                </div>
+                <div>
+                  <label class="form-label">Read Time</label>
+                  <input type="text" id="revReadTimeInput" class="form-input" placeholder="e.g. 4 min read" oninput="syncCurrentReviewFields()">
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="form-label">Short Summary / Excerpt (Shows on Card)</label>
+                <textarea id="revExcerptInput" class="form-textarea" rows="2" placeholder="Brief 1-2 sentence teaser..." oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="form-label">⭐ Key Bullet Points (CarWale Style Highlights - 1 bullet per line)</label>
+                <textarea id="revBulletsInput" class="form-textarea" rows="3" placeholder="• Has already been spotted testing in India&#10;• Powered by turbo petrol & EV variants&#10;• Launch expected by mid-2026" oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+
+              <div>
+                <label class="form-label">Full Article Story Content (HTML or formatted text)</label>
+                <textarea id="revContentInput" class="form-textarea" rows="6" placeholder="Write full article paragraphs here..." oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: In-Article Other Images (Gallery Studio) -->
+          <div class="editor-sec-card" style="margin-bottom:20px;">
+            <div class="editor-sec-header">
+              <div>
+                <h4 class="editor-sec-title">🖼️ 3. Other In-Article Images & Captions (<span id="revGalleryCount">0</span> Photos)</h4>
+                <div style="font-size:12px; color:#64748B;">Add interior, side, rear, and feature photos that display inside the article.</div>
+              </div>
+              <span style="font-size:12px; font-weight:800; color:#0284C7; background:#E0F2FE; padding:4px 12px; border-radius:20px;">Multiple Photos</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="background:#F0FDF4; border:1.5px solid #BBF7D0; border-radius:14px; padding:16px; margin-bottom:18px;">
+                <div style="font-size:13.5px; font-weight:800; color:#166534; margin-bottom:10px;">➕ Add Another Photo to Article</div>
                 <div style="display:grid; grid-template-columns: 2fr 1.5fr auto; gap:12px; align-items:flex-end;">
                   <div>
                     <label class="form-label" style="font-size:11px;">Image URL</label>
                     <input type="url" id="revNewGalleryUrl" class="form-input" placeholder="https://ik.imagekit.io/...">
                   </div>
                   <div>
-                    <label class="form-label" style="font-size:11px;">Caption / Angle Name</label>
-                    <input type="text" id="revNewGalleryCaption" class="form-input" placeholder="e.g. Cabin Dashboard / Side Profile">
+                    <label class="form-label" style="font-size:11px;">Caption / Angle</label>
+                    <input type="text" id="revNewGalleryCaption" class="form-input" placeholder="e.g. Front Grille / Cockpit Touchscreen">
                   </div>
-                  <button type="button" class="btn-submit" style="padding:10px 18px; font-size:13px;" onclick="addReviewOtherImage()">
-                    ➕ Add Image
+                  <button type="button" class="btn-submit" style="padding:10px 18px; font-size:13px; background:#10B981;" onclick="addReviewOtherImage()">
+                    ➕ Add Photo
                   </button>
                 </div>
               </div>
 
-              <div class="editor-gallery-grid" id="revGalleryGrid">
+              <!-- Gallery Grid -->
+              <div class="editor-gallery-grid" id="revGalleryGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px;">
                 <!-- Injected dynamically -->
               </div>
             </div>
           </div>
 
-          <!-- 3. Review Article Details & Content -->
-          <div class="editor-sec-card">
-            <div class="editor-sec-header">
-              <h4 class="editor-sec-title">✍️ 3. Review / Update Headline & Editorial Content</h4>
-              <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentReviewArticle()">🗑️ Delete This Review</button>
-            </div>
-            <div class="editor-sec-body">
-              <div class="form-grid-2" style="margin-bottom:14px;">
-                <div>
-                  <label class="form-label">Review / Update Title *</label>
-                  <input type="text" id="revTitleInput" class="form-input" oninput="syncCurrentReviewFields()">
-                </div>
-                <div>
-                  <label class="form-label">Category / Hub Tab</label>
-                  <select id="revCategoryInput" class="form-select" onchange="syncCurrentReviewFields()">
-                    <option value="LATEST UPDATE">LATEST UPDATE (News Tab)</option>
-                    <option value="EXPERT REVIEW">EXPERT REVIEW (Reviews Tab)</option>
-                    <option value="BUYING GUIDE">BUYING GUIDE (News Tab)</option>
-                    <option value="COMPARISON">COMPARISON (News Tab)</option>
-                    <option value="TEST DRIVE">TEST DRIVE (Reviews Tab)</option>
-                    <option value="SPECIAL REPORT">SPECIAL REPORT (Special Reports Tab)</option>
-                    <option value="VIDEO REVIEW">VIDEO REVIEW (Videos Tab)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-grid-2" style="margin-bottom:14px;">
-                <div>
-                  <label class="form-label">Author / Desk</label>
-                  <input type="text" id="revAuthorInput" class="form-input" oninput="syncCurrentReviewFields()">
-                </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-                  <div>
-                    <label class="form-label">Date Label / Time Ago</label>
-                    <input type="text" id="revDateInput" class="form-input" placeholder="e.g. 01 Nov 2026 or 11 minutes ago" oninput="syncCurrentReviewFields()">
-                  </div>
-                  <div>
-                    <label class="form-label">Read Time / Views Count</label>
-                    <input type="text" id="revReadTimeInput" class="form-input" placeholder="e.g. 4 min read or 292 Views" oninput="syncCurrentReviewFields()">
-                  </div>
-                </div>
-              </div>
-              <div style="margin-bottom:14px;">
-                <label class="form-label">Short Card Summary / Excerpt</label>
-                <textarea id="revExcerptInput" class="form-textarea" rows="2" oninput="syncCurrentReviewFields()"></textarea>
-              </div>
-              <div style="margin-bottom:14px;">
-                <label class="form-label">Key Highlights / Bullet Points (One point per line - Appears in CarWale Summary Box)</label>
-                <textarea id="revBulletsInput" class="form-textarea" rows="3" placeholder="Has already been spotted testing in India&#10;Current portfolio includes only three cars&#10;Powered by 37.23 kWh battery pack" oninput="syncCurrentReviewFields()"></textarea>
-              </div>
-              <div>
-                <label class="form-label">Full Review Content (HTML or Paragraphs)</label>
-                <textarea id="revContentInput" class="form-textarea" rows="6" oninput="syncCurrentReviewFields()"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="editor-floating-bar">
-            <div style="color:#FFFFFF; font-size:13px; font-weight:700;">
-              Editing Review: <span id="barReviewTitle" style="color:#60A5FA;">--</span>
-            </div>
-            <div style="display:flex; gap:12px;">
-              <a href="news.html" target="_blank" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; text-decoration:none;">
-                👁️ View on News Page ↗
-              </a>
-              <button type="button" class="btn-submit" style="padding:10px 22px; font-size:14px; box-shadow:none;" onclick="saveAllReviewsToLive()">
-                💾 Save All Reviews (Instant Live)
-              </button>
-            </div>
+          <!-- Bottom Save Floating Strip -->
+          <div style="display:flex; justify-content:flex-end; gap:12px; padding:16px 0;">
+            <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentReviewArticle()">🗑️ Delete Article</button>
+            <button type="button" class="btn-act btn-act-show" style="background:#2563EB; padding:12px 24px; font-size:14px;" onclick="saveAllReviewsToLive()">
+              💾 Save All Changes (Live Update)
+            </button>
           </div>
         </div>
       </div><!-- end viewReviewsManager -->
 
-      <!-- VIEW 5: POPULAR USED CARS IN INDIA STUDIO -->
       <div id="viewUsedCarsManager" style="display:none;">
         <div class="section-card" style="margin-bottom:24px;">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
@@ -2760,8 +2979,23 @@
         </div>
       </div><!-- end viewImageKitExplorer -->
 
-    </div>
-  </div>
+      </main>
+    </div><!-- end .admin-layout-wrapper -->
+
+    <!-- 🔻 COMPACT SMALL FOOTER WITH QUICK BUTTONS -->
+    <footer class="admin-mini-footer">
+      <div>
+        <strong>Care My Vehicle Admin Engine</strong> • Verified Automotive Database & Launch Platform
+      </div>
+      <div class="admin-footer-btn-group">
+        <a href="index.html" target="_blank" class="admin-mini-btn">🌐 Live Website ↗</a>
+        <a href="news.html" target="_blank" class="admin-mini-btn">📰 News Hub ↗</a>
+        <button type="button" class="admin-mini-btn" onclick="switchAdminTab('imageKitExplorer')">🖼️ ImageKit Assets</button>
+        <button type="button" class="admin-mini-btn" onclick="switchAdminTab('reviewsManager')">✍️ Write News</button>
+        <button type="button" class="admin-mini-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆ Top</button>
+      </div>
+    </footer>
+
 
   <!-- 3. CHANGE PASSWORD MODAL -->
   <div id="changePasswordModal" class="modal-backdrop">
@@ -4442,18 +4676,45 @@
     }
     window.initReviewsManager = initReviewsManager;
 
+    
+    let currentRevCategoryFilter = 'ALL';
+    function filterReviewsCategory(cat, btnElement) {
+      currentRevCategoryFilter = cat;
+      const pills = btnElement?.parentElement?.querySelectorAll('.sub-pill-btn') || [];
+      pills.forEach(p => p.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+      renderReviewsSelector();
+    }
+    window.filterReviewsCategory = filterReviewsCategory;
+
     function renderReviewsSelector() {
       const container = document.getElementById('reviewsSelectorList');
       if (!container) return;
-      container.innerHTML = adminReviewsList.map((art, idx) => {
+      
+      const filtered = adminReviewsList.map((art, idx) => ({ art, idx })).filter(item => {
+        if (currentRevCategoryFilter === 'ALL') return true;
+        const cat = (item.art.category || '').toUpperCase();
+        if (currentRevCategoryFilter === 'News') return cat.includes('UPDATE') || cat.includes('NEWS') || cat.includes('GUIDE') || cat.includes('COMPARISON');
+        if (currentRevCategoryFilter === 'Reviews') return cat.includes('REVIEW') || cat.includes('DRIVE');
+        if (currentRevCategoryFilter === 'Videos') return cat.includes('VIDEO');
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="grid-column:1/-1; padding:20px; text-align:center; color:#64748B;">No articles in this category. Click <strong>➕ Create New Article</strong> to add one.</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(({ art, idx }) => {
         const hero = art.heroImage || art.image || 'assets/logo.png';
         const galleryCount = Array.isArray(art.gallery) ? art.gallery.length : 0;
+        const isCurrent = idx === currentReviewIndex;
         return `
-          <button type="button" class="studio-item-pill ${idx === currentReviewIndex ? 'active' : ''}" onclick="selectReviewToEdit(${idx})">
-            <img src="${hero}" alt="${art.title}" onerror="this.src='assets/logo.png'">
-            <div style="overflow:hidden;">
-              <div style="font-size:10px; font-weight:800; color:#2563EB; text-transform:uppercase;">${art.category || 'EXPERT REVIEW'} &bull; 1 Hero + ${galleryCount} Other</div>
-              <div style="font-size:12.5px; font-weight:800; color:#0F172A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${art.title}</div>
+          <button type="button" class="studio-item-pill ${isCurrent ? 'active' : ''}" onclick="selectReviewToEdit(${idx})" style="padding:10px; border-radius:12px;">
+            <img src="${hero}" alt="${art.title}" onerror="this.src='assets/logo.png'" style="width:60px; height:44px; border-radius:8px; object-fit:cover;">
+            <div style="overflow:hidden; text-align:left;">
+              <div style="font-size:10px; font-weight:800; color:#2563EB; text-transform:uppercase;">${art.category || 'NEWS'} &bull; ${galleryCount} Photos</div>
+              <div style="font-size:12.5px; font-weight:700; color:#0F172A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${art.title}</div>
             </div>
           </button>
         `;
