@@ -75,7 +75,7 @@ window.submitBuyerLeadForm = async function(e) {
   const city = document.getElementById('offerLeadCity')?.value.trim() || (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
   const carName = document.getElementById('offerLeadCarName')?.value.trim() || 'General Inquiry';
   const context = document.getElementById('offerLeadContext')?.value.trim() || 'Website Inquiries';
-  const timeline = document.querySelector('input[name="offerTimeline"]:checked')?.value || 'Within 15 Days';
+  const timeline = document.getElementById('offerTimelineSelect')?.value || document.querySelector('input[name="offerTimeline"]:checked')?.value || 'Within 15 Days';
   
   const wantLoan = document.getElementById('offerCbLoan')?.checked || false;
   const wantTestDrive = document.getElementById('offerCbTestDrive')?.checked || false;
