@@ -2756,8 +2756,6 @@ function renderPopularUsedCars() {
 
   container.innerHTML = displayList.map(car => {
     const heroUrl = car.heroImage || car.image || 'assets/logo.png';
-    const otherImgs = Array.isArray(car.gallery) ? car.gallery.filter(g => g && g.url && g.url !== heroUrl) : [];
-    const allPhotos = [{ url: heroUrl, caption: car.name + ' Hero' }, ...otherImgs];
     const usedTitle = /^Used\s+/i.test(car.name || '') ? car.name : `Used ${car.name}`;
     const avgPriceText = formatUsedAveragePrice(car);
     const exploreCities = Array.isArray(car.exploreCities) && car.exploreCities.length > 0
@@ -2768,15 +2766,6 @@ function renderPopularUsedCars() {
     <article class="cw-popular-used-card" onclick="window.showUsedCarsComingSoon(event)">
       <div class="cw-used-card-left">
         <img id="usedHeroImg_${car.id}" src="${heroUrl}" alt="${usedTitle}" class="cw-used-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
-        ${otherImgs.length > 0 ? `
-          <div class="cw-used-thumbs-row" onclick="event.stopPropagation()">
-            ${allPhotos.slice(0, 4).map((p, idx) => `
-              <button type="button" class="used-mini-thumb" onclick="window.swapUsedCardImg(event, '${car.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:1.5px solid ${idx === 0 ? '#0D9488' : '#E2E8F0'}; border-radius:4px; padding:1px; background:#FFF; cursor:pointer; width:28px; height:20px; overflow:hidden;" title="${p.caption || ''}">
-                <img src="${p.url}" alt="" style="width:100%; height:100%; object-fit:contain;">
-              </button>
-            `).join('')}
-          </div>
-        ` : ''}
       </div>
       <div class="cw-used-card-right">
         <h3 class="cw-used-card-title">${usedTitle}</h3>

@@ -6058,10 +6058,7 @@ h1, h2, h3, .brand-font {
 }
 
 .cw-used-thumbs-row {
-  display: flex;
-  gap: 4px;
-  margin-top: 6px;
-  justify-content: center;
+  display: none !important;
 }
 
 .cw-used-card-right {
@@ -7296,10 +7293,7 @@ h1, h2, h3, .brand-font {
 }
 
 .cw-used-thumbs-row {
-  display: flex;
-  gap: 4px;
-  margin-top: 6px;
-  justify-content: center;
+  display: none !important;
 }
 
 .cw-used-card-right {
