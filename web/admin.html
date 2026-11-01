@@ -1168,6 +1168,9 @@
         <button type="button" class="admin-tab-btn" id="tabBtnHomepageBuilder" onclick="switchAdminTab('homepageBuilder')" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5); color:#C2410C; border:1px solid #FDBA74;">
           🎛️ Home Page Layout & Card Studio
         </button>
+      <button type="button" class="admin-tab-btn" id="tabBtnImageKitExplorer" onclick="switchAdminTab('imageKitExplorer')" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7); color:#15803D; border:1px solid #86EFAC;">
+        🖼️ ImageKit Asset Library & Folder Explorer
+      </button>
       </div>
 
       <!-- VIEW 1: CATALOG & VISIBILITY CONTROL -->
@@ -3197,7 +3200,8 @@
         usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
         addCar: document.getElementById('tabBtnAddCar'),
         urlImporter: document.getElementById('tabBtnUrlImporter'),
-        homepageBuilder: document.getElementById('tabBtnHomepageBuilder')
+        homepageBuilder: document.getElementById('tabBtnHomepageBuilder'),
+        imageKitExplorer: document.getElementById('tabBtnImageKitExplorer')
       };
       const views = {
         visibility: document.getElementById('viewVisibility'),
@@ -3206,7 +3210,8 @@
         usedCarsManager: document.getElementById('viewUsedCarsManager'),
         addCar: document.getElementById('viewAddCar'),
         urlImporter: document.getElementById('viewUrlImporter'),
-        homepageBuilder: document.getElementById('viewHomepageBuilder')
+        homepageBuilder: document.getElementById('viewHomepageBuilder'),
+        imageKitExplorer: document.getElementById('viewImageKitExplorer')
       };
 
       Object.keys(tabs).forEach(k => {
@@ -6749,7 +6754,361 @@
     }
     window.resetHomepageBuilderAll = resetHomepageBuilderAll;
 
-  </script>
+  
+    // ==========================================================================
+    // 🖼️ IMAGEKIT ASSET EXPLORER ENGINE
+    // ==========================================================================
+    let ikCachedAssets = [];
+    let ikActiveFolderFilter = 'ALL';
+
+    function extractImageKitAssets() {
+      const assets = [];
+      const cars = Array.isArray(window.APP_CARS) ? window.APP_CARS : [];
+      
+      // Also include custom cars from localStorage
+      let customCars = [];
+      try {
+        customCars = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+      } catch (e) {}
+
+      const allMerged = [...cars, ...customCars];
+      const seenUrls = new Set();
+
+      allMerged.forEach(car => {
+        const carId = car.id;
+        const carName = car.name;
+        const carBrand = car.brand || 'Other';
+
+        // 1. Hero Image
+        if (car.heroImage && !seenUrls.has(car.heroImage)) {
+          seenUrls.add(car.heroImage);
+          assets.push({
+            url: car.heroImage,
+            carId,
+            carName,
+            carBrand,
+            folderType: 'hero',
+            folderPath: 'cars/' + carId + '/hero',
+            title: carName + ' — Main Cutout',
+            badge: 'Hero Cutout'
+          });
+        }
+
+        // 2. Color Variants
+        if (Array.isArray(car.colors)) {
+          car.colors.forEach(col => {
+            if (col.image && !seenUrls.has(col.image)) {
+              seenUrls.add(col.image);
+              assets.push({
+                url: col.image,
+                carId,
+                carName,
+                carBrand,
+                folderType: 'colors',
+                folderPath: 'cars/' + carId + '/colors',
+                title: (col.name || 'Color Variant'),
+                badge: 'Color Variant',
+                colorCode: col.code || col.hex
+              });
+            }
+          });
+        }
+
+        // 3. Gallery
+        if (Array.isArray(car.images)) {
+          car.images.forEach((img, i) => {
+            if (img && !seenUrls.has(img)) {
+              seenUrls.add(img);
+              assets.push({
+                url: img,
+                carId,
+                carName,
+                carBrand,
+                folderType: 'gallery',
+                folderPath: 'cars/' + carId + '/gallery',
+                title: 'Gallery Image ' + (i + 1),
+                badge: 'Gallery'
+              });
+            }
+          });
+        }
+
+        // 4. 360 View Spins
+        if (Array.isArray(car.view360)) {
+          car.view360.forEach(v => {
+            if (Array.isArray(v.frames)) {
+              v.frames.forEach((frameUrl, fi) => {
+                if (frameUrl && !seenUrls.has(frameUrl)) {
+                  seenUrls.add(frameUrl);
+                  assets.push({
+                    url: frameUrl,
+                    carId,
+                    carName,
+                    carBrand,
+                    folderType: '360',
+                    folderPath: 'cars/' + carId + '/360/' + (v.colorSlug || 'spin'),
+                    title: (v.colorName || '360 Spin') + ' (Frame ' + (fi + 1) + ')',
+                    badge: '360° Spin'
+                  });
+                }
+              });
+            }
+          });
+        }
+      });
+
+      // Also include review images
+      const reviews = (typeof getWorkingReviews === 'function') ? getWorkingReviews() : [];
+      reviews.forEach(art => {
+        if (art.heroImage && !seenUrls.has(art.heroImage)) {
+          seenUrls.add(art.heroImage);
+          assets.push({
+            url: art.heroImage,
+            carId: art.id || 'article',
+            carName: art.title || 'Review Article',
+            carBrand: 'Reviews & Updates',
+            folderType: 'gallery',
+            folderPath: 'news/articles',
+            title: art.title,
+            badge: 'Review Hero'
+          });
+        }
+        if (Array.isArray(art.gallery)) {
+          art.gallery.forEach((g, gi) => {
+            if (g.url && !seenUrls.has(g.url)) {
+              seenUrls.add(g.url);
+              assets.push({
+                url: g.url,
+                carId: art.id || 'article',
+                carName: art.title || 'Review Article',
+                carBrand: 'Reviews & Updates',
+                folderType: 'gallery',
+                folderPath: 'news/gallery',
+                title: g.caption || ('Review Photo ' + (gi + 1)),
+                badge: 'Review Gallery'
+              });
+            }
+          });
+        }
+      });
+
+      return assets;
+    }
+
+    function initImageKitExplorer() {
+      ikCachedAssets = extractImageKitAssets();
+      
+      // Update badge
+      const statsBadge = document.getElementById('ikTotalStatsBadge');
+      if (statsBadge) {
+        statsBadge.innerHTML = '☁️ <strong>' + ikCachedAssets.length + '</strong> ImageKit Assets Available';
+      }
+
+      // Populate Brand & Car Selectors
+      populateImageKitSelectors();
+
+      // Render Assets Grid
+      filterImageKitAssets();
+    }
+    window.initImageKitExplorer = initImageKitExplorer;
+
+    function populateImageKitSelectors() {
+      const brandSelect = document.getElementById('ikBrandSelect');
+      const carSelect = document.getElementById('ikCarSelect');
+      if (!brandSelect || !carSelect) return;
+
+      const brands = Array.from(new Set(ikCachedAssets.map(a => a.carBrand).filter(Boolean))).sort();
+      brandSelect.innerHTML = '<option value="ALL">All Brands (Every Car)</option>' + 
+        brands.map(b => '<option value="' + escapeHtml(b) + '">' + escapeHtml(b) + '</option>').join('');
+
+      onImageKitBrandChange();
+    }
+
+    function onImageKitBrandChange() {
+      const brandSelect = document.getElementById('ikBrandSelect');
+      const carSelect = document.getElementById('ikCarSelect');
+      if (!brandSelect || !carSelect) return;
+
+      const selBrand = brandSelect.value;
+      const relevantAssets = selBrand === 'ALL' ? ikCachedAssets : ikCachedAssets.filter(a => a.carBrand === selBrand);
+      
+      const carsMap = new Map();
+      relevantAssets.forEach(a => {
+        if (!carsMap.has(a.carId)) carsMap.set(a.carId, a.carName);
+      });
+
+      let options = '<option value="ALL">All Cars in Selected Brand (' + carsMap.size + ')</option>';
+      Array.from(carsMap.entries()).sort((a,b) => a[1].localeCompare(b[1])).forEach(([id, name]) => {
+        options += '<option value="' + escapeHtml(id) + '">' + escapeHtml(name) + '</option>';
+      });
+      carSelect.innerHTML = options;
+
+      filterImageKitAssets();
+    }
+    window.onImageKitBrandChange = onImageKitBrandChange;
+
+    function filterImageKitAssets() {
+      const q = (document.getElementById('ikSearchInput')?.value || '').toLowerCase().trim();
+      const selBrand = document.getElementById('ikBrandSelect')?.value || 'ALL';
+      const selCar = document.getElementById('ikCarSelect')?.value || 'ALL';
+      const selFolder = document.getElementById('ikFolderTypeSelect')?.value || 'ALL';
+
+      let filtered = ikCachedAssets.filter(a => {
+        if (selBrand !== 'ALL' && a.carBrand !== selBrand) return false;
+        if (selCar !== 'ALL' && a.carId !== selCar) return false;
+        if (selFolder !== 'ALL' && a.folderType !== selFolder) return false;
+        if (q) {
+          const matchQ = a.url.toLowerCase().includes(q) ||
+            a.carName.toLowerCase().includes(q) ||
+            a.title.toLowerCase().includes(q) ||
+            a.folderPath.toLowerCase().includes(q);
+          if (!matchQ) return false;
+        }
+        return true;
+      });
+
+      renderImageKitPills(filtered);
+      renderImageKitGrid(filtered);
+    }
+    window.filterImageKitAssets = filterImageKitAssets;
+
+    function renderImageKitPills(assets) {
+      const pillsRow = document.getElementById('ikFolderPillsRow');
+      if (!pillsRow) return;
+
+      const folderCounts = {};
+      assets.forEach(a => {
+        folderCounts[a.folderType] = (folderCounts[a.folderType] || 0) + 1;
+      });
+
+      const types = [
+        { id: 'ALL', label: 'All Folders', count: assets.length },
+        { id: 'hero', label: '📸 Hero Cutouts', count: folderCounts['hero'] || 0 },
+        { id: 'colors', label: '🎨 Color Variants', count: folderCounts['colors'] || 0 },
+        { id: 'gallery', label: '🖼️ Gallery & Cockpit', count: folderCounts['gallery'] || 0 },
+        { id: '360', label: '🔄 360° Studio Spins', count: folderCounts['360'] || 0 }
+      ];
+
+      const currentSel = document.getElementById('ikFolderTypeSelect')?.value || 'ALL';
+
+      pillsRow.innerHTML = types.map(t => {
+        const isActive = t.id === currentSel;
+        return `
+          <button type="button" class="sub-pill-btn ${isActive ? 'active' : ''}" onclick="setImageKitFolderPill('${t.id}')" style="white-space:nowrap; padding:6px 14px; font-size:12.5px;">
+            ${t.label} (${t.count})
+          </button>
+        `;
+      }).join('');
+    }
+
+    function setImageKitFolderPill(folderType) {
+      const select = document.getElementById('ikFolderTypeSelect');
+      if (select) select.value = folderType;
+      filterImageKitAssets();
+    }
+    window.setImageKitFolderPill = setImageKitFolderPill;
+
+    function renderImageKitGrid(assets) {
+      const grid = document.getElementById('ikAssetsGrid');
+      const emptyState = document.getElementById('ikEmptyState');
+      if (!grid) return;
+
+      if (assets.length === 0) {
+        grid.innerHTML = '';
+        if (emptyState) emptyState.style.display = 'block';
+        return;
+      }
+      if (emptyState) emptyState.style.display = 'none';
+
+      // Limit rendering to first 120 items for snappy performance
+      const displayBatch = assets.slice(0, 120);
+
+      grid.innerHTML = displayBatch.map((item, idx) => {
+        const badgeColor = item.folderType === 'hero' ? '#16A34A' : item.folderType === 'colors' ? '#2563EB' : item.folderType === '360' ? '#7C3AED' : '#D97706';
+        const badgeBg = item.folderType === 'hero' ? '#DCFCE7' : item.folderType === 'colors' ? '#DBEAFE' : item.folderType === '360' ? '#EDE9FE' : '#FEF3C7';
+
+        return `
+          <div class="editor-sec-card" style="margin-bottom:0; display:flex; flex-direction:column; justify-content:space-between; border-radius:14px; overflow:hidden; transition:transform 0.15s, box-shadow 0.15s; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+            <div>
+              <div style="position:relative; background:#F8FAFC; border-bottom:1px solid #E2E8F0; padding:12px; height:150px; display:flex; align-items:center; justify-content:center;">
+                <img src="${item.url}" alt="${escapeHtml(item.title)}" loading="lazy" style="max-width:100%; max-height:125px; object-fit:contain;" onerror="this.src='assets/logo.png'">
+                <span style="position:absolute; top:8px; left:8px; font-size:11px; font-weight:800; background:${badgeBg}; color:${badgeColor}; padding:3px 8px; border-radius:8px;">
+                  ${item.badge}
+                </span>
+                ${item.colorCode ? `<span style="position:absolute; top:8px; right:8px; width:16px; height:16px; border-radius:50%; border:2px solid #FFFFFF; background:${item.colorCode}; box-shadow:0 1px 3px rgba(0,0,0,0.2);" title="Color code"></span>` : ''}
+              </div>
+              <div style="padding:14px 14px 10px 14px;">
+                <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase; margin-bottom:2px;">${escapeHtml(item.carBrand)}</div>
+                <div style="font-size:13.5px; font-weight:800; color:#0F172A; line-height:1.3; margin-bottom:4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${escapeHtml(item.carName)}">${escapeHtml(item.carName)}</div>
+                <div style="font-size:12px; color:#475569; margin-bottom:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</div>
+                <div style="font-size:11px; color:#94A3B8; font-family:monospace; background:#F1F5F9; padding:4px 8px; border-radius:6px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${escapeHtml(item.folderPath)}">📁 ${escapeHtml(item.folderPath)}</div>
+              </div>
+            </div>
+
+            <div style="padding:0 14px 14px 14px; display:flex; gap:8px;">
+              <button type="button" class="btn-act btn-act-show" style="flex:1; justify-content:center; padding:8px 10px; font-size:12px; background:#10B981;" onclick="copyImageKitUrl('${item.url.replace(/'/g, "\\'")}', this)">
+                📋 Copy URL
+              </button>
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn-act" style="background:#F1F5F9; color:#334155; text-decoration:none; padding:8px 12px; font-size:12px; border-radius:8px;" title="Open high-res in new tab">
+                🔗 View
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (assets.length > 120) {
+        grid.innerHTML += `
+          <div style="grid-column:1/-1; text-align:center; padding:16px; color:#64748B; font-size:13px; font-weight:600;">
+            Showing first 120 of ${assets.length} images. Use the Search box or Car / Folder filters above to narrow results.
+          </div>
+        `;
+      }
+    }
+
+    function copyImageKitUrl(url, btnElement) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          showCopySuccess(btnElement);
+        }).catch(() => fallbackCopy(url, btnElement));
+      } else {
+        fallbackCopy(url, btnElement);
+      }
+    }
+    window.copyImageKitUrl = copyImageKitUrl;
+
+    function fallbackCopy(text, btnElement) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showCopySuccess(btnElement);
+      } catch (err) {
+        prompt('Copy ImageKit URL manually:', text);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btnElement) {
+      if (btnElement) {
+        const originalText = btnElement.innerHTML;
+        btnElement.innerHTML = '✅ Copied!';
+        btnElement.style.background = '#059669';
+        setTimeout(() => {
+          btnElement.innerHTML = originalText;
+          btnElement.style.background = '#10B981';
+        }, 1800);
+      }
+      if (typeof showToast === 'function') {
+        showToast('📋 ImageKit URL copied to clipboard!');
+      }
+    }
+
+</script>
 
   <!-- Admin Toast Notification -->
   <div id="adminToast" class="admin-toast"></div>
