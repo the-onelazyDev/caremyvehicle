@@ -2689,6 +2689,77 @@
         </div>
       </div><!-- end viewHomepageBuilder -->
 
+      <!-- ==========================================================================
+           VIEW 8: 🖼️ IMAGEKIT ASSET LIBRARY & FOLDER EXPLORER
+           ========================================================================== -->
+      <div id="viewImageKitExplorer" style="display:none;">
+        <div class="section-card" style="margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <div style="display:inline-flex; align-items:center; gap:8px; background:#DCFCE7; color:#15803D; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:800; margin-bottom:8px;">
+                ☁️ OFFICIAL IMAGEKIT CLOUD CDN EXPLORER
+              </div>
+              <h3 class="section-title">🖼️ Systematic Car Image & Folder Explorer</h3>
+              <p class="section-desc">
+                Browse every car's ImageKit folder (Cutouts, Official Colors, 360° Spin Frames, and Interior/Exterior Galleries). Preview images, copy direct ImageKit URLs with 1-click, or filter by Car & Subfolder.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+              <span id="ikTotalStatsBadge" style="font-size:13px; font-weight:700; color:#0F172A; background:#F1F5F9; border:1px solid #E2E8F0; padding:8px 14px; border-radius:12px;">
+                Loading ImageKit Assets...
+              </span>
+            </div>
+          </div>
+
+          <!-- Controls Strip: Search + Brand Filter + Car Selector + Folder Type Filter -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-top:20px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:14px; padding:16px;">
+            <div>
+              <label class="form-label" style="font-size:12px; font-weight:700; color:#475569;">🔍 Search Car or File Name</label>
+              <input type="text" id="ikSearchInput" class="form-input" placeholder="e.g. Swift, Tiago, red, hero, 360..." oninput="window.filterImageKitAssets()">
+            </div>
+            <div>
+              <label class="form-label" style="font-size:12px; font-weight:700; color:#475569;">🏢 Filter by Brand</label>
+              <select id="ikBrandSelect" class="form-select" onchange="window.onImageKitBrandChange()">
+                <option value="ALL">All Brands (Every Car)</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" style="font-size:12px; font-weight:700; color:#475569;">🚗 Select Car Model</label>
+              <select id="ikCarSelect" class="form-select" onchange="window.filterImageKitAssets()">
+                <option value="ALL">All Cars in Brand</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" style="font-size:12px; font-weight:700; color:#475569;">📁 Folder Category</label>
+              <select id="ikFolderTypeSelect" class="form-select" onchange="window.filterImageKitAssets()">
+                <option value="ALL">All Folder Types</option>
+                <option value="hero">Hero Cutouts (Main Showcase)</option>
+                <option value="colors">Color Variants (/colors/)</option>
+                <option value="gallery">Gallery & Cockpit (/gallery/)</option>
+                <option value="360">360° Studio Spins (/360/)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Folder Pills Row -->
+        <div id="ikFolderPillsRow" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:8px; margin-bottom:16px;">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- ImageKit Cards Grid -->
+        <div id="ikAssetsGrid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:16px;">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="ikEmptyState" style="display:none; text-align:center; padding:48px 20px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:16px; margin-top:16px;">
+          <div style="font-size:40px; margin-bottom:8px;">🔍</div>
+          <h4 style="font-size:18px; font-weight:700; color:#1E293B; margin-bottom:6px;">No ImageKit assets found</h4>
+          <p style="font-size:13px; color:#64748B;">Try clearing your search query or selecting a different brand or folder filter.</p>
+        </div>
+      </div><!-- end viewImageKitExplorer -->
+
     </div>
   </div>
 
@@ -3231,6 +3302,10 @@
         initUrlImporter();
       } else if (tabName === 'homepageBuilder') {
         initHomepageBuilder();
+      } else if (tabName === 'imageKitExplorer') {
+        if (typeof initImageKitExplorer === 'function') {
+          initImageKitExplorer();
+        }
       }
     }
     window.switchAdminTab = switchAdminTab;
