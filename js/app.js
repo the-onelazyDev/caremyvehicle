@@ -3264,7 +3264,7 @@ function getActiveOffersList() {
       name: 'Maruti Suzuki Grand Vitara',
       savings: 'Up to ₹1,28,000 Total Benefits',
       highlight: 'Exchange Bonus + Corporate Discount + 5 Year Warranty',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/splendid-silver/4.webp',
       enabled: true
     },
     {
@@ -3273,7 +3273,7 @@ function getActiveOffersList() {
       name: 'Tata Safari & Harrier',
       savings: 'Up to ₹1,40,000 Festive Savings',
       highlight: 'Cash Discount + Scrappage Bonus + 3 Yrs Free Maintenance',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/safari/360/cosmic-gold/1.webp',
       enabled: true
     },
     {
@@ -3282,7 +3282,7 @@ function getActiveOffersList() {
       name: 'Mahindra XUV700 (AX7 Series)',
       savings: 'Flat ₹2,00,000 Price Cut',
       highlight: 'Official OEM celebration price cut on high-spec variants',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp',
       enabled: true
     },
     {
@@ -3291,7 +3291,7 @@ function getActiveOffersList() {
       name: 'Hyundai Creta & Venue',
       savings: 'Up to ₹45,000 Special Benefits',
       highlight: 'Corporate benefit + 6.99% low EMI interest financing',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/creta/colors/ranger-khaki.webp',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
       enabled: true
     },
     {
@@ -3300,7 +3300,7 @@ function getActiveOffersList() {
       name: 'MG Windsor EV (BaaS)',
       savings: 'Battery-as-a-Service at ₹3.5/km',
       highlight: 'Free 1 Year Public Charging + Lifetime Battery Warranty',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp',
+      image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp',
       enabled: true
     }
   ];
@@ -3325,8 +3325,8 @@ function renderOffersShelf() {
   container.innerHTML = allOffers.map(o => `
     <div class="offer-card" onclick="window.navigateToCar('${o.carId || ''}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
       <span class="offer-savings-badge">${o.savings || 'Special Offer'}</span>
-      <div style="height:120px; display:flex; align-items:center; justify-content:center;">
-        <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" style="max-width:90%; max-height:100px; object-fit:contain; filter:drop-shadow(0 6px 10px rgba(0,0,0,0.1));" onerror="this.src='assets/logo.png'">
+      <div class="offer-img-stage">
+        <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='assets/logo.png'">
       </div>
       <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name || 'Special Offer'}</h4>
       <p style="font-size:12px; color:#64748B; margin-bottom:12px; line-height:1.4;">${o.highlight || ''}</p>
