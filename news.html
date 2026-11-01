@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Car News & Expert Reviews in India (2024–2026) | Care My Vehicle</title>
+  <meta name="description" content="Read car news of all models in India. All latest cars have a number of news about its launch, updates, specs, comparisons and more.">
+  <meta name="theme-color" content="#0D9488">
+
+  <!-- Canonical & Robots -->
+  <link rel="canonical" href="https://www.caremyvehicle.in/news.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* CarWale Dedicated News Hub & Article View Styles */
+    body {
+      background: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cw-news-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .cw-news-header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .cw-header-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .cw-header-nav-links a {
+      color: #475569;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: color 0.15s ease;
+    }
+    .cw-header-nav-links a:hover,
+    .cw-header-nav-links a.active {
+      color: #0F172A;
+    }
+    .cw-header-search-box {
+      display: flex;
+      align-items: center;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 6px 14px;
+      width: 280px;
+    }
+    .cw-header-search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      font-size: 13px;
+      font-family: inherit;
+      color: #0F172A;
+    }
+
+    /* Container */
+    .cw-news-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* News Hub Main View */
+    .cw-news-hero-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0 0 4px;
+    }
+    .cw-news-hero-sub {
+      font-size: 14px;
+      color: #64748B;
+      margin: 0 0 20px;
+    }
+    .cw-news-filter-search {
+      max-width: 440px;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    .cw-news-filter-search input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+      font-family: inherit;
+      color: #0F172A;
+    }
+    .cw-news-tabs {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 1px solid #E2E8F0;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .cw-news-tab-item {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 8px 4px 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #64748B;
+      cursor: pointer;
+      font-family: inherit;
+      margin-bottom: -1px;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .cw-news-tab-item:hover {
+      color: #0F172A;
+    }
+    .cw-news-tab-item.active {
+      color: #0D9488;
+      font-weight: 800;
+      border-bottom-color: #0D9488;
+    }
+
+    /* 3-Column Grid of News Cards */
+    .cw-news-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .cw-news-grid-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+    .cw-news-grid-card:hover {
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+    .cw-news-grid-card-media {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #E2E8F0;
+      overflow: hidden;
+    }
+    .cw-news-grid-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+    .cw-news-grid-card:hover .cw-news-grid-card-img {
+      transform: scale(1.03);
+    }
+    .cw-news-grid-card-body {
+      padding: 16px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .cw-news-grid-card-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.4;
+      margin: 0 0 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .cw-news-grid-card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #94A3B8;
+      margin-top: auto;
+    }
+
+    /* Article Detail View */
+    .cw-article-detail-view {
+      display: none;
+    }
+    .cw-article-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: #64748B;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .cw-article-breadcrumb a {
+      color: #0284C7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .cw-article-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 36px;
+      align-items: flex-start;
+    }
+    .cw-article-headline {
+      font-size: 27px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.35;
+      margin: 0 0 16px;
+    }
+    .cw-article-byline-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #E2E8F0;
+      margin-bottom: 20px;
+    }
+    .cw-author-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .cw-author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0D9488;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .cw-author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+    .cw-author-meta {
+      font-size: 12px;
+      color: #64748B;
+    }
+    .cw-article-views-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748B;
+      background: #F1F5F9;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* Main Featured Image */
+    .cw-article-hero-box {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      text-align: center;
+      position: relative;
+    }
+    .cw-article-hero-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+    }
+    .cw-article-bullet-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+    .cw-article-bullet-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .cw-article-bullet-card li {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .cw-article-prose {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #1E293B;
+    }
+    .cw-article-prose p {
+      margin: 0 0 18px;
+    }
+
+    /* Article Sidebar */
+    .cw-sidebar-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .cw-sidebar-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cw-sidebar-car-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #F1F5F9;
+      cursor: pointer;
+    }
+    .cw-sidebar-car-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .cw-sidebar-car-img {
+      width: 82px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .cw-sidebar-car-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+    .cw-sidebar-car-price {
+      font-size: 13px;
+      font-weight: 800;
+      color: #EA580C;
+    }
+    .cw-sidebar-car-note {
+      font-size: 11px;
+      color: #64748B;
+    }
+
+    /* Featured Cars Strip in Article */
+    .cw-featured-cars-section {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid #E2E8F0;
+    }
+    .cw-featured-cars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+    }
+    .cw-featured-car-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .cw-featured-car-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+    }
+    .cw-featured-car-img {
+      width: 120px;
+      height: 76px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 992px) {
+      .cw-article-layout-grid {
+        grid-template-columns: 1fr;
+      }
+      .cw-news-grid-3col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .cw-news-grid-3col {
+        grid-template-columns: 1fr;
+      }
+      .cw-header-nav-links {
+        display: none;
+      }
+      .cw-header-search-box {
+        width: 180px;
+      }
+      .cw-article-headline {
+        font-size: 21px;
+      }
+      .cw-featured-cars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="cw-news-header">
+    <div class="cw-news-header-inner">
+      <div style="display:flex; align-items:center; gap:24px;">
+        <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+          <img src="/assets/logo.png" alt="Care My Vehicle" style="width:36px; height:36px; border-radius:50%;">
+          <span style="font-weight:900; font-size:18px; color:#0F172A; letter-spacing:-0.4px;">Care<span style="color:#0D9488;">My</span>Vehicle</span>
+        </a>
+        <nav class="cw-header-nav-links">
+          <a href="/cars.html">New Cars</a>
+          <a href="/#popularUsedCarsSection">Used Cars</a>
+          <a href="/news.html" class="active">Reviews & News</a>
+        </nav>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div class="cw-header-search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="headerNewsSearchInput" placeholder="Search news & cars..." oninput="handleHeaderNewsSearch(this.value)">
+        </div>
+        <a href="/" class="btn-orange-pill" style="padding:6px 14px; font-size:12.5px; text-decoration:none;">
+          <span>Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="cw-news-container">
+    <!-- VIEW 1: CAR NEWS HUB (LISTING) -->
+    <div id="newsHubView">
+      <h1 class="cw-news-hero-title">Car News</h1>
+      <p class="cw-news-hero-sub">Read car news of all models in India. All latest cars have a number of news about its launch, updates, specs, comparisons and more.</p>
+
+      <!-- Filter Search Input -->
+      <div class="cw-news-filter-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="newsFilterInput" placeholder="Type to select car name..." oninput="filterNewsByText(this.value)">
+      </div>
+
+      <!-- Navigation Tabs: News | Reviews | Special Reports | Images | Videos -->
+      <div class="cw-news-tabs" id="newsCategoryTabs">
+        <button type="button" class="cw-news-tab-item active" data-tab="all" onclick="selectNewsTab('all', this)">All</button>
+        <button type="button" class="cw-news-tab-item" data-tab="news" onclick="selectNewsTab('news', this)">News</button>
+        <button type="button" class="cw-news-tab-item" data-tab="reviews" onclick="selectNewsTab('reviews', this)">Reviews</button>
+        <button type="button" class="cw-news-tab-item" data-tab="special" onclick="selectNewsTab('special', this)">Special Reports</button>
+        <button type="button" class="cw-news-tab-item" data-tab="images" onclick="selectNewsTab('images', this)">Images</button>
+        <button type="button" class="cw-news-tab-item" data-tab="videos" onclick="selectNewsTab('videos', this)">Videos</button>
+      </div>
+
+      <!-- 3-Column Grid Container -->
+      <div class="cw-news-grid-3col" id="newsCardsGrid">
+        <!-- Injected dynamically by JavaScript -->
+      </div>
+    </div>
+
+    <!-- VIEW 2: ARTICLE DETAIL PAGE (CarWale EXACT LAYOUT) -->
+    <article id="articleDetailView" class="cw-article-detail-view">
+      <div class="cw-article-breadcrumb">
+        <a href="/">Home</a>
+        <span>&rsaquo;</span>
+        <a href="javascript:void(0)" onclick="closeArticleDetail()">News</a>
+        <span>&rsaquo;</span>
+        <span id="breadcrumbArticleTitle" style="color:#0F172A; font-weight:700;">Vinfast VF 5 Facelift Patented in India: Launch Around The Corner?</span>
+      </div>
+
+      <div class="cw-article-layout-grid">
+        <!-- Left Main Article Column -->
+        <div>
+          <h1 class="cw-article-headline" id="artDetailHeadline">Vinfast VF 5 Facelift Patented in India: Launch Around The Corner?</h1>
+          
+          <div class="cw-article-byline-row">
+            <div class="cw-author-wrap">
+              <div class="cw-author-avatar" id="artAuthorAvatar">AN</div>
+              <div>
+                <div class="cw-author-name" id="artAuthorName">Aditya Nadkarni</div>
+                <div class="cw-author-meta" id="artAuthorDate">November 01, 2026, 10:30 AM IST</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="cw-article-views-badge" id="artViewsBadge">👁️ 292 Views</span>
+              <button type="button" onclick="shareCurrentArticle()" style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:20px; padding:5px 12px; font-size:12px; font-weight:700; cursor:pointer;">
+                🔗 Share
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="cw-article-hero-box">
+            <img id="artDetailHeroImg" src="" alt="Article Stance" class="cw-article-hero-img">
+          </div>
+
+          <!-- Bullet Points Card (CarWale exact summary card) -->
+          <div class="cw-article-bullet-card" id="artBulletCard" style="display:none;">
+            <ul id="artBulletList">
+              <!-- Injected dynamically -->
+            </ul>
+          </div>
+
+          <!-- Article Full Content Prose -->
+          <div class="cw-article-prose" id="artDetailContent">
+            <!-- Injected dynamically -->
+          </div>
+
+          <!-- Featured Cars Strip inside Article -->
+          <div class="cw-featured-cars-section" id="artFeaturedCarsSection" style="display:none;">
+            <h3 style="font-size:18px; font-weight:800; color:#0F172A; margin:0 0 12px;">Featured Cars</h3>
+            <div class="cw-featured-cars-grid" id="artFeaturedCarsGrid">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sticky Sidebar -->
+        <aside>
+          <!-- Related Car Models Card -->
+          <div class="cw-sidebar-card">
+            <div class="cw-sidebar-title">
+              <span>Related Cars</span>
+              <span style="font-size:11px; color:#0D9488; font-weight:700;">2026 Guide</span>
+            </div>
+            <div id="artSidebarRelatedCars">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+
+          <!-- Newsletter / Subscription Card -->
+          <div class="cw-sidebar-card" style="background:#F0FDF4; border-color:#BBF7D0;">
+            <div style="font-size:24px; margin-bottom:8px;">📬</div>
+            <div style="font-size:15px; font-weight:800; color:#14532D; margin-bottom:4px;">Sign up for our Newsletter</div>
+            <p style="font-size:12.5px; color:#166534; margin:0 0 12px; line-height:1.5;">Get all the latest automotive updates, car launches, and on-road price drops in your inbox.</p>
+            <input type="email" placeholder="Enter your email" style="width:100%; padding:9px 12px; border-radius:8px; border:1px solid #86EFAC; font-size:13px; font-family:inherit; margin-bottom:8px; box-sizing:border-box;">
+            <button type="button" onclick="alert('Thank you for subscribing to Care My Vehicle!')" style="width:100%; background:#16A34A; color:#FFF; font-weight:700; border:none; border-radius:8px; padding:9px; cursor:pointer;">Subscribe Now</button>
+          </div>
+
+          <!-- Popular Reviews / Trending Section -->
+          <div class="cw-sidebar-card">
+            <div class="cw-sidebar-title">
+              <span>Popular Updates</span>
+            </div>
+            <div id="artSidebarPopularList">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { ARTICLES } from './js/newsData.js';
+    import { CARS } from './js/carData.js';
+    window.BASE_ARTICLES = ARTICLES;
+    window.BASE_CARS = CARS;
+    window.initNewsPage();
+  </script>
+
+  <script>
+    let currentNewsTab = 'all';
+    let currentSearchText = '';
+    let allArticlesList = [];
+
+    function getAllStoredArticles() {
+      try {
+        const custom = JSON.parse(localStorage.getItem('cmv_custom_articles') || 'null');
+        if (Array.isArray(custom) && custom.length > 0) {
+          const customMap = new Map(custom.map(a => [a.id, a]));
+          const base = (window.BASE_ARTICLES || []);
+          const merged = [...custom];
+          base.forEach(b => {
+            if (!customMap.has(b.id)) merged.push(b);
+          });
+          return merged;
+        }
+      } catch (e) {}
+      return window.BASE_ARTICLES || [];
+    }
+
+    window.initNewsPage = function() {
+      allArticlesList = getAllStoredArticles().filter(a => a.enabled !== false);
+      
+      // Check URL params (?id=article-id or ?tab=category)
+      const params = new URLSearchParams(window.location.search);
+      const articleId = params.get('id');
+      const tabParam = params.get('tab');
+
+      if (articleId) {
+        openArticleDetail(articleId);
+      } else {
+        if (tabParam) {
+          selectNewsTab(tabParam);
+        } else {
+          renderNewsGrid();
+        }
+      }
+    };
+
+    function selectNewsTab(tabKey, btnEl) {
+      currentNewsTab = tabKey;
+      document.querySelectorAll('#newsCategoryTabs .cw-news-tab-item').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey || btn === btnEl);
+      });
+      renderNewsGrid();
+    }
+    window.selectNewsTab = selectNewsTab;
+
+    function filterNewsByText(val) {
+      currentSearchText = (val || '').toLowerCase().trim();
+      renderNewsGrid();
+    }
+    window.filterNewsByText = filterNewsByText;
+
+    function handleHeaderNewsSearch(val) {
+      const q = (val || '').toLowerCase().trim();
+      const input = document.getElementById('newsFilterInput');
+      if (input) input.value = val;
+      currentSearchText = q;
+      if (document.getElementById('articleDetailView').style.display === 'block') {
+        closeArticleDetail();
+      }
+      renderNewsGrid();
+    }
+    window.handleHeaderNewsSearch = handleHeaderNewsSearch;
+
+    function renderNewsGrid() {
+      const grid = document.getElementById('newsCardsGrid');
+      if (!grid) return;
+
+      let list = allArticlesList.filter(a => {
+        if (currentNewsTab !== 'all') {
+          const tType = String(a.tabType || '').toLowerCase();
+          const cat = String(a.category || '').toLowerCase();
+          if (currentNewsTab === 'news' && !tType.includes('news') && !cat.includes('update') && !cat.includes('news')) return false;
+          if (currentNewsTab === 'reviews' && !tType.includes('review') && !cat.includes('review')) return false;
+          if (currentNewsTab === 'special' && !tType.includes('special') && !cat.includes('special') && !cat.includes('guide')) return false;
+          if (currentNewsTab === 'images' && (!a.gallery || a.gallery.length === 0)) return false;
+          if (currentNewsTab === 'videos' && !a.isVideo && !tType.includes('video') && !cat.includes('video')) return false;
+        }
+
+        if (currentSearchText) {
+          const t = (a.title || '').toLowerCase();
+          const e = (a.excerpt || '').toLowerCase();
+          const auth = (a.author || '').toLowerCase();
+          if (!t.includes(currentSearchText) && !e.includes(currentSearchText) && !auth.includes(currentSearchText)) return false;
+        }
+
+        return true;
+      });
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column:1/-1; padding:48px 20px; text-align:center; background:#FFF; border-radius:16px; border:1px dashed #CBD5E1;">
+            <div style="font-size:36px; margin-bottom:10px;">📰</div>
+            <h3 style="font-size:18px; font-weight:800; color:#0F172A; margin:0 0 6px;">No articles found</h3>
+            <p style="font-size:13px; color:#64748B; margin:0;">Try clearing your search query or selecting another tab.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = list.map(art => {
+        const heroUrl = art.heroImage || art.image || 'assets/logo.png';
+        const cleanAuthor = String(art.author || 'CMV Editorial Desk').replace(/^By\\s+/i, '').trim();
+        const cleanDate = art.timeAgo || art.date || 'Recent';
+
+        return `
+          <article class="cw-news-grid-card" onclick="openArticleDetail('${art.id}')">
+            <div class="cw-news-grid-card-media">
+              <img src="${heroUrl}" alt="${art.title}" class="cw-news-grid-card-img" loading="lazy" onerror="this.src='assets/logo.png'">
+            </div>
+            <div class="cw-news-grid-card-body">
+              <h3 class="cw-news-grid-card-title">${art.title}</h3>
+              <div class="cw-news-grid-card-meta">
+                <span>By ${cleanAuthor}</span>
+                <span>${cleanDate}</span>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function openArticleDetail(articleId) {
+      const art = allArticlesList.find(a => a.id === articleId) || allArticlesList[0];
+      if (!art) return;
+
+      document.getElementById('newsHubView').style.display = 'none';
+      const detailView = document.getElementById('articleDetailView');
+      detailView.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Update URL without page reload
+      history.pushState({ articleId: art.id }, '', `news.html?id=${encodeURIComponent(art.id)}`);
+
+      // Fill in Article Info
+      document.getElementById('breadcrumbArticleTitle').textContent = art.title;
+      document.getElementById('artDetailHeadline').textContent = art.title;
+      document.getElementById('artAuthorName').textContent = String(art.author || 'CMV Editorial Desk').replace(/^By\\s+/i, '');
+      document.getElementById('artAuthorDate').textContent = `${art.date || 'November 01, 2026'} • ${art.readTime || '4 min read'}`;
+      document.getElementById('artAuthorAvatar').textContent = (art.author || 'CMV').split(' ').map(s => s[0]).slice(0, 2).join('').toUpperCase();
+      document.getElementById('artViewsBadge').textContent = `👁️ ${art.viewsCount || '480 Views'}`;
+      document.getElementById('artDetailHeroImg').src = art.heroImage || art.image || 'assets/logo.png';
+
+      // Bullet Points
+      const bulletCard = document.getElementById('artBulletCard');
+      const bulletList = document.getElementById('artBulletList');
+      const bullets = Array.isArray(art.bulletPoints) && art.bulletPoints.length > 0
+        ? art.bulletPoints
+        : (art.excerpt ? [art.excerpt] : []);
+      if (bullets.length > 0) {
+        bulletList.innerHTML = bullets.map(b => `<li>${b}</li>`).join('');
+        bulletCard.style.display = 'block';
+      } else {
+        bulletCard.style.display = 'none';
+      }
+
+      // Prose
+      document.getElementById('artDetailContent').innerHTML = art.content || `<p>${art.excerpt || ''}</p>`;
+
+      // Featured Cars Strip
+      const featuredSec = document.getElementById('artFeaturedCarsSection');
+      const featuredGrid = document.getElementById('artFeaturedCarsGrid');
+      const cars = window.BASE_CARS || [];
+      const relatedModels = Array.isArray(art.relatedCars) && art.relatedCars.length > 0
+        ? art.relatedCars
+        : cars.slice(0, 2).map(c => ({ name: c.name, brand: c.brand, price: c.priceRange, image: c.heroImage, note: 'Avg. Ex-Showroom price' }));
+
+      if (relatedModels.length > 0) {
+        featuredGrid.innerHTML = relatedModels.map(c => `
+          <div class="cw-featured-car-card" onclick="window.location.href='cars.html?search=${encodeURIComponent(c.name)}'">
+            <img src="${c.image}" alt="${c.name}" class="cw-featured-car-img" onerror="this.src='assets/logo.png'">
+            <div>
+              <div style="font-size:15px; font-weight:800; color:#0F172A; margin-bottom:4px;">${c.name}</div>
+              <div style="font-size:14px; font-weight:800; color:#EA580C; margin-bottom:2px;">${c.price}</div>
+              <div style="font-size:11.5px; color:#64748B;">${c.note || 'Avg. Ex-Showroom price'}</div>
+            </div>
+          </div>
+        `).join('');
+        featuredSec.style.display = 'block';
+      } else {
+        featuredSec.style.display = 'none';
+      }
+
+      // Sidebar Related Cars
+      const sidebarCars = document.getElementById('artSidebarRelatedCars');
+      sidebarCars.innerHTML = relatedModels.map(c => `
+        <div class="cw-sidebar-car-item" onclick="window.location.href='cars.html?search=${encodeURIComponent(c.name)}'">
+          <img src="${c.image}" alt="${c.name}" class="cw-sidebar-car-img" onerror="this.src='assets/logo.png'">
+          <div>
+            <div class="cw-sidebar-car-name">${c.name}</div>
+            <div class="cw-sidebar-car-price">${c.price}</div>
+            <div class="cw-sidebar-car-note">${c.note || 'Avg. Ex-Showroom price'}</div>
+          </div>
+        </div>
+      `).join('');
+
+      // Sidebar Popular Updates
+      const popList = document.getElementById('artSidebarPopularList');
+      const otherUpdates = allArticlesList.filter(a => a.id !== art.id).slice(0, 4);
+      popList.innerHTML = otherUpdates.map(o => `
+        <div style="padding:10px 0; border-bottom:1px solid #F1F5F9; cursor:pointer;" onclick="openArticleDetail('${o.id}')">
+          <div style="font-size:13.5px; font-weight:700; color:#0F172A; line-height:1.35; margin-bottom:4px;">${o.title}</div>
+          <div style="font-size:11.5px; color:#94A3B8;">${o.timeAgo || o.date || 'Recent'} &bull; By ${String(o.author || '').replace(/^By\\s+/i, '')}</div>
+        </div>
+      `).join('');
+    }
+    window.openArticleDetail = openArticleDetail;
+
+    function closeArticleDetail() {
+      document.getElementById('articleDetailView').style.display = 'none';
+      document.getElementById('newsHubView').style.display = 'block';
+      history.pushState(null, '', 'news.html');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.closeArticleDetail = closeArticleDetail;
+
+    function shareCurrentArticle() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        alert('🔗 Article link copied to clipboard!');
+      } else {
+        prompt('Copy article link:', window.location.href);
+      }
+    }
+    window.shareCurrentArticle = shareCurrentArticle;
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (e) => {
+      const params = new URLSearchParams(window.location.search);
+      const artId = params.get('id');
+      if (artId) {
+        openArticleDetail(artId);
+      } else {
+        closeArticleDetail();
+      }
+    });
+  </script>
+</body>
+</html>

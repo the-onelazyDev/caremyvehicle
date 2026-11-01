@@ -861,10 +861,8 @@ window.switchLatestUpdatesTab = function(tabKey, btnEl) {
 };
 
 window.openAllUpdatesFromSection = function() {
-  const list = getActiveArticles().filter(a => a.enabled !== false);
-  if (list.length > 0) {
-    window.openArticleModal(list[0].id);
-  }
+  const tabParam = currentUpdatesTab || 'news';
+  window.location.href = `news.html?tab=${encodeURIComponent(tabParam)}`;
 };
 
 function renderNewsSection() {
@@ -903,7 +901,7 @@ function renderNewsSection() {
     const cleanDate = String(article.date || '31 Oct 2026').replace(/^Updated\s+/i, '').trim();
 
     return `
-    <article class="cw-news-card" onclick="window.openArticleModal('${article.id}')">
+    <article class="cw-news-card" onclick="window.location.href='news.html?id=${encodeURIComponent(article.id)}'">
       <div class="cw-news-card-media">
         <img id="newsHeroImg_${article.id}" src="${heroUrl}" alt="${article.title}" class="cw-news-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
         ${(currentUpdatesTab === 'videos' || article.isVideo) ? '<div class="cw-news-video-play">▶</div>' : ''}

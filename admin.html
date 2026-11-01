@@ -1984,15 +1984,15 @@
                   <input type="text" id="revTitleInput" class="form-input" oninput="syncCurrentReviewFields()">
                 </div>
                 <div>
-                  <label class="form-label">Category Badge</label>
+                  <label class="form-label">Category / Hub Tab</label>
                   <select id="revCategoryInput" class="form-select" onchange="syncCurrentReviewFields()">
-                    <option value="EXPERT REVIEW">EXPERT REVIEW</option>
-                    <option value="BUYING GUIDE">BUYING GUIDE</option>
-                    <option value="COMPARISON">COMPARISON</option>
-                    <option value="TEST DRIVE">TEST DRIVE</option>
-                    <option value="SAFETY GUIDE">SAFETY GUIDE</option>
-                    <option value="EV SPECIAL">EV SPECIAL</option>
-                    <option value="LATEST UPDATE">LATEST UPDATE</option>
+                    <option value="LATEST UPDATE">LATEST UPDATE (News Tab)</option>
+                    <option value="EXPERT REVIEW">EXPERT REVIEW (Reviews Tab)</option>
+                    <option value="BUYING GUIDE">BUYING GUIDE (News Tab)</option>
+                    <option value="COMPARISON">COMPARISON (News Tab)</option>
+                    <option value="TEST DRIVE">TEST DRIVE (Reviews Tab)</option>
+                    <option value="SPECIAL REPORT">SPECIAL REPORT (Special Reports Tab)</option>
+                    <option value="VIDEO REVIEW">VIDEO REVIEW (Videos Tab)</option>
                   </select>
                 </div>
               </div>
@@ -2003,18 +2003,22 @@
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
                   <div>
-                    <label class="form-label">Date Label</label>
-                    <input type="text" id="revDateInput" class="form-input" oninput="syncCurrentReviewFields()">
+                    <label class="form-label">Date Label / Time Ago</label>
+                    <input type="text" id="revDateInput" class="form-input" placeholder="e.g. 01 Nov 2026 or 11 minutes ago" oninput="syncCurrentReviewFields()">
                   </div>
                   <div>
-                    <label class="form-label">Read Time</label>
-                    <input type="text" id="revReadTimeInput" class="form-input" oninput="syncCurrentReviewFields()">
+                    <label class="form-label">Read Time / Views Count</label>
+                    <input type="text" id="revReadTimeInput" class="form-input" placeholder="e.g. 4 min read or 292 Views" oninput="syncCurrentReviewFields()">
                   </div>
                 </div>
               </div>
               <div style="margin-bottom:14px;">
                 <label class="form-label">Short Card Summary / Excerpt</label>
                 <textarea id="revExcerptInput" class="form-textarea" rows="2" oninput="syncCurrentReviewFields()"></textarea>
+              </div>
+              <div style="margin-bottom:14px;">
+                <label class="form-label">Key Highlights / Bullet Points (One point per line - Appears in CarWale Summary Box)</label>
+                <textarea id="revBulletsInput" class="form-textarea" rows="3" placeholder="Has already been spotted testing in India&#10;Current portfolio includes only three cars&#10;Powered by 37.23 kWh battery pack" oninput="syncCurrentReviewFields()"></textarea>
               </div>
               <div>
                 <label class="form-label">Full Review Content (HTML or Paragraphs)</label>
@@ -2028,8 +2032,8 @@
               Editing Review: <span id="barReviewTitle" style="color:#60A5FA;">--</span>
             </div>
             <div style="display:flex; gap:12px;">
-              <a href="index.html#newsSection" target="_blank" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; text-decoration:none;">
-                👁️ View on Home Page ↗
+              <a href="news.html" target="_blank" class="btn-act btn-act-outline" style="background:#FFFFFF; color:#0F172A; border:none; text-decoration:none;">
+                👁️ View on News Page ↗
               </a>
               <button type="button" class="btn-submit" style="padding:10px 22px; font-size:14px; box-shadow:none;" onclick="saveAllReviewsToLive()">
                 💾 Save All Reviews (Instant Live)
@@ -4420,9 +4424,10 @@
       document.getElementById('revTitleInput').value = art.title || '';
       document.getElementById('revCategoryInput').value = art.category || 'EXPERT REVIEW';
       document.getElementById('revAuthorInput').value = art.author || 'CMV Editorial Desk';
-      document.getElementById('revDateInput').value = art.date || 'Oct 2026';
-      document.getElementById('revReadTimeInput').value = art.readTime || '5 min read';
+      document.getElementById('revDateInput').value = art.timeAgo || art.date || 'Oct 2026';
+      document.getElementById('revReadTimeInput').value = art.viewsCount || art.readTime || '5 min read';
       document.getElementById('revExcerptInput').value = art.excerpt || '';
+      document.getElementById('revBulletsInput').value = Array.isArray(art.bulletPoints) ? art.bulletPoints.join('\n') : '';
       document.getElementById('revContentInput').value = art.content || '';
       const barTitle = document.getElementById('barReviewTitle');
       if (barTitle) barTitle.textContent = art.title || 'Untitled Review';
@@ -4516,6 +4521,8 @@
       art.date = document.getElementById('revDateInput')?.value || '';
       art.readTime = document.getElementById('revReadTimeInput')?.value || '';
       art.excerpt = document.getElementById('revExcerptInput')?.value || '';
+      const bulletsRaw = document.getElementById('revBulletsInput')?.value || '';
+      art.bulletPoints = bulletsRaw.split('\n').map(s => s.trim()).filter(Boolean);
       art.content = document.getElementById('revContentInput')?.value || '';
       const barTitle = document.getElementById('barReviewTitle');
       if (barTitle) barTitle.textContent = art.title || 'Untitled Review';

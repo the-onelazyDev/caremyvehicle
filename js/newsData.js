@@ -1,6 +1,58 @@
 // Care My Vehicle — Automotive News, In-Depth Reviews, Buying Guides & Popular Used Cars Dataset
 export const ARTICLES = [
   {
+    id: 'vinfast-vf5-facelift-patented-in-india-launch-around-the-corner',
+    category: 'LATEST UPDATE',
+    tabType: 'news',
+    badgeClass: 'badge-review',
+    title: 'Vinfast VF 5 Facelift Patented in India: Launch Around The Corner?',
+    excerpt: 'Vietnamese EV maker VinFast has patented the refreshed VF 5 electric compact SUV in India with a 37.23 kWh battery pack and 260 km claimed range.',
+    author: 'Aditya Nadkarni',
+    date: '01 Nov 2026',
+    timeAgo: '11 minutes ago',
+    viewsCount: '292 Views',
+    readTime: '3 min read',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp',
+    gallery: [
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp', caption: 'VinFast VF 5 Facelift Patent Stance in Studio Grey' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pristine-white.webp', caption: 'Side Profile & Aero Alloy Design' },
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp', caption: 'Rear Connected LED Taillight Cluster' }
+    ],
+    bulletPoints: [
+      'Has already been spotted testing on Indian roads',
+      'Current India EV portfolio includes three models — VF 6, VF 7, and VF 9',
+      'Powered by a 37.23 kWh battery pack paired with a 93 bhp electric motor',
+      'Claimed driving range of 260 km on a single charge to rival Tata Nexon EV and Punch EV'
+    ],
+    relatedCars: [
+      {
+        name: 'VinFast VF 6',
+        brand: 'VinFast',
+        price: 'Rs. 18.19 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/brezza/360/sizzling-red-bluish-black/4.webp',
+        note: 'Avg. Ex-Showroom price'
+      },
+      {
+        name: 'VinFast VF 3',
+        brand: 'VinFast',
+        price: 'Rs. 7.50 - 10.00 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp',
+        note: 'Expected Price'
+      }
+    ],
+    content: `
+      <p>Vietnamese automobile manufacturer VinFast has registered a patent for its new electric compact SUV, called the VF 5, albeit in the facelifted avatar. The company has been testing this model on Indian soil, details that were confirmed via spy shots that surfaced a few months ago.</p>
+      
+      <p>As seen in the patent design here, the VF 5 gets notable changes compared to the current iteration sold abroad. These changes include a reprofiled front bumper, fresh design for the headlamps that now sit lower on the fascia, a new sculpted bonnet, and a fresh design for the alloy wheels. A few elements that have been retained include blacked-out pillars, front door-mounted dual-tone ORVMs, conventional door handles, shark-fin antenna, and a black insert on the C-pillars.</p>
+      
+      <p>The spy shots of the VF 5 facelift have also hinted at changes like a revised taillight setup, wherein the split unit makes way for a single-piece setup. The rear bumper also receives a design update, but continues to soldier on with the same integrated spoiler with a high-mounted stop lamp as the outgoing car.</p>
+      
+      <p>Details regarding the changes to the interior of the VinFast VF 5 electric SUV remain scarce at the moment. We expect no changes to the powertrain, which is a 37.23 kWh battery pack paired with a single electric motor generating 93 bhp and promising a range of 260 km on a single charge. Once launched, it will rival the likes of the Tata Nexon EV, Mahindra XUV400, and MG ZS EV.</p>
+      
+      <p>The patent image for the VinFast VF 5 comes at a crucial time for the carmaker in India. The brand currently retails only three cars in the Indian market, including the VF 6, VF 7, and the VF MPV 7. We expect the company to showcase its range of upcoming cars for the local market at the upcoming Bharat Mobility Global Expo.</p>
+    `
+  },
+  {
     id: 'range-rover-sv-sawai-collection-2026',
     category: 'LATEST UPDATE',
     tabType: 'news',
@@ -9,20 +61,32 @@ export const ARTICLES = [
     excerpt: 'All 18 units are priced at Rs. 4.90 crore and feature bespoke Indian craftsmanship inspired by Jaipur heritage.',
     author: 'CMV Editorial Team',
     date: '31 Oct 2026',
+    timeAgo: '14 hours ago',
+    viewsCount: '1,420 Views',
     readTime: '4 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp',
     gallery: [
       { url: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp', caption: 'Range Rover SV Bespoke Showcase' },
       { url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp', caption: 'Luxury SUV Pavilion' }
     ],
+    bulletPoints: [
+      'Exclusively created for the Indian market, strictly limited to 18 collector units',
+      'Priced at Rs. 4.90 Crore (ex-showroom)',
+      'Hand-crafted ceramic SV roundels with 24k gold interior accents'
+    ],
+    relatedCars: [
+      {
+        name: 'Land Rover Defender',
+        brand: 'Land Rover',
+        price: 'Rs. 97.00 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
+    ],
     content: `
       <h3>Ultra-Exclusive Range Rover SV Sawai Edition</h3>
       <p>Land Rover India has unveiled the ultra-exclusive Range Rover SV Sawai Collection, strictly limited to 18 bespoke units crafted for discerning collectors in India.</p>
-      <ul>
-        <li><strong>Price:</strong> Priced at Rs. 4.90 Crore (Ex-Showroom, India).</li>
-        <li><strong>Bespoke Craftsmanship:</strong> Custom dual-tone exterior finishes, hand-finished ceramic SV roundels, and custom embroidered leather interiors.</li>
-        <li><strong>Powertrain:</strong> Twin-turbocharged V8 engine delivering effortless luxury touring performance.</li>
-      </ul>
+      <p>Each unit features custom dual-tone exterior finishes, hand-finished ceramic SV roundels, and custom embroidered leather interiors inspired by royal Rajasthani architecture.</p>
     `
   },
   {
@@ -34,6 +98,8 @@ export const ARTICLES = [
     excerpt: 'Here are all the cars across different body styles that you can buy with a hybrid powertrain in India right now.',
     author: 'Jay Shah',
     date: '31 Oct 2026',
+    timeAgo: '1 day ago',
+    viewsCount: '4,890 Views',
     readTime: '6 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp',
     gallery: [
@@ -41,14 +107,30 @@ export const ARTICLES = [
       { url: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2', caption: 'Toyota Innova Hycross Strong Hybrid' },
       { url: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp', caption: 'Honda City e:HEV Hybrid' }
     ],
+    bulletPoints: [
+      'Delivers genuine 23 - 28 km/l real-world city fuel efficiency',
+      'No charging plug required; battery charges automatically during braking and coasting',
+      'Options range from compact SUVs to executive sedans and 7-seater MPVs'
+    ],
+    relatedCars: [
+      {
+        name: 'Toyota Innova Hycross',
+        brand: 'Toyota',
+        price: 'Rs. 19.53 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2',
+        note: 'Avg. Ex-Showroom price'
+      },
+      {
+        name: 'Maruti Grand Vitara',
+        brand: 'Maruti Suzuki',
+        price: 'Rs. 10.99 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
+    ],
     content: `
-      <h3>Why Strong Hybrids Make Sense Under Rs. 30 Lakh</h3>
-      <p>Strong hybrid cars combine petrol convenience with EV-like city efficiency of 23–28 kmpl without range anxiety.</p>
-      <ul>
-        <li><strong>Maruti Suzuki Grand Vitara & Toyota Hyryder:</strong> 27.97 kmpl claimed efficiency with dedicated EV city mode.</li>
-        <li><strong>Honda City e:HEV:</strong> Dual-motor e-CVT strong hybrid sedan with standard ADAS Honda Sensing.</li>
-        <li><strong>Toyota Innova Hycross Hybrid:</strong> 7-seater family comfort with 21+ kmpl fuel efficiency.</li>
-      </ul>
+      <h3>Why Strong Hybrids Are Booming in India</h3>
+      <p>Strong hybrid vehicles deliver the ultimate bridge between internal combustion engines and pure battery EVs, providing exceptional city fuel economy without any charging infrastructure dependency.</p>
     `
   },
   {
@@ -60,19 +142,29 @@ export const ARTICLES = [
     excerpt: 'Both cars are being offered across two trim levels — Modena and Trofeo — powered by the 3.0L V6 Nettuno twin-turbo engine.',
     author: 'Desirazu Venkat',
     date: '30 Oct 2026',
+    timeAgo: '2 days ago',
+    viewsCount: '2,110 Views',
     readTime: '5 min read',
-    image: 'https://www.maserati.com/content/dam/maserati/international/Models/my24/grancabrio/my24-grancabrio-trofeo/gallery/01-1920x1080.jpg',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp',
     gallery: [
-      { url: 'https://www.maserati.com/content/dam/maserati/international/Models/my24/grancabrio/my24-grancabrio-trofeo/gallery/01-1920x1080.jpg', caption: 'Maserati GranCabrio Trofeo Front Quarter' },
-      { url: 'https://www.maserati.com/content/dam/maserati/international/Models/my24/grancabrio/my24-grancabrio-trofeo/gallery/02-1920x1080.jpg', caption: 'Open-Top Italian Grand Tourer' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp', caption: 'Italian Grand Tourer Profile' }
+    ],
+    bulletPoints: [
+      'Formula 1-derived 3.0L V6 Nettuno twin-turbo engine producing 550 CV',
+      '0 to 100 km/h in 3.6 seconds with standard all-wheel drive',
+      'Fabric soft top opens in 14 seconds at speeds up to 50 km/h'
+    ],
+    relatedCars: [
+      {
+        name: 'Maserati GranCabrio',
+        brand: 'Maserati',
+        price: 'Rs. 2.46 - 3.10 Cr',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp',
+        note: 'Ex-Showroom price'
+      }
     ],
     content: `
-      <h3>Maserati GranTurismo & GranCabrio Arrive in India</h3>
-      <p>Maserati has officially launched the MY27 GranTurismo coupe and GranCabrio convertible in India across Modena and high-output Trofeo trims.</p>
-      <ul>
-        <li><strong>Engine:</strong> Formula 1-derived 3.0L V6 Nettuno twin-turbo producing up to 550 CV and 650 Nm of torque.</li>
-        <li><strong>Performance:</strong> 0–100 km/h in 3.6 seconds with standard all-wheel drive (AWD).</li>
-      </ul>
+      <p>Maserati has officially expanded its grand tourer lineup in India with the arrival of the MY27 GranTurismo coupe and GranCabrio convertible.</p>
     `
   },
   {
@@ -84,21 +176,30 @@ export const ARTICLES = [
     excerpt: 'We drove the updated Nissan Magnite across city traffic and highways to test its reinforced body shell, 6 standard airbags, and refined Turbo CVT powertrain.',
     author: 'CMV Editorial Team',
     date: '29 Oct 2026',
+    timeAgo: '3 days ago',
+    viewsCount: '6,450 Views',
     readTime: '5 min read',
     image: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp',
     gallery: [
       { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/blade-silver.webp', caption: 'Blade Silver Side Profile' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/vivid-blue.webp', caption: 'Vivid Blue Dual-Tone Exterior' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/pearl-white.webp', caption: 'Storm White Studio Stance' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/vivid-blue.webp', caption: 'Vivid Blue Dual-Tone Exterior' }
+    ],
+    bulletPoints: [
+      '6 Airbags, ESC, and TPMS standard equipment across all variants',
+      'Refined 1.0L Turbo Petrol with X-Tronic CVT gearbox',
+      '205 mm ground clearance handles broken city roads effortlessly'
+    ],
+    relatedCars: [
+      {
+        name: 'Nissan Magnite',
+        brand: 'Nissan',
+        price: 'Rs. 5.99 - 11.50 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/nissan-magnite/colors/sunrise-copper-orange.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
     ],
     content: `
-      <h3>The Sub-Compact SUV With 320+ Thoughtful Upgrades</h3>
-      <p>The Nissan Magnite has always been known as the car that democratized turbo-petrol engines in the sub-4 meter SUV segment. With the newly launched facelift, Nissan India has made over 320 granular engineering and design upgrades, focusing on safety, cabin insulation, and interior ergonomics.</p>
-      <h4>Key Real-World Impressions:</h4>
-      <ul>
-        <li><strong>Structural Rigidity & Safety:</strong> Now equipped with 6 airbags as standard equipment across all variants from the base Visia trim onwards, alongside standard Electronic Stability Program (ESP), Traction Control System (TCS), and Tyre Pressure Monitoring System (TPMS).</li>
-        <li><strong>Powertrain Refinement:</strong> The 1.0L HRA0 Turbo Petrol paired with the X-TRONIC CVT delivers 100 PS and 152 Nm of torque.</li>
-      </ul>
+      <p>The Nissan Magnite has always been known as the car that democratized turbo-petrol engines in the sub-4 meter SUV segment. With the newly launched facelift, Nissan India has made over 320 granular engineering and design upgrades.</p>
     `
   },
   {
@@ -110,16 +211,29 @@ export const ARTICLES = [
     excerpt: 'Confused between MX3, AX5L, and AX7L? Here is our clear, no-nonsense buying guide comparing real on-road prices, features, and diesel vs petrol engines.',
     author: 'CMV Car Buying Desk',
     date: '28 Oct 2026',
+    timeAgo: '4 days ago',
+    viewsCount: '8,200 Views',
     readTime: '6 min read',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/hero.webp',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp',
     gallery: [
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/tango-red.webp', caption: 'Tango Red 5-Door Stance' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/everest-white.webp', caption: 'Everest White Signature Profile' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp', caption: 'Stealth Black 4x4 Presence' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/tango-red.webp', caption: 'Tango Red 5-Door Stance' }
+    ],
+    bulletPoints: [
+      '5-door everyday usability with spacious second row and 644L boot',
+      'Level 2 ADAS suite on AX5L and AX7L variants',
+      'Refined multi-link rear suspension with Watt linkage'
+    ],
+    relatedCars: [
+      {
+        name: 'Mahindra Thar Roxx',
+        brand: 'Mahindra',
+        price: 'Rs. 12.99 - 22.49 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
     ],
     content: `
-      <h3>5 Doors, 5 Seats, and True Everyday Practicality</h3>
-      <p>The Mahindra Thar Roxx transformed the rugged Thar formula into a genuine family SUV with 5 doors, a spacious second row, a 644L boot space, and a refined multi-link rear suspension with Watt's linkage.</p>
+      <p>The Mahindra Thar Roxx transformed the rugged Thar formula into a genuine family SUV with 5 doors, a spacious second row, a 644L boot space, and a refined multi-link rear suspension.</p>
     `
   },
   {
@@ -131,14 +245,28 @@ export const ARTICLES = [
     excerpt: 'Built on the robust MQB-A0-IN platform, the Kylaq brings European chassis tuning, 6 standard airbags, and a 1.0 TSI engine to the fiercely contested sub-4M segment.',
     author: 'CMV Automotive Reviewers',
     date: '26 Oct 2026',
+    timeAgo: '6 days ago',
+    viewsCount: '5,340 Views',
     readTime: '6 min read',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/hero.webp',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp',
     gallery: [
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/colors/olive-gold.webp', caption: 'Olive Gold Launch Edition' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/kylaq/colors/tornado-red.webp', caption: 'Tornado Red Sporty Stance' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp', caption: 'Olive Gold Launch Edition' }
+    ],
+    bulletPoints: [
+      'Segment-leading 446 litres of luggage space',
+      '1.0 TSI Turbo Petrol with 115 PS and 178 Nm torque',
+      'Solid European build quality on MQB-A0-IN platform'
+    ],
+    relatedCars: [
+      {
+        name: 'Škoda Kylaq',
+        brand: 'Škoda',
+        price: 'Rs. 7.89 - 14.40 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/skoda-kylaq/colors/olive-gold.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
     ],
     content: `
-      <h3>Democratizing German Ride and Handling</h3>
       <p>Skoda’s third made-for-India offering after the Kushaq and Slavia brings European driving dynamics, robust build quality, and a 5-Star crash safety heritage to the sub-₹10 Lakh bracket.</p>
     `
   },
@@ -152,57 +280,63 @@ export const ARTICLES = [
     excerpt: 'Detailed 1,000 km highway test of India’s first mass-market SUV Coupe comparing Hyperion Turbo Petrol vs 55 kWh Long Range EV.',
     author: 'CMV EV Special Lab',
     date: '25 Oct 2026',
+    timeAgo: '1 week ago',
+    viewsCount: '14,500 Views',
     readTime: '14:20 Video',
     image: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pristine-white.webp',
     gallery: [
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp', caption: 'Empowered Oxide EV Trim' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv/hero.webp', caption: 'Tata Curvv ICE Coupe Profile' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/empowered-oxide.webp', caption: 'Empowered Oxide EV Trim' }
+    ],
+    bulletPoints: [
+      'Curvv EV 55 kWh achieves 400 - 425 km real highway range',
+      'Running cost of ~Rs. 1.10/km for EV vs Rs. 6.60/km for Petrol',
+      'Over Rs. 2.75 Lakh in fuel savings over 50,000 km'
+    ],
+    relatedCars: [
+      {
+        name: 'Tata Curvv',
+        brand: 'Tata',
+        price: 'Rs. 10.00 - 19.00 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp',
+        note: 'Avg. Ex-Showroom price'
+      }
     ],
     content: `
-      <h3>SUV Coupe Styling Meets Pure Practicality</h3>
       <p>The Tata Curvv introduces striking aerodynamic fastback styling to the midsize SUV segment, achieving a 500-litre boot space and an ultra-commanding 208 mm ground clearance.</p>
     `
   },
   {
-    id: 'bharat-ncap-safety-radar-2025',
-    category: 'VIDEO REVIEW',
-    tabType: 'videos',
-    isVideo: true,
-    badgeClass: 'badge-safety-news',
-    title: 'Bharat NCAP 2026 Crash Test Breakdown: Safest 5-Star Family Cars in India',
-    excerpt: 'Watch how India’s safest SUVs and sedans perform in front offset and side pole impact tests under Bharat NCAP protocols.',
-    author: 'CMV Safety Desk',
-    date: '22 Oct 2026',
-    readTime: '11:45 Video',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/hero.webp',
-    gallery: [
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/nexon/360/fearless-purple/1.webp', caption: 'Tata Nexon 5-Star B-NCAP' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/ruby-velvet.webp', caption: 'Mahindra XUV700 Safety Flagship' }
-    ],
-    content: `
-      <h3>Safety is No Longer an Optional Luxury</h3>
-      <p>With Indian consumers prioritizing structural integrity and occupant safety above all else, Bharat NCAP has established transparent crash testing protocols.</p>
-    `
-  },
-  {
-    id: 'mg-windsor-ev-baas-explained',
-    category: 'VIDEO REVIEW',
-    tabType: 'videos',
-    isVideo: true,
-    badgeClass: 'badge-ev-news',
-    title: 'MG Windsor EV & Battery-as-a-Service (BaaS): Full Rear Lounge & Range Test',
-    excerpt: 'Breaking down the revolutionary ₹3.5/km BaaS ownership model, 135-degree reclining Aero Lounge seats, and city range.',
-    author: 'CMV Financial & EV Desk',
+    id: 'vinfast-vf3-mini-ev-walkaround',
+    category: 'SPECIAL REPORT',
+    tabType: 'special',
+    badgeClass: 'badge-review',
+    title: 'This is VinFast VF3 | Next Mini EV Rival to MG Comet EV?',
+    excerpt: 'We take a close look at the boxy 2-door VinFast VF3 mini electric SUV featuring rugged SUV styling, 10-inch screen, and 210 km range.',
+    author: 'CarWale Team',
     date: '20 Oct 2026',
-    readTime: '16:10 Video',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp',
+    timeAgo: '20 Apr 2026',
+    viewsCount: '145,509 Views',
+    readTime: 'Walkaround Video',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp',
     gallery: [
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/turquoise-green.webp', caption: 'Turquoise Green Aero Lounge' },
-      { url: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/pearl-white.webp', caption: 'Pearl White Side Stance' }
+      { url: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp', caption: 'VinFast VF3 Mini Electric SUV' }
+    ],
+    bulletPoints: [
+      'Ultra-compact 3.19-meter length with chunky 16-inch wheels',
+      'Expected price tag between Rs. 7.50 to 9.00 Lakh',
+      'Direct rival to MG Comet EV with higher ground clearance'
+    ],
+    relatedCars: [
+      {
+        name: 'VinFast VF 3',
+        brand: 'VinFast',
+        price: 'Rs. 7.50 - 10.00 Lakh',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/360/solid-fire-red/4.webp',
+        note: 'Expected Price'
+      }
     ],
     content: `
-      <h3>Lounge Aerocabin Comfort with Flexible Battery Rental</h3>
-      <p>The MG Windsor EV introduces India’s first large-scale Battery-as-a-Service (BaaS) ownership program.</p>
+      <p>The VinFast VF3 is creating massive global waves as a micro-electric off-roader designed for city mobility. With rugged styling, 4-seat capability, and rapid DC charging, it aims directly at young urban commuters.</p>
     `
   }
 ];
