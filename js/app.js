@@ -557,14 +557,20 @@ function renderTrendingLaunches() {
     return name.trim() || car.name;
   }
 
+  function safeAttr(str) {
+    return String(str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
   // Render horizontal pill cards matching CarWale uploaded screenshot
   let html = displayList.map(car => {
     const shortName = getShortModelName(car);
     const heroImg = car.heroImage || (car.images && car.images[0]) || 'assets/cars/default.png';
+    const safeTitle = safeAttr(car.name);
+    const safeName = safeAttr(shortName);
     return `
-      <div class="cw-trending-pill-card" onclick="window.navigateToCar('${car.id}')" title="${escapeHtml(car.name)}">
-        <img src="${heroImg}" alt="${escapeHtml(car.name)}" class="cw-trending-pill-img" loading="lazy" onerror="this.src='assets/cars/default.png'">
-        <span class="cw-trending-pill-name">${escapeHtml(shortName)}</span>
+      <div class="cw-trending-pill-card" onclick="window.navigateToCar('${car.id}')" title="${safeTitle}">
+        <img src="${heroImg}" alt="${safeTitle}" class="cw-trending-pill-img" loading="lazy" onerror="this.src='assets/cars/default.png'">
+        <span class="cw-trending-pill-name">${safeName}</span>
       </div>
     `;
   }).join('');
