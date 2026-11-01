@@ -155,7 +155,7 @@ const DEFAULT_HOMEPAGE_SECTIONS = [
   { key: 'compare', domId: 'compareSection', title: 'Compare Cars', visible: true, cardStyle: 'medium', layout: 'carousel' },
   { key: 'usedCarsByCity', domId: 'usedCarsByCitySection', title: 'Used Cars By City', visible: true, cardStyle: 'compact', layout: 'carousel' },
   { key: 'popularUsedCars', domId: 'popularUsedCarsSection', title: 'Popular Used Cars in India', visible: true, cardStyle: 'medium', layout: 'grid' },
-  { key: 'news', domId: 'newsSection', title: 'Latest Car Updates & Expert Reviews', visible: true, cardStyle: 'medium', layout: 'grid' }
+  { key: 'news', domId: 'newsSection', title: 'Latest Car Updates', visible: true, cardStyle: 'medium', layout: 'carousel' }
 ];
 
 function getHomepageConfig() {
@@ -817,10 +817,21 @@ function renderCars() {
 }
 
 // 5. 📰 Render Automotive Reviews & News Section
+let currentUpdatesTab = 'news';
+
 function getActiveArticles() {
   try {
     const custom = JSON.parse(localStorage.getItem('cmv_custom_articles') || 'null');
-    if (Array.isArray(custom) && custom.length > 0) return custom;
+    if (Array.isArray(custom) && custom.length > 0) {
+      const customMap = new Map(custom.map(a => [a.id, a]));
+      const merged = [...custom];
+      ARTICLES.forEach(defArt => {
+        if (!customMap.has(defArt.id)) {
+          merged.push(defArt);
+        }
+      });
+      return merged;
+    }
   } catch (e) {}
   return ARTICLES;
 }
@@ -831,9 +842,28 @@ window.swapNewsCardImg = function(event, articleId, imgUrl, thumbBtn) {
   if (imgEl) imgEl.src = imgUrl;
   if (thumbBtn && thumbBtn.parentElement) {
     thumbBtn.parentElement.querySelectorAll('.news-mini-thumb').forEach(b => {
-      b.style.borderColor = '#E2E8F0';
+      b.style.borderColor = 'rgba(255,255,255,0.85)';
     });
-    thumbBtn.style.borderColor = 'var(--primary)';
+    thumbBtn.style.borderColor = '#0D9488';
+  }
+};
+
+window.switchLatestUpdatesTab = function(tabKey, btnEl) {
+  currentUpdatesTab = tabKey || 'news';
+  document.querySelectorAll('#latestUpdatesTabs .cw-update-tab').forEach(b => {
+    b.classList.toggle('active', b === btnEl || b.getAttribute('data-utab') === currentUpdatesTab);
+  });
+  const bottomTxt = document.getElementById('allUpdatesBottomText');
+  if (bottomTxt) {
+    bottomTxt.textContent = currentUpdatesTab === 'reviews' ? 'All Expert Reviews' : (currentUpdatesTab === 'videos' ? 'All Videos' : 'All News');
+  }
+  renderNewsSection();
+};
+
+window.openAllUpdatesFromSection = function() {
+  const list = getActiveArticles().filter(a => a.enabled !== false);
+  if (list.length > 0) {
+    window.openArticleModal(list[0].id);
   }
 };
 
@@ -845,48 +875,55 @@ function renderNewsSection() {
   container.classList.remove('card-style-compact', 'card-style-big');
   if (secCfg.cardStyle === 'compact') container.classList.add('card-style-compact');
   if (secCfg.cardStyle === 'big') container.classList.add('card-style-big');
-  if (secCfg.layout === 'carousel') {
-    container.style.display = 'flex';
-    container.style.overflowX = 'auto';
-    container.style.gap = '20px';
-    container.style.paddingBottom = '12px';
-  } else {
-    container.style.display = '';
-    container.style.overflowX = '';
-    container.style.gap = '';
-    container.style.paddingBottom = '';
+
+  const allActive = getActiveArticles().filter(a => a.enabled !== false);
+  let filtered = allActive.filter(a => {
+    const cat = String(a.category || '').toUpperCase();
+    const tType = String(a.tabType || '').toLowerCase();
+    if (currentUpdatesTab === 'reviews') {
+      return tType === 'reviews' || cat.includes('REVIEW') || cat.includes('TEST DRIVE');
+    }
+    if (currentUpdatesTab === 'videos') {
+      return tType === 'videos' || a.isVideo || cat.includes('VIDEO');
+    }
+    return tType === 'news' || cat.includes('UPDATE') || cat.includes('NEWS') || cat.includes('GUIDE') || !a.tabType;
+  });
+
+  if (filtered.length < 3) {
+    allActive.forEach(a => {
+      if (!filtered.some(x => x.id === a.id)) filtered.push(a);
+    });
   }
 
-  const list = getActiveArticles().filter(a => a.enabled !== false);
-
-  container.innerHTML = list.map(article => {
+  container.innerHTML = filtered.map(article => {
     const heroUrl = article.heroImage || article.image || 'assets/logo.png';
-    const otherImgs = Array.isArray(article.gallery) ? article.gallery.filter(g => g && g.url) : [];
+    const otherImgs = Array.isArray(article.gallery) ? article.gallery.filter(g => g && g.url && g.url !== heroUrl) : [];
     const allPhotos = [{ url: heroUrl, caption: 'Hero Image' }, ...otherImgs];
+    const cleanAuthor = String(article.author || 'CMV Editorial Team').replace(/^By\s+/i, '').split('•')[0].trim();
+    const cleanDate = String(article.date || '31 Oct 2026').replace(/^Updated\s+/i, '').trim();
 
     return `
-    <article class="news-card" onclick="window.openArticleModal('${article.id}')">
-      <div class="news-card-media" style="position:relative;">
-        <img id="newsHeroImg_${article.id}" src="${heroUrl}" alt="${article.title}" class="news-card-img" loading="lazy" onerror="this.src='assets/logo.png'">
-        <span class="news-cat-badge ${article.badgeClass || 'badge-review'}">${article.category || 'EXPERT REVIEW'}</span>
-        ${otherImgs.length > 0 ? `<span style="position:absolute; bottom:10px; right:10px; background:rgba(15,23,42,0.82); color:#FFF; font-size:10.5px; font-weight:800; padding:3px 9px; border-radius:20px; backdrop-filter:blur(4px);">📷 ${allPhotos.length} Photos</span>` : ''}
+    <article class="cw-news-card" onclick="window.openArticleModal('${article.id}')">
+      <div class="cw-news-card-media">
+        <img id="newsHeroImg_${article.id}" src="${heroUrl}" alt="${article.title}" class="cw-news-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
+        ${(currentUpdatesTab === 'videos' || article.isVideo) ? '<div class="cw-news-video-play">▶</div>' : ''}
+        ${otherImgs.length > 0 ? `
+          <div class="cw-news-thumbs-overlay" onclick="event.stopPropagation()">
+            ${allPhotos.slice(0, 4).map((p, idx) => `
+              <button type="button" class="news-mini-thumb" onclick="window.swapNewsCardImg(event, '${article.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? '#0D9488' : 'rgba(255,255,255,0.85)'}; border-radius:5px; padding:0; background:#FFF; cursor:pointer; width:34px; height:24px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.28);" title="${p.caption || ''}">
+                <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:cover;">
+              </button>
+            `).join('')}
+          </div>
+        ` : ''}
       </div>
-      ${otherImgs.length > 0 ? `
-      <div style="display:flex; gap:6px; padding:8px 14px 0; overflow-x:auto; scrollbar-width:none;" onclick="event.stopPropagation()">
-        ${allPhotos.map((p, idx) => `
-          <button type="button" class="news-mini-thumb" onclick="window.swapNewsCardImg(event, '${article.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? 'var(--primary)' : '#E2E8F0'}; border-radius:6px; padding:1px; background:#FFF; cursor:pointer; flex-shrink:0; width:44px; height:30px; overflow:hidden;" title="${p.caption || ''}">
-            <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
-          </button>
-        `).join('')}
-      </div>
-      ` : ''}
-      <div class="news-card-body">
-        <h3 class="news-card-title">${article.title}</h3>
-        <p class="news-card-excerpt">${article.excerpt}</p>
-        <div class="news-card-footer">
-          <span>${article.author} • ${article.readTime}</span>
-          <span class="news-read-more">Read Review ➔</span>
+      <div class="cw-news-card-body">
+        <h3 class="cw-news-card-title">${article.title}</h3>
+        <div class="cw-news-card-meta">
+          <span>By ${cleanAuthor}</span>
+          <span>${cleanDate}</span>
         </div>
+        <p class="cw-news-card-excerpt">${article.excerpt || ''}</p>
       </div>
     </article>
   `;
@@ -2509,121 +2546,142 @@ const POPULAR_USED_CARS = [
     name: 'Maruti Suzuki Swift',
     brand: 'Maruti Suzuki',
     image: 'https://ik.imagekit.io/2908vvlod/cars/swift/360/sizzling-red-bluish-black/4.webp',
-    usedPriceRange: '₹2.50 – ₹7.20 Lakh',
-    retentionScore: '⭐ 4.9/5 Resale Demand',
+    avgPrice: 'Rs. 4.34 Lakh',
+    usedPriceRange: 'Rs. 4.34 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
     fuelTypes: ['Petrol', 'CNG', 'Diesel'],
     bodyType: 'Hatchback',
     mileage: '22.56 – 32.85 km/l',
-    topYears: '2018 – 2024',
-    badge: 'India’s #1 Resale Hatchback',
-    highlight: 'Lowest cost per km, ubiquitous spare parts, instant buyer liquidity across India.'
+    topYears: '2018 – 2024'
+  },
+  {
+    id: 'maruti-alto-800',
+    name: 'Maruti Suzuki Alto 800',
+    brand: 'Maruti Suzuki',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/celerio/colors/speedy-blue.webp',
+    avgPrice: 'Rs. 2.41 Lakh',
+    usedPriceRange: 'Rs. 2.41 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
+    fuelTypes: ['Petrol', 'CNG'],
+    bodyType: 'Hatchback',
+    mileage: '22.05 – 31.59 km/kg',
+    topYears: '2017 – 2023'
+  },
+  {
+    id: 'toyota-fortuner',
+    name: 'Toyota Fortuner',
+    brand: 'Toyota',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/napoli-black.webp',
+    avgPrice: 'Rs. 25.9 Lakh',
+    usedPriceRange: 'Rs. 25.9 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
+    fuelTypes: ['Diesel', 'Petrol'],
+    bodyType: 'Full-Size SUV',
+    mileage: '10.5 – 14.4 km/l',
+    topYears: '2017 – 2024'
+  },
+  {
+    id: 'hyundai-verna',
+    name: 'Hyundai Verna',
+    brand: 'Hyundai',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/radiant-red-metallic.webp',
+    avgPrice: 'Rs. 6.71 Lakh',
+    usedPriceRange: 'Rs. 6.71 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
+    fuelTypes: ['Petrol', 'Diesel'],
+    bodyType: 'Executive Sedan',
+    mileage: '18.6 – 24.0 km/l',
+    topYears: '2018 – 2024'
   },
   {
     id: 'honda-city',
     name: 'Honda City',
     brand: 'Honda',
     image: 'https://ik.imagekit.io/2908vvlod/cars/honda-city/colors/obsidian-blue-pearl.webp',
-    usedPriceRange: '₹3.20 – ₹9.80 Lakh',
-    retentionScore: '⭐ 4.8/5 Resale Demand',
+    avgPrice: 'Rs. 5.85 Lakh',
+    usedPriceRange: 'Rs. 5.85 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
     fuelTypes: ['Petrol', 'Diesel'],
     bodyType: 'Executive Sedan',
     mileage: '17.8 – 24.1 km/l',
-    topYears: '2016 – 2023',
-    badge: 'Timeless Japanese Reliability',
-    highlight: 'Legendary 1.5L i-VTEC engine easily exceeds 250,000 km without major overhaul.'
-  },
-  {
-    id: 'hyundai-i20',
-    name: 'Hyundai i20',
-    brand: 'Hyundai',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/i20/360/starry-night/1.webp',
-    usedPriceRange: '₹2.80 – ₹7.50 Lakh',
-    retentionScore: '⭐ 4.7/5 Resale Demand',
-    fuelTypes: ['Petrol', 'Diesel'],
-    bodyType: 'Premium Hatchback',
-    mileage: '19.8 – 25.2 km/l',
-    topYears: '2017 – 2024',
-    badge: 'Feature-Rich Premium Cabin',
-    highlight: 'High quality European fit & finish, sunroof, touchscreen, and great city driveability.'
-  },
-  {
-    id: 'mahindra-scorpio-n',
-    name: 'Mahindra Scorpio',
-    brand: 'Mahindra',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp',
-    usedPriceRange: '₹4.50 – ₹12.00 Lakh',
-    retentionScore: '⭐ 4.9/5 Resale Demand',
-    fuelTypes: ['Diesel'],
-    bodyType: 'Rugged 7-Seater SUV',
-    mileage: '15.0 – 16.5 km/l',
-    topYears: '2016 – 2023',
-    badge: 'Unstoppable Resale Retention',
-    highlight: 'Commanding road presence, indestructible ladder chassis, and massive rural + tier-2 demand.'
-  },
-  {
-    id: 'toyota-innova-hycross',
-    name: 'Toyota Innova / Crysta',
-    brand: 'Toyota',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2',
-    usedPriceRange: '₹5.50 – ₹16.50 Lakh',
-    retentionScore: '⭐ 5.0/5 The Resale King',
-    fuelTypes: ['Diesel', 'Petrol'],
-    bodyType: '7-Seater MPV',
-    mileage: '14.5 – 21.1 km/l',
-    topYears: '2015 – 2024',
-    badge: 'Highest Value Retention in India',
-    highlight: 'Often sells at near original invoice price after 5 years. Renowned for 500,000+ km longevity.'
+    topYears: '2016 – 2023'
   },
   {
     id: 'hyundai-creta',
     name: 'Hyundai Creta',
     brand: 'Hyundai',
     image: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
-    usedPriceRange: '₹6.50 – ₹13.50 Lakh',
-    retentionScore: '⭐ 4.9/5 Resale Demand',
+    avgPrice: 'Rs. 8.90 Lakh',
+    usedPriceRange: 'Rs. 8.90 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
     fuelTypes: ['Petrol', 'Diesel'],
     bodyType: 'Midsize SUV',
     mileage: '17.4 – 21.8 km/l',
-    topYears: '2018 – 2024',
-    badge: 'India’s #1 Used SUV',
-    highlight: 'Dominates the used SUV market with rapid turnover and premium resale value in all cities.'
+    topYears: '2018 – 2024'
   },
   {
-    id: 'maruti-baleno',
-    name: 'Maruti Suzuki Baleno',
-    brand: 'Maruti Suzuki',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/baleno/360/nexa-blue/4.webp',
-    usedPriceRange: '₹3.80 – ₹7.40 Lakh',
-    retentionScore: '⭐ 4.8/5 Resale Demand',
-    fuelTypes: ['Petrol', 'CNG'],
-    bodyType: 'Premium Hatchback',
-    mileage: '22.35 – 30.61 km/kg',
-    topYears: '2019 – 2024',
-    badge: 'Best Family Commuter Value',
-    highlight: 'Extremely spacious rear legroom, 22+ km/l real-world mileage, hassle-free maintenance.'
+    id: 'mahindra-scorpio-n',
+    name: 'Mahindra Scorpio',
+    brand: 'Mahindra',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/scorpio-n/colors/deep-forest.webp',
+    avgPrice: 'Rs. 7.45 Lakh',
+    usedPriceRange: 'Rs. 7.45 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
+    fuelTypes: ['Diesel'],
+    bodyType: 'Rugged SUV',
+    mileage: '15.0 – 16.5 km/l',
+    topYears: '2016 – 2023'
   },
   {
-    id: 'maruti-dzire',
-    name: 'Maruti Suzuki Dzire',
-    brand: 'Maruti Suzuki',
-    image: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
-    usedPriceRange: '₹3.10 – ₹7.20 Lakh',
-    retentionScore: '⭐ 4.8/5 Resale Demand',
-    fuelTypes: ['Petrol', 'CNG'],
-    bodyType: 'Compact Sedan',
-    mileage: '22.61 – 31.12 km/kg',
-    topYears: '2018 – 2024',
-    badge: 'Most Economical Boot Sedan',
-    highlight: '378L boot space, unmatched fuel efficiency, and lowest depreciation rate in the compact sedan class.'
+    id: 'toyota-innova-hycross',
+    name: 'Toyota Innova Crysta',
+    brand: 'Toyota',
+    image: 'https://ik.imagekit.io/2908vvlod/cars/toyota-innova-hycross/colors/platinum-white-pearl.webp?v=2',
+    avgPrice: 'Rs. 11.20 Lakh',
+    usedPriceRange: 'Rs. 11.20 Lakh',
+    exploreCities: ['Delhi', 'Mumbai', 'Bangalore'],
+    fuelTypes: ['Diesel', 'Petrol'],
+    bodyType: '7-Seater MPV',
+    mileage: '14.5 – 21.1 km/l',
+    topYears: '2015 – 2024'
   }
 ];
+
+let showAllPopularUsedCars = false;
 
 function getActivePopularUsedCars() {
   try {
     const custom = JSON.parse(localStorage.getItem('cmv_popular_used_cars') || 'null');
-    if (Array.isArray(custom) && custom.length > 0) return custom;
+    if (Array.isArray(custom) && custom.length > 0) {
+      const customMap = new Map(custom.map(c => [c.id, c]));
+      const merged = [...custom];
+      POPULAR_USED_CARS.forEach(defCar => {
+        if (!customMap.has(defCar.id)) {
+          merged.push(defCar);
+        }
+      });
+      return merged;
+    }
   } catch (e) {}
-  return typeof DEFAULT_POPULAR_USED_CARS !== 'undefined' ? DEFAULT_POPULAR_USED_CARS : POPULAR_USED_CARS;
+  return POPULAR_USED_CARS;
+}
+
+function formatUsedAveragePrice(car) {
+  if (car.avgPrice && String(car.avgPrice).trim()) {
+    return String(car.avgPrice).replace('₹', 'Rs. ');
+  }
+  const raw = String(car.usedPriceRange || 'Rs. 4.50 Lakh').trim();
+  const nums = raw.match(/\d+(?:\.\d+)?/g);
+  if (nums && nums.length >= 2) {
+    const n1 = parseFloat(nums[0]);
+    const n2 = parseFloat(nums[1]);
+    const avg = ((n1 + n2) / 2).toFixed(2).replace(/\.00$/, '');
+    return `Rs. ${avg} Lakh`;
+  }
+  if (nums && nums.length === 1) {
+    return `Rs. ${nums[0]} Lakh`;
+  }
+  return raw.replace('₹', 'Rs. ');
 }
 
 window.swapUsedCardImg = function(event, carId, imgUrl, thumbBtn) {
@@ -2634,72 +2692,73 @@ window.swapUsedCardImg = function(event, carId, imgUrl, thumbBtn) {
     thumbBtn.parentElement.querySelectorAll('.used-mini-thumb').forEach(b => {
       b.style.borderColor = '#E2E8F0';
     });
-    thumbBtn.style.borderColor = 'var(--primary)';
+    thumbBtn.style.borderColor = '#0D9488';
   }
+};
+
+window.toggleMorePopularUsedCars = function() {
+  showAllPopularUsedCars = !showAllPopularUsedCars;
+  renderPopularUsedCars();
 };
 
 function renderPopularUsedCars() {
   const container = document.getElementById('popularUsedGridContainer');
   if (!container) return;
 
-  const secCfg = getHomepageSectionConfig('popularUsedCars');
-  container.classList.remove('card-style-compact', 'card-style-big');
-  if (secCfg.cardStyle === 'compact') container.classList.add('card-style-compact');
-  if (secCfg.cardStyle === 'big') container.classList.add('card-style-big');
-  if (secCfg.layout === 'carousel') {
-    container.style.display = 'flex';
-    container.style.overflowX = 'auto';
-    container.style.gap = '18px';
-    container.style.paddingBottom = '12px';
-  } else {
-    container.style.display = '';
-    container.style.overflowX = '';
-    container.style.gap = '';
-    container.style.paddingBottom = '';
+  const fullList = getActivePopularUsedCars().filter(c => c.enabled !== false);
+  const displayList = showAllPopularUsedCars ? fullList : fullList.slice(0, 4);
+
+  const toggleBtn = document.getElementById('toggleMoreUsedCarsBtn');
+  const toggleTxt = document.getElementById('toggleMoreUsedCarsText');
+  const toggleIcon = document.getElementById('toggleMoreUsedCarsIcon');
+  if (toggleBtn) {
+    toggleBtn.style.display = fullList.length > 4 ? 'inline-flex' : 'none';
+  }
+  if (toggleTxt) {
+    toggleTxt.textContent = showAllPopularUsedCars ? 'View Less Used Cars' : 'View More Used Cars';
+  }
+  if (toggleIcon) {
+    toggleIcon.style.transform = showAllPopularUsedCars ? 'rotate(180deg)' : 'rotate(0deg)';
   }
 
-  const list = getActivePopularUsedCars().filter(c => c.enabled !== false);
-
-  container.innerHTML = list.map(car => {
+  container.innerHTML = displayList.map(car => {
     const heroUrl = car.heroImage || car.image || 'assets/logo.png';
-    const otherImgs = Array.isArray(car.gallery) ? car.gallery.filter(g => g && g.url) : [];
+    const otherImgs = Array.isArray(car.gallery) ? car.gallery.filter(g => g && g.url && g.url !== heroUrl) : [];
     const allPhotos = [{ url: heroUrl, caption: car.name + ' Hero' }, ...otherImgs];
-    const fuels = Array.isArray(car.fuelTypes) ? car.fuelTypes.join('/') : (car.fuelTypes || 'Petrol');
+    const usedTitle = /^Used\s+/i.test(car.name || '') ? car.name : `Used ${car.name}`;
+    const avgPriceText = formatUsedAveragePrice(car);
+    const exploreCities = Array.isArray(car.exploreCities) && car.exploreCities.length > 0
+      ? car.exploreCities
+      : ['Delhi', 'Mumbai', 'Bangalore'];
 
     return `
-    <article class="popular-used-card" onclick="window.showUsedCarsComingSoon(event)">
-      <div class="popular-used-media" style="position:relative;">
-        <div class="popular-used-badge-row">
-          <span class="popular-used-demand-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 COMING SOON</span>
-          <span class="popular-used-years-badge">📅 ${car.topYears || '2018 – 2024'}</span>
-        </div>
-        <img id="usedHeroImg_${car.id}" src="${heroUrl}" alt="${car.name}" class="popular-used-img" loading="lazy" onerror="this.src='assets/logo.png'">
-        ${otherImgs.length > 0 ? `<span style="position:absolute; bottom:8px; right:10px; background:rgba(15,23,42,0.78); color:#FFF; font-size:10px; font-weight:800; padding:2px 8px; border-radius:16px;">📷 ${allPhotos.length} Photos</span>` : ''}
+    <article class="cw-popular-used-card" onclick="window.showUsedCarsComingSoon(event)">
+      <div class="cw-used-card-left">
+        <img id="usedHeroImg_${car.id}" src="${heroUrl}" alt="${usedTitle}" class="cw-used-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
+        ${otherImgs.length > 0 ? `
+          <div class="cw-used-thumbs-row" onclick="event.stopPropagation()">
+            ${allPhotos.slice(0, 4).map((p, idx) => `
+              <button type="button" class="used-mini-thumb" onclick="window.swapUsedCardImg(event, '${car.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:1.5px solid ${idx === 0 ? '#0D9488' : '#E2E8F0'}; border-radius:4px; padding:1px; background:#FFF; cursor:pointer; width:28px; height:20px; overflow:hidden;" title="${p.caption || ''}">
+                <img src="${p.url}" alt="" style="width:100%; height:100%; object-fit:contain;">
+              </button>
+            `).join('')}
+          </div>
+        ` : ''}
       </div>
-      ${otherImgs.length > 0 ? `
-      <div style="display:flex; gap:6px; padding:8px 14px 2px; overflow-x:auto; scrollbar-width:none; background:#F8FAFC; border-bottom:1px solid #F1F5F9;" onclick="event.stopPropagation()">
-        ${allPhotos.map((p, idx) => `
-          <button type="button" class="used-mini-thumb" onclick="window.swapUsedCardImg(event, '${car.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? 'var(--primary)' : '#E2E8F0'}; border-radius:6px; padding:1px; background:#FFF; cursor:pointer; flex-shrink:0; width:44px; height:30px; overflow:hidden;" title="${p.caption || ''}">
-            <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:contain; border-radius:4px;">
-          </button>
-        `).join('')}
-      </div>
-      ` : ''}
-      <div class="popular-used-body">
-        <span class="popular-used-brand">${car.brand} • ${car.bodyType || 'SUV'}</span>
-        <h3 class="popular-used-title">${car.name}</h3>
-        <div class="popular-used-price-tag">
-          <span class="popular-used-price-val">${car.usedPriceRange}</span>
-          <span class="popular-used-price-lbl">(Est. Used Benchmark)</span>
+      <div class="cw-used-card-right">
+        <h3 class="cw-used-card-title">${usedTitle}</h3>
+        <div class="cw-used-price-row">
+          <span class="cw-used-price-val">${avgPriceText}</span>
+          <span class="cw-used-price-sub">Average Price</span>
         </div>
-        <div class="popular-used-specs-mini">
-          <span class="used-spec-chip">⛽ ${fuels}</span>
-          <span class="used-spec-chip">⚡ ${car.mileage || '18+ km/l'}</span>
+        <div class="cw-used-explore-row">
+          <span class="cw-used-explore-lbl">Explore in:</span>
+          <div class="cw-used-city-pills">
+            ${exploreCities.map(city => `
+              <button type="button" class="cw-used-city-pill" onclick="event.stopPropagation(); window.showUsedCarsComingSoon(event)">${city}</button>
+            `).join('')}
+          </div>
         </div>
-        <p class="popular-used-highlight">${car.highlight || ''}</p>
-        <button type="button" class="btn-explore-used" onclick="window.showUsedCarsComingSoon(event)">
-          <span>🚀 Used Marketplace: Coming Soon &rsaquo;</span>
-        </button>
       </div>
     </article>
   `;
@@ -2717,46 +2776,55 @@ const USED_CARS_CITIES = [
   {
     id: 'delhi',
     name: 'Delhi',
-    count: '10,700+ Cars',
+    count: '10,800+ Cars',
     fromPrice: 'From Rs. 45,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 56h40M16 56V26h32v30M24 26V18h16v8M28 18V12h8v6M26 56V38a6 6 0 0 1 12 0v18M14 26h36M18 20h28"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27 50V33C27 30.2 29.2 28 32 28C34.8 28 37 30.2 37 33V50H27Z" fill="#99F6E4"/>
+      <rect x="22" y="13" width="20" height="4" fill="#99F6E4"/>
+      <path d="M12 50H52M19 50V21H45V50M22 21V13H42V21M26 13V9H38V13M16 21H48M18 17H46M27 50V33C27 30.2 29.2 28 32 28C34.8 28 37 30.2 37 33V50" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
     id: 'mumbai',
     name: 'Mumbai',
-    count: '9,200+ Cars',
+    count: '9,100+ Cars',
     fromPrice: 'From Rs. 45,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 56h44M16 56V30l6-4v-8l4-4 4 4v8l6 4v26M24 56V38a8 8 0 0 1 16 0v18M42 30v-8l4-4 4 4v8l6 4v26M12 30h40M22 18h20"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 50V36C25 32.1 28.1 29 32 29C35.9 29 39 32.1 39 36V50H25Z" fill="#99F6E4"/>
+      <path d="M27 21C27 18 29.2 15.5 32 15.5C34.8 15.5 37 18 37 21H27Z" fill="#99F6E4"/>
+      <path d="M8 50H56M12 50V23H52V50M12 23L15 17L18 23M46 23L49 17L52 23M27 21C27 18 29.2 15.5 32 15.5C34.8 15.5 37 18 37 21M32 12V15.5M10 27H54M25 50V36C25 32.1 28.1 29 32 29C35.9 29 39 32.1 39 36V50M16 50V39C16 37.3 17.3 36 19 36C20.7 36 22 37.3 22 39V50M42 50V39C42 37.3 43.3 36 45 36C46.7 36 48 37.3 48 39V50" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
     id: 'bengaluru',
     name: 'Bangalore',
-    count: '5,400+ Cars',
+    count: '5,500+ Cars',
     fromPrice: 'From Rs. 50,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 56h44M14 56V32h36v24M22 32V22c0-5.5 4.5-10 10-10s10 4.5 10 10v10M32 8v4M26 56V42a6 6 0 0 1 12 0v14M12 32h40M18 40h4M42 40h4"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 23C23 17.5 27 13 32 13C37 13 41 17.5 41 23H23Z" fill="#14B8A6" fill-opacity="0.45"/>
+      <rect x="20" y="29" width="24" height="5" fill="#99F6E4"/>
+      <path d="M10 50H54M14 50V29H50V50M19 29V23H45V29M23 23C23 17.5 27 13 32 13C37 13 41 17.5 41 23M32 9V13M16 23L18 19L20 23M44 23L46 19L48 23M22 50V35M28 50V35M36 50V35M42 50V35M12 35H52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
     id: 'pune',
     name: 'Pune',
-    count: '4,200+ Cars',
+    count: '4,100+ Cars',
     fromPrice: 'From Rs. 30,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 56h44M14 56V30c0-6 5-11 11-11h14c6 0 11 5 11 11v26M25 56V40a7 7 0 0 1 14 0v16M14 26l6-6h24l6 6M20 34h6M38 34h6"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M28 50V36C28 33.8 29.8 32 32 32C34.2 32 36 33.8 36 36V50H28Z" fill="#99F6E4"/>
+      <path d="M8 50H56M11 50V28L18 24V19L24 16H40L46 19V24L53 28V50M24 24V16M40 24V16M18 50V34C18 32.3 19.3 31 21 31C22.7 31 24 32.3 24 34V50M40 50V34C40 32.3 41.3 31 43 31C44.7 31 46 32.3 46 34V50M28 50V36C28 33.8 29.8 32 32 32C34.2 32 36 33.8 36 36V50M27 21H29M31 21H33M35 21H37" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
     id: 'hyderabad',
     name: 'Hyderabad',
-    count: '4,200+ Cars',
+    count: '4,100+ Cars',
     fromPrice: 'From Rs. 35,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 56h44M14 56V18l4-4 4 4v38M42 56V18l4-4 4 4v38M20 32c0-7 5.4-12 12-12s12 5 12 12v24M26 56V42a6 6 0 0 1 12 0v14M20 28h24M28 20h8"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26 50V37C26 33.7 28.7 31 32 31C35.3 31 38 33.7 38 37V50H26Z" fill="#99F6E4"/>
+      <rect x="22" y="23" width="20" height="4" fill="#99F6E4"/>
+      <path d="M12 50H52M18 50V14L20 10L22 14V50M42 50V14L44 10L46 14V50M22 23H42M22 28H42M26 50V37C26 33.7 28.7 31 32 31C35.3 31 38 33.7 38 37V50M29 19C29 17.3 30.3 16 32 16C33.7 16 35 17.3 35 19V23H29V19Z" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
@@ -2764,8 +2832,10 @@ const USED_CARS_CITIES = [
     name: 'Ahmedabad',
     count: '3,900+ Cars',
     fromPrice: 'From Rs. 30,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 56h40M18 56V32c0-8 6.3-14 14-14s14 6 14 14v24M26 56V42a6 6 0 0 1 12 0v14M16 26l16-12 16 12M32 10v4M22 36a10 10 0 0 1 20 0"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 23C24 18.6 27.6 15 32 15C36.4 15 40 18.6 40 23H24Z" fill="#99F6E4"/>
+      <path d="M27 50V37H37V50H27Z" fill="#99F6E4"/>
+      <path d="M8 50H56M14 50V31H50V50M10 31L18 23H46L54 31H10ZM24 23C24 18.6 27.6 15 32 15C36.4 15 40 18.6 40 23M32 11V15M21 50V37H27V50M37 50V37H43V50M27 37H37" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
@@ -2773,8 +2843,10 @@ const USED_CARS_CITIES = [
     name: 'Chennai',
     count: '3,500+ Cars',
     fromPrice: 'From Rs. 40,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 56h44M16 56V28h32v28M24 28V16h16v12M28 16V10h8v6M26 56V42a6 6 0 0 1 12 0v14M14 28h36M32 20v4"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26 20H38L40 28H24L26 20Z" fill="#99F6E4"/>
+      <path d="M28 50V38C28 35.8 29.8 34 32 34C34.2 34 36 35.8 36 38V50H28Z" fill="#99F6E4"/>
+      <path d="M10 50H54M18 50L24 14H40L46 50M21 38H43M23 28H41M25 20H39M28 14V10H36V14M28 50V38C28 35.8 29.8 34 32 34C34.2 34 36 35.8 36 38V50" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   },
   {
@@ -2782,8 +2854,10 @@ const USED_CARS_CITIES = [
     name: 'Kolkata',
     count: '2,800+ Cars',
     fromPrice: 'From Rs. 35,000',
-    iconSvg: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M8 52h48M14 52V20l18 14 18-14v32M14 20h36M14 36l18-12 18 12M24 52V36M40 52V36M8 56h48"/>
+    iconSvg: `<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 25C24 20 27.6 16 32 16C36.4 16 40 20 40 25H24Z" fill="#99F6E4"/>
+      <path d="M28 50V38C28 35.8 29.8 34 32 34C34.2 34 36 35.8 36 38V50H28Z" fill="#99F6E4"/>
+      <path d="M8 50H56M14 50V29H50V50M20 29V25H44V29M24 25C24 20 27.6 16 32 16C36.4 16 40 20 40 25M32 11V16M16 29V21L18 18L20 21V29M44 29V21L46 18L48 21V29M28 50V38C28 35.8 29.8 34 32 34C34.2 34 36 35.8 36 38V50" stroke="#64748B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`
   }
 ];
@@ -2793,9 +2867,11 @@ function renderUsedCarsByCity() {
   if (!container) return;
 
   container.innerHTML = USED_CARS_CITIES.map(c => `
-    <div class="used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.showUsedCarsComingSoon(event)">
-      <div class="used-city-icon-wrap">${c.iconSvg}</div>
-      <div class="used-city-name">${c.name}</div>
+    <div class="cw-used-city-card ${c.id === selectedCityId ? 'active' : ''}" onclick="window.showUsedCarsComingSoon(event)">
+      <div class="cw-used-city-icon">${c.iconSvg}</div>
+      <div class="cw-used-city-name">${c.name}</div>
+      <div class="cw-used-city-count">${c.count}</div>
+      <div class="cw-used-city-from">${c.fromPrice}</div>
     </div>
   `).join('');
 }

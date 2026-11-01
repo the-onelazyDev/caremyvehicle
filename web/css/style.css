@@ -5893,6 +5893,451 @@ h1, h2, h3, .brand-font {
 }
 
 /* ==========================================================================
+   CARWALE-STYLE USED CARS BY CITY, POPULAR USED CARS & LATEST CAR UPDATES
+   ========================================================================== */
+.used-city-section,
+.popular-used-section,
+.news-section {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.cw-carousel-outer {
+  position: relative;
+}
+
+.cw-floating-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  color: #334155;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.18s ease;
+}
+
+.cw-floating-arrow:hover {
+  background: #F8FAFC;
+  color: #0F172A;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+}
+
+.cw-arrow-left {
+  left: -16px;
+}
+
+.cw-arrow-right {
+  right: -16px;
+}
+
+/* 1. Used Cars By City Cards */
+.cw-city-cards-row {
+  display: flex !important;
+  gap: 16px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  padding: 4px 2px 8px !important;
+  scroll-behavior: smooth;
+}
+
+.cw-city-cards-row::-webkit-scrollbar {
+  display: none;
+}
+
+.cw-used-city-card {
+  flex: 0 0 156px;
+  min-width: 156px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 20px 14px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cw-used-city-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
+}
+
+.cw-used-city-icon {
+  width: 68px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cw-used-city-icon svg {
+  width: 64px;
+  height: 54px;
+}
+
+.cw-used-city-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.cw-used-city-count {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #64748B;
+  margin-bottom: 4px;
+}
+
+.cw-used-city-from {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748B;
+}
+
+/* 2. Popular Used Cars in India (2-Column Horizontal Split Cards) */
+.cw-popular-used-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.cw-popular-used-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cw-popular-used-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.cw-used-card-left {
+  width: 148px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cw-used-card-img {
+  width: 144px;
+  height: 92px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.2s ease;
+}
+
+.cw-popular-used-card:hover .cw-used-card-img {
+  transform: scale(1.04);
+}
+
+.cw-used-thumbs-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  justify-content: center;
+}
+
+.cw-used-card-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.cw-used-card-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cw-used-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.cw-used-price-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.cw-used-price-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748B;
+}
+
+.cw-used-explore-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cw-used-explore-lbl {
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 400;
+}
+
+.cw-used-city-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cw-used-city-pill {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 999px;
+  padding: 4px 13px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.cw-used-city-pill:hover {
+  border-color: #0284C7;
+  color: #0284C7;
+  background: #F0F9FF;
+}
+
+.cw-view-more-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0284C7;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.cw-view-more-link:hover {
+  color: #0369A1;
+  text-decoration: underline;
+}
+
+/* 3. Latest Car Updates (Tabs + 3-Card Carousel) */
+.cw-updates-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 18px;
+}
+
+.cw-update-tab {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 8px 2px 11px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.cw-update-tab:hover {
+  color: #0F172A;
+}
+
+.cw-update-tab.active {
+  color: #0D9488;
+  font-weight: 700;
+  border-bottom-color: #0D9488;
+}
+
+.cw-news-carousel {
+  display: flex !important;
+  gap: 20px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  padding: 2px 2px 8px !important;
+  scroll-behavior: smooth;
+}
+
+.cw-news-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cw-news-card {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: 300px;
+  max-width: 390px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.cw-news-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07);
+  transform: translateY(-2px);
+}
+
+.cw-news-card-media {
+  position: relative;
+  width: 100%;
+  height: 195px;
+  background: #E2E8F0;
+  overflow: hidden;
+}
+
+.cw-news-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.cw-news-card:hover .cw-news-card-img {
+  transform: scale(1.03);
+}
+
+.cw-news-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.78);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-left: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.cw-news-thumbs-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.cw-news-card-body {
+  padding: 16px 18px 20px;
+  background: #F8FAFC;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cw-news-card-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cw-news-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.cw-news-card-excerpt {
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cw-popular-used-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .cw-popular-used-card {
+    padding: 14px 14px;
+    gap: 14px;
+  }
+  .cw-used-card-left {
+    width: 112px;
+  }
+  .cw-used-card-img {
+    width: 108px;
+    height: 74px;
+  }
+  .cw-news-card {
+    flex: 0 0 285px;
+    min-width: 285px;
+  }
+  .cw-floating-arrow {
+    display: none;
+  }
+}
+
+/* ==========================================================================
    CAR DETAIL PAGE MOBILE RESPONSIVE DESIGN (SCREENS <= 768px)
    Desktop (> 768px) remains 100% unchanged.
    ========================================================================== */
@@ -6682,5 +7127,450 @@ h1, h2, h3, .brand-font {
   }
   .horizontal-shelf.shelf-layout-grid.grid-cards-big {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   CARWALE-STYLE USED CARS BY CITY, POPULAR USED CARS & LATEST CAR UPDATES
+   ========================================================================== */
+.used-city-section,
+.popular-used-section,
+.news-section {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.cw-carousel-outer {
+  position: relative;
+}
+
+.cw-floating-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  color: #334155;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.18s ease;
+}
+
+.cw-floating-arrow:hover {
+  background: #F8FAFC;
+  color: #0F172A;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+}
+
+.cw-arrow-left {
+  left: -16px;
+}
+
+.cw-arrow-right {
+  right: -16px;
+}
+
+/* 1. Used Cars By City Cards */
+.cw-city-cards-row {
+  display: flex !important;
+  gap: 16px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  padding: 4px 2px 8px !important;
+  scroll-behavior: smooth;
+}
+
+.cw-city-cards-row::-webkit-scrollbar {
+  display: none;
+}
+
+.cw-used-city-card {
+  flex: 0 0 156px;
+  min-width: 156px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 20px 14px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cw-used-city-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
+}
+
+.cw-used-city-icon {
+  width: 68px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cw-used-city-icon svg {
+  width: 64px;
+  height: 54px;
+}
+
+.cw-used-city-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.cw-used-city-count {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #64748B;
+  margin-bottom: 4px;
+}
+
+.cw-used-city-from {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748B;
+}
+
+/* 2. Popular Used Cars in India (2-Column Horizontal Split Cards) */
+.cw-popular-used-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.cw-popular-used-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cw-popular-used-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.cw-used-card-left {
+  width: 148px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cw-used-card-img {
+  width: 144px;
+  height: 92px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.2s ease;
+}
+
+.cw-popular-used-card:hover .cw-used-card-img {
+  transform: scale(1.04);
+}
+
+.cw-used-thumbs-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  justify-content: center;
+}
+
+.cw-used-card-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.cw-used-card-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cw-used-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.cw-used-price-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.cw-used-price-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748B;
+}
+
+.cw-used-explore-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cw-used-explore-lbl {
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 400;
+}
+
+.cw-used-city-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cw-used-city-pill {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 999px;
+  padding: 4px 13px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.cw-used-city-pill:hover {
+  border-color: #0284C7;
+  color: #0284C7;
+  background: #F0F9FF;
+}
+
+.cw-view-more-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0284C7;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.cw-view-more-link:hover {
+  color: #0369A1;
+  text-decoration: underline;
+}
+
+/* 3. Latest Car Updates (Tabs + 3-Card Carousel) */
+.cw-updates-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 18px;
+}
+
+.cw-update-tab {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 8px 2px 11px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.cw-update-tab:hover {
+  color: #0F172A;
+}
+
+.cw-update-tab.active {
+  color: #0D9488;
+  font-weight: 700;
+  border-bottom-color: #0D9488;
+}
+
+.cw-news-carousel {
+  display: flex !important;
+  gap: 20px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  padding: 2px 2px 8px !important;
+  scroll-behavior: smooth;
+}
+
+.cw-news-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cw-news-card {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: 300px;
+  max-width: 390px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.cw-news-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07);
+  transform: translateY(-2px);
+}
+
+.cw-news-card-media {
+  position: relative;
+  width: 100%;
+  height: 195px;
+  background: #E2E8F0;
+  overflow: hidden;
+}
+
+.cw-news-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.cw-news-card:hover .cw-news-card-img {
+  transform: scale(1.03);
+}
+
+.cw-news-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.78);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-left: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.cw-news-thumbs-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.cw-news-card-body {
+  padding: 16px 18px 20px;
+  background: #F8FAFC;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cw-news-card-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cw-news-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.cw-news-card-excerpt {
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cw-popular-used-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .cw-popular-used-card {
+    padding: 14px 14px;
+    gap: 14px;
+  }
+  .cw-used-card-left {
+    width: 112px;
+  }
+  .cw-used-card-img {
+    width: 108px;
+    height: 74px;
+  }
+  .cw-news-card {
+    flex: 0 0 285px;
+    min-width: 285px;
+  }
+  .cw-floating-arrow {
+    display: none;
   }
 }

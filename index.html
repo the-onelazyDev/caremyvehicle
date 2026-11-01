@@ -524,13 +524,17 @@
   <!-- 13. 🏙️ USED CARS BY CITY SECTION -->
   <section id="usedCarsByCitySection" class="used-city-section" style="margin-top:36px;">
     <div class="section-container">
-      <div class="section-heading-row">
+      <div class="section-heading-row" style="margin-bottom:16px;">
         <div>
           <h2 class="section-main-title">Used Cars By City</h2>
         </div>
       </div>
-      <div class="used-city-shelf-scroll" id="usedCityShelfContainer">
-        <!-- Injected dynamically by app.js -->
+      <div class="cw-carousel-outer">
+        <button type="button" class="cw-floating-arrow cw-arrow-left" onclick="window.scrollShelf('usedCityShelfContainer', -340)" aria-label="Scroll left">‹</button>
+        <div class="used-city-shelf-scroll cw-city-cards-row" id="usedCityShelfContainer">
+          <!-- Injected dynamically by app.js -->
+        </div>
+        <button type="button" class="cw-floating-arrow cw-arrow-right" onclick="window.scrollShelf('usedCityShelfContainer', 340)" aria-label="Scroll right">›</button>
       </div>
     </div>
   </section>
@@ -538,15 +542,19 @@
   <!-- 14. 🚗 POPULAR USED CARS IN INDIA SECTION -->
   <section id="popularUsedCarsSection" class="popular-used-section" style="margin-top:36px;">
     <div class="section-container">
-      <div class="section-heading-row">
+      <div class="section-heading-row" style="margin-bottom:16px;">
         <div>
-          <span class="section-badge" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">🚀 LAUNCHING SOON</span>
-          <h2 class="section-main-title">Popular Used Cars in India <span class="used-soon-pill">Coming Soon</span></h2>
-          <p class="section-sub-title">India’s most trusted pre-owned models with verified market prices and exceptional resale value.</p>
+          <h2 class="section-main-title">Popular Used Cars in India</h2>
         </div>
       </div>
-      <div class="popular-used-grid" id="popularUsedGridContainer">
+      <div class="popular-used-grid cw-popular-used-grid" id="popularUsedGridContainer">
         <!-- Injected dynamically by app.js -->
+      </div>
+      <div style="margin-top:14px;">
+        <button type="button" id="toggleMoreUsedCarsBtn" class="cw-view-more-link" onclick="window.toggleMorePopularUsedCars()">
+          <span id="toggleMoreUsedCarsText">View More Used Cars</span>
+          <svg id="toggleMoreUsedCarsIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -554,15 +562,32 @@
   <!-- 15. 📰 LATEST CAR UPDATES SECTION -->
   <section id="newsSection" class="news-section" style="margin-top:36px;">
     <div class="section-container">
-      <div class="section-heading-row">
+      <div class="section-heading-row" style="margin-bottom:10px;">
         <div>
-          <span class="section-badge badge-editorial">📰 EXPERT REVIEWS & UPDATES</span>
-          <h2 class="section-main-title">Latest Car Updates & Expert Reviews</h2>
-          <p class="section-sub-title">100% independent automotive testing, variant comparisons, and real-world range reports.</p>
+          <h2 class="section-main-title">Latest Car Updates</h2>
         </div>
       </div>
-      <div class="news-grid" id="newsContainer">
-        <!-- Injected dynamically by app.js -->
+
+      <!-- CarWale-Style Underline Tabs: Car News | Expert Reviews | Videos -->
+      <div class="cw-updates-tabs-bar" id="latestUpdatesTabs">
+        <button type="button" class="cw-update-tab active" data-utab="news" onclick="window.switchLatestUpdatesTab('news', this)">Car News</button>
+        <button type="button" class="cw-update-tab" data-utab="reviews" onclick="window.switchLatestUpdatesTab('reviews', this)">Expert Reviews</button>
+        <button type="button" class="cw-update-tab" data-utab="videos" onclick="window.switchLatestUpdatesTab('videos', this)">Videos</button>
+      </div>
+
+      <div class="cw-carousel-outer">
+        <button type="button" class="cw-floating-arrow cw-arrow-left" onclick="window.scrollShelf('newsContainer', -380)" aria-label="Scroll left">‹</button>
+        <div class="news-grid cw-news-carousel" id="newsContainer">
+          <!-- Injected dynamically by app.js -->
+        </div>
+        <button type="button" class="cw-floating-arrow cw-arrow-right" onclick="window.scrollShelf('newsContainer', 380)" aria-label="Scroll right">›</button>
+      </div>
+
+      <div style="margin-top:16px;">
+        <button type="button" id="allUpdatesBottomLink" class="cw-view-more-link" onclick="window.openAllUpdatesFromSection()">
+          <span id="allUpdatesBottomText">All News</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
     </div>
   </section>
