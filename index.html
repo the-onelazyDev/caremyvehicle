@@ -265,36 +265,38 @@
     </div>
   </section>
 
-  <!-- 4. 🔥 SMALL TRENDING CARS SECTION (HORIZONTAL) -->
-  <section id="trendingSection" class="section-container" style="margin-top:30px;">
-    <div class="section-heading-row">
-      <div>
-        <span class="section-badge" style="background:#FEF2F2; color:#DC2626; border:1px solid #FECACA;">🔥 JUST LAUNCHED</span>
-        <h2 class="section-main-title">Trending Cars (2024–2026)</h2>
-        <p class="section-sub-title">The hottest new market entries with verified on-road pricing and official studio renders.</p>
+  <!-- 4. 📈 TRENDING CARS SECTION (MATCHING CARWALE UPLOADED SCREENSHOT) -->
+  <section id="trendingSection" class="section-container" style="margin-top:20px; margin-bottom:20px;">
+    <div class="trending-outer-card">
+      <div class="trending-header-bar">
+        <div class="trending-header-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#059669;">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+          <span>Trending Cars</span>
+        </div>
       </div>
-      <div class="shelf-controls">
-        <button class="shelf-scroll-btn" onclick="window.scrollShelf('trendingShelfContainer', -320)" title="Scroll left">‹</button>
-        <button class="shelf-scroll-btn" onclick="window.scrollShelf('trendingShelfContainer', 320)" title="Scroll right">›</button>
+      <div class="trending-pills-row-wrap">
+        <button type="button" class="trending-nav-btn trending-nav-prev" onclick="window.scrollShelf('trendingShelfContainer', -280)" title="Scroll left" aria-label="Previous">‹</button>
+        <div class="trending-pills-shelf" id="trendingShelfContainer">
+          <!-- Injected dynamically by renderTrendingLaunches() in app.js -->
+        </div>
+        <button type="button" class="trending-nav-btn trending-nav-next" onclick="window.scrollShelf('trendingShelfContainer', 280)" title="Scroll right" aria-label="Next">›</button>
       </div>
-    </div>
-    <div class="horizontal-shelf" id="trendingShelfContainer">
-      <!-- Injected dynamically by app.js -->
     </div>
   </section>
 
-  <!-- 5. 💰 POPULAR CARS BY BUDGET SECTION (WITH SUB-SECTIONS) -->
-  <section id="popularBudgetSection" class="section-container" style="margin-top:36px;">
-    <div style="border-bottom: 2px solid #F1F5F9; padding-bottom: 12px; margin-bottom: 20px;">
-      <span class="section-badge" style="background:#EFF6FF; color:#2563EB; border:1px solid #BFDBFE;">🏷️ POPULAR BY BUDGET</span>
-      <h2 class="section-main-title">Popular Cars By Budget</h2>
-      <p class="section-sub-title">Explore India's most popular cars segmented by price bracket and body style.</p>
+  <!-- 5. 💰 POPULAR CARS BY BUDGET SECTION (MAIN SECTION) -->
+  <section id="popularBudgetSection" class="section-container" style="margin-top:28px;">
+    <div style="margin-bottom: 22px;">
+      <h2 class="section-main-title" style="font-size:26px; font-weight:800; color:#0F172A; margin:0 0 4px 0;">Popular Cars By Budget</h2>
     </div>
 
     <!-- 5A. Sub-section: Cars Under 10 Lakh (Matching User Uploaded Image 1) -->
     <div id="carsUnder10LSection" style="margin-bottom:34px;">
-      <h3 class="brand-font" style="font-size:22px; color:#0F172A; display:flex; align-items:center; gap:8px;">
-        <span style="display:inline-block; width:4px; height:18px; background:var(--primary); border-radius:2px;"></span>
+      <h3 class="brand-font" style="font-size:18px; font-weight:700; color:#1E293B; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+        <span style="display:inline-block; width:4px; height:18px; background:#F59E0B; border-radius:2px;"></span>
         Cars Under 10 Lakh
       </h3>
       
@@ -313,8 +315,8 @@
 
     <!-- 5B. Sub-section: Cars Above 10 Lakh (Matching User Uploaded Image 2) -->
     <div id="carsAbove10LSection">
-      <h3 class="brand-font" style="font-size:22px; color:#0F172A; display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-        <span style="display:inline-block; width:4px; height:18px; background:var(--primary); border-radius:2px;"></span>
+      <h3 class="brand-font" style="font-size:18px; font-weight:700; color:#1E293B; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+        <span style="display:inline-block; width:4px; height:18px; background:#F59E0B; border-radius:2px;"></span>
         Cars Above 10 Lakh
       </h3>
 

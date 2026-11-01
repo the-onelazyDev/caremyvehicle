@@ -7574,3 +7574,139 @@ h1, h2, h3, .brand-font {
     display: none;
   }
 }
+
+
+/* ==========================================================================
+   TRENDING CARS PILL CARDS & SHELF REDESIGN (MATCHING CARWALE)
+   ========================================================================== */
+.trending-outer-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 14px 18px 16px 18px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  margin-top: 24px;
+}
+.trending-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.trending-header-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: -0.2px;
+}
+.trending-pills-row-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.trending-pills-shelf {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px;
+  width: 100%;
+}
+.trending-pills-shelf::-webkit-scrollbar {
+  display: none;
+}
+.cw-trending-pill-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 6px 16px 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.18s ease;
+  min-height: 52px;
+  text-decoration: none;
+}
+.cw-trending-pill-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+.cw-trending-pill-img {
+  width: 58px;
+  height: 38px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+}
+.cw-trending-pill-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #1E293B;
+  white-space: nowrap;
+}
+.cw-trending-explore-pill {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1E293B;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-height: 52px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.18s ease;
+}
+.cw-trending-explore-pill:hover {
+  border-color: #0D9488;
+  color: #0F766E;
+  background: #F0FDFA;
+}
+.trending-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.15s ease;
+}
+.trending-nav-btn:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+.trending-nav-prev {
+  left: -14px;
+}
+.trending-nav-next {
+  right: -14px;
+}

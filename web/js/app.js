@@ -509,6 +509,61 @@ function renderTrendingLaunches() {
     customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
   } catch (e) {}
 
+  // Curated list prioritizing models matching the user's reference (Slavia, Swift, Tiago, Virtus, etc.)
+  const preferredIds = [
+    ...customIds,
+    'skoda-slavia',
+    'maruti-swift',
+    'tata-tiago',
+    'volkswagen-virtus',
+    'tata-curvv',
+    'skoda-kylaq',
+    'thar-roxx',
+    'hyundai-creta',
+    'mg-windsor-ev',
+    'nissan-magnite',
+    'maruti-brezza',
+    'kia-sonet'
+  ];
+
+  const trendingCars = [];
+  const seenIds = new Set();
+  
+  preferredIds.forEach(id => {
+    if (seenIds.has(id)) return;
+    const found = allCars.find(c => c.id === id);
+    if (found) {
+      seenIds.add(id);
+      trendingCars.push(found);
+    }
+  });
+
+  // Fallback to other available cars if fewer than 6
+  if (trendingCars.length < 6) {
+    allCars.forEach(c => {
+      if (!seenIds.has(c.id) && trendingCars.length < 10) {
+        seenIds.add(c.id);
+        trendingCars.push(c);
+      }
+    });
+  }
+
+  const displayList = getOrderedCarsForSection('trending', trendingCars, true);
+
+  // Helper to extract clean short model name (e.g., 'Skoda Slavia' -> 'Slavia', 'Maruti Suzuki Swift' -> 'Swift')
+  function getShortModelName(car) {
+    let name = car.name || '';
+    if (car.brand) {
+      name = name.replace(new RegExp('^' + car.brand.replace(/[.*+?^$\{}()|[\]\\]/g, '\\function renderTrendingLaunches() {
+  const container = document.getElementById('trendingShelfContainer');
+  if (!container) return;
+
+  const allCars = getAllCars();
+  let customIds = [];
+  try {
+    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
+  } catch (e) {}
+
   const trendingIds = [
     ...customIds,
     'nissan-magnite',
@@ -543,6 +598,37 @@ function renderTrendingLaunches() {
   if (cardStyle !== 'big') {
     html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches');
   }
+  container.innerHTML = html;
+}') + '\\s*', 'i'), '');
+    }
+    name = name.replace(/^(Maruti Suzuki|Maruti|Hyundai|Tata|Skoda|Volkswagen|Mahindra|Toyota|Honda|Kia|MG|Nissan|Renault)\s+/i, '');
+    return name.trim() || car.name;
+  }
+
+  // Render horizontal pill cards matching CarWale uploaded screenshot
+  let html = displayList.map(car => {
+    const shortName = getShortModelName(car);
+    const heroImg = car.heroImage || (car.images && car.images[0]) || 'assets/cars/default.png';
+    return `
+      <div class="cw-trending-pill-card" onclick="window.navigateToCar('${car.id}')" title="${escapeHtml(car.name)}">
+        <img src="${heroImg}" alt="${escapeHtml(car.name)}" class="cw-trending-pill-img" loading="lazy" onerror="this.src='assets/cars/default.png'">
+        <span class="cw-trending-pill-name">${escapeHtml(shortName)}</span>
+      </div>
+    `;
+  }).join('');
+
+  // Append Explore New Cars pill at the end matching screenshot
+  html += `
+    <a href="cars.html" class="cw-trending-explore-pill" title="Explore New Cars">
+      <svg width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 11 2 11.5 2 12v4c0 .6.4 1 1 1h2"></path>
+        <circle cx="7" cy="17" r="2"></circle>
+        <circle cx="17" cy="17" r="2"></circle>
+      </svg>
+      <span>Explore New Cars &rsaquo;</span>
+    </a>
+  `;
+
   container.innerHTML = html;
 }
 
