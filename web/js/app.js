@@ -3256,56 +3256,80 @@ window.filterAbove10L = function(filterKey, btn) {
 };
 
 // 5. Get Offers on Popular Cars
-function renderOffersShelf() {
-  const container = document.getElementById('offersShelf');
-  if (!container) return;
-
-  const offers = [
+function getActiveOffersList() {
+  const defaultOffers = [
     {
+      id: 'offer-1',
       carId: 'maruti-grand-vitara',
       name: 'Maruti Suzuki Grand Vitara',
       savings: 'Up to ₹1,28,000 Total Benefits',
       highlight: 'Exchange Bonus + Corporate Discount + 5 Year Warranty',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp'
+      image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp',
+      enabled: true
     },
     {
+      id: 'offer-2',
       carId: 'tata-safari',
       name: 'Tata Safari & Harrier',
       savings: 'Up to ₹1,40,000 Festive Savings',
       highlight: 'Cash Discount + Scrappage Bonus + 3 Yrs Free Maintenance',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp'
+      image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp',
+      enabled: true
     },
     {
+      id: 'offer-3',
       carId: 'mahindra-xuv700',
       name: 'Mahindra XUV700 (AX7 Series)',
       savings: 'Flat ₹2,00,000 Price Cut',
       highlight: 'Official OEM celebration price cut on high-spec variants',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp'
+      image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp',
+      enabled: true
     },
     {
+      id: 'offer-4',
       carId: 'hyundai-creta',
       name: 'Hyundai Creta & Venue',
       savings: 'Up to ₹45,000 Special Benefits',
       highlight: 'Corporate benefit + 6.99% low EMI interest financing',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/creta/colors/ranger-khaki.webp'
+      image: 'https://ik.imagekit.io/2908vvlod/cars/creta/colors/ranger-khaki.webp',
+      enabled: true
     },
     {
+      id: 'offer-5',
       carId: 'mg-windsor-ev',
       name: 'MG Windsor EV (BaaS)',
       savings: 'Battery-as-a-Service at ₹3.5/km',
       highlight: 'Free 1 Year Public Charging + Lifetime Battery Warranty',
-      image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp'
+      image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp',
+      enabled: true
     }
   ];
 
-  container.innerHTML = offers.map(o => `
-    <div class="offer-card" onclick="window.navigateToCar('${o.carId}')" style="cursor:pointer;">
-      <span class="offer-savings-badge">${o.savings}</span>
+  try {
+    const saved = localStorage.getItem('cmv_custom_offers');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
+  } catch (e) {}
+
+  return defaultOffers;
+}
+
+function renderOffersShelf() {
+  const container = document.getElementById('offersShelf');
+  if (!container) return;
+
+  const allOffers = getActiveOffersList().filter(o => o.enabled !== false);
+
+  container.innerHTML = allOffers.map(o => `
+    <div class="offer-card" onclick="window.navigateToCar('${o.carId || ''}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
+      <span class="offer-savings-badge">${o.savings || 'Special Offer'}</span>
       <div style="height:120px; display:flex; align-items:center; justify-content:center;">
-        <img src="${o.image}" alt="${o.name}" style="max-width:90%; max-height:100px; object-fit:contain; filter:drop-shadow(0 6px 10px rgba(0,0,0,0.1));">
+        <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" style="max-width:90%; max-height:100px; object-fit:contain; filter:drop-shadow(0 6px 10px rgba(0,0,0,0.1));" onerror="this.src='assets/logo.png'">
       </div>
-      <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name}</h4>
-      <p style="font-size:12px; color:#64748B; margin-bottom:12px;">${o.highlight}</p>
+      <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name || 'Special Offer'}</h4>
+      <p style="font-size:12px; color:#64748B; margin-bottom:12px; line-height:1.4;">${o.highlight || ''}</p>
       <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;">
         View Offer & Price &rsaquo;
       </button>

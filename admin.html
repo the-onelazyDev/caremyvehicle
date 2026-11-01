@@ -1355,6 +1355,10 @@
           <span class="sidebar-icon">🚗</span>
           <span class="sidebar-label">Popular Used Cars</span>
         </button>
+        <button type="button" class="admin-sidebar-btn" id="tabBtnOffersManager" onclick="switchAdminTab('offersManager')" style="color:#B45309;">
+          <span class="sidebar-icon">🎁</span>
+          <span class="sidebar-label">Get Offers on Cars</span>
+        </button>
 
         <div class="sidebar-section-label" style="margin-top:10px;">Tools & Imports</div>
         <button type="button" class="admin-sidebar-btn" id="tabBtnAddCar" onclick="switchAdminTab('addCar')">
@@ -2460,6 +2464,149 @@
         </div>
       </div><!-- end viewUsedCarsManager -->
 
+
+      <!-- ==========================================================================
+           VIEW 4B: 🎁 GET OFFERS ON POPULAR CARS STUDIO
+           ========================================================================== -->
+      <div id="viewOffersManager" style="display:none;">
+        <div class="section-card" style="margin-bottom:20px; background:linear-gradient(135deg, #FFFFFF, #FFFBEB); border:1px solid #FDE68A;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <div style="display:inline-flex; align-items:center; gap:6px; background:#FEF3C7; color:#B45309; padding:3px 10px; border-radius:20px; font-size:11.5px; font-weight:800; margin-bottom:6px;">
+                🎁 OEM DISCOUNTS & FESTIVE BENEFITS STUDIO
+              </div>
+              <h3 class="section-title" style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0F172A;">Manage "Get Offers on Popular Cars"</h3>
+              <p class="section-desc" style="margin:0; font-size:13px; color:#64748B;">
+                Add new festive consumer offers, edit discount badges, customize highlight text, swap card display order, change hero car photos, and delete outdated offers.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-act btn-act-show" onclick="createNewOfferCard()" style="background:#10B981; padding:9px 16px; font-size:13px;">
+                ➕ Add New Car Offer
+              </button>
+              <button type="button" class="btn-act btn-act-show" style="background:#2563EB; padding:9px 18px; font-size:13px;" onclick="saveAllOffersToLive()">
+                💾 Save Offers Live
+              </button>
+              <button type="button" class="btn-act btn-act-hide" onclick="resetOffersToDefaults()" style="padding:9px 12px; font-size:12px;">
+                🔄 Reset Defaults
+              </button>
+            </div>
+          </div>
+
+          <!-- Offers Cards Position Swapper & Preview Row -->
+          <div style="margin-top:20px; padding-top:16px; border-top:1px solid #FDE68A;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+              <span style="font-size:13px; font-weight:800; color:#0F172A;">
+                Active Offers on Homepage (<span id="offersCountBadge">0</span> Total Offers) • Click Card to Edit or Use ◀ / ▶ to Swap Positions:
+              </span>
+            </div>
+            <div id="offersAdminGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:14px;">
+              <!-- Injected dynamically by renderOffersAdminGrid() -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected Offer Workspace -->
+        <div id="offerEditorWorkspace">
+          <!-- Active Editing Bar -->
+          <div style="background:#0F172A; color:#FFFFFF; border-radius:14px; padding:14px 20px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="font-size:22px;">🎁</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:#94A3B8; text-transform:uppercase;">Currently Editing Offer Card</div>
+                <div id="barOfferCarName" style="font-size:16px; font-weight:800; color:#FFFFFF;">Select an offer above</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <button type="button" class="btn-act btn-act-show" onclick="saveAllOffersToLive()" style="background:#2563EB;">💾 Save Live</button>
+              <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentOfferCard()">🗑️ Delete Offer</button>
+            </div>
+          </div>
+
+          <!-- Section 1: Hero Car Cutout Image -->
+          <div class="editor-sec-card" style="margin-bottom:20px;">
+            <div class="editor-sec-header">
+              <div>
+                <h4 class="editor-sec-title">📸 1. Offer Hero Car Image (Transparent Cutout)</h4>
+                <div style="font-size:12px; color:#64748B;">This photo is rendered with soft drop shadow inside the offer card.</div>
+              </div>
+              <span style="font-size:12px; font-weight:800; color:#B45309; background:#FEF3C7; padding:4px 12px; border-radius:20px;">Hero Car Cutout</span>
+            </div>
+            <div class="editor-sec-body">
+              <div style="display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:center;">
+                <div style="background:#F8FAFC; border:1.5px dashed #CBD5E1; border-radius:16px; padding:16px; text-align:center; min-height:140px; display:flex; align-items:center; justify-content:center;">
+                  <img id="offerHeroPreview" src="" alt="Offer Car Preview" style="max-width:100%; max-height:120px; object-fit:contain; filter:drop-shadow(0 6px 10px rgba(0,0,0,0.1));" onerror="this.src='assets/logo.png'">
+                </div>
+                <div>
+                  <label class="form-label" style="font-weight:700;">Direct Cutout Image URL</label>
+                  <div style="display:flex; gap:8px; margin-bottom:12px;">
+                    <input type="url" id="offerImageUrlInput" class="form-input" style="flex:1;" placeholder="https://ik.imagekit.io/..." oninput="previewOfferHero(this.value)">
+                    <button type="button" class="btn-act btn-act-show" onclick="setOfferHeroFromInput()">Update Photo</button>
+                  </div>
+                  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <button type="button" class="btn-act" style="background:#F0FDF4; color:#15803D; border:1px solid #86EFAC;" onclick="switchAdminTab('imageKitExplorer')">
+                      🖼️ Browse ImageKit Asset Explorer to Pick Car Photo
+                    </button>
+                    <button type="button" class="btn-act btn-act-outline" onclick="autoFillOfferCarImage()">
+                      ⚡ Auto-Fill from Catalog Model
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Offer Details & Highlight Text -->
+          <div class="editor-sec-card" style="margin-bottom:20px;">
+            <div class="editor-sec-header">
+              <h4 class="editor-sec-title">📝 2. Car Name, Total Benefits & Festive Highlights</h4>
+            </div>
+            <div class="editor-sec-body">
+              <div class="form-grid-2" style="margin-bottom:16px;">
+                <div>
+                  <label class="form-label">Car Display Name *</label>
+                  <input type="text" id="offerNameInput" class="form-input" placeholder="e.g. Maruti Suzuki Grand Vitara" oninput="syncCurrentOfferFields()">
+                </div>
+                <div>
+                  <label class="form-label">Linked Catalog Car Model (Click Navigation)</label>
+                  <select id="offerLinkedCarSelect" class="form-select" onchange="onOfferLinkedCarChange()">
+                    <!-- Populated dynamically -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2" style="margin-bottom:16px;">
+                <div>
+                  <label class="form-label">Top Savings Pill Badge (e.g. Up to ₹1,50,000 Total Benefits) *</label>
+                  <input type="text" id="offerSavingsInput" class="form-input" placeholder="e.g. Up to ₹1,40,000 Festive Savings" oninput="syncCurrentOfferFields()">
+                </div>
+                <div>
+                  <label class="form-label">Offer Status / Display</label>
+                  <select id="offerEnabledSelect" class="form-select" onchange="syncCurrentOfferFields()">
+                    <option value="true">✅ Active on Live Website</option>
+                    <option value="false">🚫 Hidden / Inactive</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="form-label">Offer Highlights & Inclusions (Subtitle) *</label>
+                <textarea id="offerHighlightInput" class="form-textarea" rows="2" placeholder="e.g. Exchange Bonus + Corporate Discount + 5 Year Warranty" oninput="syncCurrentOfferFields()"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Save Actions -->
+          <div style="display:flex; justify-content:flex-end; gap:12px; padding:16px 0;">
+            <button type="button" class="btn-act btn-act-hide" onclick="deleteCurrentOfferCard()">🗑️ Delete This Offer</button>
+            <button type="button" class="btn-act btn-act-show" style="background:#2563EB; padding:12px 24px; font-size:14px;" onclick="saveAllOffersToLive()">
+              💾 Save All Offers (Live Update)
+            </button>
+          </div>
+        </div>
+      </div><!-- end viewOffersManager -->
+
+
       <!-- VIEW 6: AUTO-FETCH CAR FROM WEBPAGE LINK & LIVE PREVIEW STUDIO -->
       <div id="viewUrlImporter" style="display:none;">
         <!-- Step 1: Webpage URL Input Bar -->
@@ -3559,6 +3706,7 @@
         carEditor: document.getElementById('tabBtnCarEditor'),
         reviewsManager: document.getElementById('tabBtnReviewsManager'),
         usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
+        offersManager: document.getElementById('tabBtnOffersManager'),
         addCar: document.getElementById('tabBtnAddCar'),
         urlImporter: document.getElementById('tabBtnUrlImporter'),
         homepageBuilder: document.getElementById('tabBtnHomepageBuilder'),
@@ -3569,6 +3717,7 @@
         carEditor: document.getElementById('viewCarEditor'),
         reviewsManager: document.getElementById('viewReviewsManager'),
         usedCarsManager: document.getElementById('viewUsedCarsManager'),
+        offersManager: document.getElementById('viewOffersManager'),
         addCar: document.getElementById('viewAddCar'),
         urlImporter: document.getElementById('viewUrlImporter'),
         homepageBuilder: document.getElementById('viewHomepageBuilder'),
@@ -3588,6 +3737,8 @@
         initReviewsManager();
       } else if (tabName === 'usedCarsManager') {
         initUsedCarsManager();
+      } else if (tabName === 'offersManager') {
+        initOffersManager();
       } else if (tabName === 'urlImporter') {
         initUrlImporter();
       } else if (tabName === 'homepageBuilder') {
@@ -7512,6 +7663,324 @@
         showToast('📋 ImageKit URL copied to clipboard!');
       }
     }
+
+
+
+    // ==========================================================================
+    // 🎁 GET OFFERS ON POPULAR CARS ENGINE
+    // ==========================================================================
+    let adminOffersList = [];
+    let currentOfferIndex = 0;
+
+    const DEFAULT_OFFERS_TEMPLATE = [
+      {
+        id: 'offer-1',
+        carId: 'maruti-grand-vitara',
+        name: 'Maruti Suzuki Grand Vitara',
+        savings: 'Up to ₹1,28,000 Total Benefits',
+        highlight: 'Exchange Bonus + Corporate Discount + 5 Year Warranty',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/colors/opulent-red.webp',
+        enabled: true
+      },
+      {
+        id: 'offer-2',
+        carId: 'tata-safari',
+        name: 'Tata Safari & Harrier',
+        savings: 'Up to ₹1,40,000 Festive Savings',
+        highlight: 'Cash Discount + Scrappage Bonus + 3 Yrs Free Maintenance',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp',
+        enabled: true
+      },
+      {
+        id: 'offer-3',
+        carId: 'mahindra-xuv700',
+        name: 'Mahindra XUV700 (AX7 Series)',
+        savings: 'Flat ₹2,00,000 Price Cut',
+        highlight: 'Official OEM celebration price cut on high-spec variants',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp',
+        enabled: true
+      },
+      {
+        id: 'offer-4',
+        carId: 'hyundai-creta',
+        name: 'Hyundai Creta & Venue',
+        savings: 'Up to ₹45,000 Special Benefits',
+        highlight: 'Corporate benefit + 6.99% low EMI interest financing',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/creta/colors/ranger-khaki.webp',
+        enabled: true
+      },
+      {
+        id: 'offer-5',
+        carId: 'mg-windsor-ev',
+        name: 'MG Windsor EV (BaaS)',
+        savings: 'Battery-as-a-Service at ₹3.5/km',
+        highlight: 'Free 1 Year Public Charging + Lifetime Battery Warranty',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/mg-windsor-ev/colors/starburst-black.webp',
+        enabled: true
+      }
+    ];
+
+    function getWorkingOffers() {
+      try {
+        const saved = localStorage.getItem('cmv_custom_offers');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(DEFAULT_OFFERS_TEMPLATE));
+    }
+
+    function initOffersManager() {
+      adminOffersList = getWorkingOffers();
+      if (currentOfferIndex >= adminOffersList.length) currentOfferIndex = 0;
+      populateOfferLinkedCarsSelect();
+      renderOffersAdminGrid();
+      renderOfferEditor();
+    }
+    window.initOffersManager = initOffersManager;
+
+    function populateOfferLinkedCarsSelect() {
+      const select = document.getElementById('offerLinkedCarSelect');
+      if (!select) return;
+      const allCars = (Array.isArray(window.APP_CARS) && window.APP_CARS.length > 0)
+        ? window.APP_CARS
+        : (typeof getAllCars === 'function' ? getAllCars() : []);
+
+      let opts = '<option value="">-- Custom / No Specific Car Link --</option>';
+      allCars.forEach(c => {
+        opts += '<option value="' + escapeHtml(c.id) + '">' + escapeHtml(c.name) + '</option>';
+      });
+      select.innerHTML = opts;
+    }
+
+    function renderOffersAdminGrid() {
+      const grid = document.getElementById('offersAdminGrid');
+      const badge = document.getElementById('offersCountBadge');
+      if (badge) badge.textContent = adminOffersList.length;
+      if (!grid) return;
+
+      grid.innerHTML = adminOffersList.map((o, idx) => {
+        const isCurrent = idx === currentOfferIndex;
+        return `
+          <div class="editor-sec-card" style="margin:0; padding:14px; border:2px solid ${isCurrent ? 'var(--primary)' : '#E2E8F0'}; background:${isCurrent ? '#EFF6FF' : '#FFFFFF'}; border-radius:14px; position:relative; cursor:pointer;" onclick="selectOfferToEdit(${idx})">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:11px; font-weight:800; background:#FEF3C7; color:#B45309; padding:2px 8px; border-radius:8px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:160px;" title="${escapeHtml(o.savings)}">
+                ${escapeHtml(o.savings || 'Offer')}
+              </span>
+              <span style="font-size:11px; font-weight:800; color:${o.enabled !== false ? '#15803D' : '#DC2626'};">
+                ${o.enabled !== false ? '● Active' : '● Hidden'}
+              </span>
+            </div>
+
+            <div style="height:90px; display:flex; align-items:center; justify-content:center; background:#F8FAFC; border-radius:10px; margin-bottom:8px; padding:6px;">
+              <img src="${o.image || 'assets/logo.png'}" alt="${escapeHtml(o.name)}" style="max-width:90%; max-height:80px; object-fit:contain; filter:drop-shadow(0 4px 6px rgba(0,0,0,0.1));" onerror="this.src='assets/logo.png'">
+            </div>
+
+            <div style="font-size:13.5px; font-weight:800; color:#0F172A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${escapeHtml(o.name)}">
+              ${escapeHtml(o.name || 'Untitled Offer')}
+            </div>
+            <div style="font-size:11.5px; color:#64748B; margin-top:2px; height:32px; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;">
+              ${escapeHtml(o.highlight || '')}
+            </div>
+
+            <!-- Position Swapping Buttons -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:8px; border-top:1px solid #E2E8F0;" onclick="event.stopPropagation()">
+              <div style="display:flex; gap:6px;">
+                <button type="button" class="btn-act" style="padding:4px 8px; font-size:11px;" onclick="swapOfferPosition(${idx}, -1)" title="Move Left / Earlier" ${idx === 0 ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''}>
+                  ◀ Move
+                </button>
+                <button type="button" class="btn-act" style="padding:4px 8px; font-size:11px;" onclick="swapOfferPosition(${idx}, 1)" title="Move Right / Later" ${idx === adminOffersList.length - 1 ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''}>
+                  Move ▶
+                </button>
+              </div>
+              <span style="font-size:11px; font-weight:800; color:#94A3B8;">#${idx + 1}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectOfferToEdit(idx) {
+      currentOfferIndex = idx;
+      renderOffersAdminGrid();
+      renderOfferEditor();
+    }
+    window.selectOfferToEdit = selectOfferToEdit;
+
+    function renderOfferEditor() {
+      const o = adminOffersList[currentOfferIndex];
+      if (!o) return;
+
+      const preview = document.getElementById('offerHeroPreview');
+      const imgInput = document.getElementById('offerImageUrlInput');
+      if (preview) preview.src = o.image || 'assets/logo.png';
+      if (imgInput) imgInput.value = o.image || '';
+
+      const nameInput = document.getElementById('offerNameInput');
+      if (nameInput) nameInput.value = o.name || '';
+
+      const savingsInput = document.getElementById('offerSavingsInput');
+      if (savingsInput) savingsInput.value = o.savings || '';
+
+      const highlightInput = document.getElementById('offerHighlightInput');
+      if (highlightInput) highlightInput.value = o.highlight || '';
+
+      const linkedSelect = document.getElementById('offerLinkedCarSelect');
+      if (linkedSelect) linkedSelect.value = o.carId || '';
+
+      const enabledSelect = document.getElementById('offerEnabledSelect');
+      if (enabledSelect) enabledSelect.value = String(o.enabled !== false);
+
+      const barTitle = document.getElementById('barOfferCarName');
+      if (barTitle) barTitle.textContent = o.name || 'Untitled Offer';
+    }
+
+    function previewOfferHero(url) {
+      const preview = document.getElementById('offerHeroPreview');
+      if (preview) preview.src = (url || '').trim() || 'assets/logo.png';
+    }
+    window.previewOfferHero = previewOfferHero;
+
+    function setOfferHeroFromInput() {
+      const o = adminOffersList[currentOfferIndex];
+      if (!o) return;
+      const url = (document.getElementById('offerImageUrlInput')?.value || '').trim();
+      if (!url) {
+        alert('Please enter an image URL.');
+        return;
+      }
+      o.image = url;
+      renderOffersAdminGrid();
+      renderOfferEditor();
+      showToast('📸 Offer Hero image updated!');
+    }
+    window.setOfferHeroFromInput = setOfferHeroFromInput;
+
+    function autoFillOfferCarImage() {
+      const o = adminOffersList[currentOfferIndex];
+      if (!o) return;
+      const carId = o.carId || document.getElementById('offerLinkedCarSelect')?.value;
+      if (!carId) {
+        alert('Please select a Linked Catalog Car first.');
+        return;
+      }
+
+      const allCars = (Array.isArray(window.APP_CARS) && window.APP_CARS.length > 0)
+        ? window.APP_CARS
+        : (typeof getAllCars === 'function' ? getAllCars() : []);
+      const car = allCars.find(c => c.id === carId);
+      if (car && car.heroImage) {
+        o.image = car.heroImage;
+        if (!o.name) o.name = car.name;
+        renderOffersAdminGrid();
+        renderOfferEditor();
+        showToast('⚡ Auto-filled car cutout photo and name!');
+      } else {
+        alert('Could not find hero image for selected car in catalog.');
+      }
+    }
+    window.autoFillOfferCarImage = autoFillOfferCarImage;
+
+    function onOfferLinkedCarChange() {
+      const select = document.getElementById('offerLinkedCarSelect');
+      const o = adminOffersList[currentOfferIndex];
+      if (!select || !o) return;
+      o.carId = select.value;
+      if (!o.name && select.value) {
+        const selectedText = select.options[select.selectedIndex]?.text;
+        if (selectedText) o.name = selectedText;
+      }
+      syncCurrentOfferFields();
+    }
+    window.onOfferLinkedCarChange = onOfferLinkedCarChange;
+
+    function syncCurrentOfferFields() {
+      const o = adminOffersList[currentOfferIndex];
+      if (!o) return;
+
+      o.name = document.getElementById('offerNameInput')?.value || '';
+      o.savings = document.getElementById('offerSavingsInput')?.value || '';
+      o.highlight = document.getElementById('offerHighlightInput')?.value || '';
+      o.carId = document.getElementById('offerLinkedCarSelect')?.value || '';
+      o.enabled = document.getElementById('offerEnabledSelect')?.value !== 'false';
+
+      const barTitle = document.getElementById('barOfferCarName');
+      if (barTitle) barTitle.textContent = o.name || 'Untitled Offer';
+
+      renderOffersAdminGrid();
+    }
+    window.syncCurrentOfferFields = syncCurrentOfferFields;
+
+    function swapOfferPosition(idx, direction) {
+      const targetIdx = idx + direction;
+      if (targetIdx < 0 || targetIdx >= adminOffersList.length) return;
+
+      const temp = adminOffersList[idx];
+      adminOffersList[idx] = adminOffersList[targetIdx];
+      adminOffersList[targetIdx] = temp;
+
+      if (currentOfferIndex === idx) currentOfferIndex = targetIdx;
+      else if (currentOfferIndex === targetIdx) currentOfferIndex = idx;
+
+      renderOffersAdminGrid();
+      renderOfferEditor();
+      showToast('🔄 Swapped offer card position!');
+    }
+    window.swapOfferPosition = swapOfferPosition;
+
+    function createNewOfferCard() {
+      const newOffer = {
+        id: 'offer-' + Date.now(),
+        carId: '',
+        name: 'New Festive Car Offer 2026',
+        savings: 'Up to ₹1,00,000 Total Benefits',
+        highlight: 'Cash Discount + Exchange Bonus + Special Financing',
+        image: 'https://ik.imagekit.io/2908vvlod/cars/curvv/colors/flame-red.webp',
+        enabled: true
+      };
+      adminOffersList.unshift(newOffer);
+      currentOfferIndex = 0;
+      renderOffersAdminGrid();
+      renderOfferEditor();
+      showToast('➕ Created new offer card! Edit discount and car details below.');
+    }
+    window.createNewOfferCard = createNewOfferCard;
+
+    function deleteCurrentOfferCard() {
+      if (adminOffersList.length <= 1) {
+        alert('At least one offer card must remain.');
+        return;
+      }
+      if (!confirm('Are you sure you want to delete this offer card?')) return;
+      adminOffersList.splice(currentOfferIndex, 1);
+      if (currentOfferIndex >= adminOffersList.length) currentOfferIndex = adminOffersList.length - 1;
+      renderOffersAdminGrid();
+      renderOfferEditor();
+      showToast('🗑️ Offer card deleted!');
+    }
+    window.deleteCurrentOfferCard = deleteCurrentOfferCard;
+
+    function saveAllOffersToLive() {
+      try {
+        localStorage.setItem('cmv_custom_offers', JSON.stringify(adminOffersList));
+        showToast('✅ All car offers saved successfully! Refreshed on live website.');
+      } catch (e) {
+        alert('Error saving offers: ' + e.message);
+      }
+    }
+    window.saveAllOffersToLive = saveAllOffersToLive;
+
+    function resetOffersToDefaults() {
+      if (!confirm('Reset all offers back to factory defaults?')) return;
+      localStorage.removeItem('cmv_custom_offers');
+      adminOffersList = JSON.parse(JSON.stringify(DEFAULT_OFFERS_TEMPLATE));
+      currentOfferIndex = 0;
+      renderOffersAdminGrid();
+      renderOfferEditor();
+      showToast('🔄 Reset offers to factory defaults.');
+    }
+    window.resetOffersToDefaults = resetOffersToDefaults;
 
 </script>
 
