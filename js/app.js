@@ -949,15 +949,6 @@ function renderNewsSection() {
       <div class="cw-news-card-media">
         <img id="newsHeroImg_${article.id}" src="${heroUrl}" alt="${article.title}" class="cw-news-card-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
         ${(currentUpdatesTab === 'videos' || article.isVideo) ? '<div class="cw-news-video-play">▶</div>' : ''}
-        ${otherImgs.length > 0 ? `
-          <div class="cw-news-thumbs-overlay" onclick="event.stopPropagation()">
-            ${allPhotos.slice(0, 4).map((p, idx) => `
-              <button type="button" class="news-mini-thumb" onclick="window.swapNewsCardImg(event, '${article.id}', '${p.url.replace(/'/g, "\\'")}', this)" style="border:2px solid ${idx === 0 ? '#0D9488' : 'rgba(255,255,255,0.85)'}; border-radius:5px; padding:0; background:#FFF; cursor:pointer; width:34px; height:24px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.28);" title="${p.caption || ''}">
-                <img src="${p.url}" alt="${p.caption || ''}" style="width:100%; height:100%; object-fit:cover;">
-              </button>
-            `).join('')}
-          </div>
-        ` : ''}
       </div>
       <div class="cw-news-card-body">
         <h3 class="cw-news-card-title">${article.title}</h3>

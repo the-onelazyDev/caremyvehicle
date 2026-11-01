@@ -1221,6 +1221,49 @@
       }
     }
 
+
+    /* ==========================================================================
+       GALLERY ITEM & CARD VIEW FIX
+       ========================================================================== */
+    .editor-gallery-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.15s ease;
+      position: relative;
+    }
+    .editor-gallery-item:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+    }
+    .editor-gallery-item img {
+      width: 100% !important;
+      height: 150px !important;
+      max-height: 150px !important;
+      object-fit: contain !important;
+      background: #F8FAFC !important;
+      padding: 8px !important;
+      display: block !important;
+      box-sizing: border-box !important;
+    }
+    .editor-gallery-meta {
+      padding: 12px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-top: 1px solid #F1F5F9;
+    }
+    .editor-gallery-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
 </style>
 </head>
 <body>
@@ -4758,16 +4801,27 @@
 
       if (galGrid) {
         if (art.gallery.length === 0) {
-          galGrid.innerHTML = `<div style="grid-column:1/-1; padding:20px; text-align:center; color:#64748B;">No other images added yet. Use the form above to add additional photos for this review.</div>`;
+          galGrid.innerHTML = `<div style="grid-column:1/-1; padding:28px 16px; text-align:center; color:#64748B; background:#F8FAFC; border:1px dashed #CBD5E1; border-radius:12px;">
+            <div style="font-size:24px; margin-bottom:6px;">🖼️</div>
+            <strong style="font-size:13.5px; color:#334155;">No extra photos added yet</strong>
+            <p style="font-size:12px; margin:4px 0 0;">Use the form above to add interior, side profile, or dashboard shots with captions.</p>
+          </div>`;
         } else {
           galGrid.innerHTML = art.gallery.map((g, i) => `
             <div class="editor-gallery-item">
-              <img src="${g.url}" alt="${g.caption || 'Other Image'}" onerror="this.src='assets/logo.png'">
+              <div style="position:relative; background:#F8FAFC; overflow:hidden; border-radius:12px 12px 0 0;">
+                <img src="${g.url}" alt="${(g.caption || 'Other Image').replace(/"/g, '&quot;')}" onerror="this.src='assets/logo.png'">
+                <span style="position:absolute; top:8px; left:8px; font-size:10.5px; font-weight:800; background:rgba(15,23,42,0.75); color:#FFF; padding:2px 7px; border-radius:6px; backdrop-filter:blur(4px);">#${i + 1}</span>
+              </div>
               <div class="editor-gallery-meta">
-                <input type="text" class="form-input" style="padding:5px 8px; font-size:11.5px; margin-bottom:8px;" value="${(g.caption || '').replace(/"/g, '&quot;')}" placeholder="Image caption" oninput="updateReviewGalleryCaption(${i}, this.value)">
+                <input type="text" class="form-input" style="padding:6px 10px; font-size:12px;" value="${(g.caption || '').replace(/"/g, '&quot;')}" placeholder="Photo caption / angle name..." oninput="updateReviewGalleryCaption(${i}, this.value)">
                 <div class="editor-gallery-actions">
-                  <button type="button" class="btn-act btn-act-show" style="padding:4px 8px; font-size:11px; flex:1;" onclick="makeReviewGalleryHero(${i})">⭐ Make Hero</button>
-                  <button type="button" class="btn-act btn-act-hide" style="padding:4px 8px; font-size:11px;" onclick="deleteReviewGalleryImg(${i})">🗑️ Delete</button>
+                  <button type="button" class="btn-act btn-act-show" style="padding:7px 10px; font-size:12px; flex:1; background:#0D9488; justify-content:center;" onclick="makeReviewGalleryHero(${i})" title="Set this photo as the main Hero Cover Image">
+                    ⭐ Make Hero
+                  </button>
+                  <button type="button" class="btn-act btn-act-hide" style="padding:7px 10px; font-size:12px; justify-content:center;" onclick="deleteReviewGalleryImg(${i})" title="Delete photo from article">
+                    🗑️ Delete
+                  </button>
                 </div>
               </div>
             </div>
