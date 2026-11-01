@@ -1264,6 +1264,320 @@
       align-items: center;
     }
 
+    /* ==========================================================================
+       🌐 UNIVERSAL CARS & BRANDS DIRECTORY & LIVE PREVIEW STYLES
+       ========================================================================== */
+    .dir-metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .dir-metric-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+    .dir-metric-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .dir-metric-val {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .dir-controls-bar {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+    }
+    .dir-search-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .dir-search-input {
+      flex: 1;
+      min-width: 260px;
+      height: 44px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 500;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .dir-search-input:focus {
+      border-color: #0284C7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    .dir-brand-select {
+      height: 44px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 0 14px;
+      font-size: 13.5px;
+      font-weight: 700;
+      background: #FFFFFF;
+      color: #0F172A;
+      outline: none;
+      min-width: 200px;
+    }
+
+    .dir-filter-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .dir-chip-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid #E2E8F0;
+      background: #F8FAFC;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .dir-chip-btn:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+    }
+    .dir-chip-btn.active {
+      background: #0284C7;
+      color: #FFFFFF;
+      border-color: #0284C7;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+    }
+
+    .dir-cars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+
+    .dir-car-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+    .dir-car-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+    .dir-car-media {
+      position: relative;
+      width: 100%;
+      height: 165px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #E2E8F0;
+      margin-bottom: 12px;
+    }
+    .dir-car-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .dir-car-card:hover .dir-car-img {
+      transform: scale(1.04);
+    }
+    .dir-status-pill {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .status-live { background: #15803D; color: #FFFFFF; }
+    .status-unlisted { background: #475569; color: #FFFFFF; }
+    .status-new { background: #D97706; color: #FFFFFF; }
+    .status-upcoming { background: #2563EB; color: #FFFFFF; }
+
+    .dir-car-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .dir-brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748B;
+    }
+    .dir-brand-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+    .dir-car-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 2px 0 4px;
+    }
+    .dir-car-price {
+      font-size: 15.5px;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .dir-specs-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .dir-spec-tag {
+      background: #F1F5F9;
+      color: #334155;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .dir-car-tagline {
+      font-size: 12px;
+      color: #64748B;
+      line-height: 1.4;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .dir-card-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid #F1F5F9;
+    }
+    .btn-make-live {
+      flex: 1.2;
+      height: 38px;
+      background: #16A34A;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-make-live:hover {
+      background: #15803D;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    }
+    .btn-live-active {
+      flex: 1.2;
+      height: 38px;
+      background: #F1F5F9;
+      color: #15803D;
+      border: 1.5px solid #BBF7D0;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-live-active:hover {
+      background: #FEE2E2;
+      color: #DC2626;
+      border-color: #FCA5A5;
+    }
+    .btn-live-preview {
+      flex: 1;
+      height: 38px;
+      background: #EFF6FF;
+      color: #0284C7;
+      border: 1.5px solid #BAE6FD;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-live-preview:hover {
+      background: #0284C7;
+      color: #FFFFFF;
+      border-color: #0284C7;
+    }
+
+    /* Modal for Live Vehicle Preview */
+    .live-preview-modal-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+      display: flex;
+      flex-direction: column;
+    }
+    .prev-mode-btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      color: #64748B;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .prev-mode-btn.active {
+      background: #FFFFFF;
+      color: #0F172A;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.1);
+    }
+
 </style>
 </head>
 <body>
@@ -1342,6 +1656,11 @@
           <span class="sidebar-icon">👁️</span>
           <span class="sidebar-label">Car & Brand Visibility</span>
           <span class="tab-counter-badge" id="tabHiddenBadge" style="display:none;">0</span>
+        </button>
+        <button type="button" class="admin-sidebar-btn" id="tabBtnDirectory" onclick="switchAdminTab('directory')" style="color:#0284C7;">
+          <span class="sidebar-icon">🌐</span>
+          <span class="sidebar-label">All Brands & Cars Catalog</span>
+          <span class="tab-counter-badge" id="tabDirectoryBadge" style="background:#0284C7; color:#FFFFFF;">ALL</span>
         </button>
         <button type="button" class="admin-sidebar-btn" id="tabBtnCarEditor" onclick="switchAdminTab('carEditor')">
           <span class="sidebar-icon">🛠️</span>
@@ -1515,6 +1834,104 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </div>
+
+      <!-- VIEW: UNIVERSAL CARS & BRANDS CATALOG (LISTED, UNLISTED, NEWLY LAUNCHED & UPCOMING) -->
+      <div id="viewDirectory" style="display:none;">
+        <!-- Top Directory Header -->
+        <div class="section-card" style="margin-bottom:20px; background:linear-gradient(135deg, #F0F9FF 0%, #FFFFFF 100%); border:1px solid #BAE6FD;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <div style="display:inline-flex; align-items:center; gap:6px; background:#E0F2FE; color:#0369A1; padding:4px 10px; border-radius:20px; font-size:12px; font-weight:800; margin-bottom:8px;">
+                <span>🌐</span> UNIVERSAL VEHICLE DISCOVERY & LIVE PUBLISHER
+              </div>
+              <h2 style="font-size:22px; font-weight:900; color:#0F172A; margin:0 0 6px;">All Brands & Cars Catalog (Listed & Unlisted)</h2>
+              <p style="font-size:13px; color:#475569; margin:0; max-width:820px; line-height:1.5;">
+                Explore all cars listed on the website, unlisted/hidden models, newly launched 2026 vehicles, and upcoming launches across all brands. Preview live on-site appearance with 1 click, and publish any car directly to the live website.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-header-action" onclick="switchAdminTab('urlImporter')" style="background:#0284C7; color:#FFFFFF; border:none; padding:10px 16px;">
+                ⚡ Auto-Fetch Car from URL
+              </button>
+              <button type="button" class="btn-header-action" onclick="initDirectoryManager()" style="background:#FFFFFF; color:#0F172A; padding:10px 16px;">
+                🔄 Refresh Directory
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="dir-metrics-row">
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">Total Market Models</div>
+            <div class="dir-metric-val" id="dirMetricTotal" style="color:#0284C7;">--</div>
+          </div>
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">🟢 Live on Website</div>
+            <div class="dir-metric-val" id="dirMetricLive" style="color:#16A34A;">--</div>
+          </div>
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">⚪ Unlisted / Hidden</div>
+            <div class="dir-metric-val" id="dirMetricUnlisted" style="color:#64748B;">--</div>
+          </div>
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">⚡ Newly Launched 2026</div>
+            <div class="dir-metric-val" id="dirMetricNew" style="color:#D97706;">--</div>
+          </div>
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">⏳ Upcoming Launches</div>
+            <div class="dir-metric-val" id="dirMetricUpcoming" style="color:#2563EB;">--</div>
+          </div>
+          <div class="dir-metric-card">
+            <div class="dir-metric-label">🏷️ Total Brands</div>
+            <div class="dir-metric-val" id="dirMetricBrands" style="color:#0F172A;">--</div>
+          </div>
+        </div>
+
+        <!-- Search, Brand Dropdown, and Filter Chips -->
+        <div class="dir-controls-bar">
+          <div class="dir-search-row">
+            <div style="position:relative; flex:1; min-width:260px;">
+              <input type="text" id="dirSearchInput" class="dir-search-input" placeholder="🔍 Search car by name, brand, tagline, or features..." oninput="handleDirectorySearch()">
+            </div>
+            <select id="dirBrandSelect" class="dir-brand-select" onchange="handleDirectoryFilterChange()">
+              <option value="all">🏢 All Brands (All)</option>
+            </select>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <!-- Status Filter -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span style="font-size:12px; font-weight:800; color:#64748B; width:70px;">Status:</span>
+              <div class="dir-filter-chips" id="dirStatusChips">
+                <button type="button" class="dir-chip-btn active" data-status="all" onclick="setDirectoryStatusFilter('all', this)">All Status (<span id="countStatusAll">0</span>)</button>
+                <button type="button" class="dir-chip-btn" data-status="live" onclick="setDirectoryStatusFilter('live', this)">🟢 Live on Site (<span id="countStatusLive">0</span>)</button>
+                <button type="button" class="dir-chip-btn" data-status="unlisted" onclick="setDirectoryStatusFilter('unlisted', this)">⚪ Unlisted / Hidden (<span id="countStatusUnlisted">0</span>)</button>
+                <button type="button" class="dir-chip-btn" data-status="new" onclick="setDirectoryStatusFilter('new', this)">⚡ Newly Launched (<span id="countStatusNew">0</span>)</button>
+                <button type="button" class="dir-chip-btn" data-status="upcoming" onclick="setDirectoryStatusFilter('upcoming', this)">⏳ Upcoming Launches (<span id="countStatusUpcoming">0</span>)</button>
+              </div>
+            </div>
+
+            <!-- Fuel Filter -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span style="font-size:12px; font-weight:800; color:#64748B; width:70px;">Fuel:</span>
+              <div class="dir-filter-chips" id="dirFuelChips">
+                <button type="button" class="dir-chip-btn active" data-fuel="all" onclick="setDirectoryFuelFilter('all', this)">All Fuels</button>
+                <button type="button" class="dir-chip-btn" data-fuel="EV" onclick="setDirectoryFuelFilter('EV', this)">⚡ Electric (EV)</button>
+                <button type="button" class="dir-chip-btn" data-fuel="Hybrid" onclick="setDirectoryFuelFilter('Hybrid', this)">🔋 Hybrid</button>
+                <button type="button" class="dir-chip-btn" data-fuel="CNG" onclick="setDirectoryFuelFilter('CNG', this)">💨 CNG</button>
+                <button type="button" class="dir-chip-btn" data-fuel="Petrol" onclick="setDirectoryFuelFilter('Petrol', this)">⛽ Petrol</button>
+                <button type="button" class="dir-chip-btn" data-fuel="Diesel" onclick="setDirectoryFuelFilter('Diesel', this)">🛢️ Diesel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cars Directory Grid -->
+        <div id="dirCarsGrid" class="dir-cars-grid">
+          <!-- Populated dynamically -->
         </div>
       </div>
 
@@ -3219,6 +3636,77 @@
     </div>
   </div>
 
+  <!-- 4. 👁️ LIVE VEHICLE PREVIEW MODAL -->
+  <div id="liveCarPreviewModal" class="modal-backdrop" onclick="if(event.target===this)closeLiveVehiclePreview()">
+    <div class="live-preview-modal-card">
+      <!-- Modal Header -->
+      <div style="padding:18px 24px; border-bottom:1px solid #E2E8F0; display:flex; justify-content:space-between; align-items:center; background:#F8FAFC; border-radius:24px 24px 0 0; flex-wrap:wrap; gap:12px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img id="prevModalBrandLogo" src="assets/logo.png" alt="Brand" style="width:34px; height:34px; object-fit:contain; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:8px; padding:3px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <h3 id="prevModalTitle" style="font-size:18px; font-weight:800; color:#0F172A; margin:0;">Car Name</h3>
+              <span id="prevModalStatusPill" class="dir-status-pill" style="position:static;">LIVE</span>
+            </div>
+            <div id="prevModalBrandSub" style="font-size:12px; color:#64748B;">Brand • Body Type</div>
+          </div>
+        </div>
+        
+        <!-- View Toggle & Close -->
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="display:inline-flex; background:#E2E8F0; padding:3px; border-radius:10px;">
+            <button type="button" id="prevTabBtnCard" class="prev-mode-btn active" onclick="switchPreviewMode('card')">📱 Homepage Card</button>
+            <button type="button" id="prevTabBtnDetail" class="prev-mode-btn" onclick="switchPreviewMode('detail')">💻 Full Detail Showcase</button>
+          </div>
+          <button type="button" onclick="closeLiveVehiclePreview()" style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:50%; width:32px; height:32px; cursor:pointer; font-weight:800; color:#64748B; display:inline-flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div style="padding:24px; overflow-y:auto; max-height:calc(85vh - 140px);">
+        <!-- Mode 1: Homepage Card View -->
+        <div id="prevModeCard" style="display:block;">
+          <div style="max-width:340px; margin:0 auto; padding:24px; background:#F8FAFC; border-radius:20px; border:1px dashed #CBD5E1; text-align:center;">
+            <div style="font-size:11.5px; font-weight:800; color:#0284C7; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:14px;">
+              ⚡ Exact Live Homepage Carousel Card
+            </div>
+            <div id="prevCardContainer" style="display:flex; justify-content:center;">
+              <!-- Dynamic compact shelf-car-card -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode 2: Full Detail Showcase View -->
+        <div id="prevModeDetail" style="display:none;">
+          <div id="prevDetailContainer">
+            <!-- Dynamic full specs & landing page layout -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Action Footer -->
+      <div style="padding:16px 24px; border-top:1px solid #E2E8F0; background:#F8FAFC; border-radius:0 0 24px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div id="prevModalLiveStatusText" style="font-size:13px; font-weight:700; color:#475569;">
+          Website Status: <span id="prevModalLiveLabel" style="color:#16A34A;">Live on Public Website</span>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button type="button" id="prevBtnToggleLive" class="btn-make-live" style="padding:10px 20px; height:auto;" onclick="toggleCurrentPreviewCarLive()">
+            🚀 Make Live on Website
+          </button>
+          <a id="prevBtnOpenPublic" href="index.html" target="_blank" class="btn-live-preview" style="padding:10px 18px; height:auto; text-decoration:none; display:none;">
+            🌐 View on Public Website &rsaquo;
+          </a>
+          <button type="button" id="prevBtnEditStudio" class="btn-header-action" style="padding:10px 16px; background:#FFFFFF;" onclick="openPreviewCarInStudio()">
+            ✏️ Edit in Media Studio
+          </button>
+          <button type="button" class="btn-header-action" style="padding:10px 16px; background:#FFFFFF;" onclick="closeLiveVehiclePreview()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
 
     // HTML Sanitizer
@@ -3703,6 +4191,7 @@
     function switchAdminTab(tabName) {
       const tabs = {
         visibility: document.getElementById('tabBtnVisibility'),
+        directory: document.getElementById('tabBtnDirectory'),
         carEditor: document.getElementById('tabBtnCarEditor'),
         reviewsManager: document.getElementById('tabBtnReviewsManager'),
         usedCarsManager: document.getElementById('tabBtnUsedCarsManager'),
@@ -3714,6 +4203,7 @@
       };
       const views = {
         visibility: document.getElementById('viewVisibility'),
+        directory: document.getElementById('viewDirectory'),
         carEditor: document.getElementById('viewCarEditor'),
         reviewsManager: document.getElementById('viewReviewsManager'),
         usedCarsManager: document.getElementById('viewUsedCarsManager'),
@@ -3729,7 +4219,9 @@
         if (views[k]) views[k].style.display = (k === tabName) ? 'block' : 'none';
       });
 
-      if (tabName === 'visibility') {
+      if (tabName === 'directory') {
+        initDirectoryManager();
+      } else if (tabName === 'visibility') {
         renderVisibilityManager();
       } else if (tabName === 'carEditor') {
         initCarEditor();
@@ -4201,6 +4693,1131 @@
       filterCarsTable();
     }
     window.setCarTableFilter = setCarTableFilter;
+
+    // =========================================================================
+    // 🌐 UNIVERSAL CARS & BRANDS DIRECTORY (LISTED, UNLISTED, NEW LAUNCHES & UPCOMING)
+    // =========================================================================
+    const MARKET_CATALOG_CARS = [
+      {
+        id: 'tata-sierra-ev',
+        name: 'Tata Sierra EV',
+        brand: 'Tata',
+        brandLogo: 'assets/brands/tata.png',
+        bodyType: 'Electric SUV',
+        tagline: 'Born-Electric Iconic Indian SUV with 550 km Range, Dual-Motor AWD & Gen2 Acti.ev Architecture',
+        launchDate: 'Mid 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic (Single-Speed)'],
+        priceRange: 'Rs. 25.00 - 32.00 Lakh',
+        minPrice: 2500000,
+        maxPrice: 3200000,
+        safetyRating: '5.0 ★ (Bharat NCAP Expected)',
+        mileage: '550 km / charge',
+        groundClearance: '195 mm',
+        bootSpace: '520 L + Frunk',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
+        specs: {
+          engineOptions: 'Dual-Motor Electric AWD (280 PS / 450 Nm)',
+          dimensions: '4450 x 1850 x 1720 mm',
+          wheelbase: '2700 mm'
+        },
+        variants: [
+          { name: 'Empowered Plus 4WD', fuel: 'EV', transmission: 'Automatic', exShowroom: 3199000, keyFeatures: ['Panoramic Sunroof', 'Level 2+ ADAS', 'Lounge Rear Seating'] },
+          { name: 'Adventure Dual Motor', fuel: 'EV', transmission: 'Automatic', exShowroom: 2799000, keyFeatures: ['Electronic AWD', '360 Camera', 'V2L Support'] }
+        ],
+        colors: [
+          { name: 'Alpine White', hex: '#F8FAFC' },
+          { name: 'Sierra Olive Green', hex: '#14532D' },
+          { name: 'Cosmic Gold', hex: '#CA8A04' }
+        ],
+        pros: ['Iconic alpine glass heritage styling', 'Certified 550 km driving range', 'Dual-motor 4WD capability'],
+        cons: ['Premium price point above Curvv EV', 'High waitlist anticipated on release']
+      },
+      {
+        id: 'tata-harrier-ev',
+        name: 'Tata Harrier EV',
+        brand: 'Tata',
+        brandLogo: 'assets/brands/tata.png',
+        bodyType: 'Electric SUV',
+        tagline: 'All-Wheel Drive Electric Powerhouse with 500 km Range, V2L Charging & Ultra-Fast DC Top-up',
+        launchDate: 'Early 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic (Single-Speed)'],
+        priceRange: 'Rs. 24.00 - 30.00 Lakh',
+        minPrice: 2400000,
+        maxPrice: 3000000,
+        safetyRating: '5.0 ★ (Bharat NCAP 5-Star Certified)',
+        mileage: '500 km / charge',
+        groundClearance: '205 mm',
+        bootSpace: '445 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/harrier/360/sunlit-yellow/1.webp',
+        specs: {
+          engineOptions: 'Dual-Motor Electric AWD (240 PS / 380 Nm)',
+          dimensions: '4605 x 1922 x 1718 mm',
+          wheelbase: '2741 mm'
+        },
+        variants: [
+          { name: 'Fearless Plus AWD', fuel: 'EV', transmission: 'Automatic', exShowroom: 2999000, keyFeatures: ['Electronic AWD', 'V2L / V2V Charging', 'JBL Audio with Subwoofer'] }
+        ],
+        colors: [
+          { name: 'Sunlit Yellow', hex: '#EAB308' },
+          { name: 'Oberon Black', hex: '#0F172A' },
+          { name: 'Pristine White', hex: '#F8FAFC' }
+        ],
+        pros: ['True electric AWD terrain response', '5-Star B-NCAP crash safety', 'Vehicle-to-Load emergency power generator'],
+        cons: ['High kerb weight', 'Large turning circle in tight parking']
+      },
+      {
+        id: 'mahindra-be-6e',
+        name: 'Mahindra BE 6e',
+        brand: 'Mahindra',
+        brandLogo: 'assets/brands/mahindra.png',
+        bodyType: 'Born-Electric Aero Coupe SUV',
+        tagline: 'Next-Gen Born Electric SUV Coupe with up to 682 km WLTP Range & 175 kW Ultra-Fast DC Charging',
+        launchDate: 'January 2025 (2026 Model)',
+        launchStatus: 'new',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic (Single-Speed)'],
+        priceRange: 'Rs. 18.90 - 26.90 Lakh',
+        minPrice: 1890000,
+        maxPrice: 2690000,
+        safetyRating: '5.0 ★ (5-Star Bharat NCAP Ready)',
+        mileage: '682 km / charge',
+        groundClearance: '207 mm',
+        bootSpace: '455 L + 45 L Frunk',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
+        specs: {
+          engineOptions: 'Rear Electric Motor (286 PS / 380 Nm)',
+          dimensions: '4371 x 1907 x 1627 mm',
+          wheelbase: '2775 mm'
+        },
+        variants: [
+          { name: 'Pack Three 79 kWh Flagship', fuel: 'EV', transmission: 'Automatic', exShowroom: 2690000, keyFeatures: ['16-Speaker Harman Kardon', 'Dual 12.3-inch Screens', 'Semi-Active Suspension'] }
+        ],
+        colors: [
+          { name: 'Cyber Orange', hex: '#EA580C' },
+          { name: 'Stealth Grey', hex: '#475569' },
+          { name: 'Arctic White', hex: '#F8FAFC' }
+        ],
+        pros: ['0-100 km/h in 6.7 seconds', 'Up to 682 km certified range', '175 kW ultra-fast DC charging'],
+        cons: ['Aggressive aero styling may not appeal to all', 'Tighter rear headroom due to coupe slant']
+      },
+      {
+        id: 'mahindra-xev-9e',
+        name: 'Mahindra XEV 9e',
+        brand: 'Mahindra',
+        brandLogo: 'assets/brands/mahindra.png',
+        bodyType: 'Luxury Electric Flagship SUV Coupe',
+        tagline: 'Triple Panoramic Display Flagship Electric SUV with 656 km Range & Valet Parking Assist',
+        launchDate: 'January 2025 (2026 Model)',
+        launchStatus: 'new',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 21.90 - 29.50 Lakh',
+        minPrice: 2190000,
+        maxPrice: 2950000,
+        safetyRating: '5.0 ★ (5-Star Safety Architecture)',
+        mileage: '656 km / charge',
+        groundClearance: '207 mm',
+        bootSpace: '665 L + 148 L Frunk',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp',
+        specs: {
+          engineOptions: 'High-Output Electric Motor (286 PS / 380 Nm)',
+          dimensions: '4789 x 1907 x 1694 mm',
+          wheelbase: '2775 mm'
+        },
+        variants: [
+          { name: 'Pack Three 79 kWh Executive', fuel: 'EV', transmission: 'Automatic', exShowroom: 2950000, keyFeatures: ['Triple Panoramic Display', 'Illuminated Skyroof', '16-Speaker Dolby Atmos'] }
+        ],
+        colors: [
+          { name: 'Midnight Titanium', hex: '#1E293B' },
+          { name: 'Electric Blue', hex: '#1D4ED8' },
+          { name: 'Glacier White', hex: '#F8FAFC' }
+        ],
+        pros: ['Segment-first triple dashboard screen', '813 L total combined luggage space', 'Supercar performance (0-100 in 6.8s)'],
+        cons: ['Large vehicle width', 'Premium pricing']
+      },
+      {
+        id: 'maruti-suzuki-evx',
+        name: 'Maruti Suzuki eVX (e-Vitara)',
+        brand: 'Maruti Suzuki (Nexa)',
+        brandLogo: 'assets/brands/maruti-suzuki-nexa.png',
+        bodyType: 'Electric SUV',
+        tagline: 'Maruti Suzuki’s First Global Electric SUV with 550 km Range, 61 kWh Blade Battery & ALLGRIP-e 4WD',
+        launchDate: 'Early 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 20.00 - 25.00 Lakh',
+        minPrice: 2000000,
+        maxPrice: 2500000,
+        safetyRating: '5.0 ★ (Global EV Crash Tested)',
+        mileage: '550 km / charge',
+        groundClearance: '190 mm',
+        bootSpace: '430 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/grand-vitara/360/nexa-blue/4.webp',
+        specs: {
+          engineOptions: 'Dual-Motor ALLGRIP-e Electric AWD (184 PS / 300 Nm)',
+          dimensions: '4275 x 1800 x 1635 mm',
+          wheelbase: '2700 mm'
+        },
+        variants: [
+          { name: 'Alpha AWD 61 kWh', fuel: 'EV', transmission: 'Automatic', exShowroom: 2490000, keyFeatures: ['ALLGRIP-e AWD', 'Level 2 ADAS', 'Blade LFP Battery'] }
+        ],
+        colors: [
+          { name: 'Nexa Electric Blue', hex: '#1E3A8A' },
+          { name: 'Arctic White Pearl', hex: '#F8FAFC' },
+          { name: 'Magma Grey Metallic', hex: '#475569' }
+        ],
+        pros: ['Nationwide Maruti service reliability', 'Puncture-resistant LFP Blade battery', 'Genuine dual-motor electric 4WD'],
+        cons: ['Conservative cabin styling', 'High delivery waiting periods anticipated']
+      },
+      {
+        id: 'maruti-suzuki-dzire-2026',
+        name: 'Maruti Suzuki New Dzire 2026',
+        brand: 'Maruti Suzuki',
+        brandLogo: 'assets/brands/maruti-suzuki.png',
+        bodyType: 'Compact Sedan',
+        tagline: 'India’s Safest Compact Sedan with 5-Star Global NCAP, Electric Sunroof & 33.73 km/kg CNG Mileage',
+        launchDate: 'November 2024 (2025/2026 Model)',
+        launchStatus: 'new',
+        fuelTypes: ['Petrol', 'CNG'],
+        transmissions: ['5-Speed Manual', '5-Speed AMT'],
+        priceRange: 'Rs. 6.79 - 10.14 Lakh',
+        minPrice: 679000,
+        maxPrice: 1014000,
+        safetyRating: '5.0 ★ (Global NCAP 5-Star Certified)',
+        mileage: '24.79 kmpl / 33.73 km/kg',
+        groundClearance: '163 mm',
+        bootSpace: '382 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/dzire/360/alluring-blue/4.webp',
+        specs: {
+          engineOptions: '1.2L 3-Cyl Z-Series Petrol (82 PS / 112 Nm)',
+          dimensions: '3995 x 1735 x 1525 mm',
+          wheelbase: '2450 mm'
+        },
+        variants: [
+          { name: 'ZXi Plus AMT', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 1014000, keyFeatures: ['Electric Sunroof', '360 Camera', '6 Airbags Standard', 'Wireless Charger'] }
+        ],
+        colors: [
+          { name: 'Alluring Blue', hex: '#1E40AF' },
+          { name: 'Gallant Red', hex: '#DC2626' },
+          { name: 'Arctic White', hex: '#F8FAFC' }
+        ],
+        pros: ['5-Star crash safety rating', 'Astonishing 33.73 km/kg CNG economy', 'Segment-first electric sunroof'],
+        cons: ['3-cylinder engine idle thrum', 'Fixed rear headrests on lower trims']
+      },
+      {
+        id: 'hyundai-creta-ev',
+        name: 'Hyundai Creta EV',
+        brand: 'Hyundai',
+        brandLogo: 'assets/brands/hyundai.png',
+        bodyType: 'Electric SUV',
+        tagline: 'India’s Best-Selling SUV Goes Pure Electric with 480 km Range, Level 2 ADAS & Shift-By-Wire Drive',
+        launchDate: 'January 2025 (2026 Model)',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Shift-by-Wire Automatic'],
+        priceRange: 'Rs. 18.00 - 24.00 Lakh',
+        minPrice: 1800000,
+        maxPrice: 2400000,
+        safetyRating: '5.0 ★ (Hyundai SmartSense Level 2 ADAS)',
+        mileage: '480 km / charge',
+        groundClearance: '190 mm',
+        bootSpace: '433 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/creta/360/robust-emerald-pearl/1.webp',
+        specs: {
+          engineOptions: 'Front-Wheel Drive Electric Motor (138 PS / 255 Nm)',
+          dimensions: '4330 x 1790 x 1635 mm',
+          wheelbase: '2610 mm'
+        },
+        variants: [
+          { name: 'SX(O) Long Range', fuel: 'EV', transmission: 'Automatic', exShowroom: 2390000, keyFeatures: ['Panoramic Sunroof', 'Level 2 ADAS (19 Features)', 'Bose 8-Speaker Audio'] }
+        ],
+        colors: [
+          { name: 'Robust Emerald Matte', hex: '#064E3B' },
+          { name: 'Atlas White', hex: '#F8FAFC' },
+          { name: 'Titan Grey', hex: '#475569' }
+        ],
+        pros: ['Trusted Creta cabin comfort & ergonomics', 'Smooth silent electric powertrain', 'Level 2 ADAS safety suite'],
+        cons: ['Design closely mirrors ICE Creta', 'Nose-mounted charging flap']
+      },
+      {
+        id: 'kia-syros',
+        name: 'Kia Syros (Clavis)',
+        brand: 'Kia',
+        brandLogo: 'assets/brands/kia.png',
+        bodyType: 'Modern Compact SUV',
+        tagline: 'Futuristic Lounge-Cabin Compact SUV with Dual 10.25-inch Screens, Panoramic Roof & Level 2 ADAS',
+        launchDate: 'Early 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['Petrol', 'Diesel', 'EV'],
+        transmissions: ['6-Speed Manual', '7-Speed DCT', '6-Speed AT'],
+        priceRange: 'Rs. 9.50 - 16.00 Lakh',
+        minPrice: 950000,
+        maxPrice: 1600000,
+        safetyRating: '5.0 ★ (High-Strength Steel Body)',
+        mileage: '18.2 kmpl',
+        groundClearance: '195 mm',
+        bootSpace: '410 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/sonet/360/pewter-olive/1.webp',
+        specs: {
+          engineOptions: '1.0L Turbo GDi (120 PS) / 1.5L CRDi Diesel (116 PS)',
+          dimensions: '3995 x 1790 x 1640 mm',
+          wheelbase: '2550 mm'
+        },
+        variants: [
+          { name: 'GTX Plus 1.0 Turbo DCT', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 1599000, keyFeatures: ['Lounge Rear Recline', 'Panoramic Sunroof', 'Ventilated Seats'] }
+        ],
+        colors: [
+          { name: 'Pewter Olive Matte', hex: '#3F4F38' },
+          { name: 'Glacier White Pearl', hex: '#F8FAFC' },
+          { name: 'Aurora Black Pearl', hex: '#0F172A' }
+        ],
+        pros: ['Standout futuristic cyber-lounge styling', 'Segment-first reclining executive rear seats', 'Choice of Petrol, Diesel, and EV'],
+        cons: ['Boxy rear stance', 'Firm suspension over sharp ruts']
+      },
+      {
+        id: 'skoda-kylaq',
+        name: 'Skoda Kylaq',
+        brand: 'Skoda',
+        brandLogo: 'assets/brands/skoda.png',
+        bodyType: 'Sub-4M German Engineered SUV',
+        tagline: 'Pure European Dynamics with 5-Star Safety, 1.0L TSI Turbo Engine & 25+ Active Safety Features Standard',
+        launchDate: 'November 2024 (2025 Lineup)',
+        launchStatus: 'new',
+        fuelTypes: ['Petrol'],
+        transmissions: ['6-Speed Manual', '6-Speed Automatic'],
+        priceRange: 'Rs. 7.89 - 14.40 Lakh',
+        minPrice: 789000,
+        maxPrice: 1440000,
+        safetyRating: '5.0 ★ (5-Star Crash Safety Architecture)',
+        mileage: '19.6 kmpl',
+        groundClearance: '189 mm',
+        bootSpace: '446 L (Best in Segment)',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/kushaq/colors/honey-orange.webp',
+        specs: {
+          engineOptions: '1.0L TSI Turbo Petrol (115 PS / 178 Nm)',
+          dimensions: '3995 x 1783 x 1619 mm',
+          wheelbase: '2566 mm'
+        },
+        variants: [
+          { name: 'Prestige 1.0 TSI AT', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 1440000, keyFeatures: ['Ventilated Power Seats', 'Electric Sunroof', '10.1-inch Skoda Touchscreen'] }
+        ],
+        colors: [
+          { name: 'Olive Gold Metallic', hex: '#A16207' },
+          { name: 'Tornado Red', hex: '#DC2626' },
+          { name: 'Candy White', hex: '#F8FAFC' }
+        ],
+        pros: ['European high-speed stability and steering precision', 'Huge 446 L boot capacity', 'Value-packed starting price under ₹8 Lakh'],
+        cons: ['No diesel or hybrid option', 'Rear seat narrower than Creta']
+      },
+      {
+        id: 'mg-windsor-ev',
+        name: 'MG Windsor EV',
+        brand: 'MG Motor',
+        brandLogo: 'assets/brands/mg-motor.png',
+        bodyType: 'Electric CUV (Aero Lounge)',
+        tagline: 'Business-Class Electric CUV with 135° Reclining Aero Lounge Rear Seats & 15.6-inch Grand Touchscreen',
+        launchDate: 'September 2024 (2025 Lineup)',
+        launchStatus: 'new',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 9.99 - 15.50 Lakh (+ ₹3.5/km BaaS)',
+        minPrice: 999000,
+        maxPrice: 1550000,
+        safetyRating: '5.0 ★ (6 Airbags Standard, IP67 Battery)',
+        mileage: '331 km / charge',
+        groundClearance: '186 mm',
+        bootSpace: '604 L (Colossal Luggage Space)',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
+        specs: {
+          engineOptions: 'Single Electric Motor (136 PS / 200 Nm)',
+          dimensions: '4295 x 1850 x 1677 mm',
+          wheelbase: '2700 mm'
+        },
+        variants: [
+          { name: 'Essence 38 kWh', fuel: 'EV', transmission: 'Automatic', exShowroom: 1549800, keyFeatures: ['135° Aero Lounge Recline', '15.6-inch Touchscreen', 'Infinity View Glass Roof'] }
+        ],
+        colors: [
+          { name: 'Starburst Black', hex: '#0F172A' },
+          { name: 'Pearl White', hex: '#F8FAFC' },
+          { name: 'Clay Beige', hex: '#D6D3D1' }
+        ],
+        pros: ['First-class 135° reclining rear seats', 'BaaS battery rental lowers upfront cost', 'Massive 604 L boot capacity'],
+        cons: ['Fixed glass roof lacks sunblind', '331 km range modest for long trips']
+      },
+      {
+        id: 'byd-sealion-7',
+        name: 'BYD Sealion 7',
+        brand: 'BYD',
+        brandLogo: 'assets/brands/byd.png',
+        bodyType: 'Performance Electric SUV Coupe',
+        tagline: 'Dual-Motor 530 PS Electric Performance SUV with 0-100 in 4.5s & 82.5 kWh Ultra-Safe Blade Battery',
+        launchDate: 'Early 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 45.00 - 52.00 Lakh',
+        minPrice: 4500000,
+        maxPrice: 5200000,
+        safetyRating: '5.0 ★ (Euro NCAP 5-Star)',
+        mileage: '550 km / charge',
+        groundClearance: '180 mm',
+        bootSpace: '500 L + 58 L Frunk',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/ev9/360/ocean-blue/1.webp',
+        specs: {
+          engineOptions: 'Dual-Motor AWD (530 PS / 670 Nm)',
+          dimensions: '4830 x 1925 x 1620 mm',
+          wheelbase: '2930 mm'
+        },
+        variants: [
+          { name: 'AWD Performance 82.5 kWh', fuel: 'EV', transmission: 'Automatic', exShowroom: 5190000, keyFeatures: ['CTB Cell-to-Body Technology', '15.6-inch Rotating Screen', 'DiSus-C Intelligent Damping'] }
+        ],
+        colors: [
+          { name: 'Atlantis Grey', hex: '#334155' },
+          { name: 'Aurora White', hex: '#F8FAFC' },
+          { name: 'Cosmos Black', hex: '#0F172A' }
+        ],
+        pros: ['0-100 in 4.5 seconds supercar thrust', 'Blade Battery puncture-proof chemistry', 'Luxurious Nappa leather upholstery'],
+        cons: ['Touchscreen heavy controls', 'Expanding dealership network']
+      },
+      {
+        id: 'vinfast-vf-5',
+        name: 'VinFast VF 5',
+        brand: 'VinFast',
+        brandLogo: 'assets/logo.png',
+        bodyType: 'Compact Urban Electric SUV',
+        tagline: 'Affordable Electric Urban SUV with 326 km Range & 37.23 kWh Battery Pack',
+        launchDate: 'Mid 2026',
+        launchStatus: 'upcoming',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 10.00 - 14.00 Lakh',
+        minPrice: 1000000,
+        maxPrice: 1400000,
+        safetyRating: '5.0 ★ (ASEAN NCAP 5-Star Ready)',
+        mileage: '326 km / charge',
+        groundClearance: '182 mm',
+        bootSpace: '330 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/curvv-ev/colors/pure-grey.webp',
+        specs: {
+          engineOptions: 'Single Electric Motor (134 PS / 135 Nm)',
+          dimensions: '3967 x 1723 x 1578 mm',
+          wheelbase: '2514 mm'
+        },
+        variants: [
+          { name: 'VF 5 Plus', fuel: 'EV', transmission: 'Automatic', exShowroom: 1290000, keyFeatures: ['Smart ADAS Suite', 'Fast DC Charging', 'Dual-Tone Floating Roof'] }
+        ],
+        colors: [
+          { name: 'Pearl White', hex: '#F8FAFC' },
+          { name: 'Electric Blue', hex: '#2563EB' },
+          { name: 'Sunset Orange', hex: '#EA580C' }
+        ],
+        pros: ['Sub-₹12 Lakh price point for electric SUV', 'Very easy to maneuver in tight Indian traffic', 'Low operating running costs'],
+        cons: ['New entrant setting up Indian sales and service', 'Real-world highway range ~240 km']
+      },
+      {
+        id: 'bmw-ix1-long-range',
+        name: 'BMW iX1 Long Range',
+        brand: 'BMW',
+        brandLogo: 'assets/brands/bmw.svg',
+        bodyType: 'Luxury Electric SAV',
+        tagline: 'Pure Bavarian Electric SAV with 440 km Range, Dual Motor xDrive AWD & Curved Display Cockpit',
+        launchDate: '2025/2026',
+        launchStatus: 'new',
+        fuelTypes: ['EV'],
+        transmissions: ['Automatic'],
+        priceRange: 'Rs. 66.90 Lakh',
+        minPrice: 6690000,
+        maxPrice: 6690000,
+        safetyRating: '5.0 ★ (Euro NCAP 5-Star)',
+        mileage: '440 km / charge',
+        groundClearance: '170 mm',
+        bootSpace: '490 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/xuv700/colors/electric-blue.webp',
+        specs: {
+          engineOptions: 'Dual Electric Motors xDrive AWD (313 bhp / 494 Nm)',
+          dimensions: '4500 x 1845 x 1616 mm',
+          wheelbase: '2692 mm'
+        },
+        variants: [
+          { name: 'xDrive30 M Sport', fuel: 'EV', transmission: 'Automatic', exShowroom: 6690000, keyFeatures: ['M Sport Package', 'BMW Curved Display', 'Harman Kardon Audio'] }
+        ],
+        colors: [
+          { name: 'Portimao Blue Metallic', hex: '#1D4ED8' },
+          { name: 'Alpine White', hex: '#F8FAFC' },
+          { name: 'Black Sapphire', hex: '#0F172A' }
+        ],
+        pros: ['0-100 in 5.6s with trademark BMW dynamics', 'Superb curved infotainment display', 'xDrive all-wheel drive stability'],
+        cons: ['Firm M Sport suspension setup', 'Premium pricing in compact luxury segment']
+      },
+      {
+        id: 'mercedes-benz-e-class-lwb',
+        name: 'Mercedes-Benz E-Class LWB (V214)',
+        brand: 'Mercedes-Benz',
+        brandLogo: 'assets/brands/mercedes-benz.svg',
+        bodyType: 'Luxury Executive Sedan',
+        tagline: 'India’s Flagship Executive Luxury Sedan with MBUX Superscreen, Rear Reclining Chauffeur Lounge & Burmester 4D',
+        launchDate: 'October 2024 (2025/2026 Model)',
+        launchStatus: 'new',
+        fuelTypes: ['Petrol', 'Diesel'],
+        transmissions: ['9G-TRONIC 9-Speed Automatic'],
+        priceRange: 'Rs. 78.50 - 92.50 Lakh',
+        minPrice: 7850000,
+        maxPrice: 9250000,
+        safetyRating: '5.0 ★ (Euro NCAP 5-Star)',
+        mileage: '14.2 kmpl',
+        groundClearance: '155 mm',
+        bootSpace: '540 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/verna/360/starry-night/1.webp',
+        specs: {
+          engineOptions: '2.0L Turbo Petrol (204 PS) / 2.0L Diesel (197 PS) with 48V ISG Mild Hybrid',
+          dimensions: '5092 x 1880 x 1493 mm',
+          wheelbase: '3094 mm'
+        },
+        variants: [
+          { name: 'E 200 LWB Exclusive', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 7850000, keyFeatures: ['MBUX Superscreen', 'Rear Executive Seat 36° Recline', 'Burmester 4D Surround Sound'] }
+        ],
+        colors: [
+          { name: 'Nautical Blue Metallic', hex: '#1E3A8A' },
+          { name: 'High-Tech Silver', hex: '#CBD5E1' },
+          { name: 'Polar White', hex: '#F8FAFC' }
+        ],
+        pros: ['Benchmark rear-seat chauffeur comfort with 36° electric recline', 'MBUX Superscreen digital architecture', 'Class-leading cabin soundproofing'],
+        cons: ['Length over 5 metres', 'Rear touch controls have minor learning curve']
+      },
+      {
+        id: 'mercedes-benz-g-class-electric',
+        name: 'Mercedes-Benz G-Class Electric (G 580)',
+        brand: 'Mercedes-Benz',
+        brandLogo: 'assets/brands/mercedes-benz.svg',
+        bodyType: 'Ultra-Luxury Electric Off-Road SUV',
+        tagline: 'The Electric Off-Road Icon with Quad Motors, 587 PS, 1164 Nm Torque & 360-Degree G-Turn Capability',
+        launchDate: '2025/2026',
+        launchStatus: 'new',
+        fuelTypes: ['EV'],
+        transmissions: ['2-Speed Off-Road Reduction Gearbox'],
+        priceRange: 'Rs. 3.00 Cr',
+        minPrice: 30000000,
+        maxPrice: 30000000,
+        safetyRating: '5.0 ★ (Heavy-Duty Steel Ladder Chassis)',
+        mileage: '473 km / charge',
+        groundClearance: '250 mm',
+        bootSpace: '555 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/thar-roxx/colors/stealth-black.webp',
+        specs: {
+          engineOptions: 'Quad Electric Motors with EQ Technology (587 PS / 1164 Nm)',
+          dimensions: '4824 x 1931 x 1986 mm',
+          wheelbase: '2890 mm'
+        },
+        variants: [
+          { name: 'Edition One Flagship', fuel: 'EV', transmission: 'Automatic', exShowroom: 30000000, keyFeatures: ['G-Turn On-the-Spot 360 Spin', 'G-Steering Tight Radius', '116 kWh Liquid Cooled Pack'] }
+        ],
+        colors: [
+          { name: 'South Seas Blue Magno', hex: '#0284C7' },
+          { name: 'Obsidian Black Metallic', hex: '#0F172A' },
+          { name: 'Classic Silver', hex: '#CBD5E1' }
+        ],
+        pros: ['Colossal 1164 Nm torque output', 'G-Turn spins vehicle 360° on the spot', 'Timeless G-Wagon presence'],
+        cons: ['Heavy kerb weight exceeding 3 tonnes', 'Exotic multi-crore price']
+      },
+      {
+        id: 'land-rover-range-rover-sv',
+        name: 'Land Rover Range Rover',
+        brand: 'Land Rover',
+        brandLogo: 'assets/brands/land-rover.svg',
+        bodyType: 'Luxury Flagship SUV',
+        tagline: 'The Peerless Luxury Flagship SUV with All-Wheel Steering, Electronic Air Suspension & Bespoke SV Craftsmanship',
+        launchDate: '2025/2026',
+        launchStatus: 'new',
+        fuelTypes: ['Petrol', 'Diesel', 'Hybrid', 'EV'],
+        transmissions: ['8-Speed Automatic'],
+        priceRange: 'Rs. 2.39 - 4.98 Cr',
+        minPrice: 23900000,
+        maxPrice: 49800000,
+        safetyRating: '5.0 ★ (Euro NCAP 5-Star)',
+        mileage: '12.5 kmpl / 115 km EV Range (PHEV)',
+        groundClearance: '295 mm (Off-Road Air Lift)',
+        bootSpace: '812 L',
+        heroImage: 'https://ik.imagekit.io/2908vvlod/cars/safari/colors/cosmic-gold.webp',
+        specs: {
+          engineOptions: '3.0L Turbo Petrol (394 PS) / 3.0L Diesel (346 PS) / 4.4L Twin-Turbo V8 (615 PS)',
+          dimensions: '5052 x 2047 x 1870 mm',
+          wheelbase: '2997 mm'
+        },
+        variants: [
+          { name: 'SV Sawai Edition / SV LWB V8', fuel: 'Petrol', transmission: 'Automatic', exShowroom: 49000000, keyFeatures: ['Ceramic Controls', '24k Gold Accents', 'Executive Class Comfort-Plus Rear Seats'] }
+        ],
+        colors: [
+          { name: 'Bespoke Sawai Copper Gold', hex: '#CA8A04' },
+          { name: 'Santorini Black Metallic', hex: '#0F172A' },
+          { name: 'Fuji White', hex: '#F8FAFC' }
+        ],
+        pros: ['Peerless luxury and prestige benchmark', 'Electronic air suspension delivers magic carpet ride', 'Standard rear-wheel steering for compact turning radius'],
+        cons: ['Substantial acquisition investment', 'Very large body dimensions']
+      }
+    ];
+
+    let activeDirectoryStatusFilter = 'all';
+    let activeDirectoryFuelFilter = 'all';
+    let activeDirectoryBrandFilter = 'all';
+    let activeDirectorySearchQuery = '';
+    let currentPreviewCar = null;
+    let currentPreviewMode = 'card'; // 'card' or 'detail'
+
+    function getUniversalDirectoryCars() {
+      let custom = [];
+      try {
+        custom = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+      } catch (e) {}
+      const customIds = new Set(custom.map(c => c.id));
+      const baseCars = (window.APP_CARS || []).filter(c => !customIds.has(c.id));
+      const baseIds = new Set(baseCars.map(c => c.id));
+      const marketCars = MARKET_CATALOG_CARS.filter(c => !customIds.has(c.id) && !baseIds.has(c.id));
+      return [...custom, ...baseCars, ...marketCars];
+    }
+    window.getUniversalDirectoryCars = getUniversalDirectoryCars;
+
+    function getUniversalCarById(carId) {
+      return getUniversalDirectoryCars().find(c => c.id === carId) || null;
+    }
+    window.getUniversalCarById = getUniversalCarById;
+
+    function getCarLiveStatus(car) {
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+
+      if (hiddenCars.has(car.id) || hiddenBrands.has(car.brand)) {
+        return {
+          code: 'unlisted',
+          label: '⚪ UNLISTED / HIDDEN',
+          pillClass: 'status-unlisted',
+          isLive: false
+        };
+      }
+
+      let customCars = [];
+      try {
+        customCars = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+      } catch(e) {}
+      const isCustom = customCars.some(c => c.id === car.id);
+      const isBase = (window.APP_CARS || []).some(c => c.id === car.id);
+
+      if (isCustom || isBase) {
+        return {
+          code: 'live',
+          label: '🟢 LIVE ON WEBSITE',
+          pillClass: 'status-live',
+          isLive: true
+        };
+      }
+
+      if (car.launchStatus === 'new') {
+        return {
+          code: 'new',
+          label: '⚡ NEW LAUNCH (STAGED)',
+          pillClass: 'status-new',
+          isLive: false
+        };
+      }
+
+      return {
+        code: 'upcoming',
+        label: '⏳ UPCOMING 2026 (STAGED)',
+        pillClass: 'status-upcoming',
+        isLive: false
+      };
+    }
+    window.getCarLiveStatus = getCarLiveStatus;
+
+    function initDirectoryManager() {
+      const allCars = getUniversalDirectoryCars();
+      const brandCounts = {};
+      let totalLive = 0;
+      let totalUnlisted = 0;
+      let totalNew = 0;
+      let totalUpcoming = 0;
+
+      allCars.forEach(car => {
+        brandCounts[car.brand] = (brandCounts[car.brand] || 0) + 1;
+        const status = getCarLiveStatus(car);
+        if (status.isLive) totalLive++;
+        else totalUnlisted++;
+
+        if (car.launchStatus === 'new') totalNew++;
+        else if (car.launchStatus === 'upcoming') totalUpcoming++;
+      });
+
+      // Update Metric Strip
+      const elTotal = document.getElementById('dirMetricTotal');
+      const elLive = document.getElementById('dirMetricLive');
+      const elUnlisted = document.getElementById('dirMetricUnlisted');
+      const elNew = document.getElementById('dirMetricNew');
+      const elUpcoming = document.getElementById('dirMetricUpcoming');
+      const elBrands = document.getElementById('dirMetricBrands');
+
+      if (elTotal) elTotal.textContent = allCars.length;
+      if (elLive) elLive.textContent = totalLive;
+      if (elUnlisted) elUnlisted.textContent = totalUnlisted;
+      if (elNew) elNew.textContent = totalNew;
+      if (elUpcoming) elUpcoming.textContent = totalUpcoming;
+      if (elBrands) elBrands.textContent = Object.keys(brandCounts).length;
+
+      // Update Status Chip Counts
+      const cAll = document.getElementById('countStatusAll');
+      const cLive = document.getElementById('countStatusLive');
+      const cUnlisted = document.getElementById('countStatusUnlisted');
+      const cNew = document.getElementById('countStatusNew');
+      const cUpcoming = document.getElementById('countStatusUpcoming');
+
+      if (cAll) cAll.textContent = allCars.length;
+      if (cLive) cLive.textContent = totalLive;
+      if (cUnlisted) cUnlisted.textContent = totalUnlisted;
+      if (cNew) cNew.textContent = totalNew;
+      if (cUpcoming) cUpcoming.textContent = totalUpcoming;
+
+      // Populate Brand Select Dropdown
+      const brandSelect = document.getElementById('dirBrandSelect');
+      if (brandSelect) {
+        const sortedBrands = Object.keys(brandCounts).sort();
+        let opts = '<option value="all">🏢 All Brands (' + allCars.length + ' cars)</option>';
+        sortedBrands.forEach(b => {
+          opts += '<option value="' + escapeHtml(b) + '">' + escapeHtml(b) + ' (' + brandCounts[b] + ')</option>';
+        });
+        brandSelect.innerHTML = opts;
+        brandSelect.value = activeDirectoryBrandFilter;
+      }
+
+      renderDirectoryManager();
+    }
+    window.initDirectoryManager = initDirectoryManager;
+
+    function renderDirectoryManager() {
+      const container = document.getElementById('dirCarsGrid');
+      if (!container) return;
+
+      const allCars = getUniversalDirectoryCars();
+      const filtered = allCars.filter(car => {
+        const status = getCarLiveStatus(car);
+
+        // Status Filter
+        if (activeDirectoryStatusFilter === 'live' && !status.isLive) return false;
+        if (activeDirectoryStatusFilter === 'unlisted' && status.code !== 'unlisted') return false;
+        if (activeDirectoryStatusFilter === 'new' && car.launchStatus !== 'new') return false;
+        if (activeDirectoryStatusFilter === 'upcoming' && car.launchStatus !== 'upcoming') return false;
+
+        // Brand Filter
+        if (activeDirectoryBrandFilter !== 'all' && car.brand !== activeDirectoryBrandFilter) return false;
+
+        // Fuel Filter
+        if (activeDirectoryFuelFilter !== 'all') {
+          const fuels = Array.isArray(car.fuelTypes) ? car.fuelTypes : [car.fuelType || 'Petrol'];
+          if (!fuels.includes(activeDirectoryFuelFilter)) return false;
+        }
+
+        // Search Query
+        if (activeDirectorySearchQuery) {
+          const q = activeDirectorySearchQuery.toLowerCase();
+          const matchName = (car.name || '').toLowerCase().includes(q);
+          const matchBrand = (car.brand || '').toLowerCase().includes(q);
+          const matchTagline = (car.tagline || '').toLowerCase().includes(q);
+          const matchBody = (car.bodyType || '').toLowerCase().includes(q);
+          if (!matchName && !matchBrand && !matchTagline && !matchBody) return false;
+        }
+
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:60px 20px; background:#FFFFFF; border:1px dashed #CBD5E1; border-radius:20px;">
+            <div style="font-size:42px; margin-bottom:12px;">🔍</div>
+            <h3 style="font-size:18px; font-weight:800; color:#0F172A; margin-bottom:6px;">No Cars Matching Your Filters</h3>
+            <p style="font-size:13px; color:#64748B; margin-bottom:16px;">Try adjusting your search terms, fuel type, or brand selection.</p>
+            <button type="button" class="btn-header-action" onclick="resetDirectoryFilters()" style="background:#0284C7; color:#FFFFFF; border:none; padding:8px 16px;">
+              Reset All Filters
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(car => {
+        const status = getCarLiveStatus(car);
+        const brandLogo = BRAND_LOGOS[car.brand] || car.brandLogo || 'assets/logo.png';
+        const price = car.priceRange || ('Rs. ' + (car.minPrice ? (car.minPrice/100000).toFixed(2) : '10.00') + ' Lakh');
+        const fuels = Array.isArray(car.fuelTypes) ? car.fuelTypes.join('/') : (car.fuelType || 'Petrol');
+
+        return `
+          <div class="dir-car-card">
+            <div>
+              <div class="dir-car-media">
+                <img src="${car.heroImage || 'assets/logo.png'}" alt="${escapeHtml(car.name)}" class="dir-car-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='assets/logo.png'">
+                <span class="dir-status-pill ${status.pillClass}">${status.label}</span>
+              </div>
+
+              <div class="dir-car-header">
+                <span class="dir-brand-badge">
+                  <img src="${brandLogo}" alt="${escapeHtml(car.brand)}" class="dir-brand-logo" onerror="this.src='assets/logo.png'">
+                  ${escapeHtml(car.brand)}
+                </span>
+                <span style="font-size:11.5px; font-weight:700; color:#64748B;">${escapeHtml(car.bodyType || 'SUV')}</span>
+              </div>
+
+              <h3 class="dir-car-title">${escapeHtml(car.name)}</h3>
+              <div class="dir-car-price">${price}</div>
+
+              <div class="dir-specs-pills">
+                <span class="dir-spec-tag">⛽ ${fuels}</span>
+                ${car.mileage ? `<span class="dir-spec-tag">⚡ ${car.mileage}</span>` : ''}
+                ${car.safetyRating ? `<span class="dir-spec-tag">🛡️ ${car.safetyRating.split(' ')[0]}</span>` : ''}
+                ${car.groundClearance ? `<span class="dir-spec-tag">📐 ${car.groundClearance}</span>` : ''}
+              </div>
+
+              <p class="dir-car-tagline">${escapeHtml(car.tagline || car.summary || 'Premium automotive styling and engineering.')}</p>
+            </div>
+
+            <div class="dir-card-actions">
+              ${status.isLive 
+                ? `<button type="button" class="btn-live-active" onclick="toggleCarLiveState('${car.id}', false)" title="Car is LIVE. Click to Unlist / Hide from website">
+                    ✅ Live (Unlist)
+                   </button>`
+                : `<button type="button" class="btn-make-live" onclick="toggleCarLiveState('${car.id}', true)" title="Publish this car immediately to Care My Vehicle live website">
+                    🚀 Make Live
+                   </button>`
+              }
+              <button type="button" class="btn-live-preview" onclick="openLiveVehiclePreview('${car.id}')" title="Preview how this vehicle appears on live website">
+                👁️ Live Preview
+              </button>
+              <button type="button" class="btn-header-action" style="padding:6px 10px; font-size:11.5px; background:#FFFFFF; flex-shrink:0;" onclick="openCarInEditor('${car.id}')" title="Edit in Media Studio">
+                ✏️ Edit
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+    window.renderDirectoryManager = renderDirectoryManager;
+
+    function handleDirectorySearch() {
+      const input = document.getElementById('dirSearchInput');
+      activeDirectorySearchQuery = input ? input.value.trim() : '';
+      renderDirectoryManager();
+    }
+    window.handleDirectorySearch = handleDirectorySearch;
+
+    function handleDirectoryFilterChange() {
+      const select = document.getElementById('dirBrandSelect');
+      activeDirectoryBrandFilter = select ? select.value : 'all';
+      renderDirectoryManager();
+    }
+    window.handleDirectoryFilterChange = handleDirectoryFilterChange;
+
+    function setDirectoryStatusFilter(status, btn) {
+      activeDirectoryStatusFilter = status;
+      document.querySelectorAll('#dirStatusChips .dir-chip-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+      });
+      renderDirectoryManager();
+    }
+    window.setDirectoryStatusFilter = setDirectoryStatusFilter;
+
+    function setDirectoryFuelFilter(fuel, btn) {
+      activeDirectoryFuelFilter = fuel;
+      document.querySelectorAll('#dirFuelChips .dir-chip-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+      });
+      renderDirectoryManager();
+    }
+    window.setDirectoryFuelFilter = setDirectoryFuelFilter;
+
+    function resetDirectoryFilters() {
+      activeDirectoryStatusFilter = 'all';
+      activeDirectoryFuelFilter = 'all';
+      activeDirectoryBrandFilter = 'all';
+      activeDirectorySearchQuery = '';
+
+      const sInput = document.getElementById('dirSearchInput');
+      if (sInput) sInput.value = '';
+
+      const bSelect = document.getElementById('dirBrandSelect');
+      if (bSelect) bSelect.value = 'all';
+
+      document.querySelectorAll('#dirStatusChips .dir-chip-btn').forEach((b, i) => b.classList.toggle('active', i === 0));
+      document.querySelectorAll('#dirFuelChips .dir-chip-btn').forEach((b, i) => b.classList.toggle('active', i === 0));
+
+      renderDirectoryManager();
+    }
+    window.resetDirectoryFilters = resetDirectoryFilters;
+
+    function refreshDirectoryCatalog() {
+      initDirectoryManager();
+      showToast('🔄 Directory catalog refreshed and synced with live website data.');
+    }
+    window.refreshDirectoryCatalog = refreshDirectoryCatalog;
+
+    // One-Button Make Live / Unlist Action
+    function toggleCarLiveState(carId, makeLive) {
+      const car = getUniversalCarById(carId);
+      if (!car) return;
+
+      const hiddenCars = getHiddenCars();
+      const hiddenBrands = getHiddenBrands();
+      let customCars = [];
+      try {
+        customCars = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]');
+      } catch (e) {}
+
+      if (makeLive) {
+        if (hiddenCars.has(carId)) {
+          hiddenCars.delete(carId);
+          saveHiddenCars(hiddenCars);
+        }
+        if (hiddenBrands.has(car.brand)) {
+          hiddenBrands.delete(car.brand);
+          saveHiddenBrands(hiddenBrands);
+        }
+
+        const isBase = (window.APP_CARS || []).some(c => c.id === carId);
+        if (!isBase) {
+          customCars = customCars.filter(c => c.id !== carId);
+          customCars.unshift(car);
+          localStorage.setItem('cmv_custom_cars', JSON.stringify(customCars));
+        }
+
+        showToast(`🎉 <strong>${escapeHtml(car.name)}</strong> is now <strong>LIVE</strong> on Care My Vehicle website!`);
+      } else {
+        hiddenCars.add(carId);
+        saveHiddenCars(hiddenCars);
+        showToast(`🚫 <strong>${escapeHtml(car.name)}</strong> has been unlisted from website.`);
+      }
+
+      initDirectoryManager();
+      if (typeof initVisibilityManager === 'function') initVisibilityManager();
+
+      if (currentPreviewCar && currentPreviewCar.id === carId) {
+        updatePreviewModalLiveState(carId, makeLive);
+      }
+    }
+    window.toggleCarLiveState = toggleCarLiveState;
+
+    // Live Vehicle Preview Modal Controller
+    function openLiveVehiclePreview(carId, mode = 'card') {
+      const car = getUniversalCarById(carId);
+      if (!car) return;
+
+      currentPreviewCar = car;
+      currentPreviewMode = mode;
+
+      const modal = document.getElementById('liveCarPreviewModal');
+      if (!modal) return;
+
+      const status = getCarLiveStatus(car);
+      const brandLogo = BRAND_LOGOS[car.brand] || car.brandLogo || 'assets/logo.png';
+
+      // Header info
+      document.getElementById('prevModalTitle').textContent = car.name;
+      document.getElementById('prevModalBrandSub').textContent = `${car.brand} • ${car.bodyType || 'SUV'}`;
+      document.getElementById('prevModalBrandLogo').src = brandLogo;
+      
+      const pill = document.getElementById('prevModalStatusPill');
+      pill.className = `dir-status-pill ${status.pillClass}`;
+      pill.textContent = status.label;
+
+      // Render Mode 1: Homepage Shelf Card
+      const cardContainer = document.getElementById('prevCardContainer');
+      cardContainer.innerHTML = `
+        <article class="shelf-car-card card-size-compact" style="width:220px; box-shadow:0 8px 24px rgba(15,23,42,0.08); text-align:left;">
+          <div class="shelf-car-media" style="height:124px; border-radius:12px; overflow:hidden; background:#E2E8F0; margin-bottom:10px;">
+            <img src="${car.heroImage || 'assets/logo.png'}" alt="${escapeHtml(car.name)}" class="shelf-car-img" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.src='assets/logo.png'">
+          </div>
+          <h4 class="shelf-car-name" style="font-size:14.5px; font-weight:700; color:#1E293B; margin:2px 0 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${escapeHtml(car.name)}</h4>
+          <div class="shelf-car-price" style="font-size:13.5px; font-weight:600; color:#475569; margin-bottom:8px;">${car.priceRange}</div>
+          <div class="shelf-car-action" style="margin-top:auto;">
+            <span class="view-breakup-link" style="color:#0284C7; font-size:13px; font-weight:600;">View Price Breakup ›</span>
+          </div>
+        </article>
+      `;
+
+      // Render Mode 2: Full Detail Showcase
+      const detailContainer = document.getElementById('prevDetailContainer');
+      const minP = Number(car.minPrice) || 1200000;
+      const rto = Math.round(minP * 0.10);
+      const ins = Math.round(minP * 0.04);
+      const onRoadTotal = minP + rto + ins + 2500;
+
+      const formatLakhText = num => '₹' + (num / 100000).toFixed(2) + ' Lakh';
+
+      detailContainer.innerHTML = `
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(15,23,42,0.04);">
+          <!-- Top Hero Image Banner -->
+          <div style="position:relative; width:100%; height:260px; background:#E2E8F0; overflow:hidden;">
+            <img src="${car.heroImage || 'assets/logo.png'}" alt="${escapeHtml(car.name)}" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.src='assets/logo.png'">
+            <div style="position:absolute; bottom:16px; left:20px; right:20px; display:flex; justify-content:space-between; align-items:flex-end;">
+              <div style="background:rgba(15,23,42,0.85); backdrop-filter:blur(6px); padding:10px 16px; border-radius:14px; color:#FFFFFF;">
+                <div style="font-size:11px; font-weight:700; color:#38BDF8; text-transform:uppercase;">${car.brand} • ${car.bodyType || 'SUV'}</div>
+                <h2 style="font-size:22px; font-weight:900; margin:2px 0 0; color:#FFFFFF;">${escapeHtml(car.name)}</h2>
+              </div>
+              <div style="background:#FFFFFF; padding:10px 16px; border-radius:14px; text-align:right; box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+                <div style="font-size:11px; font-weight:700; color:#64748B;">Avg. Ex-Showroom</div>
+                <div style="font-size:18px; font-weight:900; color:var(--primary);">${car.priceRange}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Specs Strip -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; padding:20px; background:#F8FAFC; border-bottom:1px solid #E2E8F0;">
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:11px; color:#64748B; font-weight:700;">Safety Rating</div>
+              <div style="font-size:14px; font-weight:800; color:#15803D; margin-top:2px;">${car.safetyRating || '5-Star Ready'}</div>
+            </div>
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:11px; color:#64748B; font-weight:700;">Mileage / Range</div>
+              <div style="font-size:14px; font-weight:800; color:#0284C7; margin-top:2px;">${car.mileage || '19.5 kmpl'}</div>
+            </div>
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:11px; color:#64748B; font-weight:700;">Ground Clearance</div>
+              <div style="font-size:14px; font-weight:800; color:#0F172A; margin-top:2px;">${car.groundClearance || '190 mm'}</div>
+            </div>
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px; text-align:center;">
+              <div style="font-size:11px; color:#64748B; font-weight:700;">Fuel Options</div>
+              <div style="font-size:14px; font-weight:800; color:#0F172A; margin-top:2px;">${Array.isArray(car.fuelTypes) ? car.fuelTypes.join('/') : 'Petrol'}</div>
+            </div>
+          </div>
+
+          <!-- On-Road Pricing Table -->
+          <div style="padding:20px;">
+            <h4 style="font-size:15px; font-weight:800; color:#0F172A; margin-bottom:12px;">📊 Estimated On-Road Price Breakdown (Delhi NCR)</h4>
+            <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:14px; padding:16px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:13px; color:#475569;">
+                <span>Ex-Showroom Price</span>
+                <span style="font-weight:700; color:#0F172A;">${formatLakhText(minP)}</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:13px; color:#475569;">
+                <span>State RTO Registration (~10%)</span>
+                <span>${formatLakhText(rto)}</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:13px; color:#475569;">
+                <span>Comprehensive Insurance (~4%)</span>
+                <span>${formatLakhText(ins)}</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:13px; color:#475569;">
+                <span>FASTag & Municipal Charges</span>
+                <span>₹2,500</span>
+              </div>
+              <div style="border-top:1px solid #CBD5E1; padding-top:10px; margin-top:10px; display:flex; justify-content:space-between; font-size:16px; font-weight:900; color:var(--primary);">
+                <span>Total Estimated On-Road</span>
+                <span>${formatLakhText(onRoadTotal)}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Variants & Highlights -->
+          <div style="padding:0 20px 20px;">
+            <h4 style="font-size:15px; font-weight:800; color:#0F172A; margin-bottom:10px;">🏷️ Popular Variants & Trims</h4>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
+              ${(car.variants || [
+                { name: 'Standard Trim', fuel: 'Petrol', transmission: 'Manual', exShowroom: minP, keyFeatures: ['Air Conditioner', 'Dual Airbags', 'Power Windows'] }
+              ]).map(v => `
+                <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:10px; padding:12px;">
+                  <div style="font-size:13px; font-weight:800; color:#0F172A;">${escapeHtml(v.name)}</div>
+                  <div style="font-size:11.5px; color:#64748B; margin:2px 0 6px;">${v.fuel || ''} • ${v.transmission || ''}</div>
+                  <div style="font-size:13px; font-weight:900; color:var(--primary);">${formatLakhText(v.exShowroom || minP)}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+
+      switchPreviewMode(mode);
+      updatePreviewModalLiveState(carId, status.isLive);
+      modal.style.display = 'flex';
+    }
+    window.openLiveVehiclePreview = openLiveVehiclePreview;
+
+    function switchPreviewMode(mode) {
+      currentPreviewMode = mode;
+      const bCard = document.getElementById('prevTabBtnCard');
+      const bDetail = document.getElementById('prevTabBtnDetail');
+      const vCard = document.getElementById('prevModeCard');
+      const vDetail = document.getElementById('prevModeDetail');
+
+      if (bCard) bCard.classList.toggle('active', mode === 'card');
+      if (bDetail) bDetail.classList.toggle('active', mode === 'detail');
+      if (vCard) vCard.style.display = (mode === 'card') ? 'block' : 'none';
+      if (vDetail) vDetail.style.display = (mode === 'detail') ? 'block' : 'none';
+    }
+    window.switchPreviewMode = switchPreviewMode;
+
+    function updatePreviewModalLiveState(carId, isLive) {
+      const btnToggle = document.getElementById('prevBtnToggleLive');
+      const btnOpen = document.getElementById('prevBtnOpenPublic');
+      const lblStatus = document.getElementById('prevModalLiveLabel');
+      const pill = document.getElementById('prevModalStatusPill');
+
+      if (isLive) {
+        if (btnToggle) {
+          btnToggle.className = 'btn-live-active';
+          btnToggle.innerHTML = '🚫 Unlist from Website';
+          btnToggle.onclick = () => toggleCarLiveState(carId, false);
+        }
+        if (btnOpen) {
+          btnOpen.style.display = 'inline-flex';
+          btnOpen.href = `index.html`;
+        }
+        if (lblStatus) {
+          lblStatus.textContent = 'Live on Public Website (Visible to Visitors)';
+          lblStatus.style.color = '#16A34A';
+        }
+        if (pill) {
+          pill.className = 'dir-status-pill status-live';
+          pill.textContent = '🟢 LIVE ON WEBSITE';
+        }
+      } else {
+        if (btnToggle) {
+          btnToggle.className = 'btn-make-live';
+          btnToggle.innerHTML = '🚀 Make Live on Website';
+          btnToggle.onclick = () => toggleCarLiveState(carId, true);
+        }
+        if (btnOpen) {
+          btnOpen.style.display = 'none';
+        }
+        if (lblStatus) {
+          lblStatus.textContent = 'Unlisted / Staged Draft (Hidden from Public)';
+          lblStatus.style.color = '#64748B';
+        }
+        if (pill) {
+          pill.className = 'dir-status-pill status-unlisted';
+          pill.textContent = '⚪ UNLISTED / STAGED';
+        }
+      }
+    }
+
+    function toggleCurrentPreviewCarLive() {
+      if (!currentPreviewCar) return;
+      const status = getCarLiveStatus(currentPreviewCar);
+      toggleCarLiveState(currentPreviewCar.id, !status.isLive);
+    }
+    window.toggleCurrentPreviewCarLive = toggleCurrentPreviewCarLive;
+
+    function closeLiveVehiclePreview() {
+      const modal = document.getElementById('liveCarPreviewModal');
+      if (modal) modal.style.display = 'none';
+      currentPreviewCar = null;
+    }
+    window.closeLiveVehiclePreview = closeLiveVehiclePreview;
+
+    function openPreviewCarInStudio() {
+      if (!currentPreviewCar) return;
+      const carId = currentPreviewCar.id;
+      closeLiveVehiclePreview();
+      openCarInEditor(carId);
+    }
+    window.openPreviewCarInStudio = openPreviewCarInStudio;
 
     // =========================================================================
     // 🛠️ CAR DETAIL PAGE & MEDIA STUDIO (DIRECT HERO & SECTIONS MANAGER)
