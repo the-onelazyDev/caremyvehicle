@@ -553,55 +553,7 @@ function renderTrendingLaunches() {
   // Helper to extract clean short model name (e.g., 'Skoda Slavia' -> 'Slavia', 'Maruti Suzuki Swift' -> 'Swift')
   function getShortModelName(car) {
     let name = car.name || '';
-    if (car.brand) {
-      name = name.replace(new RegExp('^' + car.brand.replace(/[.*+?^$\{}()|[\]\\]/g, '\\function renderTrendingLaunches() {
-  const container = document.getElementById('trendingShelfContainer');
-  if (!container) return;
-
-  const allCars = getAllCars();
-  let customIds = [];
-  try {
-    customIds = JSON.parse(localStorage.getItem('cmv_custom_cars') || '[]').map(c => c.id);
-  } catch (e) {}
-
-  const trendingIds = [
-    ...customIds,
-    'nissan-magnite',
-    'tata-curvv',
-    'thar-roxx',
-    'skoda-kylaq',
-    'hyundai-creta',
-    'mg-windsor-ev',
-    'nissan-tekton',
-    'toyota-innova-hycross',
-    'maruti-swift'
-  ];
-
-  const trendingCars = [];
-  const seenIds = new Set();
-  trendingIds.forEach(id => {
-    if (seenIds.has(id)) return;
-    const found = allCars.find(c => c.id === id);
-    if (found) {
-      seenIds.add(id);
-      trendingCars.push(found);
-    }
-  });
-
-  const baseList = trendingCars.length >= 4 ? trendingCars : allCars.slice(0, 8);
-  const displayList = getOrderedCarsForSection('trending', baseList, true);
-  const secCfg = getHomepageSectionConfig('trending');
-  const cardStyle = secCfg.cardStyle || 'big';
-  applyShelfLayoutClasses(container, secCfg.layout || 'carousel', cardStyle);
-
-  let html = displayList.map(car => createShelfCarCard(car, cardStyle)).join('');
-  if (cardStyle !== 'big') {
-    html += createShelfViewMoreCard('/cars.html?sort=newest', 'View All Launches');
-  }
-  container.innerHTML = html;
-}') + '\\s*', 'i'), '');
-    }
-    name = name.replace(/^(Maruti Suzuki|Maruti|Hyundai|Tata|Skoda|Volkswagen|Mahindra|Toyota|Honda|Kia|MG|Nissan|Renault)\s+/i, '');
+    name = name.replace(/^(Maruti Suzuki|Maruti|Hyundai|Tata|Skoda|Volkswagen|Mahindra|Toyota|Honda|Kia|MG|Nissan|Renault|Land Rover|BMW|Mercedes-Benz|Audi)\s+/i, '');
     return name.trim() || car.name;
   }
 
