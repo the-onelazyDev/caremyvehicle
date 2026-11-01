@@ -7713,7 +7713,7 @@ h1, h2, h3, .brand-font {
 
 
 /* ==========================================================================
-   OFFER CARD HERO IMAGE STAGE FIX
+   OFFER CARD HERO IMAGE STAGE FIX (MATCHING LATEST CAR UPDATES)
    ========================================================================== */
 .offer-card {
   min-width: 290px;
@@ -7721,13 +7721,14 @@ h1, h2, h3, .brand-font {
   background: #FFFFFF !important;
   border: 1px solid #E2E8F0 !important;
   border-radius: 18px !important;
-  padding: 18px !important;
+  padding: 16px !important;
   flex-shrink: 0;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden !important;
 }
 .offer-card:hover {
   border-color: #CBD5E1 !important;
@@ -7735,26 +7736,22 @@ h1, h2, h3, .brand-font {
   transform: translateY(-2px);
 }
 .offer-img-stage {
-  height: 145px !important;
-  width: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
   position: relative !important;
+  width: 100% !important;
+  height: 165px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #E2E8F0 !important;
   margin: 10px 0 12px !important;
-  overflow: visible !important;
-  background: transparent !important;
+  display: block !important;
 }
 .offer-img-stage img {
   width: 100% !important;
-  height: 138px !important;
-  max-height: 138px !important;
-  object-fit: contain !important;
-  mix-blend-mode: multiply !important;
-  filter: drop-shadow(0 8px 14px rgba(0,0,0,0.12));
-  transition: transform 0.25s ease;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.25s ease !important;
   display: block !important;
 }
 .offer-card:hover .offer-img-stage img {
-  transform: scale(1.05);
+  transform: scale(1.04) !important;
 }

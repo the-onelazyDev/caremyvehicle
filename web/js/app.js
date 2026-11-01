@@ -3325,8 +3325,8 @@ function renderOffersShelf() {
   container.innerHTML = allOffers.map(o => `
     <div class="offer-card" onclick="window.navigateToCar('${o.carId || ''}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
       <span class="offer-savings-badge">${o.savings || 'Special Offer'}</span>
-      <div class="offer-img-stage" style="height:145px; display:flex; align-items:center; justify-content:center; overflow:visible;">
-        <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='assets/logo.png'" style="width:100%; height:138px; max-height:138px; object-fit:contain; mix-blend-mode:multiply; filter:drop-shadow(0 8px 14px rgba(0,0,0,0.12));">
+      <div class="offer-img-stage" style="position:relative; width:100%; height:165px; border-radius:12px; overflow:hidden; background:#E2E8F0; margin:10px 0 12px;">
+        <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='assets/logo.png'" style="width:100%; height:100%; object-fit:cover; display:block;">
       </div>
       <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name || 'Special Offer'}</h4>
       <p style="font-size:12px; color:#64748B; margin-bottom:12px; line-height:1.4;">${o.highlight || ''}</p>
