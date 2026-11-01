@@ -17,7 +17,10 @@ import { saveCustomerLead } from './firebaseConfig.js';
 // Global Buyer Lead Modal Trigger
 window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', savingsText = '') {
   const modal = document.getElementById('buyerOfferModal');
-  if (!modal) return;
+  if (!modal) {
+    console.warn('buyerOfferModal not found in DOM');
+    return;
+  }
   
   const titleEl = document.getElementById('offerModalCarTitle');
   const badgeEl = document.getElementById('offerModalBadge');
@@ -40,12 +43,22 @@ window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', saving
     cityInput.value = (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
   }
 
+  modal.classList.add('active');
   modal.style.display = 'flex';
+  modal.style.opacity = '1';
+  modal.style.visibility = 'visible';
+  document.body.style.overflow = 'hidden';
 };
 
 window.closeBuyerOfferModal = function() {
   const modal = document.getElementById('buyerOfferModal');
-  if (modal) modal.style.display = 'none';
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+    modal.style.opacity = '0';
+    modal.style.visibility = 'hidden';
+  }
+  document.body.style.overflow = '';
 };
 
 window.submitBuyerLeadForm = async function(e) {
