@@ -40,7 +40,7 @@ export async function saveCustomerLead(leadData) {
       ...leadData,
       createdAt: serverTimestamp(),
       clientTimestamp: new Date().toISOString(),
-      status: leadData.otpVerified ? 'VERIFIED_OTP' : 'NEW',
+      status: 'NEW',
       notes: ''
     });
     return docRef.id;

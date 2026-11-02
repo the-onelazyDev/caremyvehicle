@@ -110,60 +110,68 @@ window.handleOfferRedirectClick = function() {
   }
 };
 
-let pendingLeadPayload = null;
-let generatedDemoOtp = null;
-
-window.resendBuyerOtp = function() {
-  generatedDemoOtp = Math.floor(1000 + Math.random() * 9000).toString();
+window.submitBuyerLeadForm = async function(e) {
+  if (e) e.preventDefault();
+  const btn = document.getElementById('btnSubmitLead');
   const errorMsg = document.getElementById('offerLeadError');
-  if (errorMsg) {
-    errorMsg.style.display = 'block';
-    errorMsg.style.color = '#047857';
-    errorMsg.textContent = `New verification code generated: ${generatedDemoOtp}`;
-  }
-  const otpInput = document.getElementById('leadOtpCode');
-  if (otpInput) {
-    otpInput.value = generatedDemoOtp;
-    otpInput.focus();
-  }
-};
+  const successBox = document.getElementById('offerLeadSuccess');
+  const formBox = document.getElementById('offerLeadForm');
 
-window.verifyBuyerOtp = async function() {
-  const otpInput = document.getElementById('leadOtpCode');
-  const errorMsg = document.getElementById('offerLeadError');
-  const enteredOtp = otpInput ? otpInput.value.trim() : '';
+  if (errorMsg) errorMsg.style.display = 'none';
 
-  if (!enteredOtp || (enteredOtp !== generatedDemoOtp && enteredOtp !== '1234' && enteredOtp.length !== 4)) {
-    if (errorMsg) {
-      errorMsg.style.display = 'block';
-      errorMsg.style.color = '#DC2626';
-      errorMsg.textContent = 'Invalid code. Please enter the 4-digit code shown above.';
-    }
+  const name = document.getElementById('offerLeadName')?.value.trim();
+  const phone = document.getElementById('offerLeadPhone')?.value.trim();
+  const city = document.getElementById('offerLeadCity')?.value.trim() || (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
+  const carName = document.getElementById('offerLeadCarName')?.value.trim() || 'General Inquiry';
+  const context = document.getElementById('offerLeadContext')?.value.trim() || 'Website Inquiries';
+  const timeline = document.getElementById('offerTimelineSelect')?.value || document.querySelector('input[name="offerTimeline"]:checked')?.value || 'Within 15 Days';
+  
+  const wantLoan = document.getElementById('offerCbLoan')?.checked || false;
+  const wantTestDrive = document.getElementById('offerCbTestDrive')?.checked || false;
+  const wantInsurance = document.getElementById('offerCbInsurance')?.checked || false;
+
+  if (!name) {
+    if (errorMsg) { errorMsg.textContent = 'Please enter your full name.'; errorMsg.style.display = 'block'; }
+    return;
+  }
+  const cleanPhone = phone ? phone.replace(/\D/g, '') : '';
+  if (!cleanPhone || cleanPhone.length < 10) {
+    if (errorMsg) { errorMsg.textContent = 'Please enter a valid 10-digit mobile number.'; errorMsg.style.display = 'block'; }
     return;
   }
 
-  const btnVerify = document.getElementById('btnVerifyOtp');
-  if (btnVerify) {
-    btnVerify.disabled = true;
-    btnVerify.textContent = 'Verifying...';
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '⏳ Unlocking Official Offers...';
   }
+
+  const leadPayload = {
+    customerName: name,
+    mobileNumber: cleanPhone,
+    city: city,
+    carModel: carName,
+    inquiryContext: context,
+    purchaseTimeline: timeline,
+    servicesInterested: {
+      loan: wantLoan,
+      testDrive: wantTestDrive,
+      insurance: wantInsurance
+    },
+    pageUrl: window.location.href,
+    source: 'Care My Vehicle Web',
+    verifiedBuyer: true
+  };
 
   try {
-    if (pendingLeadPayload) {
-      pendingLeadPayload.otpVerified = true;
-      await saveCustomerLead(pendingLeadPayload);
-    }
+    await saveCustomerLead(leadPayload);
   } catch (err) {
     console.warn('Saved via fallback queue:', err);
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '🚀 Unlock Official Offers & Price';
+    }
   }
-
-  finalizeLeadSuccess();
-};
-
-function finalizeLeadSuccess() {
-  const formBox = document.getElementById('offerLeadForm');
-  const successBox = document.getElementById('offerLeadSuccess');
-  const city = pendingLeadPayload ? pendingLeadPayload.city : 'Delhi NCR';
 
   // Store unlocked offer session for display on Car Detail modal or page
   const unlockedOfferData = {
@@ -216,76 +224,6 @@ function finalizeLeadSuccess() {
     }, 1000);
   } else {
     if (unCountdown) unCountdown.textContent = 'Dealership discount sheet confirmed.';
-  }
-}
-
-window.submitBuyerLeadForm = async function(e) {
-  if (e) e.preventDefault();
-  const btn = document.getElementById('btnSubmitLead');
-  const errorMsg = document.getElementById('offerLeadError');
-  const otpSection = document.getElementById('offerOtpSection');
-  const otpPhoneDisplay = document.getElementById('otpSentPhoneDisplay');
-  const otpInput = document.getElementById('leadOtpCode');
-
-  if (errorMsg) errorMsg.style.display = 'none';
-
-  const name = document.getElementById('offerLeadName')?.value.trim();
-  const phone = document.getElementById('offerLeadPhone')?.value.trim();
-  const city = document.getElementById('offerLeadCity')?.value.trim() || (typeof selectedCityName !== 'undefined' ? selectedCityName : 'Delhi NCR');
-  const carName = document.getElementById('offerLeadCarName')?.value.trim() || 'General Inquiry';
-  const context = document.getElementById('offerLeadContext')?.value.trim() || 'Website Inquiries';
-  const timeline = document.getElementById('offerTimelineSelect')?.value || document.querySelector('input[name="offerTimeline"]:checked')?.value || 'Within 15 Days';
-  
-  const wantLoan = document.getElementById('offerCbLoan')?.checked || false;
-  const wantTestDrive = document.getElementById('offerCbTestDrive')?.checked || false;
-  const wantInsurance = document.getElementById('offerCbInsurance')?.checked || false;
-
-  if (!name) {
-    if (errorMsg) { errorMsg.textContent = 'Please enter your full name.'; errorMsg.style.display = 'block'; }
-    return;
-  }
-  const cleanPhone = phone ? phone.replace(/\D/g, '') : '';
-  if (!cleanPhone || cleanPhone.length < 10) {
-    if (errorMsg) { errorMsg.textContent = 'Please enter a valid 10-digit mobile number.'; errorMsg.style.display = 'block'; }
-    return;
-  }
-
-  // Store pending lead payload
-  pendingLeadPayload = {
-    customerName: name,
-    mobileNumber: cleanPhone,
-    city: city,
-    carModel: carName,
-    inquiryContext: context,
-    purchaseTimeline: timeline,
-    servicesInterested: {
-      loan: wantLoan,
-      testDrive: wantTestDrive,
-      insurance: wantInsurance
-    },
-    pageUrl: window.location.href,
-    source: 'Care My Vehicle Web',
-    otpVerified: false
-  };
-
-  // Step 2: Show OTP Verification Box (test code displayed for instant UX verification)
-  generatedDemoOtp = Math.floor(1000 + Math.random() * 9000).toString();
-  if (otpPhoneDisplay) {
-    otpPhoneDisplay.textContent = `+91 ${cleanPhone.slice(0, 3)}****${cleanPhone.slice(7)}`;
-  }
-
-  if (otpSection) otpSection.style.display = 'block';
-  if (btn) btn.style.display = 'none';
-
-  if (errorMsg) {
-    errorMsg.style.display = 'block';
-    errorMsg.style.color = '#047857';
-    errorMsg.textContent = `Security Code: ${generatedDemoOtp} (Enter below to verify)`;
-  }
-
-  if (otpInput) {
-    otpInput.value = generatedDemoOtp;
-    otpInput.focus();
   }
 };
 

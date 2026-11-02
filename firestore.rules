@@ -12,8 +12,7 @@ service cloud.firestore {
         && data.mobileNumber.matches('^[6-9][0-9]{9}$')
         && (data.city is string && data.city.size() <= 60)
         && (data.carModel is string && data.carModel.size() <= 100)
-        && data.status in ['NEW', 'VERIFIED_OTP', 'IN_PROGRESS', 'CONTACTED', 'CLOSED']
-        && (data.otpVerified == true || data.otpVerified == false);
+        && data.status in ['NEW', 'IN_PROGRESS', 'CONTACTED', 'CLOSED'];
     }
 
     // Customer Leads Collection
