@@ -14,13 +14,42 @@ import { CARS, CITIES, calculateOnRoadPrice, formatINR, formatLakh } from './car
 import { ARTICLES, POPULAR_USED_CARS as DEFAULT_POPULAR_USED_CARS } from './newsData.js';
 import { saveCustomerLead } from './firebaseConfig.js';
 
-// Global Buyer Lead Modal Trigger
-window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', savingsText = '') {
+// Global Buyer Lead Modal Trigger & Redirect State
+let currentOfferLeadContext = {
+  carId: '',
+  carName: '',
+  savingsText: '',
+  highlightText: '',
+  redirectTimer: null
+};
+
+window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', savingsText = '', carId = '', highlightText = '') {
   const modal = document.getElementById('buyerOfferModal');
   if (!modal) {
     console.warn('buyerOfferModal not found in DOM');
     return;
   }
+
+  // Fallback to match carId from carName if not explicitly passed
+  let resolvedCarId = carId;
+  if (!resolvedCarId && carName && typeof getAllCars === 'function') {
+    const matched = getAllCars().find(c => c.name.toLowerCase() === carName.toLowerCase() || carName.toLowerCase().includes(c.name.toLowerCase()) || c.name.toLowerCase().includes(carName.toLowerCase()));
+    if (matched) resolvedCarId = matched.id;
+  }
+
+  // Clear any existing redirect timers
+  if (currentOfferLeadContext.redirectTimer) {
+    clearTimeout(currentOfferLeadContext.redirectTimer);
+    currentOfferLeadContext.redirectTimer = null;
+  }
+
+  currentOfferLeadContext = {
+    carId: resolvedCarId || '',
+    carName: carName || 'Selected Car',
+    savingsText: savingsText || '🎁 Verified Festive Offer',
+    highlightText: highlightText || 'Official OEM festive discounts & verified on-road price.',
+    redirectTimer: null
+  };
   
   const titleEl = document.getElementById('offerModalCarTitle');
   const badgeEl = document.getElementById('offerModalBadge');
@@ -51,6 +80,10 @@ window.openBuyerOfferModal = function(carName, context = 'Dealer Offers', saving
 };
 
 window.closeBuyerOfferModal = function() {
+  if (currentOfferLeadContext.redirectTimer) {
+    clearTimeout(currentOfferLeadContext.redirectTimer);
+    currentOfferLeadContext.redirectTimer = null;
+  }
   const modal = document.getElementById('buyerOfferModal');
   if (modal) {
     modal.classList.remove('active');
@@ -59,6 +92,22 @@ window.closeBuyerOfferModal = function() {
     modal.style.visibility = 'hidden';
   }
   document.body.style.overflow = '';
+};
+
+// User clicked 'View Car Details & Full Offer Sheet' button
+window.handleOfferRedirectClick = function() {
+  if (currentOfferLeadContext.redirectTimer) {
+    clearTimeout(currentOfferLeadContext.redirectTimer);
+    currentOfferLeadContext.redirectTimer = null;
+  }
+  window.closeBuyerOfferModal();
+
+  const targetCarId = currentOfferLeadContext.carId;
+  if (targetCarId && typeof window.navigateToCar === 'function') {
+    window.navigateToCar(targetCarId, 'offer');
+  } else if (targetCarId && typeof window.openCarModal === 'function') {
+    window.openCarModal(targetCarId);
+  }
 };
 
 window.submitBuyerLeadForm = async function(e) {
@@ -114,17 +163,66 @@ window.submitBuyerLeadForm = async function(e) {
 
   try {
     await saveCustomerLead(leadPayload);
-    if (formBox) formBox.style.display = 'none';
-    if (successBox) successBox.style.display = 'block';
   } catch (err) {
     console.warn('Saved via fallback queue:', err);
-    if (formBox) formBox.style.display = 'none';
-    if (successBox) successBox.style.display = 'block';
   } finally {
     if (btn) {
       btn.disabled = false;
       btn.innerHTML = '🚀 Unlock Official Offers & Price';
     }
+  }
+
+  // Store unlocked offer session for display on Car Detail modal or page
+  const unlockedOfferData = {
+    carId: currentOfferLeadContext.carId,
+    carName: currentOfferLeadContext.carName,
+    savingsText: currentOfferLeadContext.savingsText,
+    highlightText: currentOfferLeadContext.highlightText,
+    city: city,
+    unlockedAt: Date.now()
+  };
+  try {
+    sessionStorage.setItem('cmv_unlocked_offer', JSON.stringify(unlockedOfferData));
+  } catch(e) {}
+
+  // Populate Unlocked Offer card in the success screen
+  const unBadge = document.getElementById('unlockedOfferBadge');
+  const unTitle = document.getElementById('unlockedOfferCarTitle');
+  const unDetails = document.getElementById('unlockedOfferDetails');
+  const unBtn = document.getElementById('btnViewUnlockedCar');
+  const unCountdown = document.getElementById('offerRedirectCountdown');
+
+  if (unBadge) unBadge.textContent = currentOfferLeadContext.savingsText || '🎁 Special Offer';
+  if (unTitle) unTitle.textContent = currentOfferLeadContext.carName || 'Selected Car';
+  if (unDetails) unDetails.textContent = currentOfferLeadContext.highlightText || 'Official OEM festive discount and verified dealership benefits.';
+  if (unBtn) unBtn.innerHTML = `👉 View ${currentOfferLeadContext.carName} & Full Offer Sheet`;
+
+  if (formBox) formBox.style.display = 'none';
+  if (successBox) successBox.style.display = 'block';
+
+  // If carId is available, initiate auto-redirect with countdown
+  const targetCarId = currentOfferLeadContext.carId;
+  if (targetCarId) {
+    let secondsLeft = 2;
+    if (unCountdown) unCountdown.textContent = `Redirecting to car details in ${secondsLeft} seconds...`;
+    
+    currentOfferLeadContext.redirectTimer = setInterval(() => {
+      secondsLeft--;
+      if (secondsLeft > 0) {
+        if (unCountdown) unCountdown.textContent = `Redirecting to car details in ${secondsLeft} second...`;
+      } else {
+        clearInterval(currentOfferLeadContext.redirectTimer);
+        currentOfferLeadContext.redirectTimer = null;
+        window.closeBuyerOfferModal();
+        if (typeof window.navigateToCar === 'function') {
+          window.navigateToCar(targetCarId, 'offer');
+        } else if (typeof window.openCarModal === 'function') {
+          window.openCarModal(targetCarId);
+        }
+      }
+    }, 1000);
+  } else {
+    if (unCountdown) unCountdown.textContent = 'Dealership discount sheet confirmed.';
   }
 };
 
@@ -1862,6 +1960,22 @@ function _renderCarModalContent(car, modalBody) {
   const activePalette = (colors.length > 0) ? colors : (spin360 ? spin360.colors : []);
   const heroImg = car.heroImage || (colors.length > 0 ? colors[0].image : '');
 
+  // Check if there is an active offer for this car (or recently unlocked in session)
+  let carOffer = null;
+  try {
+    const activeOffers = getActiveOffersList().filter(o => o.enabled !== false);
+    carOffer = activeOffers.find(o => o.carId === car.id || (o.name && (o.name.toLowerCase().includes(car.name.toLowerCase()) || car.name.toLowerCase().includes(o.name.toLowerCase()))));
+    
+    // Also check session storage for recent unlock
+    const sessionRaw = sessionStorage.getItem('cmv_unlocked_offer');
+    if (sessionRaw) {
+      const sess = JSON.parse(sessionRaw);
+      if (sess && (sess.carId === car.id || (sess.carName && car.name.toLowerCase().includes(sess.carName.toLowerCase())))) {
+        if (!carOffer) carOffer = { savings: sess.savingsText, highlight: sess.highlightText, name: sess.carName };
+      }
+    }
+  } catch(e) {}
+
   modalBody.innerHTML = `
     <!-- Premium CarWale/CarDekho Mobile Hero Showcase -->
     <div class="modal-hero-showcase">
@@ -1896,6 +2010,22 @@ function _renderCarModalContent(car, modalBody) {
         <div class="modal-car-price">${car.priceRange}</div>
       </div>
       <p class="modal-car-tagline">${car.tagline || car.summary}</p>
+
+      ${carOffer ? `
+        <!-- Unlocked Official Dealer Offer Highlight Banner -->
+        <div class="modal-unlocked-offer-banner" style="background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border:1.5px solid #F59E0B; border-radius:12px; padding:12px 14px; margin:10px 0 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; box-shadow:0 4px 12px rgba(245,158,11,0.12);">
+          <div style="flex:1; min-width:200px;">
+            <div style="display:inline-flex; align-items:center; gap:6px; background:#D97706; color:#FFF; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">
+              🎁 OEM Dealer Offer Unlocked
+            </div>
+            <div style="font-size:14px; font-weight:900; color:#0F172A;">${carOffer.savings || 'Special Festive Benefits'}</div>
+            <div style="font-size:11.5px; color:#78350F; margin-top:2px; line-height:1.4;">${carOffer.highlight || 'Exchange bonus, corporate discount and corporate warranty benefits included.'}</div>
+          </div>
+          <button type="button" class="btn-orange-pill" style="padding:7px 14px; font-size:12px;" onclick="window.openBuyerOfferModal('${car.name.replace(/'/g, "\\'")}', 'Car Detail Offer', '${(carOffer.savings || '').replace(/'/g, "\\'")}', '${car.id}', '${(carOffer.highlight || '').replace(/'/g, "\\'")}')">
+            Claim Offer &rsaquo;
+          </button>
+        </div>
+      ` : ''}
 
       <!-- Key Highlights Pills Row -->
       <div class="modal-quick-specs-row">
@@ -3428,14 +3558,14 @@ function renderOffersShelf() {
   const allOffers = getActiveOffersList().filter(o => o.enabled !== false);
 
   container.innerHTML = allOffers.map(o => `
-    <div class="offer-card" onclick="window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
+    <div class="offer-card" onclick="window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}', '${(o.carId || '').replace(/'/g, "\\'")}', '${(o.highlight || '').replace(/'/g, "\\'")}')" style="cursor:pointer;" title="${(o.name || '').replace(/"/g, '&quot;')}">
       <span class="offer-savings-badge">${o.savings || 'Special Offer'}</span>
       <div class="offer-img-stage" style="position:relative; width:100%; height:165px; border-radius:12px; overflow:hidden; background:#E2E8F0; margin:10px 0 12px;">
         <img src="${o.image || 'assets/logo.png'}" alt="${(o.name || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='assets/logo.png'" style="width:100%; height:100%; object-fit:cover; display:block;">
       </div>
       <h4 style="font-size:16px; font-weight:800; color:#0F172A; margin:6px 0 2px;">${o.name || 'Special Offer'}</h4>
       <p style="font-size:12px; color:#64748B; margin-bottom:12px; line-height:1.4;">${o.highlight || ''}</p>
-      <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;" onclick="event.stopPropagation(); window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}')">
+      <button type="button" class="btn-orange-pill" style="width:100%; justify-content:center; padding:7px;" onclick="event.stopPropagation(); window.openBuyerOfferModal('${(o.name || '').replace(/'/g, "\\'")}', 'Popular Car Offers', '${(o.savings || '').replace(/'/g, "\\'")}', '${(o.carId || '').replace(/'/g, "\\'")}', '${(o.highlight || '').replace(/'/g, "\\'")}')">
         View Offer & Price &rsaquo;
       </button>
     </div>

@@ -825,15 +825,29 @@
         <p style="font-size:11.5px; color:#64748B; margin:2px 0 0; line-height:1.3;">Get official OEM festive discounts & verified on-road price.</p>
       </div>
 
-      <div id="offerLeadSuccess" style="display:none; text-align:center; padding:18px 10px;">
-        <div style="font-size:42px; margin-bottom:8px;">🎉</div>
-        <h4 style="font-size:19px; font-weight:900; color:#15803D; margin:0 0 6px;">Offer Unlocked Successfully!</h4>
-        <p style="font-size:12.5px; color:#475569; line-height:1.5; margin:0 auto 14px;">
-          Your inquiry is securely registered in our Firebase database. An authorized dealership representative will share the official discount sheet with zero spam calls.
+      <div id="offerLeadSuccess" style="display:none; text-align:center; padding:14px 6px;">
+        <div style="font-size:38px; margin-bottom:6px;">🎉</div>
+        <h4 style="font-size:18px; font-weight:900; color:#15803D; margin:0 0 4px;">Offer Unlocked Successfully!</h4>
+        <p style="font-size:11.5px; color:#64748B; margin:0 0 12px;">
+          Your request is saved to Firebase. Here is your unlocked dealer offer:
         </p>
-        <button type="button" class="btn-orange-pill" style="padding:8px 22px; font-size:13px;" onclick="window.closeBuyerOfferModal()">
-          ✓ Done Exploring
-        </button>
+
+        <!-- Unlocked Offer Card Preview -->
+        <div id="unlockedOfferDisplayCard" style="background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border:1.5px solid #F59E0B; border-radius:14px; padding:12px 14px; margin-bottom:14px; text-align:left; box-shadow:0 4px 15px rgba(245,158,11,0.15);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span id="unlockedOfferBadge" style="font-size:11px; font-weight:900; background:#D97706; color:#FFF; padding:3px 10px; border-radius:20px; letter-spacing:0.3px;">🎁 Special Offer</span>
+            <span style="font-size:10.5px; font-weight:800; color:#15803D; background:#DCFCE7; padding:2px 8px; border-radius:12px;">✔ Deal Activated</span>
+          </div>
+          <div id="unlockedOfferCarTitle" style="font-size:15px; font-weight:900; color:#0F172A; margin-bottom:4px;">Selected Car Model</div>
+          <div id="unlockedOfferDetails" style="font-size:12px; color:#78350F; line-height:1.4;">Official OEM Festive Discount & Bonus Package</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <button type="button" id="btnViewUnlockedCar" class="btn-orange-pill" style="width:100%; justify-content:center; padding:10px 18px; font-size:13.5px; font-weight:800; box-shadow:0 6px 18px rgba(249,115,22,0.35);" onclick="window.handleOfferRedirectClick()">
+            👉 View Car Details & Full Offer Sheet
+          </button>
+          <div id="offerRedirectCountdown" style="font-size:11px; color:#64748B; font-weight:600;">Redirecting to car details in 2 seconds...</div>
+        </div>
       </div>
 
       <form id="offerLeadForm" onsubmit="window.submitBuyerLeadForm(event)">

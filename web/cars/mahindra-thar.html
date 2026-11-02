@@ -2720,6 +2720,57 @@
           }
         }
 
+        
+        // 4. Dynamic Unlocked Festive Offer Banner
+        (function renderCarOfferBanner() {
+          try {
+            const offersRaw = localStorage.getItem('cmv_custom_offers');
+            let matchedOffer = null;
+            if (offersRaw) {
+              const offers = JSON.parse(offersRaw);
+              if (Array.isArray(offers)) {
+                matchedOffer = offers.find(o => o.enabled !== false && (o.carId === carId || (o.name && (o.name.toLowerCase().includes(carId.replace(/-/g, ' ')) || carId.replace(/-/g, ' ').includes(o.name.toLowerCase())))));
+              }
+            }
+            if (!matchedOffer) {
+              const sessRaw = sessionStorage.getItem('cmv_unlocked_offer');
+              if (sessRaw) {
+                const sess = JSON.parse(sessRaw);
+                if (sess && (sess.carId === carId || (sess.carName && carId.includes(sess.carId)))) {
+                  matchedOffer = { savings: sess.savingsText, highlight: sess.highlightText };
+                }
+              }
+            }
+
+            if (matchedOffer) {
+              const heroWrap = document.querySelector('.car-hero-details');
+              if (heroWrap && !document.getElementById('carPageOfferBanner')) {
+                const banner = document.createElement('div');
+                banner.id = 'carPageOfferBanner';
+                banner.style.cssText = 'background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border:1.5px solid #F59E0B; border-radius:12px; padding:12px 16px; margin:14px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; box-shadow:0 4px 15px rgba(245,158,11,0.15);';
+                banner.innerHTML = '<div style="flex:1; min-width:220px;">' +
+                  '<div style="display:inline-flex; align-items:center; gap:6px; background:#D97706; color:#FFF; font-size:10.5px; font-weight:900; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">' +
+                  '🎁 Verified Festive Offer Unlocked' +
+                  '</div>' +
+                  '<div style="font-size:15px; font-weight:900; color:#0F172A;">' + (matchedOffer.savings || 'Exclusive Savings Benefits') + '</div>' +
+                  '<div style="font-size:12px; color:#78350F; margin-top:2px; line-height:1.4;">' + (matchedOffer.highlight || 'Dealer festive benefits, corporate discount, exchange bonus.') + '</div>' +
+                  '</div>' +
+                  '<button type="button" class="btn-orange-pill" style="padding:8px 16px; font-size:12.5px; font-weight:800; cursor:pointer; background:#EA580C; color:#FFF; border:none; border-radius:30px; box-shadow:0 4px 12px rgba(234,88,12,0.3);" onclick="if(typeof window.openCityModal===\'function\') window.openCityModal();">' +
+                  'Claim Dealer Price &rsaquo;' +
+                  '</button>';
+                const priceBox = heroWrap.querySelector('.price-box-card');
+                if (priceBox && priceBox.nextSibling) {
+                  heroWrap.insertBefore(banner, priceBox.nextSibling);
+                } else {
+                  heroWrap.appendChild(banner);
+                }
+              }
+            }
+          } catch(err) {
+            console.warn('Offer banner notice:', err);
+          }
+        })();
+
         if (custom.userReviews && Array.isArray(custom.userReviews)) {
           const reviewsContainer = document.getElementById('userReviewsListContainer');
           if (reviewsContainer) {
