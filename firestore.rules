@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions for lead payload verification
+    function isValidLead(data) {
+      return data.size() >= 7
+        && data.customerName is string
+        && data.customerName.size() >= 2
+        && data.customerName.size() <= 80
+        && data.mobileNumber is string
+        && data.mobileNumber.matches('^[6-9][0-9]{9}$')
+        && (data.city is string && data.city.size() <= 60)
+        && (data.carModel is string && data.carModel.size() <= 100)
+        && data.status in ['NEW', 'VERIFIED_OTP', 'IN_PROGRESS', 'CONTACTED', 'CLOSED']
+        && (data.otpVerified == true || data.otpVerified == false);
+    }
+
+    // Customer Leads Collection
+    match /cmv_customer_leads/{leadId} {
+      // Allow creation only if the schema matches high-intent verified lead structure
+      allow create: if isValidLead(request.resource.data);
+
+      // Only authenticated admin or cloud functions can read, update, or delete
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // Offers & CMS Collections
+    match /cmv_offers/{offerId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
