@@ -516,10 +516,11 @@
       <!-- Injected dynamically by app.js -->
     </div>
 
-    <div style="margin-top:14px;">
-      <button type="button" class="link-compare-choice" onclick="window.openCompareModal()" style="color:var(--primary); font-size:14px; font-weight:800; background:none; border:none; cursor:pointer; font-family:inherit;">
-        Compare Cars of Your Choice &rsaquo;
+    <div style="margin-top:14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <button type="button" class="btn-orange-pill" onclick="window.openCompareModal()" style="padding:10px 22px; font-size:14px; font-weight:800; box-shadow:0 6px 18px rgba(249,115,22,0.3);">
+        ⚖️ Compare Any Cars of Your Choice &rsaquo;
       </button>
+      <span style="font-size:12px; color:#64748B; font-weight:600;">Pick from all 91+ verified models across 15 manufacturers</span>
     </div>
   </section>
 
@@ -752,8 +753,8 @@
   </div>
 
   <!-- Car Comparison Modal Drawer -->
-  <div id="compareModal" class="modal-overlay">
-    <div class="modal-sheet compare-modal-sheet">
+  <div id="compareModal" class="modal-overlay" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(15,23,42,0.8); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:12px; box-sizing:border-box;" onclick="if(event.target === this) window.closeCompareModal()">
+    <div class="modal-sheet compare-modal-sheet" style="position:relative; box-shadow:0 25px 60px rgba(0,0,0,0.35); border:1px solid #CBD5E1; border-radius:20px; overflow:hidden;">
       <div id="compareModalContent">
         <!-- Injected dynamically -->
       </div>

@@ -2363,13 +2363,17 @@ window.toggleCarCompare = function(carId) {
   }
 
   updateCompareDock();
-  renderCars();
+  if (typeof renderCars === 'function') {
+    try { renderCars(); } catch(e) {}
+  }
 };
 
 window.clearCompareList = function() {
   compareList = [];
   updateCompareDock();
-  renderCars();
+  if (typeof renderCars === 'function') {
+    try { renderCars(); } catch(e) {}
+  }
 };
 
 function updateCompareDock() {
@@ -2397,24 +2401,44 @@ function updateCompareDock() {
   if (countSpan) countSpan.textContent = `(${compareList.length})`;
 
   const allCars = getAllCars();
-  container.innerHTML = compareList.map(id => {
-    const car = allCars.find(c => c.id === id);
-    if (!car) return '';
-    return `
-      <div class="compare-dock-chip">
-        <img src="${car.heroImage}" alt="${car.name}" class="compare-dock-thumb">
-        <span>${car.name.replace(car.brand, '').trim() || car.name}</span>
-        <button type="button" class="compare-dock-chip-remove" onclick="event.stopPropagation(); window.toggleCarCompare('${car.id}')" title="Remove">&times;</button>
-      </div>
-    `;
-  }).join('');
+  if (container) {
+    container.innerHTML = compareList.map(id => {
+      const car = allCars.find(c => c.id === id);
+      if (!car) return '';
+      return `
+        <div class="compare-dock-chip">
+          <img src="${car.heroImage}" alt="${car.name}" class="compare-dock-thumb" onerror="this.src='assets/logo.png'">
+          <span>${car.name.replace(car.brand, '').trim() || car.name}</span>
+          <button type="button" class="compare-dock-chip-remove" onclick="event.stopPropagation(); window.toggleCarCompare('${car.id}')" title="Remove">&times;</button>
+        </div>
+      `;
+    }).join('');
+  }
 }
+
+// Helper to add a specific car slot dynamically from inside comparison table
+window.addCarToCompareModal = function(carId) {
+  if (!carId) return;
+  if (compareList.includes(carId)) {
+    alert('This car is already in the comparison table.');
+    return;
+  }
+  if (compareList.length >= 4) {
+    alert('You can compare a maximum of 4 cars at once. Remove one to add another.');
+    return;
+  }
+  compareList.push(carId);
+  updateCompareDock();
+  window.openCompareModal();
+};
 
 window.openCompareModal = function(presetIds) {
   if (presetIds && Array.isArray(presetIds)) {
     compareList = [...presetIds];
     updateCompareDock();
-    renderCars();
+    if (typeof renderCars === 'function') {
+      try { renderCars(); } catch(e) {}
+    }
   }
 
   const modal = document.getElementById('compareModal');
@@ -2422,62 +2446,82 @@ window.openCompareModal = function(presetIds) {
   if (!modal || !content) return;
 
   const allCars = getAllCars();
+  const brands = [...new Set(allCars.map(c => c.brand))].sort();
 
   // If fewer than 2 cars selected, show the selection builder
   if (compareList.length < 2) {
+    const car1Selected = compareList[0] || (allCars[0] ? allCars[0].id : '');
+    const car2Selected = compareList[1] || (allCars.length > 1 ? allCars[1].id : '');
+
     content.innerHTML = `
-      <div class="modal-header">
+      <div class="modal-header" style="display:flex; justify-content:space-between; align-items:flex-start; padding:18px 22px; border-bottom:1px solid #E2E8F0;">
         <div>
-          <span class="section-badge" style="background:#EFF6FF; color:var(--primary);">⚖️ CAR COMPARISON ENGINE</span>
-          <h2 style="font-size:22px; font-weight:900; margin-top:6px; color:var(--text-main);">Compare Any 2 to 4 Cars Side-by-Side</h2>
-          <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
-            Select at least 2 cars below to compare granular dimensions, real on-road pricing, crash test ratings, and engine performance.
+          <span class="section-badge" style="background:#EFF6FF; color:var(--primary); font-size:11px; font-weight:800; padding:3px 10px; border-radius:14px;">⚖️ CAR COMPARISON ENGINE</span>
+          <h2 style="font-size:22px; font-weight:900; margin:6px 0 2px; color:var(--text-main);">Compare Any 2 to 4 Cars Side-by-Side</h2>
+          <p style="font-size:13px; color:var(--text-secondary); margin:0;">
+            Select any car from all 91+ verified models listed on Care My Vehicle to compare granular dimensions, real on-road pricing, crash test ratings, and engine performance.
           </p>
         </div>
-        <button class="modal-close-btn" onclick="window.closeCompareModal()">&times;</button>
+        <button type="button" class="modal-close-btn" style="background:#F1F5F9; border:none; border-radius:50%; width:34px; height:34px; font-size:18px; cursor:pointer; color:#64748B;" onclick="window.closeCompareModal()">&times;</button>
       </div>
 
-      <!-- Quick Rival Presets -->
-      <div style="margin:20px 0 10px;">
-        <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">🔥 Popular Head-to-Head Comparisons:</span>
-        <div class="compare-presets-row" style="margin-top:8px;">
-          ${POPULAR_COMPARISONS.map(p => `
-            <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
-              ${p.label}
-            </button>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Car Pickers -->
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin:24px 0;">
-        <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
-          <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select Car #1</label>
-          <select id="compareSelect1" class="form-control" style="width:100%; padding:10px; border-radius:10px; font-weight:700;">
-            ${allCars.map(c => `<option value="${c.id}" ${compareList[0] === c.id ? 'selected' : ''}>${c.brand} - ${c.name}</option>`).join('')}
-          </select>
+      <div style="padding:18px 22px 24px;">
+        <!-- Quick Rival Presets -->
+        <div style="margin-bottom:18px;">
+          <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">🔥 Popular Head-to-Head Comparisons:</span>
+          <div class="compare-presets-row" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:8px;">
+            ${POPULAR_COMPARISONS.map(p => `
+              <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
+                ${p.label}
+              </button>
+            `).join('')}
+          </div>
         </div>
 
-        <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
-          <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select Car #2</label>
-          <select id="compareSelect2" class="form-control" style="width:100%; padding:10px; border-radius:10px; font-weight:700;">
-            ${allCars.map((c, i) => `<option value="${c.id}" ${(compareList[1] === c.id || (!compareList[1] && i === 1)) ? 'selected' : ''}>${c.brand} - ${c.name}</option>`).join('')}
-          </select>
-        </div>
-      </div>
+        <!-- Custom Head-to-Head Car Selectors -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin:20px 0;">
+          <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
+            <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select First Car</label>
+            <select id="compareSelect1" class="form-control" style="width:100%; height:44px; padding:0 12px; border-radius:10px; font-size:14px; font-weight:700; border:1.5px solid #CBD5E1; background:#FFF; color:#0F172A;">
+              ${brands.map(b => `
+                <optgroup label="${b}">
+                  ${allCars.filter(c => c.brand === b).map(c => `
+                    <option value="${c.id}" ${car1Selected === c.id ? 'selected' : ''}>${c.name} (${c.priceRange})</option>
+                  `).join('')}
+                </optgroup>
+              `).join('')}
+            </select>
+          </div>
 
-      <div style="text-align:center; margin-top:20px;">
-        <button type="button" class="btn-dock-launch" style="padding:12px 30px; font-size:15px;" onclick="
-          const c1 = document.getElementById('compareSelect1').value;
-          const c2 = document.getElementById('compareSelect2').value;
-          if (c1 === c2) { alert('Please select two different cars to compare.'); return; }
-          window.openCompareModal([c1, c2]);
-        ">
-          Launch Side-by-Side Comparison ➔
-        </button>
+          <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:16px; padding:18px;">
+            <label style="font-size:13px; font-weight:800; color:var(--primary); display:block; margin-bottom:8px;">Select Second Car</label>
+            <select id="compareSelect2" class="form-control" style="width:100%; height:44px; padding:0 12px; border-radius:10px; font-size:14px; font-weight:700; border:1.5px solid #CBD5E1; background:#FFF; color:#0F172A;">
+              ${brands.map(b => `
+                <optgroup label="${b}">
+                  ${allCars.filter(c => c.brand === b).map(c => `
+                    <option value="${c.id}" ${car2Selected === c.id ? 'selected' : ''}>${c.name} (${c.priceRange})</option>
+                  `).join('')}
+                </optgroup>
+              `).join('')}
+            </select>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:24px;">
+          <button type="button" class="btn-dock-launch" style="padding:12px 34px; font-size:15px; font-weight:800; box-shadow:0 6px 18px rgba(37,99,235,0.35);" onclick="
+            const c1 = document.getElementById('compareSelect1').value;
+            const c2 = document.getElementById('compareSelect2').value;
+            if (c1 === c2) { alert('Please select two different cars to compare.'); return; }
+            window.openCompareModal([c1, c2]);
+          ">
+            Launch Side-by-Side Comparison ➔
+          </button>
+        </div>
       </div>
     `;
     modal.classList.add('active');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
     return;
   }
 
@@ -2490,7 +2534,7 @@ window.openCompareModal = function(presetIds) {
 
   const getNum = str => {
     if (!str) return 0;
-    const m = str.match(/([0-9.]+)/);
+    const m = String(str).match(/([0-9.]+)/);
     return m ? parseFloat(m[1]) : 0;
   };
 
@@ -2503,218 +2547,257 @@ window.openCompareModal = function(presetIds) {
   const shareCompareUrl = `${window.location.origin}${window.location.pathname}?compare=${compareList.join(',')}`;
 
   content.innerHTML = `
-    <div class="modal-header">
+    <div class="modal-header" style="display:flex; justify-content:space-between; align-items:flex-start; padding:18px 22px; border-bottom:1px solid #E2E8F0;">
       <div>
         <div style="display:flex; align-items:center; gap:8px;">
-          <span class="section-badge" style="background:#EFF6FF; color:var(--primary); margin:0;">⚖️ SIDE-BY-SIDE COMPARISON</span>
+          <span class="section-badge" style="background:#EFF6FF; color:var(--primary); font-size:11px; font-weight:800; padding:3px 10px; border-radius:14px; margin:0;">⚖️ SIDE-BY-SIDE COMPARISON</span>
           <span style="font-size:12px; color:var(--text-muted);">Comparing <strong>${cars.length}</strong> Car Models</span>
         </div>
-        <h2 style="font-size:22px; font-weight:900; margin-top:6px; color:var(--text-main);">
+        <h2 style="font-size:21px; font-weight:900; margin-top:6px; color:var(--text-main);">
           ${cars.map(c => c.name).join(' vs ')}
         </h2>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
-        <button class="city-selector-btn" style="padding:6px 12px; font-size:12px;" onclick="navigator.clipboard.writeText('${shareCompareUrl}'); alert('🔗 Comparison Direct Link Copied to Clipboard!');" title="Share comparison">
+        <button type="button" class="btn-orange-pill" style="padding:6px 12px; font-size:12px;" onclick="navigator.clipboard.writeText('${shareCompareUrl}'); alert('🔗 Comparison Direct Link Copied to Clipboard!');" title="Share comparison">
           🔗 Share
         </button>
-        <button class="modal-close-btn" onclick="window.closeCompareModal()">&times;</button>
+        <button type="button" class="modal-close-btn" style="background:#F1F5F9; border:none; border-radius:50%; width:34px; height:34px; font-size:18px; cursor:pointer; color:#64748B;" onclick="window.closeCompareModal()">&times;</button>
       </div>
     </div>
 
-    <!-- Quick Rival Presets -->
-    <div style="margin:12px 0 6px;">
-      <div class="compare-presets-row">
-        <span style="font-size:12px; font-weight:800; color:var(--text-muted); align-self:center; margin-right:4px;">Popular:</span>
-        ${POPULAR_COMPARISONS.map(p => `
-          <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
-            ${p.label}
-          </button>
-        `).join('')}
+    <div style="padding:14px 20px 22px;">
+      <!-- Quick Rival Presets & Add Car Slot -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
+        <div class="compare-presets-row" style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;">
+          <span style="font-size:12px; font-weight:800; color:var(--text-muted); align-self:center; margin-right:4px;">Popular:</span>
+          ${POPULAR_COMPARISONS.map(p => `
+            <button type="button" class="compare-preset-pill" onclick="window.openCompareModal(['${p.ids[0]}', '${p.ids[1]}'])">
+              ${p.label}
+            </button>
+          `).join('')}
+        </div>
+
+        ${cars.length < 4 ? `
+          <div style="display:flex; align-items:center; gap:6px;">
+            <select id="addCarCompareSelect" style="height:34px; padding:0 10px; border-radius:8px; font-size:12px; font-weight:700; border:1px solid #CBD5E1; background:#FFF; color:#0F172A;" onchange="window.addCarToCompareModal(this.value)">
+              <option value="">➕ Add Another Car to Compare (${4 - cars.length} left)...</option>
+              ${brands.map(b => `
+                <optgroup label="${b}">
+                  ${allCars.filter(c => c.brand === b && !compareList.includes(c.id)).map(c => `
+                    <option value="${c.id}">+ ${c.name}</option>
+                  `).join('')}
+                </optgroup>
+              `).join('')}
+            </select>
+          </div>
+        ` : ''}
       </div>
-    </div>
 
-    <!-- Comparison Table -->
-    <div class="compare-table-wrapper">
-      <table class="compare-table">
-        <!-- Header: Vehicle Photos & Names -->
-        <thead>
-          <tr>
-            <th class="compare-col-header" style="width:160px; min-width:140px; background:#F8FAFC;">
-              <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Vehicle Model</span>
-            </th>
-            ${cars.map(car => {
-              const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
-              return `
-                <th class="compare-col-header">
-                  <button type="button" style="float:right; background:none; border:none; color:#EF4444; font-size:16px; cursor:pointer;" onclick="window.toggleCarCompare('${car.id}'); window.openCompareModal();" title="Remove">&times;</button>
-                  <img src="${car.heroImage}" alt="${car.name}" class="compare-car-thumb">
-                  <div class="compare-car-name">${car.name}</div>
-                  <div class="compare-car-price">${car.priceRange}</div>
-                  <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-top:2px;">
-                    Est. On-Road (${onRoadEstimate.cityName}): <strong>${formatLakh(onRoadEstimate.total)}</strong>
-                  </div>
-                  <button class="trending-btn" style="margin-top:8px; padding:6px 10px; font-size:11px;" onclick="window.closeCompareModal(); window.openCarModal('${car.id}');">
-                    View 360 & Variants ➔
-                  </button>
-                </th>
-              `;
-            }).join('')}
-          </tr>
-        </thead>
-        <tbody>
-          <!-- 1. PRICING & ESSENTIALS -->
-          <tr class="compare-category-row">
-            <td colspan="${cars.length + 1}">💰 Pricing & Ownership</td>
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Price Range (Ex-Showroom)</td>
-            ${cars.map(c => `
-              <td class="compare-cell-value ${c.minPrice === minPriceLowest ? 'compare-advantage' : ''}">
-                ${c.priceRange} ${c.minPrice === minPriceLowest ? '⭐ Lowest Entry' : ''}
-              </td>
-            `).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Est. On-Road Price (${CITIES.find(c => c.id === selectedCityId)?.name || 'Delhi'})</td>
-            ${cars.map(c => {
-              const quote = calculateOnRoadPrice(c.minPrice, selectedCityId);
-              return `<td class="compare-cell-value"><strong>${formatLakh(quote.total)}</strong> onwards</td>`;
-            }).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Waiting Period</td>
-            ${cars.map(c => `<td class="compare-cell-value">${c.waitingPeriod || '2 - 4 Weeks'}</td>`).join('')}
-          </tr>
+      <!-- Comparison Table -->
+      <div class="compare-table-wrapper" style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+        <table class="compare-table">
+          <!-- Header: Vehicle Photos & Names -->
+          <thead>
+            <tr>
+              <th class="compare-col-header" style="width:160px; min-width:140px; background:#F8FAFC;">
+                <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Vehicle Model</span>
+              </th>
+              ${cars.map(car => {
+                const onRoadEstimate = calculateOnRoadPrice(car.minPrice, selectedCityId);
+                return `
+                  <th class="compare-col-header" style="min-width:210px;">
+                    <button type="button" style="float:right; background:none; border:none; color:#EF4444; font-size:18px; font-weight:bold; cursor:pointer; padding:0 4px;" onclick="window.toggleCarCompare('${car.id}'); window.openCompareModal();" title="Remove from comparison">&times;</button>
+                    <div style="width:100%; height:110px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:10px; background:#F1F5F9; margin-bottom:8px;">
+                      <img src="${car.heroImage}" alt="${car.name}" style="max-height:100px; max-width:100%; object-fit:contain;" onerror="this.src='assets/logo.png'">
+                    </div>
+                    <div class="compare-car-name" style="font-size:15px; font-weight:800; color:#0F172A;">${car.name}</div>
+                    <div class="compare-car-price" style="font-size:13px; font-weight:800; color:var(--primary); margin:2px 0;">${car.priceRange}</div>
+                    <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-top:2px;">
+                      Est. On-Road (${onRoadEstimate.cityName}): <strong>${formatLakh(onRoadEstimate.total)}</strong>
+                    </div>
+                    <div style="display:flex; gap:6px; margin-top:8px;">
+                      <button class="trending-btn" style="flex:1; padding:6px 10px; font-size:11px; font-weight:700; justify-content:center;" onclick="window.closeCompareModal(); window.navigateToCar('${car.id}');">
+                        View Details ➔
+                      </button>
+                      <button type="button" class="btn-orange-pill" style="padding:6px 10px; font-size:11px;" onclick="window.closeCompareModal(); window.openBuyerOfferModal('${car.name.replace(/'/g, "\\'")}', 'Car Comparison', 'Verified Offer', '${car.id}');" title="Get Dealer Price">
+                        Get Offer
+                      </button>
+                    </div>
+                  </th>
+                `;
+              }).join('')}
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 1. PRICING & ESSENTIALS -->
+            <tr class="compare-category-row">
+              <td colspan="${cars.length + 1}" style="background:#F1F5F9; font-weight:800; color:#0F172A; padding:8px 14px;">💰 Pricing & Ownership</td>
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Price Range (Ex-Showroom)</td>
+              ${cars.map(c => `
+                <td class="compare-cell-value ${c.minPrice === minPriceLowest ? 'compare-advantage' : ''}">
+                  ${c.priceRange} ${c.minPrice === minPriceLowest ? '⭐ Lowest Entry' : ''}
+                </td>
+              `).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Est. On-Road Price (${CITIES.find(c => c.id === selectedCityId)?.name || 'Delhi NCR'})</td>
+              ${cars.map(c => {
+                const quote = calculateOnRoadPrice(c.minPrice, selectedCityId);
+                return `<td class="compare-cell-value"><strong>${formatLakh(quote.total)}</strong> onwards</td>`;
+              }).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Waiting Period</td>
+              ${cars.map(c => `<td class="compare-cell-value">${c.waitingPeriod || '2 - 4 Weeks'}</td>`).join('')}
+            </tr>
 
-          <!-- 2. SAFETY & CRASH TEST -->
-          <tr class="compare-category-row">
-            <td colspan="${cars.length + 1}">🛡️ Crash Safety & Structural Rating</td>
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Safety Rating</td>
-            ${cars.map(c => `
-              <td class="compare-cell-value">
-                <span class="badge-safety" style="position:static; display:inline-block; font-size:11px;">🛡️ ${c.safetyRating}</span>
-              </td>
-            `).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Airbags & Standard Safety</td>
-            ${cars.map(c => {
-              const is6Airbags = c.safetyRating && c.safetyRating.includes('6 Airbags');
-              return `<td class="compare-cell-value">${is6Airbags ? '6 Airbags Standard Across All Variants' : 'Dual / 6 Airbags (Variant Dependent)'}</td>`;
-            }).join('')}
-          </tr>
-
-          <!-- 3. POWERTRAINS & FUEL -->
-          <tr class="compare-category-row">
-            <td colspan="${cars.length + 1}">⚙️ Powertrains & Performance</td>
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Fuel Options</td>
-            ${cars.map(c => `<td class="compare-cell-value"><strong>${(c.fuelTypes || []).join(', ')}</strong></td>`).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Engine Options</td>
-            ${cars.map(c => {
-              const eng = c.specs?.engine || c.specs?.engineOptions || (c.variants && c.variants[0] ? c.variants[0].engine : 'Standard Engine');
-              return `<td class="compare-cell-value">${eng}</td>`;
-            }).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Transmissions</td>
-            ${cars.map(c => {
-              const tr = c.specs?.transmission || c.specs?.transmissions || [...new Set((c.variants || []).map(v => v.trans))].join(', ');
-              return `<td class="compare-cell-value">${tr || 'Manual / Automatic'}</td>`;
-            }).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Claimed ARAI Mileage / Range</td>
-            ${cars.map(c => {
-              const mil = c.specs?.mileage || (c.variants && c.variants[0] ? c.variants[0].mileage : '18.5 kmpl');
-              return `<td class="compare-cell-value">${mil}</td>`;
-            }).join('')}
-          </tr>
-
-          <!-- 4. DIMENSIONS & PRACTICALITY -->
-          <tr class="compare-category-row">
-            <td colspan="${cars.length + 1}">📐 Dimensions & Space</td>
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Ground Clearance</td>
-            ${cars.map(c => {
-              const val = getNum(c.groundClearance);
-              const isWin = val > 0 && val === maxGC;
-              return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.groundClearance || '190 mm'} ${isWin ? '🏆 Highest GC' : ''}</td>`;
-            }).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Boot Space</td>
-            ${cars.map(c => {
-              const val = getNum(c.bootSpace);
-              const isWin = val > 0 && val === maxBoot;
-              return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.bootSpace || '350 L'} ${isWin ? '🏆 Largest Boot' : ''}</td>`;
-            }).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Body Type</td>
-            ${cars.map(c => `<td class="compare-cell-value">${c.bodyType}</td>`).join('')}
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Available Official Colors</td>
-            ${cars.map(c => {
-              const colorList = c.colors || [];
-              return `
+            <!-- 2. SAFETY & CRASH TEST -->
+            <tr class="compare-category-row">
+              <td colspan="${cars.length + 1}" style="background:#F1F5F9; font-weight:800; color:#0F172A; padding:8px 14px;">🛡️ Crash Safety & Structural Rating</td>
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Safety Rating</td>
+              ${cars.map(c => `
                 <td class="compare-cell-value">
-                  <div style="font-weight:700; margin-bottom:4px;">${colorList.length} Shades</div>
-                  <div style="display:flex; gap:4px; flex-wrap:wrap;">
-                    ${colorList.slice(0, 6).map(col => `<span style="width:14px; height:14px; border-radius:50%; background:${col.hex}; border:1px solid #CBD5E1; display:inline-block;" title="${col.name}"></span>`).join('')}
-                  </div>
+                  <span class="badge-safety" style="position:static; display:inline-block; font-size:11px; padding:2px 8px; border-radius:12px; background:#DCFCE7; color:#15803D; font-weight:800;">🛡️ ${c.safetyRating || '5-Star Safety'}</span>
                 </td>
-              `;
-            }).join('')}
-          </tr>
+              `).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Airbags & Standard Safety</td>
+              ${cars.map(c => {
+                const is6Airbags = c.safetyRating && c.safetyRating.includes('6 Airbags');
+                return `<td class="compare-cell-value">${is6Airbags ? '6 Airbags Standard Across All Variants' : 'Dual / 6 Airbags (Variant Dependent)'}</td>`;
+              }).join('')}
+            </tr>
 
-          <!-- 5. VALUE FOR MONEY PICK -->
-          <tr class="compare-category-row">
-            <td colspan="${cars.length + 1}">🏆 Recommended Value-For-Money (VFM) Variant</td>
-          </tr>
-          <tr>
-            <td class="compare-cell-title">Recommended Pick</td>
-            ${cars.map(c => {
-              const vfmVar = (c.variants || []).find(v => v.isVFM) || (c.variants && c.variants[1]) || (c.variants && c.variants[0]);
-              if (!vfmVar) return '<td class="compare-cell-value">Standard Trim</td>';
-              const quote = calculateOnRoadPrice(vfmVar.exShowroom, selectedCityId);
-              return `
-                <td class="compare-cell-value" style="background:#FFFDF5;">
-                  <div style="font-weight:800; color:var(--primary); font-size:14px;">${vfmVar.name}</div>
-                  <div style="font-size:12px; font-weight:700; color:var(--text-main); margin:3px 0;">On-Road: ${formatLakh(quote.total)}</div>
-                  <div style="font-size:11px; color:var(--text-secondary);">${(vfmVar.keyFeatures || []).slice(0, 3).join(', ')}</div>
-                </td>
-              `;
-            }).join('')}
-          </tr>
-        </tbody>
-      </table>
-    </div>
+            <!-- 3. POWERTRAINS & FUEL -->
+            <tr class="compare-category-row">
+              <td colspan="${cars.length + 1}" style="background:#F1F5F9; font-weight:800; color:#0F172A; padding:8px 14px;">⚙️ Powertrains & Performance</td>
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Fuel Options</td>
+              ${cars.map(c => `<td class="compare-cell-value"><strong>${(c.fuelTypes || []).join(', ')}</strong></td>`).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Engine Options</td>
+              ${cars.map(c => {
+                const eng = c.specs?.engine || c.specs?.engineOptions || (c.variants && c.variants[0] ? c.variants[0].engine : 'Standard Engine');
+                return `<td class="compare-cell-value">${eng}</td>`;
+              }).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Transmissions</td>
+              ${cars.map(c => {
+                const tr = c.specs?.transmission || c.specs?.transmissions || [...new Set((c.variants || []).map(v => v.trans))].join(', ');
+                return `<td class="compare-cell-value">${tr || 'Manual / Automatic'}</td>`;
+              }).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Claimed ARAI Mileage / Range</td>
+              ${cars.map(c => {
+                const mil = c.specs?.mileage || (c.variants && c.variants[0] ? c.variants[0].mileage : '18.5 kmpl');
+                return `<td class="compare-cell-value">${mil}</td>`;
+              }).join('')}
+            </tr>
 
-    <!-- Bottom Actions -->
-    <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-      <button type="button" class="btn-text-action" onclick="window.clearCompareList(); window.closeCompareModal();">
-        🗑️ Clear All & Close
-      </button>
-      <button type="button" class="btn-dock-launch" onclick="window.closeCompareModal();">
-        ✓ Done Comparing
-      </button>
+            <!-- 4. DIMENSIONS & PRACTICALITY -->
+            <tr class="compare-category-row">
+              <td colspan="${cars.length + 1}" style="background:#F1F5F9; font-weight:800; color:#0F172A; padding:8px 14px;">📐 Dimensions & Space</td>
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Ground Clearance</td>
+              ${cars.map(c => {
+                const val = getNum(c.groundClearance);
+                const isWin = val > 0 && val === maxGC;
+                return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.groundClearance || '190 mm'} ${isWin ? '🏆 Highest GC' : ''}</td>`;
+              }).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Boot Space</td>
+              ${cars.map(c => {
+                const val = getNum(c.bootSpace);
+                const isWin = val > 0 && val === maxBoot;
+                return `<td class="compare-cell-value ${isWin ? 'compare-advantage' : ''}">${c.bootSpace || '350 L'} ${isWin ? '🏆 Largest Boot' : ''}</td>`;
+              }).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Dimensions (L × W × H)</td>
+              ${cars.map(c => `<td class="compare-cell-value">${c.specs?.dimensions || 'Class Standard'}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Body Type</td>
+              ${cars.map(c => `<td class="compare-cell-value">${c.bodyType}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Available Official Colors</td>
+              ${cars.map(c => {
+                const colorList = c.colors || [];
+                return `
+                  <td class="compare-cell-value">
+                    <div style="font-weight:700; margin-bottom:4px;">${colorList.length} Shades</div>
+                    <div style="display:flex; gap:4px; flex-wrap:wrap;">
+                      ${colorList.slice(0, 6).map(col => `<span style="width:14px; height:14px; border-radius:50%; background:${col.hex}; border:1px solid #CBD5E1; display:inline-block;" title="${col.name}"></span>`).join('')}
+                    </div>
+                  </td>
+                `;
+              }).join('')}
+            </tr>
+
+            <!-- 5. VALUE FOR MONEY PICK -->
+            <tr class="compare-category-row">
+              <td colspan="${cars.length + 1}" style="background:#F1F5F9; font-weight:800; color:#0F172A; padding:8px 14px;">🏆 Recommended Value-For-Money (VFM) Variant</td>
+            </tr>
+            <tr>
+              <td class="compare-cell-title">Recommended Pick</td>
+              ${cars.map(c => {
+                const vfmVar = (c.variants || []).find(v => v.isVFM) || (c.variants && c.variants[1]) || (c.variants && c.variants[0]);
+                if (!vfmVar) return '<td class="compare-cell-value">Standard Trim</td>';
+                const quote = calculateOnRoadPrice(vfmVar.exShowroom, selectedCityId);
+                return `
+                  <td class="compare-cell-value" style="background:#FFFDF5;">
+                    <div style="font-weight:800; color:var(--primary); font-size:14px;">${vfmVar.name}</div>
+                    <div style="font-size:12px; font-weight:700; color:var(--text-main); margin:3px 0;">On-Road: ${formatLakh(quote.total)}</div>
+                    <div style="font-size:11px; color:var(--text-secondary);">${(vfmVar.keyFeatures || []).slice(0, 3).join(', ')}</div>
+                  </td>
+                `;
+              }).join('')}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bottom Actions -->
+      <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:14px; border-top:1px solid #E2E8F0;">
+        <button type="button" class="btn-text-action" style="background:none; border:none; color:#EF4444; font-size:13px; font-weight:700; cursor:pointer;" onclick="window.clearCompareList(); window.closeCompareModal();">
+          🗑️ Clear All & Close
+        </button>
+        <div style="display:flex; gap:10px;">
+          <button type="button" class="btn-orange-pill" onclick="window.openCompareModal([]);" style="padding:8px 18px; font-size:13px; background:#F1F5F9; color:#0F172A; border:1px solid #CBD5E1;">
+            🔄 Compare Different Cars
+          </button>
+          <button type="button" class="btn-orange-pill" onclick="window.closeCompareModal();" style="padding:8px 22px; font-size:13px;">
+            ✓ Done Comparing
+          </button>
+        </div>
+      </div>
     </div>
   `;
 
   modal.classList.add('active');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 };
 
 window.closeCompareModal = function() {
   const modal = document.getElementById('compareModal');
-  if (modal) modal.classList.remove('active');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+  }
+  document.body.style.overflow = '';
 };
 
 
