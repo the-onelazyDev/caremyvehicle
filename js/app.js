@@ -2465,7 +2465,7 @@ window.openCompareModal = function(presetIds) {
         <button type="button" class="modal-close-btn" style="background:#F1F5F9; border:none; border-radius:50%; width:34px; height:34px; font-size:18px; cursor:pointer; color:#64748B;" onclick="window.closeCompareModal()">&times;</button>
       </div>
 
-      <div style="padding:18px 22px 24px;">
+      <div class="compare-modal-body" style="padding:18px 22px 24px; overflow-y:auto; flex:1 1 auto; -webkit-overflow-scrolling:touch;">
         <!-- Quick Rival Presets -->
         <div style="margin-bottom:18px;">
           <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">🔥 Popular Head-to-Head Comparisons:</span>
@@ -2565,7 +2565,7 @@ window.openCompareModal = function(presetIds) {
       </div>
     </div>
 
-    <div style="padding:14px 20px 22px;">
+    <div class="compare-modal-body">
       <!-- Quick Rival Presets & Add Car Slot -->
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
         <div class="compare-presets-row" style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;">
